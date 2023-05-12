@@ -97,7 +97,8 @@
       {
         "allowList": {
           "ref": true,
-          "props": true
+          "props": true,
+          "Props": true
         }
       }
     ],
