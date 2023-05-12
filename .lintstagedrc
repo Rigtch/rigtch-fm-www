@@ -1,0 +1,3 @@
+{
+  "*.{js,ts,md,jsx,tsx,mdx}": "eslint --cache --fix"
+}

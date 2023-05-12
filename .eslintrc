@@ -1,0 +1,106 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["~/"],
+        "extensions": [".js", ".ts", ".tsx", ".jsx"]
+      },
+      "alias": {
+        "map": [["~", "./"]],
+        "extensions": [".ts", ".js", ".tsx", ".jsx"]
+      }
+    },
+    "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|html)$"]
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers",
+    "testing-library",
+    "prettier"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:unicorn/recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/cypress/**",
+    "README.md"
+  ],
+  "rules": {
+    "no-undef": "off",
+    "prettier/prettier": "warn",
+    "prefer-const": "warn",
+    "eslint-comments/no-unused-disable": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    // empty functions are helpful for defining default values
+    "@typescript-eslint/no-empty-function": "off",
+    "unicorn/prefer-node-protocol": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "kebabCase": true
+        },
+        "ignore": ["/^$/", "README.md$"]
+      }
+    ],
+    "unicorn/no-null": "off",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always"
+      }
+    ],
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "allowList": {
+          "ref": true,
+          "props": true
+        }
+      }
+    ],
+    "react/prop-types": "off"
+  }
+}
