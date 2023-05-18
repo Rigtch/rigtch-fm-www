@@ -1,43 +1,55 @@
-import { gql, useQuery } from '@apollo/client'
+import { GetServerSideProps } from 'next'
+import { useRouter } from 'next/router'
 import { useCookies } from 'react-cookie'
 
-import { API_URL } from '~/config'
+import client from '~/apollo-client'
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
+import { PROFILE_QUERY, Profile, ProfileQuery } from '~/graphql'
 
-const QUERY = gql`
-  query profile {
-    profile {
-      displayName
-      images {
-        url
-      }
-      href
+export type HomeProps = Profile
+
+export const getServerSideProps: GetServerSideProps = async ({
+  req: { cookies },
+}) => {
+  try {
+    const { data } = await client.query<ProfileQuery>({
+      query: PROFILE_QUERY,
+      context: {
+        headers: {
+          Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
+        },
+      },
+    })
+
+    return {
+      props: data.profile,
+    }
+  } catch {
+    return {
+      redirect: {
+        destination: '/about',
+        permanent: false,
+      },
     }
   }
-`
+}
 
-export default function Home() {
-  const [cookie] = useCookies(['access-token', 'refresh-token'])
+export default function Home({ displayName, href }: HomeProps) {
+  const [, , removeCookies] = useCookies([ACCESS_TOKEN, REFRESH_TOKEN])
+  const router = useRouter()
 
-  const { data, loading, error } = useQuery(QUERY, {
-    context: {
-      headers: {
-        Authorization: `Bearer ${cookie['access-token']}`,
-      },
-    },
-  })
+  function logOut() {
+    removeCookies(ACCESS_TOKEN)
+    removeCookies(REFRESH_TOKEN)
 
-  if (loading) return <p>Loading...</p>
-  if (error) console.error(error)
+    router.push('/about')
+  }
 
   return (
     <main>
-      <a href={`${API_URL}/auth/login`}>connect</a>
-      {data && (
-        <>
-          <h1>{data.profile.displayName}</h1>
-          <p>{data.profile.href}</p>
-        </>
-      )}
+      <button onClick={logOut}>log out</button>
+      <h1>{displayName}</h1>
+      <p>{href}</p>
     </main>
   )
 }

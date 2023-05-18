@@ -1,7 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { serialize } from 'cookie'
 
-export default async function handle(
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
+
+export default async function handler(
   request: NextApiRequest,
   response: NextApiResponse
 ) {
@@ -9,18 +11,14 @@ export default async function handle(
 
   if (!accessToken || !refreshToken) return
 
-  const accessTokenCookie = serialize('access-token', accessToken as string, {
+  const accessTokenCookie = serialize(ACCESS_TOKEN, accessToken as string, {
     path: '/',
   })
-  const refreshTokenCookie = serialize(
-    'refresh-token',
-    refreshToken as string,
-    {
-      path: '/',
-    }
-  )
+  const refreshTokenCookie = serialize(REFRESH_TOKEN, refreshToken as string, {
+    path: '/',
+  })
 
-  response
+  return response
     .setHeader('Set-Cookie', [accessTokenCookie, refreshTokenCookie])
     .redirect('/')
 }
