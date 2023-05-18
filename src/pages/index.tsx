@@ -17,10 +17,11 @@ const QUERY = gql`
 
 export default function Home() {
   const [cookie] = useCookies(['access-token', 'refresh-token'])
+
   const { data, loading, error } = useQuery(QUERY, {
     context: {
       headers: {
-        Cookie: `access-token=${cookie['access-token']}; refresh-token=${cookie['refresh-token']}`,
+        Authorization: `Bearer ${cookie['access-token']}`,
       },
     },
   })
