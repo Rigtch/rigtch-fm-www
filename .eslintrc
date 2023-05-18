@@ -30,7 +30,8 @@
         "extensions": [".ts", ".js", ".tsx", ".jsx"]
       }
     },
-    "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|html)$"]
+    "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|html)$"],
+    "import/core-modules": ["windi.css", "windi-devtools"]
   },
   "plugins": [
     "@typescript-eslint",
@@ -65,7 +66,8 @@
     "**/node_modules/**",
     "**/dist/**",
     "**/cypress/**",
-    "README.md"
+    "README.md",
+    "next.config.js"
   ],
   "rules": {
     "no-undef": "off",
@@ -103,6 +105,7 @@
         }
       }
     ],
+
     "react/prop-types": "off"
   }
 }
