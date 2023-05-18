@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-import client from './apollo-client'
-import { ACCESS_TOKEN, REFRESH_TOKEN } from './common/constants'
-
+import { client } from '~/config'
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
 import { REFRESH_QUERY, RefreshQuery } from '~/graphql'
 
 export async function middleware(request: NextRequest) {

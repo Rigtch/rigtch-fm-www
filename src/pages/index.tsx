@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import { useCookies } from 'react-cookie'
 
-import client from '~/apollo-client'
+import { client } from '~/config'
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
 import { PROFILE_QUERY, Profile, ProfileQuery } from '~/graphql'
 

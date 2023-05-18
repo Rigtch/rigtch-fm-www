@@ -6,7 +6,7 @@ import 'antd/dist/reset.css'
 import 'windi.css'
 import 'windi-devtools'
 
-import client from '~/apollo-client'
+import { client } from '~/config'
 import { DefaultLayout } from '~/layouts'
 
 export default function App({ Component, pageProps }: AppProps) {
