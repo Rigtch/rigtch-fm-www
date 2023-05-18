@@ -7,6 +7,7 @@ const httpLink = new HttpLink({
   credentials: 'include',
   fetchOptions: {
     credentials: 'include',
+    fetchPolicy: 'no-cache',
   },
 })
 
