@@ -30,8 +30,7 @@
         "extensions": [".ts", ".js", ".tsx", ".jsx"]
       }
     },
-    "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|html)$"],
-    "import/core-modules": ["windi.css", "windi-devtools"]
+    "import/ignore": ["node_modules", "\\.(coffee|scss|css|less|hbs|html)$"]
   },
   "plugins": [
     "@typescript-eslint",
@@ -67,7 +66,9 @@
     "**/dist/**",
     "**/cypress/**",
     "README.md",
-    "next.config.js"
+    "next.config.js",
+    "tailwind.config.js",
+    "postcss.config.js"
   ],
   "rules": {
     "no-undef": "off",

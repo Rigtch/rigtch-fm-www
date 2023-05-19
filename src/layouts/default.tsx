@@ -1,20 +1,18 @@
-import { Layout } from 'antd'
+// import { Navbar } from 'flowbite-react'
 import { ReactNode } from 'react'
 
 export interface DefaultLayoutProps {
   children: ReactNode
 }
 
-const { Header, Content } = Layout
-
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <Layout>
-      <Header className="sticky top-0 z-1 w-full flex items-center">
-        Rigtch
-      </Header>
+    <div>
+      {/* <Navbar fluid rounded>
+        <Navbar.Brand>Rigtch</Navbar.Brand>
+      </Navbar> */}
 
-      <Content className="py-8">{children}</Content>
-    </Layout>
+      <main className="py-8">{children}</main>
+    </div>
   )
 }

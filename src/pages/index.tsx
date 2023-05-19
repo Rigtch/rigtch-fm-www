@@ -1,3 +1,4 @@
+import { Button } from 'flowbite-react'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import { useCookies } from 'react-cookie'
@@ -47,7 +48,9 @@ export default function Home({ displayName, href }: HomeProps) {
 
   return (
     <main>
-      <button onClick={logOut}>log out</button>
+      <Button onClick={logOut} color="purple">
+        log out
+      </Button>
       <h1>{displayName}</h1>
       <p>{href}</p>
     </main>
