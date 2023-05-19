@@ -1,3 +1,3 @@
 export * from './environment'
 export * from './apollo-client'
-export * from './colors'
+export * from './theme'

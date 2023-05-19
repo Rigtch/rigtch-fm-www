@@ -1,16 +1,19 @@
 import { ApolloProvider } from '@apollo/client'
 import { AppProps } from 'next/app'
+import { ConfigProvider } from 'antd'
 
-import '~/styles/globals.css'
+import 'antd/dist/reset.css'
 
-import { client } from '~/config'
+import { client, defaultTheme } from '~/config'
 import { DefaultLayout } from '~/layouts'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <DefaultLayout>
-        <Component {...pageProps} />
+        <ConfigProvider theme={defaultTheme}>
+          <Component {...pageProps} />
+        </ConfigProvider>
       </DefaultLayout>
     </ApolloProvider>
   )

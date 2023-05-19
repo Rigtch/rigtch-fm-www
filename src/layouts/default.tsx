@@ -1,4 +1,3 @@
-// import { Navbar } from 'flowbite-react'
 import { ReactNode } from 'react'
 
 export interface DefaultLayoutProps {
@@ -7,12 +6,8 @@ export interface DefaultLayoutProps {
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <div>
-      {/* <Navbar fluid rounded>
-        <Navbar.Brand>Rigtch</Navbar.Brand>
-      </Navbar> */}
-
-      <main className="py-8">{children}</main>
+    <div className="">
+      <main className="py-8 border-2 border-gray-800">{children}</main>
     </div>
   )
 }
