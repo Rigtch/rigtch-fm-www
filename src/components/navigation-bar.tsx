@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { ProfileInfo } from './profile-info'
-import { ConnectButton } from './buttons'
+import { ConnectButton } from './connect-button'
 
 import { rigtchLogo } from '~/assets/images'
 import { useAuth } from '~/hooks/auth'
@@ -15,11 +15,11 @@ export function NavigationBar() {
         <Image
           src={rigtchLogo}
           alt="Rigtch"
-          width={32}
+          width={42}
           className="border-round-sm"
         />
 
-        <p className="font-semibold uppercase">Rigtch</p>
+        <p className="font-normal text-xl !m-0">Rigtch Music</p>
       </div>
 
       <div className="flex align-items-center gap-2">
