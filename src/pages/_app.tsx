@@ -9,13 +9,16 @@ import '~/styles/theme.css'
 
 import { client } from '~/config'
 import { DefaultLayout } from '~/layouts'
+import { AuthProvider } from '~/context/auth'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
-      <DefaultLayout>
-        <Component {...pageProps} />
-      </DefaultLayout>
+      <AuthProvider>
+        <DefaultLayout>
+          <Component {...pageProps} />
+        </DefaultLayout>
+      </AuthProvider>
     </ApolloProvider>
   )
 }
