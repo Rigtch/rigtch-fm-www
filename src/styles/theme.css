@@ -46,36 +46,10 @@
   --highlight-text-color: 9eade6;
   color-scheme: dark;
 }
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  src: local(''), url('./fonts/poppins-v15-latin-300.woff2') format('woff2'),
-    url('./fonts/poppins-v15-latin-300.woff') format('woff');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''), url('./fonts/poppins-v15-latin-regular.woff2') format('woff2'),
-    url('./fonts/poppins-v15-latin-regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  src: local(''), url('./fonts/poppins-v15-latin-500.woff2') format('woff2'),
-    url('./fonts/poppins-v15-latin-500.woff') format('woff');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  src: local(''), url('./fonts/poppins-v15-latin-700.woff2') format('woff2'),
-    url('./fonts/poppins-v15-latin-700.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 * {
   box-sizing: border-box;
+  font-family: Lato, Helvetica, sans-serif;
 }
 .p-component {
   font-family: Lato, Helvetica, sans-serif;
