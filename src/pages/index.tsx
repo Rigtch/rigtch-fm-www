@@ -1,11 +1,10 @@
-import { Button } from 'primereact/button'
 import { GetServerSideProps } from 'next'
-import { useRouter } from 'next/router'
-import { useCookies } from 'react-cookie'
+import { useEffect } from 'react'
 
 import { client } from '~/config'
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
+import { ACCESS_TOKEN } from '~/common/constants'
 import { PROFILE_QUERY, Profile, ProfileQuery } from '~/graphql'
+import { useAuth } from '~/hooks/auth'
 
 export type HomeProps = Profile
 
@@ -35,20 +34,17 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 }
 
-export default function Home({ displayName, href }: HomeProps) {
-  const [, , removeCookies] = useCookies([ACCESS_TOKEN, REFRESH_TOKEN])
-  const router = useRouter()
+export default function Home(profile: HomeProps) {
+  const { displayName, href } = profile
 
-  function logOut() {
-    removeCookies(ACCESS_TOKEN)
-    removeCookies(REFRESH_TOKEN)
+  const { setProfile } = useAuth()
 
-    router.push('/about')
-  }
+  useEffect(() => {
+    setProfile(profile)
+  }, [profile, setProfile])
 
   return (
     <main>
-      <Button onClick={logOut}>log out</Button>
       <h1 className="text-info-100">{displayName}</h1>
       <p>{href}</p>
     </main>
