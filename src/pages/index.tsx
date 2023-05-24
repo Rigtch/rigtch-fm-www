@@ -1,4 +1,4 @@
-import { Button } from 'antd'
+import { Button } from 'primereact/button'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import { useCookies } from 'react-cookie'
@@ -48,9 +48,7 @@ export default function Home({ displayName, href }: HomeProps) {
 
   return (
     <main>
-      <Button onClick={logOut} type="primary">
-        log out
-      </Button>
+      <Button onClick={logOut}>log out</Button>
       <h1 className="text-info-100">{displayName}</h1>
       <p>{href}</p>
     </main>

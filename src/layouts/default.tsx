@@ -6,8 +6,10 @@ export interface DefaultLayoutProps {
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <div className="">
-      <main className="py-8 border-2 border-gray-800">{children}</main>
+    <div>
+      <header>rigtch</header>
+
+      <main>{children}</main>
     </div>
   )
 }
