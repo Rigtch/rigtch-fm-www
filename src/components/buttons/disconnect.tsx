@@ -14,7 +14,7 @@ export function DisconnectButton(props: ButtonProps) {
     removeCookies(ACCESS_TOKEN)
     removeCookies(REFRESH_TOKEN)
 
-    setProfile(undefined)
+    setProfile()
 
     router.push('/about')
   }

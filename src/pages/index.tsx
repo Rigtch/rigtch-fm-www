@@ -41,7 +41,8 @@ export default function Home(profile: HomeProps) {
 
   useEffect(() => {
     setProfile(profile)
-  }, [profile, setProfile])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <main>
