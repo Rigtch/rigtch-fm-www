@@ -5,35 +5,24 @@ import { Menu } from 'primereact/menu'
 import { useRef } from 'react'
 import { MenuItem } from 'primereact/menuitem'
 
-import { DisconnectButton } from './buttons'
-
 import { useAuth } from '~/hooks/auth'
 
 export function ProfileInfo() {
-  const { profile, getProfileImage } = useAuth()
+  const { profile, getProfileImage, disconnect } = useAuth()
 
   const menu = useRef<Menu>(null)
   const toast = useRef<Toast>(null)
 
   const menuItems: MenuItem[] = [
     {
-      template: () => (
-        <DisconnectButton className="w-full justify-content-center" />
-      ),
+      label: 'Disconnect',
+      icon: 'pi pi-sign-out',
+      command: disconnect,
     },
-    { separator: true },
     {
-      template: () => (
-        <Button
-          className="w-full justify-content-center gap-2"
-          severity="success"
-          icon="pi pi-arrow-up-right"
-          iconPos="right"
-          onClick={() => window.open(profile?.href, '_blank')}
-        >
-          Spotify
-        </Button>
-      ),
+      label: 'Spotify',
+      icon: 'pi pi-external-link',
+      command: () => window.open(profile?.href, '_blank'),
     },
   ]
 
@@ -44,7 +33,7 @@ export function ProfileInfo() {
 
       <Button
         text
-        severity="info"
+        severity="help"
         className="gap-2"
         onClick={event => menu?.current?.toggle(event)}
       >
