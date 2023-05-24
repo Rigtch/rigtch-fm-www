@@ -80,6 +80,12 @@
     "@typescript-eslint/no-empty-function": "off",
     "unicorn/prefer-node-protocol": "off",
     "unicorn/no-unreadable-array-destructuring": "off",
+    "unicorn/no-useless-undefined": [
+      "error",
+      {
+        "checkArguments": false
+      }
+    ],
     "unicorn/filename-case": [
       "error",
       {
