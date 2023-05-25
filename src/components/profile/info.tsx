@@ -5,11 +5,20 @@ import { Menu } from 'primereact/menu'
 import { useRef } from 'react'
 import { MenuItem } from 'primereact/menuitem'
 
-import { useAuth } from '~/hooks/auth'
+import { Profile } from '~/graphql'
 
-export function ProfileInfo() {
-  const { profile, getProfileImage, disconnect } = useAuth()
+export interface ProfileInfoProps
+  extends Pick<Profile, 'displayName' | 'href'> {
+  disconnect: () => void
+  image: string
+}
 
+export function ProfileInfo({
+  displayName,
+  href,
+  disconnect,
+  image,
+}: ProfileInfoProps) {
   const menu = useRef<Menu>(null)
   const toast = useRef<Toast>(null)
 
@@ -20,9 +29,9 @@ export function ProfileInfo() {
       command: disconnect,
     },
     {
-      label: 'Spotify',
+      label: 'Open in Spotify',
       icon: 'pi pi-external-link',
-      command: () => window.open(profile?.href, '_blank'),
+      command: () => window.open(href, '_blank'),
     },
   ]
 
@@ -37,11 +46,9 @@ export function ProfileInfo() {
         className="gap-2"
         onClick={event => menu?.current?.toggle(event)}
       >
-        <p className="text-xl font-medium text-white m-0">
-          {profile?.displayName}
-        </p>
+        <p className="text-xl font-medium text-white m-0">{displayName}</p>
 
-        <Avatar image={getProfileImage()} shape="circle" size="large" />
+        <Avatar image={image} shape="circle" size="large" />
       </Button>
     </div>
   )

@@ -8,6 +8,7 @@ export const PROFILE_QUERY = gql`
         url
       }
       href
+      followers
     }
   }
 `

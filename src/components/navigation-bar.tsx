@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-import { ProfileInfo } from './profile-info'
+import { ProfileInfo } from './profile'
 import { ConnectButton } from './connect-button'
 
 import { rigtchLogo } from '~/assets/images'
 import { useAuth } from '~/hooks/auth'
 
 export function NavigationBar() {
-  const { isAuthorized } = useAuth()
+  const { isAuthorized, profile, disconnect, getProfileImage } = useAuth()
 
   return (
     <header className="flex px-4 py-2 surface-card border-round-sm justify-content-between">
@@ -23,7 +23,15 @@ export function NavigationBar() {
       </div>
 
       <div className="flex align-items-center gap-2">
-        {isAuthorized ? <ProfileInfo /> : <ConnectButton />}
+        {isAuthorized && profile ? (
+          <ProfileInfo
+            {...profile}
+            disconnect={disconnect}
+            image={getProfileImage() ?? ''}
+          />
+        ) : (
+          <ConnectButton />
+        )}
       </div>
     </header>
   )

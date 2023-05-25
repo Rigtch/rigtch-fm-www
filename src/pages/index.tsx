@@ -5,6 +5,7 @@ import { client } from '~/config'
 import { ACCESS_TOKEN } from '~/common/constants'
 import { PROFILE_QUERY, Profile, ProfileQuery } from '~/graphql'
 import { useAuth } from '~/hooks/auth'
+import { Profilecard } from '~/components/profile'
 
 export type HomeProps = Profile
 
@@ -35,9 +36,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 }
 
 export default function Home(profile: HomeProps) {
-  const { displayName, href } = profile
-
-  const { setProfile } = useAuth()
+  const { setProfile, getProfileImage } = useAuth()
 
   useEffect(() => {
     setProfile(profile)
@@ -45,9 +44,8 @@ export default function Home(profile: HomeProps) {
   }, [])
 
   return (
-    <main>
-      <h1 className="text-info-100">{displayName}</h1>
-      <p>{href}</p>
-    </main>
+    <div>
+      <Profilecard {...profile} image={getProfileImage() ?? ''} />
+    </div>
   )
 }
