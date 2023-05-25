@@ -6,6 +6,7 @@ export function Footer() {
       <div className="flex justify-content-center w-full">
         <Link
           href="https://discord.gg/ft9RUtyfZg"
+          target="_blank"
           style={{ all: 'unset', cursor: 'pointer' }}
         >
           <span className="pi pi-discord" style={{ fontSize: '2rem' }}></span>
