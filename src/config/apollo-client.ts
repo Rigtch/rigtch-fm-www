@@ -1,4 +1,5 @@
 import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
+import { setContext } from '@apollo/client/link/context'
 
 import { environment } from './environment'
 
@@ -11,9 +12,16 @@ const httpLink = new HttpLink({
   },
 })
 
+const headersLink = setContext((_, { headers }) => ({
+  headers: {
+    ...headers,
+    'Cache-Control': 'no-cache',
+  },
+}))
+
 export const client = new ApolloClient({
   uri: `${environment.API_URL}/graphql`,
   cache: new InMemoryCache(),
   credentials: 'include',
-  link: httpLink,
+  link: headersLink.concat(httpLink),
 })

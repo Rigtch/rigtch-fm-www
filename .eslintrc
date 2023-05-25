@@ -102,6 +102,7 @@
         "newlines-between": "always"
       }
     ],
+    "unicorn/prefer-spread": "off",
     "unicorn/prevent-abbreviations": [
       "error",
       {

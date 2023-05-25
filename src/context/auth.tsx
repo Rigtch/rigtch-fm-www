@@ -3,6 +3,7 @@ import { ReactNode, createContext, useState } from 'react'
 import { useCookies } from 'react-cookie'
 
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
+import { client } from '~/config'
 import { Profile } from '~/graphql'
 
 export interface AuthContextType {
@@ -36,6 +37,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
     removeCookies(REFRESH_TOKEN)
 
     setProfile(undefined)
+
+    client.resetStore()
 
     router.push('/about')
   }
