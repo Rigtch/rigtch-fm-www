@@ -3,17 +3,32 @@ import { useEffect } from 'react'
 
 import { client } from '~/config'
 import { ACCESS_TOKEN } from '~/common/constants'
-import { PROFILE_QUERY, Profile, ProfileQuery } from '~/graphql'
+import {
+  CURRENT_PLAYBACK_STATE_QUERY,
+  CurrentPlaybackStateQuery,
+  LAST_TRACKS_QUERY,
+  LastTracksQuery,
+  PROFILE_QUERY,
+  PlaybackState,
+  Profile,
+  ProfileQuery,
+} from '~/graphql'
 import { useAuth } from '~/hooks/auth'
-import { Profilecard } from '~/components/profile'
+import { ProfileCard } from '~/components/profile'
+import { usePlaybackState } from '~/hooks/playback-state'
 
-export type HomeProps = Profile
+export type HomeProps = {
+  profile: Profile
+  playbackState: PlaybackState
+}
 
 export const getServerSideProps: GetServerSideProps = async ({
   req: { cookies },
 }) => {
   try {
-    const { data } = await client.query<ProfileQuery>({
+    const {
+      data: { profile },
+    } = await client.query<ProfileQuery>({
       query: PROFILE_QUERY,
       context: {
         headers: {
@@ -22,10 +37,42 @@ export const getServerSideProps: GetServerSideProps = async ({
       },
     })
 
+    const {
+      data: { currentPlaybackState: playbackState },
+    } = await client
+      .query<CurrentPlaybackStateQuery>({
+        query: CURRENT_PLAYBACK_STATE_QUERY,
+        context: {
+          headers: {
+            Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
+          },
+        },
+      })
+      .catch(() => ({ data: { currentPlaybackState: undefined } }))
+
+    const {
+      data: { lastTracks },
+    } = await client.query<LastTracksQuery>({
+      query: LAST_TRACKS_QUERY,
+      context: {
+        headers: {
+          Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
+        },
+      },
+    })
+
     return {
-      props: data.profile,
+      props: {
+        profile,
+        playbackState: playbackState ?? {
+          isPlaying: false,
+          track: lastTracks[0],
+        },
+      },
     }
-  } catch {
+  } catch (error) {
+    console.log('error', error)
+
     return {
       redirect: {
         destination: '/about',
@@ -35,17 +82,19 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 }
 
-export default function Home(profile: HomeProps) {
+export default function Home({ profile, playbackState }: HomeProps) {
   const { setProfile, getProfileImage } = useAuth()
+  const { setPlaybackState } = usePlaybackState()
 
   useEffect(() => {
     setProfile(profile)
+    setPlaybackState(playbackState)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <div>
-      <Profilecard {...profile} image={getProfileImage() ?? ''} />
+      <ProfileCard {...profile} image={getProfileImage() ?? ''} />
     </div>
   )
 }
