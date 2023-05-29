@@ -10,14 +10,17 @@ import '~/styles/theme.css'
 import { client } from '~/config'
 import { DefaultLayout } from '~/layouts'
 import { AuthProvider } from '~/context/auth'
+import { PlaybackStateProvider } from '~/context/playback-state'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <AuthProvider>
-        <DefaultLayout>
-          <Component {...pageProps} />
-        </DefaultLayout>
+        <PlaybackStateProvider>
+          <DefaultLayout>
+            <Component {...pageProps} />
+          </DefaultLayout>
+        </PlaybackStateProvider>
       </AuthProvider>
     </ApolloProvider>
   )
