@@ -29,7 +29,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const router = useRouter()
 
   const [profile, setProfile] = useState<Profile>()
-
   const isAuthorized = !!profile?.displayName
 
   function disconnect() {

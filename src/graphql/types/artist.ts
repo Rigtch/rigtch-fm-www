@@ -7,4 +7,8 @@ export interface Artist {
   images: Image[]
 }
 
+export interface TopArtistsQuery {
+  topArtists: Artist[]
+}
+
 export type TrackArtist = Omit<Artist, 'genres'>

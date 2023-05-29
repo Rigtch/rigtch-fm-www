@@ -8,6 +8,7 @@ import {
   PROFILE_QUERY,
   LAST_TRACKS_QUERY,
   TOP_GENRES_QUERY,
+  TOP_ARTISTS_QUERY,
 } from '~/graphql/queries'
 import {
   CurrentPlaybackStateQuery,
@@ -17,6 +18,7 @@ import {
   ProfileQuery,
   TopGenresQuery,
   Track,
+  TopArtistsQuery,
 } from '~/graphql/types'
 import { useAuth } from '~/hooks/auth'
 import { ProfileCard } from '~/components/profile'
@@ -24,12 +26,15 @@ import { usePlaybackState } from '~/hooks/playback-state'
 import { LastTracksSection } from '~/components/last-tracks-section'
 import { applyAuthorizationHeader } from '~/common/auth'
 import { TopGenresSection } from '~/components/top-genres-section'
+import { TopArtistsCard } from '~/components/top-artists/card'
+import { Artist } from '~/graphql/types/artist'
 
 export type HomeProps = {
   profile: Profile
-  playbackState: PlaybackState
+  topArtists: Artist[]
   lastTracks: Track[]
   topGenres: string[]
+  playbackState: PlaybackState
 }
 
 export const getServerSideProps: GetServerSideProps = async ({
@@ -64,6 +69,17 @@ export const getServerSideProps: GetServerSideProps = async ({
       ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
     })
 
+    const {
+      data: { topArtists },
+    } = await client.query<TopArtistsQuery>({
+      query: TOP_ARTISTS_QUERY,
+      context: {
+        headers: {
+          Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
+        },
+      },
+    })
+
     return {
       props: {
         profile,
@@ -73,6 +89,7 @@ export const getServerSideProps: GetServerSideProps = async ({
           isPlaying: false,
           track: lastTracks[0],
         },
+        topArtists,
       },
     }
   } catch (error) {
@@ -92,6 +109,7 @@ export default function Home({
   playbackState,
   lastTracks,
   topGenres,
+  topArtists,
 }: HomeProps) {
   const { setProfile, getProfileImage } = useAuth()
   const { setPlaybackState } = usePlaybackState()
@@ -109,6 +127,8 @@ export default function Home({
       <TopGenresSection genres={topGenres} />
 
       <LastTracksSection tracks={lastTracks} />
+
+      <TopArtistsCard {...topArtists} />
     </div>
   )
 }
