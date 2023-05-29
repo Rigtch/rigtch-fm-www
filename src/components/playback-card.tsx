@@ -18,6 +18,7 @@ export function PlaybackCard() {
   const {
     isPlaying,
     track,
+    device,
     getPlaybackAlbumImage,
     getPlaybackArtists,
     setIsPlaying,
@@ -78,6 +79,8 @@ export function PlaybackCard() {
               paddingLeft: isPlaying ? '1px' : '2px',
             }}
             icon={`pi ${isPlaying ? 'pi-pause' : 'pi-play'}`}
+            disabled={!device}
+            tooltip={device ? undefined : 'No active device'}
             onClick={handleChangeIsPlayingStatus}
           />
         </div>

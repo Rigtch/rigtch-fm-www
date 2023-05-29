@@ -54,10 +54,10 @@ export function PlaybackStateProvider({
             },
           },
         })
-        .then(({ data: { currentPlaybackState } }) => {
-          console.log(currentPlaybackState)
+        .then(({ data: { currentPlaybackState } }) =>
           setPlaybackState(currentPlaybackState)
-        })
+        )
+        .catch(() => {})
     }, 1000)
 
     return () => clearInterval(interval)

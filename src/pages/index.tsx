@@ -37,18 +37,14 @@ export const getServerSideProps: GetServerSideProps = async ({
       },
     })
 
-    const {
-      data: { currentPlaybackState: playbackState },
-    } = await client
-      .query<CurrentPlaybackStateQuery>({
-        query: CURRENT_PLAYBACK_STATE_QUERY,
-        context: {
-          headers: {
-            Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
-          },
+    const { data } = await client.query<CurrentPlaybackStateQuery>({
+      query: CURRENT_PLAYBACK_STATE_QUERY,
+      context: {
+        headers: {
+          Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
         },
-      })
-      .catch(() => ({ data: { currentPlaybackState: undefined } }))
+      },
+    })
 
     const {
       data: { lastTracks },
@@ -64,7 +60,8 @@ export const getServerSideProps: GetServerSideProps = async ({
     return {
       props: {
         profile,
-        playbackState: playbackState ?? {
+
+        playbackState: data?.currentPlaybackState ?? {
           isPlaying: false,
           track: lastTracks[0],
         },
