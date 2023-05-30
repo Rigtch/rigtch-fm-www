@@ -20,7 +20,7 @@ export function ProfileCard({
 }: ProfileCardProps) {
   return (
     <Card>
-      <div className="flex justify-content-between">
+      <div className="flex flex-column gap-4 lg:flex-row justify-content-between">
         <header className="flex gap-4 p-2">
           <Avatar
             image={image}

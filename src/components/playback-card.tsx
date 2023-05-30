@@ -56,21 +56,32 @@ export function PlaybackCard() {
       className="py-0"
     >
       <main className="flex gap-4">
-        <Image
-          src={getPlaybackAlbumImage()}
-          alt={track?.album.name ?? ''}
-          width="96"
-          height="96"
-          imageClassName="border-round-md"
-        />
+        <div>
+          <Image
+            src={getPlaybackAlbumImage()}
+            alt={track?.album.name ?? ''}
+            width="96"
+            height="96"
+            imageClassName="border-round-md"
+          />
 
-        <div className="flex flex-column justify-content-between">
+          <Button
+            severity="success"
+            text
+            className="text-white align-self-end block md:hidden"
+            onClick={() => window.open(track?.href, '_blank')}
+          >
+            Open in Spotify
+          </Button>
+        </div>
+
+        <div className="flex flex-column gap-2 w-full">
           <div className="flex flex-column gap-1">
             <p className="text-2xl m-0 text-white">{track?.name}</p>
             <p className="m-0 text-700">{getPlaybackArtists()}</p>
           </div>
 
-          <div className="flex justify-content-between">
+          <div className="flex justify-content-between align-items-center">
             <div className="flex gap-2">
               <AudioBars isPlaying={isPlaying} />
 
@@ -94,7 +105,7 @@ export function PlaybackCard() {
             <Button
               severity="success"
               text
-              className="text-white align-self-end"
+              className="text-white align-self-end hidden md:block"
               onClick={() => window.open(track?.href, '_blank')}
             >
               Open in Spotify
