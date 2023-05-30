@@ -26,7 +26,7 @@ export function PlaybackCard() {
     setIsPlaying,
   } = usePlaybackState()
 
-  async function handleChangeIsPlayingStatus() {
+  async function handleChangePlayingStatus() {
     await (isPlaying
       ? client
           .query<PausePlayerQuery>({
@@ -87,7 +87,7 @@ export function PlaybackCard() {
                 icon={`pi ${isPlaying ? 'pi-pause' : 'pi-play'}`}
                 disabled={!device}
                 tooltip={device ? undefined : 'No active device'}
-                onClick={handleChangeIsPlayingStatus}
+                onClick={handleChangePlayingStatus}
               />
             </div>
 
