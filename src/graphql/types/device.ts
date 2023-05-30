@@ -7,6 +7,6 @@ export interface Device {
   name: string
   type: string
   isActive: boolean
-  isPriveSession: boolean
+  isPrivateSession: boolean
   volumePercent: number
 }
