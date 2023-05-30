@@ -16,6 +16,7 @@ import {
   PlaybackStateDto,
   CURRENT_PLAYBACK_STATE_QUERY,
 } from '~/graphql'
+import { useAuth } from '~/hooks/auth'
 
 export interface PlaybackContextStateType {
   device?: Device
@@ -38,6 +39,8 @@ export interface PlaybackStateProviderProps {
 export function PlaybackStateProvider({
   children,
 }: PlaybackStateProviderProps) {
+  const { isAuthorized } = useAuth()
+
   const [cookies] = useCookies([ACCESS_TOKEN])
   const [isPlaying, setIsPlaying] = useState(false)
   const [device, setDevice] = useState<Device>()
@@ -45,19 +48,20 @@ export function PlaybackStateProvider({
 
   useEffect(() => {
     const interval = setInterval(() => {
-      client
-        .query({
-          query: CURRENT_PLAYBACK_STATE_QUERY,
-          context: {
-            headers: {
-              Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
+      if (isAuthorized)
+        client
+          .query({
+            query: CURRENT_PLAYBACK_STATE_QUERY,
+            context: {
+              headers: {
+                Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
+              },
             },
-          },
-        })
-        .then(({ data: { currentPlaybackState } }) =>
-          setPlaybackState(currentPlaybackState)
-        )
-        .catch(() => {})
+          })
+          .then(({ data: { currentPlaybackState } }) =>
+            setPlaybackState(currentPlaybackState)
+          )
+          .catch(() => {})
     }, 1000)
 
     return () => clearInterval(interval)
