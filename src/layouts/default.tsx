@@ -9,10 +9,15 @@ export interface DefaultLayoutProps {
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <div className="flex-column justify-content-between flex min-h-screen gap-4">
+    <div className="flex-column justify-content-between align-content-center flex min-h-screen gap-4">
       <NavigationBar />
 
-      <main className="flex-grow-1">{children}</main>
+      <main
+        className="flex-grow-1 align-self-center w-full"
+        style={{ maxWidth: '1300px' }}
+      >
+        {children}
+      </main>
 
       <Footer />
     </div>
