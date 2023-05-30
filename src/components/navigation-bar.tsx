@@ -10,7 +10,7 @@ export function NavigationBar() {
   const { isAuthorized, profile, disconnect, getProfileImage } = useAuth()
 
   return (
-    <header className="flex px-4 py-2 surface-card border-round-sm justify-content-between">
+    <header className="flex px-4 py-2 surface-ground border-round-sm justify-content-between sticky top-0 z-5">
       <div className="flex align-items-center gap-4">
         <Image
           src={rigtchLogo}
@@ -22,7 +22,7 @@ export function NavigationBar() {
         <p className="font-normal text-xl !m-0">Rigtch Music</p>
       </div>
 
-      <div className="flex align-items-center gap-2">
+      <nav className="flex align-items-center gap-2">
         {isAuthorized && profile ? (
           <ProfileInfo
             {...profile}
@@ -32,7 +32,7 @@ export function NavigationBar() {
         ) : (
           <ConnectButton />
         )}
-      </div>
+      </nav>
     </header>
   )
 }
