@@ -20,7 +20,7 @@ export function ProfileCard({
 }: ProfileCardProps) {
   return (
     <Card>
-      <div className="flex flex-column gap-4 lg:flex-row justify-content-between">
+      <div className="flex-column justify-content-between flex gap-4 lg:flex-row">
         <header className="flex gap-4 p-2">
           <Avatar
             image={image}
@@ -28,11 +28,11 @@ export function ProfileCard({
             style={{ width: '96px', height: '96px' }}
           />
 
-          <div className="flex flex-column justify-content-between">
+          <div className="flex-column justify-content-between flex">
             <div>
-              <h2 className="text-4xl m-0">{displayName}</h2>
+              <h2 className="m-0 text-4xl">{displayName}</h2>
 
-              <p className="m-0 text-sm text-300">{followers} Followers</p>
+              <p className="text-300 m-0 text-sm">{followers} Followers</p>
             </div>
 
             <div>

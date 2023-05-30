@@ -46,7 +46,7 @@ export function ProfileInfo({
         className="gap-2"
         onClick={event => menu?.current?.toggle(event)}
       >
-        <p className="text-xl font-medium text-white m-0">{displayName}</p>
+        <p className="m-0 text-xl font-medium text-white">{displayName}</p>
 
         <Avatar image={image} shape="circle" size="large" />
       </Button>

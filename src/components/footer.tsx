@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer className="flex flex-column px-4 py-4 surface-card border-round-sm gap-3">
-      <div className="flex justify-content-center w-full">
+    <footer className="flex-column surface-card border-round-sm flex gap-3 px-4 py-4">
+      <div className="justify-content-center flex w-full">
         <Link
           href="https://discord.gg/ft9RUtyfZg"
           target="_blank"
@@ -14,7 +14,7 @@ export function Footer() {
       </div>
 
       <div className="flex-justify-content-center w-full">
-        <span className="flex justify-content-center text-md">
+        <span className="justify-content-center text-md flex">
           Rigtch {new Date().getFullYear()} &copy; All right reserved.
         </span>
       </div>
