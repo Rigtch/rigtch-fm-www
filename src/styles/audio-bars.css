@@ -15,65 +15,75 @@
 }
 
 .audio-container.play .bar {
-  animation: upDown 2.5s linear infinite;
+  animation: up-down 2.5s linear infinite;
 }
 
-@keyframes upDown {
+@keyframes up-down {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
+
   10% {
     transform: translateY(15px);
   }
+
   20% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
+
   30% {
     transform: translateY(10px);
   }
+
   40% {
     transform: translateY(20px);
   }
+
   50% {
     transform: translateY(15px);
   }
+
   60% {
     transform: translateY(30px);
   }
+
   70% {
     transform: translateY(20px);
   }
+
   80% {
     transform: translateY(15px);
   }
+
   90% {
     transform: translateY(20px);
   }
+
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 
-.bar_two {
+.bar-two {
   left: 8px;
 }
 
-.audio-container.play .bar_two {
+.audio-container.play .bar-two {
   animation-delay: 0.6s;
 }
 
-.bar_three {
+.bar-three {
   left: 16px;
 }
 
-.audio-container.play .bar_three {
+.audio-container.play .bar-three {
   animation-delay: 0.3s;
 }
 
-.bar_four {
+.bar-four {
   left: 24px;
 }
 
-.audio-container.play .bar_four {
+.audio-container.play .bar-four {
   animation-delay: 0.9s;
 }
