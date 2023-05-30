@@ -33,6 +33,20 @@ export function ProfileInfo({
       icon: 'pi pi-external-link',
       command: () => window.open(href, '_blank'),
     },
+    {
+      separator: true,
+    },
+    {
+      template: () => (
+        <div className="align-items-center flex gap-2 px-4 py-1">
+          <Avatar image={image} shape="circle" />
+
+          <p className="m-0 text-xl font-medium text-white md:block">
+            {displayName}
+          </p>
+        </div>
+      ),
+    },
   ]
 
   return (
@@ -46,7 +60,9 @@ export function ProfileInfo({
         className="gap-2"
         onClick={event => menu?.current?.toggle(event)}
       >
-        <p className="m-0 text-xl font-medium text-white">{displayName}</p>
+        <p className="m-0 hidden text-xl font-medium text-white md:block">
+          {displayName}
+        </p>
 
         <Avatar image={image} shape="circle" size="large" />
       </Button>
