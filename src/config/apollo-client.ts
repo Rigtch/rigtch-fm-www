@@ -24,4 +24,14 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
   credentials: 'include',
   link: headersLink.concat(httpLink),
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'ignore',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
 })
