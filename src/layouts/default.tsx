@@ -9,7 +9,7 @@ export interface DefaultLayoutProps {
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <div className="flex flex-column justify-content-between gap-4 min-h-screen">
+    <div className="flex-column justify-content-between flex min-h-screen gap-4">
       <NavigationBar />
 
       <main className="flex-grow-1">{children}</main>

@@ -68,20 +68,20 @@ export function PlaybackCard() {
           <Button
             severity="success"
             text
-            className="text-white align-self-end block md:hidden"
+            className="align-self-end block text-white md:hidden"
             onClick={() => window.open(track?.href, '_blank')}
           >
             Open in Spotify
           </Button>
         </div>
 
-        <div className="flex flex-column gap-2 w-full">
-          <div className="flex flex-column gap-1">
-            <p className="text-2xl m-0 text-white">{track?.name}</p>
-            <p className="m-0 text-700">{getPlaybackArtists()}</p>
+        <div className="flex-column flex w-full gap-2">
+          <div className="flex-column flex gap-1">
+            <p className="m-0 text-2xl text-white">{track?.name}</p>
+            <p className="text-700 m-0">{getPlaybackArtists()}</p>
           </div>
 
-          <div className="flex justify-content-between align-items-center">
+          <div className="justify-content-between align-items-center flex">
             <div className="flex gap-2">
               <AudioBars isPlaying={isPlaying} />
 
@@ -105,7 +105,7 @@ export function PlaybackCard() {
             <Button
               severity="success"
               text
-              className="text-white align-self-end hidden md:block"
+              className="align-self-end hidden text-white md:block"
               onClick={() => window.open(track?.href, '_blank')}
             >
               Open in Spotify
