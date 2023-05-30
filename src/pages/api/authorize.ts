@@ -18,7 +18,7 @@ export default async function handler(
     path: '/',
   })
 
-  return response
+  response
     .setHeader('Set-Cookie', [accessTokenCookie, refreshTokenCookie])
     .redirect('/')
 }
