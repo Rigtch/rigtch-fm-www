@@ -3,6 +3,8 @@ import { Card } from 'primereact/card'
 import { Button } from 'primereact/button'
 import { useCookies } from 'react-cookie'
 
+import { AudioBars } from './utils'
+
 import {
   PAUSE_PLAYER_QUERY,
   PausePlayerQuery,
@@ -62,38 +64,42 @@ export function PlaybackCard() {
           imageClassName="border-round-md"
         />
 
-        <div className="flex flex-column justify-content-between py-1">
+        <div className="flex flex-column justify-content-between">
           <div className="flex flex-column gap-1">
             <p className="text-2xl m-0 text-white">{track?.name}</p>
             <p className="m-0 text-700">{getPlaybackArtists()}</p>
           </div>
 
-          <Button
-            severity="success"
-            text
-            rounded
-            className="text-white"
-            style={{
-              width: '28px',
-              height: '28px',
-              paddingLeft: isPlaying ? '1px' : '2px',
-            }}
-            icon={`pi ${isPlaying ? 'pi-pause' : 'pi-play'}`}
-            disabled={!device}
-            tooltip={device ? undefined : 'No active device'}
-            onClick={handleChangeIsPlayingStatus}
-          />
-        </div>
+          <div className="flex justify-content-between">
+            <div className="flex gap-2">
+              <AudioBars isPlaying={isPlaying} />
 
-        <div className="flex align-items-end">
-          <Button
-            severity="success"
-            text
-            className="text-white"
-            onClick={() => window.open(track?.href, '_blank')}
-          >
-            Open in Spotify
-          </Button>
+              <Button
+                severity="success"
+                rounded
+                outlined
+                className="text-white"
+                style={{
+                  width: '28px',
+                  height: '28px',
+                  paddingLeft: isPlaying ? '.5px' : '1.5px',
+                }}
+                icon={`pi ${isPlaying ? 'pi-pause' : 'pi-play'}`}
+                disabled={!device}
+                tooltip={device ? undefined : 'No active device'}
+                onClick={handleChangeIsPlayingStatus}
+              />
+            </div>
+
+            <Button
+              severity="success"
+              text
+              className="text-white align-self-end"
+              onClick={() => window.open(track?.href, '_blank')}
+            >
+              Open in Spotify
+            </Button>
+          </div>
         </div>
       </main>
     </Card>

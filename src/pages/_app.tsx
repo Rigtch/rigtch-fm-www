@@ -4,6 +4,7 @@ import { AppProps } from 'next/app'
 import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css'
+import '~/styles/audio-bars.css'
 
 import '~/styles/theme.css'
 
