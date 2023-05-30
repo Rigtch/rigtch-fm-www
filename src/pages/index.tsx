@@ -128,7 +128,7 @@ export default function Home({
 
       <LastTracksSection tracks={lastTracks} />
 
-      <TopArtistsCard {...topArtists} />
+      <TopArtistsCard topArtists={topArtists} />
     </div>
   )
 }
