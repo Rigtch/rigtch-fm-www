@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "yarn next lint --fix",
+    "lint": "yarn lint:js && yarn lint:css",
+    "lint:js": "eslint --ext \".js,.ts,.md,.jsx,.tsx,.mdx\" --ignore-path .gitignore --resolve-plugins-relative-to .",
+    "lint:css": "stylelint \"**/*.{sass,scss,pcss,postcss,css}\" --allow-empty-input --ignore-path .gitignore",
+    "lint:fix": "yarn lint --fix",
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -64,6 +66,10 @@
     "less-loader": "^11.1.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "stylelint": "^15.6.2",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-webpack-plugin": "^4.1.1",
     "vitest": "^0.31.0",
     "vitest-mock-extended": "^1.1.3"
   }

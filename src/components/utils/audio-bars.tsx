@@ -7,10 +7,10 @@ export interface AudioBarsProps {
 export function AudioBars({ isPlaying = false }: AudioBarsProps) {
   return (
     <div className={classNames('audio-container', isPlaying && 'play')}>
-      <span className="bar bar_one"></span>
-      <span className="bar bar_two"></span>
-      <span className="bar bar_three"></span>
-      <span className="bar bar_four"></span>
+      <span className="bar bar-one"></span>
+      <span className="bar bar-two"></span>
+      <span className="bar bar-three"></span>
+      <span className="bar bar-four"></span>
     </div>
   )
 }
