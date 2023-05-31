@@ -12,14 +12,17 @@ import {
   PlaybackState,
   Profile,
   ProfileQuery,
+  Track,
 } from '~/graphql'
 import { useAuth } from '~/hooks/auth'
 import { ProfileCard } from '~/components/profile'
 import { usePlaybackState } from '~/hooks/playback-state'
+import { LastTracksSection } from '~/components/last-tracks-section'
 
 export type HomeProps = {
   profile: Profile
   playbackState: PlaybackState
+  lastTracks: Track[]
 }
 
 export const getServerSideProps: GetServerSideProps = async ({
@@ -60,7 +63,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     return {
       props: {
         profile,
-
+        lastTracks,
         playbackState: data?.currentPlaybackState ?? {
           isPlaying: false,
           track: lastTracks[0],
@@ -79,7 +82,11 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 }
 
-export default function Home({ profile, playbackState }: HomeProps) {
+export default function Home({
+  profile,
+  playbackState,
+  lastTracks,
+}: HomeProps) {
   const { setProfile, getProfileImage } = useAuth()
   const { setPlaybackState } = usePlaybackState()
 
@@ -90,8 +97,10 @@ export default function Home({ profile, playbackState }: HomeProps) {
   }, [])
 
   return (
-    <div>
+    <div className="flex-column flex gap-8">
       <ProfileCard {...profile} image={getProfileImage() ?? ''} />
+
+      <LastTracksSection tracks={lastTracks} />
     </div>
   )
 }
