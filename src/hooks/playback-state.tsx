@@ -1,15 +1,17 @@
 import { useContext } from 'react'
 
 import { PlaybackStateContext } from '~/context/playback-state'
+import { getAlbumImage } from '~/utils/get-album-image'
+import { getArtists } from '~/utils/get-artists'
 
 export const usePlaybackState = () => {
   const playbackStateContext = useContext(PlaybackStateContext)
 
   const getPlaybackAlbumImage = (index = 0) =>
-    playbackStateContext.track?.album.images[index]?.url ?? ''
+    getAlbumImage(playbackStateContext.track?.album, index)
 
   const getPlaybackArtists = () =>
-    playbackStateContext.track?.artists.map(({ name }) => name).join(', ') ?? ''
+    getArtists(playbackStateContext.track?.artists)
 
   return {
     ...playbackStateContext,
