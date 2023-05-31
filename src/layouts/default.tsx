@@ -13,7 +13,7 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
       <NavigationBar />
 
       <main
-        className="flex-grow-1 align-self-center w-full"
+        className="flex-grow-1 align-self-center w-full p-2"
         style={{ maxWidth: '1300px' }}
       >
         {children}
