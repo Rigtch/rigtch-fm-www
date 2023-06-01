@@ -69,8 +69,11 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: yarn
 
-      - name: Lint 🐱
-        run: yarn lint
+      - name: Lint JS files 🐱
+        run: yarn lint:js
+
+      - name: Lint CSS files 🐱
+        run: yarn lint:css
 
   test:
     name: 'Test 🧪'
