@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { ProfileInfo } from './profile'
-import { ConnectButton } from './connect-button'
+import { ConnectButton } from './connect'
 
 import { rigtchLogo } from '~/assets/images'
 import { useAuth } from '~/hooks/auth'
