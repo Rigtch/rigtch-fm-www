@@ -3,7 +3,7 @@ import { Button } from 'primereact/button'
 import { Card } from 'primereact/card'
 import { DateTime } from 'luxon'
 
-import { Track } from '~/graphql'
+import { Track } from '~/graphql/types'
 import { getAlbumImage } from '~/utils/get-album-image'
 import { getArtists } from '~/utils/get-artists'
 

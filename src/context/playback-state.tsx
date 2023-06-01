@@ -8,6 +8,7 @@ import {
 } from 'react'
 import { useCookies } from 'react-cookie'
 
+import { applyAuthorizationHeader } from '~/common/auth'
 import { ACCESS_TOKEN } from '~/common/constants'
 import { client } from '~/config'
 import { CURRENT_PLAYBACK_STATE_QUERY } from '~/graphql/queries'
@@ -48,11 +49,7 @@ export function PlaybackStateProvider({
         client
           .query({
             query: CURRENT_PLAYBACK_STATE_QUERY,
-            context: {
-              headers: {
-                Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
-              },
-            },
+            ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
           })
           .then(({ data: { currentPlaybackState } }) =>
             setPlaybackState(currentPlaybackState)

@@ -10,6 +10,7 @@ import { PausePlayerQuery, ResumePlayerQuery } from '~/graphql/types'
 import { ACCESS_TOKEN } from '~/common/constants'
 import { client } from '~/config'
 import { usePlaybackState } from '~/hooks/playback-state'
+import { applyAuthorizationHeader } from '~/common/auth'
 
 export function PlaybackCard() {
   const [cookies] = useCookies([ACCESS_TOKEN])
@@ -27,21 +28,13 @@ export function PlaybackCard() {
       ? client
           .query<PausePlayerQuery>({
             query: PAUSE_PLAYER_QUERY,
-            context: {
-              headers: {
-                Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
-              },
-            },
+            ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
           })
           .then(() => setIsPlaying(false))
       : client
           .query<ResumePlayerQuery>({
             query: RESUME_PLAYER_QUERY,
-            context: {
-              headers: {
-                Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
-              },
-            },
+            ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
           })
           .then(() => setIsPlaying(true)))
   }

@@ -20,6 +20,7 @@ import { useAuth } from '~/hooks/auth'
 import { ProfileCard } from '~/components/profile'
 import { usePlaybackState } from '~/hooks/playback-state'
 import { LastTracksSection } from '~/components/last-tracks-section'
+import { applyAuthorizationHeader } from '~/common/auth'
 
 export type HomeProps = {
   profile: Profile
@@ -35,31 +36,19 @@ export const getServerSideProps: GetServerSideProps = async ({
       data: { profile },
     } = await client.query<ProfileQuery>({
       query: PROFILE_QUERY,
-      context: {
-        headers: {
-          Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
-        },
-      },
+      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
     })
 
     const { data } = await client.query<CurrentPlaybackStateQuery>({
       query: CURRENT_PLAYBACK_STATE_QUERY,
-      context: {
-        headers: {
-          Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
-        },
-      },
+      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
     })
 
     const {
       data: { lastTracks },
     } = await client.query<LastTracksQuery>({
       query: LAST_TRACKS_QUERY,
-      context: {
-        headers: {
-          Authorization: `Bearer ${cookies[ACCESS_TOKEN]}`,
-        },
-      },
+      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
     })
 
     return {

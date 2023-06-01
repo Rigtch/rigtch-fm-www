@@ -1,6 +1,6 @@
 import { TrackCard } from './track-card'
 
-import { Track } from '~/graphql'
+import { Track } from '~/graphql/types'
 
 export interface LastTracksSectionProps {
   tracks: Track[]
