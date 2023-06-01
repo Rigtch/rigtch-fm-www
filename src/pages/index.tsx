@@ -26,8 +26,8 @@ import { usePlaybackState } from '~/hooks/playback-state'
 import { LastTracksSection } from '~/components/last-tracks-section'
 import { applyAuthorizationHeader } from '~/common/auth'
 import { TopGenresSection } from '~/components/top-genres-section'
-import { TopArtistsCard } from '~/components/top-artists/card'
 import { Artist } from '~/graphql/types/artist'
+import { TopArtistsSection } from '~/components/top-artists/section'
 
 export type HomeProps = {
   profile: Profile
@@ -126,9 +126,9 @@ export default function Home({
 
       <TopGenresSection genres={topGenres} />
 
-      <LastTracksSection tracks={lastTracks} />
+      <TopArtistsSection topArtists={topArtists} />
 
-      <TopArtistsCard topArtists={topArtists} />
+      <LastTracksSection tracks={lastTracks} />
     </div>
   )
 }
