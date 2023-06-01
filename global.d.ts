@@ -6,3 +6,6 @@ declare global {
     type Assertion<T = unknown> = TestingLibraryMatchers<T, void>
   }
 }
+
+declare module '*.jpg'
+declare module '*.png'
