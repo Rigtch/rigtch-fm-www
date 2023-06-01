@@ -5,7 +5,7 @@ import { Card } from 'primereact/card'
 import { PlaybackCard } from '../playback-card'
 
 import { SpotifyIcon } from '~/assets/svgs'
-import { Profile } from '~/graphql'
+import { Profile } from '~/graphql/types'
 
 export interface ProfileCardProps
   extends Pick<Profile, 'displayName' | 'href' | 'followers'> {

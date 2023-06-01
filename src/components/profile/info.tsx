@@ -5,7 +5,7 @@ import { Menu } from 'primereact/menu'
 import { useRef } from 'react'
 import { MenuItem } from 'primereact/menuitem'
 
-import { Profile } from '~/graphql'
+import { Profile } from '~/graphql/types'
 
 export interface ProfileInfoProps
   extends Pick<Profile, 'displayName' | 'href'> {

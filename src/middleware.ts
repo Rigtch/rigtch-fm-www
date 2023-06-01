@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 
 import { client } from '~/config'
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
-import { REFRESH_QUERY, RefreshQuery } from '~/graphql'
+import { REFRESH_QUERY } from '~/graphql/queries'
+import { RefreshQuery } from '~/graphql/types'
 
 export async function middleware(request: NextRequest) {
   const refreshToken = request.cookies.get(REFRESH_TOKEN)?.value

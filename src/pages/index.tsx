@@ -5,15 +5,17 @@ import { client } from '~/config'
 import { ACCESS_TOKEN } from '~/common/constants'
 import {
   CURRENT_PLAYBACK_STATE_QUERY,
-  CurrentPlaybackStateQuery,
-  LAST_TRACKS_QUERY,
-  LastTracksQuery,
   PROFILE_QUERY,
+  LAST_TRACKS_QUERY,
+} from '~/graphql/queries'
+import {
+  CurrentPlaybackStateQuery,
+  LastTracksQuery,
   PlaybackState,
   Profile,
   ProfileQuery,
   Track,
-} from '~/graphql'
+} from '~/graphql/types'
 import { useAuth } from '~/hooks/auth'
 import { ProfileCard } from '~/components/profile'
 import { usePlaybackState } from '~/hooks/playback-state'

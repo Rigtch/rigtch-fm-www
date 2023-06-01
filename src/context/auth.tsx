@@ -4,7 +4,7 @@ import { useCookies } from 'react-cookie'
 
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
 import { client } from '~/config'
-import { Profile } from '~/graphql'
+import { Profile } from '~/graphql/types'
 
 export interface AuthContextType {
   profile?: Profile

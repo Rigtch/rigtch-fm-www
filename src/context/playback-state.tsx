@@ -10,12 +10,8 @@ import { useCookies } from 'react-cookie'
 
 import { ACCESS_TOKEN } from '~/common/constants'
 import { client } from '~/config'
-import {
-  Device,
-  Track,
-  PlaybackStateDto,
-  CURRENT_PLAYBACK_STATE_QUERY,
-} from '~/graphql'
+import { CURRENT_PLAYBACK_STATE_QUERY } from '~/graphql/queries'
+import { Device, Track, PlaybackStateDto } from '~/graphql/types'
 import { useAuth } from '~/hooks/auth'
 
 export interface PlaybackContextStateType {

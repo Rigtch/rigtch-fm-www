@@ -5,12 +5,8 @@ import { useCookies } from 'react-cookie'
 
 import { AudioBars } from './utils'
 
-import {
-  PAUSE_PLAYER_QUERY,
-  PausePlayerQuery,
-  RESUME_PLAYER_QUERY,
-  ResumePlayerQuery,
-} from '~/graphql'
+import { PAUSE_PLAYER_QUERY, RESUME_PLAYER_QUERY } from '~/graphql/queries'
+import { PausePlayerQuery, ResumePlayerQuery } from '~/graphql/types'
 import { ACCESS_TOKEN } from '~/common/constants'
 import { client } from '~/config'
 import { usePlaybackState } from '~/hooks/playback-state'

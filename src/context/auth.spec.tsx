@@ -4,7 +4,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 
 import { AuthContext, AuthProvider } from './auth'
 
-import { Profile } from '~/graphql'
+import { Profile } from '~/graphql/types'
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
 
 const removeCookiesMock = vi.fn()
