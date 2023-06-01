@@ -7,6 +7,7 @@ import {
   CURRENT_PLAYBACK_STATE_QUERY,
   PROFILE_QUERY,
   LAST_TRACKS_QUERY,
+  TOP_GENRES_QUERY,
 } from '~/graphql/queries'
 import {
   CurrentPlaybackStateQuery,
@@ -14,6 +15,7 @@ import {
   PlaybackState,
   Profile,
   ProfileQuery,
+  TopGenresQuery,
   Track,
 } from '~/graphql/types'
 import { useAuth } from '~/hooks/auth'
@@ -21,11 +23,13 @@ import { ProfileCard } from '~/components/profile'
 import { usePlaybackState } from '~/hooks/playback-state'
 import { LastTracksSection } from '~/components/last-tracks-section'
 import { applyAuthorizationHeader } from '~/common/auth'
+import { TopGenresSection } from '~/components/top-genres-section'
 
 export type HomeProps = {
   profile: Profile
   playbackState: PlaybackState
   lastTracks: Track[]
+  topGenres: string[]
 }
 
 export const getServerSideProps: GetServerSideProps = async ({
@@ -51,10 +55,20 @@ export const getServerSideProps: GetServerSideProps = async ({
       ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
     })
 
+    const {
+      data: {
+        topGenres: { genres: topGenres },
+      },
+    } = await client.query<TopGenresQuery>({
+      query: TOP_GENRES_QUERY,
+      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
+    })
+
     return {
       props: {
         profile,
         lastTracks,
+        topGenres,
         playbackState: data?.currentPlaybackState ?? {
           isPlaying: false,
           track: lastTracks[0],
@@ -77,6 +91,7 @@ export default function Home({
   profile,
   playbackState,
   lastTracks,
+  topGenres,
 }: HomeProps) {
   const { setProfile, getProfileImage } = useAuth()
   const { setPlaybackState } = usePlaybackState()
@@ -90,6 +105,8 @@ export default function Home({
   return (
     <div className="flex-column flex gap-8">
       <ProfileCard {...profile} image={getProfileImage() ?? ''} />
+
+      <TopGenresSection genres={topGenres} />
 
       <LastTracksSection tracks={lastTracks} />
     </div>
