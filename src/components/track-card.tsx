@@ -21,7 +21,7 @@ export function TrackCard({
       className="surface-ground"
       onClick={() => window.innerWidth < 757 && window.open(href, '_blank')}
     >
-      <main className="justify-content-between flex-column flex md:flex-row">
+      <main className="justify-content-between flex-column flex gap-1 md:flex-row">
         <header className="flex gap-4">
           <Image
             src={getAlbumImage(album)}
