@@ -13,7 +13,6 @@ import { TopGenresSection } from '~/components/top-genres-section'
 
 export type HomeProps = {
   profile: Profile
-
   topGenres: string[]
 }
 
@@ -40,7 +39,6 @@ export const getServerSideProps: GetServerSideProps = async ({
     return {
       props: {
         profile,
-
         topGenres,
       },
     }

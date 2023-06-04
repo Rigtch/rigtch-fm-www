@@ -12,8 +12,8 @@ export function LastTracksSection() {
       </header>
 
       <main className="flex-column flex gap-1">
-        {lastTracks.map(track => (
-          <TrackCard {...track} key={track.name} />
+        {lastTracks.map((track, index) => (
+          <TrackCard {...track} key={index} />
         ))}
       </main>
     </section>

@@ -65,6 +65,7 @@ export function PlaybackStateProvider({
 
   useEffect(() => {
     queryPlaybackState()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {

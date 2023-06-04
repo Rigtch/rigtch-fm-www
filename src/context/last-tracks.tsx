@@ -40,6 +40,7 @@ export function LastTracksProvider({ children }: LastTracksProviderProps) {
 
   useEffect(() => {
     queryLastTracks()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

@@ -12,7 +12,6 @@ import { ACCESS_TOKEN } from '~/common/constants'
 import { client } from '~/config'
 import { usePlaybackState } from '~/hooks/playback-state'
 import { applyAuthorizationHeader } from '~/common/auth'
-import { isMobile } from '~/utils/is-mobile'
 
 export function PlaybackCard() {
   const [cookies] = useCookies([ACCESS_TOKEN])
@@ -45,7 +44,6 @@ export function PlaybackCard() {
     <Card
       style={{
         backgroundColor: isPlaying ? '#388e3c' : '#263238',
-        minWidth: isMobile() ? 'auto' : '400px',
       }}
       className="py-0"
     >
