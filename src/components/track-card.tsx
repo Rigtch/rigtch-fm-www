@@ -6,6 +6,7 @@ import { DateTime } from 'luxon'
 import { Track } from '~/graphql/types'
 import { getAlbumImage } from '~/utils/get-album-image'
 import { getArtists } from '~/utils/get-artists'
+import { isMobile } from '~/utils/is-mobile'
 
 export type TrackCardProps = Omit<Track, 'progress' | 'duration'>
 
@@ -19,7 +20,7 @@ export function TrackCard({
   return (
     <Card
       className="surface-ground"
-      onClick={() => window.innerWidth < 757 && window.open(href, '_blank')}
+      onClick={() => isMobile() && window.open(href, '_blank')}
     >
       <main className="justify-content-between flex-column flex gap-1 md:flex-row">
         <header className="flex gap-4">
