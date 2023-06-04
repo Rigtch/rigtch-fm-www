@@ -10,11 +10,10 @@ import {
 import { useCookies } from 'react-cookie'
 
 import { applyAuthorizationHeader } from '~/common/auth'
-import { ACCESS_TOKEN } from '~/common/constants'
+import { ACCESS_TOKEN, IS_AUTHORIZED } from '~/common/constants'
 import { client } from '~/config'
 import { CURRENT_PLAYBACK_STATE_QUERY } from '~/graphql/queries'
 import { Device, Track, PlaybackStateDto } from '~/graphql/types'
-import { useAuth } from '~/hooks/auth'
 import { useLastTracks } from '~/hooks/last-tracks'
 
 export interface PlaybackStateContextType {
@@ -38,36 +37,36 @@ export interface PlaybackStateProviderProps {
 export function PlaybackStateProvider({
   children,
 }: PlaybackStateProviderProps) {
-  const { isAuthorized } = useAuth()
-  const { refetchLastTracks } = useLastTracks()
+  const { refetchLastTracks, lastTracks } = useLastTracks()
 
-  const [cookies] = useCookies([ACCESS_TOKEN])
+  const [cookies] = useCookies([ACCESS_TOKEN, IS_AUTHORIZED])
   const [isPlaying, setIsPlaying] = useState(false)
   const [device, setDevice] = useState<Device>()
   const [track, setTrack] = useState<Track>()
 
   const queryPlaybackState = useCallback(() => {
-    if (isAuthorized)
+    if (cookies[IS_AUTHORIZED])
       client
         .query({
           query: CURRENT_PLAYBACK_STATE_QUERY,
           ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
         })
         .then(({ data: { currentPlaybackState } }) => {
-          if (currentPlaybackState.track.name !== track?.name) {
-            console.log('e')
+          if (currentPlaybackState.track.name !== track?.name)
             refetchLastTracks()
-          }
 
           setPlaybackState(currentPlaybackState)
         })
-        .catch(() => {})
-  }, [cookies, isAuthorized, refetchLastTracks, track?.name])
+        .catch(() => {
+          setIsPlaying(false)
+          setDevice(undefined)
+          setTrack(lastTracks[0])
+        })
+  }, [cookies, refetchLastTracks, track?.name, lastTracks])
 
   useEffect(() => {
     queryPlaybackState()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [queryPlaybackState])
 
   useEffect(() => {
     const interval = setInterval(() => {

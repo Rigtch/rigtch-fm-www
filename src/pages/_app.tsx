@@ -11,21 +11,28 @@ import Head from 'next/head'
 
 import { client } from '~/config'
 import { DefaultLayout } from '~/layouts'
-import { AuthProvider } from '~/context/auth'
+import { Profile } from '~/graphql/types'
 import { PlaybackStateProvider } from '~/context/playback-state'
 import { LastTracksProvider } from '~/context/last-tracks'
 
-export default function App({ Component, pageProps }: AppProps) {
+export interface DefaultPageProps {
+  profile?: Profile
+}
+
+export default function App({
+  Component,
+  pageProps,
+}: AppProps<DefaultPageProps>) {
   return (
     <>
       <Head>
         <title>Rigtch Music</title>
-
+        {/* 
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#0e1315" />
 
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="apple-touch-icon" href="/aple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link
           rel="icon"
           type="image/png"
@@ -38,19 +45,17 @@ export default function App({ Component, pageProps }: AppProps) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" /> */}
       </Head>
 
       <ApolloProvider client={client}>
-        <AuthProvider>
-          <LastTracksProvider>
-            <PlaybackStateProvider>
-              <DefaultLayout>
-                <Component {...pageProps} />
-              </DefaultLayout>
-            </PlaybackStateProvider>
-          </LastTracksProvider>
-        </AuthProvider>
+        <LastTracksProvider>
+          <PlaybackStateProvider>
+            <DefaultLayout profile={pageProps.profile}>
+              <Component {...pageProps} />
+            </DefaultLayout>
+          </PlaybackStateProvider>
+        </LastTracksProvider>
       </ApolloProvider>
     </>
   )

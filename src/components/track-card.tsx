@@ -4,7 +4,7 @@ import { Card } from 'primereact/card'
 import { DateTime } from 'luxon'
 
 import { Track } from '~/graphql/types'
-import { getAlbumImage } from '~/utils/get-album-image'
+import { getImage } from '~/utils/get-image'
 import { getArtists } from '~/utils/get-artists'
 import { isMobile } from '~/utils/is-mobile'
 
@@ -25,7 +25,7 @@ export function TrackCard({
       <main className="justify-content-between flex-column flex gap-1 md:flex-row">
         <header className="flex gap-4">
           <Image
-            src={getAlbumImage(album)}
+            src={getImage(album.images)}
             alt={album.name}
             width="64"
             height="64"

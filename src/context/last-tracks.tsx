@@ -1,12 +1,17 @@
-import { ReactNode, createContext, useEffect, useState } from 'react'
+import {
+  ReactNode,
+  createContext,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react'
 import { useCookies } from 'react-cookie'
 
 import { applyAuthorizationHeader } from '~/common/auth'
-import { ACCESS_TOKEN } from '~/common/constants'
+import { ACCESS_TOKEN, IS_AUTHORIZED } from '~/common/constants'
 import { client } from '~/config'
 import { LAST_TRACKS_QUERY } from '~/graphql/queries'
 import { LastTracksQuery, Track } from '~/graphql/types'
-import { useAuth } from '~/hooks/auth'
 
 export interface LastTracksContextType {
   lastTracks: Track[]
@@ -23,25 +28,22 @@ export interface LastTracksProviderProps {
 }
 
 export function LastTracksProvider({ children }: LastTracksProviderProps) {
-  const { isAuthorized } = useAuth()
-
-  const [cookies] = useCookies([ACCESS_TOKEN])
+  const [cookies] = useCookies([ACCESS_TOKEN, IS_AUTHORIZED])
   const [lastTracks, setLastTracks] = useState<Track[]>([])
 
-  function queryLastTracks() {
-    if (isAuthorized)
+  const queryLastTracks = useCallback(() => {
+    if (cookies[IS_AUTHORIZED])
       client
         .query<LastTracksQuery>({
           query: LAST_TRACKS_QUERY,
           ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
         })
         .then(({ data: { lastTracks } }) => setLastTracks(lastTracks))
-  }
+  }, [cookies, setLastTracks])
 
   useEffect(() => {
     queryLastTracks()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [queryLastTracks])
 
   return (
     <LastTracksContext.Provider
