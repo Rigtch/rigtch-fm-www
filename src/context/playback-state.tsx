@@ -3,6 +3,7 @@ import {
   ReactNode,
   SetStateAction,
   createContext,
+  useCallback,
   useEffect,
   useState,
 } from 'react'
@@ -45,7 +46,7 @@ export function PlaybackStateProvider({
   const [device, setDevice] = useState<Device>()
   const [track, setTrack] = useState<Track>()
 
-  function queryPlaybackState() {
+  const queryPlaybackState = useCallback(() => {
     if (isAuthorized)
       client
         .query({
@@ -61,7 +62,7 @@ export function PlaybackStateProvider({
           setPlaybackState(currentPlaybackState)
         })
         .catch(() => {})
-  }
+  }, [cookies, isAuthorized, refetchLastTracks, track?.name])
 
   useEffect(() => {
     queryPlaybackState()
@@ -74,7 +75,7 @@ export function PlaybackStateProvider({
     }, 1000)
 
     return () => clearInterval(interval)
-  })
+  }, [queryPlaybackState])
 
   function setPlaybackState({ isPlaying, device, track }: PlaybackStateDto) {
     setIsPlaying(isPlaying)
