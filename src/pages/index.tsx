@@ -4,15 +4,12 @@ import { useEffect } from 'react'
 import { client } from '~/config'
 import { ACCESS_TOKEN } from '~/common/constants'
 import {
-  CURRENT_PLAYBACK_STATE_QUERY,
   PROFILE_QUERY,
   LAST_TRACKS_QUERY,
   TOP_GENRES_QUERY,
 } from '~/graphql/queries'
 import {
-  CurrentPlaybackStateQuery,
   LastTracksQuery,
-  PlaybackState,
   Profile,
   ProfileQuery,
   TopGenresQuery,
@@ -20,14 +17,13 @@ import {
 } from '~/graphql/types'
 import { useAuth } from '~/hooks/auth'
 import { ProfileCard } from '~/components/profile'
-import { usePlaybackState } from '~/hooks/playback-state'
 import { LastTracksSection } from '~/components/last-tracks-section'
 import { applyAuthorizationHeader } from '~/common/auth'
 import { TopGenresSection } from '~/components/top-genres-section'
 
 export type HomeProps = {
   profile: Profile
-  playbackState: PlaybackState
+
   lastTracks: Track[]
   topGenres: string[]
 }
@@ -40,11 +36,6 @@ export const getServerSideProps: GetServerSideProps = async ({
       data: { profile },
     } = await client.query<ProfileQuery>({
       query: PROFILE_QUERY,
-      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-    })
-
-    const { data } = await client.query<CurrentPlaybackStateQuery>({
-      query: CURRENT_PLAYBACK_STATE_QUERY,
       ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
     })
 
@@ -69,10 +60,6 @@ export const getServerSideProps: GetServerSideProps = async ({
         profile,
         lastTracks,
         topGenres,
-        playbackState: data?.currentPlaybackState ?? {
-          isPlaying: false,
-          track: lastTracks[0],
-        },
       },
     }
   } catch (error) {
@@ -87,18 +74,12 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 }
 
-export default function Home({
-  profile,
-  playbackState,
-  lastTracks,
-  topGenres,
-}: HomeProps) {
+export default function Home({ profile, lastTracks, topGenres }: HomeProps) {
   const { setProfile, getProfileImage } = useAuth()
-  const { setPlaybackState } = usePlaybackState()
 
   useEffect(() => {
     setProfile(profile)
-    setPlaybackState(playbackState)
+    console.log('profile', profile)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

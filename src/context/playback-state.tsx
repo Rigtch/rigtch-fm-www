@@ -43,18 +43,26 @@ export function PlaybackStateProvider({
   const [device, setDevice] = useState<Device>()
   const [track, setTrack] = useState<Track>()
 
+  function queryPlaybackState() {
+    if (isAuthorized)
+      client
+        .query({
+          query: CURRENT_PLAYBACK_STATE_QUERY,
+          ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
+        })
+        .then(({ data: { currentPlaybackState } }) =>
+          setPlaybackState(currentPlaybackState)
+        )
+        .catch(() => {})
+  }
+
+  queryPlaybackState()
+
   useEffect(() => {
     const interval = setInterval(() => {
-      if (isAuthorized)
-        client
-          .query({
-            query: CURRENT_PLAYBACK_STATE_QUERY,
-            ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-          })
-          .then(({ data: { currentPlaybackState } }) =>
-            setPlaybackState(currentPlaybackState)
-          )
-          .catch(() => {})
+      console.log('e')
+
+      queryPlaybackState()
     }, 1000)
 
     return () => clearInterval(interval)

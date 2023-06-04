@@ -1,6 +1,7 @@
 import { Image } from 'primereact/image'
 import { Card } from 'primereact/card'
 import { Button } from 'primereact/button'
+import { Skeleton } from 'primereact/skeleton'
 import { useCookies } from 'react-cookie'
 
 import { AudioBars } from './utils'
@@ -11,6 +12,7 @@ import { ACCESS_TOKEN } from '~/common/constants'
 import { client } from '~/config'
 import { usePlaybackState } from '~/hooks/playback-state'
 import { applyAuthorizationHeader } from '~/common/auth'
+import { isMobile } from '~/utils/is-mobile'
 
 export function PlaybackCard() {
   const [cookies] = useCookies([ACCESS_TOKEN])
@@ -41,18 +43,25 @@ export function PlaybackCard() {
 
   return (
     <Card
-      style={{ backgroundColor: isPlaying ? '#388e3c' : '#263238' }}
+      style={{
+        backgroundColor: isPlaying ? '#388e3c' : '#263238',
+        minWidth: isMobile() ? 'auto' : '400px',
+      }}
       className="py-0"
     >
       <main className="flex gap-4">
         <div>
-          <Image
-            src={getPlaybackAlbumImage()}
-            alt={track?.album.name ?? ''}
-            width="96"
-            height="96"
-            imageClassName="border-round-md"
-          />
+          {track ? (
+            <Image
+              src={getPlaybackAlbumImage()}
+              alt={track?.album.name ?? ''}
+              width="96"
+              height="96"
+              imageClassName="border-round-md"
+            />
+          ) : (
+            <Skeleton size="96px" />
+          )}
 
           <Button
             severity="success"
@@ -66,8 +75,17 @@ export function PlaybackCard() {
 
         <div className="flex-column flex w-full gap-2">
           <div className="flex-column flex gap-1">
-            <p className="m-0 text-2xl text-white">{track?.name}</p>
-            <p className="text-700 m-0">{getPlaybackArtists()}</p>
+            {track ? (
+              <>
+                <p className="m-0 text-2xl text-white">{track?.name}</p>
+                <p className="text-700 m-0">{getPlaybackArtists()}</p>
+              </>
+            ) : (
+              <>
+                <Skeleton width="100%" height="24px" />
+                <Skeleton width="40%" height="16px" />
+              </>
+            )}
           </div>
 
           <div className="justify-content-between align-items-center flex">
