@@ -14,8 +14,9 @@ import { client } from '~/config'
 import { CURRENT_PLAYBACK_STATE_QUERY } from '~/graphql/queries'
 import { Device, Track, PlaybackStateDto } from '~/graphql/types'
 import { useAuth } from '~/hooks/auth'
+import { useLastTracks } from '~/hooks/last-tracks'
 
-export interface PlaybackContextStateType {
+export interface PlaybackStateContextType {
   device?: Device
   isPlaying: boolean
   track?: Track
@@ -23,7 +24,7 @@ export interface PlaybackContextStateType {
   setIsPlaying: Dispatch<SetStateAction<boolean>>
 }
 
-export const PlaybackStateContext = createContext<PlaybackContextStateType>({
+export const PlaybackStateContext = createContext<PlaybackStateContextType>({
   isPlaying: false,
   setPlaybackState: () => {},
   setIsPlaying: () => {},
@@ -37,6 +38,7 @@ export function PlaybackStateProvider({
   children,
 }: PlaybackStateProviderProps) {
   const { isAuthorized } = useAuth()
+  const { refetchLastTracks } = useLastTracks()
 
   const [cookies] = useCookies([ACCESS_TOKEN])
   const [isPlaying, setIsPlaying] = useState(false)
@@ -50,18 +52,23 @@ export function PlaybackStateProvider({
           query: CURRENT_PLAYBACK_STATE_QUERY,
           ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
         })
-        .then(({ data: { currentPlaybackState } }) =>
+        .then(({ data: { currentPlaybackState } }) => {
+          if (currentPlaybackState.track.name !== track?.name) {
+            console.log('e')
+            refetchLastTracks()
+          }
+
           setPlaybackState(currentPlaybackState)
-        )
+        })
         .catch(() => {})
   }
 
-  queryPlaybackState()
+  useEffect(() => {
+    queryPlaybackState()
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log('e')
-
       queryPlaybackState()
     }, 1000)
 

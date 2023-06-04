@@ -13,6 +13,7 @@ import { client } from '~/config'
 import { DefaultLayout } from '~/layouts'
 import { AuthProvider } from '~/context/auth'
 import { PlaybackStateProvider } from '~/context/playback-state'
+import { LastTracksProvider } from '~/context/last-tracks'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -42,11 +43,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <ApolloProvider client={client}>
         <AuthProvider>
-          <PlaybackStateProvider>
-            <DefaultLayout>
-              <Component {...pageProps} />
-            </DefaultLayout>
-          </PlaybackStateProvider>
+          <LastTracksProvider>
+            <PlaybackStateProvider>
+              <DefaultLayout>
+                <Component {...pageProps} />
+              </DefaultLayout>
+            </PlaybackStateProvider>
+          </LastTracksProvider>
         </AuthProvider>
       </ApolloProvider>
     </>

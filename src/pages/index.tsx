@@ -3,18 +3,8 @@ import { useEffect } from 'react'
 
 import { client } from '~/config'
 import { ACCESS_TOKEN } from '~/common/constants'
-import {
-  PROFILE_QUERY,
-  LAST_TRACKS_QUERY,
-  TOP_GENRES_QUERY,
-} from '~/graphql/queries'
-import {
-  LastTracksQuery,
-  Profile,
-  ProfileQuery,
-  TopGenresQuery,
-  Track,
-} from '~/graphql/types'
+import { PROFILE_QUERY, TOP_GENRES_QUERY } from '~/graphql/queries'
+import { Profile, ProfileQuery, TopGenresQuery } from '~/graphql/types'
 import { useAuth } from '~/hooks/auth'
 import { ProfileCard } from '~/components/profile'
 import { LastTracksSection } from '~/components/last-tracks-section'
@@ -24,7 +14,6 @@ import { TopGenresSection } from '~/components/top-genres-section'
 export type HomeProps = {
   profile: Profile
 
-  lastTracks: Track[]
   topGenres: string[]
 }
 
@@ -40,13 +29,6 @@ export const getServerSideProps: GetServerSideProps = async ({
     })
 
     const {
-      data: { lastTracks },
-    } = await client.query<LastTracksQuery>({
-      query: LAST_TRACKS_QUERY,
-      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-    })
-
-    const {
       data: {
         topGenres: { genres: topGenres },
       },
@@ -58,7 +40,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     return {
       props: {
         profile,
-        lastTracks,
+
         topGenres,
       },
     }
@@ -74,7 +56,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 }
 
-export default function Home({ profile, lastTracks, topGenres }: HomeProps) {
+export default function Home({ profile, topGenres }: HomeProps) {
   const { setProfile, getProfileImage } = useAuth()
 
   useEffect(() => {
@@ -89,7 +71,7 @@ export default function Home({ profile, lastTracks, topGenres }: HomeProps) {
 
       <TopGenresSection genres={topGenres} />
 
-      <LastTracksSection tracks={lastTracks} />
+      <LastTracksSection />
     </div>
   )
 }

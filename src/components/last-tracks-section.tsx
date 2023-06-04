@@ -1,12 +1,10 @@
 import { TrackCard } from './track-card'
 
-import { Track } from '~/graphql/types'
+import { useLastTracks } from '~/hooks/last-tracks'
 
-export interface LastTracksSectionProps {
-  tracks: Track[]
-}
+export function LastTracksSection() {
+  const { lastTracks } = useLastTracks()
 
-export function LastTracksSection({ tracks }: LastTracksSectionProps) {
   return (
     <section>
       <header>
@@ -14,7 +12,7 @@ export function LastTracksSection({ tracks }: LastTracksSectionProps) {
       </header>
 
       <main className="flex-column flex gap-1">
-        {tracks.map(track => (
+        {lastTracks.map(track => (
           <TrackCard {...track} key={track.name} />
         ))}
       </main>
