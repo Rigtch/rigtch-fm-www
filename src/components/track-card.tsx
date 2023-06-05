@@ -1,7 +1,8 @@
 import { Image } from 'primereact/image'
-import { Button } from 'primereact/button'
 import { Card } from 'primereact/card'
 import { DateTime } from 'luxon'
+
+import { OpenInSpotifyButton } from './common'
 
 import { Track } from '~/graphql/types'
 import { getImage } from '~/utils/get-image'
@@ -39,14 +40,7 @@ export function TrackCard({
         </header>
 
         <div className="flex-column justify-content-between align-items-end flex">
-          <Button
-            severity="info"
-            text
-            className="align-self-end hidden text-white md:block"
-            onClick={() => window.open(href, '_blank')}
-          >
-            Open in Spotify
-          </Button>
+          <OpenInSpotifyButton href={href} className="hidden md:block" />
 
           <p className="text-700 m-0">
             {DateTime.fromISO(playedAt ?? '').toRelative()}
