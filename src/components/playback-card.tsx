@@ -5,6 +5,7 @@ import { Skeleton } from 'primereact/skeleton'
 import { useCookies } from 'react-cookie'
 
 import { AudioBars, OpenInSpotifyButton } from './common'
+import { RelativeTime } from './utils'
 
 import { PAUSE_PLAYER_QUERY, RESUME_PLAYER_QUERY } from '~/graphql/queries'
 import { PausePlayerQuery, ResumePlayerQuery } from '~/graphql/types'
@@ -100,10 +101,14 @@ export function PlaybackCard() {
               />
             </div>
 
-            <OpenInSpotifyButton
-              href={track?.href ?? ''}
-              className="hidden md:block"
-            />
+            <div className="align-items-center flex gap-2">
+              {track?.playedAt && <RelativeTime value={track.playedAt} />}
+
+              <OpenInSpotifyButton
+                href={track?.href ?? ''}
+                className="hidden md:block"
+              />
+            </div>
           </div>
         </div>
       </main>
