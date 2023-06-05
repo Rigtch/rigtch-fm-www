@@ -18,6 +18,10 @@ are always up to date.
 
 - [Production](https://rigtch-music.vercel.app)
 
+## Related repositories
+
+- [rigtch-music-api](https://github.com/Rigtch/rigtch-music-api)
+
 ## Stack
 
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
