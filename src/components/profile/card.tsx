@@ -1,10 +1,9 @@
 import { Avatar } from 'primereact/avatar'
-import { Button } from 'primereact/button'
 import { Card } from 'primereact/card'
 
 import { PlaybackCard } from '../playback-card'
+import { OpenInSpotifyButton } from '../common'
 
-import { SpotifyIcon } from '~/assets/svgs'
 import { Profile } from '~/graphql/types'
 
 export interface ProfileCardProps
@@ -36,16 +35,7 @@ export function ProfileCard({
             </div>
 
             <div>
-              <Button
-                icon={<SpotifyIcon />}
-                rounded
-                text
-                severity="success"
-                tooltip="Open in Spotify"
-                tooltipOptions={{ position: 'bottom' }}
-                onClick={() => window.open(href, '_blank')}
-                style={{ width: '28px', height: '28px' }}
-              />
+              <OpenInSpotifyButton href={href} />
             </div>
           </div>
         </header>

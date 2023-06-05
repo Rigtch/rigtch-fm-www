@@ -5,6 +5,7 @@ import { Skeleton } from 'primereact/skeleton'
 import { useCookies } from 'react-cookie'
 
 import { AudioBars } from './utils'
+import { OpenInSpotifyButton } from './common'
 
 import { PAUSE_PLAYER_QUERY, RESUME_PLAYER_QUERY } from '~/graphql/queries'
 import { PausePlayerQuery, ResumePlayerQuery } from '~/graphql/types'
@@ -12,6 +13,7 @@ import { ACCESS_TOKEN } from '~/common/constants'
 import { client } from '~/config'
 import { usePlaybackState } from '~/hooks/playback-state'
 import { applyAuthorizationHeader } from '~/common/auth'
+import { isMobile } from '~/utils/is-mobile'
 
 export function PlaybackCard() {
   const [cookies] = useCookies([ACCESS_TOKEN])
@@ -45,7 +47,8 @@ export function PlaybackCard() {
       style={{
         backgroundColor: isPlaying ? '#388e3c' : '#263238',
       }}
-      className="py-0"
+      className="playback-card py-0"
+      onClick={() => isMobile() && window.open(track?.href, '_blank')}
     >
       <main className="flex gap-4">
         <div>
@@ -60,15 +63,6 @@ export function PlaybackCard() {
           ) : (
             <Skeleton size="96px" />
           )}
-
-          <Button
-            severity="success"
-            text
-            className="align-self-end block text-white md:hidden"
-            onClick={() => window.open(track?.href, '_blank')}
-          >
-            Open in Spotify
-          </Button>
         </div>
 
         <div className="flex-column flex w-full gap-2">
@@ -107,14 +101,10 @@ export function PlaybackCard() {
               />
             </div>
 
-            <Button
-              severity="success"
-              text
-              className="align-self-end hidden text-white md:block"
-              onClick={() => window.open(track?.href, '_blank')}
-            >
-              Open in Spotify
-            </Button>
+            <OpenInSpotifyButton
+              href={track?.href ?? ''}
+              className="hidden md:block"
+            />
           </div>
         </div>
       </main>
