@@ -1,1 +1,1 @@
-export * from './audio-bars'
+export * from './relative-time'

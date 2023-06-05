@@ -1,8 +1,8 @@
 import { Image } from 'primereact/image'
 import { Card } from 'primereact/card'
-import { DateTime } from 'luxon'
 
 import { OpenInSpotifyButton } from './common'
+import { RelativeTime } from './utils'
 
 import { Track } from '~/graphql/types'
 import { getImage } from '~/utils/get-image'
@@ -42,9 +42,7 @@ export function TrackCard({
         <div className="flex-column justify-content-between align-items-end flex">
           <OpenInSpotifyButton href={href} className="hidden md:block" />
 
-          <p className="text-700 m-0">
-            {DateTime.fromISO(playedAt ?? '').toRelative()}
-          </p>
+          <RelativeTime value={playedAt ?? ''} />
         </div>
       </main>
     </Card>
