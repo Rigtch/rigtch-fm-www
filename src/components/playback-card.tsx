@@ -4,8 +4,7 @@ import { Button } from 'primereact/button'
 import { Skeleton } from 'primereact/skeleton'
 import { useCookies } from 'react-cookie'
 
-import { AudioBars } from './utils'
-import { OpenInSpotifyButton } from './common'
+import { AudioBars, OpenInSpotifyButton } from './common'
 
 import { PAUSE_PLAYER_QUERY, RESUME_PLAYER_QUERY } from '~/graphql/queries'
 import { PausePlayerQuery, ResumePlayerQuery } from '~/graphql/types'
