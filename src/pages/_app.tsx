@@ -3,6 +3,7 @@ import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css'
 
 import '~/styles/audio-bars.css'
+import '~/styles/playback-card.css'
 import '~/styles/theme.css'
 
 import { ApolloProvider } from '@apollo/client'
