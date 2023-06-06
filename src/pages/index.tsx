@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next'
 import { useCookies } from 'react-cookie'
+import { useEffect } from 'react'
 
 import { DefaultPageProps } from './_app'
 
@@ -58,7 +59,9 @@ export const getServerSideProps: GetServerSideProps = async ({
 export default function Home({ profile, topGenres }: HomeProps) {
   const [, setCookies] = useCookies([IS_AUTHORIZED])
 
-  setCookies(IS_AUTHORIZED, !!profile)
+  useEffect(() => {
+    setCookies(IS_AUTHORIZED, !!profile)
+  }, [profile, setCookies])
 
   return (
     <div className="flex-column flex gap-8">
