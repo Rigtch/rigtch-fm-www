@@ -7,15 +7,23 @@ import { DefaultPageProps } from './_app'
 import { client } from '~/config'
 import { ACCESS_TOKEN, IS_AUTHORIZED } from '~/common/constants'
 import { PROFILE_QUERY, TOP_GENRES_QUERY } from '~/graphql/queries'
-import { ProfileQuery, TopGenresQuery } from '~/graphql/types'
+import {
+  Artist,
+  ProfileQuery,
+  TopArtistsQuery,
+  TopGenresQuery,
+} from '~/graphql/types'
 import { ProfileCard } from '~/components/profile'
 import { LastTracksSection } from '~/components/last-tracks-section'
 import { applyAuthorizationHeader } from '~/common/auth'
 import { TopGenresSection } from '~/components/top-genres-section'
 import { getImage } from '~/utils/get-image'
+import { TOP_ARTISTS_QUERY } from '~/graphql/queries/top-artists'
+import { TopArtistsSection } from '~/components/top-artists/section'
 
 export interface HomeProps extends Required<DefaultPageProps> {
   topGenres: string[]
+  topArtists: Artist[]
 }
 
 export const getServerSideProps: GetServerSideProps = async ({
@@ -38,10 +46,18 @@ export const getServerSideProps: GetServerSideProps = async ({
       ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
     })
 
+    const {
+      data: { topArtists },
+    } = await client.query<TopArtistsQuery>({
+      query: TOP_ARTISTS_QUERY,
+      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
+    })
+
     return {
       props: {
         profile,
         topGenres,
+        topArtists,
       },
     }
   } catch (error) {
@@ -56,7 +72,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 }
 
-export default function Home({ profile, topGenres }: HomeProps) {
+export default function Home({ profile, topGenres, topArtists }: HomeProps) {
   const [, setCookies] = useCookies([IS_AUTHORIZED])
 
   useEffect(() => {
@@ -68,6 +84,8 @@ export default function Home({ profile, topGenres }: HomeProps) {
       <ProfileCard {...profile} image={getImage(profile.images)} />
 
       <TopGenresSection genres={topGenres} />
+
+      <TopArtistsSection topArtists={topArtists} />
 
       <LastTracksSection />
     </div>
