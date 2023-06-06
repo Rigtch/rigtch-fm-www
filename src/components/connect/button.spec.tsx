@@ -3,7 +3,7 @@ import { describe, expect, test, vi } from 'vitest'
 
 import { ConnectButton } from './button'
 
-describe('ConnectButton', () => {
+describe('Components - ConnectButton', () => {
   test('should render the button', () => {
     render(<ConnectButton />)
 
