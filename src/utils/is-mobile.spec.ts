@@ -2,7 +2,7 @@ import { describe, test } from 'vitest'
 
 import { isMobile } from './is-mobile'
 
-describe('isMobile', () => {
+describe('Utils - isMobile', () => {
   test('should return false if window is undefined', () => {
     expect(isMobile()).toEqual(false)
   })

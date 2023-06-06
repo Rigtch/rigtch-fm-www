@@ -6,7 +6,7 @@ import { Image } from '~/graphql/types'
 
 const imagesMock: Image[] = [{ url: 'https://url1' }, { url: 'https://url2' }]
 
-describe('getImage', () => {
+describe('Utils - getImage', () => {
   test('returns empty string if album is undefined', () => {
     expect(getImage()).toEqual('')
   })

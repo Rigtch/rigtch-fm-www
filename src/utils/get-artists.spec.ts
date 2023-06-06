@@ -7,7 +7,7 @@ const artistsMock: Pick<Artist, 'name'>[] = [
   { name: 'Artist 2' },
 ]
 
-describe('getArtists', () => {
+describe('Utils - getArtists', () => {
   test('returns empty string if artists is undefined', () => {
     expect(getArtists()).toEqual('')
   })
