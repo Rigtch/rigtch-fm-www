@@ -14,7 +14,7 @@ export function TopOneArtist({
   topArtist: { name, images, genres, href },
 }: TopOneArtistProps) {
   return (
-    <div className="flex-column align-items-center flex gap-2">
+    <div className="flex-column align-items-center flex gap-4">
       <div
         style={{
           backgroundImage: 'linear-gradient(to top right, #9400d5, #1e89ee)',
@@ -25,8 +25,8 @@ export function TopOneArtist({
           <Image
             src={getImage(images)}
             alt={name}
-            width="296"
-            height="296"
+            width="316"
+            height="316"
             imageClassName="border-round-md"
           />
 
@@ -38,7 +38,7 @@ export function TopOneArtist({
               borderBottomRightRadius: '0.375rem',
             }}
           >
-            <span className="text-2xl">1</span>
+            <span className="text-4xl">1</span>
           </div>
 
           <div
@@ -52,7 +52,12 @@ export function TopOneArtist({
             <OpenInSpotifyButton href={href} />
           </div>
 
-          <div className="absolute" style={{ bottom: '4px' }}>
+          <div
+            className="absolute"
+            style={{
+              bottom: '4px',
+            }}
+          >
             {[40, 50, 60, 50, 40].map((size, index) => (
               <i
                 key={index}
