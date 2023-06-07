@@ -1,6 +1,5 @@
 import { TopArtistCard } from './card'
-import { TopFiveArtist } from './top-five-artists'
-import { TopOneArtist } from './top-one-artist'
+import { TopOneArtistCard } from './top-one-artist'
 
 import { Artist } from '~/graphql/types'
 
@@ -17,14 +16,15 @@ export function TopArtistsSection({ topArtists }: TopArtistsSectionProps) {
 
       <div className="flex-column flex gap-8">
         <div className="justify-content-center flex w-full flex-row flex-wrap gap-6">
-          <TopOneArtist topArtist={topArtists[0]} />
+          <TopOneArtistCard topArtist={topArtists[0]} />
 
           <div className="flex-column flex gap-2">
             {topArtists.slice(1, 5).map((topArtist, index) => (
-              <TopFiveArtist
+              <TopArtistCard
                 key={index}
                 topArtist={topArtist}
-                index={index + 2}
+                position={index + 2}
+                topFive={true}
               />
             ))}
           </div>
@@ -35,7 +35,7 @@ export function TopArtistsSection({ topArtists }: TopArtistsSectionProps) {
             <TopArtistCard
               key={index}
               topArtist={topArtist}
-              index={index + 6}
+              position={index + 6}
             />
           ))}
         </div>

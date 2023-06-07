@@ -6,13 +6,15 @@ import { OpenInSpotifyButton } from '../common'
 import { Artist } from '~/graphql/types'
 import { getImage } from '~/utils/get-image'
 
-export interface TopOneArtistProps {
+export interface TopOneArtistCardProps {
   topArtist: Artist
 }
 
-export function TopOneArtist({
+export function TopOneArtistCard({
   topArtist: { name, images, genres, href },
-}: TopOneArtistProps) {
+}: TopOneArtistCardProps) {
+  const stars = [40, 50, 60, 50, 40]
+
   return (
     <div className="flex-column align-items-center flex gap-4">
       <div
@@ -58,7 +60,7 @@ export function TopOneArtist({
               bottom: '4px',
             }}
           >
-            {[40, 50, 60, 50, 40].map((size, index) => (
+            {stars.map((size, index) => (
               <i
                 key={index}
                 className="pi pi-star-fill"
