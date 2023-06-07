@@ -20,7 +20,10 @@ export function TopArtistCard({
   showGenres,
 }: TopArtistCardProps) {
   return (
-    <Card onClick={() => isMobile() && window.open(href, '_blank')}>
+    <Card
+      onClick={() => isMobile() && window.open(href, '_blank')}
+      className="w-full"
+    >
       <main
         className={`justify-content-between align-items-center flex flex-row ${
           showGenres ? 'gap-4' : 'gap-1'
