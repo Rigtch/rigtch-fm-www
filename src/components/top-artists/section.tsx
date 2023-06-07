@@ -1,5 +1,5 @@
 import { TopArtistCard } from './card'
-import { TopOneArtistCard } from './top-one-artist'
+import { TopOneArtistCard } from './top-one-card'
 
 import { Artist } from '~/graphql/types'
 
@@ -24,7 +24,7 @@ export function TopArtistsSection({ topArtists }: TopArtistsSectionProps) {
                 key={index}
                 topArtist={topArtist}
                 position={index + 2}
-                topFive={true}
+                showGenres={true}
               />
             ))}
           </div>
