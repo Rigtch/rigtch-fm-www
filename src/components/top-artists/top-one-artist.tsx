@@ -5,6 +5,7 @@ import { OpenInSpotifyButton } from '../common'
 
 import { Artist } from '~/graphql/types'
 import { getImage } from '~/utils/get-image'
+import { isMobile } from '~/utils/is-mobile'
 
 export interface TopOneArtistCardProps {
   topArtist: Artist
@@ -30,6 +31,7 @@ export function TopOneArtistCard({
             width="316"
             height="316"
             imageClassName="border-round-md"
+            onClick={() => isMobile() && window.open(href, '_blank')}
           />
 
           <div
