@@ -9,16 +9,16 @@ export interface TopArtistsSectionProps {
 
 export function TopArtistsSection({ topArtists }: TopArtistsSectionProps) {
   return (
-    <section className="flex-column align-items-center flex gap-2">
+    <section className="flex-column flex w-full gap-2">
       <header>
         <h2 className="text-5xl">Top Artists</h2>
       </header>
 
-      <div className="flex-column flex gap-8">
+      <div className="flex-column flex w-full gap-8">
         <div className="justify-content-center flex w-full flex-row flex-wrap gap-6">
           <TopOneArtistCard topArtist={topArtists[0]} />
 
-          <div className="flex-column flex gap-2">
+          <div className="flex-column flex gap-2 md:w-7">
             {topArtists.slice(1, 5).map((topArtist, index) => (
               <TopArtistCard
                 key={index}
