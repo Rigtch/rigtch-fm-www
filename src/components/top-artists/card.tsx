@@ -1,6 +1,7 @@
 import { Image } from 'primereact/image'
 import { Card } from 'primereact/card'
 import { Chip } from 'primereact/chip'
+import { classNames } from 'primereact/utils'
 
 import { OpenInSpotifyButton } from '../common'
 
@@ -25,15 +26,17 @@ export function TopArtistCard({
       className="w-full"
     >
       <main
-        className={`justify-content-between align-items-center flex flex-row ${
+        className={classNames(
+          'justify-content-between align-items-center flex flex-row',
           showGenres ? 'gap-4' : 'gap-1'
-        }`}
+        )}
       >
         <header className="align-items-center flex flex-row gap-4">
           <span
-            className={`w-2rem text-center ${
+            className={classNames(
+              'w-2rem text-center',
               showGenres ? 'text-4xl md:text-5xl' : 'text-3xl md:text-4xl'
-            }`}
+            )}
           >
             {position}
           </span>
@@ -51,7 +54,7 @@ export function TopArtistCard({
 
             {showGenres && (
               <div>
-                <Chip label={genres[0]} style={{ fontSize: 12 }} />
+                <Chip label={genres[0]} />
               </div>
             )}
           </div>
