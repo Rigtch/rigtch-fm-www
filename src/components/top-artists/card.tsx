@@ -50,7 +50,7 @@ export function TopArtistCard({
           />
 
           <div className="flex-column justify-content-center flex flex-wrap gap-3">
-            <div className="text-md md:text-2xl">{name}</div>
+            <div className="text-xl md:text-2xl">{name}</div>
 
             {showGenres && (
               <div>
