@@ -12,6 +12,8 @@ import {
   ProfileQuery,
   TopArtistsQuery,
   TopGenresQuery,
+  TopTracksQuery,
+  Track,
 } from '~/graphql/types'
 import { ProfileCard } from '~/components/profile'
 import { LastTracksSection } from '~/components/last-tracks-section'
@@ -20,10 +22,13 @@ import { TopGenresSection } from '~/components/top-genres-section'
 import { getImage } from '~/utils/get-image'
 import { TOP_ARTISTS_QUERY } from '~/graphql/queries/top-artists'
 import { TopArtistsSection } from '~/components/top-artists/section'
+import { TopTracksSection } from '~/components/top-tracks/section'
+import { TOP_TRACKS_QUERY } from '~/graphql/queries/top-tracks'
 
 export interface HomeProps extends Required<DefaultPageProps> {
   topGenres: string[]
   topArtists: Artist[]
+  topTracks: Track[]
 }
 
 export const getServerSideProps: GetServerSideProps = async ({
@@ -53,11 +58,19 @@ export const getServerSideProps: GetServerSideProps = async ({
       ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
     })
 
+    const {
+      data: { topTracks },
+    } = await client.query<TopTracksQuery>({
+      query: TOP_TRACKS_QUERY,
+      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
+    })
+
     return {
       props: {
         profile,
         topGenres,
         topArtists,
+        topTracks,
       },
     }
   } catch (error) {
@@ -72,7 +85,12 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 }
 
-export default function Home({ profile, topGenres, topArtists }: HomeProps) {
+export default function Home({
+  profile,
+  topGenres,
+  topArtists,
+  topTracks,
+}: HomeProps) {
   const [, setCookies] = useCookies([IS_AUTHORIZED])
 
   useEffect(() => {
@@ -86,6 +104,8 @@ export default function Home({ profile, topGenres, topArtists }: HomeProps) {
       <TopGenresSection genres={topGenres} />
 
       <TopArtistsSection topArtists={topArtists} />
+
+      <TopTracksSection topTracks={topTracks} />
 
       <LastTracksSection />
     </div>

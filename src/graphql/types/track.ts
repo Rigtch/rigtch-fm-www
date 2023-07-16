@@ -5,6 +5,10 @@ export interface LastTracksQuery {
   lastTracks: Track[]
 }
 
+export interface TopTracksQuery {
+  topTracks: Track[]
+}
+
 export interface Track {
   name: string
   href: string
