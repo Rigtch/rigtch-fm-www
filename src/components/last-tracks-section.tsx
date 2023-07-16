@@ -8,10 +8,10 @@ export function LastTracksSection() {
   return (
     <section>
       <header>
-        <h2 className="text-4xl">Last played tracks</h2>
+        <h2 className="text-5xl">Last played tracks</h2>
       </header>
 
-      <main className="flex-column flex gap-1">
+      <main className="flex-column flex gap-2">
         {lastTracks.map((track, index) => (
           <TrackCard {...track} key={index} />
         ))}
