@@ -29,12 +29,7 @@ export function TrackCard({
       className="surface-ground"
       onClick={() => isMobile() && window.open(href, '_blank')}
     >
-      <main
-        className={classNames(
-          'justify-content-between md:align-items-center flex w-full gap-3 md:gap-1',
-          topTrack ? 'flex-column md:flex-row' : 'flex-row'
-        )}
-      >
+      <main className="justify-content-between flex w-full flex-row gap-3 md:gap-1">
         <header className="align-items-center flex gap-4 md:w-6">
           {topTrack && (
             <span className="w-2rem text-center text-3xl md:text-4xl">
@@ -50,7 +45,7 @@ export function TrackCard({
             imageClassName="border-round-md"
           />
 
-          <div className="flex-column justify-content-center flex w-6">
+          <div className="flex-column justify-content-center flex md:w-6">
             <div className="m-0 text-xl text-white">{name}</div>
             <div className="text-400 m-0">{getArtists(artists)}</div>
           </div>
@@ -58,7 +53,7 @@ export function TrackCard({
 
         <div
           className={classNames(
-            'align-items-end md:align-items-center flex flex-row md:w-6',
+            'align-items-end hidden flex-row md:flex md:w-6',
             topTrack ? 'justify-content-between' : 'justify-content-end'
           )}
         >
@@ -70,7 +65,7 @@ export function TrackCard({
           )}
 
           <div className="flex-column justify-content-between align-items-end flex gap-2">
-            <OpenInSpotifyButton href={href} className="hidden md:block" />
+            <OpenInSpotifyButton href={href} />
 
             <RelativeTime value={playedAt ?? ''} />
           </div>
