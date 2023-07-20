@@ -26,7 +26,7 @@
         "extensions": [".js", ".ts", ".tsx", ".jsx"]
       },
       "alias": {
-        "map": [["~", "./"]],
+        "map": [["~", "./src"]],
         "extensions": [".ts", ".js", ".tsx", ".jsx"]
       }
     },
@@ -39,7 +39,7 @@
     "prettier"
   ],
   "extends": [
-    "next/core-web-vitals",
+    "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",

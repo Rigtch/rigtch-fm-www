@@ -1,18 +1,19 @@
 {
-  "json.schemaDownload.enable": true,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
-    "*.ts": "$(capture).js, $(capture).*.ts, $(capture).*.js, $(capture).*.jsx, $(capture).*.tsx",
+    "*.ts": "$(capture).js, $(capture).*.ts, $(capture).*.js",
     "*.js": "$(capture).js.map, $(capture).*.ts, $(capture).*.js",
-    "*.tsx": "$(capture).js, $(capture).*.ts, $(capture).*.js, $(capture).*.tsx, $(capture).*.jsx",
-    "*.jsx": "$(capture).js, $(capture).*.ts, $(capture).*.js, $(capture).*.jsx, $(capture).*.tsx",
+    "*.jsx": "$(capture).jsx.map, $(capture).*.tsx, $(capture).*.jsx, $(capture).*.ts, $(capture).*.js",
+    "*.tsx": "$(capture).tsx.map, $(capture).*.tsx, $(capture).*.jsx, $(capture).*.ts, $(capture).*.js",
     "tsconfig.json": "tsconfig.*.json",
+    ".gitignore": ".gitmodules, .gitattributes",
+    ".prettierrc": ".prettierignore",
+    ".stylelintrc": ".stylelintignore",
+    ".eslintrc.cjs": ".eslintcache",
     ".env": ".env.*",
-    "package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc, .nvmrc",
-    "next.config.js": "next-env.d.ts",
-    ".eslintrc": ".eslintcache"
+    "package.json": ".npmrc, yarn.lock, .yarnrc, .nvmrc, yarn-error.log"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -23,11 +24,6 @@
     "source.fixAll.prettier": true,
     "source.fixAll.markdownlint": true
   },
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "javascriptreact"
-  ],
+  "eslint.validate": ["javascript", "typescript", "typescriptreact", "javascriptreact"],
   "files.eol": "\n"
 }
