@@ -28,7 +28,7 @@ export default function App({
     <>
       <Head>
         <title>Rigtch Music</title>
-        {/* 
+
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#0e1315" />
 
@@ -46,7 +46,7 @@ export default function App({
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" /> */}
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" />
       </Head>
 
       <ApolloProvider client={client}>

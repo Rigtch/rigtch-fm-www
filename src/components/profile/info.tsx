@@ -3,6 +3,7 @@ import { Button } from 'primereact/button'
 import { Toast } from 'primereact/toast'
 import { Menu } from 'primereact/menu'
 import { useRef } from 'react'
+// eslint-disable-next-line import/no-unresolved
 import { MenuItem } from 'primereact/menuitem'
 
 import { Profile } from '~/graphql/types'
