@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-import { client } from '~/config'
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/common/constants'
-import { REFRESH_QUERY } from '~/graphql/queries'
-import { RefreshQuery } from '~/graphql/types'
-import { AuthorizationType, applyAuthorizationHeader } from '~/common/auth'
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/api/constants'
+import { getRefresh } from '~/api/fetchers'
 
 export async function middleware(request: NextRequest) {
   const refreshToken = request.cookies.get(REFRESH_TOKEN)?.value
@@ -12,14 +9,7 @@ export async function middleware(request: NextRequest) {
 
   if (!refreshToken) return response
 
-  const {
-    data: {
-      refresh: { accessToken },
-    },
-  } = await client.query<RefreshQuery>({
-    query: REFRESH_QUERY,
-    ...applyAuthorizationHeader(refreshToken, AuthorizationType.Basic),
-  })
+  const { accessToken } = await getRefresh(refreshToken)
 
   response.cookies.set({
     name: ACCESS_TOKEN,
