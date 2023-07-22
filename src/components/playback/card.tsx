@@ -2,44 +2,36 @@ import { Image } from 'primereact/image'
 import { Card } from 'primereact/card'
 import { Button } from 'primereact/button'
 import { Skeleton } from 'primereact/skeleton'
-import { useCookies } from 'react-cookie'
 
-import { AudioBars, OpenInSpotifyButton } from './common'
-import { RelativeTime } from './utils'
+import { AudioBars, OpenInSpotifyButton } from '../common'
+import { RelativeTime } from '../utils'
 
-import { PAUSE_PLAYER_QUERY, RESUME_PLAYER_QUERY } from '~/graphql/queries'
-import { PausePlayerQuery, ResumePlayerQuery } from '~/graphql/types'
-import { ACCESS_TOKEN } from '~/common/constants'
-import { client } from '~/config'
-import { usePlaybackState } from '~/hooks/playback-state'
-import { applyAuthorizationHeader } from '~/common/auth'
+import { PlaybackSkeletonCard } from './skeleton-card'
+
+import { usePlaybackState, useTogglePlaybackState } from '~/hooks/api'
 import { isMobile } from '~/utils/is-mobile'
+import { getArtists } from '~/utils/get-artists'
 
 export function PlaybackCard() {
-  const [cookies] = useCookies([ACCESS_TOKEN])
+  const { data, refetch } = usePlaybackState()
+  const { toggle } = useTogglePlaybackState()
+
+  if (!data) return <PlaybackSkeletonCard />
+
   const {
     isPlaying,
-    track,
     device,
-    getPlaybackAlbumImage,
-    getPlaybackArtists,
-    setIsPlaying,
-  } = usePlaybackState()
+    track: {
+      album: {
+        images: [{ url: albumImage }],
+        ...album
+      },
+      ...track
+    },
+  } = data
 
-  async function handleChangePlayingStatus() {
-    await (isPlaying
-      ? client
-          .query<PausePlayerQuery>({
-            query: PAUSE_PLAYER_QUERY,
-            ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-          })
-          .then(() => setIsPlaying(false))
-      : client
-          .query<ResumePlayerQuery>({
-            query: RESUME_PLAYER_QUERY,
-            ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-          })
-          .then(() => setIsPlaying(true)))
+  function handleChangePlaybackState() {
+    toggle(isPlaying).then(() => refetch())
   }
 
   return (
@@ -54,8 +46,8 @@ export function PlaybackCard() {
         <div>
           {track ? (
             <Image
-              src={getPlaybackAlbumImage()}
-              alt={track?.album.name ?? ''}
+              src={albumImage}
+              alt={album.name}
               width="96"
               height="96"
               imageClassName="border-round-md"
@@ -70,7 +62,7 @@ export function PlaybackCard() {
             {track ? (
               <>
                 <p className="m-0 text-2xl text-white">{track?.name}</p>
-                <p className="text-700 m-0">{getPlaybackArtists()}</p>
+                <p className="text-700 m-0">{getArtists(track.artists)}</p>
               </>
             ) : (
               <>
@@ -97,7 +89,7 @@ export function PlaybackCard() {
                 icon={`pi ${isPlaying ? 'pi-pause' : 'pi-play'}`}
                 disabled={!device}
                 tooltip={device ? undefined : 'No active device'}
-                onClick={handleChangePlayingStatus}
+                onClick={handleChangePlaybackState}
               />
             </div>
 
