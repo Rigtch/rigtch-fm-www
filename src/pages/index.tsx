@@ -1,76 +1,48 @@
 import { GetServerSideProps } from 'next'
-import { useCookies } from 'react-cookie'
-import { useEffect } from 'react'
+import { QueryClient, dehydrate } from '@tanstack/react-query'
 
-import { DefaultPageProps } from './_app'
+import { PageProps } from './_app'
 
-import { client } from '~/config'
-import { ACCESS_TOKEN, IS_AUTHORIZED } from '~/common/constants'
-import { PROFILE_QUERY, TOP_GENRES_QUERY } from '~/graphql/queries'
 import {
-  Artist,
-  ProfileQuery,
-  TopArtistsQuery,
-  TopGenresQuery,
-  TopTracksQuery,
-  Track,
-} from '~/graphql/types'
+  ACCESS_TOKEN,
+  PROFILE,
+  TOP_ARTISTS,
+  TOP_GENRES,
+  TOP_TRACKS,
+} from '~/api/constants'
 import { ProfileCard } from '~/components/profile'
 import { LastTracksSection } from '~/components/last-tracks-section'
-import { applyAuthorizationHeader } from '~/common/auth'
+import {
+  getProfile,
+  getTopArtists,
+  getTopGenres,
+  getTopTracks,
+} from '~/api/fetchers'
 import { TopGenresSection } from '~/components/top-genres-section'
-import { getImage } from '~/utils/get-image'
-import { TOP_ARTISTS_QUERY } from '~/graphql/queries/top-artists'
-import { TopArtistsSection } from '~/components/top-artists/section'
-import { TopTracksSection } from '~/components/top-tracks/section'
-import { TOP_TRACKS_QUERY } from '~/graphql/queries/top-tracks'
+import { TopArtistsSection } from '~/components/top-artists-section'
+import { TopTracksSection } from '~/components/top-tracks-section'
 
-export interface HomeProps extends Required<DefaultPageProps> {
-  topGenres: string[]
-  topArtists: Artist[]
-  topTracks: Track[]
-}
-
-export const getServerSideProps: GetServerSideProps = async ({
+export const getServerSideProps: GetServerSideProps<PageProps> = async ({
   req: { cookies },
 }) => {
   try {
-    const {
-      data: { profile },
-    } = await client.query<ProfileQuery>({
-      query: PROFILE_QUERY,
-      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-    })
+    const accessToken = cookies[ACCESS_TOKEN]
+    const queryClient = new QueryClient()
 
-    const {
-      data: {
-        topGenres: { genres: topGenres },
-      },
-    } = await client.query<TopGenresQuery>({
-      query: TOP_GENRES_QUERY,
-      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-    })
-
-    const {
-      data: { topArtists },
-    } = await client.query<TopArtistsQuery>({
-      query: TOP_ARTISTS_QUERY,
-      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-    })
-
-    const {
-      data: { topTracks },
-    } = await client.query<TopTracksQuery>({
-      query: TOP_TRACKS_QUERY,
-      ...applyAuthorizationHeader(cookies[ACCESS_TOKEN]),
-    })
+    await queryClient.prefetchQuery([PROFILE], () => getProfile(accessToken))
+    await queryClient.prefetchQuery([TOP_GENRES], () =>
+      getTopGenres(accessToken)
+    )
+    await queryClient.prefetchQuery([TOP_ARTISTS], () =>
+      getTopArtists(accessToken)
+    )
+    await queryClient.prefetchQuery([TOP_TRACKS], () =>
+      getTopTracks(accessToken)
+    )
 
     return {
       props: {
-        profile,
-        topGenres,
-        topArtists,
-        topTracks,
+        dehydratedState: dehydrate(queryClient),
       },
     }
   } catch (error) {
@@ -85,28 +57,13 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 }
 
-export default function Home({
-  profile,
-  topGenres,
-  topArtists,
-  topTracks,
-}: HomeProps) {
-  const [, setCookies] = useCookies([IS_AUTHORIZED])
-
-  useEffect(() => {
-    setCookies(IS_AUTHORIZED, !!profile)
-  }, [profile, setCookies])
-
+export default function Home() {
   return (
     <div className="flex-column flex gap-8">
-      <ProfileCard {...profile} image={getImage(profile.images)} />
-
-      <TopGenresSection genres={topGenres} />
-
-      <TopArtistsSection topArtists={topArtists} />
-
-      <TopTracksSection topTracks={topTracks} />
-
+      <ProfileCard />
+      <TopGenresSection />
+      <TopArtistsSection />
+      <TopTracksSection />
       <LastTracksSection />
     </div>
   )
