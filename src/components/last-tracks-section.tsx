@@ -1,9 +1,11 @@
-import { TrackCard } from './track-card'
+import { ElementCard, ElementCardColor } from './element/card'
 
-import { useLastTracks } from '~/hooks/last-tracks'
+import { useLastTracks } from '~/hooks/api'
 
 export function LastTracksSection() {
-  const { lastTracks } = useLastTracks()
+  const { data } = useLastTracks()
+
+  if (!data) return null
 
   return (
     <section>
@@ -12,8 +14,14 @@ export function LastTracksSection() {
       </header>
 
       <main className="flex-column flex gap-2">
-        {lastTracks.map((track, index) => (
-          <TrackCard {...track} key={index} />
+        {data.map(({ album, ...track }, index) => (
+          <ElementCard
+            {...track}
+            color={ElementCardColor.SURFACE_GROUND}
+            album={album}
+            image={album.images[0].url}
+            key={index}
+          />
         ))}
       </main>
     </section>

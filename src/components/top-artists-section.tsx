@@ -1,13 +1,12 @@
-import { TopArtistCard } from './card'
-import { TopOneArtistCard } from './top-one-card'
+import { ElementCard, ElementCardSize, TopOneElementCard } from './element'
 
-import { Artist } from '~/graphql/types'
+import { useTopArtists } from '~/hooks/api'
 
-export interface TopArtistsSectionProps {
-  topArtists: Artist[]
-}
+export function TopArtistsSection() {
+  const { data } = useTopArtists()
 
-export function TopArtistsSection({ topArtists }: TopArtistsSectionProps) {
+  if (!data) return null
+
   return (
     <section className="flex-column flex w-full gap-2">
       <header>
@@ -16,13 +15,15 @@ export function TopArtistsSection({ topArtists }: TopArtistsSectionProps) {
 
       <div className="flex-column flex w-full gap-8">
         <div className="justify-content-center flex w-full flex-row flex-wrap gap-6">
-          <TopOneArtistCard topArtist={topArtists[0]} />
+          <TopOneElementCard {...data[0]} image={data[0].images[0].url} />
 
           <div className="flex-column flex gap-2 md:w-7">
-            {topArtists.slice(1, 5).map((topArtist, index) => (
-              <TopArtistCard
+            {data.slice(1, 5).map(({ images, ...artist }, index) => (
+              <ElementCard
                 key={index}
-                topArtist={topArtist}
+                {...artist}
+                image={images[0].url}
+                size={ElementCardSize.LARGE}
                 position={index + 2}
                 showGenres={true}
               />
@@ -31,10 +32,12 @@ export function TopArtistsSection({ topArtists }: TopArtistsSectionProps) {
         </div>
 
         <div className="flex-column flex w-full gap-3">
-          {topArtists.slice(5).map((topArtist, index) => (
-            <TopArtistCard
+          {data.slice(5).map(({ images, ...artist }, index) => (
+            <ElementCard
               key={index}
-              topArtist={topArtist}
+              {...artist}
+              image={images[0].url}
+              size={ElementCardSize.MEDIUM}
               position={index + 6}
             />
           ))}
