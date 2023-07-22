@@ -1,10 +1,12 @@
 import { Chip } from 'primereact/chip'
 
-export interface TopGenresSectionProps {
-  genres: string[]
-}
+import { useTopGenres } from '~/hooks/api'
 
-export function TopGenresSection({ genres }: TopGenresSectionProps) {
+export function TopGenresSection() {
+  const { data } = useTopGenres()
+
+  if (!data) return null
+
   return (
     <section>
       <header>
@@ -12,7 +14,7 @@ export function TopGenresSection({ genres }: TopGenresSectionProps) {
       </header>
 
       <main className="flex flex-wrap gap-1">
-        {genres.map(genre => (
+        {data.genres.map(genre => (
           <Chip key={genre} label={genre} />
         ))}
       </main>
