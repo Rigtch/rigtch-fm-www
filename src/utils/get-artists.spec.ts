@@ -1,6 +1,6 @@
 import { getArtists } from './get-artists'
 
-import { Artist } from '~/graphql/types'
+import { Artist } from '~/api/types'
 
 const artistsMock: Pick<Artist, 'name'>[] = [
   { name: 'Artist 1' },
