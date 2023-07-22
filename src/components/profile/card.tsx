@@ -1,22 +1,23 @@
 import { Avatar } from 'primereact/avatar'
 import { Card } from 'primereact/card'
 
-import { PlaybackCard } from '../playback-card'
+import { PlaybackCard } from '../playback/card'
 import { OpenInSpotifyButton } from '../common'
 
-import { Profile } from '~/graphql/types'
+import { useProfile } from '~/hooks/api'
 
-export interface ProfileCardProps
-  extends Pick<Profile, 'displayName' | 'href' | 'followers'> {
-  image: string
-}
+export function ProfileCard() {
+  const { data } = useProfile()
 
-export function ProfileCard({
-  displayName,
-  href,
-  followers,
-  image,
-}: ProfileCardProps) {
+  if (!data) return null
+
+  const {
+    displayName,
+    followers,
+    href,
+    images: [{ url: image }],
+  } = data
+
   return (
     <Card>
       <div className="flex-column justify-content-between flex gap-4 lg:flex-row">

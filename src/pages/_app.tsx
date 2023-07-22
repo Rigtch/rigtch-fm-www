@@ -6,24 +6,29 @@ import '~/styles/audio-bars.css'
 import '~/styles/playback-card.css'
 import '~/styles/theme.css'
 
-import { ApolloProvider } from '@apollo/client'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import {
+  Hydrate,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import { useState } from 'react'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { CookiesProvider } from 'react-cookie'
 
-import { client } from '~/config'
 import { DefaultLayout } from '~/layouts'
-import { Profile } from '~/graphql/types'
-import { PlaybackStateProvider } from '~/context/playback-state'
-import { LastTracksProvider } from '~/context/last-tracks'
 
-export interface DefaultPageProps {
-  profile?: Profile
+export interface PageProps {
+  dehydratedState?: unknown
 }
 
 export default function App({
   Component,
-  pageProps,
-}: AppProps<DefaultPageProps>) {
+  pageProps: { dehydratedState, ...pageProps },
+}: AppProps<PageProps>) {
+  const [queryClient] = useState(() => new QueryClient())
+
   return (
     <>
       <Head>
@@ -49,15 +54,17 @@ export default function App({
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" />
       </Head>
 
-      <ApolloProvider client={client}>
-        <LastTracksProvider>
-          <PlaybackStateProvider>
-            <DefaultLayout profile={pageProps.profile}>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={dehydratedState}>
+          <CookiesProvider>
+            <DefaultLayout>
               <Component {...pageProps} />
             </DefaultLayout>
-          </PlaybackStateProvider>
-        </LastTracksProvider>
-      </ApolloProvider>
+          </CookiesProvider>
+        </Hydrate>
+
+        <ReactQueryDevtools />
+      </QueryClientProvider>
     </>
   )
 }

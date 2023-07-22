@@ -5,23 +5,39 @@ import { Menu } from 'primereact/menu'
 import { useRef } from 'react'
 // eslint-disable-next-line import/no-unresolved
 import { MenuItem } from 'primereact/menuitem'
+import { useCookies } from 'react-cookie'
+import { useRouter } from 'next/router'
+import { useQueryClient } from '@tanstack/react-query'
 
-import { Profile } from '~/graphql/types'
+import { ConnectButton } from '../connect'
 
-export interface ProfileInfoProps
-  extends Pick<Profile, 'displayName' | 'href'> {
-  disconnect: () => void
-  image: string
-}
+import { useProfile } from '~/hooks/api'
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/api/constants'
 
-export function ProfileInfo({
-  displayName,
-  href,
-  disconnect,
-  image,
-}: ProfileInfoProps) {
+export function ProfileInfo() {
+  const { data } = useProfile()
+  const queryClient = useQueryClient()
+  const [, , removeCookies] = useCookies([ACCESS_TOKEN, REFRESH_TOKEN])
+  const router = useRouter()
   const menu = useRef<Menu>(null)
   const toast = useRef<Toast>(null)
+
+  if (!data) return <ConnectButton />
+
+  const {
+    displayName,
+    href,
+    images: [{ url: image }],
+  } = data
+
+  async function disconnect() {
+    removeCookies(ACCESS_TOKEN)
+    removeCookies(REFRESH_TOKEN)
+
+    queryClient.clear()
+
+    router.push('/about')
+  }
 
   const menuItems: MenuItem[] = [
     {
