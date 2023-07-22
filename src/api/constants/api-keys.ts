@@ -1,0 +1,7 @@
+export const PROFILE = 'profile'
+export const REFRESH = 'refresh'
+export const TOP_GENRES = 'top-genres'
+export const TOP_ARTISTS = 'top-artists'
+export const TOP_TRACKS = 'top-tracks'
+export const LAST_TRACKS = 'last-tracks'
+export const PLAYBACK_STATE = 'playback-state'
