@@ -2,6 +2,7 @@ import { Album } from './album'
 import { TrackArtist } from './artist'
 
 export interface Track {
+  id: string
   name: string
   album: Album
   artists: TrackArtist[]
