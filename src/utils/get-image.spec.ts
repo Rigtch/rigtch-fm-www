@@ -2,9 +2,12 @@ import { describe, test } from 'vitest'
 
 import { getImage } from './get-image'
 
-import { Image } from '~/graphql/types'
+import { Image } from '~/api/types'
 
-const imagesMock: Image[] = [{ url: 'https://url1' }, { url: 'https://url2' }]
+const imagesMock: Image[] = [
+  { url: 'https://url1', height: 96, width: 96 },
+  { url: 'https://url2', height: 96, width: 96 },
+]
 
 describe('Utils - getImage', () => {
   test('returns empty string if album is undefined', () => {
