@@ -8,7 +8,7 @@ import {
 } from '@hooks/api'
 
 export interface PlaybackStateData {
-  device: Device
+  device?: Device
   track: Track
   album: Album
   albumImage: string
@@ -48,19 +48,22 @@ export function PlaybackStateProvider({
     return response
   }
 
+  console.log(data?.track ?? lastTrack)
+
   return (
     <PlaybackStateContext.Provider
       value={{
-        data: data
-          ? {
-              device: data?.device,
-              track: data?.track ?? lastTrack,
-              album: data?.track?.album ?? lastTrack?.album,
-              albumImage:
-                data?.track?.album?.images?.[0]?.url ??
-                lastTrack?.album?.images?.[0]?.url,
-            }
-          : undefined,
+        data:
+          data || lastTrack
+            ? ({
+                device: data?.device,
+                track: data?.track ?? lastTrack,
+                album: data?.track?.album ?? lastTrack?.album,
+                albumImage:
+                  data?.track?.album?.images?.[0]?.url ??
+                  lastTrack?.album?.images?.[0]?.url,
+              } as PlaybackStateData)
+            : undefined,
         isPlaying: data?.isPlaying ?? false,
         toggleState,
       }}
