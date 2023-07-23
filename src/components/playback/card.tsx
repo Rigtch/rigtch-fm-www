@@ -57,7 +57,7 @@ export function PlaybackCard() {
             )}
           </div>
 
-          <div className="justify-content-between align-items-center flex">
+          <div className="justify-content-between align-items-center flex gap-4">
             <div className="flex gap-2">
               <AudioBars isPlaying={isPlaying} />
 
