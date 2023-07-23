@@ -1,7 +1,7 @@
 import { Button, ButtonProps } from 'primereact/button'
 import { classNames } from 'primereact/utils'
 
-import { environment } from '@config'
+import { environment } from '@config/environment'
 
 export function ConnectButton({ className, ...props }: ButtonProps) {
   return (

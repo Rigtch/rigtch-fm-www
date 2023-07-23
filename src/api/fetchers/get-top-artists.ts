@@ -1,6 +1,6 @@
 import { Artist } from '../types'
 
-import { environment } from '@config'
+import { environment } from '@config/environment'
 
 export async function getTopArtists(token?: string): Promise<Artist[]> {
   const response = await fetch(
