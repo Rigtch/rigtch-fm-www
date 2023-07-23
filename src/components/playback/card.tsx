@@ -8,35 +8,16 @@ import { RelativeTime } from '../utils'
 
 import { PlaybackSkeletonCard } from './skeleton-card'
 
-import {
-  useLastTracks,
-  usePlaybackState,
-  useTogglePlaybackState,
-} from '~/hooks/api'
-import { isMobile } from '~/utils/is-mobile'
-import { getArtists } from '~/utils/get-artists'
+import { isMobile } from '@utils/is-mobile'
+import { getArtists } from '@utils/get-artists'
+import { usePlaybackStateContext } from '@context/playback-state'
 
 export function PlaybackCard() {
-  const { data, refetch } = usePlaybackState()
-  const { data: lastTracksData } = useLastTracks()
-  const { toggle } = useTogglePlaybackState()
+  const { data, isPlaying, toggleState } = usePlaybackStateContext()
 
-  if (!data && !lastTracksData) return <PlaybackSkeletonCard />
+  if (!data) return <PlaybackSkeletonCard />
 
-  const isPlaying = data?.isPlaying ?? false
-  const device = data?.device
-  const album = data?.track?.album ?? lastTracksData?.[0]?.album
-  const track = data?.track ?? lastTracksData?.[0]
-
-  if (!album || !track) return <PlaybackSkeletonCard />
-
-  const {
-    images: [{ url: albumImage }],
-  } = album
-
-  function handleChangePlaybackState() {
-    toggle(isPlaying).then(() => refetch())
-  }
+  const { device, track, album, albumImage } = data
 
   return (
     <Card
@@ -93,7 +74,7 @@ export function PlaybackCard() {
                 icon={`pi ${isPlaying ? 'pi-pause' : 'pi-play'}`}
                 disabled={!device}
                 tooltip={device ? undefined : 'No active device'}
-                onClick={handleChangePlaybackState}
+                onClick={() => toggleState()}
               />
             </div>
 
