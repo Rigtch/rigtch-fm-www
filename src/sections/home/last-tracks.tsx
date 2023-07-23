@@ -1,9 +1,8 @@
-import { ElementCard, ElementCardColor } from './element/card'
-
-import { useLastTracks } from '~/hooks/api'
+import { ElementCard, ElementCardColor } from '@components/element/card'
+import { useLastTracksQuery } from '@hooks/api'
 
 export function LastTracksSection() {
-  const { data } = useLastTracks()
+  const { data } = useLastTracksQuery()
 
   if (!data) return null
 

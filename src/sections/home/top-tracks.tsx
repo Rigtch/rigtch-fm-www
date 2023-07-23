@@ -1,9 +1,8 @@
-import { ElementCard, ElementCardColor } from './element/card'
-
-import { useTopTracks } from '~/hooks/api'
+import { ElementCard, ElementCardColor } from '@components/element/card'
+import { useTopTracksQuery } from '@hooks/api'
 
 export function TopTracksSection() {
-  const { data } = useTopTracks()
+  const { data } = useTopTracksQuery()
 
   if (!data) return null
 

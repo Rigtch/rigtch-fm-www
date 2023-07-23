@@ -1,9 +1,9 @@
 import { Chip } from 'primereact/chip'
 
-import { useTopGenres } from '~/hooks/api'
+import { useTopGenresQuery } from '@hooks/api'
 
 export function TopGenresSection() {
-  const { data } = useTopGenres()
+  const { data } = useTopGenresQuery()
 
   if (!data) return null
 
