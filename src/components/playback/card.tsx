@@ -8,27 +8,31 @@ import { RelativeTime } from '../utils'
 
 import { PlaybackSkeletonCard } from './skeleton-card'
 
-import { usePlaybackState, useTogglePlaybackState } from '~/hooks/api'
+import {
+  useLastTracks,
+  usePlaybackState,
+  useTogglePlaybackState,
+} from '~/hooks/api'
 import { isMobile } from '~/utils/is-mobile'
 import { getArtists } from '~/utils/get-artists'
 
 export function PlaybackCard() {
   const { data, refetch } = usePlaybackState()
+  const { data: lastTracksData } = useLastTracks()
   const { toggle } = useTogglePlaybackState()
 
-  if (!data) return <PlaybackSkeletonCard />
+  if (!data && !lastTracksData) return <PlaybackSkeletonCard />
+
+  const isPlaying = data?.isPlaying ?? false
+  const device = data?.device
+  const album = data?.track?.album ?? lastTracksData?.[0]?.album
+  const track = data?.track ?? lastTracksData?.[0]
+
+  if (!album || !track) return <PlaybackSkeletonCard />
 
   const {
-    isPlaying,
-    device,
-    track: {
-      album: {
-        images: [{ url: albumImage }],
-        ...album
-      },
-      ...track
-    },
-  } = data
+    images: [{ url: albumImage }],
+  } = album
 
   function handleChangePlaybackState() {
     toggle(isPlaying).then(() => refetch())
