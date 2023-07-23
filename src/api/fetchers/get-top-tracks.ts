@@ -1,6 +1,6 @@
 import { Track } from '../types'
 
-import { environment } from '~/config'
+import { environment } from '@config'
 
 export async function getTopTracks(token?: string): Promise<Track[]> {
   const response = await fetch(`${environment.API_URL}/statistics/top-tracks`, {

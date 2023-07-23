@@ -4,10 +4,10 @@ import { Card } from 'primereact/card'
 import { PlaybackCard } from '../playback/card'
 import { OpenInSpotifyButton } from '../common'
 
-import { useProfile } from '~/hooks/api'
+import { useProfileQuery } from '@hooks/api'
 
 export function ProfileCard() {
-  const { data } = useProfile()
+  const { data } = useProfileQuery()
 
   if (!data) return null
 

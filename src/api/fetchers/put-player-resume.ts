@@ -1,6 +1,6 @@
 import { Success } from '../types'
 
-import { environment } from '~/config'
+import { environment } from '@config'
 
 export async function putPlayerResume(token?: string): Promise<Success> {
   const response = await fetch(`${environment.API_URL}/player/resume`, {

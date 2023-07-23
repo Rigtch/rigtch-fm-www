@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react'
 
-import { Footer } from '~/components/footer'
-import { NavigationBar } from '~/components/navigation-bar'
+import { Footer } from '@components/footer'
+import { NavigationBar } from '@components/navigation-bar'
 
 export function DefaultLayout({ children }: HTMLAttributes<HTMLDivElement>) {
   return (
