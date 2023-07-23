@@ -1,9 +1,12 @@
-import { ElementCard, ElementCardSize, TopOneElementCard } from './element'
-
-import { useTopArtists } from '~/hooks/api'
+import {
+  ElementCard,
+  ElementCardSize,
+  TopOneElementCard,
+} from '@components/element'
+import { useTopArtistsQuery } from '@hooks/api'
 
 export function TopArtistsSection() {
-  const { data } = useTopArtists()
+  const { data } = useTopArtistsQuery()
 
   if (!data) return null
 
