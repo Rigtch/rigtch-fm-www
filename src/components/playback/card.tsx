@@ -1,7 +1,6 @@
 import { Image } from 'primereact/image'
 import { Card } from 'primereact/card'
 import { Button } from 'primereact/button'
-import { Skeleton } from 'primereact/skeleton'
 
 import { AudioBars, OpenInSpotifyButton } from '../common'
 import { RelativeTime } from '../utils'
@@ -29,32 +28,19 @@ export function PlaybackCard() {
     >
       <main className="flex gap-4">
         <div>
-          {track ? (
-            <Image
-              src={albumImage}
-              alt={album.name}
-              width="96"
-              height="96"
-              imageClassName="border-round-md"
-            />
-          ) : (
-            <Skeleton size="96px" />
-          )}
+          <Image
+            src={albumImage}
+            alt={album.name}
+            width="96"
+            height="96"
+            imageClassName="border-round-md"
+          />
         </div>
 
         <div className="flex-column flex w-full gap-2">
           <div className="flex-column flex gap-1">
-            {track ? (
-              <>
-                <p className="m-0 text-2xl text-white">{track?.name}</p>
-                <p className="text-700 m-0">{getArtists(track.artists)}</p>
-              </>
-            ) : (
-              <>
-                <Skeleton width="100%" height="24px" />
-                <Skeleton width="40%" height="16px" />
-              </>
-            )}
+            <p className="m-0 text-2xl text-white">{track?.name}</p>
+            <p className="text-700 m-0">{getArtists(track.artists)}</p>
           </div>
 
           <div className="justify-content-between align-items-center flex gap-4">
