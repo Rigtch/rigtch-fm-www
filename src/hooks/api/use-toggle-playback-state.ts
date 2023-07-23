@@ -1,9 +1,9 @@
 import { useCookies } from 'react-cookie'
 
-import { ACCESS_TOKEN } from '~/api/constants'
-import { putPlayerPause, putPlayerResume } from '~/api/fetchers'
+import { ACCESS_TOKEN } from '@api/constants'
+import { putPlayerPause, putPlayerResume } from '@api/fetchers'
 
-export const useTogglePlaybackState = () => {
+export const useTogglePlaybackStateQuery = () => {
   const [cookie] = useCookies([ACCESS_TOKEN])
 
   function toggle(isPlaying = false) {
