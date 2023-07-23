@@ -15,7 +15,7 @@ export function ProfileCard() {
     displayName,
     followers,
     href,
-    images: [{ url: image }],
+    images: [, { url: image }],
   } = data
 
   return (
