@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({
     const accessToken = cookies[ACCESS_TOKEN]
     const queryClient = new QueryClient()
 
-    await queryClient.prefetchQuery([PROFILE], () => getProfile(accessToken))
+    await queryClient.fetchQuery([PROFILE], () => getProfile(accessToken))
     await queryClient.prefetchQuery([TOP_GENRES], () =>
       getTopGenres(accessToken)
     )
