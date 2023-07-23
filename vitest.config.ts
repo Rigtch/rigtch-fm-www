@@ -18,20 +18,44 @@ export default defineConfig({
         replacement: fileURLToPath(new URL('src/pages', import.meta.url)),
       },
       {
+        find: '@layouts',
+        replacement: fileURLToPath(new URL('src/layouts', import.meta.url)),
+      },
+      {
+        find: '@sections',
+        replacement: fileURLToPath(new URL('src/sections', import.meta.url)),
+      },
+      {
         find: '@components',
         replacement: fileURLToPath(new URL('src/components', import.meta.url)),
+      },
+      {
+        find: '@context',
+        replacement: fileURLToPath(new URL('src/context', import.meta.url)),
+      },
+      {
+        find: '@hooks',
+        replacement: fileURLToPath(new URL('src/hooks', import.meta.url)),
+      },
+      {
+        find: '@config',
+        replacement: fileURLToPath(new URL('src/config', import.meta.url)),
       },
       {
         find: '@api',
         replacement: fileURLToPath(new URL('src/api', import.meta.url)),
       },
       {
+        find: '@common',
+        replacement: fileURLToPath(new URL('src/common', import.meta.url)),
+      },
+      {
         find: '@utils',
         replacement: fileURLToPath(new URL('src/utils', import.meta.url)),
       },
       {
-        find: '@hooks',
-        replacement: fileURLToPath(new URL('src/hooks', import.meta.url)),
+        find: '@assets',
+        replacement: fileURLToPath(new URL('src/assets', import.meta.url)),
       },
       {
         find: '@styles',
