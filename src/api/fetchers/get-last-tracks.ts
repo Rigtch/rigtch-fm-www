@@ -1,6 +1,6 @@
 import { Track } from '../types'
 
-import { environment } from '@config'
+import { environment } from '@config/environment'
 
 export async function getLastTracks(token?: string): Promise<Track[]> {
   const response = await fetch(

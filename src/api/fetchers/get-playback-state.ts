@@ -1,6 +1,6 @@
 import { PlaybackState } from '../types'
 
-import { environment } from '@config'
+import { environment } from '@config/environment'
 
 export async function getPlaybackState(token?: string): Promise<PlaybackState> {
   const response = await fetch(`${environment.API_URL}/player/state`, {

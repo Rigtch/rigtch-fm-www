@@ -1,6 +1,6 @@
 import { SecretData } from '../types'
 
-import { environment } from '@config'
+import { environment } from '@config/environment'
 
 export async function getRefresh(token?: string): Promise<SecretData> {
   const response = await fetch(`${environment.API_URL}/auth/refresh`, {

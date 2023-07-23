@@ -1,6 +1,6 @@
 import { Profile } from '../types'
 
-import { environment } from '@config'
+import { environment } from '@config/environment'
 
 export async function getProfile(token?: string): Promise<Profile> {
   const response = await fetch(`${environment.API_URL}/auth/profile`, {
