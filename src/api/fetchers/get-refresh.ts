@@ -2,10 +2,14 @@ import { SecretData } from '../types'
 
 import { environment } from '~/config'
 
-export function getRefresh(token?: string) {
-  return fetch(`${environment.API_URL}/auth/refresh`, {
+export async function getRefresh(token?: string): Promise<SecretData> {
+  const response = await fetch(`${environment.API_URL}/auth/refresh`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  }).then<SecretData>(response => response.json())
+  })
+
+  if (response.status === 401) throw new Error(response.statusText)
+
+  return await response.json()
 }
