@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { serialize } from 'cookie'
 
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/api/constants'
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '@api/constants'
 
 export default async function handler(
   request: NextApiRequest,

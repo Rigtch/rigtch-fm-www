@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { ConnectButton } from './button'
 
-import { spotifyLogo } from '~/assets/images'
+import { spotifyLogo } from '@assets/images'
 
 export function ConnectCard() {
   return (

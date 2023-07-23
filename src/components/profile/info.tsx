@@ -11,11 +11,11 @@ import { useQueryClient } from '@tanstack/react-query'
 
 import { ConnectButton } from '../connect'
 
-import { useProfile } from '~/hooks/api'
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '~/api/constants'
+import { useProfileQuery } from '@hooks/api'
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '@api/constants'
 
 export function ProfileInfo() {
-  const { data } = useProfile()
+  const { data } = useProfileQuery()
   const queryClient = useQueryClient()
   const [, , removeCookies] = useCookies([ACCESS_TOKEN, REFRESH_TOKEN])
   const router = useRouter()

@@ -2,7 +2,7 @@ import { describe, test } from 'vitest'
 
 import { getImage } from './get-image'
 
-import { Image } from '~/api/types'
+import { Image } from '@api/types'
 
 const imagesMock: Image[] = [
   { url: 'https://url1', height: 96, width: 96 },

@@ -2,9 +2,9 @@ import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css'
 
-import '~/styles/audio-bars.css'
-import '~/styles/playback-card.css'
-import '~/styles/theme.css'
+import '@styles/audio-bars.css'
+import '@styles/playback-card.css'
+import '@styles/theme.css'
 
 import { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -17,7 +17,8 @@ import { useState } from 'react'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { CookiesProvider } from 'react-cookie'
 
-import { DefaultLayout } from '~/layouts'
+import { DefaultLayout } from '@layouts'
+import { PlaybackStateProvider } from '@context/playback-state'
 
 export interface PageProps {
   dehydratedState?: unknown
@@ -57,9 +58,11 @@ export default function App({
       <QueryClientProvider client={queryClient}>
         <Hydrate state={dehydratedState}>
           <CookiesProvider>
-            <DefaultLayout>
-              <Component {...pageProps} />
-            </DefaultLayout>
+            <PlaybackStateProvider>
+              <DefaultLayout>
+                <Component {...pageProps} />
+              </DefaultLayout>
+            </PlaybackStateProvider>
           </CookiesProvider>
         </Hydrate>
 

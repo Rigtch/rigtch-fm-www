@@ -6,9 +6,9 @@ import { Chip } from 'primereact/chip'
 import { OpenInSpotifyButton } from '../common'
 import { RelativeTime } from '../utils'
 
-import { Album, Artist, TrackArtist } from '~/api/types'
-import { getArtists } from '~/utils/get-artists'
-import { isMobile } from '~/utils/is-mobile'
+import { Album, Artist, TrackArtist } from '@api/types'
+import { getArtists } from '@utils/get-artists'
+import { isMobile } from '@utils/is-mobile'
 
 export enum ElementCardColor {
   SURFACE_GROUND = 'surface-ground',

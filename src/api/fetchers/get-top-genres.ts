@@ -1,4 +1,4 @@
-import { environment } from '~/config'
+import { environment } from '@config'
 
 export async function getTopGenres(
   token?: string

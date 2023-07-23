@@ -2,7 +2,7 @@ import Link, { LinkProps } from 'next/link'
 import { Tooltip } from 'primereact/tooltip'
 import { classNames } from 'primereact/utils'
 
-import { SpotifyIcon } from '~/assets/svgs'
+import { SpotifyIcon } from '@assets/svgs'
 
 export interface OpenInSpotifyButtonProps extends LinkProps {
   href: string

@@ -22,11 +22,41 @@
     },
     "import/resolver": {
       "node": {
-        "paths": ["~/"],
+        "paths": [
+          "@",
+          "@pages/",
+          "@layouts/",
+          "@sections/",
+          "@components/",
+          "@context/",
+          "@hooks/",
+          "@config/",
+          "@api/",
+          "@common/",
+          "@utils/",
+          "@assets/",
+          "@styles/",
+          "@types/"
+        ],
         "extensions": [".js", ".ts", ".tsx", ".jsx"]
       },
       "alias": {
-        "map": [["~", "./src"]],
+        "map": [
+          ["~", "./src"],
+          ["@pages", "./src/pages"],
+          ["@layouts", "./src/layouts"],
+          ["@sections", "./src/sections"],
+          ["@components", "./src/components"],
+          ["@context", "./src/context"],
+          ["@hooks", "./src/hooks"],
+          ["@config", "./src/config"],
+          ["@api", "./src/api"],
+          ["@common", "./src/common"],
+          ["@utils", "./src/utils"],
+          ["@assets", "./src/assets"],
+          ["@styles", "./src/styles"],
+          ["@types", "./src/types"]
+        ],
         "extensions": [".ts", ".js", ".tsx", ".jsx"]
       }
     },

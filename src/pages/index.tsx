@@ -9,18 +9,20 @@ import {
   TOP_ARTISTS,
   TOP_GENRES,
   TOP_TRACKS,
-} from '~/api/constants'
-import { ProfileCard } from '~/components/profile'
-import { LastTracksSection } from '~/components/last-tracks-section'
+} from '@api/constants'
+import { ProfileCard } from '@components/profile'
 import {
   getProfile,
   getTopArtists,
   getTopGenres,
   getTopTracks,
-} from '~/api/fetchers'
-import { TopGenresSection } from '~/components/top-genres-section'
-import { TopArtistsSection } from '~/components/top-artists-section'
-import { TopTracksSection } from '~/components/top-tracks-section'
+} from '@api/fetchers'
+import {
+  TopArtistsSection,
+  TopGenresSection,
+  TopTracksSection,
+  LastTracksSection,
+} from '@sections/home'
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async ({
   req: { cookies },

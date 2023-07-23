@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { ProfileInfo } from './profile'
 
-import { rigtchLogo } from '~/assets/images'
+import { rigtchLogo } from '@assets/images'
 
 export function NavigationBar() {
   return (

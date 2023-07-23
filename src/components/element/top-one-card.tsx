@@ -3,7 +3,7 @@ import { Image } from 'primereact/image'
 
 import { OpenInSpotifyButton } from '../common'
 
-import { isMobile } from '~/utils/is-mobile'
+import { isMobile } from '@utils/is-mobile'
 
 export interface TopOneElementCardProps {
   name: string
