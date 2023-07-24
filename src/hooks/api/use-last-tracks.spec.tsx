@@ -1,6 +1,4 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { renderHook, waitFor } from '@testing-library/react'
-import { ReactElement } from 'react'
 import { Mock, describe, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 
@@ -9,14 +7,7 @@ import { useLastTracksQuery } from './use-last-tracks'
 import { Track } from '@api/types'
 import { getLastTracks } from '@api/fetchers'
 import { ACCESS_TOKEN } from '@api/constants'
-
-const wrapper = ({ children }: { children: ReactElement }) => {
-  const queryClient = new QueryClient()
-
-  return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-  )
-}
+import { queryClientWrapper } from '@tests/utils'
 
 vi.mock('@api/fetchers')
 vi.mock('react-cookie', () => ({
@@ -34,7 +25,9 @@ describe('useLastTracksQuery', () => {
   })
 
   it('should return last tracks', async () => {
-    const { result } = renderHook(() => useLastTracksQuery(), { wrapper })
+    const { result } = renderHook(() => useLastTracksQuery(), {
+      wrapper: queryClientWrapper,
+    })
 
     await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
 
