@@ -1,13 +1,12 @@
 import { renderHook, waitFor } from '@testing-library/react'
 import { Mock, describe, test, vi } from 'vitest'
-import { mock } from 'vitest-mock-extended'
 
 import { useTopArtistsQuery } from './use-top-artists'
 
 import { ACCESS_TOKEN } from '@api/constants'
 import { getTopArtists } from '@api/fetchers'
-import { Artist } from '@api/types'
 import { queryClientWrapper } from '@tests/utils'
+import { artistMock } from '@tests/mocks'
 
 vi.mock('@api/fetchers')
 vi.mock('react-cookie', () => ({
@@ -16,9 +15,7 @@ vi.mock('react-cookie', () => ({
 
 describe('useTopArtistsQuery', () => {
   beforeEach(() => {
-    ;(getTopArtists as Mock).mockReturnValue([
-      mock<Artist>({ name: 'artist 1' }),
-    ])
+    ;(getTopArtists as Mock).mockReturnValue([artistMock])
   })
 
   afterEach(() => {
@@ -33,7 +30,7 @@ describe('useTopArtistsQuery', () => {
 
     await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
 
-    expect(result.current.data?.[0]?.name).toEqual('artist 1')
+    expect(result.current.data?.[0]?.name).toEqual('Artist 1')
     expect(getTopArtists).toHaveBeenCalledWith(ACCESS_TOKEN)
   })
 })

@@ -4,6 +4,7 @@ import { mock } from 'vitest-mock-extended'
 import { getPlaybackState } from './get-playback-state'
 
 import { PlaybackState } from '@api/types'
+import { trackMock } from '@tests/mocks'
 
 describe('getPlaybackState', () => {
   test('should return response', async () => {
@@ -11,9 +12,7 @@ describe('getPlaybackState', () => {
       status: 200,
       json: () =>
         mock<PlaybackState>({
-          track: {
-            name: 'Track 1',
-          },
+          track: trackMock,
         }),
     }))
 

@@ -1,19 +1,14 @@
 import { describe, test, vi } from 'vitest'
-import { mock } from 'vitest-mock-extended'
 
 import { getTopArtists } from './get-top-artists'
 
-import { Artist } from '@api/types'
+import { artistMock } from '@tests/mocks'
 
 describe('getTopArtists', () => {
   test('should return response', async () => {
     vi.stubGlobal('fetch', () => ({
       status: 200,
-      json: () => [
-        mock<Artist>({
-          name: 'Artist 1',
-        }),
-      ],
+      json: () => [artistMock],
     }))
 
     const [{ name }] = await getTopArtists()

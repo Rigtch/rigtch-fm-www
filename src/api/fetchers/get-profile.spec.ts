@@ -1,18 +1,14 @@
 import { describe, test, vi } from 'vitest'
-import { mock } from 'vitest-mock-extended'
 
 import { getProfile } from './get-profile'
 
-import { Profile } from '@api/types'
+import { profileMock } from '@tests/mocks'
 
 describe('getProfile', () => {
   test('should return response', async () => {
     vi.stubGlobal('fetch', () => ({
       status: 200,
-      json: () =>
-        mock<Profile>({
-          displayName: 'John Doe',
-        }),
+      json: () => profileMock,
     }))
 
     const { displayName } = await getProfile()

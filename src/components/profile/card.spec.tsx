@@ -1,28 +1,17 @@
 import { render, screen } from '@testing-library/react'
 import { Mock, describe, vi } from 'vitest'
-import { mock } from 'vitest-mock-extended'
 
 import { ProfileCard } from './card'
 
 import { useProfileQuery } from '@hooks/api'
-import { Profile } from '@api/types'
+import { profileMock } from '@tests/mocks'
 
 vi.mock('@hooks/api')
 
 describe('ProfileCard', () => {
   beforeEach(() => {
     ;(useProfileQuery as Mock).mockReturnValue({
-      data: mock<Profile>({
-        displayName: 'John Doe',
-        followers: 100,
-        href: 'https://spotify.com',
-        images: [
-          {},
-          {
-            url: 'https://spotify.com/image.png',
-          },
-        ],
-      }),
+      data: profileMock,
     })
   })
 
