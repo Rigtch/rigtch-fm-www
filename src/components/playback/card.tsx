@@ -24,7 +24,7 @@ export function PlaybackCard() {
         backgroundColor: isPlaying ? '#388e3c' : '#263238',
       }}
       className="playback-card py-0"
-      onClick={() => isMobile() && window.open(track?.href, '_blank')}
+      onClick={() => isMobile() && window.open(track.href, '_blank')}
     >
       <main className="flex gap-4">
         <div>
@@ -39,7 +39,7 @@ export function PlaybackCard() {
 
         <div className="flex-column flex w-full gap-2">
           <div className="flex-column flex gap-1">
-            <p className="m-0 text-2xl text-white">{track?.name}</p>
+            <p className="m-0 text-2xl text-white">{track.name}</p>
             <p className="text-700 m-0">{getArtists(track.artists)}</p>
           </div>
 
@@ -65,10 +65,10 @@ export function PlaybackCard() {
             </div>
 
             <div className="align-items-center flex gap-2">
-              {track?.playedAt && <RelativeTime value={track.playedAt} />}
+              {track.playedAt && <RelativeTime value={track.playedAt} />}
 
               <OpenInSpotifyButton
-                href={track?.href ?? ''}
+                href={track.href}
                 className="hidden md:block"
               />
             </div>
