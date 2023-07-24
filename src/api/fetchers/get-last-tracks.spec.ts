@@ -1,19 +1,14 @@
 import { describe, test, vi } from 'vitest'
-import { mock } from 'vitest-mock-extended'
 
 import { getLastTracks } from './get-last-tracks'
 
-import { Track } from '@api/types'
+import { trackMock } from '@tests/mocks'
 
 describe('getLastTracks', () => {
   test('should return response', async () => {
     vi.stubGlobal('fetch', () => ({
       status: 200,
-      json: () => [
-        mock<Track>({
-          name: 'Track 1',
-        }),
-      ],
+      json: () => [trackMock],
     }))
 
     const [{ name }] = await getLastTracks()

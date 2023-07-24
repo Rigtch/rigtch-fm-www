@@ -1,13 +1,12 @@
 import { renderHook, waitFor } from '@testing-library/react'
 import { Mock, describe, test, vi } from 'vitest'
-import { mock } from 'vitest-mock-extended'
 
 import { useProfileQuery } from './use-profile'
 
 import { ACCESS_TOKEN } from '@api/constants'
 import { getProfile } from '@api/fetchers'
-import { Profile } from '@api/types'
 import { queryClientWrapper } from '@tests/utils'
+import { profileMock } from '@tests/mocks'
 
 vi.mock('@api/fetchers')
 vi.mock('react-cookie', () => ({
@@ -16,11 +15,7 @@ vi.mock('react-cookie', () => ({
 
 describe('useProfileQuery', () => {
   beforeEach(() => {
-    ;(getProfile as Mock).mockReturnValue(
-      mock<Profile>({
-        displayName: 'John Doe',
-      })
-    )
+    ;(getProfile as Mock).mockReturnValue(profileMock)
   })
 
   afterEach(() => {
