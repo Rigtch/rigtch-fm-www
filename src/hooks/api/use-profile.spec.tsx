@@ -1,5 +1,5 @@
 import { renderHook, waitFor } from '@testing-library/react'
-import { Mock, describe, vi } from 'vitest'
+import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 
 import { useProfileQuery } from './use-profile'
@@ -28,7 +28,7 @@ describe('useProfileQuery', () => {
     vi.resetAllMocks()
   })
 
-  it('should return profile', async () => {
+  test('should return profile', async () => {
     const { result } = renderHook(() => useProfileQuery(), {
       wrapper: queryClientWrapper,
     })

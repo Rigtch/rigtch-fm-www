@@ -1,5 +1,5 @@
 import { renderHook, waitFor } from '@testing-library/react'
-import { Mock, describe, vi } from 'vitest'
+import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 
 import { useLastTracksQuery } from './use-last-tracks'
@@ -24,7 +24,7 @@ describe('useLastTracksQuery', () => {
     vi.resetAllMocks()
   })
 
-  it('should return last tracks', async () => {
+  test('should return last tracks', async () => {
     const { result } = renderHook(() => useLastTracksQuery(), {
       wrapper: queryClientWrapper,
     })

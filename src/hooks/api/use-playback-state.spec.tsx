@@ -1,5 +1,5 @@
 import { renderHook, waitFor } from '@testing-library/react'
-import { Mock, describe, vi } from 'vitest'
+import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 import { useState } from 'react'
 
@@ -39,7 +39,7 @@ describe('usePlaybackStateQuery', () => {
     vi.resetAllMocks()
   })
 
-  it('should return playback state', async () => {
+  test('should return playback state', async () => {
     const { result } = renderHook(() => usePlaybackStateQuery(), {
       wrapper: queryClientWrapper,
     })
@@ -50,7 +50,7 @@ describe('usePlaybackStateQuery', () => {
     expect(getPlaybackState).toHaveBeenCalledWith(ACCESS_TOKEN)
   })
 
-  it('should change refetchInterval', async () => {
+  test('should change refetchInterval', async () => {
     const setState = vi.fn()
 
     ;(getPlaybackState as Mock).mockImplementation(() => {
