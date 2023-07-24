@@ -1,5 +1,5 @@
 import { renderHook, waitFor } from '@testing-library/react'
-import { Mock, describe, vi } from 'vitest'
+import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 
 import { useTopArtistsQuery } from './use-top-artists'
@@ -26,7 +26,7 @@ describe('useTopArtistsQuery', () => {
     vi.resetAllMocks()
   })
 
-  it('should return top artists', async () => {
+  test('should return top artists', async () => {
     const { result } = renderHook(() => useTopArtistsQuery(), {
       wrapper: queryClientWrapper,
     })

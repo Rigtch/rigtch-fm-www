@@ -1,5 +1,5 @@
 import { renderHook, waitFor } from '@testing-library/react'
-import { Mock, describe, vi } from 'vitest'
+import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 
 import { useTopTracksQuery } from './use-top-tracks'
@@ -24,7 +24,7 @@ describe('useTopTracksQuery', () => {
     vi.resetAllMocks()
   })
 
-  it('should return top tracks', async () => {
+  test('should return top tracks', async () => {
     const { result } = renderHook(() => useTopTracksQuery(), {
       wrapper: queryClientWrapper,
     })

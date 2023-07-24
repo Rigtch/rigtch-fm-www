@@ -1,4 +1,4 @@
-import { Mock, describe, vi } from 'vitest'
+import { Mock, describe, test, vi } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
 
 import { useTopGenresQuery } from './use-top-genres'
@@ -26,7 +26,7 @@ describe('useTopGenresQuery', () => {
     vi.resetAllMocks()
   })
 
-  it('should return top genres', async () => {
+  test('should return top genres', async () => {
     const { result } = renderHook(() => useTopGenresQuery(), {
       wrapper: queryClientWrapper,
     })
