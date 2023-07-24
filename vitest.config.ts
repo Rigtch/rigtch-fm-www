@@ -84,6 +84,7 @@ export default defineConfig({
         '**/pages/**',
         '**/types/**',
         '**/constants/**',
+        '**/tests/**',
         '**/index.ts',
         '**/*.config.ts',
         '**/*.config.js',
