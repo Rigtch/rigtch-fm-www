@@ -4,9 +4,9 @@ import { fireEvent, render, screen } from '@testing-library/react'
 
 import { PlaybackCard } from './card'
 
-import { Album, Device } from '@api/types'
+import { Device } from '@api/types'
 import { usePlaybackStateContext } from '@context/playback-state'
-import { trackMock } from '@tests/mocks'
+import { albumMock, trackMock } from '@tests/mocks'
 
 vi.mock('@context/playback-state')
 
@@ -20,9 +20,7 @@ describe('PlaybackCard', () => {
       data: {
         device: mock<Device>(),
         track: trackMock,
-        album: mock<Album>({
-          name: 'Album 1',
-        }),
+        album: albumMock,
         albumImage: 'image',
       },
     })
