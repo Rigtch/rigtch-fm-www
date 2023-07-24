@@ -3,7 +3,7 @@
   "editor.formatOnSave": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
-    "*.ts": "$(capture).js, $(capture).*.ts, $(capture).*.js",
+    "*.ts": "$(capture).js, $(capture).*.ts, $(capture).*.js, $(capture).*.tsx, $(capture).*.jsx",
     "*.js": "$(capture).js.map, $(capture).*.ts, $(capture).*.js",
     "*.jsx": "$(capture).jsx.map, $(capture).*.tsx, $(capture).*.jsx, $(capture).*.ts, $(capture).*.js",
     "*.tsx": "$(capture).tsx.map, $(capture).*.tsx, $(capture).*.jsx, $(capture).*.ts, $(capture).*.js",
@@ -24,6 +24,11 @@
     "source.fixAll.prettier": true,
     "source.fixAll.markdownlint": true
   },
-  "eslint.validate": ["javascript", "typescript", "typescriptreact", "javascriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
   "files.eol": "\n"
 }
