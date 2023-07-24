@@ -36,7 +36,8 @@
           "@utils/",
           "@assets/",
           "@styles/",
-          "@types/"
+          "@types/",
+          "@tests/"
         ],
         "extensions": [".js", ".ts", ".tsx", ".jsx"]
       },
@@ -55,7 +56,8 @@
           ["@utils", "./src/utils"],
           ["@assets", "./src/assets"],
           ["@styles", "./src/styles"],
-          ["@types", "./src/types"]
+          ["@types", "./src/types"],
+          ["@tests", "./tests"]
         ],
         "extensions": [".ts", ".js", ".tsx", ".jsx"]
       }
