@@ -88,6 +88,7 @@ export default defineConfig({
         '**/*.config.ts',
         '**/*.config.js',
         '**/*.d.ts',
+        '**/*.svg.*',
         '**/*.spec.ts',
         '**/*.spec.tsx',
       ],
