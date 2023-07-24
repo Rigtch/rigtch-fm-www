@@ -1,20 +1,16 @@
 import { render, screen } from '@testing-library/react'
 import { describe } from 'vitest'
-import { mock } from 'vitest-mock-extended'
 
 import { ElementCard } from './card'
 
-import { artistMock } from '@tests/mocks'
-import { Album } from '@api/types'
+import { albumMock, artistMock } from '@tests/mocks'
 
 describe('ElementCard', () => {
   const position = 1
   const name = 'Element 1'
   const image = 'image'
   const href = 'href'
-  const album = mock<Album>({
-    name: 'Album 1',
-  })
+  const album = albumMock
   const artists = [artistMock]
   const playedAt = new Date(Date.now() - 1000 * 60 * 60).toISOString()
   const genres = ['pop', 'rock', 'rap']
