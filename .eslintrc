@@ -88,7 +88,10 @@
         "**/__tests__/**/*.[jt]s?(x)",
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
-      "extends": ["plugin:testing-library/react"]
+      "extends": ["plugin:testing-library/react"],
+      "rules": {
+        "sonarjs/no-duplicate-string": "off"
+      }
     }
   ],
   "ignorePatterns": [
