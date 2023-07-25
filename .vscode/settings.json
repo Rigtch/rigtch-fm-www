@@ -7,11 +7,11 @@
     "*.js": "$(capture).js.map, $(capture).*.ts, $(capture).*.js",
     "*.jsx": "$(capture).jsx.map, $(capture).*.tsx, $(capture).*.jsx, $(capture).*.ts, $(capture).*.js",
     "*.tsx": "$(capture).tsx.map, $(capture).*.tsx, $(capture).*.jsx, $(capture).*.ts, $(capture).*.js",
-    "tsconfig.json": "tsconfig.*.json",
+    "tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
     ".gitignore": ".gitmodules, .gitattributes",
     ".prettierrc": ".prettierignore",
     ".stylelintrc": ".stylelintignore",
-    ".eslintrc.cjs": ".eslintcache",
+    ".eslintrc": ".eslintcache",
     ".env": ".env.*",
     "package.json": ".npmrc, yarn.lock, .yarnrc, .nvmrc, yarn-error.log"
   },
