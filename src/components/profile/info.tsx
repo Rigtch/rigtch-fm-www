@@ -13,6 +13,7 @@ import { ConnectButton } from '../connect'
 
 import { useProfileQuery } from '@hooks/api'
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '@api/constants'
+import { getImage } from '@utils/get-image'
 
 export function ProfileInfo() {
   const { data } = useProfileQuery()
@@ -24,11 +25,9 @@ export function ProfileInfo() {
 
   if (!data) return <ConnectButton />
 
-  const {
-    displayName,
-    href,
-    images: [{ url: image }],
-  } = data
+  const { displayName, href, images } = data
+
+  const image = getImage(images)
 
   async function disconnect() {
     removeCookies(ACCESS_TOKEN)

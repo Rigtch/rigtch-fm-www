@@ -5,18 +5,16 @@ import { PlaybackCard } from '../playback/card'
 import { OpenInSpotifyButton } from '../common'
 
 import { useProfileQuery } from '@hooks/api'
+import { getImage } from '@utils/get-image'
 
 export function ProfileCard() {
   const { data } = useProfileQuery()
 
   if (!data) return null
 
-  const {
-    displayName,
-    followers,
-    href,
-    images: [, { url: image }],
-  } = data
+  const { displayName, followers, href, images } = data
+
+  const image = getImage(images)
 
   return (
     <Card>
