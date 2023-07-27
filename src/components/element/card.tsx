@@ -63,7 +63,7 @@ export function ElementCard({
           size === LARGE ? 'gap-4' : 'gap-3'
         )}
       >
-        <header className="align-items-center flex gap-4">
+        <header className="align-items-center flex gap-4 w-full md:w-6">
           {position && (
             <span
               className={classNames(
@@ -85,20 +85,24 @@ export function ElementCard({
 
           <div
             className={classNames(
-              'flex-column justify-content-center flex',
+              'flex-column justify-content-center flex w-auto',
               size === LARGE && 'flex-wrap gap-3'
             )}
           >
             <p
               className={classNames(
-                'm-0 text-xl text-white',
+                'm-0 text-xl line-height-3 max-h-4rem max-w-5rem sm:max-w-20rem white-space-nowrap inline-block text-white overflow-hidden text-overflow-ellipsis',
                 [MEDIUM, LARGE].includes(size) && 'md:text-2xl'
               )}
             >
               {name}
             </p>
 
-            {artists && <p className="text-400 m-0">{getArtists(artists)}</p>}
+            {artists && (
+              <p className="text-400 m-0 line-height-3 max-h-4rem max-w-5rem sm:max-w-20rem white-space-nowrap inline-block overflow-hidden text-overflow-ellipsis">
+                {getArtists(artists)}
+              </p>
+            )}
 
             {showGenres && genres && (
               <div>
@@ -110,10 +114,8 @@ export function ElementCard({
 
         <div
           className={classNames(
-            'align-items-end flex-row md:flex',
-            showFromAlbum
-              ? 'justify-content-between md:w-6'
-              : 'justify-content-end'
+            'align-items-center flex-row hidden w-6 md:flex',
+            showFromAlbum ? 'justify-content-between' : 'justify-content-end'
           )}
         >
           {showFromAlbum && album && (
