@@ -59,11 +59,11 @@ export function ElementCard({
     >
       <main
         className={classNames(
-          'justify-content-between flex w-full flex-row',
-          size === LARGE ? 'gap-4' : 'gap-3'
+          'justify-content-between align-items-end md:align-items-center flex w-full flex-column md:flex-row',
+          size === LARGE ? 'md:gap-4' : 'md:gap-3'
         )}
       >
-        <header className="align-items-center flex gap-4 w-full md:w-6">
+        <header className="align-items-center flex gap-4 w-full md:w-5">
           {position && (
             <span
               className={classNames(
@@ -114,21 +114,21 @@ export function ElementCard({
 
         <div
           className={classNames(
-            'align-items-center flex-row hidden w-6 md:flex',
+            'align-items-center flex flex-row w-6',
             showFromAlbum ? 'justify-content-between' : 'justify-content-end'
           )}
         >
           {showFromAlbum && album && (
-            <div className="flex-column flex">
+            <div className="flex-column md:flex hidden">
               <p className="m-0 text-xl text-white">From album:</p>
               <p className="text-400 m-0">{album.name}</p>
             </div>
           )}
 
-          <div className="flex-column justify-content-between align-items-end flex gap-2">
-            <OpenInSpotifyButton href={href} />
-
+          <div className="flex-row hidden gap-3 md:flex">
             {playedAt && <RelativeTime value={playedAt ?? ''} />}
+
+            <OpenInSpotifyButton href={href} />
           </div>
         </div>
       </main>
