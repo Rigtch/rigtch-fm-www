@@ -9,7 +9,7 @@ export function DefaultLayout({ children }: HTMLAttributes<HTMLDivElement>) {
       <NavigationBar />
 
       <main
-        className="flex-grow-1 align-self-center w-full p-2"
+        className="flex-grow-1 align-self-center w-full p-1 md:p-2"
         style={{ maxWidth: '1300px' }}
       >
         {children}
