@@ -12,7 +12,7 @@ export function LastTracksSection() {
         <h2 className="text-5xl">Last played tracks</h2>
       </header>
 
-      <main className="flex-column flex gap-2">
+      <main className="flex-column flex gap-2 lg:gap-3">
         {data.map(({ album, ...track }, index) => (
           <ElementCard
             {...track}
