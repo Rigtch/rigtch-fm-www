@@ -8,10 +8,13 @@ export function ConnectButton({ className, ...props }: ButtonProps) {
     <Button
       {...props}
       severity="success"
-      className={classNames('justify-content-center flex', className)}
+      className={classNames(
+        'justify-content-center text-white flex',
+        className
+      )}
       onClick={() => window.open(`${environment.API_URL}/auth/login`, '_self')}
     >
-      Connect
+      Connect to spotify
     </Button>
   )
 }
