@@ -55,7 +55,7 @@ export function ElementCard({
   return (
     <Card
       onClick={() => isMobile() && window.open(href, '_blank')}
-      className={color}
+      className={classNames(color, 'max-w-full')}
     >
       <main
         className={classNames(
@@ -63,12 +63,18 @@ export function ElementCard({
           size === LARGE ? 'md:gap-4' : 'md:gap-3'
         )}
       >
-        <header className="align-items-center flex gap-4 w-full md:w-5">
+        <header
+          className={classNames(
+            'align-items-center flex w-full  gap-3 md:gap-4'
+          )}
+        >
           {position && (
             <span
               className={classNames(
-                'w-2rem text-center',
-                size === LARGE ? 'text-4xl md:text-5xl' : 'text-3xl md:text-4xl'
+                'text-center',
+                size === LARGE
+                  ? 'text-4xl md:text-5xl w-2rem'
+                  : 'text-3xl md:text-4xl w-4rem'
               )}
             >
               {position}
@@ -85,7 +91,7 @@ export function ElementCard({
 
           <div
             className={classNames(
-              'flex-column justify-content-center flex min-w-0 w-6',
+              'flex-column justify-content-between flex min-w-0 w-full h-full',
               size === LARGE && 'flex-wrap gap-3'
             )}
           >
@@ -106,30 +112,26 @@ export function ElementCard({
 
             {showGenres && genres && (
               <div>
-                <Chip label={genres[0]} />
+                <Chip
+                  label={genres[0]}
+                  className="white-space-nowrap text-overflow-ellipsis max-w-full"
+                />
               </div>
             )}
           </div>
         </header>
 
-        <div
-          className={classNames(
-            'align-items-center flex flex-row w-6',
-            showFromAlbum ? 'justify-content-between' : 'justify-content-end'
-          )}
-        >
-          {showFromAlbum && album && (
-            <div className="flex-column md:flex hidden">
-              <p className="m-0 text-xl text-white">From album:</p>
-              <p className="text-400 m-0">{album.name}</p>
-            </div>
-          )}
-
-          <div className="flex-row hidden gap-3 md:flex">
-            {playedAt && <RelativeTime value={playedAt ?? ''} />}
-
-            <OpenInSpotifyButton href={href} />
+        {showFromAlbum && album && (
+          <div className="flex-column md:flex hidden w-6 gap-2">
+            <p className="m-0 text-xl text-white">From album:</p>
+            <p className="text-400 m-0">{album.name}</p>
           </div>
+        )}
+
+        <div className="flex-row hidden gap-3 md:flex align-self-end">
+          {playedAt && <RelativeTime value={playedAt ?? ''} />}
+
+          <OpenInSpotifyButton href={href} />
         </div>
       </main>
     </Card>

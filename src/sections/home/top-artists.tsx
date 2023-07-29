@@ -16,11 +16,11 @@ export function TopArtistsSection() {
         <h2 className="text-5xl">Top Artists</h2>
       </header>
 
-      <div className="flex-column flex w-full gap-8">
+      <div className="flex-column flex w-full gap-4 md:gap-8">
         <div className="justify-content-center flex w-full flex-row flex-wrap gap-6">
           <TopOneElementCard {...data[0]} image={data[0].images[0].url} />
 
-          <div className="flex-column flex gap-2 md:w-7">
+          <div className="flex-column flex gap-2 lg:gap-3 md:w-7 w-full">
             {data.slice(1, 5).map(({ images, ...artist }, index) => (
               <ElementCard
                 key={index}
@@ -34,7 +34,7 @@ export function TopArtistsSection() {
           </div>
         </div>
 
-        <div className="flex-column flex w-full gap-3">
+        <div className="flex-column flex w-full gap-2 lg:gap-3">
           {data.slice(5).map(({ images, ...artist }, index) => (
             <ElementCard
               key={index}

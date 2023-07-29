@@ -12,7 +12,7 @@ export function TopTracksSection() {
         <h2 className="text-5xl">Top Tracks</h2>
       </header>
 
-      <div className="flex-column flex gap-3">
+      <div className="flex-column flex gap-2 lg:gap-3">
         {data.map(({ album, ...track }, index) => (
           <ElementCard
             {...track}

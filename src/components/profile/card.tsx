@@ -14,7 +14,7 @@ export function ProfileCard() {
 
   const { displayName, followers, href, images } = data
 
-  const image = getImage(images)
+  const image = getImage(images, 1)
 
   return (
     <Card>
