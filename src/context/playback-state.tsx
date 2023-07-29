@@ -48,8 +48,6 @@ export function PlaybackStateProvider({
     return response
   }
 
-  console.log(data?.track ?? lastTrack)
-
   return (
     <PlaybackStateContext.Provider
       value={{
