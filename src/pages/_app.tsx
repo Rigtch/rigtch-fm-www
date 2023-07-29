@@ -2,9 +2,10 @@ import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css'
 
+import '@styles/global.css'
+import '@styles/theme.css'
 import '@styles/audio-bars.css'
 import '@styles/playback-card.css'
-import '@styles/theme.css'
 
 import { AppProps } from 'next/app'
 import Head from 'next/head'
