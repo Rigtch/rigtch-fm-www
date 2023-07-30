@@ -5,6 +5,7 @@ import { PageProps } from './_app'
 
 import {
   ACCESS_TOKEN,
+  ANALYSIS,
   PROFILE,
   TOP_ARTISTS,
   TOP_GENRES,
@@ -13,6 +14,7 @@ import {
 } from '@api/constants'
 import { ProfileCard } from '@components/profile'
 import {
+  getAnalysis,
   getProfile,
   getTopArtists,
   getTopGenres,
@@ -23,6 +25,7 @@ import {
   TopGenresSection,
   TopTracksSection,
   LastTracksSection,
+  AnalysisSection,
 } from '@sections/home'
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async ({
@@ -40,6 +43,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({
     await queryClient.prefetchQuery([TOP_TRACKS], () =>
       getTopTracks(accessToken)
     )
+    await queryClient.prefetchQuery([ANALYSIS], () => getAnalysis(accessToken))
 
     return {
       props: {
@@ -71,6 +75,7 @@ export default function Home() {
       <TopGenresSection />
       <TopArtistsSection />
       <TopTracksSection />
+      <AnalysisSection />
       <LastTracksSection />
     </div>
   )
