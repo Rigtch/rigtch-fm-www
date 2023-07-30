@@ -14,8 +14,9 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
-import { useState } from 'react'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { Analytics } from '@vercel/analytics/react'
+import { useState } from 'react'
 import { CookiesProvider } from 'react-cookie'
 
 import { DefaultLayout } from '@layouts'
@@ -62,6 +63,8 @@ export default function App({
             <PlaybackStateProvider>
               <DefaultLayout>
                 <Component {...pageProps} />
+
+                <Analytics />
               </DefaultLayout>
             </PlaybackStateProvider>
           </CookiesProvider>
