@@ -24,4 +24,13 @@ describe('getTopTracks', () => {
 
     expect(getTopTracks()).rejects.toThrow('Unauthorized')
   })
+
+  test('should throw error when status is 403', () => {
+    vi.stubGlobal('fetch', () => ({
+      status: 403,
+      statusText: 'Forbidden',
+    }))
+
+    expect(getTopTracks()).rejects.toThrow('Forbidden')
+  })
 })

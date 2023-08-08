@@ -9,7 +9,10 @@ export async function getTopGenres(
     },
   })
 
-  if (response.status === 401) throw new Error(response.statusText)
+  const parsedResponse = await response.json()
 
-  return await response.json()
+  if ([401, 403].includes(response.status))
+    throw new Error(parsedResponse.message)
+
+  return parsedResponse
 }

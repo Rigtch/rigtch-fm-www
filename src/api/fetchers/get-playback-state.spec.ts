@@ -40,4 +40,13 @@ describe('getPlaybackState', () => {
 
     expect(getPlaybackState()).rejects.toThrow('Forbidden')
   })
+
+  test('should throw error when status is 403', () => {
+    vi.stubGlobal('fetch', () => ({
+      status: 403,
+      statusText: 'Forbidden',
+    }))
+
+    expect(getPlaybackState()).rejects.toThrow('Forbidden')
+  })
 })
