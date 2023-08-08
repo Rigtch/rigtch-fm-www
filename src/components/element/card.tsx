@@ -92,12 +92,14 @@ export function ElementCard({
           <div
             className={classNames(
               'flex-column justify-content-between flex min-w-0 w-full h-full',
-              size === LARGE && 'flex-wrap gap-3'
+              size === LARGE && 'flex-wrap',
+              album && 'gap-0',
+              genres && 'gap-2'
             )}
           >
             <p
               className={classNames(
-                'm-0 text-xl line-height-3 max-h-4rem max-w-full white-space-nowrap text-white overflow-hidden text-overflow-ellipsis',
+                'm-0 text-xl line-height-3 max-h-3rem max-w-full white-space-nowrap text-white overflow-hidden text-overflow-ellipsis',
                 [MEDIUM, LARGE].includes(size) && 'md:text-2xl'
               )}
             >
@@ -122,9 +124,11 @@ export function ElementCard({
         </header>
 
         {showFromAlbum && album && (
-          <div className="flex-column md:flex hidden w-6 gap-2">
+          <div className="flex-column xl:flex hidden w-6 gap-2 min-w-0">
             <p className="m-0 text-xl text-white">From album:</p>
-            <p className="text-400 m-0">{album.name}</p>
+            <p className="text-400 m-0 m-0 line-height-3 max-h-4rem max-w-full white-space-nowrap overflow-hidden text-overflow-ellipsis">
+              {album.name}
+            </p>
           </div>
         )}
 

@@ -4,12 +4,14 @@ import { Image } from 'primereact/image'
 import { OpenInSpotifyButton } from '../common'
 
 import { isMobile } from '@utils/is-mobile'
+import { Album } from '@api/types'
 
 export interface TopOneElementCardProps {
   name: string
   image: string
   href: string
-  genres: string[]
+  genres?: string[]
+  album?: Album
 }
 
 export function TopOneElementCard({
@@ -17,6 +19,7 @@ export function TopOneElementCard({
   image,
   genres,
   href,
+  album,
 }: TopOneElementCardProps) {
   const stars = [40, 50, 60, 50, 40]
 
@@ -83,9 +86,16 @@ export function TopOneElementCard({
       <div className="text-3xl text-white md:text-4xl">{name}</div>
 
       <div className="justify-content-center flex flex-wrap gap-2">
-        {genres.slice(0, 3).map((genre, index) => (
-          <Chip key={index} label={genre} />
-        ))}
+        {genres &&
+          genres
+            .slice(0, 3)
+            .map((genre, index) => <Chip key={index} label={genre} />)}
+
+        {album && (
+          <span className="text-2xl">
+            From album: <span className="text-700">{album.name}</span>
+          </span>
+        )}
       </div>
     </div>
   )
