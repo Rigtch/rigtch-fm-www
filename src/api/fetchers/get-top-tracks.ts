@@ -9,7 +9,7 @@ export async function getTopTracks(token?: string): Promise<Track[]> {
     },
   })
 
-  if (response.status === 401) throw new Error(response.statusText)
+  if ([401, 403].includes(response.status)) throw new Error(response.statusText)
 
   return await response.json()
 }
