@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Button } from 'primereact/button'
 import { Card } from 'primereact/card'
 
@@ -20,12 +19,17 @@ export function DiscordCard() {
             src="https://discord.com/widget?id=835103193381076993&theme=dark"
             width="350"
             height="250"
+            className="border-round-md"
+            frameBorder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
           />
 
-          <Link href="https://discord.gg/ft9RUtyfZg" target="_blank">
-            <Button className="text-white">Join</Button>
-          </Link>
+          <Button
+            className="text-white"
+            onClick={() => window.open('https://discord.gg/ft9RUtyfZg')}
+          >
+            Join
+          </Button>
         </div>
       </div>
     </Card>
