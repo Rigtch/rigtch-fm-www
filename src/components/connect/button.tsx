@@ -14,7 +14,7 @@ export function ConnectButton({ className, ...props }: ButtonProps) {
       )}
       onClick={() => window.open(`${environment.API_URL}/auth/login`, '_self')}
     >
-      Connect to spotify
+      Connect
     </Button>
   )
 }

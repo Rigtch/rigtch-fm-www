@@ -38,7 +38,7 @@ export default function About() {
       <span className="text-6xl font-bold">Welcome to Rigtch!</span>
 
       <section className="flex flex-column md:flex-row align-items-center justify-content-between gap-8 w-full">
-        <Card className="w-full">
+        <Card className="w-full h-full">
           <div className="flex flex-column align-items-center gap-6 p-2">
             <div className="flex flex-column align-items-center">
               <span className="text-4xl font-bold">What&apos;s Rigtch?</span>
