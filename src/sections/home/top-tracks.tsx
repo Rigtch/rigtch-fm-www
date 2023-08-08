@@ -25,7 +25,7 @@ export function TopTracksSection() {
                 image={album.images[0].url}
                 size={ElementCardSize.LARGE}
                 key={index}
-                position={index + 1}
+                position={index + 2}
                 showFromAlbum
               />
             ))}
