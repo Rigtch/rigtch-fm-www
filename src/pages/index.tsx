@@ -9,6 +9,7 @@ import {
   TOP_ARTISTS,
   TOP_GENRES,
   TOP_TRACKS,
+  USER_NOT_REGISTERED,
 } from '@api/constants'
 import { ProfileCard } from '@components/profile'
 import {
@@ -32,9 +33,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({
     const queryClient = new QueryClient()
 
     await queryClient.fetchQuery([PROFILE], () => getProfile(accessToken))
-    await queryClient.prefetchQuery([TOP_GENRES], () =>
-      getTopGenres(accessToken)
-    )
+    await queryClient.fetchQuery([TOP_GENRES], () => getTopGenres(accessToken))
     await queryClient.prefetchQuery([TOP_ARTISTS], () =>
       getTopArtists(accessToken)
     )
@@ -48,7 +47,13 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({
       },
     }
   } catch (error) {
-    console.log('error', error)
+    if (error instanceof Error && error.message === USER_NOT_REGISTERED)
+      return {
+        redirect: {
+          destination: '/not-registered',
+          permanent: false,
+        },
+      }
 
     return {
       redirect: {
