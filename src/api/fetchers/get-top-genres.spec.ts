@@ -6,7 +6,7 @@ describe('getTopGenres', () => {
   test('should return response', async () => {
     vi.stubGlobal('fetch', () => ({
       status: 200,
-      json: () => ({
+      json: vi.fn().mockReturnValue({
         genres: ['pop', 'rock', 'rap'],
       }),
     }))
@@ -20,17 +20,23 @@ describe('getTopGenres', () => {
     vi.stubGlobal('fetch', () => ({
       status: 401,
       statusText: 'Unauthorized',
+      json: () => ({
+        message: 'error',
+      }),
     }))
 
-    expect(getTopGenres()).rejects.toThrow('Unauthorized')
+    expect(getTopGenres()).rejects.toThrow('error')
   })
 
   test('should throw error when status is 403', () => {
     vi.stubGlobal('fetch', () => ({
       status: 403,
       statusText: 'Forbidden',
+      json: () => ({
+        message: 'error',
+      }),
     }))
 
-    expect(getTopGenres()).rejects.toThrow('Forbidden')
+    expect(getTopGenres()).rejects.toThrow('error')
   })
 })
