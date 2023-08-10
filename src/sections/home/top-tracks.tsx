@@ -26,7 +26,6 @@ export function TopTracksSection() {
                 size={ElementCardSize.LARGE}
                 key={index}
                 position={index + 2}
-                showFromAlbum
               />
             ))}
           </div>

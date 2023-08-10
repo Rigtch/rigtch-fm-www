@@ -30,7 +30,6 @@ export interface ElementCardProps {
   artists?: (Artist | TrackArtist)[]
   playedAt?: string
   genres?: string[]
-  showFromAlbum?: boolean
   showGenres?: boolean
   color?: ElementCardColor
   size?: ElementCardSize
@@ -47,7 +46,6 @@ export function ElementCard({
   href,
   playedAt,
   genres,
-  showFromAlbum,
   showGenres,
   color = ElementCardColor.SURFACE_CARD,
   size = SMALL,
@@ -65,7 +63,7 @@ export function ElementCard({
       >
         <header
           className={classNames(
-            'align-items-center flex w-full  gap-3 md:gap-4'
+            'align-items-center flex w-full md:w-10 gap-3 md:gap-4'
           )}
         >
           {position && (
@@ -122,15 +120,6 @@ export function ElementCard({
             )}
           </div>
         </header>
-
-        {showFromAlbum && album && (
-          <div className="flex-column xl:flex hidden justify-self-end w-6 gap-2 min-w-0">
-            <p className="m-0 text-xl text-white">From album:</p>
-            <p className="text-400 m-0 m-0 line-height-3 max-h-4rem max-w-full white-space-nowrap overflow-hidden text-overflow-ellipsis">
-              {album.name}
-            </p>
-          </div>
-        )}
 
         <div className="flex-row hidden gap-3 md:flex align-self-end">
           {playedAt && <RelativeTime value={playedAt ?? ''} />}
