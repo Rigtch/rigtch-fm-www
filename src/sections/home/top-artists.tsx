@@ -20,7 +20,7 @@ export function TopArtistsSection() {
         <div className="justify-content-center flex w-full flex-row flex-wrap gap-6">
           <TopOneElementCard {...data[0]} image={data[0].images[0].url} />
 
-          <div className="flex-column flex gap-2 lg:gap-3 md:w-7 w-full">
+          <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
             {data.slice(1, 5).map(({ images, ...artist }, index) => (
               <ElementCard
                 key={index}

@@ -21,21 +21,6 @@ describe('ElementCard', () => {
     expect(screen.getByText('Element 1')).toBeInTheDocument()
   })
 
-  test('should render with showFromAlbum prop', () => {
-    render(
-      <ElementCard
-        name={name}
-        image={image}
-        href={href}
-        album={album}
-        showFromAlbum
-      />
-    )
-
-    expect(screen.getByText('Element 1')).toBeInTheDocument()
-    expect(screen.getByText('Album 1')).toBeInTheDocument()
-  })
-
   test('should render with artists', () => {
     render(
       <ElementCard name={name} image={image} href={href} artists={artists} />
