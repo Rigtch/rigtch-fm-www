@@ -1,82 +1,38 @@
-import { GetServerSideProps } from 'next'
-import { QueryClient, dehydrate } from '@tanstack/react-query'
+import { Card } from 'primereact/card'
 
-import { PageProps } from './_app'
-
-import {
-  ACCESS_TOKEN,
-  ANALYSIS,
-  PROFILE,
-  TOP_ARTISTS,
-  TOP_GENRES,
-  TOP_TRACKS,
-  USER_NOT_REGISTERED,
-} from '@api/constants'
-import { ProfileCard } from '@components/profile'
-import {
-  getAnalysis,
-  getProfile,
-  getTopArtists,
-  getTopGenres,
-  getTopTracks,
-} from '@api/fetchers'
-import {
-  TopArtistsSection,
-  TopGenresSection,
-  TopTracksSection,
-  LastTracksSection,
-  AnalysisSection,
-} from '@sections/home'
-
-export const getServerSideProps: GetServerSideProps<PageProps> = async ({
-  req: { cookies },
-}) => {
-  try {
-    const accessToken = cookies[ACCESS_TOKEN]
-    const queryClient = new QueryClient()
-
-    await queryClient.fetchQuery([PROFILE], () => getProfile(accessToken))
-    await queryClient.fetchQuery([TOP_GENRES], () => getTopGenres(accessToken))
-    await queryClient.prefetchQuery([TOP_ARTISTS], () =>
-      getTopArtists(accessToken)
-    )
-    await queryClient.prefetchQuery([TOP_TRACKS], () =>
-      getTopTracks(accessToken)
-    )
-    await queryClient.prefetchQuery([ANALYSIS], () => getAnalysis(accessToken))
-
-    return {
-      props: {
-        dehydratedState: dehydrate(queryClient),
-      },
-    }
-  } catch (error) {
-    if (error instanceof Error && error.message === USER_NOT_REGISTERED)
-      return {
-        redirect: {
-          destination: '/not-registered',
-          permanent: false,
-        },
-      }
-
-    return {
-      redirect: {
-        destination: '/about',
-        permanent: false,
-      },
-    }
-  }
-}
+import Steps from '@components/connect/steps'
+import { ConnectCard } from '@components/connect'
+import { DiscordCard } from '@components/connect/discord-card'
 
 export default function Home() {
   return (
-    <div className="flex-column flex gap-8">
-      <ProfileCard />
-      <TopGenresSection />
-      <TopArtistsSection />
-      <TopTracksSection />
-      <AnalysisSection />
-      <LastTracksSection />
-    </div>
+    <main className="align-items-center flex flex-column w-full gap-8">
+      <span className="text-6xl font-bold">Welcome to Rigtch!</span>
+
+      <section className="flex flex-column md:flex-row align-items-center justify-content-between gap-8 w-full">
+        <Card className="w-full h-full">
+          <div className="flex flex-column align-items-center gap-6 p-2">
+            <div className="flex flex-column align-items-center">
+              <span className="text-4xl font-bold">What&apos;s Rigtch?</span>
+              <p className="text-lg max-w-30rem text-center">
+                Rigtch is website focused on displaying your all-time statistics
+                such as favorite artists, most listened songs etc.
+              </p>
+            </div>
+
+            <div className="flex flex-column align-items-center gap-4">
+              <span className="text-4xl font-bold">It&apos;s simple</span>
+              <Steps />
+            </div>
+          </div>
+        </Card>
+
+        <div className="flex flex-column gap-3 w-full">
+          <ConnectCard />
+
+          <DiscordCard />
+        </div>
+      </section>
+    </main>
   )
 }

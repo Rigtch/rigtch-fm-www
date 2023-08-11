@@ -65,7 +65,7 @@ describe('ProfileInfo', () => {
     expect(removeCookiesMock).toHaveBeenCalledWith(ACCESS_TOKEN)
     expect(removeCookiesMock).toHaveBeenCalledWith(REFRESH_TOKEN)
     expect(queryClientClearMock).toHaveBeenCalled()
-    expect(routerPushMock).toHaveBeenCalledWith('/about')
+    expect(routerPushMock).toHaveBeenCalledWith('/')
   })
 
   test('should open in spotify', () => {

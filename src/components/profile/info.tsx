@@ -35,10 +35,15 @@ export function ProfileInfo() {
 
     queryClient.clear()
 
-    router.push('/about')
+    router.push('/')
   }
 
   const menuItems: MenuItem[] = [
+    {
+      label: 'Profile',
+      icon: 'pi pi-user',
+      command: () => router.push('/profile'),
+    },
     {
       label: 'Disconnect',
       icon: 'pi pi-sign-out',
