@@ -20,5 +20,5 @@ export default async function handler(
 
   response
     .setHeader('Set-Cookie', [accessTokenCookie, refreshTokenCookie])
-    .redirect('/')
+    .redirect('/profile')
 }
