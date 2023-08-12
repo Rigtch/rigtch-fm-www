@@ -12,6 +12,7 @@ describe('TopArtistsSection', () => {
   beforeEach(() => {
     ;(useTopArtistsQuery as Mock).mockReturnValue({
       data: [artistMock],
+      refetch: vi.fn(),
     })
   })
 
@@ -29,6 +30,7 @@ describe('TopArtistsSection', () => {
   test('should render section without data', () => {
     ;(useTopArtistsQuery as Mock).mockReturnValue({
       data: undefined,
+      refetch: vi.fn(),
     })
 
     render(<TopArtistsSection />)

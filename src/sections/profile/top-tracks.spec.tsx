@@ -12,6 +12,7 @@ describe('TopTracksSection', () => {
   beforeEach(() => {
     ;(useTopTracksQuery as Mock).mockReturnValue({
       data: [trackMock],
+      refetch: vi.fn(),
     })
   })
 
@@ -29,6 +30,7 @@ describe('TopTracksSection', () => {
   test('should render section without data', () => {
     ;(useTopTracksQuery as Mock).mockReturnValue({
       data: undefined,
+      refetch: vi.fn(),
     })
 
     render(<TopTracksSection />)

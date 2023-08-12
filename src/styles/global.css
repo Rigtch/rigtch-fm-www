@@ -1,3 +1,8 @@
 body {
   margin: 0 !important;
 }
+
+.p-highlight {
+  background-color: #9400d5 !important;
+  color: #fff !important;
+}

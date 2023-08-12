@@ -13,6 +13,7 @@ describe('TopGenresSection', () => {
       data: {
         genres: ['pop', 'rock', 'rap'],
       },
+      refetch: vi.fn(),
     })
   })
 
@@ -30,6 +31,7 @@ describe('TopGenresSection', () => {
   test('should render section without data', () => {
     ;(useTopGenresQuery as Mock).mockReturnValue({
       data: undefined,
+      refetch: vi.fn(),
     })
 
     render(<TopGenresSection />)
