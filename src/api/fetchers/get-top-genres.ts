@@ -1,13 +1,18 @@
+import { TimeRange } from '@api/types'
 import { environment } from '@config/environment'
 
 export async function getTopGenres(
-  token?: string
+  token?: string,
+  timeRange = TimeRange.LONG_TERM
 ): Promise<{ genres: string[] }> {
-  const response = await fetch(`${environment.API_URL}/statistics/top-genres`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  })
+  const response = await fetch(
+    `${environment.API_URL}/statistics/top-genres?timeRange=${timeRange}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  )
 
   const parsedResponse = await response.json()
 
