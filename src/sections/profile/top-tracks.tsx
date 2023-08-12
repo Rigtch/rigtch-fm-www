@@ -29,7 +29,7 @@ export function TopTracksSection() {
           <div className="justify-content-center xl:justify-content-between flex w-full flex-column md:flex-row xl:flex-nowrap gap-6">
             <TopOneElementCard
               {...data[0]}
-              image={data[0].album.images[0].url}
+              image={data[0]?.album.images[0].url}
             />
 
             <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
