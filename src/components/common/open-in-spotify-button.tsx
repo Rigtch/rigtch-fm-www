@@ -23,7 +23,7 @@ export function OpenInSpotifyButton({
       />
 
       <Link
-        href={href}
+        href={href ?? ''}
         target="_blank"
         className={classNames('open-in-spotify-button', className)}
         style={{ height: 24 }}
