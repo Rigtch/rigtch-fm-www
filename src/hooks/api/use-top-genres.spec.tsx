@@ -6,6 +6,7 @@ import { useTopGenresQuery } from './use-top-genres'
 import { ACCESS_TOKEN } from '@api/constants'
 import { getTopGenres } from '@api/fetchers'
 import { queryClientWrapper } from '@tests/utils'
+import { TimeRange } from '@api/types'
 
 vi.mock('@api/fetchers')
 vi.mock('react-cookie', () => ({
@@ -34,6 +35,6 @@ describe('useTopGenresQuery', () => {
     await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
 
     expect(result.current.data?.genres).toEqual(genresMock)
-    expect(getTopGenres).toHaveBeenCalledWith(ACCESS_TOKEN)
+    expect(getTopGenres).toHaveBeenCalledWith(ACCESS_TOKEN, TimeRange.LONG_TERM)
   })
 })
