@@ -9,9 +9,9 @@ export interface SelectTimeRangeProps {
 
 export function SelectTimeRange({ value, onChange }: SelectTimeRangeProps) {
   const timeRangeOptions = [
-    { label: 'Long Term', value: TimeRange.LONG_TERM },
-    { label: 'Medium Term', value: TimeRange.MEDIUM_TERM },
-    { label: 'Short Term', value: TimeRange.SHORT_TERM },
+    { label: 'lifetime', value: TimeRange.LONG_TERM },
+    { label: '6 months', value: TimeRange.MEDIUM_TERM },
+    { label: '4 weeks', value: TimeRange.SHORT_TERM },
   ]
 
   return (

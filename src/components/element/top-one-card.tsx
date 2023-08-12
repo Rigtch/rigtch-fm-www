@@ -24,7 +24,7 @@ export function TopOneElementCard({
   const stars = [40, 50, 60, 50, 40]
 
   return (
-    <div className="flex-column align-items-center flex gap-4">
+    <div className="flex-column align-items-center flex gap-4 xl:w-4">
       <div
         style={{
           backgroundImage: 'linear-gradient(to top right, #9400d5, #1e89ee)',
