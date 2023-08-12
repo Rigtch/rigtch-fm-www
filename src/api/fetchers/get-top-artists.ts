@@ -1,10 +1,13 @@
-import { Artist } from '../types'
+import { Artist, TimeRange } from '../types'
 
 import { environment } from '@config/environment'
 
-export async function getTopArtists(token?: string): Promise<Artist[]> {
+export async function getTopArtists(
+  token?: string,
+  timeRange = TimeRange.LONG_TERM
+): Promise<Artist[]> {
   const response = await fetch(
-    `${environment.API_URL}/statistics/top-artists`,
+    `${environment.API_URL}/statistics/top-artists?timeRange=${timeRange}`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
