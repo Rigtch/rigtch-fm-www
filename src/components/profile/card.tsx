@@ -23,7 +23,10 @@ export function ProfileCard() {
           <Avatar
             image={image}
             shape="circle"
+            label={displayName.slice(0, 1)}
+            size="xlarge"
             style={{ width: '96px', height: '96px' }}
+            className="border-circle"
           />
 
           <div className="flex-column justify-content-between flex">

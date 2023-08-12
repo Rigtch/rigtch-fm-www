@@ -60,7 +60,12 @@ export function ProfileInfo() {
     {
       template: () => (
         <div className="align-items-center flex gap-2 px-4 py-1">
-          <Avatar image={image} shape="circle" />
+          <Avatar
+            image={image}
+            shape="circle"
+            label={displayName.slice(0, 1)}
+            className="border-circle"
+          />
 
           <p className="m-0 text-xl font-medium text-white md:block">
             {displayName}
@@ -85,7 +90,13 @@ export function ProfileInfo() {
           {displayName}
         </p>
 
-        <Avatar image={image} shape="circle" size="large" />
+        <Avatar
+          image={image}
+          shape="circle"
+          size="large"
+          label={displayName.slice(0, 1)}
+          className="border-circle"
+        />
       </Button>
     </div>
   )
