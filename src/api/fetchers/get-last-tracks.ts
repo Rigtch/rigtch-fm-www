@@ -12,8 +12,6 @@ export async function getLastTracks(token?: string): Promise<Track[]> {
     }
   )
 
-  console.log('e', await response.json())
-
   if ([401, 403].includes(response.status)) throw new Error(response.statusText)
 
   return await response.json()

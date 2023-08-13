@@ -24,9 +24,12 @@ export function TopGenresSection() {
       </header>
 
       <main className="flex flex-wrap gap-1">
-        {data.genres.map(genre => (
-          <Chip key={genre} label={genre} />
-        ))}
+        {data.genres.length === 0 && (
+          <p>Oops, there seems to be nothing here.</p>
+        )}
+
+        {data.genres.length > 0 &&
+          data.genres.map(genre => <Chip key={genre} label={genre} />)}
       </main>
     </section>
   )
