@@ -83,7 +83,7 @@ export function TopOneElementCard({
         </div>
       </div>
 
-      <div className="text-3xl text-white md:text-4xl">{name}</div>
+      <div className="text-3xl text-white md:text-4xl text-center">{name}</div>
 
       <div className="justify-content-center flex flex-wrap gap-2">
         {genres &&
@@ -92,9 +92,9 @@ export function TopOneElementCard({
             .map((genre, index) => <Chip key={index} label={genre} />)}
 
         {album && (
-          <span className="text-2xl">
+          <p className="text-2xl text-center">
             From album: <span className="text-700">{album.name}</span>
-          </span>
+          </p>
         )}
       </div>
     </div>
