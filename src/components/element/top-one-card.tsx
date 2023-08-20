@@ -21,8 +21,6 @@ export function TopOneElementCard({
   href,
   album,
 }: TopOneElementCardProps) {
-  const stars = [40, 50, 60, 50, 40]
-
   return (
     <div className="flex-column align-items-center flex gap-4 xl:w-4">
       <div
@@ -61,24 +59,6 @@ export function TopOneElementCard({
             }}
           >
             <OpenInSpotifyButton href={href} />
-          </div>
-
-          <div
-            className="absolute"
-            style={{
-              bottom: '4px',
-            }}
-          >
-            {stars.map((size, index) => (
-              <i
-                key={index}
-                className="pi pi-star-fill"
-                style={{
-                  fontSize: size,
-                  color: '#FCC200',
-                }}
-              />
-            ))}
           </div>
         </div>
       </div>
