@@ -1,5 +1,7 @@
 import { Chip } from 'primereact/chip'
 import { Image } from 'primereact/image'
+import { Badge } from 'primereact/badge'
+import { classNames } from 'primereact/utils'
 
 import { OpenInSpotifyButton } from '../common'
 
@@ -21,6 +23,7 @@ export function TopOneElementCard({
   href,
   album,
 }: TopOneElementCardProps) {
+  const stars = [10, 15, 20, 15, 10]
   return (
     <div className="flex-column align-items-center flex gap-4 xl:w-4">
       <div
@@ -29,53 +32,56 @@ export function TopOneElementCard({
         }}
         className="border-round-md p-2"
       >
-        <div className="justify-content-center relative flex w-max">
+        <div className="justify-content-center flex w-max">
           <Image
             src={image}
             alt={name}
             width="316"
             height="316"
-            imageClassName="border-round-md"
             onClick={() => isMobile() && window.open(href, '_blank')}
           />
-
-          <div
-            className="absolute left-0 p-1"
-            style={{
-              background: 'rgba(0, 0, 0, 0.5)',
-              borderTopLeftRadius: '0.375rem',
-              borderBottomRightRadius: '0.375rem',
-            }}
-          >
-            <span className="text-4xl">1</span>
-          </div>
-
-          <div
-            className="absolute right-0 hidden p-1 md:block"
-            style={{
-              background: 'rgba(0, 0, 0, 0.5)',
-              borderTopRightRadius: '0.375rem',
-              borderBottomLeftRadius: '0.375rem',
-            }}
-          >
-            <OpenInSpotifyButton href={href} />
-          </div>
         </div>
       </div>
 
-      <div className="text-3xl text-white md:text-4xl text-center">{name}</div>
+      <div className={classNames('flex flex-column', genres && 'gap-4')}>
+        <div className="flex flex-column gap-2">
+          <div className="text-3xl text-white md:text-4xl text-center">
+            {name}
+          </div>
 
-      <div className="justify-content-center flex flex-wrap gap-2">
-        {genres &&
-          genres
-            .slice(0, 3)
-            .map((genre, index) => <Chip key={index} label={genre} />)}
+          <div className="relative flex flex-column align-items-center">
+            <Badge value="1" size="xlarge" className="text-white surface-300" />
+            <div className="flex flex-row absolute" style={{ bottom: '-10px' }}>
+              {stars.map((size, index) => (
+                <i
+                  key={index}
+                  className="pi pi-star-fill"
+                  style={{
+                    fontSize: size,
+                    color: '#FCC200',
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
 
-        {album && (
-          <p className="text-2xl text-center">
-            From album: <span className="text-700">{album.name}</span>
-          </p>
-        )}
+        <div className="justify-content-center flex flex-wrap gap-2">
+          {genres &&
+            genres
+              .slice(0, 3)
+              .map((genre, index) => <Chip key={index} label={genre} />)}
+
+          {album && (
+            <p className="text-2xl text-center">
+              From album: <span className="text-700">{album.name}</span>
+            </p>
+          )}
+        </div>
+
+        <div className="flex align-self-center">
+          <OpenInSpotifyButton href={href} />
+        </div>
       </div>
     </div>
   )

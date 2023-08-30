@@ -84,7 +84,6 @@ export function ElementCard({
             alt={album?.name ?? name}
             width={size === LARGE ? '76' : '64'}
             height={size === LARGE ? '76' : '64'}
-            imageClassName="border-round-md"
           />
 
           <div
