@@ -1,7 +1,7 @@
 import { Avatar } from 'primereact/avatar'
 import { Button } from 'primereact/button'
 import { Toast } from 'primereact/toast'
-import { Menu } from 'primereact/menu'
+import { SlideMenu } from 'primereact/slidemenu'
 import { useRef } from 'react'
 // eslint-disable-next-line import/no-unresolved
 import { MenuItem } from 'primereact/menuitem'
@@ -20,7 +20,7 @@ export function ProfileInfo() {
   const queryClient = useQueryClient()
   const [, , removeCookies] = useCookies([ACCESS_TOKEN, REFRESH_TOKEN])
   const router = useRouter()
-  const menu = useRef<Menu>(null)
+  const menu = useRef<SlideMenu>(null)
   const toast = useRef<Toast>(null)
 
   if (!data) return <ConnectButton />
@@ -42,7 +42,26 @@ export function ProfileInfo() {
     {
       label: 'Profile',
       icon: 'pi pi-user',
-      command: () => router.push('/profile'),
+      items: [
+        {
+          label: 'Profile',
+          icon: 'pi pi-user',
+          command: () => router.push('/profile'),
+        },
+        {
+          separator: true,
+        },
+        {
+          label: 'Top Artists',
+          icon: 'pi pi-star',
+          command: () => router.push('/profile/top-artists'),
+        },
+        {
+          label: 'Top Tracks',
+          icon: 'pi pi-star',
+          command: () => router.push('/profile/top-tracks'),
+        },
+      ],
     },
     {
       label: 'Disconnect',
@@ -78,7 +97,18 @@ export function ProfileInfo() {
   return (
     <div>
       <Toast ref={toast} />
-      <Menu model={menuItems} popup ref={menu} />
+      <SlideMenu
+        model={menuItems}
+        popup
+        ref={menu}
+        pt={{
+          content: {
+            style: {
+              overflowY: 'hidden',
+            },
+          },
+        }}
+      />
 
       <Button
         text

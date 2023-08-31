@@ -1,14 +1,14 @@
 import { Button } from 'primereact/button'
 
 export interface InfiniteLoadingButtonProps {
-  ref: (node?: Element | null | undefined) => void
+  refFunction: (node?: Element | null | undefined) => void
   fetchNextPage: () => void
   isFetchingNextPage: boolean
   hasNextPage?: boolean
 }
 
 export function InfiniteLoadingButton({
-  ref,
+  refFunction,
   fetchNextPage,
   isFetchingNextPage,
   hasNextPage,
@@ -16,7 +16,7 @@ export function InfiniteLoadingButton({
   return (
     <Button
       // @ts-expect-error Button should be the same type as Element
-      ref={ref}
+      ref={refFunction}
       onClick={() => fetchNextPage()}
       loading={isFetchingNextPage}
       disabled={!hasNextPage}
