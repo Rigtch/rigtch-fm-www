@@ -6,7 +6,7 @@ import { useTopTracksQuery } from './use-top-tracks'
 import { ACCESS_TOKEN } from '@api/constants'
 import { getTopTracks } from '@api/fetchers'
 import { queryClientWrapper } from '@tests/utils'
-import { trackMock } from '@tests/mocks'
+import { spotifyResponseMockFactory, trackMock } from '@tests/mocks'
 import { TimeRange } from '@api/types'
 
 vi.mock('@api/fetchers')
@@ -16,7 +16,9 @@ vi.mock('react-cookie', () => ({
 
 describe('useTopTracksQuery', () => {
   beforeEach(() => {
-    ;(getTopTracks as Mock).mockReturnValue([trackMock])
+    ;(getTopTracks as Mock).mockReturnValue(
+      spotifyResponseMockFactory([trackMock])
+    )
   })
 
   afterEach(() => {
@@ -31,7 +33,7 @@ describe('useTopTracksQuery', () => {
 
     await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
 
-    expect(result.current.data?.[0].name).toEqual('Track 1')
+    expect(result.current.data?.items[0].name).toEqual('Track 1')
     expect(getTopTracks).toHaveBeenCalledWith(ACCESS_TOKEN, TimeRange.LONG_TERM)
   })
 })
