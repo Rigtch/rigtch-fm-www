@@ -144,7 +144,9 @@
         "allowList": {
           "ref": true,
           "props": true,
-          "Props": true
+          "Props": true,
+          "param": true,
+          "Param": true
         }
       }
     ],
