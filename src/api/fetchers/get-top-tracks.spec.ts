@@ -2,16 +2,18 @@ import { describe, test, vi } from 'vitest'
 
 import { getTopTracks } from './get-top-tracks'
 
-import { trackMock } from '@tests/mocks'
+import { spotifyResponseMockFactory, trackMock } from '@tests/mocks'
 
 describe('getTopTracks', () => {
   test('should return response', async () => {
     vi.stubGlobal('fetch', () => ({
       status: 200,
-      json: () => [trackMock],
+      json: () => spotifyResponseMockFactory([trackMock]),
     }))
 
-    const [{ name }] = await getTopTracks()
+    const {
+      items: [{ name }],
+    } = await getTopTracks()
 
     expect(name).toEqual('Track 1')
   })
