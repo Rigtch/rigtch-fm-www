@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next'
 import { QueryClient, dehydrate } from '@tanstack/react-query'
 
-import { PageProps } from './_app'
+import { PageProps } from '../_app'
 
 import {
   ACCESS_TOKEN,
