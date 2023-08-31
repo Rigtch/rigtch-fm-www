@@ -1,13 +1,23 @@
-import { Artist, TimeRange } from '../types'
+import { Artist, SpotifyResponse, TimeRange } from '../types'
 
 import { environment } from '@config/environment'
 
 export async function getTopArtists(
   token?: string,
-  timeRange = TimeRange.LONG_TERM
-): Promise<Artist[]> {
+  timeRange = TimeRange.LONG_TERM,
+  limit = 10,
+  offset = 1
+): Promise<SpotifyResponse<Artist, true>> {
+  const urlSearchParameters = new URLSearchParams({
+    timeRange,
+    limit: limit + '',
+    offset: offset + '',
+  })
+
   const response = await fetch(
-    `${environment.API_URL}/statistics/top-artists?timeRange=${timeRange}`,
+    `${
+      environment.API_URL
+    }/statistics/top-artists?${urlSearchParameters.toString()}`,
     {
       headers: {
         Authorization: `Bearer ${token}`,

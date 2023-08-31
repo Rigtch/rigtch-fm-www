@@ -2,16 +2,18 @@ import { describe, test, vi } from 'vitest'
 
 import { getTopArtists } from './get-top-artists'
 
-import { artistMock } from '@tests/mocks'
+import { artistMock, spotifyResponseMockFactory } from '@tests/mocks'
 
 describe('getTopArtists', () => {
   test('should return response', async () => {
     vi.stubGlobal('fetch', () => ({
       status: 200,
-      json: () => [artistMock],
+      json: () => spotifyResponseMockFactory([artistMock]),
     }))
 
-    const [{ name }] = await getTopArtists()
+    const {
+      items: [{ name }],
+    } = await getTopArtists()
 
     expect(name).toEqual('Artist 1')
   })
