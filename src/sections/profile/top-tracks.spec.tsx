@@ -3,7 +3,7 @@ import { Mock, describe, vi } from 'vitest'
 
 import { TopTracksSection } from './top-tracks'
 
-import { trackMock } from '@tests/mocks'
+import { spotifyResponseMockFactory, trackMock } from '@tests/mocks'
 import { useTopTracksQuery } from '@hooks/api'
 
 vi.mock('@hooks/api')
@@ -11,7 +11,7 @@ vi.mock('@hooks/api')
 describe('TopTracksSection', () => {
   beforeEach(() => {
     ;(useTopTracksQuery as Mock).mockReturnValue({
-      data: [trackMock],
+      data: spotifyResponseMockFactory([trackMock]),
       refetch: vi.fn(),
     })
   })

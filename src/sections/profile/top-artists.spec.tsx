@@ -3,7 +3,7 @@ import { Mock, describe, vi } from 'vitest'
 
 import { TopArtistsSection } from './top-artists'
 
-import { artistMock } from '@tests/mocks'
+import { artistMock, spotifyResponseMockFactory } from '@tests/mocks'
 import { useTopArtistsQuery } from '@hooks/api'
 
 vi.mock('@hooks/api')
@@ -11,7 +11,7 @@ vi.mock('@hooks/api')
 describe('TopArtistsSection', () => {
   beforeEach(() => {
     ;(useTopArtistsQuery as Mock).mockReturnValue({
-      data: [artistMock],
+      data: spotifyResponseMockFactory([artistMock]),
       refetch: vi.fn(),
     })
   })
