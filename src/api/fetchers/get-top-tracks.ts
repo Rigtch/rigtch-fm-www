@@ -6,7 +6,7 @@ export async function getTopTracks(
   token?: string,
   timeRange = TimeRange.LONG_TERM,
   limit = 10,
-  offset = 1
+  offset = 0
 ): Promise<SpotifyResponse<Track, true>> {
   const urlSearchParameters = new URLSearchParams({
     timeRange,
