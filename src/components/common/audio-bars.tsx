@@ -1,4 +1,4 @@
-import { classNames } from 'primereact/utils'
+import clsx from 'clsx'
 
 export interface AudioBarsProps {
   isPlaying: boolean
@@ -6,7 +6,7 @@ export interface AudioBarsProps {
 
 export function AudioBars({ isPlaying = false }: AudioBarsProps) {
   return (
-    <div className={classNames('audio-container', isPlaying && 'play')}>
+    <div className={clsx('audio-container', isPlaying && 'play')}>
       <span className="bar bar-one"></span>
       <span className="bar bar-two"></span>
       <span className="bar bar-three"></span>

@@ -1,6 +1,3 @@
-import { Avatar } from 'primereact/avatar'
-import { Card } from 'primereact/card'
-
 import { PlaybackCard } from '../playback/card'
 import { OpenInSpotifyButton } from '../common'
 

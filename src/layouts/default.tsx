@@ -5,13 +5,15 @@ import { NavigationBar } from '@components/navigation-bar'
 
 export function DefaultLayout({ children }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className="flex-column justify-content-between align-content-center flex min-h-screen gap-4">
+    <div
+      className="flex-col justify-between items-center flex min-h-screen gap-4"
+      style={{
+        minHeight: '100vh',
+      }}
+    >
       <NavigationBar />
 
-      <main
-        className="flex-grow-1 align-self-center w-full p-1 md:p-2"
-        style={{ maxWidth: '1300px' }}
-      >
+      <main className="flex-grow-1 self-center w-full p-1 md:p-2 max-w-screen-2xl">
         {children}
       </main>
 

@@ -1,6 +1,7 @@
 import Link, { LinkProps } from 'next/link'
-import { Tooltip } from 'primereact/tooltip'
-import { classNames } from 'primereact/utils'
+// import { Tooltip } from 'primereact/tooltip'
+
+import clsx from 'clsx'
 
 import { SpotifyIcon } from '@assets/svgs'
 
@@ -16,16 +17,16 @@ export function OpenInSpotifyButton({
 }: OpenInSpotifyButtonProps) {
   return (
     <>
-      <Tooltip
+      {/* <Tooltip
         target=".open-in-spotify-button"
         position="bottom"
         content="Open In Spotify"
-      />
+      /> */}
 
       <Link
         href={href ?? ''}
         target="_blank"
-        className={classNames('open-in-spotify-button', className)}
+        className={clsx('open-in-spotify-button', className)}
         style={{ height: 24 }}
         {...props}
       >

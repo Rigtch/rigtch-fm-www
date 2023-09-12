@@ -1,4 +1,4 @@
-import { Card } from 'primereact/card'
+import { Card } from '@material-tailwind/react'
 import Image from 'next/image'
 
 import { ConnectButton } from './button'

@@ -1,13 +1,14 @@
-import { Card } from 'primereact/card'
+// import { Card } from 'primereact/card'
+import { Button } from '@material-tailwind/react'
 
-import Steps from '@components/connect/steps'
-import { ConnectCard } from '@components/connect'
-import { DiscordCard } from '@components/connect/discord-card'
+// import Steps from '@components/connect/steps'
+// import { ConnectCard } from '@components/connect'
+// import { DiscordCard } from '@components/connect/discord-card'
 
 export default function Home() {
   return (
     <main className="align-items-center flex flex-column w-full gap-8">
-      <span className="text-6xl font-bold">Welcome to Rigtch!</span>
+      {/* <span className="text-6xl font-bold">Welcome to Rigtch!</span>
 
       <section className="flex flex-column md:flex-row align-items-center justify-content-between gap-8 w-full">
         <Card className="w-full h-full">
@@ -32,7 +33,11 @@ export default function Home() {
 
           <DiscordCard />
         </div>
-      </section>
+      </section> */}
+
+      <Button>eeee</Button>
+
+      <p className="text-red-500">awdawd</p>
     </main>
   )
 }

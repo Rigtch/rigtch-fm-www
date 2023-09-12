@@ -1,4 +1,4 @@
-import { Button } from 'primereact/button'
+import { Button } from '@material-tailwind/react'
 
 export interface InfiniteLoadingButtonProps {
   refFunction: (node?: Element | null | undefined) => void
@@ -15,12 +15,11 @@ export function InfiniteLoadingButton({
 }: InfiniteLoadingButtonProps) {
   return (
     <Button
-      // @ts-expect-error Button should be the same type as Element
       ref={refFunction}
       onClick={() => fetchNextPage()}
-      loading={isFetchingNextPage}
+      // loading={isFetchingNextPage}
       disabled={!hasNextPage}
-      severity="info"
+      color="blue"
     >
       {isFetchingNextPage
         ? 'Loading more...'

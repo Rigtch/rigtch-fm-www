@@ -1,5 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0 !important;
+  background-color: #212121;
+  color: #fff;
 }
 
 .p-highlight {

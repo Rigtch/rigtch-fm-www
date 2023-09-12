@@ -1,6 +1,5 @@
-import { Image } from 'primereact/image'
-import { Card } from 'primereact/card'
-import { Button } from 'primereact/button'
+import Image from 'next/image'
+import { Card, Button } from '@material-tailwind/react'
 
 import { AudioBars, OpenInSpotifyButton } from '../common'
 import { RelativeTime } from '../utils'
@@ -28,13 +27,7 @@ export function PlaybackCard() {
     >
       <main className="flex gap-4">
         <div>
-          <Image
-            src={albumImage}
-            alt={album.name}
-            width="96"
-            height="96"
-            imageClassName="border-round-md"
-          />
+          <Image src={albumImage} alt={album.name} width="96" height="96" />
         </div>
 
         <div className="flex-column flex w-full gap-2">
