@@ -61,6 +61,11 @@ export function ProfileInfo() {
           icon: 'pi pi-star',
           command: () => router.push('/profile/top-tracks'),
         },
+        {
+          label: 'Last Tracks',
+          icon: 'pi pi-clock',
+          command: () => router.push('/profile/last-tracks'),
+        },
       ],
     },
     {
@@ -98,6 +103,7 @@ export function ProfileInfo() {
     <div>
       <Toast ref={toast} />
       <SlideMenu
+        viewportHeight={230}
         model={menuItems}
         popup
         ref={menu}
