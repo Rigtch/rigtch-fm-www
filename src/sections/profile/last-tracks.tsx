@@ -1,10 +1,12 @@
+import Link from 'next/link'
+
 import { ElementCard, ElementCardColor } from '@components/element/card'
 import { useLastTracksQuery } from '@hooks/api'
 
 export function LastTracksSection() {
   const { data } = useLastTracksQuery()
 
-  if (!data) return null
+  if (!data?.items) return null
 
   return (
     <section>
@@ -13,7 +15,7 @@ export function LastTracksSection() {
       </header>
 
       <main className="flex-column flex gap-2 lg:gap-3">
-        {data.map(({ album, ...track }, index) => (
+        {data.items.map(({ album, ...track }, index) => (
           <ElementCard
             {...track}
             color={ElementCardColor.SURFACE_GROUND}
@@ -22,6 +24,15 @@ export function LastTracksSection() {
             key={index}
           />
         ))}
+
+        <div className="align-self-center">
+          <Link
+            href="/profile/last-tracks"
+            className="no-underline text-lg text-white transition-color transition-duration-300 hover:text-primary"
+          >
+            See all
+          </Link>
+        </div>
       </main>
     </section>
   )
