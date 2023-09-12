@@ -1,10 +1,26 @@
-import { Track } from '../types'
+import { SpotifyResponseWithCursors, Track } from '../types'
 
 import { environment } from '@config/environment'
 
-export async function getLastTracks(token?: string): Promise<Track[]> {
+export async function getLastTracks(
+  token?: string,
+  limit = 10,
+  before?: string,
+  after?: string
+): Promise<SpotifyResponseWithCursors<Track>> {
+  const urlSearchParameters = new URLSearchParams({
+    limit: limit + '',
+  })
+
+  if (after) urlSearchParameters.append('after', after)
+  if (before) urlSearchParameters.append('before', before)
+
+  console.log('e', urlSearchParameters.toString())
+
   const response = await fetch(
-    `${environment.API_URL}/statistics/last-tracks`,
+    `${
+      environment.API_URL
+    }/statistics/last-tracks?${urlSearchParameters.toString()}`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
