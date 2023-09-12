@@ -34,6 +34,10 @@ describe('useTopTracksQuery', () => {
     await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
 
     expect(result.current.data?.items[0].name).toEqual('Track 1')
-    expect(getTopTracks).toHaveBeenCalledWith(ACCESS_TOKEN, TimeRange.LONG_TERM)
+    expect(getTopTracks).toHaveBeenCalledWith(
+      ACCESS_TOKEN,
+      TimeRange.LONG_TERM,
+      10
+    )
   })
 })

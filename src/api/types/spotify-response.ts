@@ -1,6 +1,18 @@
-export type SpotifyResponse<T = unknown, D = false> = {
+import { Cursors } from './cursors'
+
+export interface SpotifyResponse<T = unknown> {
   href: string
   limit: number
   next: string
   items: T[]
-} & (D extends true ? { offset: number } : object)
+}
+
+export interface SpotifyResponseWithOffset<T = unknown>
+  extends SpotifyResponse<T> {
+  offset: number
+}
+
+export interface SpotifyResponseWithCursors<T = unknown>
+  extends SpotifyResponse<T> {
+  cursors: Cursors
+}
