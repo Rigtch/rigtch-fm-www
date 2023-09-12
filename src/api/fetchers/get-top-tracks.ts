@@ -1,4 +1,4 @@
-import { SpotifyResponse, TimeRange, Track } from '../types'
+import { SpotifyResponseWithOffset, TimeRange, Track } from '../types'
 
 import { environment } from '@config/environment'
 
@@ -7,7 +7,7 @@ export async function getTopTracks(
   timeRange = TimeRange.LONG_TERM,
   limit = 10,
   offset = 0
-): Promise<SpotifyResponse<Track, true>> {
+): Promise<SpotifyResponseWithOffset<Track>> {
   const urlSearchParameters = new URLSearchParams({
     timeRange,
     limit: limit + '',
