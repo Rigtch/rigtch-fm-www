@@ -36,7 +36,8 @@ describe('useTopArtistsQuery', () => {
     expect(result.current.data?.items[0]?.name).toEqual('Artist 1')
     expect(getTopArtists).toHaveBeenCalledWith(
       ACCESS_TOKEN,
-      TimeRange.LONG_TERM
+      TimeRange.LONG_TERM,
+      10
     )
   })
 })

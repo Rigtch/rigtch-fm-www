@@ -1,4 +1,4 @@
-import { Artist, SpotifyResponse, TimeRange } from '../types'
+import { Artist, SpotifyResponseWithOffset, TimeRange } from '../types'
 
 import { environment } from '@config/environment'
 
@@ -7,7 +7,7 @@ export async function getTopArtists(
   timeRange = TimeRange.LONG_TERM,
   limit = 10,
   offset = 0
-): Promise<SpotifyResponse<Artist, true>> {
+): Promise<SpotifyResponseWithOffset<Artist>> {
   const urlSearchParameters = new URLSearchParams({
     timeRange,
     limit: limit + '',
