@@ -38,7 +38,7 @@ export function PlaybackStateProvider({
   const lastTracksQuery = useLastTracksQuery()
   const { toggle } = useTogglePlaybackStateQuery()
 
-  const lastTrack = lastTracksQuery.data?.[0]
+  const lastTrack = lastTracksQuery.data?.items?.[0]
 
   async function toggleState() {
     const response = await toggle(data?.isPlaying)
