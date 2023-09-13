@@ -8,9 +8,11 @@ import { useRouter } from 'next/router'
 import { ProfileInfo } from './profile'
 
 import { rigtchLogo } from '@assets/images'
+import { useProfileQuery } from '@api/hooks'
 
 export function NavigationBar() {
   const router = useRouter()
+  const { data } = useProfileQuery()
 
   const menuItems: MenuItem[] = [
     {
@@ -48,7 +50,7 @@ export function NavigationBar() {
     <header className="surface-ground border-round-sm justify-content-between z-5 sticky top-0 flex p-1">
       <Menubar
         className="w-full"
-        model={menuItems}
+        model={data ? menuItems : undefined}
         pt={{
           end: {
             style: {
