@@ -10,7 +10,6 @@ import {
   TOP_ARTISTS,
   TOP_GENRES,
   TOP_TRACKS,
-  USER_NOT_REGISTERED,
 } from '@api/constants'
 import { ProfileCard } from '@components/profile'
 import {
@@ -27,6 +26,7 @@ import {
   LastTracksSection,
   AnalysisSection,
 } from '@sections/profile'
+import { catchQueryError } from '@api/utils'
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async ({
   req: { cookies },
@@ -51,20 +51,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({
       },
     }
   } catch (error) {
-    if (error instanceof Error && error.message === USER_NOT_REGISTERED)
-      return {
-        redirect: {
-          destination: '/not-registered',
-          permanent: false,
-        },
-      }
-
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
+    return catchQueryError(error)
   }
 }
 

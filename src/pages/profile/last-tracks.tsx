@@ -1,9 +1,37 @@
 import { useInView } from 'react-intersection-observer'
 import { Fragment, useEffect } from 'react'
+import { GetServerSideProps } from 'next'
+import { QueryClient, dehydrate } from '@tanstack/react-query'
 
 import { useLastTracksInfiniteQuery } from '@hooks/api'
 import { ElementCard, ElementCardColor } from '@components/element'
 import { InfiniteLoadingButton } from '@components/common'
+import { catchQueryError } from '@api/utils'
+import { ACCESS_TOKEN, LAST_TRACKS, PROFILE } from '@api/constants'
+import { getLastTracks, getProfile } from '@api/fetchers'
+import { PageProps } from '@pages/_app'
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async ({
+  req: { cookies },
+}) => {
+  try {
+    const accessToken = cookies[ACCESS_TOKEN]
+    const queryClient = new QueryClient()
+
+    await queryClient.fetchQuery([PROFILE], () => getProfile(accessToken))
+    await queryClient.prefetchQuery([LAST_TRACKS], () =>
+      getLastTracks(accessToken)
+    )
+
+    return {
+      props: {
+        dehydratedState: dehydrate(queryClient),
+      },
+    }
+  } catch (error) {
+    return catchQueryError(error)
+  }
+}
 
 export default function ProfileLastTracks() {
   const LIMIT = 20
