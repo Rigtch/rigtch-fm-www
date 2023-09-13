@@ -37,7 +37,7 @@ export function PlaybackCard() {
           />
         </div>
 
-        <div className="flex-column flex w-full gap-2">
+        <div className="flex-column justify-content-between flex w-full gap-2">
           <div className="flex-column flex gap-1">
             <p className="m-0 text-2xl text-white">{track.name}</p>
             <p className="text-700 m-0">{getArtists(track.artists)}</p>
