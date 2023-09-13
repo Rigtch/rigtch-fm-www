@@ -13,6 +13,7 @@ export interface TopArtistsViewProps extends HTMLAttributes<HTMLDivElement> {
   setTimeRange: (timeRange: TimeRange) => void
   items: Artist[]
   moreItems?: ReactNode
+  skeleton?: boolean
 }
 
 export function TopArtistsView({
@@ -21,6 +22,7 @@ export function TopArtistsView({
   items,
   moreItems,
   children,
+  skeleton,
 }: TopArtistsViewProps) {
   return (
     <section className="flex-column flex w-full md:gap-2 gap-4">
@@ -39,6 +41,7 @@ export function TopArtistsView({
               <div className="justify-content-center xl:justify-content-between flex w-full flex-column md:flex-row xl:flex-nowrap gap-6">
                 <TopOneElementCard
                   {...items[0]}
+                  skeleton={skeleton}
                   image={items[0]?.images[0].url}
                 />
 

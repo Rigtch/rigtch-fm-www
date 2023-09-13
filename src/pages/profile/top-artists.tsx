@@ -39,8 +39,14 @@ export default function ProfileTopArtists() {
   const LIMIT = 20
 
   const [timeRange, setTimeRange] = useState<TimeRange>(TimeRange.LONG_TERM)
-  const { data, refetch, fetchNextPage, hasNextPage, isFetchingNextPage } =
-    useTopArtistsInfiniteQuery(timeRange, LIMIT)
+  const {
+    data,
+    refetch,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isFetching,
+  } = useTopArtistsInfiniteQuery(timeRange, LIMIT)
   const { ref, inView } = useInView()
 
   useEffect(() => {
@@ -55,6 +61,7 @@ export default function ProfileTopArtists() {
 
   return (
     <TopArtistsView
+      skeleton={isFetching}
       timeRange={timeRange}
       setTimeRange={setTimeRange}
       items={data.pages[0].items}
