@@ -81,7 +81,7 @@ export function ElementCard({
 
           <Image
             src={image}
-            alt={album?.name ?? name}
+            alt={album?.name}
             width={size === LARGE ? '76' : '64'}
             height={size === LARGE ? '76' : '64'}
           />
