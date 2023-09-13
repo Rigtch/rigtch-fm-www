@@ -22,11 +22,13 @@ export function InfiniteLoadingButton({
       disabled={!hasNextPage}
       severity="info"
     >
-      {isFetchingNextPage
-        ? 'Loading more...'
-        : hasNextPage
-        ? 'Load more'
-        : 'Nothing more to load'}
+      <span className="ml-2">
+        {isFetchingNextPage
+          ? 'Loading more...'
+          : hasNextPage
+          ? 'Load more'
+          : 'Nothing more to load'}
+      </span>
     </Button>
   )
 }
