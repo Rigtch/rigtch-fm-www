@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { TimeRange } from '@api/types'
-import { useTopArtistsQuery } from '@hooks/api'
+import { useTopArtistsQuery } from '@api/hooks'
 import { TopArtistsView } from '@components/views'
 
 export function TopArtistsSection() {

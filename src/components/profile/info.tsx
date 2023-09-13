@@ -11,7 +11,7 @@ import { useQueryClient } from '@tanstack/react-query'
 
 import { ConnectButton } from '../connect'
 
-import { useProfileQuery } from '@hooks/api'
+import { useProfileQuery } from '@api/hooks'
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '@api/constants'
 import { getImage } from '@utils/get-image'
 

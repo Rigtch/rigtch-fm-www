@@ -1,4 +1,4 @@
-import { useAnalysisQuery } from '@hooks/api'
+import { useAnalysisQuery } from '@api/hooks'
 import { AnalysisCard } from '@components/analysis'
 
 export function AnalysisSection() {

@@ -7,10 +7,10 @@ import { useCookies } from 'react-cookie'
 import { ProfileInfo } from './info'
 
 import { profileMock } from '@tests/mocks'
-import { useProfileQuery } from '@hooks/api'
+import { useProfileQuery } from '@api/hooks'
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '@api/constants'
 
-vi.mock('@hooks/api')
+vi.mock('@api/hooks')
 vi.mock('next/router', () => ({
   useRouter: vi.fn().mockReturnValue({ push: vi.fn() }),
 }))

@@ -3,10 +3,10 @@ import { Mock, describe, vi } from 'vitest'
 
 import { ProfileCard } from './card'
 
-import { useProfileQuery } from '@hooks/api'
+import { useProfileQuery } from '@api/hooks'
 import { profileMock } from '@tests/mocks'
 
-vi.mock('@hooks/api')
+vi.mock('@api/hooks')
 
 describe('ProfileCard', () => {
   beforeEach(() => {

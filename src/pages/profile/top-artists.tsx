@@ -5,7 +5,7 @@ import { QueryClient, dehydrate } from '@tanstack/react-query'
 
 import { TimeRange } from '@api/types'
 import { ElementCard, ElementCardSize } from '@components/element'
-import { useTopArtistsInfiniteQuery } from '@hooks/api'
+import { useTopArtistsInfiniteQuery } from '@api/hooks'
 import { TopArtistsView } from '@components/views'
 import { InfiniteLoadingButton } from '@components/common'
 import { PageProps } from '@pages/_app'

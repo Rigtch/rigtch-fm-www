@@ -4,7 +4,7 @@ import { Card } from 'primereact/card'
 import { PlaybackCard } from '../playback/card'
 import { OpenInSpotifyButton } from '../common'
 
-import { useProfileQuery } from '@hooks/api'
+import { useProfileQuery } from '@api/hooks'
 import { getImage } from '@utils/get-image'
 
 export function ProfileCard() {

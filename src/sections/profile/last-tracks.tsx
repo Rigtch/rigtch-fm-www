@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { ElementCard, ElementCardColor } from '@components/element/card'
-import { useLastTracksQuery } from '@hooks/api'
+import { useLastTracksQuery } from '@api/hooks'
 
 export function LastTracksSection() {
   const { data } = useLastTracksQuery()

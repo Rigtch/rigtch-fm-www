@@ -3,7 +3,7 @@ import { Fragment, useEffect } from 'react'
 import { GetServerSideProps } from 'next'
 import { QueryClient, dehydrate } from '@tanstack/react-query'
 
-import { useLastTracksInfiniteQuery } from '@hooks/api'
+import { useLastTracksInfiniteQuery } from '@api/hooks'
 import { ElementCard, ElementCardColor } from '@components/element'
 import { InfiniteLoadingButton } from '@components/common'
 import { catchQueryError } from '@api/utils'
