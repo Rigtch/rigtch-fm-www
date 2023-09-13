@@ -9,13 +9,9 @@ import { useTopArtistsInfiniteQuery } from '@hooks/api'
 import { TopArtistsView } from '@components/views'
 import { InfiniteLoadingButton } from '@components/common'
 import { PageProps } from '@pages/_app'
-import {
-  ACCESS_TOKEN,
-  PROFILE,
-  TOP_ARTISTS,
-  USER_NOT_REGISTERED,
-} from '@api/constants'
+import { ACCESS_TOKEN, PROFILE, TOP_ARTISTS } from '@api/constants'
 import { getProfile, getTopArtists } from '@api/fetchers'
+import { catchQueryError } from '@api/utils'
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async ({
   req: { cookies },
@@ -35,20 +31,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({
       },
     }
   } catch (error) {
-    if (error instanceof Error && error.message === USER_NOT_REGISTERED)
-      return {
-        redirect: {
-          destination: '/not-registered',
-          permanent: false,
-        },
-      }
-
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
+    return catchQueryError(error)
   }
 }
 

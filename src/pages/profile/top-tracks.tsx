@@ -8,14 +8,10 @@ import { ElementCard, ElementCardSize } from '@components/element'
 import { TopTracksView } from '@components/views'
 import { useTopTracksInfiniteQuery } from '@hooks/api'
 import { InfiniteLoadingButton } from '@components/common'
-import {
-  ACCESS_TOKEN,
-  PROFILE,
-  TOP_TRACKS,
-  USER_NOT_REGISTERED,
-} from '@api/constants'
+import { ACCESS_TOKEN, PROFILE, TOP_TRACKS } from '@api/constants'
 import { getProfile, getTopTracks } from '@api/fetchers'
 import { PageProps } from '@pages/_app'
+import { catchQueryError } from '@api/utils'
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async ({
   req: { cookies },
@@ -35,20 +31,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async ({
       },
     }
   } catch (error) {
-    if (error instanceof Error && error.message === USER_NOT_REGISTERED)
-      return {
-        redirect: {
-          destination: '/not-registered',
-          permanent: false,
-        },
-      }
-
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
+    return catchQueryError(error)
   }
 }
 
