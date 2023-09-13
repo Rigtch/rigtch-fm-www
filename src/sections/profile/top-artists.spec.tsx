@@ -4,9 +4,9 @@ import { Mock, describe, vi } from 'vitest'
 import { TopArtistsSection } from './top-artists'
 
 import { artistMock, spotifyResponseMockFactory } from '@tests/mocks'
-import { useTopArtistsQuery } from '@hooks/api'
+import { useTopArtistsQuery } from '@api/hooks'
 
-vi.mock('@hooks/api')
+vi.mock('@api/hooks')
 
 describe('TopArtistsSection', () => {
   beforeEach(() => {

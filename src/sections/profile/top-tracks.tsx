@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { TimeRange } from '@api/types'
-import { useTopTracksQuery } from '@hooks/api'
+import { useTopTracksQuery } from '@api/hooks'
 import { TopTracksView } from '@components/views'
 
 export function TopTracksSection() {

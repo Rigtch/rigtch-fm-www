@@ -6,7 +6,7 @@ import { useLastTracksQuery } from './use-last-tracks'
 import { getLastTracks } from '@api/fetchers'
 import { ACCESS_TOKEN } from '@api/constants'
 import { queryClientWrapper } from '@tests/utils'
-import { trackMock } from '@tests/mocks'
+import { spotifyResponseMockFactory, trackMock } from '@tests/mocks'
 
 vi.mock('@api/fetchers')
 vi.mock('react-cookie', () => ({
@@ -15,7 +15,9 @@ vi.mock('react-cookie', () => ({
 
 describe('useLastTracksQuery', () => {
   beforeEach(() => {
-    ;(getLastTracks as Mock).mockReturnValue([trackMock])
+    ;(getLastTracks as Mock).mockReturnValue(
+      spotifyResponseMockFactory([trackMock])
+    )
   })
 
   afterEach(() => {
@@ -30,7 +32,7 @@ describe('useLastTracksQuery', () => {
 
     await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
 
-    expect(result.current.data?.[0]?.name).toEqual('Track 1')
+    expect(result.current.data?.items?.[0]?.name).toEqual('Track 1')
     expect(getLastTracks).toHaveBeenCalledWith(ACCESS_TOKEN)
   })
 })

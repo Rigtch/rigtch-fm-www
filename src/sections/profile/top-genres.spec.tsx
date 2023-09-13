@@ -3,9 +3,9 @@ import { Mock, describe, vi } from 'vitest'
 
 import { TopGenresSection } from './top-genres'
 
-import { useTopGenresQuery } from '@hooks/api'
+import { useTopGenresQuery } from '@api/hooks'
 
-vi.mock('@hooks/api')
+vi.mock('@api/hooks')
 
 describe('TopGenresSection', () => {
   beforeEach(() => {

@@ -1,7 +1,7 @@
 import { Chip } from 'primereact/chip'
 import { useEffect, useState } from 'react'
 
-import { useTopGenresQuery } from '@hooks/api'
+import { useTopGenresQuery } from '@api/hooks'
 import { TimeRange } from '@api/types'
 import { SelectTimeRange } from '@components/select-time-range'
 

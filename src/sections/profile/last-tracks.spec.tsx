@@ -3,15 +3,15 @@ import { Mock, describe, vi } from 'vitest'
 
 import { LastTracksSection } from './last-tracks'
 
-import { trackMock } from '@tests/mocks'
-import { useLastTracksQuery } from '@hooks/api'
+import { spotifyResponseMockFactory, trackMock } from '@tests/mocks'
+import { useLastTracksQuery } from '@api/hooks'
 
-vi.mock('@hooks/api')
+vi.mock('@api/hooks')
 
 describe('LastTracksSection', () => {
   beforeEach(() => {
     ;(useLastTracksQuery as Mock).mockReturnValue({
-      data: [trackMock],
+      data: spotifyResponseMockFactory([trackMock]),
     })
   })
 

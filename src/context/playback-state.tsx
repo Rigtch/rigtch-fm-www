@@ -5,7 +5,7 @@ import {
   useLastTracksQuery,
   usePlaybackStateQuery,
   useTogglePlaybackStateQuery,
-} from '@hooks/api'
+} from '@api/hooks'
 
 export interface PlaybackStateData {
   device?: Device
