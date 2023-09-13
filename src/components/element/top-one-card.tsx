@@ -2,6 +2,7 @@ import { Chip } from 'primereact/chip'
 import { Image } from 'primereact/image'
 import { Badge } from 'primereact/badge'
 import { classNames } from 'primereact/utils'
+import { Skeleton } from 'primereact/skeleton'
 
 import { OpenInSpotifyButton } from '../common'
 
@@ -14,6 +15,7 @@ export interface TopOneElementCardProps {
   href: string
   genres?: string[]
   album?: Album
+  skeleton?: boolean
 }
 
 export function TopOneElementCard({
@@ -22,6 +24,7 @@ export function TopOneElementCard({
   genres,
   href,
   album,
+  skeleton,
 }: TopOneElementCardProps) {
   const stars = [10, 15, 20, 15, 10]
   return (
@@ -33,21 +36,29 @@ export function TopOneElementCard({
         className="border-round-md p-2"
       >
         <div className="justify-content-center flex w-max">
-          <Image
-            src={image}
-            alt={album?.name}
-            width="316"
-            height="316"
-            onClick={() => isMobile() && window.open(href, '_blank')}
-          />
+          {skeleton ? (
+            <Skeleton width="316px" height="316px" />
+          ) : (
+            <Image
+              src={image}
+              alt={album?.name}
+              width="316"
+              height="316"
+              onClick={() => isMobile() && window.open(href, '_blank')}
+            />
+          )}
         </div>
       </div>
 
       <div className={classNames('flex flex-column', genres && 'gap-4')}>
-        <div className="flex flex-column gap-2">
-          <div className="text-3xl text-white md:text-4xl text-center">
-            {name}
-          </div>
+        <div className="flex align-items-center flex-column gap-2">
+          {skeleton ? (
+            <Skeleton width="10rem" height="2rem" borderRadius="16px" />
+          ) : (
+            <div className="text-3xl text-white md:text-4xl text-center">
+              {name}
+            </div>
+          )}
 
           <div className="relative flex flex-column align-items-center">
             <Badge value="1" size="xlarge" className="text-white surface-300" />
