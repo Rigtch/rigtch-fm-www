@@ -35,7 +35,7 @@ export function TopOneElementCard({
         <div className="justify-content-center flex w-max">
           <Image
             src={image}
-            alt={name}
+            alt={album?.name}
             width="316"
             height="316"
             onClick={() => isMobile() && window.open(href, '_blank')}
