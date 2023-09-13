@@ -53,7 +53,7 @@ export function TopOneElementCard({
       <div className={classNames('flex flex-column', genres && 'gap-4')}>
         <div className="flex align-items-center flex-column gap-2">
           {skeleton ? (
-            <Skeleton width="10rem" height="2rem" />
+            <Skeleton width="10rem" height="2rem" borderRadius="16px" />
           ) : (
             <div className="text-3xl text-white md:text-4xl text-center">
               {name}
