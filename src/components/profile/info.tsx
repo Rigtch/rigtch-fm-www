@@ -40,35 +40,6 @@ export function ProfileInfo() {
 
   const menuItems: MenuItem[] = [
     {
-      label: 'Profile',
-      icon: 'pi pi-user',
-      items: [
-        {
-          label: 'Profile',
-          icon: 'pi pi-user',
-          command: () => router.push('/profile'),
-        },
-        {
-          separator: true,
-        },
-        {
-          label: 'Top Artists',
-          icon: 'pi pi-star',
-          command: () => router.push('/profile/top-artists'),
-        },
-        {
-          label: 'Top Tracks',
-          icon: 'pi pi-star',
-          command: () => router.push('/profile/top-tracks'),
-        },
-        {
-          label: 'Last Tracks',
-          icon: 'pi pi-clock',
-          command: () => router.push('/profile/last-tracks'),
-        },
-      ],
-    },
-    {
       label: 'Disconnect',
       icon: 'pi pi-sign-out',
       command: disconnect,
@@ -103,7 +74,7 @@ export function ProfileInfo() {
     <div>
       <Toast ref={toast} />
       <SlideMenu
-        viewportHeight={230}
+        viewportHeight={138}
         model={menuItems}
         popup
         ref={menu}
