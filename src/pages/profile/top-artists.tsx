@@ -46,6 +46,8 @@ export default function ProfileTopArtists() {
     hasNextPage,
     isFetchingNextPage,
     isFetching,
+    isLoading,
+    isRefetching,
   } = useTopArtistsInfiniteQuery(timeRange, LIMIT)
   const { ref, inView } = useInView()
 
@@ -57,15 +59,21 @@ export default function ProfileTopArtists() {
     if (inView) fetchNextPage()
   }, [inView, fetchNextPage])
 
-  if (!data?.pages[0].items) return null
+  useEffect(() => {
+    console.log('fetching', isFetching)
+    console.log('refetching', isRefetching)
+    console.log('loading', isLoading)
+  })
+
+  // if (!data?.pages[0].items) return null
 
   return (
     <TopArtistsView
-      skeleton={isFetching}
+      skeleton={isRefetching || !data?.pages[0].items}
       timeRange={timeRange}
       setTimeRange={setTimeRange}
-      items={data.pages[0].items}
-      moreItems={data.pages.slice(1).map(page => (
+      items={data?.pages?.[0]?.items ?? []}
+      moreItems={data?.pages.slice(1).map(page => (
         <Fragment key={page.offset}>
           {page.items.map(({ images, ...artist }, index) => (
             <ElementCard
