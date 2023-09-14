@@ -46,6 +46,8 @@ export default function ProfileTopArtists() {
     hasNextPage,
     isFetchingNextPage,
     isFetching,
+    isLoading,
+    isRefetching,
   } = useTopArtistsInfiniteQuery(timeRange, LIMIT)
   const { ref, inView } = useInView()
 
@@ -67,7 +69,7 @@ export default function ProfileTopArtists() {
 
   return (
     <TopArtistsView
-      skeleton={isFetching}
+      skeleton={isRefetching || !data?.pages[0].items}
       timeRange={timeRange}
       setTimeRange={setTimeRange}
       items={data?.pages?.[0]?.items ?? []}
