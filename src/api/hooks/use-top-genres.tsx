@@ -1,14 +1,12 @@
 import { useQuery } from '@tanstack/react-query'
-import { useCookies } from 'react-cookie'
 
 import { getTopGenres } from '@api/fetchers'
-import { ACCESS_TOKEN, TOP_GENRES } from '@api/constants'
+import { TOP_GENRES } from '@api/constants'
 import { TimeRange } from '@api/types'
+import { useAuthCookies } from '@hooks/use-auth-cookies'
 
 export const useTopGenresQuery = (timeRange = TimeRange.LONG_TERM) => {
-  const [cookie] = useCookies([ACCESS_TOKEN])
+  const { accessToken } = useAuthCookies()
 
-  return useQuery([TOP_GENRES], () =>
-    getTopGenres(cookie[ACCESS_TOKEN], timeRange)
-  )
+  return useQuery([TOP_GENRES], () => getTopGenres(accessToken, timeRange))
 }

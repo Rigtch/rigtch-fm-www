@@ -1,26 +1,24 @@
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query'
-import { useCookies } from 'react-cookie'
 
-import { ACCESS_TOKEN, LAST_TRACKS } from '@api/constants'
+import { LAST_TRACKS } from '@api/constants'
 import { getLastTracks } from '@api/fetchers'
+import { useAuthCookies } from '@hooks/use-auth-cookies'
 
 export const useLastTracksQuery = () => {
-  const [cookie] = useCookies([ACCESS_TOKEN])
+  const { accessToken } = useAuthCookies()
 
-  return useQuery([LAST_TRACKS], () => getLastTracks(cookie[ACCESS_TOKEN]))
+  return useQuery([LAST_TRACKS], () => getLastTracks(accessToken))
 }
 
 export const useLastTracksInfiniteQuery = (limit = 20) => {
-  const [cookie] = useCookies([ACCESS_TOKEN])
+  const { accessToken } = useAuthCookies()
 
   return useInfiniteQuery(
     [LAST_TRACKS],
-    ({ pageParam }) => getLastTracks(cookie[ACCESS_TOKEN], limit, pageParam),
+    ({ pageParam }) => getLastTracks(accessToken, limit, pageParam),
     {
-      getNextPageParam: lastPage => {
-        console.log('lastPage', lastPage)
-        return lastPage.next ? lastPage.cursors.before : undefined
-      },
+      getNextPageParam: lastPage =>
+        lastPage.next ? lastPage.cursors.before : undefined,
     }
   )
 }
