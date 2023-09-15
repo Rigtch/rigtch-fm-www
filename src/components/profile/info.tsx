@@ -5,20 +5,19 @@ import { SlideMenu } from 'primereact/slidemenu'
 import { useRef } from 'react'
 // eslint-disable-next-line import/no-unresolved
 import { MenuItem } from 'primereact/menuitem'
-import { useCookies } from 'react-cookie'
 import { useRouter } from 'next/router'
 import { useQueryClient } from '@tanstack/react-query'
 
 import { ConnectButton } from '../connect'
 
 import { useProfileQuery } from '@api/hooks'
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '@api/constants'
 import { getImage } from '@utils/get-image'
+import { useAuthCookies } from '@hooks/use-auth-cookies'
 
 export function ProfileInfo() {
   const { data } = useProfileQuery()
   const queryClient = useQueryClient()
-  const [, , removeCookies] = useCookies([ACCESS_TOKEN, REFRESH_TOKEN])
+  const { removeAuthCookies } = useAuthCookies()
   const router = useRouter()
   const menu = useRef<SlideMenu>(null)
   const toast = useRef<Toast>(null)
@@ -30,8 +29,7 @@ export function ProfileInfo() {
   const image = getImage(images)
 
   async function disconnect() {
-    removeCookies(ACCESS_TOKEN)
-    removeCookies(REFRESH_TOKEN)
+    removeAuthCookies()
 
     queryClient.clear()
 

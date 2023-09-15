@@ -1,15 +1,13 @@
-import { useCookies } from 'react-cookie'
-
-import { ACCESS_TOKEN } from '@api/constants'
 import { putPlayerPause, putPlayerResume } from '@api/fetchers'
+import { useAuthCookies } from '@hooks/use-auth-cookies'
 
 export const useTogglePlaybackStateQuery = () => {
-  const [cookie] = useCookies([ACCESS_TOKEN])
+  const { accessToken } = useAuthCookies()
 
   function toggle(isPlaying = false) {
     return isPlaying
-      ? putPlayerPause(cookie[ACCESS_TOKEN])
-      : putPlayerResume(cookie[ACCESS_TOKEN])
+      ? putPlayerPause(accessToken)
+      : putPlayerResume(accessToken)
   }
 
   return {

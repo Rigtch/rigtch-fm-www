@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query'
-import { useCookies } from 'react-cookie'
 
 import { getProfile } from '@api/fetchers'
-import { ACCESS_TOKEN, PROFILE } from '@api/constants'
+import { PROFILE } from '@api/constants'
+import { useAuthCookies } from '@hooks/use-auth-cookies'
 
 export const useProfileQuery = () => {
-  const [cookie] = useCookies([ACCESS_TOKEN])
+  const { accessToken } = useAuthCookies()
 
-  return useQuery([PROFILE], () => getProfile(cookie[ACCESS_TOKEN]))
+  return useQuery([PROFILE], () => getProfile(accessToken))
 }

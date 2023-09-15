@@ -1,18 +1,18 @@
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query'
-import { useCookies } from 'react-cookie'
 
-import { ACCESS_TOKEN, TOP_TRACKS } from '@api/constants'
+import { TOP_TRACKS } from '@api/constants'
 import { getTopTracks } from '@api/fetchers'
 import { TimeRange } from '@api/types'
+import { useAuthCookies } from '@hooks/use-auth-cookies'
 
 export const useTopTracksQuery = (
   timeRange = TimeRange.LONG_TERM,
   limit = 10
 ) => {
-  const [cookies] = useCookies([ACCESS_TOKEN])
+  const { accessToken } = useAuthCookies()
 
   return useQuery([TOP_TRACKS], () =>
-    getTopTracks(cookies[ACCESS_TOKEN], timeRange, limit)
+    getTopTracks(accessToken, timeRange, limit)
   )
 }
 
@@ -20,12 +20,12 @@ export const useTopTracksInfiniteQuery = (
   timeRange = TimeRange.LONG_TERM,
   limit = 20
 ) => {
-  const [cookies] = useCookies([ACCESS_TOKEN])
+  const { accessToken } = useAuthCookies()
 
   return useInfiniteQuery(
     [TOP_TRACKS, timeRange],
     ({ pageParam = 0 }) =>
-      getTopTracks(cookies[ACCESS_TOKEN], timeRange, limit, pageParam),
+      getTopTracks(accessToken, timeRange, limit, pageParam),
     {
       getNextPageParam: lastPage =>
         lastPage.next ? lastPage.offset + limit : undefined,

@@ -15,8 +15,6 @@ export async function getLastTracks(
   if (after) urlSearchParameters.append('after', after)
   if (before) urlSearchParameters.append('before', before)
 
-  console.log('e', urlSearchParameters.toString())
-
   const response = await fetch(
     `${
       environment.API_URL
