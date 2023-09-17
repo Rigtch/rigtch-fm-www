@@ -13,6 +13,7 @@ export interface TopTracksViewProps extends HTMLAttributes<HTMLDivElement> {
   setTimeRange: (timeRange: TimeRange) => void
   items: Track[]
   moreItems?: ReactNode
+  skeleton?: boolean
 }
 
 export function TopTracksView({
@@ -21,6 +22,7 @@ export function TopTracksView({
   items,
   moreItems,
   children,
+  skeleton,
 }: TopTracksViewProps) {
   return (
     <section className="flex-column flex w-full gap-4 md:gap-2">
@@ -37,6 +39,7 @@ export function TopTracksView({
           <div className="flex flex-column w-full flex-row flex-wrap gap-6">
             <div className="justify-content-center xl:justify-content-between flex w-full flex-column md:flex-row xl:flex-nowrap gap-6">
               <TopOneElementCard
+                skeleton={skeleton}
                 {...items[0]}
                 image={items[0]?.album.images[0].url}
               />
@@ -44,6 +47,7 @@ export function TopTracksView({
               <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
                 {items.slice(1, 5).map(({ album, ...track }, index) => (
                   <ElementCard
+                    skeleton={skeleton}
                     {...track}
                     album={album}
                     image={album.images[0].url}
@@ -58,6 +62,7 @@ export function TopTracksView({
             <div className="flex-column flex w-full gap-2 lg:gap-3">
               {items.slice(5).map(({ album, ...artist }, index) => (
                 <ElementCard
+                  skeleton={skeleton}
                   key={index}
                   {...artist}
                   image={album.images[0].url}

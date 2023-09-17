@@ -53,7 +53,7 @@ export function TopOneElementCard({
       <div className={classNames('flex flex-column', genres && 'gap-4')}>
         <div className="flex align-items-center flex-column gap-2">
           {skeleton ? (
-            <Skeleton width="10rem" height="2rem" borderRadius="16px" />
+            <Skeleton width="10rem" height="2rem" />
           ) : (
             <div className="text-3xl text-white md:text-4xl text-center">
               {name}
@@ -79,15 +79,31 @@ export function TopOneElementCard({
 
         <div className="justify-content-center flex flex-wrap gap-2">
           {genres &&
-            genres
-              .slice(0, 3)
-              .map((genre, index) => <Chip key={index} label={genre} />)}
+            (skeleton ? (
+              <div className="flex flex-row gap-1">
+                {Array.from({ length: 3 }).map((item, index) => (
+                  <Skeleton
+                    width="6rem"
+                    height="2rem"
+                    borderRadius="16px"
+                    key={index}
+                  />
+                ))}
+              </div>
+            ) : (
+              genres
+                .slice(0, 3)
+                .map((genre, index) => <Chip key={index} label={genre} />)
+            ))}
 
-          {album && (
-            <p className="text-2xl text-center">
-              From album: <span className="text-700">{album.name}</span>
-            </p>
-          )}
+          {album &&
+            (skeleton ? (
+              <Skeleton height="2rem" className="my-4" />
+            ) : (
+              <p className="text-2xl text-center">
+                From album: <span className="text-700">{album.name}</span>
+              </p>
+            ))}
         </div>
 
         <div className="flex align-self-center">
