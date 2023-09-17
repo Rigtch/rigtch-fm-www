@@ -4,16 +4,7 @@ import { Skeleton } from 'primereact/skeleton'
 
 import { OpenInSpotifyButton } from '../common'
 
-export enum ElementCardColor {
-  SURFACE_GROUND = 'surface-ground',
-  SURFACE_CARD = 'surface-card',
-}
-
-export enum ElementCardSize {
-  SMALL = 'small',
-  MEDIUM = 'medium',
-  LARGE = 'large',
-}
+import { ElementCardColor, ElementCardSize } from '.'
 
 export interface ElementCardSkeletonProps {
   position?: number
