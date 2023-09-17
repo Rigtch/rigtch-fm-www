@@ -39,8 +39,14 @@ export default function ProfileTopTracks() {
   const LIMIT = 20
 
   const [timeRange, setTimeRange] = useState<TimeRange>(TimeRange.LONG_TERM)
-  const { data, refetch, fetchNextPage, hasNextPage, isFetchingNextPage } =
-    useTopTracksInfiniteQuery(timeRange, LIMIT)
+  const {
+    data,
+    refetch,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isRefetching,
+  } = useTopTracksInfiniteQuery(timeRange, LIMIT)
   const { ref, inView } = useInView()
 
   useEffect(() => {
@@ -51,14 +57,13 @@ export default function ProfileTopTracks() {
     if (inView) fetchNextPage()
   }, [inView, fetchNextPage])
 
-  if (!data?.pages[0].items) return null
-
   return (
     <TopTracksView
+      skeleton={isRefetching || !data?.pages[0].items}
       timeRange={timeRange}
       setTimeRange={setTimeRange}
-      items={data.pages[0].items}
-      moreItems={data.pages.slice(1).map(page => (
+      items={data?.pages?.[0]?.items ?? []}
+      moreItems={data?.pages.slice(1).map(page => (
         <Fragment key={page.offset}>
           {page.items.map(({ album, ...track }, index) => (
             <ElementCard

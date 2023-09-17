@@ -1,5 +1,6 @@
 import { Chip } from 'primereact/chip'
 import { useEffect, useState } from 'react'
+import { Skeleton } from 'primereact/skeleton'
 
 import { useTopGenresQuery } from '@api/hooks'
 import { TimeRange } from '@api/types'
@@ -7,7 +8,7 @@ import { SelectTimeRange } from '@components/select-time-range'
 
 export function TopGenresSection() {
   const [timeRange, setTimeRange] = useState<TimeRange>(TimeRange.LONG_TERM)
-  const { data, refetch } = useTopGenresQuery(timeRange)
+  const { data, refetch, isRefetching } = useTopGenresQuery(timeRange)
 
   useEffect(() => {
     refetch()
@@ -24,12 +25,26 @@ export function TopGenresSection() {
       </header>
 
       <main className="flex flex-wrap gap-1">
-        {data.genres.length === 0 && (
+        {/* {data.genres.length === 0 && (
           <p>Oops, there seems to be nothing here.</p>
-        )}
+        )} */}
 
-        {data.genres.length > 0 &&
-          data.genres.map(genre => <Chip key={genre} label={genre} />)}
+        {/* {data.genres.length > 0 && */}
+        {/*  */}
+        {isRefetching ? (
+          <div className="flex flex-row gap-2">
+            {Array.from({ length: 10 }).map((item, index) => (
+              <Skeleton
+                width="6rem"
+                height="2rem"
+                borderRadius="16px"
+                key={index}
+              />
+            ))}
+          </div>
+        ) : (
+          data.genres.map(genre => <Chip key={genre} label={genre} />)
+        )}
       </main>
     </section>
   )

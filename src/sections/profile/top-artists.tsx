@@ -7,19 +7,18 @@ import { TopArtistsView } from '@components/views'
 
 export function TopArtistsSection() {
   const [timeRange, setTimeRange] = useState<TimeRange>(TimeRange.LONG_TERM)
-  const { data, refetch } = useTopArtistsQuery(timeRange)
+  const { data, refetch, isRefetching } = useTopArtistsQuery(timeRange)
 
   useEffect(() => {
     refetch()
   }, [timeRange, refetch])
 
-  if (!data?.items) return null
-
   return (
     <TopArtistsView
+      skeleton={isRefetching}
       timeRange={timeRange}
       setTimeRange={setTimeRange}
-      items={data.items}
+      items={data?.items ?? []}
     >
       <div className="align-self-center">
         <Link

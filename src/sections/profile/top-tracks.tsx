@@ -7,19 +7,18 @@ import { TopTracksView } from '@components/views'
 
 export function TopTracksSection() {
   const [timeRange, setTimeRange] = useState<TimeRange>(TimeRange.LONG_TERM)
-  const { data, refetch } = useTopTracksQuery(timeRange)
+  const { data, refetch, isRefetching } = useTopTracksQuery(timeRange)
 
   useEffect(() => {
     refetch()
   }, [timeRange, refetch])
 
-  if (!data?.items) return null
-
   return (
     <TopTracksView
+      skeleton={isRefetching}
       timeRange={timeRange}
       setTimeRange={setTimeRange}
-      items={data.items}
+      items={data?.items ?? []}
     >
       <div className="align-self-center">
         <Link

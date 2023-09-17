@@ -52,6 +52,7 @@ export function TopArtistsView({
               <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
                 {items.slice(1, 5).map(({ images, ...artist }, index) => (
                   <ElementCard
+                    skeleton={skeleton}
                     key={index}
                     {...artist}
                     image={images[0].url}
@@ -67,6 +68,7 @@ export function TopArtistsView({
           <div className="flex-column flex w-full gap-2 lg:gap-3">
             {items.slice(5).map(({ images, ...artist }, index) => (
               <ElementCard
+                skeleton={skeleton}
                 key={index}
                 {...artist}
                 image={images[0].url}
