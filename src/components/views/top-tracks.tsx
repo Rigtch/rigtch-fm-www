@@ -35,9 +35,6 @@ export function TopTracksView({
       </header>
 
       <main className="flex-column flex w-full gap-4 md:gap-8">
-        {/* {items.length === 0 && <p>Oops, there seems to be nothing here.</p>} */}
-
-        {/* {items.length > 0 && ( */}
         <div className="flex flex-column w-full flex-row flex-wrap gap-6">
           <div className="justify-content-center xl:justify-content-between flex w-full flex-column md:flex-row xl:flex-nowrap gap-6">
             {skeleton ? (
@@ -99,7 +96,6 @@ export function TopTracksView({
             {moreItems}
           </div>
         </div>
-        {/* )} */}
 
         {children}
       </main>

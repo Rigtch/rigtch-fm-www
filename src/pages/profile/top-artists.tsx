@@ -45,8 +45,6 @@ export default function ProfileTopArtists() {
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-    isFetching,
-    isLoading,
     isRefetching,
   } = useTopArtistsInfiniteQuery(timeRange, LIMIT)
   const { ref, inView } = useInView()
@@ -58,14 +56,6 @@ export default function ProfileTopArtists() {
   useEffect(() => {
     if (inView) fetchNextPage()
   }, [inView, fetchNextPage])
-
-  useEffect(() => {
-    console.log('fetching', isFetching)
-    console.log('refetching', isRefetching)
-    console.log('loading', isLoading)
-  })
-
-  // if (!data?.pages[0].items) return null
 
   return (
     <TopArtistsView

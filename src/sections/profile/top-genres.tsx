@@ -25,12 +25,6 @@ export function TopGenresSection() {
       </header>
 
       <main className="flex flex-wrap gap-1">
-        {/* {data.genres.length === 0 && (
-          <p>Oops, there seems to be nothing here.</p>
-        )} */}
-
-        {/* {data.genres.length > 0 && */}
-        {/*  */}
         {isRefetching ? (
           <div className="flex flex-row gap-2">
             {Array.from({ length: 10 }).map((item, index) => (
