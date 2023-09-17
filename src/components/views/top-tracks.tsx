@@ -63,7 +63,6 @@ export function TopTracksView({
                     .slice(1, 5)
                     .map(({ album, ...track }, index) => (
                       <ElementCard
-                        skeleton={skeleton}
                         {...track}
                         album={album}
                         image={album.images[0].url}
@@ -89,7 +88,6 @@ export function TopTracksView({
                   .slice(5)
                   .map(({ album, ...artist }, index) => (
                     <ElementCard
-                      skeleton={skeleton}
                       key={index}
                       {...artist}
                       image={album.images[0].url}

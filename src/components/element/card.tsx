@@ -33,7 +33,6 @@ export interface ElementCardProps {
   showGenres?: boolean
   color?: ElementCardColor
   size?: ElementCardSize
-  skeleton?: boolean
 }
 
 const { LARGE, MEDIUM, SMALL } = ElementCardSize
@@ -50,7 +49,6 @@ export function ElementCard({
   showGenres,
   color = ElementCardColor.SURFACE_CARD,
   size = SMALL,
-  skeleton,
 }: ElementCardProps) {
   return (
     <Card
@@ -96,7 +94,7 @@ export function ElementCard({
               size === LARGE && 'flex-wrap',
               album && 'gap-0',
               genres && 'gap-2',
-              artists && skeleton && 'gap-2'
+              artists && 'gap-2'
             )}
           >
             <p
