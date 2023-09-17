@@ -24,9 +24,9 @@ export enum ElementCardSize {
 
 export interface ElementCardProps {
   position?: number
-  name: string
-  image: string
-  href: string
+  name?: string
+  image?: string
+  href?: string
   album?: Album
   artists?: (Artist | TrackArtist)[]
   playedAt?: string
@@ -148,7 +148,7 @@ export function ElementCard({
         <div className="flex-row hidden gap-3 md:flex align-self-end">
           {playedAt && <RelativeTime value={playedAt ?? ''} />}
 
-          <OpenInSpotifyButton href={href} />
+          <OpenInSpotifyButton href={href ?? ''} />
         </div>
       </main>
     </Card>

@@ -50,30 +50,58 @@ export function TopArtistsView({
               />
 
               <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
-                {items.slice(1, 5).map(({ images, ...artist }, index) => (
-                  <ElementCard
-                    key={index}
-                    {...artist}
-                    image={images[0].url}
-                    size={ElementCardSize.LARGE}
-                    position={index + 2}
-                    showGenres={true}
-                  />
-                ))}
+                {skeleton
+                  ? (Array.from({ length: 4 }) as Artist[]).map(
+                      (item, index) => (
+                        <ElementCard
+                          skeleton={skeleton}
+                          key={index}
+                          size={ElementCardSize.LARGE}
+                          position={index + 2}
+                          showGenres={true}
+                        />
+                      )
+                    )
+                  : items
+                      .slice(1, 5)
+                      .map(({ images, ...artist }, index) => (
+                        <ElementCard
+                          skeleton={skeleton}
+                          key={index}
+                          {...artist}
+                          image={images[0].url}
+                          size={ElementCardSize.LARGE}
+                          position={index + 2}
+                          showGenres={true}
+                        />
+                      ))}
               </div>
             </div>
           </div>
 
           <div className="flex-column flex w-full gap-2 lg:gap-3">
-            {items.slice(5).map(({ images, ...artist }, index) => (
-              <ElementCard
-                key={index}
-                {...artist}
-                image={images[0].url}
-                size={ElementCardSize.MEDIUM}
-                position={index + 6}
-              />
-            ))}
+            {skeleton
+              ? (Array.from({ length: 4 }) as Artist[]).map((item, index) => (
+                  <ElementCard
+                    skeleton={skeleton}
+                    key={index}
+                    size={ElementCardSize.MEDIUM}
+                    position={index + 6}
+                    showGenres={true}
+                  />
+                ))
+              : items
+                  .slice(5)
+                  .map(({ images, ...artist }, index) => (
+                    <ElementCard
+                      skeleton={skeleton}
+                      key={index}
+                      {...artist}
+                      image={images[0].url}
+                      size={ElementCardSize.MEDIUM}
+                      position={index + 6}
+                    />
+                  ))}
 
             {moreItems}
           </div>
