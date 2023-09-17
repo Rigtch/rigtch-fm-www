@@ -1,8 +1,27 @@
 import { Card } from 'primereact/card'
+import { GetServerSideProps } from 'next'
+import { QueryClient, dehydrate } from '@tanstack/react-query'
 
 import Steps from '@components/connect/steps'
 import { ConnectCard } from '@components/connect'
 import { DiscordCard } from '@components/connect/discord-card'
+import { ACCESS_TOKEN, PROFILE } from '@api/constants'
+import { getProfile } from '@api/fetchers'
+
+export const getServerSideProps: GetServerSideProps = async ({
+  req: { cookies },
+}) => {
+  const accessToken = cookies[ACCESS_TOKEN]
+  const queryClient = new QueryClient()
+
+  await queryClient.fetchQuery([PROFILE], () => getProfile(accessToken))
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  }
+}
 
 export default function Home() {
   return (
