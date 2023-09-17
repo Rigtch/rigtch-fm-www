@@ -68,7 +68,6 @@ export function TopArtistsView({
                       .slice(1, 5)
                       .map(({ images, ...artist }, index) => (
                         <ElementCard
-                          skeleton={skeleton}
                           key={index}
                           {...artist}
                           image={images[0].url}
@@ -94,7 +93,6 @@ export function TopArtistsView({
                   .slice(5)
                   .map(({ images, ...artist }, index) => (
                     <ElementCard
-                      skeleton={skeleton}
                       key={index}
                       {...artist}
                       image={images[0].url}
