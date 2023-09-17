@@ -22,7 +22,12 @@ export function ProfileInfo() {
   const menu = useRef<SlideMenu>(null)
   const toast = useRef<Toast>(null)
 
-  if (!data) return <ConnectButton />
+  if (!data)
+    return (
+      <div className="px-3">
+        <ConnectButton />
+      </div>
+    )
 
   const { displayName, href, images } = data
 
