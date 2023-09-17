@@ -7,6 +7,8 @@ import {
   ElementCardSize,
 } from '@components/element'
 import { SelectTimeRange } from '@components/select-time-range'
+import { TopOneElementCardSkeleton } from '@components/element/top-one-card-skeleton'
+import { ElementCardSkeleton } from '@components/element/card-skeleton'
 
 export interface TopTracksViewProps extends HTMLAttributes<HTMLDivElement> {
   timeRange: TimeRange
@@ -38,20 +40,23 @@ export function TopTracksView({
         {/* {items.length > 0 && ( */}
         <div className="flex flex-column w-full flex-row flex-wrap gap-6">
           <div className="justify-content-center xl:justify-content-between flex w-full flex-column md:flex-row xl:flex-nowrap gap-6">
-            <TopOneElementCard
-              skeleton={skeleton}
-              {...items[0]}
-              image={items[0]?.album.images[0].url}
-            />
+            {skeleton ? (
+              <TopOneElementCardSkeleton album={true} />
+            ) : (
+              <TopOneElementCard
+                {...items[0]}
+                image={items[0]?.album.images[0].url}
+              />
+            )}
 
             <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
               {skeleton
-                ? (Array.from({ length: 4 }) as Track[]).map((item, index) => (
-                    <ElementCard
-                      skeleton={skeleton}
+                ? Array.from({ length: 4 }).map((item, index) => (
+                    <ElementCardSkeleton
                       key={index}
                       size={ElementCardSize.LARGE}
                       position={index + 2}
+                      artists
                     />
                   ))
                 : items
@@ -72,12 +77,12 @@ export function TopTracksView({
 
           <div className="flex-column flex w-full gap-2 lg:gap-3">
             {skeleton
-              ? (Array.from({ length: 4 }) as Track[]).map((item, index) => (
-                  <ElementCard
-                    skeleton={skeleton}
+              ? Array.from({ length: 5 }).map((item, index) => (
+                  <ElementCardSkeleton
                     key={index}
                     size={ElementCardSize.MEDIUM}
                     position={index + 6}
+                    artists
                   />
                 ))
               : items
