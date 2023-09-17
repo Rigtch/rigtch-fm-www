@@ -2,7 +2,6 @@ import { Card } from 'primereact/card'
 import { Image } from 'primereact/image'
 import { classNames } from 'primereact/utils'
 import { Chip } from 'primereact/chip'
-import { Skeleton } from 'primereact/skeleton'
 
 import { OpenInSpotifyButton } from '../common'
 import { RelativeTime } from '../utils'
@@ -39,7 +38,6 @@ export interface ElementCardProps {
 
 const { LARGE, MEDIUM, SMALL } = ElementCardSize
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
 export function ElementCard({
   position,
   image,
@@ -84,19 +82,12 @@ export function ElementCard({
           )}
 
           <div>
-            {skeleton ? (
-              <Skeleton
-                width={size === LARGE ? '76px' : '64px'}
-                height={size === LARGE ? '76px' : '64px'}
-              />
-            ) : (
-              <Image
-                src={image}
-                alt={album?.name}
-                width={size === LARGE ? '76' : '64'}
-                height={size === LARGE ? '76' : '64'}
-              />
-            )}
+            <Image
+              src={image}
+              alt={album?.name}
+              width={size === LARGE ? '76' : '64'}
+              height={size === LARGE ? '76' : '64'}
+            />
           </div>
 
           <div
@@ -108,38 +99,27 @@ export function ElementCard({
               artists && skeleton && 'gap-2'
             )}
           >
-            {skeleton ? (
-              <Skeleton height="2rem" width="10rem" />
-            ) : (
-              <p
-                className={classNames(
-                  'm-0 text-xl line-height-3 max-h-4rem max-w-full white-space-nowrap text-white overflow-hidden text-overflow-ellipsis',
-                  [MEDIUM, LARGE].includes(size) && 'md:text-2xl'
-                )}
-              >
-                {name}
+            <p
+              className={classNames(
+                'm-0 text-xl line-height-3 max-h-4rem max-w-full white-space-nowrap text-white overflow-hidden text-overflow-ellipsis',
+                [MEDIUM, LARGE].includes(size) && 'md:text-2xl'
+              )}
+            >
+              {name}
+            </p>
+
+            {artists && (
+              <p className="text-400 m-0 line-height-3 max-h-4rem max-w-full white-space-nowrap overflow-hidden text-overflow-ellipsis">
+                {getArtists(artists)}
               </p>
             )}
 
-            {artists &&
-              (skeleton ? (
-                <Skeleton width="7rem" />
-              ) : (
-                <p className="text-400 m-0 line-height-3 max-h-4rem max-w-full white-space-nowrap overflow-hidden text-overflow-ellipsis">
-                  {getArtists(artists)}
-                </p>
-              ))}
-
             {showGenres && genres && (
               <div>
-                {skeleton ? (
-                  <Skeleton borderRadius="10px" height="2rem" width="5rem" />
-                ) : (
-                  <Chip
-                    label={genres[0]}
-                    className="white-space-nowrap text-overflow-ellipsis max-w-full"
-                  />
-                )}
+                <Chip
+                  label={genres[0]}
+                  className="white-space-nowrap text-overflow-ellipsis max-w-full"
+                />
               </div>
             )}
           </div>

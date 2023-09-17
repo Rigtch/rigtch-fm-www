@@ -7,6 +7,8 @@ import {
   ElementCardSize,
 } from '@components/element'
 import { SelectTimeRange } from '@components/select-time-range'
+import { TopOneElementCardSkeleton } from '@components/element/top-one-card-skeleton'
+import { ElementCardSkeleton } from '@components/element/card-skeleton'
 
 export interface TopArtistsViewProps extends HTMLAttributes<HTMLDivElement> {
   timeRange: TimeRange
@@ -43,25 +45,25 @@ export function TopArtistsView({
         <>
           <div className="flex flex-column w-full flex-row flex-wrap gap-6">
             <div className="justify-content-center xl:justify-content-between flex w-full flex-column md:flex-row xl:flex-nowrap gap-6">
-              <TopOneElementCard
-                {...items[0]}
-                skeleton={skeleton}
-                image={items[0]?.images[0].url}
-              />
+              {skeleton ? (
+                <TopOneElementCardSkeleton genres={true} />
+              ) : (
+                <TopOneElementCard
+                  {...items[0]}
+                  image={items[0]?.images[0].url}
+                />
+              )}
 
               <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
                 {skeleton
-                  ? (Array.from({ length: 4 }) as Artist[]).map(
-                      (item, index) => (
-                        <ElementCard
-                          skeleton={skeleton}
-                          key={index}
-                          size={ElementCardSize.LARGE}
-                          position={index + 2}
-                          showGenres={true}
-                        />
-                      )
-                    )
+                  ? Array.from({ length: 4 }).map((item, index) => (
+                      <ElementCardSkeleton
+                        key={index}
+                        size={ElementCardSize.LARGE}
+                        position={index + 2}
+                        showGenres
+                      />
+                    ))
                   : items
                       .slice(1, 5)
                       .map(({ images, ...artist }, index) => (
@@ -81,13 +83,11 @@ export function TopArtistsView({
 
           <div className="flex-column flex w-full gap-2 lg:gap-3">
             {skeleton
-              ? (Array.from({ length: 4 }) as Artist[]).map((item, index) => (
-                  <ElementCard
-                    skeleton={skeleton}
+              ? Array.from({ length: 4 }).map((item, index) => (
+                  <ElementCardSkeleton
                     key={index}
                     size={ElementCardSize.MEDIUM}
                     position={index + 6}
-                    showGenres={true}
                   />
                 ))
               : items
