@@ -1,52 +1,28 @@
-import { describe, test, vi } from 'vitest'
+import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 
 import { getPlaybackState } from './get-playback-state'
+import { fetchApi } from './fetch-api'
 
 import { PlaybackState } from '@api/types'
 import { trackMock } from '@tests/mocks'
 
-describe('getPlaybackState', () => {
-  test('should return response', async () => {
-    vi.stubGlobal('fetch', () => ({
-      status: 200,
-      json: () =>
-        mock<PlaybackState>({
-          track: trackMock,
-        }),
-    }))
+vi.mock('./fetch-api')
 
+describe('getPlaybackState', () => {
+  beforeEach(() => {
+    ;(fetchApi as Mock).mockResolvedValue(
+      mock<PlaybackState>({
+        track: trackMock,
+      })
+    )
+  })
+
+  test('should get playback state', async () => {
     const {
       track: { name },
     } = await getPlaybackState()
 
     expect(name).toEqual('Track 1')
-  })
-
-  test('should throw error when status is 401', () => {
-    vi.stubGlobal('fetch', () => ({
-      status: 401,
-      statusText: 'Unauthorized',
-    }))
-
-    expect(getPlaybackState()).rejects.toThrow('Unauthorized')
-  })
-
-  test('should throw error when status is 403', () => {
-    vi.stubGlobal('fetch', () => ({
-      status: 403,
-      statusText: 'Forbidden',
-    }))
-
-    expect(getPlaybackState()).rejects.toThrow('Forbidden')
-  })
-
-  test('should throw error when status is 403', () => {
-    vi.stubGlobal('fetch', () => ({
-      status: 403,
-      statusText: 'Forbidden',
-    }))
-
-    expect(getPlaybackState()).rejects.toThrow('Forbidden')
   })
 })

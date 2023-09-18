@@ -1,15 +1,7 @@
 import { Profile } from '../types'
 
-import { environment } from '@config/environment'
+import { fetchApi } from './fetch-api'
 
-export async function getProfile(token?: string): Promise<Profile> {
-  const response = await fetch(`${environment.API_URL}/auth/profile`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  })
-
-  if (response.status === 401) throw new Error(response.statusText)
-
-  return await response.json()
+export function getProfile(token?: string) {
+  return fetchApi<Profile>('/auth/profile', { token })
 }

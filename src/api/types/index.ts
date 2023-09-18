@@ -11,3 +11,5 @@ export * from './analysis'
 export * from './time-range'
 export * from './spotify-response'
 export * from './cursors'
+
+export * from './http-method'
