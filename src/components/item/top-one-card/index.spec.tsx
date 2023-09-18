@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { describe } from 'vitest'
 
-import { TopOneElementCard, TopOneElementCardProps } from './top-one-card'
+import { TopOneItemCard, TopOneItemCardProps } from '.'
 
 describe('TopOneElementCard', () => {
-  const props: TopOneElementCardProps = {
+  const props: TopOneItemCardProps = {
     name: 'Element 1',
     image: 'image',
     href: 'href',
@@ -12,7 +12,7 @@ describe('TopOneElementCard', () => {
   }
 
   test('should render component with props', () => {
-    render(<TopOneElementCard {...props} />)
+    render(<TopOneItemCard {...props} />)
 
     expect(screen.getByText('Element 1')).toBeInTheDocument()
     expect(screen.getByText('pop')).toBeInTheDocument()

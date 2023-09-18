@@ -3,12 +3,13 @@ import { Image } from 'primereact/image'
 import { Badge } from 'primereact/badge'
 import { classNames } from 'primereact/utils'
 
-import { OpenInSpotifyButton } from '../common'
+import { stars } from './stars'
 
+import { OpenInSpotifyButton } from '@components/common'
 import { isMobile } from '@utils/is-mobile'
 import { Album } from '@api/types'
 
-export interface TopOneElementCardProps {
+export interface TopOneItemCardProps {
   name: string
   image: string
   href: string
@@ -16,14 +17,13 @@ export interface TopOneElementCardProps {
   album?: Album
 }
 
-export function TopOneElementCard({
+export function TopOneItemCard({
   name,
   image,
   genres,
   href,
   album,
-}: TopOneElementCardProps) {
-  const stars = [10, 15, 20, 15, 10]
+}: TopOneItemCardProps) {
   return (
     <div className="flex-column align-items-center flex gap-4 xl:w-4">
       <div
@@ -88,3 +88,5 @@ export function TopOneElementCard({
     </div>
   )
 }
+
+export * from './skeleton'

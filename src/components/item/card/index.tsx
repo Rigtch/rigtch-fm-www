@@ -3,26 +3,15 @@ import { Image } from 'primereact/image'
 import { classNames } from 'primereact/utils'
 import { Chip } from 'primereact/chip'
 
-import { OpenInSpotifyButton } from '../common'
-import { RelativeTime } from '../utils'
+import { ItemCardBaseProps, ItemCardSize, ItemCardColor } from './types'
 
+import { OpenInSpotifyButton } from '@components/common'
+import { RelativeTime } from '@components/utils'
 import { Album, Artist, TrackArtist } from '@api/types'
 import { getArtists } from '@utils/get-artists'
 import { isMobile } from '@utils/is-mobile'
 
-export enum ElementCardColor {
-  SURFACE_GROUND = 'surface-ground',
-  SURFACE_CARD = 'surface-card',
-}
-
-export enum ElementCardSize {
-  SMALL = 'small',
-  MEDIUM = 'medium',
-  LARGE = 'large',
-}
-
-export interface ElementCardProps {
-  position?: number
+export interface ItemCardProps extends ItemCardBaseProps {
   name?: string
   image?: string
   href?: string
@@ -30,14 +19,11 @@ export interface ElementCardProps {
   artists?: (Artist | TrackArtist)[]
   playedAt?: string
   genres?: string[]
-  showGenres?: boolean
-  color?: ElementCardColor
-  size?: ElementCardSize
 }
 
-const { LARGE, MEDIUM, SMALL } = ElementCardSize
+const { LARGE, MEDIUM, SMALL } = ItemCardSize
 
-export function ElementCard({
+export function ItemCard({
   position,
   image,
   name,
@@ -47,9 +33,9 @@ export function ElementCard({
   playedAt,
   genres,
   showGenres,
-  color = ElementCardColor.SURFACE_CARD,
+  color = ItemCardColor.SURFACE_CARD,
   size = SMALL,
-}: ElementCardProps) {
+}: ItemCardProps) {
   return (
     <Card
       onClick={() => isMobile() && window.open(href, '_blank')}
@@ -132,3 +118,6 @@ export function ElementCard({
     </Card>
   )
 }
+
+export * from './types'
+export * from './skeleton'
