@@ -2,27 +2,23 @@ import { Card } from 'primereact/card'
 import { classNames } from 'primereact/utils'
 import { Skeleton } from 'primereact/skeleton'
 
-import { OpenInSpotifyButton } from '../common'
+import { ItemCardBaseProps, ItemCardColor, ItemCardSize } from './types'
 
-import { ElementCardColor, ElementCardSize } from '.'
+import { OpenInSpotifyButton } from '@components/common'
 
-export interface ElementCardSkeletonProps {
-  position?: number
-  artists?: boolean
-  showGenres?: boolean
-  color?: ElementCardColor
-  size?: ElementCardSize
+export interface ItemCardSkeletonProps extends ItemCardBaseProps {
+  hasArtists?: boolean
 }
 
-const { LARGE, SMALL } = ElementCardSize
+const { LARGE, SMALL } = ItemCardSize
 
-export function ElementCardSkeleton({
+export function ItemCardSkeleton({
   position,
-  artists,
+  hasArtists,
   showGenres,
-  color = ElementCardColor.SURFACE_CARD,
+  color = ItemCardColor.SURFACE_CARD,
   size = SMALL,
-}: ElementCardSkeletonProps) {
+}: ItemCardSkeletonProps) {
   return (
     <Card className={classNames(color, 'max-w-full')}>
       <main
@@ -61,12 +57,12 @@ export function ElementCardSkeleton({
               'flex-column justify-content-between flex min-w-0 w-full h-full',
               size === LARGE && 'flex-wrap',
               showGenres && 'gap-2',
-              artists && 'gap-2'
+              hasArtists && 'gap-2'
             )}
           >
             <Skeleton height="2rem" width="10rem" />
 
-            {artists && <Skeleton width="7rem" />}
+            {hasArtists && <Skeleton width="7rem" />}
 
             {showGenres && (
               <Skeleton borderRadius="10px" height="2rem" width="5rem" />

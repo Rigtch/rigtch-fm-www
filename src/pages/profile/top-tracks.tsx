@@ -4,7 +4,7 @@ import { QueryClient, dehydrate } from '@tanstack/react-query'
 import { GetServerSideProps } from 'next'
 
 import { TimeRange } from '@api/types'
-import { ElementCard, ElementCardSize } from '@components/element'
+import { ItemCard, ItemCardSize } from '@components/item/card'
 import { TopTracksView } from '@components/views'
 import { useTopTracksInfiniteQuery } from '@api/hooks'
 import { InfiniteLoadingButton } from '@components/common'
@@ -66,11 +66,11 @@ export default function ProfileTopTracks() {
       moreItems={data?.pages.slice(1).map(page => (
         <Fragment key={page.offset}>
           {page.items.map(({ album, ...track }, index) => (
-            <ElementCard
+            <ItemCard
               key={track.id}
               {...track}
               image={album.images[0].url}
-              size={ElementCardSize.MEDIUM}
+              size={ItemCardSize.MEDIUM}
               position={index + page.offset + 1}
             />
           ))}

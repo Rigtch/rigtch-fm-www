@@ -1,14 +1,12 @@
 import { HTMLAttributes, ReactNode } from 'react'
 
 import { Artist, TimeRange } from '@api/types'
-import {
-  TopOneElementCard,
-  ElementCard,
-  ElementCardSize,
-} from '@components/element'
 import { SelectTimeRange } from '@components/select-time-range'
-import { TopOneElementCardSkeleton } from '@components/element/top-one-card-skeleton'
-import { ElementCardSkeleton } from '@components/element/card-skeleton'
+import {
+  TopOneItemCard,
+  TopOneItemCardSkeleton,
+} from '@components/item/top-one-card'
+import { ItemCardSize, ItemCardSkeleton, ItemCard } from '@components/item/card'
 
 export interface TopArtistsViewProps extends HTMLAttributes<HTMLDivElement> {
   timeRange: TimeRange
@@ -38,20 +36,17 @@ export function TopArtistsView({
         <div className="flex flex-column w-full flex-row flex-wrap gap-6">
           <div className="justify-content-center xl:justify-content-between flex w-full flex-column md:flex-row xl:flex-nowrap gap-6">
             {skeleton ? (
-              <TopOneElementCardSkeleton genres={true} />
+              <TopOneItemCardSkeleton hasGenres={true} />
             ) : (
-              <TopOneElementCard
-                {...items[0]}
-                image={items[0]?.images[0].url}
-              />
+              <TopOneItemCard {...items[0]} image={items[0]?.images[0].url} />
             )}
 
             <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
               {skeleton
                 ? Array.from({ length: 4 }).map((item, index) => (
-                    <ElementCardSkeleton
+                    <ItemCardSkeleton
                       key={index}
-                      size={ElementCardSize.LARGE}
+                      size={ItemCardSize.LARGE}
                       position={index + 2}
                       showGenres
                     />
@@ -59,11 +54,11 @@ export function TopArtistsView({
                 : items
                     .slice(1, 5)
                     .map(({ images, ...artist }, index) => (
-                      <ElementCard
+                      <ItemCard
                         key={index}
                         {...artist}
                         image={images[0].url}
-                        size={ElementCardSize.LARGE}
+                        size={ItemCardSize.LARGE}
                         position={index + 2}
                         showGenres={true}
                       />
@@ -75,20 +70,20 @@ export function TopArtistsView({
         <div className="flex-column flex w-full gap-2 lg:gap-3">
           {skeleton
             ? Array.from({ length: 4 }).map((item, index) => (
-                <ElementCardSkeleton
+                <ItemCardSkeleton
                   key={index}
-                  size={ElementCardSize.MEDIUM}
+                  size={ItemCardSize.MEDIUM}
                   position={index + 6}
                 />
               ))
             : items
                 .slice(5)
                 .map(({ images, ...artist }, index) => (
-                  <ElementCard
+                  <ItemCard
                     key={index}
                     {...artist}
                     image={images[0].url}
-                    size={ElementCardSize.MEDIUM}
+                    size={ItemCardSize.MEDIUM}
                     position={index + 6}
                   />
                 ))}

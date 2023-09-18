@@ -4,7 +4,7 @@ import { GetServerSideProps } from 'next'
 import { QueryClient, dehydrate } from '@tanstack/react-query'
 
 import { useLastTracksInfiniteQuery } from '@api/hooks'
-import { ElementCard, ElementCardColor } from '@components/element'
+import { ItemCard, ItemCardColor } from '@components/item/card'
 import { InfiniteLoadingButton } from '@components/common'
 import { catchQueryError } from '@api/utils'
 import { ACCESS_TOKEN, LAST_TRACKS, PROFILE } from '@api/constants'
@@ -56,9 +56,9 @@ export default function ProfileLastTracks() {
         {data.pages.map(page => (
           <Fragment key={page.cursors?.before ?? 'last'}>
             {page.items.map(({ album, ...track }, index) => (
-              <ElementCard
+              <ItemCard
                 {...track}
-                color={ElementCardColor.SURFACE_GROUND}
+                color={ItemCardColor.SURFACE_GROUND}
                 album={album}
                 image={album.images[0].url}
                 key={index}

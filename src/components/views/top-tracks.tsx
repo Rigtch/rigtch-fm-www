@@ -1,14 +1,12 @@
 import { HTMLAttributes, ReactNode } from 'react'
 
 import { TimeRange, Track } from '@api/types'
-import {
-  TopOneElementCard,
-  ElementCard,
-  ElementCardSize,
-} from '@components/element'
+import { ItemCard, ItemCardSize, ItemCardSkeleton } from '@components/item/card'
 import { SelectTimeRange } from '@components/select-time-range'
-import { TopOneElementCardSkeleton } from '@components/element/top-one-card-skeleton'
-import { ElementCardSkeleton } from '@components/element/card-skeleton'
+import {
+  TopOneItemCard,
+  TopOneItemCardSkeleton,
+} from '@components/item/top-one-card'
 
 export interface TopTracksViewProps extends HTMLAttributes<HTMLDivElement> {
   timeRange: TimeRange
@@ -38,9 +36,9 @@ export function TopTracksView({
         <div className="flex flex-column w-full flex-row flex-wrap gap-6">
           <div className="justify-content-center xl:justify-content-between flex w-full flex-column md:flex-row xl:flex-nowrap gap-6">
             {skeleton ? (
-              <TopOneElementCardSkeleton album={true} />
+              <TopOneItemCardSkeleton hasAlbum={true} />
             ) : (
-              <TopOneElementCard
+              <TopOneItemCard
                 {...items[0]}
                 image={items[0]?.album.images[0].url}
               />
@@ -49,21 +47,21 @@ export function TopTracksView({
             <div className="flex-column flex gap-2 lg:gap-3 sm:w-7 w-full">
               {skeleton
                 ? Array.from({ length: 4 }).map((item, index) => (
-                    <ElementCardSkeleton
+                    <ItemCardSkeleton
                       key={index}
-                      size={ElementCardSize.LARGE}
+                      size={ItemCardSize.LARGE}
                       position={index + 2}
-                      artists
+                      hasArtists
                     />
                   ))
                 : items
                     .slice(1, 5)
                     .map(({ album, ...track }, index) => (
-                      <ElementCard
+                      <ItemCard
                         {...track}
                         album={album}
                         image={album.images[0].url}
-                        size={ElementCardSize.LARGE}
+                        size={ItemCardSize.LARGE}
                         key={index}
                         position={index + 2}
                       />
@@ -74,21 +72,21 @@ export function TopTracksView({
           <div className="flex-column flex w-full gap-2 lg:gap-3">
             {skeleton
               ? Array.from({ length: 5 }).map((item, index) => (
-                  <ElementCardSkeleton
+                  <ItemCardSkeleton
                     key={index}
-                    size={ElementCardSize.MEDIUM}
+                    size={ItemCardSize.MEDIUM}
                     position={index + 6}
-                    artists
+                    hasArtists
                   />
                 ))
               : items
                   .slice(5)
                   .map(({ album, ...artist }, index) => (
-                    <ElementCard
+                    <ItemCard
                       key={index}
                       {...artist}
                       image={album.images[0].url}
-                      size={ElementCardSize.MEDIUM}
+                      size={ItemCardSize.MEDIUM}
                       position={index + 6}
                     />
                   ))}

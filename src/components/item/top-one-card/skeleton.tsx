@@ -2,18 +2,19 @@ import { Badge } from 'primereact/badge'
 import { classNames } from 'primereact/utils'
 import { Skeleton } from 'primereact/skeleton'
 
-import { OpenInSpotifyButton } from '../common'
+import { OpenInSpotifyButton } from '../../common'
 
-export interface TopOneElementCardSkeletonProps {
-  genres?: boolean
-  album?: boolean
+import { stars } from './stars'
+
+export interface TopOneItemCardSkeletonProps {
+  hasGenres?: boolean
+  hasAlbum?: boolean
 }
 
-export function TopOneElementCardSkeleton({
-  genres,
-  album,
-}: TopOneElementCardSkeletonProps) {
-  const stars = [10, 15, 20, 15, 10]
+export function TopOneItemCardSkeleton({
+  hasGenres,
+  hasAlbum,
+}: TopOneItemCardSkeletonProps) {
   return (
     <div className="flex-column align-items-center flex gap-4 xl:w-4">
       <div
@@ -27,7 +28,7 @@ export function TopOneElementCardSkeleton({
         </div>
       </div>
 
-      <div className={classNames('flex flex-column', genres && 'gap-4')}>
+      <div className={classNames('flex flex-column', hasGenres && 'gap-4')}>
         <div className="flex align-items-center flex-column gap-2">
           <Skeleton width="10rem" height="2rem" />
 
@@ -50,7 +51,7 @@ export function TopOneElementCardSkeleton({
 
         <div className="justify-content-center flex flex-wrap gap-2">
           <div className="flex flex-row gap-1">
-            {genres &&
+            {hasGenres &&
               Array.from({ length: 3 }).map((item, index) => (
                 <Skeleton
                   width="6rem"
@@ -61,7 +62,7 @@ export function TopOneElementCardSkeleton({
               ))}
           </div>
 
-          {album && <Skeleton height="2rem" className="my-4" />}
+          {hasAlbum && <Skeleton height="2rem" className="my-4" />}
         </div>
 
         <div className="flex align-self-center">

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { ElementCard, ElementCardColor } from '@components/element/card'
+import { ItemCard, ItemCardColor } from '@components/item/card'
 import { useLastTracksQuery } from '@api/hooks'
 
 export function LastTracksSection() {
@@ -16,9 +16,9 @@ export function LastTracksSection() {
 
       <main className="flex-column flex gap-2 lg:gap-3">
         {data.items.map(({ album, ...track }, index) => (
-          <ElementCard
+          <ItemCard
             {...track}
-            color={ElementCardColor.SURFACE_GROUND}
+            color={ItemCardColor.SURFACE_GROUND}
             album={album}
             image={album.images[0].url}
             key={index}
