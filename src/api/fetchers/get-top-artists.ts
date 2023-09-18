@@ -1,31 +1,21 @@
 import { Artist, SpotifyResponseWithOffset, TimeRange } from '../types'
 
-import { environment } from '@config/environment'
+import { fetchApi } from './fetch-api'
 
 export async function getTopArtists(
   token?: string,
   timeRange = TimeRange.LONG_TERM,
   limit = 10,
   offset = 0
-): Promise<SpotifyResponseWithOffset<Artist>> {
+) {
   const urlSearchParameters = new URLSearchParams({
     timeRange,
     limit: limit + '',
     offset: offset + '',
   })
 
-  const response = await fetch(
-    `${
-      environment.API_URL
-    }/statistics/top-artists?${urlSearchParameters.toString()}`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
+  return fetchApi<SpotifyResponseWithOffset<Artist>>(
+    `/statistics/top-artists?${urlSearchParameters.toString()}`,
+    { token }
   )
-
-  if ([401, 403].includes(response.status)) throw new Error(response.statusText)
-
-  return await response.json()
 }

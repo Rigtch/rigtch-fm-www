@@ -1,3 +1,5 @@
+export * from './fetch-api'
+
 export * from './get-profile'
 export * from './get-refresh'
 export * from './get-top-genres'

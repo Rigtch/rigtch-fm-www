@@ -1,31 +1,21 @@
 import { SpotifyResponseWithOffset, TimeRange, Track } from '../types'
 
-import { environment } from '@config/environment'
+import { fetchApi } from './fetch-api'
 
 export async function getTopTracks(
   token?: string,
   timeRange = TimeRange.LONG_TERM,
   limit = 10,
   offset = 0
-): Promise<SpotifyResponseWithOffset<Track>> {
+) {
   const urlSearchParameters = new URLSearchParams({
     timeRange,
     limit: limit + '',
     offset: offset + '',
   })
 
-  const response = await fetch(
-    `${
-      environment.API_URL
-    }/statistics/top-tracks?${urlSearchParameters.toString()}`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
+  return fetchApi<SpotifyResponseWithOffset<Track>>(
+    `/statistics/top-tracks?${urlSearchParameters.toString()}`,
+    { token }
   )
-
-  if ([401, 403].includes(response.status)) throw new Error(response.statusText)
-
-  return await response.json()
 }
