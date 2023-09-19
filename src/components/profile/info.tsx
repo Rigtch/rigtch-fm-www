@@ -9,10 +9,11 @@ import { useQueryClient } from '@tanstack/react-query'
 
 import { ConnectButton } from '../connect'
 
+import { ProfileAvatar } from './avatar'
+
 import { useProfileQuery } from '@api/hooks'
 import { getImage } from '@utils/get-image'
 import { useAuthCookies } from '@hooks/use-auth-cookies'
-import { AvatarComponent } from '@components/common/avatar'
 
 export function ProfileInfo() {
   const { data } = useProfileQuery()
@@ -58,7 +59,7 @@ export function ProfileInfo() {
     {
       template: () => (
         <div className="align-items-center flex gap-2 px-4 py-1">
-          <AvatarComponent image={image} label={displayName.slice(0, 1)} />
+          <ProfileAvatar image={image} label={displayName.slice(0, 1)} />
 
           <p className="m-0 text-xl font-medium text-white md:block">
             {displayName}
@@ -95,7 +96,7 @@ export function ProfileInfo() {
           {displayName}
         </p>
 
-        <AvatarComponent
+        <ProfileAvatar
           image={image}
           size="large"
           label={displayName.slice(0, 1)}
