@@ -3,8 +3,11 @@ import Image from 'next/image'
 import { Avatar } from 'primereact/avatar'
 import { Button } from 'primereact/button'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 import { ConnectButton } from './button'
+
+import { welcomeBack } from '.'
 
 import { spotifyLogo } from '@assets/images'
 import { useProfileQuery } from '@api/hooks'
@@ -13,6 +16,13 @@ import { getImage } from '@utils/get-image'
 export function ConnectCard() {
   const router = useRouter()
   const { data } = useProfileQuery()
+  const [welcomeBackState, setWelcomeBackState] = useState('')
+
+  useEffect(() => {
+    setWelcomeBackState(
+      welcomeBack[Math.floor(Math.random() * welcomeBack.length)]
+    )
+  }, [])
 
   return (
     <Card className="w-full">
@@ -41,14 +51,23 @@ export function ConnectCard() {
           <div className="flex-column align-items-center flex gap-2 text-center">
             <h1 className="m-0">
               {data?.displayName
-                ? `Welcome ${data.displayName}!`
+                ? `Welcome back ${data.displayName}!`
                 : 'With just one press of a button'}
             </h1>
 
-            <p className="m-0">
-              With just one press of a button you&apos;ll see your top artists,
-              favorite songs and so on.
-            </p>
+            {data?.displayName ? (
+              <>
+                <span className="text-2xl">{welcomeBackState}</span>
+                <p className="m-0">
+                  Press the button below to open your profile
+                </p>
+              </>
+            ) : (
+              <p className="m-0">
+                With just one press of a button you&apos;ll see your top
+                artists, favorite songs and so on
+              </p>
+            )}
           </div>
 
           {data?.displayName ? (
