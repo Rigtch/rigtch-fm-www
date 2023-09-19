@@ -30,6 +30,7 @@ describe('TopTracksSection', () => {
   test('should render section without data', () => {
     ;(useTopTracksQuery as Mock).mockReturnValue({
       data: undefined,
+      isRefetching: true,
       refetch: vi.fn(),
     })
 
