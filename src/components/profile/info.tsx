@@ -89,7 +89,7 @@ export function ProfileInfo() {
         text
         severity="help"
         className="gap-2"
-        onClick={event => menu?.current?.toggle(event)}
+        onClick={event => menu.current?.toggle(event)}
       >
         <p className="m-0 hidden text-xl font-medium text-white md:block">
           {displayName}
