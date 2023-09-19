@@ -7,8 +7,6 @@ import { useEffect, useState } from 'react'
 
 import { ConnectButton } from './button'
 
-import { welcomeBack } from '.'
-
 import { spotifyLogo } from '@assets/images'
 import { useProfileQuery } from '@api/hooks'
 import { getImage } from '@utils/get-image'
@@ -16,11 +14,20 @@ import { getImage } from '@utils/get-image'
 export function ConnectCard() {
   const router = useRouter()
   const { data } = useProfileQuery()
-  const [welcomeBackState, setWelcomeBackState] = useState('')
+  const [welcomeBackMessage, setWelcomeBackMessage] = useState('')
+
+  const welcomeBackMessages = [
+    'Back so soon?',
+    'We missed you!',
+    'Glad to see you!',
+    'Your artists are waiting...',
+  ]
 
   useEffect(() => {
-    setWelcomeBackState(
-      welcomeBack[Math.floor(Math.random() * welcomeBack.length)]
+    setWelcomeBackMessage(
+      welcomeBackMessages[
+        Math.floor(Math.random() * welcomeBackMessages.length)
+      ]
     )
   }, [])
 
@@ -57,7 +64,7 @@ export function ConnectCard() {
 
             {data?.displayName ? (
               <>
-                <span className="text-2xl">{welcomeBackState}</span>
+                <span className="text-2xl">{welcomeBackMessage}</span>
                 <p className="m-0">
                   Press the button below to open your profile
                 </p>
