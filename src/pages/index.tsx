@@ -14,7 +14,9 @@ export const getServerSideProps: GetServerSideProps = async ({
   const accessToken = cookies[ACCESS_TOKEN]
   const queryClient = new QueryClient()
 
-  await queryClient.fetchQuery([PROFILE], () => getProfile(accessToken))
+  await queryClient
+    .fetchQuery([PROFILE], () => getProfile(accessToken))
+    .catch(() => {})
 
   return {
     props: {
