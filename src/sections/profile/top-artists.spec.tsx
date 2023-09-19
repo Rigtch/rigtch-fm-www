@@ -31,6 +31,7 @@ describe('TopArtistsSection', () => {
     ;(useTopArtistsQuery as Mock).mockReturnValue({
       data: undefined,
       refetch: vi.fn(),
+      isRefetching: true,
     })
 
     render(<TopArtistsSection />)
