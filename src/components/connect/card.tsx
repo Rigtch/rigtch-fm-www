@@ -9,7 +9,7 @@ import { ConnectButton } from './button'
 import { spotifyLogo } from '@assets/images'
 import { useProfileQuery } from '@api/hooks'
 import { getImage } from '@utils/get-image'
-import { AvatarComponent } from '@components/common/avatar'
+import { ProfileAvatar } from '@components/profile/avatar'
 
 export function ConnectCard() {
   const router = useRouter()
@@ -36,7 +36,7 @@ export function ConnectCard() {
       <div className="align-items-center flex-column flex gap-4 md:flex-row p-2">
         {data?.displayName ? (
           <div>
-            <AvatarComponent
+            <ProfileAvatar
               image={getImage(data?.images, 1) ?? spotifyLogo.src}
               size="xlarge"
               label={data?.displayName.slice(0, 1)}

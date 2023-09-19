@@ -3,9 +3,10 @@ import { Card } from 'primereact/card'
 import { PlaybackCard } from '../playback/card'
 import { OpenInSpotifyButton } from '../common'
 
+import { ProfileAvatar } from './avatar'
+
 import { useProfileQuery } from '@api/hooks'
 import { getImage } from '@utils/get-image'
-import { AvatarComponent } from '@components/common/avatar'
 
 export function ProfileCard() {
   const { data } = useProfileQuery()
@@ -20,7 +21,7 @@ export function ProfileCard() {
     <Card>
       <div className="flex-column justify-content-between md:align-items-center flex gap-4 lg:flex-row">
         <header className="flex gap-4 p-2">
-          <AvatarComponent
+          <ProfileAvatar
             image={image}
             label={displayName.slice(0, 1)}
             size="xlarge"
