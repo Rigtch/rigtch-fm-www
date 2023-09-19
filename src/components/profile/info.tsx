@@ -1,4 +1,3 @@
-import { Avatar } from 'primereact/avatar'
 import { Button } from 'primereact/button'
 import { Toast } from 'primereact/toast'
 import { SlideMenu } from 'primereact/slidemenu'
@@ -13,6 +12,7 @@ import { ConnectButton } from '../connect'
 import { useProfileQuery } from '@api/hooks'
 import { getImage } from '@utils/get-image'
 import { useAuthCookies } from '@hooks/use-auth-cookies'
+import { AvatarComponent } from '@components/common/avatar'
 
 export function ProfileInfo() {
   const { data } = useProfileQuery()
@@ -58,12 +58,7 @@ export function ProfileInfo() {
     {
       template: () => (
         <div className="align-items-center flex gap-2 px-4 py-1">
-          <Avatar
-            image={image}
-            shape="circle"
-            label={displayName.slice(0, 1)}
-            className="border-circle"
-          />
+          <AvatarComponent image={image} label={displayName.slice(0, 1)} />
 
           <p className="m-0 text-xl font-medium text-white md:block">
             {displayName}
@@ -100,12 +95,10 @@ export function ProfileInfo() {
           {displayName}
         </p>
 
-        <Avatar
+        <AvatarComponent
           image={image}
-          shape="circle"
           size="large"
           label={displayName.slice(0, 1)}
-          className="border-circle"
         />
       </Button>
     </div>
