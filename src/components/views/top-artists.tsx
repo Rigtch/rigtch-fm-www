@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode } from 'react'
 
 import { Artist, TimeRange } from '@api/types'
-import { SelectTimeRange } from '@components/select-time-range'
+import { SelectTimeRange } from '@components/common'
 import {
   TopOneItemCard,
   TopOneItemCardSkeleton,

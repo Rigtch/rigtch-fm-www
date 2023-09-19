@@ -4,7 +4,7 @@ import { Skeleton } from 'primereact/skeleton'
 
 import { useTopGenresQuery } from '@api/hooks'
 import { TimeRange } from '@api/types'
-import { SelectTimeRange } from '@components/select-time-range'
+import { SelectTimeRange } from '@components/common'
 
 export function TopGenresSection() {
   const [timeRange, setTimeRange] = useState<TimeRange>(TimeRange.LONG_TERM)

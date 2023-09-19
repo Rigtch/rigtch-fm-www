@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-unresolved
+import { FormEvent } from 'primereact/ts-helpers'
 import { SelectButton } from 'primereact/selectbutton'
 
 import { TimeRange } from '@api/types'
@@ -18,7 +20,7 @@ export function SelectTimeRange({ value, onChange }: SelectTimeRangeProps) {
     <SelectButton
       value={value}
       options={timeRangeOptions}
-      onChange={({ value }) => value && onChange(value)}
+      onChange={({ value }: FormEvent<TimeRange>) => value && onChange(value)}
     />
   )
 }
