@@ -4,8 +4,8 @@ import { classNames } from 'primereact/utils'
 
 import { SpotifyIcon } from '@assets/svgs'
 
-export interface OpenInSpotifyButtonProps extends LinkProps {
-  href: string
+export interface OpenInSpotifyButtonProps extends Omit<LinkProps, 'href'> {
+  href?: string
   className?: string
 }
 
@@ -23,7 +23,7 @@ export function OpenInSpotifyButton({
       />
 
       <Link
-        href={href}
+        href={href ?? ''}
         target="_blank"
         className={classNames('open-in-spotify-button', className)}
         style={{ height: 24 }}
