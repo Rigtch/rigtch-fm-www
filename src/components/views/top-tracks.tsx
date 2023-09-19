@@ -2,7 +2,7 @@ import { HTMLAttributes, ReactNode } from 'react'
 
 import { TimeRange, Track } from '@api/types'
 import { ItemCard, ItemCardSize, ItemCardSkeleton } from '@components/item/card'
-import { SelectTimeRange } from '@components/select-time-range'
+import { SelectTimeRange } from '@components/common'
 import {
   TopOneItemCard,
   TopOneItemCardSkeleton,
