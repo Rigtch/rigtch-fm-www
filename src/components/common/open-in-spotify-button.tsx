@@ -1,8 +1,9 @@
+import Image from 'next/image'
 import Link, { LinkProps } from 'next/link'
 import { Tooltip } from 'primereact/tooltip'
 import { classNames } from 'primereact/utils'
 
-import { SpotifyIcon } from '@assets/svgs'
+import { spotifyIconWhite } from '@assets/images'
 
 export interface OpenInSpotifyButtonProps extends Omit<LinkProps, 'href'> {
   href?: string
@@ -29,7 +30,7 @@ export function OpenInSpotifyButton({
         style={{ height: 24 }}
         {...props}
       >
-        <SpotifyIcon />
+        <Image src={spotifyIconWhite} width="24" height="24" alt={''} />
       </Link>
     </>
   )

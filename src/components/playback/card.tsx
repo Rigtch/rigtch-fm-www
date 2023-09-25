@@ -28,13 +28,7 @@ export function PlaybackCard() {
     >
       <main className="flex gap-4">
         <div>
-          <Image
-            src={albumImage}
-            alt={album.name}
-            width="96"
-            height="96"
-            imageClassName="border-round-md"
-          />
+          <Image src={albumImage} alt={album.name} width="96" height="96" />
         </div>
 
         <div className="flex-column justify-content-between flex w-full gap-2">
