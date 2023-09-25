@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 
 import { ConnectButton } from './button'
 
-import { spotifyLogo } from '@assets/images'
+import { spotifyIconGreen } from '@assets/images'
 import { useProfileQuery } from '@api/hooks'
 import { getImage } from '@utils/get-image'
 import { ProfileAvatar } from '@components/profile/avatar'
@@ -37,7 +37,7 @@ export function ConnectCard() {
         {data?.displayName ? (
           <div>
             <ProfileAvatar
-              image={getImage(data?.images, 1) ?? spotifyLogo.src}
+              image={getImage(data?.images, 1) ?? spotifyIconGreen.src}
               size="xlarge"
               label={data?.displayName.slice(0, 1)}
               style={{ width: '128px', height: '128px' }}
@@ -49,7 +49,7 @@ export function ConnectCard() {
             />
           </div>
         ) : (
-          <Image src={spotifyLogo} alt="Spotify's logo" width="128" />
+          <Image src={spotifyIconGreen} alt="Spotify's logo" width="128" />
         )}
 
         <div className="flex-column md:align-items-center flex gap-4 w-full">
