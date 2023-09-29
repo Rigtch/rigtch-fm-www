@@ -20,7 +20,7 @@ export function OpenInSpotifyButton({
       />
 
       <Link href={href ?? ''} target="_blank" className={className} {...props}>
-        <i className="open-in-spotify-button pi pi-external-link transition-colors transition-duration-500 hover:text-purple-600 text-xl font-bold" />
+        <i className="open-in-spotify-button pi pi-external-link transition-colors transition-duration-300 text-white hover:text-cyan-500 text-xl font-bold" />
       </Link>
     </>
   )
