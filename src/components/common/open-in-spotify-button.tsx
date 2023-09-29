@@ -23,7 +23,11 @@ export function OpenInSpotifyButton({
       />
 
       <Link href={href ?? ''} target="_blank" className={className} {...props}>
+<<<<<<< HEAD
         <Image src={spotifyIconWhite} width={25} height={25} alt={''} />
+=======
+        <i className="open-in-spotify-button pi pi-external-link transition-colors transition-duration-200 text-white hover:text-cyan-500 text-xl font-bold" />
+>>>>>>> 6e73092 (feat(open-in-spotify-button): change transition duration and colors)
       </Link>
     </>
   )
