@@ -1,5 +1,8 @@
+import Image from 'next/image'
 import Link, { LinkProps } from 'next/link'
 import { Tooltip } from 'primereact/tooltip'
+
+import { spotifyIconWhite } from '@assets/images'
 
 export interface OpenInSpotifyButtonProps extends Omit<LinkProps, 'href'> {
   href?: string
@@ -20,7 +23,7 @@ export function OpenInSpotifyButton({
       />
 
       <Link href={href ?? ''} target="_blank" className={className} {...props}>
-        <i className="open-in-spotify-button pi pi-external-link transition-colors transition-duration-200 text-white hover:text-cyan-500 text-xl font-bold" />
+        <Image src={spotifyIconWhite} width={25} height={25} alt={''} />
       </Link>
     </>
   )
