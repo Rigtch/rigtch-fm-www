@@ -3,8 +3,8 @@ import { Mock, describe, test, vi } from 'vitest'
 
 import { useProfileQuery } from './use-profile'
 
-import { ACCESS_TOKEN } from '@api/constants'
 import { getProfile } from '@api/fetchers'
+import { ACCESS_TOKEN } from '@api/constants'
 import { queryClientWrapper } from '@tests/utils'
 import { profileMock } from '@tests/mocks'
 

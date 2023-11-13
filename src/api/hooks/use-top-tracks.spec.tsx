@@ -3,11 +3,11 @@ import { Mock, describe, test, vi } from 'vitest'
 
 import { useTopTracksQuery } from './use-top-tracks'
 
+import { TimeRange } from '@api/types'
 import { ACCESS_TOKEN } from '@api/constants'
 import { getTopTracks } from '@api/fetchers'
 import { queryClientWrapper } from '@tests/utils'
 import { spotifyResponseMockFactory, trackMock } from '@tests/mocks'
-import { TimeRange } from '@api/types'
 
 vi.mock('@api/fetchers')
 vi.mock('react-cookie', () => ({

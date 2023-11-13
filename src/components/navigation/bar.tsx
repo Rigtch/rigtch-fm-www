@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { NavigationListItemLink, NavigationListItem } from './list'
 
+import { Profile } from '@api/types'
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -13,7 +14,6 @@ import {
   NavigationMenuContent,
 } from '@components/ui/navigation-menu'
 import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar'
-import { Profile } from '@api/types'
 import { ConnectButton } from '@components/connect'
 
 export interface NavigationBarProps {

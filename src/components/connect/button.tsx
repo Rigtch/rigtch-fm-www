@@ -1,7 +1,7 @@
 'use client'
 
-import { Button } from '@components/ui/button'
 import { environment } from '@config/environment'
+import { Button } from '@components/ui/button'
 
 export function ConnectButton() {
   return (

@@ -3,10 +3,10 @@ import { renderHook, waitFor } from '@testing-library/react'
 
 import { useTopGenresQuery } from './use-top-genres'
 
+import { TimeRange } from '@api/types'
 import { ACCESS_TOKEN } from '@api/constants'
 import { getTopGenres } from '@api/fetchers'
 import { queryClientWrapper } from '@tests/utils'
-import { TimeRange } from '@api/types'
 
 vi.mock('@api/fetchers')
 vi.mock('react-cookie', () => ({

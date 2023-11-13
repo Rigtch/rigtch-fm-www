@@ -1,8 +1,8 @@
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query'
 
+import { TimeRange } from '@api/types'
 import { TOP_ARTISTS } from '@api/constants'
 import { getTopArtists } from '@api/fetchers'
-import { TimeRange } from '@api/types'
 import { useAuthCookies } from '@hooks/use-auth-cookies'
 
 export const useTopArtistsQuery = (
