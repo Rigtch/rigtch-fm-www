@@ -1,30 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '@api/constants'
-import { getProfile, getRefresh } from '@api/fetchers'
+import { getRefresh } from '@api/fetchers'
 
 export async function middleware(request: NextRequest) {
-  const destinationUrl = new URL('/profile', new URL(request.url))
   const response =
     request.nextUrl.pathname === '/'
-      ? NextResponse.redirect(destinationUrl.toString(), {
-          status: 302,
-        })
+      ? NextResponse.redirect(new URL('/profile', new URL(request.url)))
       : NextResponse.next()
 
   const refreshToken = request.cookies.get(REFRESH_TOKEN)?.value
-  const accessToken = request.cookies.get(ACCESS_TOKEN)?.value
-  const isLoggedIn = await getProfile(accessToken)
-    .catch(() => false)
-    .then(() => true)
 
-  if (!refreshToken || isLoggedIn) return NextResponse.next()
+  if (!refreshToken) return NextResponse.next()
 
-  const { accessToken: refreshedAccessToken } = await getRefresh(refreshToken)
+  const { accessToken } = await getRefresh(refreshToken)
 
   response.cookies.set({
     name: ACCESS_TOKEN,
-    value: refreshedAccessToken,
+    value: accessToken,
     path: '/',
   })
 
