@@ -1,12 +1,15 @@
 import { cookies } from 'next/headers'
 
 import { ACCESS_TOKEN } from '@api/constants'
-import { getProfile } from '@api/fetchers'
+import { fetchApi } from '@api/fetchers'
+import { Profile } from '@api/types'
 
 export default async function ProfilePage() {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const { displayName } = await getProfile(accessToken)
+  const { displayName } = await fetchApi<Profile>('/auth/profile', {
+    token: accessToken,
+  })
 
   return (
     <div>
