@@ -1,9 +1,9 @@
-import { environment } from '@config/environment'
+import { ConnectButton } from '@components/connect'
 
 export default function HomePage() {
   return (
     <div>
-      <a href={`${environment.API_URL}/auth/login`}>connect</a>
+      <ConnectButton />
     </div>
   )
 }
