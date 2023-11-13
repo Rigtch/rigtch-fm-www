@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 import Providers from './providers'
 
 import './globals.css'
+import { NavigationBar } from '@components/navigation-bar'
 
 export const metadata = {
   title: 'Next.js',
@@ -13,7 +14,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <NavigationBar />
+
+          <main>{children}</main>
+        </Providers>
       </body>
     </html>
   )
