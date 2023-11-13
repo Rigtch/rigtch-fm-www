@@ -1,9 +1,0 @@
-.playback-card {
-  min-width: none;
-}
-
-@media (width >= 768px) {
-  .playback-card {
-    min-width: 350px;
-  }
-}
