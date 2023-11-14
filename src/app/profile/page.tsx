@@ -1,5 +1,7 @@
 import { cookies } from 'next/headers'
 
+import '../audio-bars.css'
+
 import { ProfileCard } from '@components/profile'
 import { getProfile } from '@api/fetchers'
 import { ACCESS_TOKEN } from '@api/constants'

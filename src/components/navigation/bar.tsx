@@ -21,8 +21,6 @@ export interface NavigationBarProps {
 }
 
 export function NavigationBar({ profile }: NavigationBarProps) {
-  console.log(profile)
-
   return (
     <header className="flex justify-between px-4 py-2 bg-primary">
       <div className="flex items-center gap-4">

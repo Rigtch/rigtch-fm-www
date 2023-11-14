@@ -20,13 +20,13 @@
       }
     ],
     "paths": {
-      "@*": ["./*"],
+      "@*": ["./src/*"],
       "@pages/*": ["./src/pages/*"],
       "@app/*": ["./src/app/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@sections/*": ["./src/sections/*"],
       "@components/*": ["./src/components/*"],
-      "@context/*": ["./context/*"],
+      "@context/*": ["./src/context/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@config/*": ["./src/config/*"],
       "@api/*": ["./src/api/*"],
