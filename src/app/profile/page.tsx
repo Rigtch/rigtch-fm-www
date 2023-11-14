@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 
-import ProfileCard from '@components/profile/card'
+import { ProfileCard } from '@components/profile'
 import { getProfile } from '@api/fetchers'
 import { ACCESS_TOKEN } from '@api/constants'
 
