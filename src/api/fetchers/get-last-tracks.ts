@@ -17,6 +17,6 @@ export function getLastTracks(
 
   return fetchApi<SpotifyResponseWithCursors<Track>>(
     `/statistics/last-tracks?${urlSearchParameters.toString()}`,
-    { token }
+    { token, cache: 'no-cache' }
   )
 }
