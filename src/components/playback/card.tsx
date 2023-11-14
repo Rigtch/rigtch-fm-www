@@ -30,7 +30,7 @@ export function PlaybackCard() {
           className="rounded-md"
         />
 
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between w-full">
           <CardTitle className="whitespace-nowrap w-full font-normal flex flex-col gap-1">
             <p className="text-2xl">{track.name}</p>
             <p className="text-neutral-300">{formatArtists(track.artists)}</p>

@@ -27,18 +27,8 @@ export async function fetchApi<T>(
 
   const parsedResponse = await response.json()
 
-  if ([401, 403].includes(response.status)) {
-    // if (
-    //   parsedResponse.message === 'The access token expired' &&
-    //   refreshTokenFunction
-    // ) {
-    //   await refreshTokenFunction?.().then(() =>
-    //     fetchApi(path, { method, token })
-    //   )
-    // }
-
+  if ([401, 403].includes(response.status))
     throw new Error(parsedResponse.message)
-  }
 
   return parsedResponse
 }
