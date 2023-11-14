@@ -21,6 +21,8 @@ export interface NavigationBarProps {
 }
 
 export function NavigationBar({ profile }: NavigationBarProps) {
+  console.log(profile)
+
   return (
     <header className="flex justify-between px-4 py-2 bg-primary">
       <div className="flex items-center gap-4">
@@ -77,9 +79,9 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <Avatar>
-                <AvatarImage src={profile.images[0].url} />
-                <AvatarFallback>
-                  {profile.displayName.slice(0, 2)}
+                <AvatarImage src={profile.images[0]?.url} />
+                <AvatarFallback className="text-black text-xl">
+                  {profile.displayName.slice(0, 1)}
                 </AvatarFallback>
               </Avatar>
             </>
