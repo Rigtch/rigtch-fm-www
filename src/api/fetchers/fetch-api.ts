@@ -27,8 +27,7 @@ export async function fetchApi<T>(
 
   const parsedResponse = await response.json()
 
-  if ([401, 403].includes(response.status))
-    throw new Error(parsedResponse.message)
+  if (!response.ok) throw new Error(parsedResponse.message)
 
   return parsedResponse
 }

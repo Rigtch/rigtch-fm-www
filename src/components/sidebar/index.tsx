@@ -17,21 +17,23 @@ export function Sidebar() {
             label="Profile"
             icon={FaUserCircle}
           />
-          <SidebarSectionItem
-            href="/top-artists"
-            label="Top Artists"
-            icon={FaStar}
-          />
-          <SidebarSectionItem
-            href="/top-tracks"
-            label="Top Tracks"
-            icon={FaStar}
-          />
-          <SidebarSectionItem
-            href="/last-tracks"
-            label="Last Tracks"
-            icon={FaClock}
-          />
+          <div className="px-4">
+            <SidebarSectionItem
+              href="/top-artists"
+              label="Top Artists"
+              icon={FaStar}
+            />
+            <SidebarSectionItem
+              href="/top-tracks"
+              label="Top Tracks"
+              icon={FaStar}
+            />
+            <SidebarSectionItem
+              href="/last-tracks"
+              label="Last Tracks"
+              icon={FaClock}
+            />
+          </div>
         </main>
       </section>
     </aside>
