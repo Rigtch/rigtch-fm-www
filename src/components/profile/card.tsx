@@ -1,7 +1,6 @@
 'use client'
 
-import { OpenInSpotifyButton } from '../common/open-in-spotify-button'
-
+import { OpenInSpotifyButton } from '@components/common'
 import { Avatar, AvatarImage, AvatarFallback } from '@components/ui/avatar'
 import { Profile } from '@api/types'
 import {
@@ -12,14 +11,7 @@ import {
   CardTitle,
 } from '@components/ui/card'
 
-export type ProfileCardProps = Profile
-
-export default function ProfileCard({
-  displayName,
-  images,
-  followers,
-  href,
-}: ProfileCardProps) {
+export function ProfileCard({ displayName, images, followers, href }: Profile) {
   return (
     <Card className="w-1/2">
       <CardHeader className="flex-row items-center gap-3">
