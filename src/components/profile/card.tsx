@@ -24,7 +24,7 @@ export default function ProfileCard({
     <Card className="w-1/2">
       <CardHeader className="flex-row items-center gap-3">
         <Avatar className="w-32 h-32">
-          <AvatarImage src={images[0]?.url} />
+          <AvatarImage src={images[1]?.url} />
 
           <AvatarFallback className="bg-neutral-700 text-5xl">
             {displayName.slice(0, 1)}
