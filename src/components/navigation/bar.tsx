@@ -2,8 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import {
+  FaArrowRightToBracket,
+  FaArrowUpRightFromSquare,
+} from 'react-icons/fa6'
 
-import { NavigationListItemLink, NavigationListItem } from './list'
+import { NavigationListItem } from './list-item'
 
 import { Profile } from '@api/types'
 import {
@@ -37,26 +41,6 @@ export function NavigationBar({ profile }: NavigationBarProps) {
 
       <NavigationMenu className="w-full">
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link href="/profile">
-              <NavigationMenuTrigger>Profile</NavigationMenuTrigger>
-            </Link>
-
-            <NavigationMenuContent>
-              <ul>
-                <NavigationListItemLink
-                  href="/top-artists"
-                  label="Top Artists"
-                />
-                <NavigationListItemLink href="/top-tracks" label="Top Tracks" />
-                <NavigationListItemLink
-                  href="/last-tracks"
-                  label="Last Tracks"
-                />
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-
           {profile ? (
             <>
               <NavigationMenuItem>
@@ -65,19 +49,23 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
-                  <ul>
-                    <NavigationListItem label="Disconnect" />
-                    <NavigationListItemLink
-                      href={profile.href}
-                      label="Open in Spotify"
-                      replace
-                      target="_blank"
-                    />
-                  </ul>
+                  <NavigationListItem className="gap-2">
+                    <FaArrowRightToBracket />
+                    Disconnect
+                  </NavigationListItem>
+
+                  <NavigationListItem href="/profile" asChild className="gap-2">
+                    <Link href={profile.href} replace target="_blank">
+                      <FaArrowUpRightFromSquare />
+                      Open in Spotify
+                    </Link>
+                  </NavigationListItem>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
               <Avatar>
                 <AvatarImage src={profile.images[0]?.url} />
+
                 <AvatarFallback className="text-black text-xl">
                   {profile.displayName.slice(0, 1)}
                 </AvatarFallback>

@@ -14,8 +14,8 @@ import { PlaybackCard } from '@components/playback'
 
 export function ProfileCard({ displayName, images, followers, href }: Profile) {
   return (
-    <Card className="min-w-[50%]">
-      <CardHeader className="flex-row items-between gap-8">
+    <Card className="min-w-[75%]">
+      <CardHeader className="flex-row justify-between items-center gap-8">
         <div className="flex items-center gap-4">
           <Avatar className="w-32 h-32">
             <AvatarImage src={images[1]?.url} />
