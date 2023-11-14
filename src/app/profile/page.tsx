@@ -12,7 +12,7 @@ export default async function ProfilePage() {
   const profile = await getProfile(accessToken)
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center w-full">
       <ProfileCard {...profile} />
     </div>
   )

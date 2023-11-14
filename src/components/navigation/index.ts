@@ -1,2 +1,2 @@
 export * from './bar'
-export * from './list/item-link'
+export * from './list-item'

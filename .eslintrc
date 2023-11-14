@@ -52,6 +52,7 @@
           ["@hooks", "./src/hooks"],
           ["@config", "./src/config"],
           ["@api", "./src/api"],
+          ["@app", "./src/app"],
           ["@common", "./src/common"],
           ["@utils", "./src/utils"],
           ["@assets", "./src/assets"],

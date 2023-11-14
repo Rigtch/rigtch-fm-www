@@ -20,7 +20,7 @@ export function PlaybackCard() {
   } = data
 
   return (
-    <Card className="bg-success border-success p-4 w-full h-full items-center">
+    <Card className="bg-success border-success p-4 w-content h-full items-center">
       <CardHeader className="flex flex-row gap-4 p-0 w-full space-y-0">
         <Image
           src={album.images[0].url}
