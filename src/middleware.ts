@@ -13,11 +13,14 @@ export async function middleware(request: NextRequest) {
 
   if (!refreshToken) return NextResponse.next()
 
-  const { accessToken } = await getRefresh(refreshToken)
+  const { accessToken, expiresIn } = await getRefresh(refreshToken)
+
+  console.log('refreshing token')
 
   response.cookies.set({
     name: ACCESS_TOKEN,
     value: accessToken,
+    maxAge: expiresIn,
     path: '/',
   })
 
