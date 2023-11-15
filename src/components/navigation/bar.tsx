@@ -6,6 +6,8 @@ import {
   FaArrowRightToBracket,
   FaArrowUpRightFromSquare,
 } from 'react-icons/fa6'
+import { useQueryClient } from '@tanstack/react-query'
+import { useRouter } from 'next/navigation'
 
 import { NavigationListItem } from './list-item'
 
@@ -19,12 +21,26 @@ import {
 } from '@components/ui/navigation-menu'
 import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar'
 import { ConnectButton } from '@components/connect'
+import { useAuthCookies } from '@hooks/use-auth-cookies'
 
 export interface NavigationBarProps {
   profile?: Profile
 }
 
 export function NavigationBar({ profile }: NavigationBarProps) {
+  const { removeAuthCookies } = useAuthCookies()
+  const queryClient = useQueryClient()
+  const router = useRouter()
+
+  function disconnect() {
+    removeAuthCookies()
+
+    queryClient.clear()
+
+    router.push('/')
+    router.refresh()
+  }
+
   return (
     <header className="flex justify-between px-4 py-2 bg-primary border-b border-primary-lighter top-0 sticky z-10">
       <div className="flex items-center gap-4">
@@ -49,7 +65,7 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
-                  <NavigationListItem className="gap-2">
+                  <NavigationListItem className="gap-2" onClick={disconnect}>
                     <FaArrowRightToBracket />
                     Disconnect
                   </NavigationListItem>
