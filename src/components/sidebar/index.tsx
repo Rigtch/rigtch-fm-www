@@ -9,7 +9,7 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="bg-primary border-r min-h-screen border-primary-lighter p-4 max-w-[300px] hidden md:block">
+    <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden md:block top-[60px] sticky">
       <section className="flex flex-col gap-2">
         <header>
           <h2 className="text-xl font-semibold px-2">Profile</h2>

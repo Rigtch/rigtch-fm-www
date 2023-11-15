@@ -8,6 +8,7 @@ import './globals.css'
 import { NavigationBar } from '@components/navigation'
 import { getProfile } from '@api/fetchers'
 import { ACCESS_TOKEN } from '@api/constants'
+import { Sidebar } from '@components/sidebar'
 
 export const metadata = {
   title: 'Next.js',
@@ -29,7 +30,13 @@ export default async function RootLayout({ children }: LayoutProps) {
         <Providers>
           <NavigationBar profile={profile} />
 
-          <main>{children}</main>
+          <div className="flex">
+            {profile && <Sidebar />}
+
+            <main className="my-8 md:my-16 w-full min-h-[200vh]">
+              {children}
+            </main>
+          </div>
         </Providers>
       </body>
     </html>
