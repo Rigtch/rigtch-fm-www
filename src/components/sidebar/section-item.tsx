@@ -7,15 +7,17 @@ export interface SidebarSectionItemProps {
   label: string
   href: string
   icon?: IconType
-  isActive?: boolean
+  pathname?: string
 }
 
 export function SidebarSectionItem({
   label,
   href,
   icon: Icon,
-  isActive = false,
+  pathname,
 }: SidebarSectionItemProps) {
+  const isActive = pathname === href
+
   return (
     <Button
       variant={isActive ? 'secondary' : 'ghost'}

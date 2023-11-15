@@ -36,7 +36,7 @@ export function NavigationBar({ profile }: NavigationBarProps) {
           className="rounded-lg"
         />
 
-        <h1 className="text-2xl font-semibold">Rigtch Music</h1>
+        <h1 className="text-xl md:text-2xl font-semibold">Rigtch Music</h1>
       </div>
 
       <NavigationMenu className="w-full">
