@@ -13,7 +13,7 @@ export default async function ProfilePage() {
   const profile = await getProfile(accessToken)
 
   return (
-    <div className="flex flex-col justify-center w-full px-12 gap-8">
+    <div className="flex flex-col justify-center w-full px-4 md:px-12 gap-8">
       <ProfileCard {...profile} />
 
       <TopGenresSection />
