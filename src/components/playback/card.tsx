@@ -1,18 +1,23 @@
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
 
 import { PlaybackStateToggleButton } from './state-toggle-button'
+import { PlaybackCardSkeleton } from './card.skeleton'
 
 import { Card, CardFooter, CardHeader, CardTitle } from '@components/ui/card'
 import { usePlaybackStateContext } from '@context/playback-state'
 import { formatArtists } from '@utils/formatters'
 import { AudioBars, OpenInSpotifyButton } from '@components/common'
+import { Skeleton } from '@components/ui/skeleton'
+import { cn } from '@utils/cn'
 
 export function PlaybackCard() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
 
-  if (!data) return null
+  if (!data) return <PlaybackCardSkeleton />
 
   const {
     device,
@@ -27,8 +32,14 @@ export function PlaybackCard() {
           width={96}
           height={96}
           alt={album.name}
-          className="rounded-md w-full sm:w-auto"
+          className={cn(
+            'rounded-md w-full sm:w-auto',
+            isImageLoaded ? 'opacity-100' : 'opacity-0'
+          )}
+          onLoadingComplete={() => setIsImageLoaded(true)}
         />
+
+        {!isImageLoaded && <Skeleton className="h-[128px] w-[128px]" />}
 
         <div className="flex flex-col justify-between w-full gap-4 md:gap-0">
           <CardTitle className="whitespace-nowrap w-full font-normal flex flex-col gap-1">
