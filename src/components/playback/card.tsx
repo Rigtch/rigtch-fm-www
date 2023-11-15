@@ -25,7 +25,7 @@ export function PlaybackCard() {
   } = data
 
   return (
-    <Card className="bg-success border-success p-4 w-full h-full items-center !m-0 lg:w-[380px] xl:min-w-[380px]">
+    <Card className="bg-success border-success p-4 w-full h-full items-center !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5">
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
         <Image
           src={album.images[0].url}
@@ -41,9 +41,11 @@ export function PlaybackCard() {
 
         {!isImageLoaded && <Skeleton className="h-[128px] w-[128px]" />}
 
-        <div className="flex flex-col justify-between w-full gap-4 md:gap-0">
-          <CardTitle className="whitespace-nowrap w-full font-normal flex flex-col gap-1">
-            <p className="text-2xl">{track.name}</p>
+        <div className="flex flex-col justify-between w-full max-w-[calc(100%-142px)] gap-4 md:gap-0">
+          <CardTitle className="whitespace-nowrap font-normal flex flex-col gap-1">
+            <p className="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap">
+              {track.name}
+            </p>
             <p className="text-neutral-300">{formatArtists(track.artists)}</p>
           </CardTitle>
 
