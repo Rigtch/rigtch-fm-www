@@ -26,7 +26,7 @@ export interface NavigationBarProps {
 
 export function NavigationBar({ profile }: NavigationBarProps) {
   return (
-    <header className="flex justify-between px-4 py-2 bg-primary border-b border-primary-lighter ">
+    <header className="flex justify-between px-4 py-2 bg-primary border-b border-primary-lighter top-0 sticky z-10">
       <div className="flex items-center gap-4">
         <Image
           src="/rigtch-icon.png"
