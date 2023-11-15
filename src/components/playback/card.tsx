@@ -20,14 +20,14 @@ export function PlaybackCard() {
   } = data
 
   return (
-    <Card className="bg-success border-success p-4 w-full md:w-max h-full items-center !m-0">
-      <CardHeader className="flex flex-col md:flex-row gap-4 p-0 w-full space-y-0">
+    <Card className="bg-success border-success p-4 w-full h-full items-center !m-0 lg:w-[380px] xl:min-w-[380px]">
+      <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
         <Image
           src={album.images[0].url}
           width={96}
           height={96}
           alt={album.name}
-          className="rounded-md w-full md:w-auto"
+          className="rounded-md w-full sm:w-auto"
         />
 
         <div className="flex flex-col justify-between w-full gap-4 md:gap-0">
