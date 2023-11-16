@@ -1,6 +1,6 @@
 import { Artist, SpotifyResponseWithOffset } from '@api/types'
-import { ItemCard } from '@components/item/card'
-import { TopItemCard } from '@components/item/top-card/top-card'
+import { Item, TopItemCard } from '@components/item'
+import { Separator } from '@components/ui/separator'
 
 export interface TopArtistsSectionProps {
   artists: SpotifyResponseWithOffset<Artist>
@@ -26,14 +26,15 @@ export function TopArtistsSection({ artists }: TopArtistsSectionProps) {
             ))}
           </div>
 
-          {artists.items.slice(3).map(({ images, ...artist }, index) => (
-            <ItemCard
-              {...artist}
-              image={images[0].url}
-              key={artist.id}
-              position={index + 4}
-            />
-          ))}
+          <div className="flex flex-col gap-2">
+            {artists.items.slice(3).map(({ images, ...artist }, index) => (
+              <div key={artist.id}>
+                <Item {...artist} image={images[0].url} position={index + 4} />
+
+                {index !== artists.items.length - 4 && <Separator />}
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </section>
