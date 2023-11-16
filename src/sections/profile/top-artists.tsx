@@ -1,3 +1,5 @@
+'use client'
+
 import { Artist, SpotifyResponseWithOffset } from '@api/types'
 import { Item, TopItemCard } from '@components/item'
 import { Separator } from '@components/ui/separator'
@@ -7,6 +9,13 @@ export interface TopArtistsSectionProps {
 }
 
 export function TopArtistsSection({ artists }: TopArtistsSectionProps) {
+  const artistsSorted = artists.items.map((artist, index) => ({
+    ...artist,
+    position: index + 1,
+  }))
+
+  artistsSorted.splice(0, 2, artistsSorted[1], artistsSorted[0])
+
   return (
     <section className="flex flex-col gap-3">
       <header>
@@ -16,20 +25,15 @@ export function TopArtistsSection({ artists }: TopArtistsSectionProps) {
       <main>
         <div className="flex flex-col gap-5">
           <div className="flex flex-row gap-3">
-            {artists.items.slice(0, 3).map(({ images, ...artist }, index) => (
-              <TopItemCard
-                {...artist}
-                image={images[0].url}
-                key={artist.id}
-                position={index + 1}
-              />
+            {artistsSorted.slice(0, 3).map(({ images, ...artist }) => (
+              <TopItemCard {...artist} image={images[0].url} key={artist.id} />
             ))}
           </div>
 
           <div className="flex flex-col gap-2">
-            {artists.items.slice(3).map(({ images, ...artist }, index) => (
+            {artistsSorted.slice(3).map(({ images, ...artist }, index) => (
               <div key={artist.id}>
-                <Item {...artist} image={images[0].url} position={index + 4} />
+                <Item {...artist} image={images[0].url} />
 
                 {index !== artists.items.length - 4 && <Separator />}
               </div>
