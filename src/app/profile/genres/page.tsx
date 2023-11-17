@@ -1,20 +1,18 @@
 import { cookies } from 'next/headers'
 
-import { getTopArtists, getTopGenres } from '@api/fetchers'
 import { ACCESS_TOKEN } from '@api/constants'
-import { TopGenresSection } from '@sections/profile/top-genres'
-import { TopArtistsSection } from '@sections/profile/top-artists'
-import { SelectTimeRange } from '@components/common'
+import { getTopGenres } from '@api/fetchers'
 import { PageProps } from '@common/types'
+import { TopGenresSection } from '@sections/profile'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
+import { SelectTimeRange } from '@components/common'
 
-export default async function ProfilePage({ searchParams }: PageProps) {
+export default async function ProfileGenresPage({ searchParams }: PageProps) {
   const timeRange = getTimeRangeFromSearchParams(searchParams)
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
   const genres = await getTopGenres(accessToken, timeRange)
-  const artists = await getTopArtists(accessToken, timeRange)
 
   return (
     <>
@@ -23,8 +21,6 @@ export default async function ProfilePage({ searchParams }: PageProps) {
       </div>
 
       <TopGenresSection {...genres} />
-
-      <TopArtistsSection artists={artists} />
     </>
   )
 }
