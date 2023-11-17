@@ -12,7 +12,12 @@ export default async function ProfileArtistsPage({ searchParams }: PageProps) {
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const artists = await getTopArtists(accessToken, timeRange, 100)
+  const artistsFirstPart = await getTopArtists(accessToken, timeRange, 50)
+  const artistsSecondPart = await getTopArtists(accessToken, timeRange, 50, 49)
+
+  // Remove the first item of the second part to avoid duplicates
+  artistsSecondPart.items.shift()
+  const artists = artistsFirstPart.items.concat(artistsSecondPart.items)
 
   return (
     <>
@@ -20,7 +25,7 @@ export default async function ProfileArtistsPage({ searchParams }: PageProps) {
         <SelectTimeRange initialValue={timeRange} />
       </div>
 
-      <TopArtistsSection artists={artists} />
+      <TopArtistsSection items={artists} />
     </>
   )
 }
