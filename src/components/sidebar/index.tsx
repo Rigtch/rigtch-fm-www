@@ -1,6 +1,6 @@
 'use client'
 
-import { FaUserCircle, FaStar, FaClock } from 'react-icons/fa'
+import { LuDisc3, LuMic2, LuUserCircle } from 'react-icons/lu'
 import { usePathname } from 'next/navigation'
 
 import { SidebarSectionItem } from './section-item'
@@ -20,26 +20,20 @@ export function Sidebar() {
             href="/profile"
             label="Profile"
             pathname={pathname}
-            icon={FaUserCircle}
+            icon={LuUserCircle}
           />
           <div className="px-4">
             <SidebarSectionItem
-              href="/top-artists"
+              href="/profile/genres"
+              label="Top Genres"
+              pathname={pathname}
+              icon={LuDisc3}
+            />
+            <SidebarSectionItem
+              href="/profile/artists"
               label="Top Artists"
               pathname={pathname}
-              icon={FaStar}
-            />
-            <SidebarSectionItem
-              href="/top-tracks"
-              label="Top Tracks"
-              pathname={pathname}
-              icon={FaStar}
-            />
-            <SidebarSectionItem
-              href="/last-tracks"
-              label="Last Tracks"
-              pathname={pathname}
-              icon={FaClock}
+              icon={LuMic2}
             />
           </div>
         </main>
