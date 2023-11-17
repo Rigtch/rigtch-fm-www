@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import { FaStar } from 'react-icons/fa6'
 
 import { stars } from './start'
+import { ItemImage } from './image'
 
 import { cn } from '@utils/cn'
 import { Badge } from '@components/ui/badge'
@@ -33,13 +33,7 @@ export function TopItemCard({
           }}
           className="p-1 rounded-xl"
         >
-          <Image
-            src={image}
-            alt={''}
-            width="164"
-            height="164"
-            className="rounded-md"
-          />
+          <ItemImage src={image} alt={name} width="164" height="164" />
         </div>
 
         <span className="text-2xl font-bold">{name}</span>

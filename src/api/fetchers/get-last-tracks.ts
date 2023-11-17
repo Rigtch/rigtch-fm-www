@@ -5,8 +5,8 @@ import { fetchApi } from './fetch-api'
 export function getLastTracks(
   token?: string,
   limit = 10,
-  before?: string,
-  after?: string
+  before?: string | null,
+  after?: string | null
 ) {
   const urlSearchParameters = new URLSearchParams({
     limit: limit + '',

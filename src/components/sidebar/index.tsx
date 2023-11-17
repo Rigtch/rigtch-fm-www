@@ -1,6 +1,6 @@
 'use client'
 
-import { LuDisc3, LuMic2, LuUserCircle } from 'react-icons/lu'
+import { LuDisc3, LuMic2, LuUserCircle, LuClock } from 'react-icons/lu'
 import { usePathname } from 'next/navigation'
 
 import { SidebarSectionItem } from './section-item'
@@ -12,30 +12,45 @@ export function Sidebar() {
     <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden md:block top-[60px] sticky">
       <section className="flex flex-col gap-2">
         <header>
-          <h2 className="text-xl font-semibold px-2">Profile</h2>
+          <h3 className="text-xl font-semibold px-2">Profile</h3>
         </header>
 
-        <main>
+        <main className="flex flex-col gap-2">
           <SidebarSectionItem
             href="/profile"
-            label="Profile"
+            label="Overview"
             pathname={pathname}
             icon={LuUserCircle}
           />
-          <div className="px-4">
-            <SidebarSectionItem
-              href="/profile/genres"
-              label="Top Genres"
-              pathname={pathname}
-              icon={LuDisc3}
-            />
-            <SidebarSectionItem
-              href="/profile/artists"
-              label="Top Artists"
-              pathname={pathname}
-              icon={LuMic2}
-            />
-          </div>
+
+          <section className="pl-4 flex flex-col gap-2">
+            <header>
+              <h4 className="text-lg font-semibold px-2">Top</h4>
+            </header>
+
+            <main>
+              <SidebarSectionItem
+                href="/profile/top/genres"
+                label="Top Genres"
+                pathname={pathname}
+                icon={LuDisc3}
+              />
+
+              <SidebarSectionItem
+                href="/profile/top/artists"
+                label="Top Artists"
+                pathname={pathname}
+                icon={LuMic2}
+              />
+            </main>
+          </section>
+
+          <SidebarSectionItem
+            href="/profile/recently-played"
+            label="Recently Played"
+            pathname={pathname}
+            icon={LuClock}
+          />
         </main>
       </section>
     </aside>
