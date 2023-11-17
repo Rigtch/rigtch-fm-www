@@ -23,8 +23,8 @@ export function TopArtistsSection({ items }: TopArtistsSectionProps) {
       </header>
 
       <main>
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-row gap-3">
+        <div className="flex flex-col justify-center gap-5">
+          <div className="flex flex-col md:flex-row self-center items-center md:w-3/4 justify-center gap-5 md:gap-3 pt-4">
             {artistsSorted.slice(0, 3).map(({ images, ...artist }) => (
               <TopItemCard {...artist} image={images[0].url} key={artist.id} />
             ))}
