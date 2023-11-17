@@ -7,6 +7,7 @@ import { TopArtistsSection } from '@sections/profile/top-artists'
 import { PageProps } from '@common/types'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
 import { RecentlyPlayedSection } from '@sections/profile'
+import { SelectTimeRange } from '@components/common'
 
 export default async function ProfilePage({ searchParams }: PageProps) {
   const timeRange = getTimeRangeFromSearchParams(searchParams)
@@ -19,6 +20,10 @@ export default async function ProfilePage({ searchParams }: PageProps) {
 
   return (
     <>
+      <div className="flex">
+        <SelectTimeRange initialValue={timeRange} />
+      </div>
+
       <TopGenresSection {...genres} />
 
       <TopArtistsSection items={artists.items} />

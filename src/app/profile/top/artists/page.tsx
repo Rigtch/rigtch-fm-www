@@ -6,7 +6,9 @@ import { PageProps } from '@common/types'
 import { TopArtistsSection } from '@sections/profile'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
 
-export default async function ProfileArtistsPage({ searchParams }: PageProps) {
+export default async function ProfileTopArtistsPage({
+  searchParams,
+}: PageProps) {
   const timeRange = getTimeRangeFromSearchParams(searchParams)
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
