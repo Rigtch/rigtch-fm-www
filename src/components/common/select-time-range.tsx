@@ -1,10 +1,10 @@
 'use client'
 
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 import { ToggleGroup, ToggleGroupItem } from '@components/ui/toggle-group'
 import { TimeRange } from '@api/types'
-import { isTimeRange } from '@utils/time-range'
 
 export interface SelectTimeRangeProps {
   initialValue: TimeRange
@@ -18,23 +18,12 @@ export function SelectTimeRange({ initialValue }: SelectTimeRangeProps) {
   ]
 
   const pathname = usePathname()
-  const router = useRouter()
-
-  function onValueChange(value: string) {
-    const checkedValue = isTimeRange(value) ? value : initialValue
-
-    router.push(`${pathname}?time-range=${checkedValue}`)
-  }
 
   return (
-    <ToggleGroup
-      value={initialValue}
-      type="single"
-      onValueChange={onValueChange}
-    >
+    <ToggleGroup value={initialValue} type="single">
       {timeRangeOptions.map(({ label, value }) => (
-        <ToggleGroupItem key={value} value={value}>
-          {label}
+        <ToggleGroupItem key={value} value={value} asChild>
+          <Link href={`${pathname}?time-range=${value}`}>{label}</Link>
         </ToggleGroupItem>
       ))}
     </ToggleGroup>
