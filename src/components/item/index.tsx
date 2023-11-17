@@ -2,12 +2,13 @@ import { ItemImage } from './image'
 
 import { cn } from '@utils/cn'
 import { OpenInSpotifyButton } from '@components/common'
+import { TrackArtist } from '@api/types'
 
 export interface ItemProps {
   name: string
   image: string
   href?: string
-  artists?: string
+  artists?: TrackArtist[]
   position?: number
 }
 
@@ -25,9 +26,11 @@ export function Item({ name, image, href, position, artists }: ItemProps) {
 
         <div className="flex flex-col gap-2">
           <h3 className="text-2xl leading-none">{name}</h3>
-          <h4 className="text-md leading-none text-primary-foreground/80">
-            {artists}
-          </h4>
+          {artists && (
+            <h4 className="text-md leading-none text-primary-foreground/80">
+              {artists?.map(({ name }) => name).join(', ')}
+            </h4>
+          )}
         </div>
       </header>
 
@@ -38,4 +41,5 @@ export function Item({ name, image, href, position, artists }: ItemProps) {
   )
 }
 
+export * from './image'
 export * from './top-card'

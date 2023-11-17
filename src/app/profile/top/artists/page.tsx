@@ -3,8 +3,8 @@ import { cookies } from 'next/headers'
 import { ACCESS_TOKEN } from '@api/constants'
 import { getTopArtists } from '@api/fetchers'
 import { PageProps } from '@common/types'
-import { TopArtistsSection } from '@sections/profile'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
+import { TopItemsSection } from '@sections/top-items'
 
 export default async function ProfileTopArtistsPage({
   searchParams,
@@ -22,7 +22,7 @@ export default async function ProfileTopArtistsPage({
 
   return (
     <>
-      <TopArtistsSection items={artists} />
+      <TopItemsSection items={artists} title="Top Artists" />
     </>
   )
 }

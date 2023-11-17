@@ -1,21 +1,27 @@
 import { cookies } from 'next/headers'
 
-import { getLastTracks, getTopArtists, getTopGenres } from '@api/fetchers'
+import {
+  getLastTracks,
+  getTopArtists,
+  getTopGenres,
+  getTopTracks,
+} from '@api/fetchers'
 import { ACCESS_TOKEN } from '@api/constants'
-import { TopGenresSection } from '@sections/profile/top-genres'
-import { TopArtistsSection } from '@sections/profile/top-artists'
 import { PageProps } from '@common/types'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
-import { RecentlyPlayedSection } from '@sections/profile'
-import { SelectTimeRange } from '@components/common'
+import { GenreChip, SeeMoreButton, SelectTimeRange } from '@components/common'
+import { TopItemsSection } from '@sections/top-items'
+import { ItemsSection } from '@sections/items'
+import { DefaultSection } from '@sections/default'
 
 export default async function ProfilePage({ searchParams }: PageProps) {
   const timeRange = getTimeRangeFromSearchParams(searchParams)
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const genres = await getTopGenres(accessToken, timeRange)
+  const { genres } = await getTopGenres(accessToken, timeRange)
   const artists = await getTopArtists(accessToken, timeRange)
+  const tracks = await getTopTracks(accessToken, timeRange)
   const recentlyPlayedTracks = await getLastTracks(accessToken)
 
   return (
@@ -24,11 +30,29 @@ export default async function ProfilePage({ searchParams }: PageProps) {
         <SelectTimeRange initialValue={timeRange} />
       </div>
 
-      <TopGenresSection {...genres} />
+      <DefaultSection title="Top Genres">
+        <div className="flex flex-row flex-wrap gap-2">
+          {genres?.map(genre => (
+            <div key={genre}>
+              <GenreChip genre={genre} />
+            </div>
+          ))}
+        </div>
 
-      <TopArtistsSection items={artists.items} />
+        <SeeMoreButton href="/profile/top/genres" timeRange={timeRange} />
+      </DefaultSection>
 
-      <RecentlyPlayedSection items={recentlyPlayedTracks.items} />
+      <TopItemsSection items={artists.items} title="Top Artists">
+        <SeeMoreButton href="/profile/top/artists" timeRange={timeRange} />
+      </TopItemsSection>
+
+      <TopItemsSection items={tracks.items} title="Top Tracks">
+        <SeeMoreButton href="/profile/top/tracks" timeRange={timeRange} />
+      </TopItemsSection>
+
+      <ItemsSection items={recentlyPlayedTracks.items} title="Recently Played">
+        <SeeMoreButton href="/profile/recently-played" />
+      </ItemsSection>
     </>
   )
 }

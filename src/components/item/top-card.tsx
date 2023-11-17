@@ -4,12 +4,14 @@ import { ItemImage } from './image'
 
 import { cn } from '@utils/cn'
 import { Badge } from '@components/ui/badge'
+import { TrackArtist } from '@api/types'
 
 export interface TopOneItemCardProps {
   name: string
   image: string
   position?: number
   genres?: string[]
+  artists?: TrackArtist[]
 }
 
 export function TopItemCard({
@@ -17,6 +19,7 @@ export function TopItemCard({
   image,
   position,
   genres,
+  artists,
 }: TopOneItemCardProps) {
   const stars = [1, 2, 3, 2, 1]
 
@@ -35,21 +38,31 @@ export function TopItemCard({
           }}
           className="p-1 rounded-xl"
         >
-          <ItemImage src={image} alt={name} width="164" height="164" />
+          <ItemImage src={image} alt={name} width={164} height={164} />
         </div>
 
-        <span className="text-2xl font-bold">{name}</span>
+        <div className="flex flex-col items-center">
+          <h3 className="text-2xl font-bold">{name}</h3>
+
+          {artists && (
+            <h4 className="text-xl text-primary-foreground/80">
+              {artists.map(({ name }) => name).join(', ')}
+            </h4>
+          )}
+        </div>
 
         <div className="flex flex-col justify-center items-center gap-4">
           <span className="text-center text-5xl">{position}</span>
 
-          <footer className="flex flex-row gap-2 flex-wrap justify-center h-full">
-            {genres?.slice(0, 3).map((genre, index) => (
-              <Badge key={index} className="text-primary-foreground/80">
-                {genre}
-              </Badge>
-            ))}
-          </footer>
+          {genres && (
+            <div className="flex flex-row gap-2 flex-wrap justify-center h-full">
+              {genres?.slice(0, 3).map((genre, index) => (
+                <Badge key={index} className="text-primary-foreground/80">
+                  {genre}
+                </Badge>
+              ))}
+            </div>
+          )}
 
           <div className="flex flex-row gap-1 mt-4">
             {stars.map((size, index) => (
@@ -71,17 +84,6 @@ export function TopItemCard({
           </div>
         </div>
       </header>
-<<<<<<< HEAD
-
-      <footer className="flex flex-row gap-2 flex-wrap justify-center w-full lg:w-64">
-        {genres?.slice(0, 3).map((genre, index) => (
-          <Badge key={index} className="text-slate-400">
-            {genre}
-          </Badge>
-        ))}
-      </footer>
-=======
->>>>>>> 45ea53d (refactor: top artists styling)
     </div>
   )
 }

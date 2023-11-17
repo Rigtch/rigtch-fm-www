@@ -2,7 +2,7 @@ import { cookies } from 'next/headers'
 
 import { getLastTracks } from '@api/fetchers'
 import { ACCESS_TOKEN } from '@api/constants'
-import { RecentlyPlayedSection } from '@sections/profile'
+import { ItemsSection } from '@sections/items'
 
 export default async function ProfileRecentlyPlayedPage() {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
@@ -11,7 +11,10 @@ export default async function ProfileRecentlyPlayedPage() {
 
   return (
     <>
-      <RecentlyPlayedSection items={recentlyPlayedTracks.items} />
+      <ItemsSection
+        items={recentlyPlayedTracks.items}
+        title="Recently Played"
+      />
     </>
   )
 }
