@@ -1,10 +1,8 @@
 import { cookies } from 'next/headers'
 
-import '../audio-bars.css'
-
 import { ACCESS_TOKEN } from '@api/constants'
 import { getProfile } from '@api/fetchers'
-import { LayoutProps } from '@app/layout'
+import { LayoutProps } from '@common/types'
 import { ProfileCard } from '@components/profile'
 import { Sidebar } from '@components/sidebar'
 

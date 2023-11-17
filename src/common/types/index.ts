@@ -1,2 +1,2 @@
-export * from './page-props'
+export * from './props'
 export * from './params'
