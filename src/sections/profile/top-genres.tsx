@@ -1,6 +1,6 @@
 'use client'
 
-import { GenreChip } from '@components/common/genre-chip'
+import { GenreChip } from '@components/common'
 
 export interface TopGenresSectionProps {
   genres: string[]

@@ -1,25 +1,29 @@
-import { ToggleGroup, ToggleGroupItem } from '@radix-ui/react-toggle-group'
+'use client'
 
+import { usePathname, useRouter } from 'next/navigation'
+
+import { ToggleGroup, ToggleGroupItem } from '@components/ui/toggle-group'
 import { TimeRange } from '@api/types'
 
 export interface SelectTimeRangeProps {
-  value: TimeRange
-  onChange: (timeRange: TimeRange) => void
+  initialValue: TimeRange
 }
 
-export function SelectTimeRange({ value, onChange }: SelectTimeRangeProps) {
+export function SelectTimeRange({ initialValue }: SelectTimeRangeProps) {
   const timeRangeOptions = [
     { label: '4 weeks', value: TimeRange.SHORT_TERM },
     { label: '6 months', value: TimeRange.MEDIUM_TERM },
     { label: 'lifetime', value: TimeRange.LONG_TERM },
   ]
 
+  const pathname = usePathname()
+  const router = useRouter()
+
   return (
     <ToggleGroup
-      value={value}
+      value={initialValue}
       type="single"
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      onValueChange={({ value }: any) => value && onChange(value)}
+      onValueChange={value => router.push(`${pathname}?time-range=${value}`)}
     >
       {timeRangeOptions.map(({ label, value }) => (
         <ToggleGroupItem key={value} value={value}>

@@ -143,7 +143,9 @@
           "props": true,
           "Props": true,
           "param": true,
-          "Param": true
+          "params": true,
+          "Param": true,
+          "Params": true
         }
       }
     ],
