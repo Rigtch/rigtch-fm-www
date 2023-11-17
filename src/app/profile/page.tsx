@@ -24,7 +24,7 @@ export default async function ProfilePage({ searchParams }: PageProps) {
 
       <TopGenresSection {...genres} />
 
-      <TopArtistsSection artists={artists} />
+      <TopArtistsSection items={artists.items} />
     </>
   )
 }

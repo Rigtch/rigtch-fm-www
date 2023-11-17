@@ -1,15 +1,15 @@
 'use client'
 
-import { Artist, SpotifyResponseWithOffset } from '@api/types'
+import { Artist } from '@api/types'
 import { Item, TopItemCard } from '@components/item'
 import { Separator } from '@components/ui/separator'
 
 export interface TopArtistsSectionProps {
-  artists: SpotifyResponseWithOffset<Artist>
+  items: Artist[]
 }
 
-export function TopArtistsSection({ artists }: TopArtistsSectionProps) {
-  const artistsSorted = artists.items.map((artist, index) => ({
+export function TopArtistsSection({ items }: TopArtistsSectionProps) {
+  const artistsSorted = items.map((artist, index) => ({
     ...artist,
     position: index + 1,
   }))
@@ -35,7 +35,7 @@ export function TopArtistsSection({ artists }: TopArtistsSectionProps) {
               <div key={artist.id}>
                 <Item {...artist} image={images[0].url} />
 
-                {index !== artists.items.length - 4 && <Separator />}
+                {index !== items.length - 4 && <Separator />}
               </div>
             ))}
           </div>
