@@ -1,6 +1,5 @@
 import { FaStar } from 'react-icons/fa6'
 
-import { stars } from './stars'
 import { ItemImage } from './image'
 
 import { cn } from '@utils/cn'
@@ -19,11 +18,14 @@ export function TopItemCard({
   position,
   genres,
 }: TopOneItemCardProps) {
+  const stars = [1, 2, 3, 2, 1]
+
   return (
     <div
       className={cn(
-        'w-full flex flex-col justify-start items-center gap-2',
-        position === 1 ? 'md:h-[400px]' : 'md:h-[350px]'
+        'w-full flex flex-col justify-start gap-2 h-full relative',
+        position === 1 && '-top-16 lg:-top-24',
+        position === 2 && '-top-8 lg:-top-12'
       )}
     >
       <header className="w-full flex flex-col gap-2 items-center p-0">
@@ -41,7 +43,15 @@ export function TopItemCard({
         <div className="flex flex-col justify-center items-center gap-4">
           <span className="text-center text-5xl">{position}</span>
 
-          <div className="flex flex-row gap-1">
+          <footer className="flex flex-row gap-2 flex-wrap justify-center h-full">
+            {genres?.slice(0, 3).map((genre, index) => (
+              <Badge key={index} className="text-primary-foreground/80">
+                {genre}
+              </Badge>
+            ))}
+          </footer>
+
+          <div className="flex flex-row gap-1 mt-4">
             {stars.map((size, index) => (
               <FaStar
                 key={index}
@@ -50,14 +60,18 @@ export function TopItemCard({
                     ? 'text-yellow-600'
                     : position === 2
                     ? 'text-slate-400'
-                    : 'text-yellow-900',
-                  `text-${size}xl`
+                    : 'text-yellow-900'
                 )}
+                style={{
+                  fontSize: `${size * 14}px`,
+                  marginTop: `-${size * 4}px`,
+                }}
               />
             ))}
           </div>
         </div>
       </header>
+<<<<<<< HEAD
 
       <footer className="flex flex-row gap-2 flex-wrap justify-center w-full lg:w-64">
         {genres?.slice(0, 3).map((genre, index) => (
@@ -66,6 +80,8 @@ export function TopItemCard({
           </Badge>
         ))}
       </footer>
+=======
+>>>>>>> 45ea53d (refactor: top artists styling)
     </div>
   )
 }
