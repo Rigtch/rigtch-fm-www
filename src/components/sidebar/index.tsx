@@ -1,6 +1,6 @@
 'use client'
 
-import { LuDisc3, LuMic2, LuUserCircle, LuClock } from 'react-icons/lu'
+import { LuDisc3, LuMic2, LuUserCircle, LuClock, LuMusic } from 'react-icons/lu'
 import { usePathname } from 'next/navigation'
 
 import { SidebarSectionItem } from './section-item'
@@ -41,6 +41,12 @@ export function Sidebar() {
                 label="Top Artists"
                 pathname={pathname}
                 icon={LuMic2}
+              />
+              <SidebarSectionItem
+                href="/profile/top/tracks"
+                label="Top Tracks"
+                pathname={pathname}
+                icon={LuMusic}
               />
             </main>
           </section>
