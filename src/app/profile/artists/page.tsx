@@ -3,7 +3,6 @@ import { cookies } from 'next/headers'
 import { ACCESS_TOKEN } from '@api/constants'
 import { getTopArtists } from '@api/fetchers'
 import { PageProps } from '@common/types'
-import { SelectTimeRange } from '@components/common'
 import { TopArtistsSection } from '@sections/profile'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
 
@@ -21,10 +20,6 @@ export default async function ProfileArtistsPage({ searchParams }: PageProps) {
 
   return (
     <>
-      <div className="flex">
-        <SelectTimeRange initialValue={timeRange} />
-      </div>
-
       <TopArtistsSection items={artists} />
     </>
   )

@@ -5,7 +5,6 @@ import { getTopGenres } from '@api/fetchers'
 import { PageProps } from '@common/types'
 import { TopGenresSection } from '@sections/profile'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
-import { SelectTimeRange } from '@components/common'
 
 export default async function ProfileGenresPage({ searchParams }: PageProps) {
   const timeRange = getTimeRangeFromSearchParams(searchParams)
@@ -16,10 +15,6 @@ export default async function ProfileGenresPage({ searchParams }: PageProps) {
 
   return (
     <>
-      <div className="flex">
-        <SelectTimeRange initialValue={timeRange} />
-      </div>
-
       <TopGenresSection {...genres} />
     </>
   )
