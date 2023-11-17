@@ -23,9 +23,9 @@ export function TopArtistsSection({ items }: TopArtistsSectionProps) {
       </header>
 
       <main>
-        <div className="flex flex-col justify-center gap-5">
-          <div className="flex flex-col md:flex-row self-center items-center md:w-3/4 justify-center gap-5 md:gap-3 pt-4">
-            <div className="flex flex-col-reverse md:flex-row self-center items-center justify-center gap-5 md:gap-3 ">
+        <div className="flex flex-col justify-center gap-12">
+          <div className="flex flex-col lg:flex-row self-center items-center lg:w-3/4 justify-center lg:gap-0 gap-12 pt-4">
+            <div className="flex flex-col-reverse lg:flex-row self-center items-center justify-center gap-5 lg:gap-3 ">
               {artistsSorted.slice(0, 2).map(({ images, ...artist }) => (
                 <TopItemCard
                   {...artist}
@@ -35,7 +35,7 @@ export function TopArtistsSection({ items }: TopArtistsSectionProps) {
               ))}
             </div>
 
-            <div>
+            <div className="flex py-12 lg:py-0">
               {artistsSorted.slice(2, 3).map(({ images, ...artist }) => (
                 <TopItemCard
                   {...artist}

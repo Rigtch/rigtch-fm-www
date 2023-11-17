@@ -1,6 +1,6 @@
 import { FaStar } from 'react-icons/fa6'
 
-import { stars } from './start'
+import { stars } from './stars'
 import { ItemImage } from './image'
 
 import { cn } from '@utils/cn'
@@ -59,7 +59,7 @@ export function TopItemCard({
         </div>
       </header>
 
-      <footer className="flex flex-row gap-2 flex-wrap">
+      <footer className="flex flex-row gap-2 flex-wrap justify-center w-full lg:w-64">
         {genres?.slice(0, 3).map((genre, index) => (
           <Badge key={index} className="text-slate-400">
             {genre}
