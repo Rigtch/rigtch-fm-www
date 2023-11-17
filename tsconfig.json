@@ -34,7 +34,6 @@
       "@utils/*": ["./src/utils/*"],
       "@assets/*": ["./src/assets/*"],
       "@styles/*": ["./src/styles/*"],
-      "@types/*": ["./src/types/*"],
       "@tests/*": ["./tests/*"]
     }
   },
