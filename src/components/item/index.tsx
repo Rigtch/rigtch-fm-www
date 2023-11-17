@@ -1,30 +1,34 @@
-import Image from 'next/image'
+import { ItemImage } from './image'
 
+import { cn } from '@utils/cn'
 import { OpenInSpotifyButton } from '@components/common'
 
 export interface ItemProps {
   name: string
   image: string
   href?: string
+  artists?: string
   position?: number
 }
 
-export function Item({ name, image, href, position }: ItemProps) {
+export function Item({ name, image, href, position, artists }: ItemProps) {
   return (
-    <div className="flex flex-row justify-between p-2">
-      <header className="flex flex-row items-center gap-6">
-        <span className="text-center text-3xl w-[2rem]">{position}</span>
+    <div
+      className={cn('flex flex-row justify-between p-2', !position && 'px-4')}
+    >
+      <header className="flex flex-row items-center gap-4">
+        {position && (
+          <span className="text-center text-3xl w-[2rem]">{position}</span>
+        )}
 
-        <Image
-          src={image}
-          alt={''}
-          width={64}
-          height={64}
-          className="rounded-md"
-          style={{ height: '48px', width: '48px', objectFit: 'cover' }}
-        />
+        <ItemImage src={image} alt={name} width={48} height={48} />
 
-        <h3 className="text-2xl">{name}</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl leading-none">{name}</h3>
+          <h4 className="text-md leading-none text-primary-foreground/80">
+            {artists}
+          </h4>
+        </div>
       </header>
 
       <div className="self-end">

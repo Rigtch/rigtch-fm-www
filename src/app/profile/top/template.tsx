@@ -1,6 +1,6 @@
 'use client'
 
-import '../audio-bars.css'
+import '@app/audio-bars.css'
 
 import { useSearchParams } from 'next/navigation'
 
