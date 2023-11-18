@@ -20,7 +20,7 @@ export function ProfileCard({ displayName, images, followers, href }: Profile) {
         <div className="flex items-center gap-4 p-4 ">
           <ProfileAvatar
             src={images[1]?.url}
-            fallback={displayName.slice(0, 1)}
+            displayName={displayName}
             size="lg"
           />
 

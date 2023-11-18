@@ -1,10 +1,9 @@
 'use client'
 
-import { Separator } from '@radix-ui/react-separator'
-
 import { DefaultSection } from './default'
 import { ItemsSectionProps } from './items'
 
+import { Separator } from '@components/ui/separator'
 import { TopItemCard } from '@components/item/top-card'
 import { Item } from '@components/item'
 
