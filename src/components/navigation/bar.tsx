@@ -91,7 +91,7 @@ export function NavigationBar({ profile }: NavigationBarProps) {
               <ProfileAvatar
                 src={profile.images[0]?.url}
                 className="hidden md:block"
-                fallback={profile.displayName.slice(0, 1)}
+                displayName={profile.displayName}
               />
 
               <div className="md:hidden">
@@ -99,11 +99,14 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                   open={isSidebarOpen}
                   onOpenChange={isOpen => setIsSidebarOpen(isOpen)}
                 >
-                  <SheetTrigger asChild onClick={() => setIsSidebarOpen(true)}>
+                  <SheetTrigger
+                    onClick={() => setIsSidebarOpen(true)}
+                    className="cursor-pointer"
+                  >
                     <ProfileAvatar
                       src={profile.images[0]?.url}
                       className="items-center"
-                      fallback={profile.displayName.slice(0, 1)}
+                      displayName={profile.displayName}
                     />
                   </SheetTrigger>
 

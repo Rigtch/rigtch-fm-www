@@ -1,44 +1,44 @@
 'use client'
 
 import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar'
-import { ComponentProps } from 'react'
 
 import { cn } from '@utils/cn'
 
-export interface ProfileAvatarProps extends ComponentProps<typeof Avatar> {
+export interface ProfileAvatarProps {
+  className?: string
   src?: string
-  fallback?: string
+  displayName?: string
   size?: 'sm' | 'lg'
 }
 
 export function ProfileAvatar({
   src,
-  fallback,
+  displayName,
   className,
   size = 'sm',
-  ...props
 }: ProfileAvatarProps) {
   return (
-    <Avatar
-      {...props}
-      className={cn(
-        'flex bg-primary rounded-full',
-        size === 'sm' && 'w-[48px] h-[48px]',
-        size === 'lg' && 'w-[128px] h-[128px]',
-        className
-      )}
-    >
-      <AvatarImage className="rounded-full" src={src} />
-
-      <AvatarFallback
+    <span>
+      <Avatar
         className={cn(
-          'text-black  w-full h-full flex items-center justify-center text-primary-foreground',
-          size === 'sm' && 'text-xl',
-          size === 'lg' && 'text-5xl'
+          'flex bg-primary rounded-full',
+          size === 'sm' && 'w-[48px] h-[48px]',
+          size === 'lg' && 'w-[128px] h-[128px]',
+          className
         )}
       >
-        {fallback}
-      </AvatarFallback>
-    </Avatar>
+        <AvatarImage className="rounded-full" src={src} alt={displayName} />
+
+        <AvatarFallback
+          className={cn(
+            'text-black  w-full h-full flex items-center justify-center text-primary-foreground',
+            size === 'sm' && 'text-xl',
+            size === 'lg' && 'text-5xl'
+          )}
+        >
+          {displayName?.slice(0, 1)}
+        </AvatarFallback>
+      </Avatar>
+    </span>
   )
 }
