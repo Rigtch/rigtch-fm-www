@@ -7,7 +7,6 @@ import { Profile } from '@api/types'
 import {
   Card,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@components/ui/card'
@@ -24,14 +23,20 @@ export function ProfileCard({ displayName, images, followers, href }: Profile) {
             size="lg"
           />
 
-          <div className="flex-col">
-            <CardTitle className="text-2xl">{displayName}</CardTitle>
-            <CardDescription className="text-lg whitespace-nowrap">
-              {followers} Followers
-            </CardDescription>
-            <CardFooter className="flex items-left">
+          <div className="flex flex-col gap-4">
+            <div>
+              <CardTitle className="text-2xl md:text-3xl">
+                {displayName}
+              </CardTitle>
+
+              <CardDescription className="text-lg whitespace-nowrap leading-5">
+                {followers} Followers
+              </CardDescription>
+            </div>
+
+            <div className="flex items-left">
               <OpenInSpotifyButton href={href} />
-            </CardFooter>
+            </div>
           </div>
         </div>
 
