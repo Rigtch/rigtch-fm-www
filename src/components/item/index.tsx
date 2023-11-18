@@ -38,27 +38,31 @@ export function Item({
 
         <ItemImage src={image} alt={name} width={48} height={48} />
 
-        <div className="flex flex-col w-full">
-          <h3 className="text-xl md:text-2xl leading-none">{name}</h3>
+        <div className="flex flex-col w-full gap-1 max-w-[100%] overflow-hidden">
+          <h3 className="text-xl md:text-2xl leading-5 overflow-hidden text-ellipsis whitespace-nowrap">
+            {name}
+          </h3>
 
-          <div className="flex justify-between w-full">
-            {artists &&
-              artists.map(({ name, href }, index) => (
-                <>
-                  <Button
-                    key={name}
-                    variant="link"
-                    className="text-md leading-none text-primary-foreground/80 p-0 h-auto"
-                    asChild
-                  >
-                    <Link href={href} replace target="_blank">
-                      {name}
-                    </Link>
-                  </Button>
+          <div className="flex justify-between w-full items-center">
+            <div>
+              {artists &&
+                artists.map(({ name, href }, index) => (
+                  <>
+                    <Button
+                      key={name}
+                      variant="link"
+                      className="text-md leading-none text-primary-foreground/80 p-0 h-auto"
+                      asChild
+                    >
+                      <Link href={href} replace target="_blank">
+                        {name}
+                      </Link>
+                    </Button>
 
-                  {index !== artists.length - 1 && <span>, </span>}
-                </>
-              ))}
+                    {index !== artists.length - 1 && <span>, </span>}
+                  </>
+                ))}
+            </div>
 
             {playedAt && (
               <RelativeTime

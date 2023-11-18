@@ -1,7 +1,8 @@
 'use client'
 
+import { ProfileAvatar } from './avatar'
+
 import { OpenInSpotifyButton } from '@components/common'
-import { Avatar, AvatarImage, AvatarFallback } from '@components/ui/avatar'
 import { Profile } from '@api/types'
 import {
   Card,
@@ -17,21 +18,17 @@ export function ProfileCard({ displayName, images, followers, href }: Profile) {
     <Card className="min-w-[75%]">
       <CardHeader className="lg:flex-row justify-between lg:items-center gap-8 p-4">
         <div className="flex items-center gap-4 p-4 ">
-          <Avatar className="w-32 h-32">
-            <AvatarImage src={images[1]?.url} />
-
-            <AvatarFallback className="bg-neutral-700 text-5xl">
-              {displayName.slice(0, 1)}
-            </AvatarFallback>
-          </Avatar>
+          <ProfileAvatar
+            src={images[1]?.url}
+            fallback={displayName.slice(0, 1)}
+            size="lg"
+          />
 
           <div className="flex-col">
             <CardTitle className="text-2xl">{displayName}</CardTitle>
-
             <CardDescription className="text-lg whitespace-nowrap">
               {followers} Followers
             </CardDescription>
-
             <CardFooter className="flex items-left">
               <OpenInSpotifyButton href={href} />
             </CardFooter>
