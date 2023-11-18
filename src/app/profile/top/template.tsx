@@ -1,7 +1,5 @@
 'use client'
 
-import '@app/audio-bars.css'
-
 import { useSearchParams } from 'next/navigation'
 
 import { validateTimeRange } from '@utils/time-range'

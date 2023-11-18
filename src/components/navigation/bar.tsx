@@ -7,9 +7,11 @@ import {
   FaArrowUpRightFromSquare,
 } from 'react-icons/fa6'
 import { useQueryClient } from '@tanstack/react-query'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 import { NavigationListItem } from './list-item'
+import { NavigationSidebar } from './sidebar'
 
 import { Profile } from '@api/types'
 import {
@@ -19,9 +21,10 @@ import {
   NavigationMenuTrigger,
   NavigationMenuContent,
 } from '@components/ui/navigation-menu'
-import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar'
 import { ConnectButton } from '@components/connect'
 import { useAuthCookies } from '@hooks/use-auth-cookies'
+import { Sheet, SheetContent, SheetTrigger } from '@components/ui/sheet'
+import { ProfileAvatar } from '@components/profile'
 
 export interface NavigationBarProps {
   profile?: Profile
@@ -31,6 +34,12 @@ export function NavigationBar({ profile }: NavigationBarProps) {
   const { removeAuthCookies } = useAuthCookies()
   const queryClient = useQueryClient()
   const router = useRouter()
+  const pathname = usePathname()
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  useEffect(() => {
+    setIsSidebarOpen(false)
+  }, [pathname])
 
   function disconnect() {
     removeAuthCookies()
@@ -79,13 +88,30 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <Avatar>
-                <AvatarImage src={profile.images[0]?.url} />
+              <ProfileAvatar
+                src={profile.images[0]?.url}
+                className="hidden md:block"
+                fallback={profile.displayName.slice(0, 1)}
+              />
 
-                <AvatarFallback className="text-black text-xl">
-                  {profile.displayName.slice(0, 1)}
-                </AvatarFallback>
-              </Avatar>
+              <div className="md:hidden">
+                <Sheet
+                  open={isSidebarOpen}
+                  onOpenChange={isOpen => setIsSidebarOpen(isOpen)}
+                >
+                  <SheetTrigger asChild onClick={() => setIsSidebarOpen(true)}>
+                    <ProfileAvatar
+                      src={profile.images[0]?.url}
+                      className="items-center"
+                      fallback={profile.displayName.slice(0, 1)}
+                    />
+                  </SheetTrigger>
+
+                  <SheetContent>
+                    <NavigationSidebar />
+                  </SheetContent>
+                </Sheet>
+              </div>
             </>
           ) : (
             <ConnectButton />
