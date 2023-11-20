@@ -20,8 +20,10 @@ export function ItemImage({
       className={cn('rounded-md', className)}
       style={{
         ...props.style,
-        height: `${height}px`,
-        width: `${width}px`,
+        minHeight: `${height}px`,
+        maxHeight: `${height}px`,
+        minWidth: `${width}px`,
+        maxWidth: `${width}px`,
         objectFit: 'cover',
       }}
       {...props}
