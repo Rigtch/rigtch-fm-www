@@ -4,15 +4,9 @@ import { Item } from '@components/item'
 import { Artist, Track } from '@api/types'
 import { Separator } from '@components/ui/separator'
 
-export type ItemsSectionProps = DefaultSectionProps &
-  (
-    | {
-        items: Artist[]
-      }
-    | {
-        items: Track[]
-      }
-  )
+export type ItemsSectionProps = DefaultSectionProps & {
+  items: (Artist | Track)[]
+}
 
 export function ItemsSection({ items, title, children }: ItemsSectionProps) {
   return (

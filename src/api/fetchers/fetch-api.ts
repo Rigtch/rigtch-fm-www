@@ -28,9 +28,10 @@ export async function fetchApi<T>(
   const parsedResponse = await response.json()
 
   if (!response.ok) {
-    // if (parsedResponse.error === 'No device is currently playing') {
-    //   return
-    // }
+    if (parsedResponse.message === 'No device is currently playing') {
+      return parsedResponse
+    }
+
     throw new Error(parsedResponse.message)
   }
 
