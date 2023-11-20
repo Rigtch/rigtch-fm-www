@@ -9,7 +9,7 @@ import {
 import { ACCESS_TOKEN } from '@api/constants'
 import { PageProps } from '@common/types'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
-import { GenreChip, SeeMoreButton, SelectTimeRange } from '@components/common'
+import { GenreChip, SeeMoreButton, ToggleTimeRange } from '@components/common'
 import { TopItemsSection } from '@sections/top-items'
 import { ItemsSection } from '@sections/items'
 import { DefaultSection } from '@sections/default'
@@ -27,7 +27,7 @@ export default async function ProfilePage({ searchParams }: PageProps) {
   return (
     <>
       <div className="flex">
-        <SelectTimeRange initialValue={timeRange} />
+        <ToggleTimeRange initialValue={timeRange} />
       </div>
 
       <DefaultSection title="Top Genres">

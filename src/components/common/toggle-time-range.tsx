@@ -6,11 +6,11 @@ import Link from 'next/link'
 import { ToggleGroup, ToggleGroupItem } from '@components/ui/toggle-group'
 import { TimeRange } from '@api/types'
 
-export interface SelectTimeRangeProps {
+export interface ToggleTimeRangeProps {
   initialValue: TimeRange
 }
 
-export function SelectTimeRange({ initialValue }: SelectTimeRangeProps) {
+export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
   const timeRangeOptions = [
     { label: '4 weeks', value: TimeRange.SHORT_TERM },
     { label: '6 months', value: TimeRange.MEDIUM_TERM },
