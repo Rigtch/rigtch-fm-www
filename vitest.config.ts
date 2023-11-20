@@ -67,7 +67,7 @@ export default defineConfig({
       },
       {
         find: '@tests',
-        replacement: fileURLToPath(new URL('src/tests', import.meta.url)),
+        replacement: fileURLToPath(new URL('tests', import.meta.url)),
       },
     ],
   },
