@@ -45,23 +45,21 @@ export function SelectView({ initialValue }: SelectViewProps) {
   }
 
   return (
-    <div>
-      <Select defaultValue={initialValue} onValueChange={handleOnValueChange}>
-        <SelectTrigger className="w-[120px]">
-          <SelectValue placeholder="Select view" />
-        </SelectTrigger>
+    <Select defaultValue={initialValue} onValueChange={handleOnValueChange}>
+      <SelectTrigger className="min-w-[120px]">
+        <SelectValue placeholder="Select view" />
+      </SelectTrigger>
 
-        <SelectContent>
-          {viewOptions.map(({ icon, value, label }) => (
-            <SelectItem key={value} value={value} className="flex gap-2">
-              <div className="flex gap-2 items-center">
-                {icon}
-                {label}
-              </div>
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </div>
+      <SelectContent>
+        {viewOptions.map(({ icon, value, label }) => (
+          <SelectItem key={value} value={value} className="flex gap-2">
+            <div className="flex gap-2 items-center">
+              {icon}
+              {label}
+            </div>
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   )
 }

@@ -33,10 +33,12 @@ export default async function ProfilePage({ searchParams }: PageProps) {
 
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
         <ToggleTimeRange initialValue={timeRange} />
 
-        <SelectView initialValue={view} />
+        <div>
+          <SelectView initialValue={view} />
+        </div>
       </div>
 
       <DefaultSection title="Top Genres">
