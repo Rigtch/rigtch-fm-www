@@ -31,14 +31,14 @@ export function Item({
         !position && 'md:px-4'
       )}
     >
-      <header className="flex flex-row items-center gap-4 w-full">
+      <header className="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]">
         {position && (
           <span className="text-center text-3xl w-[2rem]">{position}</span>
         )}
 
         <ItemImage src={image} alt={name} width={48} height={48} />
 
-        <div className="flex flex-col w-full gap-1 max-w-[100%] overflow-hidden">
+        <div className="flex flex-col w-full overflow-hidden">
           <h3 className="text-xl md:text-2xl leading-5 overflow-hidden text-ellipsis whitespace-nowrap">
             {name}
           </h3>
@@ -74,7 +74,7 @@ export function Item({
         </div>
       </header>
 
-      <div className="self-end">
+      <div className="self-end min-w-[22px]">
         <OpenInSpotifyButton href={href ?? ''} />
       </div>
     </div>
