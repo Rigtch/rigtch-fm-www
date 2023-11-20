@@ -2,18 +2,16 @@
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactNode, useState } from 'react'
-import { getCookie, setCookie } from 'cookies-next'
+import { useRouter } from 'next/navigation'
 
 import { PlaybackStateProvider } from '@context/playback-state'
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '@api/constants'
-import { getRefresh } from '@api/fetchers'
 
 export interface ProvidersProps {
   children: ReactNode
 }
 
 export default function Providers({ children }: ProvidersProps) {
-  const refreshToken = getCookie(REFRESH_TOKEN)
+  const router = useRouter()
 
   const [queryClient] = useState(
     () =>
@@ -21,21 +19,13 @@ export default function Providers({ children }: ProvidersProps) {
         defaultOptions: {
           queries: {
             onError: async error => {
+              console.log('e', error.message)
+              console.log(error.message === 'The access token expired')
               if (
                 error instanceof Error &&
-                error.message === 'The access token expired' &&
-                refreshToken
+                error.message === 'The access token expired'
               ) {
-                const { accessToken, expiresIn } = await getRefresh(
-                  refreshToken
-                )
-
-                console.log('refreshing token')
-
-                setCookie(ACCESS_TOKEN, accessToken, {
-                  maxAge: expiresIn,
-                  path: '/',
-                })
+                router.refresh()
               }
             },
           },
