@@ -35,7 +35,8 @@
       "@assets/*": ["./src/assets/*"],
       "@styles/*": ["./src/styles/*"],
       "@tests/*": ["./tests/*"]
-    }
+    },
+    "types": ["vitest/globals"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
