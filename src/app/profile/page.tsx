@@ -9,13 +9,20 @@ import {
 import { ACCESS_TOKEN } from '@api/constants'
 import { PageProps } from '@common/types'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
-import { GenreChip, SeeMoreButton, ToggleTimeRange } from '@components/common'
+import {
+  GenreChip,
+  SeeMoreButton,
+  SelectView,
+  ToggleTimeRange,
+} from '@components/common'
 import { TopItemsSection } from '@sections/top-items'
 import { ItemsSection } from '@sections/items'
 import { DefaultSection } from '@sections/default'
+import { getViewFromSearchParams } from '@utils/view'
 
 export default async function ProfilePage({ searchParams }: PageProps) {
   const timeRange = getTimeRangeFromSearchParams(searchParams)
+  const view = getViewFromSearchParams(searchParams)
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
@@ -26,8 +33,10 @@ export default async function ProfilePage({ searchParams }: PageProps) {
 
   return (
     <>
-      <div className="flex">
+      <div className="flex justify-between">
         <ToggleTimeRange initialValue={timeRange} />
+
+        <SelectView initialValue={view} />
       </div>
 
       <DefaultSection title="Top Genres">
@@ -42,11 +51,11 @@ export default async function ProfilePage({ searchParams }: PageProps) {
         <SeeMoreButton href="/profile/top/genres" timeRange={timeRange} />
       </DefaultSection>
 
-      <TopItemsSection items={artists.items} title="Top Artists">
+      <TopItemsSection items={artists.items} title="Top Artists" view={view}>
         <SeeMoreButton href="/profile/top/artists" timeRange={timeRange} />
       </TopItemsSection>
 
-      <TopItemsSection items={tracks.items} title="Top Tracks">
+      <TopItemsSection items={tracks.items} title="Top Tracks" view={view}>
         <SeeMoreButton href="/profile/top/tracks" timeRange={timeRange} />
       </TopItemsSection>
 

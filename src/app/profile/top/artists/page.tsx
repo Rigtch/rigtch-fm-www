@@ -5,11 +5,13 @@ import { getTopArtists } from '@api/fetchers'
 import { PageProps } from '@common/types'
 import { getTimeRangeFromSearchParams } from '@utils/time-range'
 import { TopItemsSection } from '@sections/top-items'
+import { getViewFromSearchParams } from '@utils/view'
 
 export default async function ProfileTopArtistsPage({
   searchParams,
 }: PageProps) {
   const timeRange = getTimeRangeFromSearchParams(searchParams)
+  const view = getViewFromSearchParams(searchParams)
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
@@ -22,7 +24,7 @@ export default async function ProfileTopArtistsPage({
 
   return (
     <>
-      <TopItemsSection items={artists} title="Top Artists" />
+      <TopItemsSection items={artists} title="Top Artists" view={view} />
     </>
   )
 }

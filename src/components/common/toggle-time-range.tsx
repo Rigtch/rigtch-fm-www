@@ -1,10 +1,11 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 import { ToggleGroup, ToggleGroupItem } from '@components/ui/toggle-group'
 import { TimeRange } from '@api/types'
+import { formatSearchParams } from '@utils/formatters'
 
 export interface ToggleTimeRangeProps {
   initialValue: TimeRange
@@ -18,12 +19,21 @@ export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
   ]
 
   const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   return (
     <ToggleGroup value={initialValue} type="single">
       {timeRangeOptions.map(({ label, value }) => (
         <ToggleGroupItem key={value} value={value} asChild>
-          <Link href={`${pathname}?time-range=${value}`}>{label}</Link>
+          <Link
+            href={`${pathname}?${formatSearchParams(
+              searchParams,
+              'time-range',
+              value
+            )}`}
+          >
+            {label}
+          </Link>
         </ToggleGroupItem>
       ))}
     </ToggleGroup>
