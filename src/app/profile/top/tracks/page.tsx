@@ -22,9 +22,5 @@ export default async function ProfileTopTracksPage({
   tracksSecondPart.items.shift()
   const tracks = tracksFirstPart.items.concat(tracksSecondPart.items)
 
-  return (
-    <>
-      <TopItemsSection items={tracks} title="Top Tracks" view={view} />
-    </>
-  )
+  return <TopItemsSection items={tracks} title="Top Tracks" view={view} />
 }

@@ -21,7 +21,9 @@ export default function ProfileTemplate({ children }: LayoutProps) {
         <ToggleTimeRange initialValue={timeRange} />
 
         {pathname !== '/profile/top/genres' && (
-          <SelectView initialValue={view} />
+          <div>
+            <SelectView initialValue={view} />
+          </div>
         )}
       </div>
 

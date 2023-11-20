@@ -10,11 +10,6 @@ export default async function ProfileRecentlyPlayedPage() {
   const recentlyPlayedTracks = await getLastTracks(accessToken, 50)
 
   return (
-    <>
-      <ItemsSection
-        items={recentlyPlayedTracks.items}
-        title="Recently Played"
-      />
-    </>
+    <ItemsSection items={recentlyPlayedTracks.items} title="Recently Played" />
   )
 }

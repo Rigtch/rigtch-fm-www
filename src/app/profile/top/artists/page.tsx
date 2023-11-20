@@ -22,9 +22,5 @@ export default async function ProfileTopArtistsPage({
   artistsSecondPart.items.shift()
   const artists = artistsFirstPart.items.concat(artistsSecondPart.items)
 
-  return (
-    <>
-      <TopItemsSection items={artists} title="Top Artists" view={view} />
-    </>
-  )
+  return <TopItemsSection items={artists} title="Top Artists" view={view} />
 }
