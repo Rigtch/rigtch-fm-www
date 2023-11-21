@@ -4,7 +4,7 @@ import { isTimeRange, validateTimeRange } from './time-range'
 import { SearchParams } from '@common/types'
 import { TimeRange } from '@api/types'
 
-describe('(Utils) - TimeRange', () => {
+describe('TimeRange', () => {
   const timeRange = TimeRange.MEDIUM_TERM
   const invalid = 'invalid'
 

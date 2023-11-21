@@ -16,10 +16,10 @@ export function DefaultSection({
       <header className="flex justify-between">
         <h2 className="text-5xl">{title}</h2>
 
-        <div>{headerAction}</div>
+        {headerAction && <div>{headerAction}</div>}
       </header>
 
-      <main className="flex flex-col gap-4">{children}</main>
+      {children && <main className="flex flex-col gap-4">{children}</main>}
     </section>
   )
 }

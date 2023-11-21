@@ -17,7 +17,7 @@ vi.mock('next/server', () => {
   }
 })
 
-describe('(APP) api/authorize/route', () => {
+describe('(App) api/authorize/route', () => {
   const accessToken = 'accessToken'
   const refreshToken = 'refreshToken'
   const searchParams = new URLSearchParams({

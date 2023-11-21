@@ -19,12 +19,12 @@ export default function Providers({ children }: ProvidersProps) {
         defaultOptions: {
           queries: {
             onError: async error => {
-              console.log('e', error.message)
-              console.log(error.message === 'The access token expired')
               if (
                 error instanceof Error &&
                 error.message === 'The access token expired'
               ) {
+                console.log('e', error.message)
+                console.log(error.message === 'The access token expired')
                 router.refresh()
               }
             },

@@ -5,8 +5,9 @@ import { ItemImage } from './image'
 import { cn } from '@utils/cn'
 import { Badge } from '@components/ui/badge'
 import { TrackArtist } from '@api/types'
+import { formatArtists } from '@utils/formatters'
 
-export interface TopOneItemCardProps {
+export interface TopItemCardProps {
   name: string
   image: string
   position?: number
@@ -20,7 +21,7 @@ export function TopItemCard({
   position,
   genres,
   artists,
-}: TopOneItemCardProps) {
+}: TopItemCardProps) {
   const stars = [1, 2, 3, 2, 1]
 
   return (
@@ -46,7 +47,7 @@ export function TopItemCard({
 
           {artists && (
             <h4 className="text-xl text-primary-foreground/80">
-              {artists.map(({ name }) => name).join(', ')}
+              {formatArtists(artists)}
             </h4>
           )}
         </div>

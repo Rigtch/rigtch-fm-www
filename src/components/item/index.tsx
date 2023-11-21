@@ -47,7 +47,7 @@ export function Item({
             <div>
               {artists &&
                 artists.map(({ name, href }, index) => (
-                  <>
+                  <span key={name}>
                     <Button
                       key={name}
                       variant="link"
@@ -60,15 +60,12 @@ export function Item({
                     </Button>
 
                     {index !== artists.length - 1 && <span>, </span>}
-                  </>
+                  </span>
                 ))}
             </div>
 
             {playedAt && (
-              <RelativeTime
-                value={playedAt ?? ''}
-                className="text-sm md:text-md"
-              />
+              <RelativeTime value={playedAt} className="text-sm md:text-md" />
             )}
           </div>
         </div>
