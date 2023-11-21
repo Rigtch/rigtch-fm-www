@@ -9,7 +9,7 @@ import { PlaybackState } from '@api/types'
 describe('fetchApi', () => {
   test('should return response', async () => {
     vi.stubGlobal('fetch', () => ({
-      status: 200,
+      ok: true,
       json: () =>
         mock<PlaybackState>({
           track: trackMock,
