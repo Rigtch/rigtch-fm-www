@@ -1,8 +1,16 @@
-import { Mock, describe, test, vi } from 'vitest'
 import { ReactElement } from 'react'
-import { RenderOptions, render, screen } from '@testing-library/react'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { mock } from 'vitest-mock-extended'
+import {
+  RenderOptions,
+  fireEvent,
+  render,
+  screen,
+} from '@testing-library/react'
+import {
+  QueryClient,
+  QueryClientProvider,
+  UseQueryResult,
+} from '@tanstack/react-query'
+import { DeepMockProxy, mockDeep } from 'vitest-mock-extended'
 
 import {
   PlaybackStateProvider,
@@ -15,18 +23,19 @@ import {
   usePlaybackStateQuery,
   useTogglePlaybackStateQuery,
 } from '@api/hooks'
-import { spotifyResponseMockFactory } from '@tests/mocks'
 
 vi.mock('@api/hooks')
+
+const TRACK_NAME = 'track-name' as const
+const IS_PLAYING = 'is-playing' as const
 
 function TestComponent() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
 
   return (
     <div>
-      <p data-testid="track-name">{data?.track.name}</p>
-      <p data-testid="album-image">{data?.albumImage}</p>
-      <p data-testid="is-playing">{isPlaying ? 'true' : 'false'}</p>
+      <p data-testid={TRACK_NAME}>{data?.track.name}</p>
+      <p data-testid={IS_PLAYING}>{isPlaying ? 'true' : 'false'}</p>
 
       <button onClick={() => toggleState()}>toggle</button>
     </div>
@@ -45,16 +54,39 @@ const customRender = (ui: ReactElement, renderOptions?: RenderOptions) => {
 }
 
 describe('PlaybackStateContext', () => {
+  const refetchMock = vi.fn().mockReturnValue(undefined)
+
+  let playbackStateMock: DeepMockProxy<PlaybackState>
+  let playbackStateQueryResultMock: DeepMockProxy<UseQueryResult<PlaybackState>>
+
   beforeEach(() => {
-    ;(usePlaybackStateQuery as Mock).mockReturnValue({
+    vi.mocked(usePlaybackStateQuery, { partial: true }).mockReturnValue({
       data: undefined,
-      refetch: vi.fn(),
+      refetch: refetchMock,
     })
-    ;(useTogglePlaybackStateQuery as Mock).mockReturnValue({
+    vi.mocked(useTogglePlaybackStateQuery).mockReturnValue({
       toggle: vi.fn(),
     })
-    ;(useLastTracksQuery as Mock).mockReturnValue({
+    vi.mocked(useLastTracksQuery, { partial: true }).mockReturnValue({
       data: undefined,
+    })
+
+    playbackStateMock = mockDeep<PlaybackState>({
+      track: {
+        name: 'test',
+        album: {
+          images: [
+            {
+              url: 'test',
+            },
+          ],
+        },
+      },
+      isPlaying: true,
+    })
+    playbackStateQueryResultMock = mockDeep<UseQueryResult<PlaybackState>>({
+      data: playbackStateMock,
+      refetch: refetchMock,
     })
   })
 
@@ -66,81 +98,36 @@ describe('PlaybackStateContext', () => {
   test('should render with initial state', () => {
     customRender(<TestComponent />)
 
-    expect(screen.getByTestId('track-name')).toHaveTextContent('')
-    expect(screen.getByTestId('album-image')).toHaveTextContent('')
-    expect(screen.getByTestId('is-playing')).toHaveTextContent('false')
+    expect(screen.getByTestId(TRACK_NAME)).toHaveTextContent('')
+    expect(screen.getByTestId(IS_PLAYING)).toHaveTextContent('false')
   })
 
   test('should render with data', async () => {
-    ;(usePlaybackStateQuery as Mock).mockReturnValue({
-      data: mock<PlaybackState>({
-        track: {
-          name: 'test',
-          album: {
-            images: [
-              {
-                url: 'test',
-              },
-            ],
-          },
-        },
-      }),
-      refetch: vi.fn(),
-    })
+    vi.mocked(usePlaybackStateQuery).mockReturnValue(
+      playbackStateQueryResultMock
+    )
 
     customRender(<TestComponent />)
 
-    expect(screen.getByTestId('track-name')).toHaveTextContent('test')
-    expect(screen.getByTestId('album-image')).toHaveTextContent('test')
-    expect(screen.getByTestId('is-playing')).toHaveTextContent('true')
-  })
-
-  test.skip('should render with data from last track', async () => {
-    ;(useLastTracksQuery as Mock).mockReturnValue({
-      data: [
-        spotifyResponseMockFactory([
-          {
-            name: 'test',
-            album: {
-              images: [
-                {
-                  url: 'test',
-                },
-              ],
-            },
-          },
-        ]),
-      ],
-    })
-
-    customRender(<TestComponent />)
-
-    expect(screen.getByTestId('track-name')).toHaveTextContent('test')
-    expect(screen.getByTestId('album-image')).toHaveTextContent('test')
-    expect(screen.getByTestId('is-playing')).toHaveTextContent('false')
+    expect(screen.getByTestId(TRACK_NAME)).toHaveTextContent('test')
+    expect(screen.getByTestId(IS_PLAYING)).toHaveTextContent('true')
   })
 
   test('should toggle state', async () => {
     const toggleMock = vi.fn().mockResolvedValue({ success: true })
 
-    ;(usePlaybackStateQuery as Mock).mockReturnValue({
-      data: mock<PlaybackState>({
-        track: {
-          name: 'test',
-        },
-        isPlaying: true,
-      }),
-      refetch: vi.fn(),
-    })
-    ;(useTogglePlaybackStateQuery as Mock).mockReturnValue({
+    vi.mocked(usePlaybackStateQuery, { partial: true }).mockReturnValue(
+      playbackStateQueryResultMock
+    )
+    vi.mocked(useTogglePlaybackStateQuery).mockReturnValue({
       toggle: toggleMock,
     })
 
     customRender(<TestComponent />)
 
-    expect(screen.getByTestId('is-playing')).toHaveTextContent('true')
+    expect(screen.getByTestId(IS_PLAYING)).toHaveTextContent('true')
 
-    await screen.getByRole('button').click()
+    fireEvent.click(screen.getByRole('button'))
 
     expect(toggleMock).toHaveBeenCalledWith(true)
   })
