@@ -1,4 +1,3 @@
-import { Mock, vi } from 'vitest'
 import { useCookies } from 'react-cookie'
 import { renderHook, waitFor } from '@testing-library/react'
 
@@ -12,7 +11,7 @@ describe('useAuthCookies', () => {
   const removeCookiesSpy = vi.fn()
 
   beforeEach(() => {
-    ;(useCookies as Mock).mockReturnValue([
+    vi.mocked(useCookies).mockReturnValue([
       { 'access-token': ACCESS_TOKEN, 'refresh-token': REFRESH_TOKEN },
       vi.fn(),
       removeCookiesSpy,

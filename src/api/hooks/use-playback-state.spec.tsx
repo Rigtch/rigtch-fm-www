@@ -29,6 +29,13 @@ describe('usePlaybackStateQuery', () => {
       mock<PlaybackState>({
         track: {
           name: 'track 1',
+          album: {
+            images: [
+              {
+                url: 'url',
+              },
+            ],
+          },
         },
       })
     )

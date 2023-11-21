@@ -46,6 +46,7 @@ export function PlaybackCard() {
             <p className="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap">
               {track.name}
             </p>
+
             <p className="text-neutral-300">{formatArtists(track.artists)}</p>
           </CardTitle>
 

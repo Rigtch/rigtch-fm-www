@@ -2,7 +2,7 @@ import { getViewFromSearchParams, isView, validateView } from './view'
 
 import { SearchParams, View } from '@common/types'
 
-describe('(Utils) - View', () => {
+describe('View', () => {
   const view = View.CARD
   const invalid = 'invalid'
 

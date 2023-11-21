@@ -1,23 +1,24 @@
+'use client'
+
 import Link from 'next/link'
 import { ComponentProps } from 'react'
+import { useSearchParams } from 'next/navigation'
 
-import { TimeRange } from '@api/types'
 import { Button } from '@components/ui/button'
-
-export interface SeeMoreButtonProps extends ComponentProps<typeof Link> {
-  timeRange?: TimeRange
-}
+import { formatSearchParams } from '@utils/formatters'
 
 export function SeeMoreButton({
   href,
-  timeRange,
+
   ...props
-}: SeeMoreButtonProps) {
-  const hrefWithTimeRange = href + (timeRange ? `?time-range=${timeRange}` : '')
+}: ComponentProps<typeof Link>) {
+  const searchParams = useSearchParams()
+
+  const hrefWithSearchParams = `${href}?${formatSearchParams(searchParams)}`
 
   return (
     <Button asChild variant="link">
-      <Link href={hrefWithTimeRange} {...props}>
+      <Link href={hrefWithSearchParams} {...props}>
         See more
       </Link>
     </Button>

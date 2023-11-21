@@ -50,15 +50,15 @@ export default async function ProfilePage({ searchParams }: PageProps) {
           ))}
         </div>
 
-        <SeeMoreButton href="/profile/top/genres" timeRange={timeRange} />
+        <SeeMoreButton href="/profile/top/genres" />
       </DefaultSection>
 
       <TopItemsSection items={artists.items} title="Top Artists" view={view}>
-        <SeeMoreButton href="/profile/top/artists" timeRange={timeRange} />
+        <SeeMoreButton href="/profile/top/artists" />
       </TopItemsSection>
 
       <TopItemsSection items={tracks.items} title="Top Tracks" view={view}>
-        <SeeMoreButton href="/profile/top/tracks" timeRange={timeRange} />
+        <SeeMoreButton href="/profile/top/tracks" />
       </TopItemsSection>
 
       <ItemsSection items={recentlyPlayedTracks.items} title="Recently Played">

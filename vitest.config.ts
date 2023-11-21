@@ -62,10 +62,6 @@ export default defineConfig({
         replacement: fileURLToPath(new URL('src/styles', import.meta.url)),
       },
       {
-        find: '@api/types',
-        replacement: fileURLToPath(new URL('src/types', import.meta.url)),
-      },
-      {
         find: '@tests',
         replacement: fileURLToPath(new URL('tests', import.meta.url)),
       },
