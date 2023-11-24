@@ -1,4 +1,4 @@
-# Rigtch Music WWW
+# RigtchFM WWW
 
 [![ci](https://github.com/Rigtch/rigtch-music-www/actions/workflows/main.yml/badge.svg)](https://github.com/Rigtch/rigtch-music-www/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/Mnigos/rigtch-music-www/branch/main/graph/badge.svg?token=eVOzsS0pRd)](https://codecov.io/gh/Mnigos/rigtch-music-www)
@@ -15,11 +15,11 @@ Rigtch is website focused on displaying your all-time statistics such as favorit
 
 ## Deployment
 
-- [Production](https://rigtch-music.vercel.app)
+- [Production](https://rigtch-fm.vercel.app)
 
 ## Related repositories
 
-- [rigtch-music-api](https://github.com/Rigtch/rigtch-music-api)
+- [rigtch-fm-api](https://github.com/Rigtch/rigtch-fm-api)
 
 ## Stack
 
