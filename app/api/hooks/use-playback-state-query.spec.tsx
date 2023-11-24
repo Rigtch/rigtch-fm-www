@@ -7,7 +7,7 @@ import { ACCESS_TOKEN } from '../constants'
 import { getPlaybackState } from '../fetchers'
 import { PlaybackState } from '../types'
 
-import { usePlaybackStateQuery } from './use-playback-state'
+import { usePlaybackStateQuery } from './use-playback-state-query'
 
 import { queryClientWrapper } from '@tests/utils'
 
