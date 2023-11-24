@@ -75,8 +75,8 @@ export function TopItemCard({
                   position === 1
                     ? 'text-yellow-600'
                     : position === 2
-                    ? 'text-slate-400'
-                    : 'text-yellow-900'
+                      ? 'text-slate-400'
+                      : 'text-yellow-900'
                 )}
                 style={{
                   fontSize: `${size * 14}px`,

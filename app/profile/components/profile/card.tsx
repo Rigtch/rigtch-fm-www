@@ -19,7 +19,7 @@ export function ProfileCard({ displayName, images, followers, href }: Profile) {
       <CardHeader className="lg:flex-row justify-between lg:items-center gap-8 p-4">
         <div className="flex items-center gap-4 p-4 ">
           <ProfileAvatar
-            src={images[1]?.url}
+            src={images?.[1]?.url}
             displayName={displayName}
             size="lg"
           />

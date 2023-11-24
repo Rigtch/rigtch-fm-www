@@ -22,7 +22,7 @@ export function PlaybackCard() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
   const [isImageLoaded, setIsImageLoaded] = useState(false)
 
-  if (!data) return <PlaybackCardSkeleton />
+  if (!data?.track) return <PlaybackCardSkeleton />
 
   const {
     device,

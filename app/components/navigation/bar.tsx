@@ -90,7 +90,7 @@ export function NavigationBar({ profile }: NavigationBarProps) {
               </NavigationMenuItem>
 
               <ProfileAvatar
-                src={profile.images[0]?.url}
+                src={profile?.images?.[0]?.url}
                 className="hidden md:block"
                 displayName={profile.displayName}
               />
@@ -105,7 +105,7 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                     className="cursor-pointer"
                   >
                     <ProfileAvatar
-                      src={profile.images[0]?.url}
+                      src={profile?.images?.[0]?.url}
                       className="items-center"
                       displayName={profile.displayName}
                     />
