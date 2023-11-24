@@ -1,4 +1,3 @@
-import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 
 import { SecretData } from '../types'
@@ -10,7 +9,7 @@ vi.mock('./fetch-api')
 
 describe('getRefresh', () => {
   beforeEach(() => {
-    ;(fetchApi as Mock).mockResolvedValue(
+    vi.mocked(fetchApi).mockResolvedValue(
       mock<SecretData>({
         accessToken: 'token',
       })

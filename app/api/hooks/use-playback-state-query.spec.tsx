@@ -1,5 +1,4 @@
 import { renderHook, waitFor } from '@testing-library/react'
-import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 import { useState } from 'react'
 
@@ -26,7 +25,7 @@ vi.mock('react-cookie', () => ({
 
 describe('usePlaybackStateQuery', () => {
   beforeEach(() => {
-    ;(getPlaybackState as Mock).mockReturnValue(
+    vi.mocked(getPlaybackState).mockResolvedValue(
       mock<PlaybackState>({
         track: {
           name: 'track 1',
@@ -61,10 +60,10 @@ describe('usePlaybackStateQuery', () => {
   test('should change refetchInterval', async () => {
     const setState = vi.fn()
 
-    ;(getPlaybackState as Mock).mockImplementation(() => {
+    vi.mocked(getPlaybackState).mockImplementation(() => {
       throw new Error('error')
     })
-    ;(useState as Mock).mockReturnValue([1000, setState])
+    vi.mocked(useState).mockReturnValue([1000, setState])
 
     const { result } = renderHook(() => usePlaybackStateQuery(), {
       wrapper: queryClientWrapper,

@@ -1,8 +1,8 @@
-import { mock } from 'vitest-mock-extended'
+import { mockDeep } from 'vitest-mock-extended'
 
 import { Analysis } from '@app/api/types'
 
-export const analysisMock = mock<Analysis>({
+export const analysisMock = mockDeep<Analysis>({
   danceability: 0.210_84,
   acousticness: 0.090_718_856_399_999_99,
   instrumentalness: 0.509_508_499_999_999_9,

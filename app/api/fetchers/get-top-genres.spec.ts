@@ -1,5 +1,3 @@
-import { Mock, describe, test, vi } from 'vitest'
-
 import { getTopGenres } from './get-top-genres'
 import { fetchApi } from './fetch-api'
 
@@ -7,7 +5,7 @@ vi.mock('./fetch-api')
 
 describe('getTopGenres', () => {
   beforeEach(() => {
-    ;(fetchApi as Mock).mockResolvedValue({
+    vi.mocked(fetchApi).mockResolvedValue({
       genres: ['pop', 'rock', 'rap'],
     })
   })

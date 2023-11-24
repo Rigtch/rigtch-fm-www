@@ -1,4 +1,3 @@
-import { Mock, describe, vi } from 'vitest'
 import { act, renderHook, waitFor } from '@testing-library/react'
 
 import { ACCESS_TOKEN } from '../constants'
@@ -13,10 +12,10 @@ vi.mock('react-cookie', () => ({
 
 describe('useTogglePlaybackStateQuery', () => {
   beforeEach(() => {
-    ;(putPlayerPause as Mock).mockReturnValue({
+    vi.mocked(putPlayerPause).mockResolvedValue({
       success: true,
     })
-    ;(putPlayerResume as Mock).mockReturnValue({
+    vi.mocked(putPlayerResume).mockResolvedValue({
       success: true,
     })
   })

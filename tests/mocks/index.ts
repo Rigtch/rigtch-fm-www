@@ -1,6 +1,3 @@
-export * from './profile'
-export * from './track'
-export * from './artist'
-export * from './album'
-export * from './analysis'
-export * from './spotify-response-factory'
+export const hrefMock = 'https://spotify.com'
+export const genresMock = ['pop', 'rock', 'rap']
+export const idMock = '123'

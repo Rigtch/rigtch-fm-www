@@ -1,5 +1,4 @@
 import { renderHook, waitFor } from '@testing-library/react'
-import { Mock, describe, test, vi } from 'vitest'
 
 import { getLastTracks } from '../fetchers'
 import { ACCESS_TOKEN } from '../constants'
@@ -8,7 +7,7 @@ import { useLastTracksQuery } from './use-last-tracks-query'
 
 import { queryClientWrapper } from '@tests/utils'
 import { trackMock } from '@tests/mocks/track'
-import { spotifyResponseMockFactory } from '@tests/mocks/spotify-response'
+import { spotifyResponseWithCursorsMockFactory } from '@tests/mocks/spotify-response'
 
 vi.mock('@app/api/fetchers')
 vi.mock('react-cookie', () => ({
@@ -17,8 +16,8 @@ vi.mock('react-cookie', () => ({
 
 describe('useLastTracksQuery', () => {
   beforeEach(() => {
-    ;(getLastTracks as Mock).mockReturnValue(
-      spotifyResponseMockFactory([trackMock])
+    vi.mocked(getLastTracks).mockResolvedValue(
+      spotifyResponseWithCursorsMockFactory([trackMock])
     )
   })
 

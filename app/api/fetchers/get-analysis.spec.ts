@@ -1,15 +1,13 @@
-import { test, describe, vi, expect, Mock } from 'vitest'
-
 import { getAnalysis } from './get-analysis'
 import { fetchApi } from './fetch-api'
 
-import { analysisMock } from '@tests/mocks'
+import { analysisMock } from '@tests/mocks/analysis'
 
 vi.mock('./fetch-api')
 
 describe('getAnalysis', () => {
   beforeEach(() => {
-    ;(fetchApi as Mock).mockResolvedValue(analysisMock)
+    vi.mocked(fetchApi).mockResolvedValue(analysisMock)
   })
 
   test('should get analysis', async () => {
