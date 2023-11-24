@@ -3,7 +3,7 @@ import { mock } from 'vitest-mock-extended'
 import { artistMock } from './artist'
 import { albumMock } from './album'
 
-import { Track } from '@api/types'
+import { Track } from '@app/api/types'
 
 export const trackMock = mock<Track>({
   name: 'Track 1',
