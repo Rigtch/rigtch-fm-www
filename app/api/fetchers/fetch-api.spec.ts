@@ -1,11 +1,9 @@
-import { test, describe, vi, expect } from 'vitest'
 import { mock } from 'vitest-mock-extended'
-
-import { PlaybackState } from '../types'
 
 import { fetchApi } from './fetch-api'
 
-import { trackMock } from '@tests/mocks'
+import { trackMock, trackNameMock } from '@tests/mocks/track'
+import { PlaybackState } from '@app/api/types'
 
 describe('fetchApi', () => {
   test('should return response', async () => {
@@ -21,7 +19,7 @@ describe('fetchApi', () => {
       track: { name },
     } = await fetchApi<PlaybackState>('')
 
-    expect(name).toEqual('Track 1')
+    expect(name).toEqual(trackNameMock)
   })
 
   test('should throw error when status is 401', () => {

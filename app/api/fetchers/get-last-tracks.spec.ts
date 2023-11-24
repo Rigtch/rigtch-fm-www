@@ -1,15 +1,14 @@
-import { Mock, describe, test, vi } from 'vitest'
-
 import { getLastTracks } from './get-last-tracks'
 import { fetchApi } from './fetch-api'
 
-import { spotifyResponseMockFactory, trackMock } from '@tests/mocks'
+import { trackMock } from '@tests/mocks/track'
+import { spotifyResponseMockFactory } from '@tests/mocks/spotify-response'
 
 vi.mock('./fetch-api')
 
 describe('getLastTracks', () => {
   beforeEach(() => {
-    ;(fetchApi as Mock).mockResolvedValue(
+    vi.mocked(fetchApi).mockResolvedValue(
       spotifyResponseMockFactory([trackMock])
     )
   })

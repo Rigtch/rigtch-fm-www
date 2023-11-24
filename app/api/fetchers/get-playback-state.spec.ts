@@ -1,4 +1,3 @@
-import { Mock, describe, test, vi } from 'vitest'
 import { mock } from 'vitest-mock-extended'
 
 import { PlaybackState } from '../types'
@@ -6,13 +5,13 @@ import { PlaybackState } from '../types'
 import { getPlaybackState } from './get-playback-state'
 import { fetchApi } from './fetch-api'
 
-import { trackMock } from '@tests/mocks'
+import { trackMock } from '@tests/mocks/track'
 
 vi.mock('./fetch-api')
 
 describe('getPlaybackState', () => {
   beforeEach(() => {
-    ;(fetchApi as Mock).mockResolvedValue(
+    vi.mocked(fetchApi).mockResolvedValue(
       mock<PlaybackState>({
         track: trackMock,
       })

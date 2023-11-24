@@ -1,8 +1,12 @@
 import { mock } from 'vitest-mock-extended'
 
+import { imagesMock } from './images'
+
 import { Album } from '@app/api/types'
 
+export const albumNameMock = 'Album 1'
+
 export const albumMock = mock<Album>({
-  name: 'Album 1',
-  images: [{ url: 'https://spotify.com/image1.png' }],
+  name: albumNameMock,
+  images: imagesMock,
 })

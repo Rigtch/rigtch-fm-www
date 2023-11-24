@@ -1,10 +1,17 @@
 import { mock } from 'vitest-mock-extended'
 
+import { imagesMock } from './images'
+
+import { genresMock, hrefMock, idMock } from '.'
+
 import { Artist } from '@app/api/types'
 
+export const artistNameMock = 'Artist 1'
+
 export const artistMock = mock<Artist>({
-  name: 'Artist 1',
-  images: [{ url: 'https://spotify.com/image1.png' }],
-  genres: ['pop', 'rock', 'rap'],
-  href: 'https://spotify.com',
+  id: idMock,
+  name: artistNameMock,
+  images: imagesMock,
+  genres: genresMock,
+  href: hrefMock,
 })
