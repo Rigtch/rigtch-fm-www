@@ -16,13 +16,13 @@ describe('ConnectButton', () => {
   })
 
   test('should call `window.open` onClick', () => {
-    const openSpy = vi.spyOn(window, 'open')
+    window.open = vi.fn()
 
     render(<ConnectButton />)
 
     fireEvent.click(screen.getByText('Connect'))
 
-    expect(openSpy).toHaveBeenCalledWith(
+    expect(window.open).toHaveBeenCalledWith(
       'http://localhost:3001/auth/login',
       '_self'
     )

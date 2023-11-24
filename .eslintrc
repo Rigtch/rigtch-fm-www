@@ -107,7 +107,8 @@
           "param": true,
           "params": true,
           "Param": true,
-          "Params": true
+          "Params": true,
+          "args": true
         }
       }
     ],

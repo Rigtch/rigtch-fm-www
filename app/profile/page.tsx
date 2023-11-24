@@ -1,11 +1,11 @@
 import { cookies } from 'next/headers'
 
-import { getTimeRangeFromSearchParams } from '@app/utils/time-range'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { PageProps } from '@app/types'
 import { TopItemsSection } from '@app/profile/sections/top-items'
 import { ItemsSection } from '@app/profile/sections/items'
 import { DefaultSection } from '@app/sections/default'
+import { getTimeRangeFromSearchParams } from '@app/utils/time-range'
 import { getViewFromSearchParams } from '@app/utils/view'
 import {
   GenreChip,
