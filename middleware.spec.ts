@@ -6,7 +6,7 @@ import { middleware } from './middleware'
 import { EXPIRATION_DATE, REFRESH_TOKEN } from '@app/api/constants'
 import { getRefresh } from '@app/api/fetchers'
 
-vi.mock('./api/fetchers')
+vi.mock('@app/api/fetchers')
 vi.mock('next/server', () => {
   const NextResponse = vi.fn()
 
