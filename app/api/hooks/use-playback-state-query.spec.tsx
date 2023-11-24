@@ -9,6 +9,7 @@ import { PlaybackState } from '../types'
 import { usePlaybackStateQuery } from './use-playback-state-query'
 
 import { queryClientWrapper } from '@tests/utils'
+import { trackMock, trackNameMock } from '@tests/mocks/track'
 
 vi.mock('@app/api/fetchers')
 vi.mock('react', async () => {
@@ -27,16 +28,7 @@ describe('usePlaybackStateQuery', () => {
   beforeEach(() => {
     vi.mocked(getPlaybackState).mockResolvedValue(
       mock<PlaybackState>({
-        track: {
-          name: 'track 1',
-          album: {
-            images: [
-              {
-                url: 'url',
-              },
-            ],
-          },
-        },
+        track: trackMock,
       })
     )
   })
@@ -53,7 +45,7 @@ describe('usePlaybackStateQuery', () => {
 
     await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
 
-    expect(result.current.data?.track?.name).toEqual('track 1')
+    expect(result.current.data?.track?.name).toEqual(trackNameMock)
     expect(getPlaybackState).toHaveBeenCalledWith(ACCESS_TOKEN)
   })
 

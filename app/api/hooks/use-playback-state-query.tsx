@@ -10,13 +10,11 @@ export const usePlaybackStateQuery = () => {
   const [refetchInterval, setRefetchInterval] = useState(1000)
   const { accessToken } = useAuthCookies()
 
-  const query = useQuery(
-    [PLAYBACK_STATE],
-    () => getPlaybackState(accessToken),
-    {
-      refetchInterval,
-    }
-  )
+  const query = useQuery({
+    queryKey: [PLAYBACK_STATE],
+    queryFn: () => getPlaybackState(accessToken),
+    refetchInterval,
+  })
 
   useEffect(() => {
     if (query.error) setRefetchInterval(10_000)

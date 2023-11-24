@@ -3,7 +3,7 @@ import { act, renderHook, waitFor } from '@testing-library/react'
 import { ACCESS_TOKEN } from '../constants'
 import { putPlayerPause, putPlayerResume } from '../fetchers'
 
-import { useTogglePlaybackStateQuery } from './use-toggle-playback-state-query'
+import { useTogglePlaybackStateQuery } from './use-toggle-playback-state'
 
 vi.mock('@app/api/fetchers')
 vi.mock('react-cookie', () => ({
