@@ -1,13 +1,13 @@
 # RigtchFM WWW
 
-[![ci](https://github.com/Rigtch/rigtch-music-www/actions/workflows/main.yml/badge.svg)](https://github.com/Rigtch/rigtch-music-www/actions/workflows/main.yml)
-[![codecov](https://codecov.io/gh/Mnigos/rigtch-music-www/branch/main/graph/badge.svg?token=eVOzsS0pRd)](https://codecov.io/gh/Mnigos/rigtch-music-www)
-![GitHub](https://img.shields.io/github/license/Rigtch/rigtch-music-www)
+[![ci](https://github.com/Rigtch/rigtch-fm-www/actions/workflows/main.yml/badge.svg)](https://github.com/Rigtch/rigtch-fm-www/actions/workflows/main.yml)
+[![codecov](https://codecov.io/gh/Mnigos/rigtch-fm-www/branch/main/graph/badge.svg?token=eVOzsS0pRd)](https://codecov.io/gh/Mnigos/rigtch-fm-www)
+![GitHub](https://img.shields.io/github/license/Rigtch/rigtch-fm-www)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Rigtch/rigtch-music-www)
-![GitHub last commit](https://img.shields.io/github/last-commit/Rigtch/rigtch-music-www)
-![GitHub issues](https://img.shields.io/github/issues/Rigtch/rigtch-music-www)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Rigtch/rigtch-music-www)
+![GitHub contributors](https://img.shields.io/github/contributors/Rigtch/rigtch-fm-www)
+![GitHub last commit](https://img.shields.io/github/last-commit/Rigtch/rigtch-fm-www)
+![GitHub issues](https://img.shields.io/github/issues/Rigtch/rigtch-fm-www)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Rigtch/rigtch-fm-www)
 
 ## Description
 
