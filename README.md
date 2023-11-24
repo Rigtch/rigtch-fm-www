@@ -1,7 +1,7 @@
 # RigtchFM WWW
 
 [![ci](https://github.com/Rigtch/rigtch-fm-www/actions/workflows/main.yml/badge.svg)](https://github.com/Rigtch/rigtch-fm-www/actions/workflows/main.yml)
-[![codecov](https://codecov.io/gh/Mnigos/rigtch-fm-www/branch/main/graph/badge.svg?token=eVOzsS0pRd)](https://codecov.io/gh/Mnigos/rigtch-fm-www)
+[![codecov](https://codecov.io/gh/Rigtch/rigtch-fm-www/graph/badge.svg?token=CiWf6BsT4I)](https://codecov.io/gh/Rigtch/rigtch-fm-www)
 ![GitHub](https://img.shields.io/github/license/Rigtch/rigtch-fm-www)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Rigtch/rigtch-fm-www)
