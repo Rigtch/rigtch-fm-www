@@ -1,7 +1,7 @@
-const StylelintPlugin = require('stylelint-webpack-plugin')
+import StylelintPlugin from 'stylelint-webpack-plugin'
 
 /** @type {import('next').NextConfig} */
-module.exports = {
+export default {
   reactStrictMode: true,
   webpack: config => {
     config.plugins.push(new StylelintPlugin())

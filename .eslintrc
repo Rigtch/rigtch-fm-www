@@ -65,6 +65,18 @@
       "rules": {
         "sonarjs/no-duplicate-string": "off"
       }
+    },
+    {
+      "files": ["tailwind.config.ts"],
+      "rules": {
+        "sonarjs/no-duplicate-string": "off"
+      }
+    },
+    {
+      "files": ["*.cjs"],
+      "rules": {
+        "unicorn/no-empty-file": "off"
+      }
     }
   ],
   "ignorePatterns": [
