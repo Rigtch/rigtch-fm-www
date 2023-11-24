@@ -4,10 +4,11 @@ import { Mock, describe, test, vi } from 'vitest'
 import { getLastTracks } from '../fetchers'
 import { ACCESS_TOKEN } from '../constants'
 
-import { useLastTracksQuery } from './use-last-tracks'
+import { useLastTracksQuery } from './use-last-tracks-query'
 
 import { queryClientWrapper } from '@tests/utils'
-import { spotifyResponseMockFactory, trackMock } from '@tests/mocks'
+import { trackMock } from '@tests/mocks/track'
+import { spotifyResponseMockFactory } from '@tests/mocks/spotify-response'
 
 vi.mock('@app/api/fetchers')
 vi.mock('react-cookie', () => ({
