@@ -41,7 +41,7 @@ export function PlaybackCard() {
             'rounded-md w-full sm:w-auto',
             isImageLoaded ? 'opacity-100' : 'opacity-0'
           )}
-          onLoadingComplete={() => setIsImageLoaded(true)}
+          onLoad={() => setIsImageLoaded(true)}
         />
 
         {!isImageLoaded && <Skeleton className="h-[128px] w-[128px]" />}

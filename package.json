@@ -3,6 +3,7 @@
   "description": "rigtch.fm is focused on displaying your all-time statistics such as favorite artists, most listened songs etc.",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
