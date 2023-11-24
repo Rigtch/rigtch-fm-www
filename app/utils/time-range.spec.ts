@@ -9,21 +9,21 @@ describe('TimeRange', () => {
   const invalid = 'invalid'
 
   describe('isTimeRange', () => {
-    it('should return true when value is a TimeRange', () => {
+    test('should return true when value is a TimeRange', () => {
       expect(isTimeRange(timeRange)).toBeTruthy()
     })
 
-    it('should return false when value is not a TimeRange', () => {
+    test('should return false when value is not a TimeRange', () => {
       expect(isTimeRange(invalid)).toBeFalsy()
     })
   })
 
   describe('validateTimeRange', () => {
-    it('should return timeRange when timeRange is a TimeRange', () => {
+    test('should return timeRange when timeRange is a TimeRange', () => {
       expect(validateTimeRange(timeRange)).toEqual(timeRange)
     })
 
-    it('should return TimeRange.SHORT_TERM when timeRange is not a TimeRange', () => {
+    test('should return TimeRange.SHORT_TERM when timeRange is not a TimeRange', () => {
       expect(validateTimeRange(invalid)).toEqual(TimeRange.SHORT_TERM)
     })
   })
@@ -35,7 +35,7 @@ describe('TimeRange', () => {
       searchParamsMock[TIME_RANGE] = timeRange
     })
 
-    it('should return timeRange when timeRange is a TimeRange', () => {
+    test('should return timeRange when timeRange is a TimeRange', () => {
       expect(validateTimeRange(timeRange)).toEqual(timeRange)
     })
   })

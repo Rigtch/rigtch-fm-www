@@ -17,7 +17,7 @@ vi.mock('next/server', () => {
   }
 })
 
-describe('(App) api/authorize/route', () => {
+describe('/api/authorize/route', () => {
   const accessToken = 'accessToken'
   const refreshToken = 'refreshToken'
   const searchParams = new URLSearchParams({
@@ -37,7 +37,7 @@ describe('(App) api/authorize/route', () => {
   })
 
   describe('GET', () => {
-    it('should save cookies and redirect to /profile', async () => {
+    test('should save cookies and redirect to /profile', async () => {
       vi.mocked(NextResponse.redirect).mockReturnValue(responseMock)
 
       expect(await GET(requestMock)).toEqual(responseMock)

@@ -2,6 +2,8 @@ import { cookies } from 'next/headers'
 
 import '@app/audio-bars.css'
 
+import { ProfileProviders } from './providers'
+
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getProfile } from '@app/api/fetchers'
 import { LayoutProps } from '@app/types'
@@ -20,9 +22,11 @@ export default async function ProfileLayout({ children }: LayoutProps) {
       </aside>
 
       <main className="my-8 md:my-16 w-full min-h-[200vh] flex flex-col items-stretch justify-start px-4 md:px-12 gap-8">
-        <ProfileCard {...profile} />
+        <ProfileProviders>
+          <ProfileCard {...profile} />
 
-        {children}
+          {children}
+        </ProfileProviders>
       </main>
     </div>
   )

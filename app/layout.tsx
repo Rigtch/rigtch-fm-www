@@ -2,11 +2,12 @@ import { cookies } from 'next/headers'
 
 import './globals.css'
 
-import Providers from './providers'
+import { RootProviders } from './providers'
 import { NavigationBar } from './components/navigation'
 import { getProfile } from './api/fetchers'
 import { ACCESS_TOKEN } from './api/constants'
 import { LayoutProps } from './types'
+import { Profile } from './api/types'
 
 export const metadata = {
   title: 'Next.js',
@@ -16,16 +17,22 @@ export const metadata = {
 export default async function RootLayout({ children }: LayoutProps) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const profile = await getProfile(accessToken).catch(() => undefined)
+  let profile: Profile | undefined
+
+  try {
+    profile = await getProfile(accessToken)
+  } catch {
+    profile = undefined
+  }
 
   return (
     <html lang="en">
       <body className="bg-background text-white min-h-screen">
-        <Providers>
+        <RootProviders>
           <NavigationBar profile={profile} />
 
           <div>{children}</div>
-        </Providers>
+        </RootProviders>
       </body>
     </html>
   )
