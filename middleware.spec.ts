@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { DeepMockProxy, mockDeep } from 'vitest-mock-extended'
 
-import { EXPIRATION_DATE, REFRESH_TOKEN } from './api/constants'
 import { middleware } from './middleware'
-import { getRefresh } from './api/fetchers'
+
+import { EXPIRATION_DATE, REFRESH_TOKEN } from '@app/api/constants'
+import { getRefresh } from '@app/api/fetchers'
 
 vi.mock('./api/fetchers')
 vi.mock('next/server', () => {
