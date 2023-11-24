@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-import { ACCESS_TOKEN, EXPIRATION_DATE, REFRESH_TOKEN } from './api/constants'
-import { getRefresh } from './api/fetchers'
+import {
+  ACCESS_TOKEN,
+  EXPIRATION_DATE,
+  REFRESH_TOKEN,
+} from './app/api/constants'
+import { getRefresh } from './app/api/fetchers'
 
 export async function middleware(request: NextRequest) {
   const response =
