@@ -4,8 +4,8 @@ import {
   ACCESS_TOKEN,
   EXPIRATION_DATE,
   REFRESH_TOKEN,
-} from './app/api/constants'
-import { getRefresh } from './app/api/fetchers'
+} from '@app/api/constants'
+import { getRefresh } from '@app/api/fetchers'
 
 export async function middleware(request: NextRequest) {
   const response =
