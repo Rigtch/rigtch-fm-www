@@ -1,6 +1,6 @@
 import { mock } from 'vitest-mock-extended'
 
-import { Profile } from '@api/types'
+import { Profile } from '@app/api/types'
 
 export const profileMock = mock<Profile>({
   displayName: 'John Doe',

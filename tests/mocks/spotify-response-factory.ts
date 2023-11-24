@@ -2,7 +2,7 @@ import {
   SpotifyResponse,
   SpotifyResponseWithCursors,
   SpotifyResponseWithOffset,
-} from '@api/types'
+} from '@app/api/types'
 
 export const spotifyResponseMockFactory = <T>(
   items: T[]

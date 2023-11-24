@@ -22,42 +22,12 @@
     },
     "import/resolver": {
       "node": {
-        "paths": [
-          "@",
-          "@pages/",
-          "@layouts/",
-          "@sections/",
-          "@components/",
-          "@context/",
-          "@hooks/",
-          "@config/",
-          "@api/",
-          "@common/",
-          "@utils/",
-          "@assets/",
-          "@styles/",
-          "@types/",
-          "@tests/"
-        ],
+        "paths": ["@app/", "@tests/"],
         "extensions": [".js", ".ts", ".tsx", ".jsx"]
       },
       "alias": {
         "map": [
-          ["~", "./src/"],
-          ["@pages", "./src/pages"],
-          ["@layouts", "./src/layouts"],
-          ["@sections", "./src/sections"],
-          ["@components", "./src/components"],
-          ["@context", "./src/context"],
-          ["@hooks", "./src/hooks"],
-          ["@config", "./src/config"],
-          ["@api", "./src/api"],
-          ["@app", "./src/app"],
-          ["@common", "./src/common"],
-          ["@utils", "./src/utils"],
-          ["@assets", "./src/assets"],
-          ["@styles", "./src/styles"],
-          ["@types", "./src/types"],
+          ["@app", "./app"],
           ["@tests", "./tests"]
         ],
         "extensions": [".ts", ".js", ".tsx", ".jsx"]
@@ -108,16 +78,14 @@
   ],
   "rules": {
     "no-undef": "off",
-    "prettier/prettier": "warn",
     "prefer-const": "warn",
+    "prettier/prettier": "warn",
     "eslint-comments/no-unused-disable": "error",
     "@typescript-eslint/no-unused-vars": "error",
-    // empty functions are helpful for defining default values
     "@typescript-eslint/no-empty-function": "off",
     "unicorn/prefer-node-protocol": "off",
     "unicorn/no-useless-undefined": "off",
     "unicorn/no-unreadable-array-destructuring": "off",
-
     "unicorn/filename-case": [
       "error",
       {
@@ -128,12 +96,6 @@
       }
     ],
     "unicorn/no-null": "off",
-    "import/order": [
-      "warn",
-      {
-        "newlines-between": "always"
-      }
-    ],
     "unicorn/prefer-spread": "off",
     "unicorn/prevent-abbreviations": [
       "error",
@@ -149,7 +111,14 @@
         }
       }
     ],
-
+    "import/no-cycle": "warn",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always"
+      }
+    ],
+    "import/consistent-type-specifier-style": ["warn", "prefer-inline"],
     "react/prop-types": "off"
   }
 }

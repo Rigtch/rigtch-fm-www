@@ -20,20 +20,7 @@
       }
     ],
     "paths": {
-      "@*": ["./src/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@app/*": ["./src/app/*"],
-      "@layouts/*": ["./src/layouts/*"],
-      "@sections/*": ["./src/sections/*"],
-      "@components/*": ["./src/components/*"],
-      "@context/*": ["./src/context/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@config/*": ["./src/config/*"],
-      "@api/*": ["./src/api/*"],
-      "@common/*": ["./src/common/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@styles/*": ["./src/styles/*"],
+      "@app/*": ["./app/*"],
       "@tests/*": ["./tests/*"]
     },
     "types": ["vitest/globals", "@testing-library/jest-dom"]
