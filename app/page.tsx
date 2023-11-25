@@ -1,9 +1,9 @@
-import { ConnectButton } from './components/connect'
+import { ConnectCard } from './components/connect/card'
 
 export default function HomePage() {
   return (
-    <div>
-      <ConnectButton />
+    <div className="flex w-full justify-center pt-4">
+      <ConnectCard />
     </div>
   )
 }
