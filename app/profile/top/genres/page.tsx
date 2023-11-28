@@ -1,5 +1,5 @@
 import { PageProps } from '@app/types'
-import { ProfileTopGenresSection } from '@app/profile/sections/top-genres'
+import { ProfileTopGenresSection } from '@app/profile/sections'
 
 export default async function ProfileTopGenresPage({
   searchParams,
