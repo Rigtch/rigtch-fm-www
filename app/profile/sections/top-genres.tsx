@@ -4,14 +4,15 @@ import { ProfileTopSectionProps } from '../types'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopGenres } from '@app/api/fetchers'
-import { getTimeRangeFromSearchParams } from '@app/utils/time-range'
+import { validateTimeRange } from '@app/utils/time-range'
 import { DefaultSection } from '@app/sections/default'
 import { GenreChip } from '@app/components/common'
+import { TIME_RANGE } from '@app/constants'
 
 export async function ProfileTopGenresSection({
   searchParams,
 }: ProfileTopSectionProps) {
-  const timeRange = getTimeRangeFromSearchParams(searchParams)
+  const timeRange = validateTimeRange(searchParams[TIME_RANGE])
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 

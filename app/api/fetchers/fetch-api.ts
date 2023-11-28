@@ -16,8 +16,6 @@ export async function fetchApi<T>(
     cache = 'force-cache',
   }: FetchApiOptions = {}
 ): Promise<T> {
-  console.log('fetchApi', path)
-
   const response = await fetch(environment.API_URL + path, {
     method,
     ...(token && {

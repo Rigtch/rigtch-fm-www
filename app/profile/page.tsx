@@ -6,14 +6,15 @@ import { ProfileTopArtistsSection } from './sections/top-artists'
 import { ProfileRecentlyPlayedSection } from './sections/recently-played'
 
 import { PageProps } from '@app/types'
-import { getTimeRangeFromSearchParams } from '@app/utils/time-range'
-import { getViewFromSearchParams } from '@app/utils/view'
+import { validateTimeRange } from '@app/utils/time-range'
+import { validateView } from '@app/utils/view'
 import { SelectView, ToggleTimeRange } from '@app/components/common'
 import { ErrorBoundary } from '@app/error-boundary'
+import { TIME_RANGE, VIEW } from '@app/constants'
 
 export default async function ProfilePage({ searchParams }: PageProps) {
-  const timeRange = getTimeRangeFromSearchParams(searchParams)
-  const view = getViewFromSearchParams(searchParams)
+  const timeRange = validateTimeRange(searchParams[TIME_RANGE])
+  const view = validateView(searchParams[VIEW])
 
   return (
     <>
