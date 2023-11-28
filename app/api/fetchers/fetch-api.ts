@@ -16,6 +16,8 @@ export async function fetchApi<T>(
     cache = 'force-cache',
   }: FetchApiOptions = {}
 ): Promise<T> {
+  console.log('fetchApi', path)
+
   const response = await fetch(environment.API_URL + path, {
     method,
     ...(token && {
@@ -28,8 +30,6 @@ export async function fetchApi<T>(
 
   const parsedResponse = await response.json()
 
-  console.error(parsedResponse)
-
   if (!response.ok) {
     if (parsedResponse.message === 'No device is currently playing') {
       return parsedResponse
@@ -37,7 +37,7 @@ export async function fetchApi<T>(
 
     console.error(parsedResponse)
 
-    // throw new Error(parsedResponse.message)
+    throw new Error(parsedResponse.message)
   }
 
   return parsedResponse

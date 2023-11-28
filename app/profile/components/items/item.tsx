@@ -2,11 +2,10 @@
 
 import Link from 'next/link'
 
-import { OpenInSpotifyButton, RelativeTime } from '../../../components/common'
-import { Button } from '../../../components/ui/button'
-
 import { ItemImage } from './image'
 
+import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
+import { Button } from '@app/components/ui/button'
 import { TrackArtist } from '@app/api/types'
 import { cn } from '@app/utils/cn'
 
