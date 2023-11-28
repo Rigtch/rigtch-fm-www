@@ -3,15 +3,16 @@ import { cookies } from 'next/headers'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopArtists } from '@app/api/fetchers'
 import { PageProps } from '@app/types'
-import { getTimeRangeFromSearchParams } from '@app/utils/time-range'
+import { validateTimeRange } from '@app/utils/time-range'
 import { TopItemsSection } from '@app/profile/sections/top-items'
-import { getViewFromSearchParams } from '@app/utils/view'
+import { validateView } from '@app/utils/view'
+import { TIME_RANGE, VIEW } from '@app/constants'
 
 export default async function ProfileTopArtistsPage({
   searchParams,
 }: PageProps) {
-  const timeRange = getTimeRangeFromSearchParams(searchParams)
-  const view = getViewFromSearchParams(searchParams)
+  const timeRange = validateTimeRange(searchParams[TIME_RANGE])
+  const view = validateView(searchParams[VIEW])
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 

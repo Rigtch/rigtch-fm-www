@@ -1,6 +1,6 @@
-import { getViewFromSearchParams, isView, validateView } from './view'
+import { isView, validateView } from './view'
 
-import { SearchParams, View } from '@app/types'
+import { View } from '@app/types'
 
 describe('View', () => {
   const view = View.CARD
@@ -23,18 +23,6 @@ describe('View', () => {
 
     test('should return View.CARD when view is not a View', () => {
       expect(validateView(invalid)).toEqual(View.CARD)
-    })
-  })
-
-  describe('getViewFromSearchParams', () => {
-    const searchParamsMock: SearchParams = {}
-
-    beforeEach(() => {
-      searchParamsMock[View.CARD] = view
-    })
-
-    test('should return view when view is a View', () => {
-      expect(getViewFromSearchParams(searchParamsMock)).toEqual(view)
     })
   })
 })

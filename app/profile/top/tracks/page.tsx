@@ -4,14 +4,15 @@ import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopTracks } from '@app/api/fetchers'
 import { PageProps } from '@app/types'
 import { TopItemsSection } from '@app/profile/sections/top-items'
-import { getTimeRangeFromSearchParams } from '@app/utils/time-range'
-import { getViewFromSearchParams } from '@app/utils/view'
+import { validateTimeRange } from '@app/utils/time-range'
+import { validateView } from '@app/utils/view'
+import { TIME_RANGE, VIEW } from '@app/constants'
 
 export default async function ProfileTopTracksPage({
   searchParams,
 }: PageProps) {
-  const timeRange = getTimeRangeFromSearchParams(searchParams)
-  const view = getViewFromSearchParams(searchParams)
+  const timeRange = validateTimeRange(searchParams[TIME_RANGE])
+  const view = validateView(searchParams[VIEW])
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 

@@ -1,7 +1,5 @@
 import { isTimeRange, validateTimeRange } from './time-range'
 
-import { TIME_RANGE } from '@app/constants/index'
-import { SearchParams } from '@app/types'
 import { TimeRange } from '@app/api/types'
 
 describe('TimeRange', () => {
@@ -25,18 +23,6 @@ describe('TimeRange', () => {
 
     test('should return TimeRange.SHORT_TERM when timeRange is not a TimeRange', () => {
       expect(validateTimeRange(invalid)).toEqual(TimeRange.SHORT_TERM)
-    })
-  })
-
-  describe('getTimeRangeFromSearchParams', () => {
-    const searchParamsMock: SearchParams = {}
-
-    beforeEach(() => {
-      searchParamsMock[TIME_RANGE] = timeRange
-    })
-
-    test('should return timeRange when timeRange is a TimeRange', () => {
-      expect(validateTimeRange(timeRange)).toEqual(timeRange)
     })
   })
 })
