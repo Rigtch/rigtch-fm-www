@@ -1,15 +1,18 @@
-import { ReactNode } from 'react'
+import { HTMLAttributes, ReactNode } from 'react'
 
-export interface DefaultSectionProps {
+import { cn } from '@app/utils/cn'
+
+export interface DefaultSectionProps extends HTMLAttributes<HTMLDivElement> {
   title: string
   headerAction?: ReactNode
-  children?: ReactNode
 }
 
 export function DefaultSection({
   title,
   headerAction,
   children,
+  className,
+  ...props
 }: DefaultSectionProps) {
   return (
     <section className="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24">
@@ -19,7 +22,11 @@ export function DefaultSection({
         {headerAction && <div>{headerAction}</div>}
       </header>
 
-      {children && <main className="flex flex-col gap-4">{children}</main>}
+      {children && (
+        <main className={cn('flex flex-col gap-4', className)} {...props}>
+          {children}
+        </main>
+      )}
     </section>
   )
 }

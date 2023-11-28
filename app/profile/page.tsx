@@ -10,7 +10,11 @@ import {
 import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'
 import { validateView } from '@app/utils/view'
-import { SelectView, ToggleTimeRange } from '@app/components/common'
+import {
+  SeeMoreButton,
+  SelectView,
+  ToggleTimeRange,
+} from '@app/components/common'
 import { ErrorBoundary } from '@app/error-boundary'
 import { TIME_RANGE, VIEW } from '@app/constants'
 
@@ -30,25 +34,33 @@ export default async function ProfilePage({ searchParams }: PageProps) {
 
       <ErrorBoundary>
         <Suspense fallback={<div>loading</div>}>
-          <ProfileTopGenresSection searchParams={searchParams} />
+          <ProfileTopGenresSection searchParams={searchParams}>
+            <SeeMoreButton href="/profile/top/genres" />
+          </ProfileTopGenresSection>
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary>
         <Suspense fallback={<div>loading</div>}>
-          <ProfileTopArtistsSection searchParams={searchParams} />
+          <ProfileTopArtistsSection searchParams={searchParams}>
+            <SeeMoreButton href="/profile/top/artists" />
+          </ProfileTopArtistsSection>
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary>
         <Suspense fallback={<div>loading</div>}>
-          <ProfileTopTracksSection searchParams={searchParams} />
+          <ProfileTopTracksSection searchParams={searchParams}>
+            <SeeMoreButton href="/profile/top/tracks" />
+          </ProfileTopTracksSection>
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary>
         <Suspense fallback={<div>loading</div>}>
-          <ProfileRecentlyPlayedSection />
+          <ProfileRecentlyPlayedSection>
+            <SeeMoreButton href="/profile/top/tracks" />
+          </ProfileRecentlyPlayedSection>
         </Suspense>
       </ErrorBoundary>
     </>

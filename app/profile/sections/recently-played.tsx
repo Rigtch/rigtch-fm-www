@@ -6,10 +6,10 @@ import { ItemsSection } from './items'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getLastTracks } from '@app/api/fetchers'
-import { SeeMoreButton } from '@app/components/common'
 
 export async function ProfileRecentlyPlayedSection({
   limit,
+  children,
 }: Omit<ProfileTopSectionProps, 'searchParams'>) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
@@ -21,7 +21,7 @@ export async function ProfileRecentlyPlayedSection({
       title="Recently Played"
       withoutPosition
     >
-      <SeeMoreButton href="/profile/recently-played" />
+      {children && <div className="flex justify-center">{children}</div>}
     </ItemsSection>
   )
 }

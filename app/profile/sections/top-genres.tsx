@@ -11,15 +11,17 @@ import { TIME_RANGE } from '@app/constants'
 
 export async function ProfileTopGenresSection({
   searchParams,
+  limit,
+  children,
 }: ProfileTopSectionProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const { genres } = await getTopGenres(accessToken, timeRange)
+  const { genres } = await getTopGenres(accessToken, timeRange, limit)
 
   return (
-    <DefaultSection title="Top Genres">
+    <DefaultSection title="Top Genres" className="gap-12 items-center">
       <div className="flex flex-row flex-wrap gap-2">
         {genres.map(genre => (
           <div key={genre}>
@@ -27,6 +29,8 @@ export async function ProfileTopGenresSection({
           </div>
         ))}
       </div>
+
+      {children && <div>{children}</div>}
     </DefaultSection>
   )
 }
