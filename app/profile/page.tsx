@@ -1,9 +1,11 @@
 import { Suspense } from 'react'
 
-import { ProfileTopGenresSection } from './sections/top-genres'
-import { ProfileTopTracksSection } from './sections/top-tracks'
-import { ProfileTopArtistsSection } from './sections/top-artists'
-import { ProfileRecentlyPlayedSection } from './sections/recently-played'
+import {
+  ProfileRecentlyPlayedSection,
+  ProfileTopArtistsSection,
+  ProfileTopGenresSection,
+  ProfileTopTracksSection,
+} from './sections'
 
 import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'

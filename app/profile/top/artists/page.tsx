@@ -4,7 +4,7 @@ import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopArtists } from '@app/api/fetchers'
 import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'
-import { TopItemsSection } from '@app/profile/sections/top-items'
+import { TopItemsSection } from '@app/profile/sections'
 import { validateView } from '@app/utils/view'
 import { TIME_RANGE, VIEW } from '@app/constants'
 
