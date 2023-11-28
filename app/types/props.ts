@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 import { Params, SearchParams } from './params'
 
 export interface PageProps {
-  params: Params
+  params?: Params
   searchParams: SearchParams
 }
 

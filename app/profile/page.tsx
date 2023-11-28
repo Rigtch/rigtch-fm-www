@@ -1,35 +1,19 @@
-import { cookies } from 'next/headers'
+import { Suspense } from 'react'
 
-import { ACCESS_TOKEN } from '@app/api/constants'
+import { ProfileTopGenresSection } from './sections/top-genres'
+import { ProfileTopTracksSection } from './sections/top-tracks'
+import { ProfileTopArtistsSection } from './sections/top-artists'
+import { ProfileRecentlyPlayedSection } from './sections/recently-played'
+
 import { PageProps } from '@app/types'
-import { TopItemsSection } from '@app/profile/sections/top-items'
-import { ItemsSection } from '@app/profile/sections/items'
-import { DefaultSection } from '@app/sections/default'
 import { getTimeRangeFromSearchParams } from '@app/utils/time-range'
 import { getViewFromSearchParams } from '@app/utils/view'
-import {
-  GenreChip,
-  SeeMoreButton,
-  SelectView,
-  ToggleTimeRange,
-} from '@app/components/common'
-import {
-  getLastTracks,
-  getTopArtists,
-  getTopGenres,
-  getTopTracks,
-} from '@app/api/fetchers'
+import { SelectView, ToggleTimeRange } from '@app/components/common'
+import { ErrorBoundary } from '@app/error-boundary'
 
 export default async function ProfilePage({ searchParams }: PageProps) {
   const timeRange = getTimeRangeFromSearchParams(searchParams)
   const view = getViewFromSearchParams(searchParams)
-
-  const accessToken = cookies().get(ACCESS_TOKEN)?.value
-
-  const { genres } = await getTopGenres(accessToken, timeRange)
-  const artists = await getTopArtists(accessToken, timeRange)
-  const tracks = await getTopTracks(accessToken, timeRange)
-  const recentlyPlayedTracks = await getLastTracks(accessToken)
 
   return (
     <>
@@ -41,29 +25,29 @@ export default async function ProfilePage({ searchParams }: PageProps) {
         </div>
       </div>
 
-      <DefaultSection title="Top Genres">
-        <div className="flex flex-row flex-wrap gap-2">
-          {genres?.map(genre => (
-            <div key={genre}>
-              <GenreChip genre={genre} />
-            </div>
-          ))}
-        </div>
+      <ErrorBoundary>
+        <Suspense fallback={<div>loading</div>}>
+          <ProfileTopGenresSection searchParams={searchParams} />
+        </Suspense>
+      </ErrorBoundary>
 
-        <SeeMoreButton href="/profile/top/genres" />
-      </DefaultSection>
+      <ErrorBoundary>
+        <Suspense fallback={<div>loading</div>}>
+          <ProfileTopArtistsSection searchParams={searchParams} />
+        </Suspense>
+      </ErrorBoundary>
 
-      <TopItemsSection items={artists.items} title="Top Artists" view={view}>
-        <SeeMoreButton href="/profile/top/artists" />
-      </TopItemsSection>
+      <ErrorBoundary>
+        <Suspense fallback={<div>loading</div>}>
+          <ProfileTopTracksSection searchParams={searchParams} />
+        </Suspense>
+      </ErrorBoundary>
 
-      <TopItemsSection items={tracks.items} title="Top Tracks" view={view}>
-        <SeeMoreButton href="/profile/top/tracks" />
-      </TopItemsSection>
-
-      <ItemsSection items={recentlyPlayedTracks.items} title="Recently Played">
-        <SeeMoreButton href="/profile/recently-played" />
-      </ItemsSection>
+      <ErrorBoundary>
+        <Suspense fallback={<div>loading</div>}>
+          <ProfileRecentlyPlayedSection />
+        </Suspense>
+      </ErrorBoundary>
     </>
   )
 }
