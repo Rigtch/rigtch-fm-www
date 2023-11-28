@@ -9,12 +9,15 @@ import { Artist, Track } from '@app/api/types'
 export interface ItemsListProps {
   items: (Artist | Track)[]
   isTop?: boolean
+  withoutPosition?: boolean
 }
 
-export function ItemsList({ items, isTop }: ItemsListProps) {
+export function ItemsList({ items, isTop, withoutPosition }: ItemsListProps) {
   const sortedItems = items.map((artist, index) => ({
     ...artist,
-    position: index + 1,
+    ...(!withoutPosition && {
+      position: index + 1,
+    }),
   }))
 
   isTop && sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])

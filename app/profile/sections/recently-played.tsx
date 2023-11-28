@@ -16,7 +16,11 @@ export async function ProfileRecentlyPlayedSection({
   const recentlyPlayedTracks = await getLastTracks(accessToken, limit)
 
   return (
-    <ItemsSection items={recentlyPlayedTracks.items} title="Recently Played">
+    <ItemsSection
+      items={recentlyPlayedTracks.items}
+      title="Recently Played"
+      withoutPosition
+    >
       <SeeMoreButton href="/profile/recently-played" />
     </ItemsSection>
   )
