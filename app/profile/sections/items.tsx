@@ -4,12 +4,18 @@ import { ItemsList } from '@app/profile/components/items'
 
 export type ItemsSectionProps = DefaultSectionProps & {
   items: (Artist | Track)[]
+  withoutPosition?: boolean
 }
 
-export function ItemsSection({ items, title, children }: ItemsSectionProps) {
+export function ItemsSection({
+  items,
+  title,
+  children,
+  withoutPosition,
+}: ItemsSectionProps) {
   return (
     <DefaultSection title={title}>
-      <ItemsList items={items} />
+      <ItemsList items={items} withoutPosition={withoutPosition} />
 
       {children}
     </DefaultSection>
