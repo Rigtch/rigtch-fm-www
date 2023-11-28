@@ -12,9 +12,10 @@ export function ItemsSection({
   title,
   children,
   withoutPosition,
+  ...props
 }: ItemsSectionProps) {
   return (
-    <DefaultSection title={title}>
+    <DefaultSection title={title} {...props}>
       <ItemsList items={items} withoutPosition={withoutPosition} />
 
       {children}
