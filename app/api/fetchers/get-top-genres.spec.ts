@@ -4,15 +4,17 @@ import { fetchApi } from './fetch-api'
 vi.mock('./fetch-api')
 
 describe('getTopGenres', () => {
+  const genresMock = ['pop', 'rock', 'rap']
+
   beforeEach(() => {
     vi.mocked(fetchApi).mockResolvedValue({
-      genres: ['pop', 'rock', 'rap'],
+      genres: genresMock,
     })
   })
 
   test('should get top genres', async () => {
     const { genres } = await getTopGenres()
 
-    expect(genres).toEqual(['pop', 'rock', 'rap'])
+    expect(genres).toEqual(genresMock)
   })
 })
