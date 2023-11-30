@@ -1,6 +1,6 @@
 import { HttpMethod } from '../types'
 
-import { environment } from '@app/config/environment'
+import { env } from '@app/config/env'
 
 export interface FetchApiOptions {
   method?: HttpMethod
@@ -16,7 +16,7 @@ export async function fetchApi<T>(
     cache = 'force-cache',
   }: FetchApiOptions = {}
 ): Promise<T> {
-  const response = await fetch(environment.API_URL + path, {
+  const response = await fetch(env.NEXT_PUBLIC_API_URL + path, {
     method,
     ...(token && {
       headers: {
