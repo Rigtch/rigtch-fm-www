@@ -17,8 +17,8 @@ export function TopItemsSection({
   view,
   ...props
 }: TopItemsSectionProps) {
-  const sortedItems = items.map((artist, index) => ({
-    ...artist,
+  const sortedItems = items.map((item, index) => ({
+    ...item,
     position: index + 1,
   }))
 

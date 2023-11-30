@@ -1,4 +1,4 @@
-import { mock } from 'vitest-mock-extended'
+import { mockDeep } from 'vitest-mock-extended'
 
 import { imagesMock } from './images'
 
@@ -8,7 +8,7 @@ import { Artist } from '@app/api/types'
 
 export const artistNameMock = 'Artist 1'
 
-export const artistMock = mock<Artist>({
+export const artistMock = mockDeep<Artist>({
   id: idMock,
   name: artistNameMock,
   images: imagesMock,
