@@ -34,7 +34,7 @@ describe('ProfileTopTracksSection', () => {
     })
   })
 
-  test('should render with genres', async () => {
+  test('should render with items', async () => {
     render(
       await ProfileTopTracksSection({
         searchParams: searchParamsMock,
@@ -42,6 +42,7 @@ describe('ProfileTopTracksSection', () => {
     )
 
     expect(screen.getAllByText(trackNameMock)[0]).toBeInTheDocument()
+    expect(screen.getByText(1)).toBeInTheDocument()
     expect(screen.getAllByText(artistNameMock)[0]).toBeInTheDocument()
     expect(getTopTracks).toHaveBeenCalledWith(
       accessTokenMock,
