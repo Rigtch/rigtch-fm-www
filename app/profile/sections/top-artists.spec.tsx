@@ -77,4 +77,17 @@ describe('ProfileTopArtistsSection', () => {
 
     expect(screen.getAllByText(genresMock[0])[0]).toBeInTheDocument()
   })
+
+  test('should render with children', async () => {
+    const children = 'children'
+
+    render(
+      await ProfileTopArtistsSection({
+        searchParams: searchParamsMock,
+        children,
+      })
+    )
+
+    expect(screen.getByText(children)).toBeInTheDocument()
+  })
 })
