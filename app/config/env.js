@@ -8,5 +8,4 @@ export const env = createEnv({
   runtimeEnv: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
   },
-  skipValidation: process.env.NODE_ENV === 'test',
 })
