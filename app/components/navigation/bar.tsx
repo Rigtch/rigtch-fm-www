@@ -118,7 +118,7 @@ export function NavigationBar({ profile }: NavigationBarProps) {
               </div>
             </>
           ) : (
-            <ConnectButton />
+            <ConnectButton variant="success" />
           )}
         </NavigationMenuList>
       </NavigationMenu>
