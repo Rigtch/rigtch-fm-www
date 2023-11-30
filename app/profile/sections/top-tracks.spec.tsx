@@ -1,27 +1,31 @@
 import { cookies } from 'next/headers'
 import { render, screen } from '@testing-library/react'
 
-import { ProfileTopGenresSection } from './top-genres'
+import { ProfileTopTracksSection } from './top-tracks'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
-import { getTopGenres } from '@app/api/fetchers'
-import { genresMock } from '@tests/mocks'
+import { getTopTracks } from '@app/api/fetchers'
 import { TimeRange } from '@app/api/types'
+import { View } from '@app/types'
+import { spotifyResponseWithOffsetMockFactory } from '@tests/mocks/spotify-response'
+import { artistNameMock } from '@tests/mocks/artist'
+import { trackNameMock, tracksMock } from '@tests/mocks/track'
 
 vi.mock('@app/api/fetchers')
 vi.mock('next/headers')
 
-describe('ProfileTopGenresSection', () => {
+describe('ProfileTopTracksSection', () => {
   const accessTokenMock = 'accessToken'
   const timeRangeMock = TimeRange.SHORT_TERM
   const searchParamsMock = {
     time_range: timeRangeMock,
+    view: View.LIST,
   }
 
   beforeEach(() => {
-    vi.mocked(getTopGenres).mockResolvedValue({
-      genres: genresMock,
-    })
+    vi.mocked(getTopTracks).mockResolvedValue(
+      spotifyResponseWithOffsetMockFactory(tracksMock)
+    )
     vi.mocked(cookies, { partial: true }).mockReturnValue({
       get: () => ({
         name: ACCESS_TOKEN,
@@ -32,13 +36,14 @@ describe('ProfileTopGenresSection', () => {
 
   test('should render with genres', async () => {
     render(
-      await ProfileTopGenresSection({
+      await ProfileTopTracksSection({
         searchParams: searchParamsMock,
       })
     )
 
-    expect(screen.getAllByText(genresMock[0])[0]).toBeInTheDocument()
-    expect(getTopGenres).toHaveBeenCalledWith(
+    expect(screen.getAllByText(trackNameMock)[0]).toBeInTheDocument()
+    expect(screen.getAllByText(artistNameMock)[0]).toBeInTheDocument()
+    expect(getTopTracks).toHaveBeenCalledWith(
       accessTokenMock,
       timeRangeMock,
       undefined
@@ -49,13 +54,13 @@ describe('ProfileTopGenresSection', () => {
     const limit = 10
 
     render(
-      await ProfileTopGenresSection({
+      await ProfileTopTracksSection({
         searchParams: searchParamsMock,
         limit: limit,
       })
     )
 
-    expect(getTopGenres).toHaveBeenCalledWith(
+    expect(getTopTracks).toHaveBeenCalledWith(
       accessTokenMock,
       timeRangeMock,
       limit
@@ -66,7 +71,7 @@ describe('ProfileTopGenresSection', () => {
     const children = 'children'
 
     render(
-      await ProfileTopGenresSection({
+      await ProfileTopTracksSection({
         searchParams: searchParamsMock,
         children,
       })
