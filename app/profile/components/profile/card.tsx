@@ -1,9 +1,8 @@
 'use client'
 
-import { PlaybackCard } from '../playback'
-
 import { ProfileAvatar } from './avatar'
 
+import { PlaybackCard } from '@app/profile/components/playback'
 import { OpenInSpotifyButton } from '@app/components/common'
 import {
   Card,
