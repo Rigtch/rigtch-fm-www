@@ -109,8 +109,6 @@ jobs:
 
       - name: Run unit tests 🧪
         run: yarn test:coverage
-        env:
-          NEXT_PUBLIC_API_URL: 'https://api.example.com'
 
       - name: Collect coverage
         uses: codecov/codecov-action@v3
