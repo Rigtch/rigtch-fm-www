@@ -15,3 +15,15 @@ export const artistMock = mockDeep<Artist>({
   genres: genresMock,
   href: hrefMock,
 })
+
+export const artistsMock = [
+  artistMock,
+  {
+    ...artistMock,
+    id: '2',
+  },
+  {
+    ...artistMock,
+    id: '3',
+  },
+]

@@ -16,3 +16,15 @@ export const trackMock = mockDeep<Track>({
   album: albumMock,
   artists: [artistMock],
 })
+
+export const tracksMock = [
+  trackMock,
+  {
+    ...trackMock,
+    id: '2',
+  },
+  {
+    ...trackMock,
+    id: '3',
+  },
+]

@@ -2,35 +2,13 @@ import { render, screen } from '@testing-library/react'
 
 import { TopItemsSection } from './top-items'
 
-import { trackMock } from '@tests/mocks/track'
-import { artistMock, artistNameMock } from '@tests/mocks/artist'
+import { trackMock, tracksMock } from '@tests/mocks/track'
+import { artistMock, artistNameMock, artistsMock } from '@tests/mocks/artist'
 import { View } from '@app/types'
 import { genresMock } from '@tests/mocks'
 
 describe('TopItemsSection', () => {
   const title = 'title'
-  const tracksMock = [
-    trackMock,
-    {
-      ...trackMock,
-      id: '2',
-    },
-    {
-      ...trackMock,
-      id: '3',
-    },
-  ]
-  const artistsMock = [
-    artistMock,
-    {
-      ...artistMock,
-      id: '2',
-    },
-    {
-      ...artistMock,
-      id: '3',
-    },
-  ]
   const view = View.LIST
 
   test('should render with title', () => {
