@@ -1,5 +1,7 @@
 import StylelintPlugin from 'stylelint-webpack-plugin'
 
+import './app/config/env.js'
+
 /** @type {import('next').NextConfig} */
 export default {
   reactStrictMode: true,

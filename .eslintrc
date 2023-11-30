@@ -120,7 +120,8 @@
           "params": true,
           "Param": true,
           "Params": true,
-          "args": true
+          "args": true,
+          "env": true
         }
       }
     ],
