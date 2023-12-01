@@ -11,6 +11,7 @@ import {
   UseQueryResult,
 } from '@tanstack/react-query'
 import { DeepMockProxy, mockDeep } from 'vitest-mock-extended'
+import { useRouter } from 'next/navigation'
 
 import {
   PlaybackStateProvider,
@@ -25,6 +26,7 @@ import {
 } from '@app/api/hooks'
 
 vi.mock('@app/api/hooks')
+vi.mock('next/navigation')
 
 const TRACK_NAME = 'track-name' as const
 const IS_PLAYING = 'is-playing' as const
@@ -69,6 +71,9 @@ describe('PlaybackStateContext', () => {
     })
     vi.mocked(useLastTracksQuery, { partial: true }).mockReturnValue({
       data: undefined,
+    })
+    vi.mocked(useRouter, { partial: true }).mockReturnValue({
+      refresh: vi.fn(),
     })
 
     playbackStateMock = mockDeep<PlaybackState>({

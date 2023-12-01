@@ -5,6 +5,7 @@ import {
   useEffect,
   useState,
 } from 'react'
+import { useRouter } from 'next/navigation'
 
 import { Device, Track } from '@app/api/types'
 import {
@@ -41,12 +42,17 @@ export function PlaybackStateProvider({
   const { data, refetch } = usePlaybackStateQuery()
   const lastTracksQuery = useLastTracksQuery()
   const { toggle } = useTogglePlaybackStateQuery()
+  const router = useRouter()
 
   const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
     setIsPlaying(data?.isPlaying ?? false)
   }, [data?.isPlaying])
+
+  useEffect(() => {
+    router.refresh()
+  }, [data?.track, router])
 
   const lastTrack = lastTracksQuery.data?.items?.[0]
 
