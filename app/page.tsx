@@ -5,7 +5,7 @@ import { ConnectButton } from './components/connect'
 export default function HomePage() {
   return (
     <div className="flex flex-col w-full justify-center items-center pt-12 gap-10">
-      <div className="flex flex-col justify-center items-center gap-4">
+      <div className="flex flex-col justify-center items-center gap-8">
         <h1 className="font-semibold text-5xl">Welcome to Rigtch.fm</h1>
 
         <h2 className="font-light text-2xl">
