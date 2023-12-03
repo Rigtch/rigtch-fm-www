@@ -18,7 +18,7 @@ export default function HomePage() {
       <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full">
         <Image
           src="/rigtch-icon.png"
-          alt={'spotify logo'}
+          alt={'spotify'}
           width={250}
           height={250}
           className="h-max rounded-xl"
