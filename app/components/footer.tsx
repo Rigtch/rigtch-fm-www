@@ -5,10 +5,10 @@ import { Separator } from './ui/separator'
 
 export function Footer() {
   return (
-    <>
+    <footer>
       <Separator />
 
-      <footer className="p-4 flex justify-center">
+      <div className="p-4 flex justify-center">
         rigtch.fm &copy; {new Date().getFullYear()} |
         <Link
           href="https://discord.gg/ed2J535wzc"
@@ -26,7 +26,7 @@ export function Footer() {
         >
           <FaGithub />
         </Link>
-      </footer>
-    </>
+      </div>
+    </footer>
   )
 }

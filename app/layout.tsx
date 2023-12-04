@@ -48,13 +48,15 @@ export default async function RootLayout({ children }: LayoutProps) {
       />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" />
 
-      <body className="bg-background text-white min-h-screen">
+      <body className="bg-background text-white">
         <RootProviders>
-          <NavigationBar profile={profile} />
+          <div className="flex flex-col justify-between min-h-screen">
+            <NavigationBar profile={profile} />
 
-          <div>{children}</div>
+            <div>{children}</div>
 
-          <Footer />
+            <Footer />
+          </div>
         </RootProviders>
       </body>
     </html>
