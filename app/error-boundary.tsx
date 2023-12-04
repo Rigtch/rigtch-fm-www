@@ -2,6 +2,8 @@
 
 import { Component, ErrorInfo, ReactNode } from 'react'
 
+import { Button } from './components/ui/button'
+
 export interface ErrorBoundaryProps {
   children: ReactNode
   hasError?: boolean
@@ -29,12 +31,9 @@ export class ErrorBoundary extends Component {
       return (
         <div>
           <h2>Oops, there is an error!</h2>
-          <button
-            type="button"
-            onClick={() => this.setState({ hasError: false })}
-          >
+          <Button onClick={() => this.setState({ hasError: false })}>
             Try again?
-          </button>
+          </Button>
         </div>
       )
     }
