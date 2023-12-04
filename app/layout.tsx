@@ -8,6 +8,7 @@ import { getProfile } from './api/fetchers'
 import { ACCESS_TOKEN } from './api/constants'
 import { LayoutProps } from './types'
 import { Profile } from './api/types'
+import { Footer } from './components/footer'
 
 export const metadata = {
   title: 'rigtch.fm',
@@ -52,6 +53,8 @@ export default async function RootLayout({ children }: LayoutProps) {
           <NavigationBar profile={profile} />
 
           <div>{children}</div>
+
+          <Footer />
         </RootProviders>
       </body>
     </html>
