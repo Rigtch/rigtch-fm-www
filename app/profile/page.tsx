@@ -6,6 +6,7 @@ import {
   ProfileTopGenresSection,
   ProfileTopTracksSection,
 } from './sections'
+import { ProfileAnalysisSection } from './sections/analysis'
 
 import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'
@@ -61,6 +62,12 @@ export default async function ProfilePage({ searchParams }: PageProps) {
           <ProfileRecentlyPlayedSection>
             <SeeMoreButton href="/profile/recently-played" />
           </ProfileRecentlyPlayedSection>
+        </Suspense>
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Suspense fallback={<div>loading</div>}>
+          <ProfileAnalysisSection />
         </Suspense>
       </ErrorBoundary>
     </>
