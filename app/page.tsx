@@ -20,7 +20,9 @@ export default async function HomePage() {
     <div className="flex flex-col w-full justify-center items-center pt-12 gap-24 h-[80vh]">
       <header className="flex flex-col justify-center items-center gap-8 px-4 md:p-0">
         <h1 className="font-semibold text-5xl text-center">
-          Welcome back {profile?.displayName}!
+          {profile?.displayName
+            ? `Welcome back ${profile?.displayName}!`
+            : 'Welcome to rigtch.fm'}
         </h1>
 
         <h2 className="font-light text-2xl text-center">
