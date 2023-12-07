@@ -74,7 +74,6 @@ export async function ProfileAnalysisSection() {
       description:
         'The overall estimated tempo of your music in beats per minute (BPM).',
       value: (tempo / 260) * 100,
-      displayValueTemplate: () => `${Number(tempo).toFixed(2)} BPM`,
     },
   ]
 
@@ -93,6 +92,12 @@ export async function ProfileAnalysisSection() {
                   'linear-gradient(to top right, #9400d5, #1e89ee)',
               }}
             />
+
+            {title === 'Tempo' && (
+              <span className="text-center text-xl">
+                {value.toFixed(2)} BPM
+              </span>
+            )}
 
             <h2 className="text-right text-xl font-bold">{subTitle}</h2>
 
