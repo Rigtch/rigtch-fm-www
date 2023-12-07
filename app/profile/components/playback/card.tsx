@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { PlaybackCardSkeleton } from './card.skeleton'
 import { PlaybackStateToggleButton } from './state-toggle-button'
@@ -21,6 +21,11 @@ import { formatArtists } from '@app/utils/formatters'
 export function PlaybackCard() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
   const [isImageLoaded, setIsImageLoaded] = useState(false)
+  const [isPlayingState, setIsPlayingState] = useState(isPlaying)
+
+  useEffect(() => {
+    setIsPlayingState(isPlaying)
+  }, [isPlaying])
 
   if (!data?.track) return <PlaybackCardSkeleton />
 
@@ -28,6 +33,12 @@ export function PlaybackCard() {
     device,
     track: { album, ...track },
   } = data
+
+  async function handleToggleState() {
+    setIsPlayingState(isPlaying => !isPlaying)
+
+    await toggleState(isPlaying)
+  }
 
   return (
     <Card className="bg-success border-success p-4 w-full h-full items-center !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5">
@@ -60,9 +71,9 @@ export function PlaybackCard() {
               <AudioBars isPlaying={isPlaying} />
 
               <PlaybackStateToggleButton
-                isPlaying={isPlaying}
+                isPlaying={isPlayingState}
                 isDeviceAvailable={!!device}
-                toggleState={toggleState}
+                toggleState={handleToggleState}
               />
             </div>
 

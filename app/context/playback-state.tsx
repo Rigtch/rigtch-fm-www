@@ -57,9 +57,9 @@ export function PlaybackStateProvider({
   const lastTrack = lastTracksQuery.data?.items?.[0]
 
   async function toggleState() {
-    setIsPlaying(!isPlaying)
-
     const { success } = await toggle(isPlaying)
+
+    setIsPlaying(!isPlaying)
 
     if (success) await refetch()
   }
