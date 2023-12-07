@@ -59,15 +59,15 @@ export default async function ProfilePage({ searchParams }: PageProps) {
 
       <ErrorBoundary>
         <Suspense fallback={<div>loading</div>}>
-          <ProfileRecentlyPlayedSection>
-            <SeeMoreButton href="/profile/recently-played" />
-          </ProfileRecentlyPlayedSection>
+          <ProfileAnalysisSection />
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary>
         <Suspense fallback={<div>loading</div>}>
-          <ProfileAnalysisSection />
+          <ProfileRecentlyPlayedSection>
+            <SeeMoreButton href="/profile/recently-played" />
+          </ProfileRecentlyPlayedSection>
         </Suspense>
       </ErrorBoundary>
     </>
