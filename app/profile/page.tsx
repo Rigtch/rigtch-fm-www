@@ -5,8 +5,8 @@ import {
   ProfileTopArtistsSection,
   ProfileTopGenresSection,
   ProfileTopTracksSection,
+  ProfileAnalysisSection,
 } from './sections'
-import { ProfileAnalysisSection } from './sections/analysis'
 
 import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'
