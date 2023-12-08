@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import { cookies } from 'next/headers'
 
 import {
   ProfileRecentlyPlayedSection,
@@ -13,14 +12,12 @@ import ProfilePage from './page'
 import { View } from '@app/types'
 import { TimeRange } from '@app/api/types'
 import { ToggleTimeRange } from '@app/components/common'
-import { ACCESS_TOKEN } from '@app/api/constants'
 
 vi.mock('./sections')
 vi.mock('@app/components/common')
 vi.mock('next/headers')
 
 describe('ProfilePage', () => {
-  const accessTokenMock = 'accessToken'
   const profileRecentlyPlayed = 'ProfileRecentlyPlayed'
   const profileTopArtists = 'ProfileTopArtists'
   const profileTopGenres = 'ProfileTopGenres'
@@ -53,12 +50,6 @@ describe('ProfilePage', () => {
       //@ts-expect-error: Error: Objects are not valid as a React child (found: [object Promise]).
       <div>{profileAnalysis}</div>
     )
-    vi.mocked(cookies, { partial: true }).mockReturnValue({
-      get: () => ({
-        name: ACCESS_TOKEN,
-        value: accessTokenMock,
-      }),
-    })
   })
 
   test('should render with sections', async () => {
