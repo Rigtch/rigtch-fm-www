@@ -20,9 +20,9 @@
   "workbench.editor.tabSizing": "shrink",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.prettier": true,
-    "source.fixAll.markdownlint": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.prettier": "explicit",
+    "source.fixAll.markdownlint": "explicit"
   },
   "eslint.validate": [
     "javascript",

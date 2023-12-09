@@ -13,7 +13,7 @@ export async function getTopGenres(
   })
 
   return fetchApi<{ genres: string[] }>(
-    `/statistics/top-genres?${urlSearchParameters.toString()}`,
+    `/statistics/top/genres?${urlSearchParameters.toString()}`,
     { token }
   )
 }
