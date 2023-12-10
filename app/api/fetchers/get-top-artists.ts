@@ -15,7 +15,7 @@ export async function getTopArtists(
   })
 
   return fetchApi<SpotifyResponseWithOffset<Artist>>(
-    `/statistics/top-artists?${urlSearchParameters.toString()}`,
+    `/statistics/top/artists?${urlSearchParameters.toString()}`,
     { token }
   )
 }

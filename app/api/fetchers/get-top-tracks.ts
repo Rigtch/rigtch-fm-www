@@ -15,7 +15,7 @@ export async function getTopTracks(
   })
 
   return fetchApi<SpotifyResponseWithOffset<Track>>(
-    `/statistics/top-tracks?${urlSearchParameters.toString()}`,
+    `/statistics/top/tracks?${urlSearchParameters.toString()}`,
     { token }
   )
 }
