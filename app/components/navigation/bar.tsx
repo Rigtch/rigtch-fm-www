@@ -70,7 +70,7 @@ export function NavigationBar({ profile }: NavigationBarProps) {
           {profile ? (
             <>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="flex gap-2 p-2">
+                <NavigationMenuTrigger className="flex gap-2 p-2 min-w-[100px]">
                   <p className="text-lg">{profile.displayName}</p>
                 </NavigationMenuTrigger>
 
