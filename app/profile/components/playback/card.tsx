@@ -48,7 +48,7 @@ export function PlaybackCard() {
     <Card
       className={cn(
         'p-4 w-full h-full items-center !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5',
-        isPlayingState ? 'bg-success border-success' : 'bg-primary'
+        isPlayingState ? 'bg-success border-success' : 'bg-neutral-800/50 '
       )}
     >
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
@@ -66,7 +66,7 @@ export function PlaybackCard() {
 
         {!isImageLoaded && <Skeleton className="h-[128px] w-[128px]" />}
 
-        <div className="flex flex-col justify-between w-full  gap-4 md:gap-0">
+        <div className="flex flex-col justify-between w-full lg:max-w-[calc(100%-142px)] gap-4 md:gap-0">
           <CardTitle className="whitespace-nowrap font-normal flex flex-col gap-1">
             <p className="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap">
               {track.name}
@@ -87,7 +87,7 @@ export function PlaybackCard() {
             </div>
 
             <div className="flex flex-row gap-2">
-              {!isPlayingState && track.playedAt && (
+              {!device && track.playedAt && (
                 <RelativeTime value={track.playedAt} />
               )}
 

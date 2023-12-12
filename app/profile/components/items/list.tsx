@@ -58,7 +58,7 @@ export function ItemsList({ items, isTop, withoutPosition }: ItemsListProps) {
 
       <div className="flex flex-col gap-2">
         {sortedItems.slice(isTop ? 3 : 0).map((item, index) => (
-          <div key={item.id}>
+          <div key={index}>
             <Item
               {...item}
               image={
