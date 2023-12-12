@@ -62,7 +62,9 @@ export function NavigationBar({ profile }: NavigationBarProps) {
           className="rounded-lg"
         />
 
-        <h1 className="text-2xl md:text-3xl font-semibold">rigtch.fm</h1>
+        <h1 className="text-2xl md:text-3xl md:block hidden font-semibold">
+          rigtch.fm
+        </h1>
       </div>
 
       <NavigationMenu className="w-full">
@@ -71,7 +73,9 @@ export function NavigationBar({ profile }: NavigationBarProps) {
             <>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="flex gap-2 p-2 min-w-[100px]">
-                  <p className="text-lg">{profile.displayName}</p>
+                  <p className="text-lg truncate max-w-[150px]">
+                    {profile.displayName}
+                  </p>
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
