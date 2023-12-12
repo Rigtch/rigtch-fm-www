@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { DeepMockProxy, mockDeep } from 'vitest-mock-extended'
+import { DateTime } from 'luxon'
 
 import { PlaybackCard } from './card'
 
@@ -15,6 +16,7 @@ describe('PlaybackCard', () => {
   const albumName = 'album 1'
   const deviceName = 'device 1'
   const artistName = 'artist 1'
+  const relativeTime = '2016-05-25T09:08:34.123+06:00'
 
   const toggleStateMock = vi.fn()
 
@@ -24,6 +26,7 @@ describe('PlaybackCard', () => {
     dataMock = mockDeep<PlaybackStateData>({
       track: {
         name: trackName,
+        playedAt: relativeTime,
         album: {
           name: albumName,
           images: [
@@ -68,5 +71,19 @@ describe('PlaybackCard', () => {
 
     expect(screen.getByText(trackName)).toBeInTheDocument()
     expect(screen.getByText(artistName)).toBeInTheDocument()
+  })
+
+  test('should render with relative time', () => {
+    vi.mocked(usePlaybackStateContext).mockReturnValue({
+      data: { ...dataMock, device: undefined },
+      isPlaying: false,
+      toggleState: toggleStateMock,
+    })
+
+    render(<PlaybackCard />)
+
+    const time = DateTime.fromISO(relativeTime).toRelative() ?? relativeTime
+
+    expect(screen.getByText(time)).toBeInTheDocument()
   })
 })
