@@ -34,6 +34,7 @@ export function OpenInSpotifyButton({
                 width={25}
                 height={25}
                 alt={''}
+                className="w-[25px] h-[25px]"
               />
             </Link>
           </TooltipTrigger>
