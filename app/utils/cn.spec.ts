@@ -9,6 +9,6 @@ vi.mock('tailwind-merge', () => ({
 
 describe('cn', () => {
   test('should return twMerge(clsx(...inputs))', () => {
-    expect(cn('test')).toEqual('twMergeclsxtest')
+    expect(cn('test')).toBe('twMergeclsxtest')
   })
 })

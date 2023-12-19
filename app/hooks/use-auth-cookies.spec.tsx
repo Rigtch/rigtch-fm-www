@@ -15,6 +15,7 @@ describe('useAuthCookies', () => {
       { 'access-token': ACCESS_TOKEN, 'refresh-token': REFRESH_TOKEN },
       vi.fn(),
       removeCookiesSpy,
+      vi.fn(),
     ])
   })
 
@@ -26,20 +27,20 @@ describe('useAuthCookies', () => {
   test('should return auth cookies', async () => {
     const { result } = renderHook(() => useAuthCookies())
 
-    await waitFor(() =>
+    await waitFor(() => {
       expect(result.current.accessToken).toEqual(ACCESS_TOKEN)
-    )
-    await waitFor(() =>
+    })
+    await waitFor(() => {
       expect(result.current.refreshToken).toEqual(REFRESH_TOKEN)
-    )
+    })
   })
 
-  test('should remove auth cookies', async () => {
+  test('should remove auth cookies', () => {
     const { result } = renderHook(() => useAuthCookies())
 
     result.current.removeAuthCookies()
 
-    expect(removeCookiesSpy).toHaveBeenCalledWith('access-token')
-    expect(removeCookiesSpy).toHaveBeenCalledWith('refresh-token')
+    expect(removeCookiesSpy).toHaveBeenCalledWith(ACCESS_TOKEN)
+    expect(removeCookiesSpy).toHaveBeenCalledWith(REFRESH_TOKEN)
   })
 })

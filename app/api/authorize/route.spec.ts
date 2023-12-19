@@ -37,10 +37,10 @@ describe('/api/authorize/route', () => {
   })
 
   describe('GET', () => {
-    test('should save cookies and redirect to /profile', async () => {
+    test('should save cookies and redirect to /profile', () => {
       vi.mocked(NextResponse.redirect).mockReturnValue(responseMock)
 
-      expect(await GET(requestMock)).toEqual(responseMock)
+      expect(GET(requestMock)).toEqual(responseMock)
       expect(responseMock.cookies.set).toHaveBeenCalledTimes(2)
     })
   })

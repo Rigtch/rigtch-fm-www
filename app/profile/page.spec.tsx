@@ -52,12 +52,8 @@ describe('ProfilePage', () => {
     )
   })
 
-  test('should render with sections', async () => {
-    render(
-      await ProfilePage({
-        searchParams,
-      })
-    )
+  test('should render with sections', () => {
+    render(<ProfilePage searchParams={searchParams} />)
 
     expect(screen.getByText(profileTopGenres)).toBeInTheDocument()
     expect(screen.getByText(profileTopArtists)).toBeInTheDocument()
@@ -66,16 +62,12 @@ describe('ProfilePage', () => {
     expect(screen.getByText(profileRecentlyPlayed)).toBeInTheDocument()
   })
 
-  test('should show boundary if section throws', async () => {
+  test('should show boundary if section throws', () => {
     vi.mocked(ProfileTopGenresSection).mockImplementation(() => {
       throw new Error('error')
     })
 
-    render(
-      await ProfilePage({
-        searchParams,
-      })
-    )
+    render(<ProfilePage searchParams={searchParams} />)
 
     expect(screen.getByText('Oops, there is an error!')).toBeInTheDocument()
   })

@@ -47,23 +47,22 @@ export function Item({
 
           <div className="flex justify-between w-full items-center">
             <div>
-              {artists &&
-                artists.map(({ name, href }, index) => (
-                  <span key={name}>
-                    <Button
-                      key={name}
-                      variant="link"
-                      className="text-md leading-none text-primary-foreground/80 p-0 h-auto"
-                      asChild
-                    >
-                      <Link href={href} replace target="_blank">
-                        {name}
-                      </Link>
-                    </Button>
+              {artists?.map(({ name, href }, index) => (
+                <span key={name}>
+                  <Button
+                    key={name}
+                    variant="link"
+                    className="text-md leading-none text-primary-foreground/80 p-0 h-auto"
+                    asChild
+                  >
+                    <Link href={href} replace target="_blank">
+                      {name}
+                    </Link>
+                  </Button>
 
-                    {index !== artists.length - 1 && <span>, </span>}
-                  </span>
-                ))}
+                  {index !== artists.length - 1 && <span>, </span>}
+                </span>
+              ))}
             </div>
 
             {playedAt && (

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constants'
 
-export async function GET(request: NextRequest) {
+export function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
 
   const accessToken = searchParams.get('accessToken')

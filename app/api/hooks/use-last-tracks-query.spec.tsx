@@ -31,9 +31,11 @@ describe('useLastTracksQuery', () => {
       wrapper: queryClientWrapper,
     })
 
-    await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
+    await waitFor(() => {
+      expect(result.current.isSuccess).toBeTruthy()
+    })
 
-    expect(result.current.data?.items?.[0]?.name).toEqual(trackNameMock)
+    expect(result.current.data?.items[0]?.name).toEqual(trackNameMock)
     expect(getLastTracks).toHaveBeenCalledWith(ACCESS_TOKEN)
   })
 })

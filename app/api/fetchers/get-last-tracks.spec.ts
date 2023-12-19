@@ -18,6 +18,6 @@ describe('getLastTracks', () => {
       items: [{ name }],
     } = await getLastTracks()
 
-    expect(name).toEqual('Track 1')
+    expect(name).toBe('Track 1')
   })
 })

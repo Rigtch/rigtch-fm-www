@@ -31,7 +31,11 @@ export class ErrorBoundary extends Component {
       return (
         <div>
           <h2>Oops, there is an error!</h2>
-          <Button onClick={() => this.setState({ hasError: false })}>
+          <Button
+            onClick={() => {
+              this.setState({ hasError: false })
+            }}
+          >
             Try again?
           </Button>
         </div>

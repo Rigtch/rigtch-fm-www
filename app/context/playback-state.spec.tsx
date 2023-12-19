@@ -107,7 +107,7 @@ describe('PlaybackStateContext', () => {
     expect(screen.getByTestId(IS_PLAYING)).toHaveTextContent('false')
   })
 
-  test('should render with data', async () => {
+  test('should render with data', () => {
     vi.mocked(usePlaybackStateQuery).mockReturnValue(
       playbackStateQueryResultMock
     )

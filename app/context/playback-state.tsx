@@ -54,7 +54,7 @@ export function PlaybackStateProvider({
     router.refresh()
   }, [data?.track, router])
 
-  const lastTrack = lastTracksQuery.data?.items?.[0]
+  const lastTrack = lastTracksQuery.data?.items[0]
 
   async function toggleState() {
     const { success } = await toggle(isPlaying)
@@ -68,7 +68,7 @@ export function PlaybackStateProvider({
     <PlaybackStateContext.Provider
       value={{
         data:
-          data || lastTrack
+          data ?? lastTrack
             ? ({
                 device: data?.device,
                 track: data?.track ?? lastTrack,
