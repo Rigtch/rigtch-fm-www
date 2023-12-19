@@ -61,6 +61,7 @@ export function PlaybackCard() {
             'rounded-md w-full sm:w-auto',
             isImageLoaded ? 'opacity-100' : 'opacity-0'
           )}
+          style={{ height: '96px', width: '96px' }}
           onLoad={() => {
             setIsImageLoaded(true)
           }}
