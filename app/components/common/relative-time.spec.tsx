@@ -4,13 +4,13 @@ import { DateTime } from 'luxon'
 import { RelativeTime } from './relative-time'
 
 describe('RelativeTime', () => {
-  const relativeTime = '2021-08-03T15:00:00'
+  const time = '2021-08-03T15:00:00'
 
   test('should render', () => {
-    render(<RelativeTime value={relativeTime} />)
+    render(<RelativeTime value={time} />)
 
-    const time = DateTime.fromISO(relativeTime).toRelative() ?? relativeTime
+    const relativeTime = DateTime.fromISO(time).toRelative() ?? time
 
-    expect(screen.getByText(time)).toBeInTheDocument()
+    expect(screen.getByText(relativeTime)).toBeInTheDocument()
   })
 })
