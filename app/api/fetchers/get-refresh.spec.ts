@@ -19,6 +19,6 @@ describe('getRefresh', () => {
   test('should get secret data', async () => {
     const { accessToken } = await getRefresh()
 
-    expect(accessToken).toEqual('token')
+    expect(accessToken).toBe('token')
   })
 })

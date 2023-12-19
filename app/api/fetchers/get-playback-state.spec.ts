@@ -21,8 +21,8 @@ describe('getPlaybackState', () => {
   test('should get playback state', async () => {
     const {
       track: { name },
-    } = (await getPlaybackState()) as PlaybackState
+    } = await getPlaybackState()!
 
-    expect(name).toEqual('Track 1')
+    expect(name).toBe('Track 1')
   })
 })

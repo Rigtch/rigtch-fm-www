@@ -40,9 +40,10 @@ export default defineConfig({
         '**/*.svg.*',
         '**/*.spec.ts',
         '**/*.spec.tsx',
+        '.eslintrc.cjs',
       ],
       all: true,
     },
-    exclude: ['**/tests/**', '**/tests-examples/**', '**/node_modules/**'],
+    exclude: ['**/tests/**', '**/node_modules/**'],
   },
 })

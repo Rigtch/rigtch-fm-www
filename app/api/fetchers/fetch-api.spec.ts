@@ -22,7 +22,7 @@ describe('fetchApi', () => {
     expect(name).toEqual(trackNameMock)
   })
 
-  test('should throw error when status is 401', () => {
+  test('should throw error when status is 401', async () => {
     vi.stubGlobal('fetch', () => ({
       status: 401,
       json: () => ({
@@ -30,10 +30,10 @@ describe('fetchApi', () => {
       }),
     }))
 
-    expect(fetchApi<PlaybackState>('')).rejects.toThrow('Unauthorized')
+    await expect(fetchApi<PlaybackState>('')).rejects.toThrow('Unauthorized')
   })
 
-  test('should throw error when status is 403', () => {
+  test('should throw error when status is 403', async () => {
     vi.stubGlobal('fetch', () => ({
       status: 403,
       json: () => ({
@@ -41,6 +41,6 @@ describe('fetchApi', () => {
       }),
     }))
 
-    expect(fetchApi<PlaybackState>('')).rejects.toThrow('Forbidden')
+    await expect(fetchApi<PlaybackState>('')).rejects.toThrow('Forbidden')
   })
 })
