@@ -11,7 +11,7 @@ export default async function HomePage() {
   let profile: Profile | undefined
 
   try {
-    profile = await getProfile(accessToken)
+    profile = await getProfile(accessToken).then(({ profile }) => profile)
   } catch {
     profile = undefined
   }

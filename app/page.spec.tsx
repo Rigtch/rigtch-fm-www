@@ -6,6 +6,7 @@ import { ACCESS_TOKEN } from './api/constants'
 import { getProfile } from './api/fetchers'
 
 import { profileMock } from '@tests/mocks/profile'
+import { userMock } from '@tests/mocks/user'
 
 vi.mock('next/headers')
 vi.mock('next/navigation')
@@ -30,7 +31,7 @@ describe('HomePage', () => {
   })
 
   test('should render with profile data', async () => {
-    vi.mocked(getProfile).mockResolvedValue(profileMock)
+    vi.mocked(getProfile).mockResolvedValue(userMock)
 
     render(await HomePage())
 

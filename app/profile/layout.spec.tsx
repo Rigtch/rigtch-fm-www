@@ -5,10 +5,11 @@ import ProfileLayout from './layout'
 import { ProfileProviders } from './providers'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
-import { displayNameMock, profileMock } from '@tests/mocks/profile'
+import { displayNameMock } from '@tests/mocks/profile'
 import { getProfile } from '@app/api/fetchers'
 import { NavigationSidebar } from '@app/components/navigation'
 import { LayoutProps } from '@app/types'
+import { userMock } from '@tests/mocks/user'
 
 vi.mock('next/headers')
 vi.mock('@app/api/fetchers')
@@ -27,7 +28,7 @@ describe('ProfileLayout', () => {
       }),
     })
     vi.mocked(NavigationSidebar).mockReturnValue(<div>NavigationSidebar</div>)
-    vi.mocked(getProfile).mockResolvedValue(profileMock)
+    vi.mocked(getProfile).mockResolvedValue(userMock)
     vi.mocked(ProfileProviders).mockImplementation(
       ({ children }: LayoutProps) => <div>{children}</div>
     )

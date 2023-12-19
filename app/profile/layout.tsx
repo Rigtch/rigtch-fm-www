@@ -13,7 +13,7 @@ import { NavigationSidebar } from '@app/components/navigation'
 export default async function ProfileLayout({ children }: LayoutProps) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const profile = await getProfile(accessToken)
+  const { profile } = await getProfile(accessToken)
 
   return (
     <div className="flex">

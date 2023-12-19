@@ -22,7 +22,7 @@ export default async function RootLayout({ children }: LayoutProps) {
   let profile: Profile | undefined
 
   try {
-    profile = await getProfile(accessToken)
+    profile = await getProfile(accessToken).then(({ profile }) => profile)
   } catch {
     profile = undefined
   }
