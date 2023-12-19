@@ -1,7 +1,7 @@
 import { getTopArtists } from './get-top-artists'
 import { fetchApi } from './fetch-api'
 
-import { artistMock } from '@tests/mocks/artist'
+import { artistMock, artistNameMock } from '@tests/mocks/artist'
 import { spotifyResponseMockFactory } from '@tests/mocks/spotify-response'
 
 vi.mock('./fetch-api')
@@ -18,6 +18,6 @@ describe('getTopArtists', () => {
       items: [{ name }],
     } = await getTopArtists()
 
-    expect(name).toEqual('Artist 1')
+    expect(name).toEqual(artistNameMock)
   })
 })

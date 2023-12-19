@@ -43,9 +43,11 @@ describe('usePlaybackStateQuery', () => {
       wrapper: queryClientWrapper,
     })
 
-    await waitFor(() => expect(result.current.isSuccess).toBeTruthy())
+    await waitFor(() => {
+      expect(result.current.isSuccess).toBeTruthy()
+    })
 
-    expect(result.current.data?.track?.name).toEqual(trackNameMock)
+    expect(result.current.data?.track.name).toEqual(trackNameMock)
     expect(getPlaybackState).toHaveBeenCalledWith(ACCESS_TOKEN)
   })
 
@@ -61,7 +63,9 @@ describe('usePlaybackStateQuery', () => {
       wrapper: queryClientWrapper,
     })
 
-    await waitFor(() => expect(result.current.error).toBeTruthy())
+    await waitFor(() => {
+      expect(result.current.error).toBeTruthy()
+    })
 
     expect(setState).toHaveBeenCalledWith(10_000)
   })

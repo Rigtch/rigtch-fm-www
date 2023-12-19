@@ -10,7 +10,7 @@ describe('formatSearchParams', () => {
       })
     )
 
-    expect(formatSearchParams(searchParams, 'market', 'BR')).toEqual(
+    expect(formatSearchParams(searchParams, 'market', 'BR')).toBe(
       'offset=0&market=BR'
     )
   })

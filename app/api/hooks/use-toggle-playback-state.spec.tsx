@@ -28,10 +28,12 @@ describe('useTogglePlaybackStateQuery', () => {
   test('should pause player', async () => {
     const { result } = renderHook(() => useTogglePlaybackStateQuery())
 
-    await waitFor(() => expect(result.current.toggle).toBeDefined())
+    await waitFor(() => {
+      expect(result.current.toggle).toBeDefined()
+    })
 
-    act(() => {
-      result.current.toggle(true)
+    await act(async () => {
+      await result.current.toggle(true)
     })
 
     expect(putPlayerPause).toHaveBeenCalledWith(ACCESS_TOKEN)
@@ -40,10 +42,12 @@ describe('useTogglePlaybackStateQuery', () => {
   test('should resume player', async () => {
     const { result } = renderHook(() => useTogglePlaybackStateQuery())
 
-    await waitFor(() => expect(result.current.toggle).toBeDefined())
+    await waitFor(() => {
+      expect(result.current.toggle).toBeDefined()
+    })
 
-    act(() => {
-      result.current.toggle(false)
+    await act(async () => {
+      await result.current.toggle(false)
     })
 
     expect(putPlayerResume).toHaveBeenCalledWith(ACCESS_TOKEN)

@@ -19,7 +19,7 @@ import {
 import { ErrorBoundary } from '@app/error-boundary'
 import { TIME_RANGE, VIEW } from '@app/constants'
 
-export default async function ProfilePage({ searchParams }: PageProps) {
+export default function ProfilePage({ searchParams }: PageProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
   const view = validateView(searchParams[VIEW])
 

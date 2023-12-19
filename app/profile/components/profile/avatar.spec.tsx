@@ -20,7 +20,7 @@ describe('ProfileAvatar', () => {
   test('should render with size', () => {
     render(<ProfileAvatar displayName={displayName} size="lg" />)
 
-    const avatarComponent = screen.queryAllByRole('generic')?.[2]
+    const avatarComponent = screen.queryAllByRole('generic')[2]
 
     expect(screen.getByText(displayName.slice(0, 1))).toBeInTheDocument()
     expect(avatarComponent).toHaveClass('w-[128px] h-[128px]')

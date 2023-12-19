@@ -1,5 +1,5 @@
 import { ProfileRecentlyPlayedSection } from '../sections'
 
-export default async function ProfileRecentlyPlayedPage() {
+export default function ProfileRecentlyPlayedPage() {
   return <ProfileRecentlyPlayedSection limit={50} />
 }

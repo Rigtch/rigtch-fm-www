@@ -8,14 +8,12 @@ import { Button } from '../ui/button'
 
 import { formatSearchParams } from '@app/utils/formatters'
 
-export function SeeMoreButton({
-  href,
-
-  ...props
-}: ComponentProps<typeof Link>) {
+export function SeeMoreButton({ href, ...props }: ComponentProps<typeof Link>) {
   const searchParams = useSearchParams()
 
-  const hrefWithSearchParams = `${href}?${formatSearchParams(searchParams)}`
+  const hrefWithSearchParams = `${href.toString()}?${formatSearchParams(
+    searchParams
+  )}`
 
   return (
     <Button asChild variant="link">

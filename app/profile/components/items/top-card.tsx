@@ -59,7 +59,7 @@ export function TopItemCard({
 
           {genres && (
             <div className="flex flex-row gap-2 flex-wrap justify-center h-full">
-              {genres?.slice(0, 3).map((genre, index) => (
+              {genres.slice(0, 3).map((genre, index) => (
                 <Badge key={index} className="text-primary-foreground/80">
                   {genre}
                 </Badge>
