@@ -61,7 +61,7 @@ export function PlaybackCard() {
             'rounded-md w-full sm:w-auto',
             isImageLoaded ? 'opacity-100' : 'opacity-0'
           )}
-          style={{ height: '96px', width: '96px' }}
+          style={{ height: '128px', width: '128px' }}
           onLoad={() => {
             setIsImageLoaded(true)
           }}
@@ -69,7 +69,7 @@ export function PlaybackCard() {
 
         {!isImageLoaded && <Skeleton className="h-[128px] w-[128px]" />}
 
-        <div className="flex flex-col justify-between w-full md:max-w-[calc(100%-112px)] gap-4 md:gap-0">
+        <div className="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0">
           <CardTitle className="whitespace-nowrap font-normal flex flex-col gap-1">
             <p className="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap">
               {track.name}
