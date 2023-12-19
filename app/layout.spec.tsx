@@ -5,7 +5,8 @@ import { ACCESS_TOKEN } from './api/constants'
 import { getProfile } from './api/fetchers'
 import RootLayout from './layout'
 
-import { displayNameMock, profileMock } from '@tests/mocks/profile'
+import { displayNameMock } from '@tests/mocks/profile'
+import { userMock } from '@tests/mocks/user'
 
 vi.mock('next/headers')
 vi.mock('next/navigation')
@@ -34,7 +35,7 @@ describe('RootLayout', () => {
   })
 
   test('should render with profile', async () => {
-    vi.mocked(getProfile).mockResolvedValue(profileMock)
+    vi.mocked(getProfile).mockResolvedValue(userMock)
 
     render(await RootLayout({ children: 'awd' }))
 
