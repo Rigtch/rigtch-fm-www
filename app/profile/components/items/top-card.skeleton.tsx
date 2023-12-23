@@ -2,7 +2,7 @@
 
 import { FaStar } from 'react-icons/fa6'
 
-import { ItemImageSkeleton } from './image-skeleton'
+import { ItemImageSkeleton } from './image.skeleton'
 
 import { cn } from '@app/utils/cn'
 import { Skeleton } from '@app/components/ui/skeleton'

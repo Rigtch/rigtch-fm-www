@@ -1,7 +1,7 @@
 'use client'
 
-import { TopItemCardSkeleton } from './top-card-skeleton'
-import { ItemSkeleton } from './item-skeleton'
+import { TopItemCardSkeleton } from './top-card.skeleton'
+import { ItemSkeleton } from './item.skeleton'
 
 import { Separator } from '@app/components/ui/separator'
 

@@ -23,12 +23,7 @@ export async function ProfileTopArtistsSection({
   const artists = await getTopArtists(accessToken, timeRange, limit)
 
   return (
-    <TopItemsSection
-      items={artists.items}
-      title="Top Artists"
-      view={view}
-      isFetching={!artists}
-    >
+    <TopItemsSection items={artists.items} title="Top Artists" view={view}>
       {children && <div className="flex justify-center">{children}</div>}
     </TopItemsSection>
   )
