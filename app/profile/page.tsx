@@ -7,6 +7,8 @@ import {
   ProfileTopTracksSection,
   ProfileAnalysisSection,
 } from './sections'
+import { ItemsListSkeleton } from './components/items/list.skeleton'
+import { TopGenresSkeleton } from './sections/top-genres.skeleton'
 
 import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'
@@ -34,7 +36,7 @@ export default function ProfilePage({ searchParams }: PageProps) {
       </div>
 
       <ErrorBoundary>
-        <Suspense fallback={<div>loading</div>}>
+        <Suspense fallback={<TopGenresSkeleton />}>
           <ProfileTopGenresSection searchParams={searchParams}>
             <SeeMoreButton href="/profile/top/genres" />
           </ProfileTopGenresSection>
@@ -42,7 +44,7 @@ export default function ProfilePage({ searchParams }: PageProps) {
       </ErrorBoundary>
 
       <ErrorBoundary>
-        <Suspense fallback={<div>loading</div>}>
+        <Suspense fallback={<ItemsListSkeleton artists />}>
           <ProfileTopArtistsSection searchParams={searchParams}>
             <SeeMoreButton href="/profile/top/artists" />
           </ProfileTopArtistsSection>
@@ -50,7 +52,7 @@ export default function ProfilePage({ searchParams }: PageProps) {
       </ErrorBoundary>
 
       <ErrorBoundary>
-        <Suspense fallback={<div>loading</div>}>
+        <Suspense fallback={<ItemsListSkeleton />}>
           <ProfileTopTracksSection searchParams={searchParams}>
             <SeeMoreButton href="/profile/top/tracks" />
           </ProfileTopTracksSection>
@@ -64,7 +66,7 @@ export default function ProfilePage({ searchParams }: PageProps) {
       </ErrorBoundary>
 
       <ErrorBoundary>
-        <Suspense fallback={<div>loading</div>}>
+        <Suspense fallback={<ItemsListSkeleton withoutPosition />}>
           <ProfileRecentlyPlayedSection>
             <SeeMoreButton href="/profile/recently-played" />
           </ProfileRecentlyPlayedSection>
