@@ -8,6 +8,7 @@ import { validateTimeRange } from '@app/utils/time-range'
 import { DefaultSection } from '@app/sections/default'
 import { GenreChip } from '@app/components/common'
 import { TIME_RANGE } from '@app/constants'
+import { Skeleton } from '@app/components/ui/skeleton'
 
 export async function ProfileTopGenresSection({
   searchParams,
@@ -23,11 +24,17 @@ export async function ProfileTopGenresSection({
   return (
     <DefaultSection title="Top Genres" className="gap-12 items-center">
       <div className="flex flex-row flex-wrap gap-2">
-        {genres.map(genre => (
-          <div key={genre}>
-            <GenreChip genre={genre} />
-          </div>
-        ))}
+        {genres.length > 0
+          ? genres.map(genre => (
+              <div key={genre}>
+                <GenreChip genre={genre} />
+              </div>
+            ))
+          : Array.from({ length: 10 }).map((_, index) => (
+              <div key={index}>
+                <Skeleton className="w-[8rem] h-[2rem] rounded-lg" />
+              </div>
+            ))}
       </div>
 
       {children && <div>{children}</div>}

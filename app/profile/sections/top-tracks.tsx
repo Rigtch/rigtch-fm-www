@@ -23,7 +23,13 @@ export async function ProfileTopTracksSection({
   const tracks = await getTopTracks(accessToken, timeRange, limit)
 
   return (
-    <TopItemsSection items={tracks.items} title="Top Tracks" view={view}>
+    <TopItemsSection
+      items={tracks.items}
+      title="Top Tracks"
+      view={view}
+      isFetching={!tracks}
+      artists={true}
+    >
       {children && <div className="flex justify-center">{children}</div>}
     </TopItemsSection>
   )
