@@ -20,6 +20,8 @@ export async function ProfileRecentlyPlayedSection({
       items={recentlyPlayedTracks.items}
       title="Recently Played"
       withoutPosition
+      playedAt
+      isFetching={!recentlyPlayedTracks}
     >
       {children && <div className="flex justify-center">{children}</div>}
     </ItemsSection>
