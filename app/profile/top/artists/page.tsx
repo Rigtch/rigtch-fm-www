@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers'
 import { Suspense } from 'react'
 
-import { ProfileTopArtistsLoading } from './loading'
+import ProfileTopArtistsLoading from './loading'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopArtists } from '@app/api/fetchers'

@@ -40,7 +40,7 @@ export function ItemsListSkeleton({
           .map((_, index) => (
             <div key={index}>
               <ItemSkeleton
-                position={isTop ? index + 4 : index}
+                position={isTop ? index + 4 : index + 1}
                 artists={artists}
                 withoutPosition={withoutPosition}
                 playedAt={playedAt}
