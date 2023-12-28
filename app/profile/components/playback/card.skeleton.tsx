@@ -11,7 +11,7 @@ import { Skeleton } from '@app/components/ui/skeleton'
 
 export function PlaybackCardSkeleton() {
   return (
-    <Card className="bg-neutral-800/50 border-neutral-800/50 p-4 w-full h-full items-center !m-0 lg:w-[380px] xl:min-w-[380px]">
+    <Card className="bg-neutral-800/50 border-neutral-800/50 p-4 w-full h-full items-center !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5">
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full">
         <Skeleton className="h-[128px] w-[128px]" />
 

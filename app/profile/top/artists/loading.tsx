@@ -1,5 +1,5 @@
-import { ItemsListSkeleton } from '@app/profile/components/items/list.skeleton'
+import { ItemsListSkeleton } from '@app/profile/components/items'
 
-export function ProfileTopArtistsLoading() {
+export default function ProfileTopArtistsLoading() {
   return <ItemsListSkeleton artists />
 }
