@@ -9,6 +9,7 @@ import {
 } from './sections'
 import { ItemsListSkeleton } from './components/items/list.skeleton'
 import { TopGenresSkeleton } from './sections/top-genres.skeleton'
+import { AnalysisSkeleton } from './sections/analysis.skeleton'
 
 import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'
@@ -60,7 +61,7 @@ export default function ProfilePage({ searchParams }: PageProps) {
       </ErrorBoundary>
 
       <ErrorBoundary>
-        <Suspense fallback={<div>loading</div>}>
+        <Suspense fallback={<AnalysisSkeleton />}>
           <ProfileAnalysisSection />
         </Suspense>
       </ErrorBoundary>
