@@ -1,5 +1,6 @@
-import { ItemsListSkeleton } from '@app/profile/components/items'
+import TopTracksSkeleton from '@app/profile/sections/top-tracks.skeleton'
+import { SkeletonProps } from '@app/types'
 
-export default function ProfileTopTracksLoading() {
-  return <ItemsListSkeleton artists />
+export default function ProfileTopTracksLoading({ view }: SkeletonProps) {
+  return <TopTracksSkeleton view={view} />
 }

@@ -1,4 +1,4 @@
-import { TopGenresSkeleton } from '@app/profile/sections'
+import { TopGenresSkeleton } from '../../sections'
 
 export default function TopGenresLoading() {
   return <TopGenresSkeleton />
