@@ -27,7 +27,7 @@ export default async function ProfileTopArtistsPage({
   const artists = artistsFirstPart.items.concat(artistsSecondPart.items)
 
   return (
-    <Suspense fallback={<ProfileTopArtistsLoading />}>
+    <Suspense fallback={<ProfileTopArtistsLoading view={view} />}>
       <TopItemsSection items={artists} title="Top Artists" view={view} />
     </Suspense>
   )

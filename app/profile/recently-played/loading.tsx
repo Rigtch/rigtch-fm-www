@@ -1,5 +1,5 @@
-import { ItemsListSkeleton } from '../components/items'
+import RecentlyPlayedSkeleton from '../sections/recently-played.skeleton'
 
 export default function ProfileRecentlyPlayedPageSkeleton() {
-  return <ItemsListSkeleton playedAt withoutPosition />
+  return <RecentlyPlayedSkeleton />
 }
