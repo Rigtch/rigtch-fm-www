@@ -444,10 +444,10 @@
   dependencies:
     find-up "^5.0.0"
 
-"@commitlint/types@^18.4.3":
-  version "18.4.3"
-  resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-18.4.3.tgz#bb50de49330ddff2adcc8ccabb840c8e660336b3"
-  integrity sha512-cvzx+vtY/I2hVBZHCLrpoh+sA0hfuzHwDc+BAFPimYLjJkpHnghQM+z8W/KyLGkygJh3BtI3xXXq+dKjnSWEmA==
+"@commitlint/types@^18.4.3", "@commitlint/types@^18.4.4":
+  version "18.4.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-18.4.4.tgz#dae9e0ce6a6728a36b8982ff301af0170bbe0d38"
+  integrity sha512-/FykLtodD8gKs3+VNkAUwofu4LBHankclj+I8fB2jTRvG6PV7k/OUt4P+VbM7ip853qS4F0g7Z6hLNa6JeMcAQ==
   dependencies:
     chalk "^4.1.0"
 
