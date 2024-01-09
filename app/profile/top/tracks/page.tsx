@@ -27,7 +27,7 @@ export default async function ProfileTopTracksPage({
   const tracks = tracksFirstPart.items.concat(tracksSecondPart.items)
 
   return (
-    <Suspense fallback={<ProfileTopTracksLoading view={view} />}>
+    <Suspense fallback={<ProfileTopTracksLoading />}>
       <TopItemsSection items={tracks} title="Top Tracks" view={view} />
     </Suspense>
   )

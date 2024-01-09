@@ -29,12 +29,7 @@ export function TopItemCardSkeleton({
       )}
     >
       <header className="w-full flex flex-col gap-2 items-center p-0">
-        <div
-          style={{
-            backgroundImage: 'linear-gradient(to top right, #9400d5, #1e89ee)',
-          }}
-          className="p-1 rounded-xl"
-        >
+        <div className="p-1 rounded-xl bg-card">
           <ItemImageSkeleton className="w-[164px] h-[164px]" />
         </div>
 
