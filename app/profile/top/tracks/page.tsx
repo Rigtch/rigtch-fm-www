@@ -1,7 +1,4 @@
 import { cookies } from 'next/headers'
-import { Suspense } from 'react'
-
-import ProfileTopTracksLoading from './loading'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopTracks } from '@app/api/fetchers'
@@ -26,9 +23,5 @@ export default async function ProfileTopTracksPage({
   tracksSecondPart.items.shift()
   const tracks = tracksFirstPart.items.concat(tracksSecondPart.items)
 
-  return (
-    <Suspense fallback={<ProfileTopTracksLoading />}>
-      <TopItemsSection items={tracks} title="Top Tracks" view={view} />
-    </Suspense>
-  )
+  return <TopItemsSection items={tracks} title="Top Tracks" view={view} />
 }

@@ -18,7 +18,6 @@ export function ItemsListSkeleton({
   playedAt,
   artists,
 }: ItemsListSkeletonProps) {
-  console.log(isTop)
   return (
     <div className="flex flex-col gap-8">
       {isTop && (

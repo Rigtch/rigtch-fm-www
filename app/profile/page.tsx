@@ -6,10 +6,10 @@ import {
   ProfileTopGenresSection,
   ProfileTopTracksSection,
   ProfileAnalysisSection,
+  TopGenresSkeleton,
+  AnalysisSkeleton,
 } from './sections'
-import { ItemsListSkeleton } from './components/items/list.skeleton'
-import { TopGenresSkeleton } from './sections/top-genres.skeleton'
-import { AnalysisSkeleton } from './sections/analysis.skeleton'
+import { ItemsListSkeleton } from './components/items'
 
 import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'
@@ -37,7 +37,7 @@ export default function ProfilePage({ searchParams }: PageProps) {
       </div>
 
       <ErrorBoundary>
-        <Suspense fallback={<TopGenresSkeleton />}>
+        <Suspense fallback={<TopGenresSkeleton length={10} />}>
           <ProfileTopGenresSection searchParams={searchParams}>
             <SeeMoreButton href="/profile/top/genres" />
           </ProfileTopGenresSection>
