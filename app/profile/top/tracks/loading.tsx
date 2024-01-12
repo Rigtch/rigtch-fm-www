@@ -1,4 +1,4 @@
-import TopTracksSkeleton from '@app/profile/sections/top-tracks.skeleton'
+import { TopTracksSkeleton } from '@app/profile/sections'
 
 export default function ProfileTopTracksLoading() {
   return <TopTracksSkeleton />

@@ -1,4 +1,4 @@
-import RecentlyPlayedSkeleton from '../sections/recently-played.skeleton'
+import { RecentlyPlayedSkeleton } from '../sections'
 
 export default function ProfileRecentlyPlayedPageSkeleton() {
   return <RecentlyPlayedSkeleton />

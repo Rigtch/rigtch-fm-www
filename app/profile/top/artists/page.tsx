@@ -1,7 +1,4 @@
 import { cookies } from 'next/headers'
-import { Suspense } from 'react'
-
-import ProfileTopArtistsLoading from './loading'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopArtists } from '@app/api/fetchers'
@@ -26,9 +23,5 @@ export default async function ProfileTopArtistsPage({
   artistsSecondPart.items.shift()
   const artists = artistsFirstPart.items.concat(artistsSecondPart.items)
 
-  return (
-    <Suspense fallback={<ProfileTopArtistsLoading />}>
-      <TopItemsSection items={artists} title="Top Artists" view={view} />
-    </Suspense>
-  )
+  return <TopItemsSection items={artists} title="Top Artists" view={view} />
 }
