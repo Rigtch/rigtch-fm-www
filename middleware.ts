@@ -26,9 +26,9 @@ export async function middleware(request: NextRequest) {
 
   if (!refreshToken || !shouldRefresh || !userId) return response
 
-  const { accessToken, expiresIn } = await getRefresh(refreshToken)
-
   console.log('refreshing token')
+
+  const { accessToken, expiresIn } = await getRefresh(refreshToken)
 
   const expirationDate = new Date(
     Date.now() + (expiresIn ?? 0) * 1000
