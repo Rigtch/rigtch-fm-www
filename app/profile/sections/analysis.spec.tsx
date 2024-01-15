@@ -26,18 +26,32 @@ describe('ProfileAnalysisSection', () => {
   })
 
   test('should render with header', async () => {
-    render(await ProfileAnalysisSection())
+    render(await ProfileAnalysisSection({}))
 
     expect(screen.getByText('Analysis')).toBeInTheDocument()
   })
 
   test('should render with analysis data', async () => {
-    expect(getAnalysis).toHaveBeenCalledWith(accessTokenMock)
+    render(await ProfileAnalysisSection({}))
 
-    render(await ProfileAnalysisSection())
+    expect(getAnalysis).toHaveBeenCalledWith(accessTokenMock, {})
 
     expect(
       screen.getByText(`${((analysisMock.tempo / 260) * 100).toFixed(2)} BPM`)
     ).toBeInTheDocument()
+  })
+
+  test('should render with userId', async () => {
+    const userId = 'userId'
+
+    render(
+      await ProfileAnalysisSection({
+        userId,
+      })
+    )
+
+    expect(getAnalysis).toHaveBeenCalledWith(accessTokenMock, {
+      userId,
+    })
   })
 })

@@ -6,14 +6,15 @@ import {
   ProfileTopGenresSection,
   ProfileTopTracksSection,
   ProfileAnalysisSection,
-} from './sections'
+} from '../sections'
+
 import ProfilePage from './page'
 
 import { View } from '@app/types'
 import { TimeRange } from '@app/api/types'
 import { ToggleTimeRange } from '@app/components/common'
 
-vi.mock('./sections')
+vi.mock('../sections')
 vi.mock('@app/components/common')
 vi.mock('next/headers')
 

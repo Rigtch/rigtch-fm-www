@@ -38,11 +38,10 @@ describe('ProfileTopGenresSection', () => {
     )
 
     expect(screen.getAllByText(genresMock[0])[0]).toBeInTheDocument()
-    expect(getTopGenres).toHaveBeenCalledWith(
-      accessTokenMock,
-      timeRangeMock,
-      undefined
-    )
+    expect(getTopGenres).toHaveBeenCalledWith(accessTokenMock, {
+      timeRange: timeRangeMock,
+      limit: undefined,
+    })
   })
 
   test('should render with limit', async () => {
@@ -55,11 +54,26 @@ describe('ProfileTopGenresSection', () => {
       })
     )
 
-    expect(getTopGenres).toHaveBeenCalledWith(
-      accessTokenMock,
-      timeRangeMock,
-      limit
+    expect(getTopGenres).toHaveBeenCalledWith(accessTokenMock, {
+      timeRange: timeRangeMock,
+      limit: limit,
+    })
+  })
+
+  test('should render with userId', async () => {
+    const userId = 'userId'
+
+    render(
+      await ProfileTopGenresSection({
+        searchParams: searchParamsMock,
+        userId,
+      })
     )
+
+    expect(getTopGenres).toHaveBeenCalledWith(accessTokenMock, {
+      timeRange: timeRangeMock,
+      userId,
+    })
   })
 
   test('should render with children', async () => {

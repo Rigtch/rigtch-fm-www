@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { useParams } from 'next/navigation'
 
 import { PlaybackCardSkeleton } from './card.skeleton'
 import { PlaybackStateToggleButton } from './state-toggle-button'
@@ -21,11 +22,17 @@ import { Skeleton } from '@app/components/ui/skeleton'
 import { usePlaybackStateContext } from '@app/context/playback-state'
 import { cn } from '@app/utils/cn'
 import { formatArtists } from '@app/utils/formatters'
+import { USER_ID } from '@app/constants'
+import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 
 export function PlaybackCard() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
   const [isImageLoaded, setIsImageLoaded] = useState(false)
   const [isPlayingState, setIsPlayingState] = useState(isPlaying)
+  const { userId } = useAuthCookies()
+  const params = useParams()
+
+  const routeUserId = params[USER_ID].toString()
 
   useEffect(() => {
     setIsPlayingState(isPlaying)
@@ -85,6 +92,7 @@ export function PlaybackCard() {
               <PlaybackStateToggleButton
                 isPlaying={isPlayingState}
                 isDeviceAvailable={!!device}
+                hasAccess={routeUserId === userId}
                 toggleState={handleToggleState}
               />
             </div>

@@ -1,13 +1,18 @@
 'use client'
 
-import { usePathname, useSearchParams } from 'next/navigation'
+import { useParams, usePathname, useSearchParams } from 'next/navigation'
 import { LuUserCircle, LuDisc3, LuMic2, LuMusic, LuClock } from 'react-icons/lu'
 
 import { NavigationSidebarSectionItem } from './sidebar-section-item'
 
+import { USER_ID } from '@app/constants'
+
 export function NavigationSidebar() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
+  const params = useParams()
+
+  const userId = params[USER_ID].toString()
 
   return (
     <section className="flex flex-col gap-2">
@@ -17,7 +22,7 @@ export function NavigationSidebar() {
 
       <main className="flex flex-col gap-2">
         <NavigationSidebarSectionItem
-          href={`/profile?${searchParams.toString()}`}
+          href={`/profile/${userId}?${searchParams.toString()}`}
           label="Overview"
           pathname={pathname}
           icon={LuUserCircle}
@@ -30,20 +35,20 @@ export function NavigationSidebar() {
 
           <main>
             <NavigationSidebarSectionItem
-              href={`/profile/top/genres?${searchParams.toString()}`}
+              href={`/profile/${userId}/top/genres?${searchParams.toString()}`}
               label="Top Genres"
               pathname={pathname}
               icon={LuDisc3}
             />
 
             <NavigationSidebarSectionItem
-              href={`/profile/top/artists?${searchParams.toString()}`}
+              href={`/profile/${userId}/top/artists?${searchParams.toString()}`}
               label="Top Artists"
               pathname={pathname}
               icon={LuMic2}
             />
             <NavigationSidebarSectionItem
-              href={`/profile/top/tracks?${searchParams.toString()}`}
+              href={`/profile/${userId}/top/tracks?${searchParams.toString()}`}
               label="Top Tracks"
               pathname={pathname}
               icon={LuMusic}
@@ -52,7 +57,7 @@ export function NavigationSidebar() {
         </section>
 
         <NavigationSidebarSectionItem
-          href="/profile/recently-played"
+          href={`/profile/${userId}/recently-played`}
           label="Recently Played"
           pathname={pathname}
           icon={LuClock}

@@ -4,4 +4,5 @@ export interface ProfileTopSectionProps
   extends PageProps,
     Partial<LayoutProps> {
   limit?: number
+  userId?: string
 }

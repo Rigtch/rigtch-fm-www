@@ -43,11 +43,9 @@ describe('ProfileTopArtistsSection', () => {
 
     expect(screen.getAllByText(artistNameMock)[0]).toBeInTheDocument()
     expect(screen.getByText(1)).toBeInTheDocument()
-    expect(getTopArtists).toHaveBeenCalledWith(
-      accessTokenMock,
-      timeRangeMock,
-      undefined
-    )
+    expect(getTopArtists).toHaveBeenCalledWith(accessTokenMock, {
+      timeRange: timeRangeMock,
+    })
   })
 
   test('should render with limit', async () => {
@@ -60,11 +58,26 @@ describe('ProfileTopArtistsSection', () => {
       })
     )
 
-    expect(getTopArtists).toHaveBeenCalledWith(
-      accessTokenMock,
-      timeRangeMock,
-      limit
+    expect(getTopArtists).toHaveBeenCalledWith(accessTokenMock, {
+      limit,
+      timeRange: timeRangeMock,
+    })
+  })
+
+  test('should render with userId', async () => {
+    const userId = 'userId'
+
+    render(
+      await ProfileTopArtistsSection({
+        searchParams: searchParamsMock,
+        userId,
+      })
     )
+
+    expect(getTopArtists).toHaveBeenCalledWith(accessTokenMock, {
+      timeRange: timeRangeMock,
+      userId,
+    })
   })
 
   test('should render with card view', async () => {

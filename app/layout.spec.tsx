@@ -2,7 +2,7 @@ import { cookies } from 'next/headers'
 import { render, screen } from '@testing-library/react'
 
 import { ACCESS_TOKEN } from './api/constants'
-import { getProfile } from './api/fetchers'
+import { getUser } from './api/fetchers'
 import RootLayout from './layout'
 
 import { displayNameMock } from '@tests/mocks/profile'
@@ -25,7 +25,7 @@ describe('RootLayout', () => {
   })
 
   test('should render with connect button', async () => {
-    vi.mocked(getProfile).mockImplementation(() => {
+    vi.mocked(getUser).mockImplementation(() => {
       throw new Error('error')
     })
 
@@ -35,7 +35,7 @@ describe('RootLayout', () => {
   })
 
   test('should render with profile', async () => {
-    vi.mocked(getProfile).mockResolvedValue(userMock)
+    vi.mocked(getUser).mockResolvedValue(userMock)
 
     render(await RootLayout({ children: 'awd' }))
 

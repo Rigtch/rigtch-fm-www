@@ -4,11 +4,12 @@ import './globals.css'
 
 import { RootProviders } from './providers'
 import { NavigationBar } from './components/navigation'
-import { getProfile } from './api/fetchers'
+import { getUser } from './api/fetchers'
 import { ACCESS_TOKEN } from './api/constants'
 import { LayoutProps } from './types'
 import { Profile } from './api/types'
 import { Footer } from './components/footer'
+import { USER_ID } from './constants'
 
 export const metadata = {
   title: 'rigtch.fm',
@@ -18,11 +19,15 @@ export const metadata = {
 
 export default async function RootLayout({ children }: LayoutProps) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
+  const userId = cookies().get(USER_ID)?.value
 
   let profile: Profile | undefined
 
   try {
-    profile = await getProfile(accessToken).then(({ profile }) => profile)
+    if (userId && accessToken)
+      profile = await getUser(accessToken, { userId }).then(
+        ({ profile }) => profile
+      )
   } catch {
     profile = undefined
   }

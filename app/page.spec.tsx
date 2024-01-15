@@ -3,7 +3,7 @@ import { cookies } from 'next/headers'
 
 import HomePage from './page'
 import { ACCESS_TOKEN } from './api/constants'
-import { getProfile } from './api/fetchers'
+import { getUser } from './api/fetchers'
 
 import { profileMock } from '@tests/mocks/profile'
 import { userMock } from '@tests/mocks/user'
@@ -31,7 +31,7 @@ describe('HomePage', () => {
   })
 
   test('should render with profile data', async () => {
-    vi.mocked(getProfile).mockResolvedValue(userMock)
+    vi.mocked(getUser).mockResolvedValue(userMock)
 
     render(await HomePage())
 

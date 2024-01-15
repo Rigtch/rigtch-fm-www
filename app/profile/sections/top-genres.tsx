@@ -1,4 +1,5 @@
 import { cookies } from 'next/headers'
+import { notFound, redirect } from 'next/navigation'
 
 import { ProfileTopSectionProps } from '../types'
 
@@ -11,6 +12,7 @@ import { TIME_RANGE } from '@app/constants'
 
 export async function ProfileTopGenresSection({
   searchParams,
+  userId,
   limit,
   children,
 }: ProfileTopSectionProps) {
@@ -18,7 +20,14 @@ export async function ProfileTopGenresSection({
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const { genres } = await getTopGenres(accessToken, timeRange, limit)
+  if (!userId) return notFound()
+  if (!accessToken) redirect('/')
+
+  const { genres } = await getTopGenres(accessToken, {
+    limit,
+    timeRange,
+    userId,
+  })
 
   return (
     <DefaultSection title="Top Genres" className="gap-12 items-center">
