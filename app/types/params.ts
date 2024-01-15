@@ -2,6 +2,4 @@ export class SearchParams {
   [key: string]: string | string[] | undefined
 }
 
-export interface Params {
-  slug: string
-}
+export type Params = Record<string, string | undefined>
