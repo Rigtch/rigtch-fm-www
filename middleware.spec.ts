@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { DeepMockProxy, mockDeep } from 'vitest-mock-extended'
+import { mockDeep } from 'vitest-mock-extended'
 
 import { middleware } from './middleware'
 
@@ -11,13 +11,9 @@ vi.mock('next/server', () => {
   const NextResponse = vi.fn()
 
   // @ts-expect-error - Mock doesn't support static properties
-  NextResponse.redirect = vi.fn().mockReturnThis()
+  NextResponse.redirect = vi.fn()
   // @ts-expect-error - Mock doesn't support static properties
-  NextResponse.next = vi.fn().mockReturnThis()
-  // @ts-expect-error - Mock doesn't support static properties
-  NextResponse.cookies = {
-    set: vi.fn(),
-  }
+  NextResponse.next = vi.fn()
 
   return {
     NextResponse,
@@ -27,17 +23,20 @@ vi.mock('next/server', () => {
 describe('middleware', () => {
   const accessTokenMock = 'accessToken'
 
-  let requestMock: DeepMockProxy<NextRequest>
+  const requestMock = mockDeep<NextRequest>({
+    url: 'http://localhost:3000/',
+    cookies: {
+      get: vi.fn(),
+      set: vi.fn(),
+    },
+  })
+  const responseMock = mockDeep<NextResponse>({
+    cookies: {
+      set: vi.fn(),
+    },
+  })
 
   beforeEach(() => {
-    requestMock = mockDeep<NextRequest>({
-      url: 'http://localhost:3000/',
-      cookies: {
-        get: vi.fn(),
-        set: vi.fn(),
-      },
-    })
-
     // @ts-expect-error mockDeep doesn't support this
     vi.spyOn(requestMock.cookies, 'get').mockImplementation((...args) => {
       if (args[0] === EXPIRATION_DATE) {
@@ -53,25 +52,28 @@ describe('middleware', () => {
     })
   })
 
-  test('should refresh token', async () => {
-    requestMock.nextUrl.pathname = '/profile'
+  test('should return if no cokies', async () => {
+    const nextSpy = vi.spyOn(NextResponse, 'next').mockReturnValue(responseMock)
+    const cookiesGetSpy = vi
+      .spyOn(requestMock.cookies, 'get')
+      .mockResolvedValue(undefined)
 
+    expect(await middleware(requestMock)).toEqual(responseMock)
+
+    expect(cookiesGetSpy).toHaveBeenCalledTimes(3)
+    expect(nextSpy).toHaveBeenCalled()
+  })
+
+  test('should refresh token', async () => {
     vi.mocked(getRefresh).mockResolvedValue({
       accessToken: accessTokenMock,
       expiresIn: 3600,
     })
+    const nextSpy = vi.spyOn(NextResponse, 'next').mockReturnValue(responseMock)
 
     await middleware(requestMock)
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    expect((NextResponse as any).cookies.set).toHaveBeenCalledTimes(2)
-  })
-
-  test('should redirect to /profile', async () => {
-    requestMock.nextUrl.pathname = '/'
-
-    await middleware(requestMock)
-
-    expect(NextResponse.redirect).toHaveBeenCalled()
+    expect(nextSpy).toHaveBeenCalled()
+    expect(responseMock.cookies.set).toHaveBeenCalledTimes(2)
   })
 })
