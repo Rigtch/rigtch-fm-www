@@ -52,7 +52,7 @@ describe('middleware', () => {
     })
   })
 
-  test('should return if no cokies', async () => {
+  test('should return if no cookies', async () => {
     const nextSpy = vi.spyOn(NextResponse, 'next').mockReturnValue(responseMock)
     const cookiesGetSpy = vi
       .spyOn(requestMock.cookies, 'get')
