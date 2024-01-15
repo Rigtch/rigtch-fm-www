@@ -57,7 +57,7 @@
     "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/types": "^18.4.4",
     "@next/eslint-plugin-next": "14.0.4",
-    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
     "@types/cookie": "^0.6.0",
