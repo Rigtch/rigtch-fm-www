@@ -1,7 +1,7 @@
-import { Analysis } from '../types'
+import { Analysis, UsersParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 
-export function getAnalysis(token?: string) {
-  return fetchApi<Analysis>('/statistics/analysis', { token })
+export function getAnalysis(token: string, { userId }: UsersParams) {
+  return fetchApi<Analysis>(`/users/${userId}/profile/analysis`, { token })
 }

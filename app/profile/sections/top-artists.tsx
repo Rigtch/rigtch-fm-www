@@ -1,4 +1,5 @@
 import { cookies } from 'next/headers'
+import { notFound, redirect } from 'next/navigation'
 
 import { ProfileTopSectionProps } from '../types'
 
@@ -13,6 +14,7 @@ import { TIME_RANGE, VIEW } from '@app/constants'
 export async function ProfileTopArtistsSection({
   searchParams,
   limit,
+  userId,
   children,
 }: ProfileTopSectionProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
@@ -20,7 +22,14 @@ export async function ProfileTopArtistsSection({
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const artists = await getTopArtists(accessToken, timeRange, limit)
+  if (!userId) return notFound()
+  if (!accessToken) redirect('/')
+
+  const artists = await getTopArtists(accessToken, {
+    limit,
+    timeRange,
+    userId,
+  })
 
   return (
     <TopItemsSection items={artists.items} title="Top Artists" view={view}>

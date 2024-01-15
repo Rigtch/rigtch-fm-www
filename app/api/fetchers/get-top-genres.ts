@@ -1,19 +1,20 @@
-import { TimeRange } from '../types'
+import { GetTopItemsParams, TimeRange } from '../types'
 
 import { fetchApi } from './fetch-api'
 
-export async function getTopGenres(
-  token?: string,
-  timeRange = TimeRange.LONG_TERM,
-  limit = 10
+export function getTopGenres(
+  token: string,
+  { userId, timeRange = TimeRange.LONG_TERM, limit = 10 }: GetTopItemsParams
 ) {
-  const urlSearchParameters = new URLSearchParams({
+  const searchParams = new URLSearchParams({
     timeRange,
     limit: limit + '',
   })
 
   return fetchApi<{ genres: string[] }>(
-    `/statistics/top/genres?${urlSearchParameters.toString()}`,
-    { token }
+    `/users/${userId}/profile/top/genres?${searchParams.toString()}`,
+    {
+      token,
+    }
   )
 }

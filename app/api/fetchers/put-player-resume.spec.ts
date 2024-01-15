@@ -4,6 +4,9 @@ import { fetchApi } from './fetch-api'
 vi.mock('./fetch-api')
 
 describe('putPlayerResume', () => {
+  const accessToken = 'accessToken'
+  const userId = 'userId'
+
   beforeEach(() => {
     vi.mocked(fetchApi).mockResolvedValue({
       success: true,
@@ -11,7 +14,7 @@ describe('putPlayerResume', () => {
   })
 
   test('should resume player', async () => {
-    const { success } = await putPlayerResume()
+    const { success } = await putPlayerResume(accessToken, { userId })
 
     expect(success).toBeTruthy()
   })

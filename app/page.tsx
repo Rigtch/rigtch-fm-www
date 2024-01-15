@@ -3,15 +3,21 @@ import { cookies } from 'next/headers'
 
 import { ConnectButton } from './components/connect'
 import { Profile } from './api/types'
-import { getProfile } from './api/fetchers'
+import { getUser } from './api/fetchers'
 import { ACCESS_TOKEN } from './api/constants'
+import { USER_ID } from './constants'
 
 export default async function HomePage() {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
+  const userId = cookies().get(USER_ID)?.value
+
   let profile: Profile | undefined
 
   try {
-    profile = await getProfile(accessToken).then(({ profile }) => profile)
+    if (userId && accessToken)
+      profile = await getUser(accessToken, { userId }).then(
+        ({ profile }) => profile
+      )
   } catch {
     profile = undefined
   }

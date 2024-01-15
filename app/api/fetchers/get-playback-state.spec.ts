@@ -5,11 +5,14 @@ import { PlaybackState } from '../types'
 import { getPlaybackState } from './get-playback-state'
 import { fetchApi } from './fetch-api'
 
-import { trackMock } from '@tests/mocks/track'
+import { trackMock, trackNameMock } from '@tests/mocks/track'
 
 vi.mock('./fetch-api')
 
 describe('getPlaybackState', () => {
+  const accessToken = 'accessToken'
+  const userId = 'userId'
+
   beforeEach(() => {
     vi.mocked(fetchApi).mockResolvedValue(
       mock<PlaybackState>({
@@ -21,8 +24,8 @@ describe('getPlaybackState', () => {
   test('should get playback state', async () => {
     const {
       track: { name },
-    } = await getPlaybackState()!
+    } = await getPlaybackState(accessToken, { userId })
 
-    expect(name).toBe('Track 1')
+    expect(name).toBe(trackNameMock)
   })
 })

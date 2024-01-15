@@ -9,6 +9,7 @@ import {
 import { useQueryClient } from '@tanstack/react-query'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { LuUserCircle } from 'react-icons/lu'
 
 import {
   NavigationMenu,
@@ -19,11 +20,11 @@ import {
 } from '../ui/navigation-menu'
 import { ConnectButton } from '../connect'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
-import { ProfileAvatar } from '../../profile/components/profile'
 
 import { NavigationSidebar } from './sidebar'
 import { NavigationListItem } from './list-item'
 
+import { ProfileAvatar } from '@app/profile/components/profile'
 import { Profile } from '@app/api/types'
 import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 
@@ -32,7 +33,7 @@ export interface NavigationBarProps {
 }
 
 export function NavigationBar({ profile }: NavigationBarProps) {
-  const { removeAuthCookies } = useAuthCookies()
+  const { removeAuthCookies, userId } = useAuthCookies()
   const queryClient = useQueryClient()
   const router = useRouter()
   const pathname = usePathname()
@@ -42,10 +43,10 @@ export function NavigationBar({ profile }: NavigationBarProps) {
     setIsSidebarOpen(false)
   }, [pathname])
 
-  function disconnect() {
-    removeAuthCookies()
-
+  async function disconnect() {
     queryClient.clear()
+
+    await removeAuthCookies()
 
     router.push('/')
     router.refresh()
@@ -79,12 +80,19 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
+                  <NavigationListItem asChild className="gap-2">
+                    <Link href={`/profile/${userId}`}>
+                      <LuUserCircle />
+                      My Profile
+                    </Link>
+                  </NavigationListItem>
+
                   <NavigationListItem className="gap-2" onClick={disconnect}>
                     <FaArrowRightToBracket />
                     Disconnect
                   </NavigationListItem>
 
-                  <NavigationListItem href="/profile" asChild className="gap-2">
+                  <NavigationListItem asChild className="gap-2">
                     <Link href={profile.href} replace target="_blank">
                       <FaArrowUpRightFromSquare />
                       Open in Spotify

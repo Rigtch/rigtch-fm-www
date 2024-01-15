@@ -44,11 +44,9 @@ describe('ProfileTopTracksSection', () => {
     expect(screen.getAllByText(trackNameMock)[0]).toBeInTheDocument()
     expect(screen.getByText(1)).toBeInTheDocument()
     expect(screen.getAllByText(artistNameMock)[0]).toBeInTheDocument()
-    expect(getTopTracks).toHaveBeenCalledWith(
-      accessTokenMock,
-      timeRangeMock,
-      undefined
-    )
+    expect(getTopTracks).toHaveBeenCalledWith(accessTokenMock, {
+      timeRange: timeRangeMock,
+    })
   })
 
   test('should render with limit', async () => {
@@ -61,11 +59,26 @@ describe('ProfileTopTracksSection', () => {
       })
     )
 
-    expect(getTopTracks).toHaveBeenCalledWith(
-      accessTokenMock,
-      timeRangeMock,
-      limit
+    expect(getTopTracks).toHaveBeenCalledWith(accessTokenMock, {
+      limit,
+      timeRange: timeRangeMock,
+    })
+  })
+
+  test('should render with userId', async () => {
+    const userId = 'userId'
+
+    render(
+      await ProfileTopTracksSection({
+        searchParams: searchParamsMock,
+        userId,
+      })
     )
+
+    expect(getTopTracks).toHaveBeenCalledWith(accessTokenMock, {
+      userId,
+      timeRange: timeRangeMock,
+    })
   })
 
   test('should render with children', async () => {

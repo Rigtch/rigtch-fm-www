@@ -1,4 +1,5 @@
 import { cookies } from 'next/headers'
+import { notFound, redirect } from 'next/navigation'
 
 import { ProfileTopSectionProps } from '../types'
 
@@ -12,6 +13,7 @@ import { TIME_RANGE, VIEW } from '@app/constants'
 
 export async function ProfileTopTracksSection({
   searchParams,
+  userId,
   limit,
   children,
 }: ProfileTopSectionProps) {
@@ -20,7 +22,14 @@ export async function ProfileTopTracksSection({
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  const tracks = await getTopTracks(accessToken, timeRange, limit)
+  if (!userId) return notFound()
+  if (!accessToken) redirect('/')
+
+  const tracks = await getTopTracks(accessToken, {
+    limit,
+    userId,
+    timeRange,
+  })
 
   return (
     <TopItemsSection items={tracks.items} title="Top Tracks" view={view}>

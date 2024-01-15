@@ -1,21 +1,29 @@
-import { SpotifyResponseWithOffset, TimeRange, Track } from '../types'
+import {
+  GetTopItemsParams,
+  SpotifyResponseWithOffset,
+  TimeRange,
+  Track,
+} from '../types'
 
 import { fetchApi } from './fetch-api'
 
-export async function getTopTracks(
-  token?: string,
-  timeRange = TimeRange.LONG_TERM,
-  limit = 10,
-  offset = 0
+export function getTopTracks(
+  token: string,
+  {
+    userId,
+    timeRange = TimeRange.LONG_TERM,
+    limit = 10,
+    offset = 0,
+  }: GetTopItemsParams
 ) {
-  const urlSearchParameters = new URLSearchParams({
+  const searchParams = new URLSearchParams({
     timeRange,
     limit: limit + '',
     offset: offset + '',
   })
 
   return fetchApi<SpotifyResponseWithOffset<Track>>(
-    `/statistics/top/tracks?${urlSearchParameters.toString()}`,
+    `/users/${userId}/profile/top/tracks?${searchParams.toString()}`,
     { token }
   )
 }

@@ -20,7 +20,7 @@ import {
 
 import { PlaybackState } from '@app/api/types'
 import {
-  useLastTracksQuery,
+  useRecentlyPlayedQuery,
   usePlaybackStateQuery,
   useTogglePlaybackStateQuery,
 } from '@app/api/hooks'
@@ -69,7 +69,7 @@ describe('PlaybackStateContext', () => {
     vi.mocked(useTogglePlaybackStateQuery).mockReturnValue({
       toggle: vi.fn(),
     })
-    vi.mocked(useLastTracksQuery, { partial: true }).mockReturnValue({
+    vi.mocked(useRecentlyPlayedQuery, { partial: true }).mockReturnValue({
       data: undefined,
     })
     vi.mocked(useRouter, { partial: true }).mockReturnValue({

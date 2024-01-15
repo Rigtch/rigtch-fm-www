@@ -1,4 +1,7 @@
 import { cookies } from 'next/headers'
+import { notFound } from 'next/navigation'
+
+import { ProfileTopSectionProps } from '../types'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getAnalysis } from '@app/api/fetchers'
@@ -13,8 +16,12 @@ export interface Item {
   subTitle?: string
 }
 
-export async function ProfileAnalysisSection() {
+export async function ProfileAnalysisSection({
+  userId,
+}: Omit<ProfileTopSectionProps, 'searchParams'>) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
+
+  if (!userId || !accessToken) return notFound()
 
   const {
     danceability,
@@ -26,7 +33,9 @@ export async function ProfileAnalysisSection() {
     valence,
     loudness,
     tempo,
-  } = await getAnalysis(accessToken)
+  } = await getAnalysis(accessToken, {
+    userId,
+  })
 
   const items: Item[] = [
     {

@@ -1,7 +1,10 @@
-import { HttpMethod, Success } from '../types'
+import { HttpMethod, Success, UsersParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 
-export async function putPlayerPause(token?: string) {
-  return fetchApi<Success>('/player/pause', { token, method: HttpMethod.PUT })
+export function putPlayerPause(token: string, { userId }: UsersParams) {
+  return fetchApi<Success>(`/users/${userId}/playback/pause`, {
+    token,
+    method: HttpMethod.PUT,
+  })
 }

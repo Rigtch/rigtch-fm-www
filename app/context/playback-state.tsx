@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 
 import { Device, Track } from '@app/api/types'
 import {
-  useLastTracksQuery,
+  useRecentlyPlayedQuery,
   usePlaybackStateQuery,
   useTogglePlaybackStateQuery,
 } from '@app/api/hooks'
@@ -40,7 +40,7 @@ export function PlaybackStateProvider({
   children,
 }: PlaybackStateProviderProps) {
   const { data, refetch } = usePlaybackStateQuery()
-  const lastTracksQuery = useLastTracksQuery()
+  const lastTracksQuery = useRecentlyPlayedQuery()
   const { toggle } = useTogglePlaybackStateQuery()
   const router = useRouter()
 

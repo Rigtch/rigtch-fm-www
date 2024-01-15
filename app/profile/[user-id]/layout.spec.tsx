@@ -1,12 +1,12 @@
 import { cookies } from 'next/headers'
 import { render, screen } from '@testing-library/react'
 
-import ProfileLayout from './layout'
-import { ProfileProviders } from './providers'
+import ProfileLayout from '../../layout'
+import { ProfileProviders } from '../providers'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { displayNameMock } from '@tests/mocks/profile'
-import { getProfile } from '@app/api/fetchers'
+import { getUser } from '@app/api/fetchers'
 import { NavigationSidebar } from '@app/components/navigation'
 import { LayoutProps } from '@app/types'
 import { userMock } from '@tests/mocks/user'
@@ -28,7 +28,7 @@ describe('ProfileLayout', () => {
       }),
     })
     vi.mocked(NavigationSidebar).mockReturnValue(<div>NavigationSidebar</div>)
-    vi.mocked(getProfile).mockResolvedValue(userMock)
+    vi.mocked(getUser).mockResolvedValue(userMock)
     vi.mocked(ProfileProviders).mockImplementation(
       ({ children }: LayoutProps) => <div>{children}</div>
     )
@@ -42,7 +42,7 @@ describe('ProfileLayout', () => {
     )
 
     expect(screen.getByText(displayNameMock)).toBeInTheDocument()
-    expect(getProfile).toHaveBeenCalledWith(accessTokenMock)
+    expect(getUser).toHaveBeenCalledWith(accessTokenMock)
     expect(NavigationSidebar).toHaveBeenCalled()
     expect(screen.getByText(children)).toBeInTheDocument()
   })
