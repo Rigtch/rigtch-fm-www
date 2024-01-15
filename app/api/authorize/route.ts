@@ -11,7 +11,7 @@ export function GET(request: NextRequest) {
   const refreshToken = searchParams.get('refreshToken')
   const id = searchParams.get('id')
 
-  if (!accessToken || !refreshToken || !id) return
+  if (!accessToken || !refreshToken || !id) return NextResponse.json({})
 
   const response = NextResponse.redirect(
     new URL(`/profile/${id}`, new URL(request.url))
