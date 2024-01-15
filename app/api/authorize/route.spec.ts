@@ -8,6 +8,8 @@ vi.mock('next/server', () => {
 
   // @ts-expect-error - Mock doesn't support static properties
   NextResponse.redirect = vi.fn()
+  // @ts-expect-error - Mock doesn't support static properties
+  NextResponse.json = vi.fn()
   NextResponse.prototype.cookies = {
     set: vi.fn(),
   }
@@ -52,9 +54,9 @@ describe('/api/authorize/route', () => {
     })
     const responseMock = mockDeep<NextResponse>()
 
-    vi.mocked(NextResponse.redirect).mockReturnValue(responseMock)
+    vi.mocked(NextResponse.json).mockReturnValue(responseMock)
 
-    expect(GET(requestMock)).toBeUndefined()
+    expect(GET(requestMock)).toEqual(responseMock)
     expect(responseMock.cookies.set).not.toHaveBeenCalled()
   })
 })
