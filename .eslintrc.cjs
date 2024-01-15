@@ -107,6 +107,8 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-misused-promises': [
       'error',
       { checksVoidReturn: false },
@@ -115,6 +117,7 @@ module.exports = {
       'error',
       { ignoredTypeNames: ['Url'] },
     ],
+    '@typescript-eslint/no-unsafe-member-access': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
