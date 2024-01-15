@@ -18,7 +18,13 @@ export async function middleware(request: NextRequest) {
     new Date(expirationDateCookie?.value ?? Date.now()).valueOf() - Date.now() <
     1800 * 1000
 
-  if (!refreshToken || !shouldRefresh || !userId) return NextResponse.next()
+  const response = ['/profile', '/profile/undefined'].includes(
+    request.nextUrl.pathname
+  )
+    ? NextResponse.redirect(new URL(`/profile/${userId}`, new URL(request.url)))
+    : NextResponse.next()
+
+  if (!refreshToken || !shouldRefresh || !userId) return response
 
   const { accessToken, expiresIn } = await getRefresh(refreshToken)
 
@@ -27,12 +33,6 @@ export async function middleware(request: NextRequest) {
   const expirationDate = new Date(
     Date.now() + (expiresIn ?? 0) * 1000
   ).toLocaleString()
-
-  const response = ['/profile', '/profile/undefined'].includes(
-    request.nextUrl.pathname
-  )
-    ? NextResponse.redirect(new URL(`/profile/${userId}`, new URL(request.url)))
-    : NextResponse.next()
 
   response.cookies.set({
     name: ACCESS_TOKEN,

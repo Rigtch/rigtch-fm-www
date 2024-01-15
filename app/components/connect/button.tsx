@@ -24,6 +24,7 @@ export function ConnectButton({
   return (
     <Button asChild variant={variant} className={className}>
       <Link
+        suppressHydrationWarning
         href={
           profile
             ? `/profile/${userId}`
