@@ -18,7 +18,7 @@ export async function middleware(request: NextRequest) {
     new Date(expirationDateCookie?.value ?? Date.now()).valueOf() - Date.now() <
     1800 * 1000
 
-  if (!refreshToken || !shouldRefresh) return NextResponse.next()
+  if (!refreshToken || !shouldRefresh || !userId) return NextResponse.next()
 
   const { accessToken, expiresIn } = await getRefresh(refreshToken)
 
@@ -28,7 +28,9 @@ export async function middleware(request: NextRequest) {
     Date.now() + (expiresIn ?? 0) * 1000
   ).toLocaleString()
 
-  const response = ['/', '/profile'].includes(request.nextUrl.pathname)
+  const response = ['/profile', '/profile/undefined'].includes(
+    request.nextUrl.pathname
+  )
     ? NextResponse.redirect(new URL(`/profile/${userId}`, new URL(request.url)))
     : NextResponse.next()
 
