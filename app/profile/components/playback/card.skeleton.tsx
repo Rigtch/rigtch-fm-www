@@ -27,6 +27,7 @@ export function PlaybackCardSkeleton() {
 
               <PlaybackStateToggleButton
                 isPlaying={false}
+                hasAccess
                 isDeviceAvailable={false}
                 toggleState={() => Promise.resolve()}
               />
