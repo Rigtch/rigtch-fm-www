@@ -2,31 +2,37 @@ import { HttpMethod } from '../types'
 
 import { env } from '@app/config/env'
 
-export interface FetchApiOptions {
+export interface FetchApiOptions<TBody = unknown> {
   method?: HttpMethod
   token?: string
+  body?: TBody
   cache?: RequestCache
 }
 
-export async function fetchApi<T>(
+export async function fetchApi<TData, TBody = unknown>(
   path: string,
   {
     method = HttpMethod.GET,
     token,
+    body,
     cache = 'force-cache',
-  }: FetchApiOptions = {}
-): Promise<T> {
+  }: FetchApiOptions<TBody> = {}
+): Promise<TData> {
   const response = await fetch(env.NEXT_PUBLIC_API_URL + path, {
     method,
-    ...(token && {
-      headers: {
+    headers: {
+      ...(token && {
         Authorization: `Bearer ${token}`,
-      },
-    }),
+      }),
+      ...(body && {
+        'Content-Type': 'application/json',
+      }),
+    },
+    body: JSON.stringify(body),
     cache,
   })
 
-  const parsedResponse = (await response.json()) as T & { message: string }
+  const parsedResponse = (await response.json()) as TData & { message: string }
 
   if (!response.ok) {
     if (parsedResponse.message === 'No device is currently playing') {
