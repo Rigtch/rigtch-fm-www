@@ -8,7 +8,7 @@ import { NavigationSidebar } from '@app/components/navigation'
 export default function ProfileLayout({ children }: LayoutProps) {
   return (
     <div className="flex">
-      <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden md:block top-[60px] sticky">
+      <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden lg:block top-[60px] sticky">
         <NavigationSidebar />
       </aside>
 
