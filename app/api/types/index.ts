@@ -13,6 +13,8 @@ export * from './spotify-response'
 export * from './cursors'
 export * from './user'
 
+export * from './refresh-token'
+
 export * from './users-params'
 export * from './get-top-items-params'
 
