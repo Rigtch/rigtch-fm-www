@@ -1571,11 +1571,6 @@
   dependencies:
     "@types/node" "*"
 
-"@types/cookie@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.5.1.tgz#b29aa1f91a59f35e29ff8f7cb24faf1a3a750554"
-  integrity sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==
-
 "@types/cookie@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.6.0.tgz#eac397f28bf1d6ae0ae081363eca2f425bedf0d5"
@@ -1607,7 +1602,7 @@
   dependencies:
     "@types/unist" "^2"
 
-"@types/hoist-non-react-statics@^3.3.1":
+"@types/hoist-non-react-statics@^3.3.5":
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.5.tgz#dab7867ef789d87e2b4b0003c9d65c49cc44a494"
   integrity sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==
@@ -2825,10 +2820,10 @@ convert-source-map@^2.0.0:
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-2.0.0.tgz#4b560f649fc4e918dd0ab75cf4961e8bc882d82a"
   integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
 
-cookie@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
-  integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
+cookie@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.6.0.tgz#2798b04b071b0ecbff0dbb62a505a8efa4e19051"
+  integrity sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==
 
 cosmiconfig-typescript-loader@^5.0.0:
   version "5.0.0"
@@ -6445,14 +6440,14 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-react-cookie@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-6.1.1.tgz#af61c82ea7f41119d3cf8fd3534f8b6c0408f350"
-  integrity sha512-fuFRpf8LH6SfmVMowDUIRywJF5jAUDUWrm0EI5VdXfTl5bPcJ7B0zWbuYpT0Tvikx7Gs18MlvAT+P+744dUz2g==
+react-cookie@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-7.0.1.tgz#9bbf3fc304dba584ef8ca5a88fecf9dc9fe23b23"
+  integrity sha512-SmDjy2TFp+vS6BGOqW7HyaWKyJzVmIH74uP3mxq6kswlwLJEBtIbhkrioozdvQL9r81yprHYFQkSmcO4HiXPdA==
   dependencies:
-    "@types/hoist-non-react-statics" "^3.3.1"
+    "@types/hoist-non-react-statics" "^3.3.5"
     hoist-non-react-statics "^3.3.2"
-    universal-cookie "^6.0.0"
+    universal-cookie "^7.0.0"
 
 react-dom@18.2.0:
   version "18.2.0"
@@ -7863,13 +7858,13 @@ unist-util-visit@^4.0.0, unist-util-visit@^4.1.2:
     unist-util-is "^5.0.0"
     unist-util-visit-parents "^5.1.1"
 
-universal-cookie@^6.0.0:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/universal-cookie/-/universal-cookie-6.1.1.tgz#2d619e21804c93b39ff0c77fe47dafd7a492346d"
-  integrity sha512-33S9x3CpdUnnjwTNs2Fgc41WGve2tdLtvaK2kPSbZRc5pGpz2vQFbRWMxlATsxNNe/Cy8SzmnmbuBM85jpZPtA==
+universal-cookie@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/universal-cookie/-/universal-cookie-7.0.1.tgz#14b7bc3d363836168f7102451ed4881bccd9e849"
+  integrity sha512-6OuX9xELF6dsVJeADJAYNDOxQf/NR3Na5bGCRd+hkysMDkSt79jJ4tdv5OBe+ZgAks3ExHBdCXkD2SjqLyK59w==
   dependencies:
-    "@types/cookie" "^0.5.1"
-    cookie "^0.5.0"
+    "@types/cookie" "^0.6.0"
+    cookie "^0.6.0"
 
 universalify@^0.2.0:
   version "0.2.0"
