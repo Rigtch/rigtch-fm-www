@@ -11,6 +11,7 @@ import { Profile } from './api/types'
 import { Footer } from './components/footer'
 import { USER_ID } from './constants'
 import { CookiesDialog } from './cookies-dialog'
+import { Toaster } from './components/ui/toaster'
 
 export const metadata = {
   title: 'rigtch.fm',
@@ -65,6 +66,8 @@ export default async function RootLayout({ children }: LayoutProps) {
             <div>{children}</div>
 
             <Footer />
+
+            <Toaster />
           </div>
         </RootProviders>
       </body>
