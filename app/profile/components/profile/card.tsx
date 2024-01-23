@@ -1,6 +1,7 @@
 'use client'
 
 import { ProfileAvatar } from './avatar'
+import { ShareButton } from './share-button'
 
 import { PlaybackCard } from '@app/profile/components/playback'
 import { OpenInSpotifyButton } from '@app/components/common'
@@ -34,8 +35,10 @@ export function ProfileCard({ displayName, images, followers, href }: Profile) {
               </CardDescription>
             </div>
 
-            <div className="flex items-left">
+            <div className="flex flex-row gap-2 items-left">
               <OpenInSpotifyButton href={href} />
+
+              <ShareButton />
             </div>
           </div>
         </div>
