@@ -1,6 +1,9 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { useCookies } from 'react-cookie'
+
+import { USER_ACCEPT_COOKIES } from './api/constants'
 
 import {
   Dialog,
@@ -12,7 +15,6 @@ import {
   DialogTitle,
 } from '@app/components/ui/dialog'
 import { Button } from '@app/components/ui/button'
-import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 
 export interface CookiesDialogProps {
   isAccepted: boolean
@@ -22,7 +24,7 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
   const router = useRouter()
   const [isMounted, setIsMounted] = useState(false)
 
-  const { setAuthAcceptCookies } = useAuthCookies()
+  const [, setAcceptCookies] = useCookies([USER_ACCEPT_COOKIES])
 
   useEffect(() => {
     setIsMounted(true)
@@ -45,7 +47,12 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
         </DialogHeader>
 
         <DialogFooter className="flex flex-row justify-between w-full">
-          <DialogClose asChild onClick={setAuthAcceptCookies}>
+          <DialogClose
+            asChild
+            onClick={() => {
+              setAcceptCookies(USER_ACCEPT_COOKIES, true, { path: '/' })
+            }}
+          >
             <Button type="button">Accept</Button>
           </DialogClose>
 
