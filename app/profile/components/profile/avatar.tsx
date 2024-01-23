@@ -2,6 +2,8 @@
 
 import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar'
 
+import { ProfileAvatarSkeleton } from './avatar.skeleton'
+
 import { cn } from '@app/utils/cn'
 
 export interface ProfileAvatarProps {
@@ -17,6 +19,7 @@ export function ProfileAvatar({
   className,
   size = 'sm',
 }: ProfileAvatarProps) {
+  if (!displayName) return <ProfileAvatarSkeleton size={size} />
   return (
     <span>
       <Avatar
@@ -36,7 +39,7 @@ export function ProfileAvatar({
             size === 'lg' && 'text-5xl'
           )}
         >
-          {displayName?.slice(0, 1)}
+          {displayName.slice(0, 1)}
         </AvatarFallback>
       </Avatar>
     </span>
