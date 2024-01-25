@@ -5,11 +5,12 @@ import './globals.css'
 import { RootProviders } from './providers'
 import { NavigationBar } from './components/navigation'
 import { getUser } from './api/fetchers'
-import { ACCESS_TOKEN } from './api/constants'
+import { ACCESS_TOKEN, USER_ACCEPT_COOKIES } from './api/constants'
 import { LayoutProps } from './types'
 import { Profile } from './api/types'
 import { Footer } from './components/footer'
 import { USER_ID } from './constants'
+import { CookiesDialog } from './cookies-dialog'
 
 export const metadata = {
   title: 'rigtch.fm',
@@ -20,6 +21,7 @@ export const metadata = {
 export default async function RootLayout({ children }: LayoutProps) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
   const userId = cookies().get(USER_ID)?.value
+  const isAccepted = cookies().has(USER_ACCEPT_COOKIES as string)
 
   let profile: Profile | undefined
 
@@ -57,6 +59,8 @@ export default async function RootLayout({ children }: LayoutProps) {
         <RootProviders>
           <div className="flex flex-col justify-between min-h-screen">
             <NavigationBar profile={profile} />
+
+            <CookiesDialog isAccepted={isAccepted} />
 
             <div>{children}</div>
 

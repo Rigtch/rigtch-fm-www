@@ -4,14 +4,12 @@ import { cookies } from 'next/headers'
 import { ConnectButton } from './components/connect'
 import { Profile } from './api/types'
 import { getUser } from './api/fetchers'
-import { ACCESS_TOKEN, USER_ACCEPT_COOKIES } from './api/constants'
+import { ACCESS_TOKEN } from './api/constants'
 import { USER_ID } from './constants'
-import { CookiesDialog } from './cookies-dialog'
 
 export default async function HomePage() {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
   const userId = cookies().get(USER_ID)?.value
-  const isAccepted = cookies().has(USER_ACCEPT_COOKIES)
 
   let profile: Profile | undefined
 
@@ -26,8 +24,6 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col w-full justify-center items-center pt-12 gap-24 h-[80vh]">
-      <CookiesDialog isAccepted={isAccepted} />
-
       <header className="flex flex-col justify-center items-center gap-8 px-4 md:p-0">
         <h1 className="font-semibold text-5xl text-center">
           {profile
