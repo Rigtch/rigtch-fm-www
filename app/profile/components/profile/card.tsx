@@ -26,7 +26,7 @@ export function ProfileCard({ displayName, images, followers, href }: Profile) {
           />
 
           <div className="flex flex-col gap-4">
-            {!displayName && followers ? (
+            {displayName && followers ? (
               <div>
                 <CardTitle className="text-2xl md:text-3xl">
                   {displayName}
