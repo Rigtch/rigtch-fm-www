@@ -21,7 +21,7 @@ export const metadata = {
 export default async function RootLayout({ children }: LayoutProps) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
   const userId = cookies().get(USER_ID)?.value
-  const isAccepted = cookies().has(USER_ACCEPT_COOKIES as string)
+  const isAccepted = cookies().has(USER_ACCEPT_COOKIES)
 
   let profile: Profile | undefined
 
