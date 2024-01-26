@@ -1,17 +1,10 @@
-import { ProfileCard } from '@app/profile/components/profile'
+import { ProfileCardSkeleton } from '@app/profile/components/profile/card.skeleton'
 import { TopGenresSkeleton } from '@app/profile/sections'
 
 export default function TopGenresLoading() {
   return (
     <>
-      <ProfileCard
-        id={''}
-        displayName={''}
-        email={''}
-        country={''}
-        href={''}
-        followers={0}
-      />
+      <ProfileCardSkeleton />
 
       <TopGenresSkeleton />
     </>

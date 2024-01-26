@@ -1,18 +1,11 @@
 import { RecentlyPlayedSkeleton } from '../../sections'
 
-import { ProfileCard } from '@app/profile/components/profile'
+import { ProfileCardSkeleton } from '@app/profile/components/profile/card.skeleton'
 
 export default function ProfileRecentlyPlayedPageSkeleton() {
   return (
     <>
-      <ProfileCard
-        id={''}
-        displayName={''}
-        email={''}
-        country={''}
-        href={''}
-        followers={0}
-      />
+      <ProfileCardSkeleton />
 
       <RecentlyPlayedSkeleton />
     </>
