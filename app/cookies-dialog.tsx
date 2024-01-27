@@ -48,15 +48,6 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
         </DialogHeader>
 
         <DialogFooter className="flex flex-row justify-between w-full">
-          <DialogClose
-            asChild
-            onClick={() => {
-              setAcceptCookies(USER_ACCEPT_COOKIES, true, { path: '/' })
-            }}
-          >
-            <Button type="button">Accept</Button>
-          </DialogClose>
-
           <Button
             type="button"
             variant="secondary"
@@ -66,6 +57,15 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
           >
             Decline
           </Button>
+
+          <DialogClose
+            asChild
+            onClick={() => {
+              setAcceptCookies(USER_ACCEPT_COOKIES, true, { path: '/' })
+            }}
+          >
+            <Button type="button">Accept</Button>
+          </DialogClose>
         </DialogFooter>
       </DialogContent>
     </Dialog>
