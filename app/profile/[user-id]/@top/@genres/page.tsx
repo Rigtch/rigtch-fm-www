@@ -27,7 +27,7 @@ export default async function ProfileTopGenresSubPage({
   })
 
   return (
-    <DefaultSection title="Top Genres" className="gap-12 items-center">
+    <DefaultSection title="Top Genres" className="gap-12">
       <div className="flex flex-row flex-wrap gap-2">
         {genres.map(genre => (
           <div key={genre}>
