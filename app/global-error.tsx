@@ -1,5 +1,7 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
+
 import { Button } from './components/ui/button'
 
 export interface GlobalErrorProps {
@@ -8,6 +10,11 @@ export interface GlobalErrorProps {
 }
 
 export default function GlobalError({ error, reset }: GlobalErrorProps) {
+  const router = useRouter()
+
+  // Refreshing the page is almoust always the solution
+  router.refresh()
+
   if (error.message === 'The access token expired') reset()
 
   return (
