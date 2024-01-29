@@ -24,7 +24,7 @@ export async function ProfileSection({
 
     return <ProfileCard {...profile} />
   } catch (error) {
-    console.log(error)
+    console.error(error)
 
     if (
       error instanceof Error &&
