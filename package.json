@@ -89,7 +89,7 @@
     "eslint-plugin-testing-library": "^6.2.0",
     "eslint-plugin-unicorn": "^49.0.0",
     "eslint-plugin-vitest": "^0.3.20",
-    "husky": "^8.0.3",
+    "husky": "^9.0.7",
     "jsdom": "^22.1.0",
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.32",
