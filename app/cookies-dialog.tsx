@@ -64,7 +64,7 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
               setAcceptCookies(USER_ACCEPT_COOKIES, true, { path: '/' })
             }}
           >
-            <Button type="button">Accept</Button>
+            <Button className="bg-purple-800">Accept</Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>
