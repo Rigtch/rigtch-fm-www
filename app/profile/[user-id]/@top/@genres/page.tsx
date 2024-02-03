@@ -1,4 +1,6 @@
 import { redirect } from 'next/navigation'
+'use server'
+
 import { cookies } from 'next/headers'
 
 import { ProfilePageProps } from '@app/profile/types'

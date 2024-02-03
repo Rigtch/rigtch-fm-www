@@ -1,16 +1,25 @@
-import { TimeRange } from '@app/api/types'
+'use client'
+
+import { useSearchParams } from 'next/navigation'
+
 import { SelectView, ToggleTimeRange } from '@app/components/common'
 import { ProfileCardSkeleton } from '@app/profile/components/profile/card.skeleton'
 import { TopTracksSkeleton } from '@app/profile/sections'
 import { View } from '@app/types'
+import { TIME_RANGE } from '@app/constants'
+import { validateTimeRange } from '@app/utils/time-range'
 
 export default function ProfileTopTracksLoading() {
+  const searchParams = useSearchParams()
+
   return (
     <>
       <ProfileCardSkeleton />
 
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
-        <ToggleTimeRange initialValue={TimeRange.SHORT_TERM} />
+        <ToggleTimeRange
+          initialValue={validateTimeRange(searchParams.get(TIME_RANGE))}
+        />
 
         <div>
           <SelectView initialValue={View.CARD} />
