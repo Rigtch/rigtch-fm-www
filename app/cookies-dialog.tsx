@@ -37,7 +37,12 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
 
   return (
     <Dialog defaultOpen>
-      <DialogContent className="max-w-[300px]">
+      <DialogContent
+        className="max-w-[300px]"
+        onPointerDownOutside={event => {
+          event.preventDefault()
+        }}
+      >
         <DialogHeader className="flex flex-col gap-2">
           <DialogTitle>We value your privacy</DialogTitle>
 
@@ -64,7 +69,9 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
               setAcceptCookies(USER_ACCEPT_COOKIES, true, { path: '/' })
             }}
           >
-            <Button className="bg-purple-800">Accept</Button>
+            <Button className="bg-purple-800 hover:bg-purple-900">
+              Accept
+            </Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>
