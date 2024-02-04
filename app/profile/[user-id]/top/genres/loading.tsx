@@ -12,6 +12,8 @@ import { validateTimeRange } from '@app/utils/time-range'
 export default function TopGenresLoading() {
   const searchParams = useSearchParams()
 
+const timeRange = validateTimeRange(searchParams.get(TIME_RANGE))
+
   return (
     <>
       <ProfileCardSkeleton />
