@@ -18,7 +18,7 @@ export default function ProfileTopTracksLoading() {
 
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
         <ToggleTimeRange
-          initialValue={validateTimeRange(searchParams.get(TIME_RANGE))}
+          initialValue={timeRange}
         />
 
         <div>
