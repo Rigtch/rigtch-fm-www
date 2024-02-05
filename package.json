@@ -41,7 +41,7 @@
     "@tanstack/react-query-devtools": "5.8.6",
     "@vercel/analytics": "^1.1.1",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
+    "clsx": "^2.1.0",
     "luxon": "^3.4.4",
     "next": "14.0.4",
     "react": "18.2.0",
