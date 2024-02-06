@@ -12,16 +12,14 @@ import { validateTimeRange } from '@app/utils/time-range'
 export default function TopGenresLoading() {
   const searchParams = useSearchParams()
 
-const timeRange = validateTimeRange(searchParams.get(TIME_RANGE))
+  const timeRange = validateTimeRange(searchParams.get(TIME_RANGE))
 
   return (
     <>
       <ProfileCardSkeleton />
 
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
-        <ToggleTimeRange
-          initialValue={timeRange}
-        />
+        <ToggleTimeRange initialValue={timeRange} />
 
         <div>
           <SelectView initialValue={View.CARD} />
