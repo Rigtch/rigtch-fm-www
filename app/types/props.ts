@@ -15,3 +15,8 @@ export interface LayoutProps {
 export interface SkeletonProps {
   view?: View
 }
+
+export interface ErrorProps {
+  error: Error & { digest?: string }
+  reset: () => void
+}

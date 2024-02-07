@@ -3,13 +3,9 @@
 import { useRouter } from 'next/navigation'
 
 import { Button } from './components/ui/button'
+import { ErrorProps } from './types'
 
-export interface GlobalErrorProps {
-  error: Error & { digest?: string }
-  reset: () => void
-}
-
-export default function GlobalError({ error, reset }: GlobalErrorProps) {
+export default function GlobalError({ error, reset }: ErrorProps) {
   const router = useRouter()
 
   // Refreshing the page is almoust always the solution
