@@ -21,7 +21,7 @@ import {
 import { Skeleton } from '@app/components/ui/skeleton'
 import { usePlaybackStateContext } from '@app/context/playback-state'
 import { cn } from '@app/utils/cn'
-import { formatArtists } from '@app/utils/formatters'
+import { formatArtists } from '@app/profile/utils/formatters'
 import { USER_ID } from '@app/constants'
 import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 

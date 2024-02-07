@@ -4,8 +4,8 @@ import { useSearchParams } from 'next/navigation'
 import { ReactNode } from 'react'
 
 import { TIME_RANGE, VIEW } from '@app/constants'
-import { validateTimeRange } from '@app/utils/time-range'
-import { validateView } from '@app/utils/view'
+import { validateTimeRange } from '@app/profile/utils/time-range'
+import { validateView } from '@app/profile/utils/view'
 import { ToggleTimeRange, SelectView } from '@app/components/common'
 import { ProfileLayoutBaseProps } from '@app/profile/types'
 

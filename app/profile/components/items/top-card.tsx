@@ -6,7 +6,7 @@ import { ItemImage } from './image'
 
 import { Badge } from '@app/components/ui/badge'
 import { TrackArtist } from '@app/api/types'
-import { formatArtists } from '@app/utils/formatters'
+import { formatArtists } from '@app/profile/utils/formatters'
 import { cn } from '@app/utils/cn'
 
 export interface TopItemCardProps {

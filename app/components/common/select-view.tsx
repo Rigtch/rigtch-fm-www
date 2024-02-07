@@ -12,7 +12,7 @@ import {
 } from '../ui/select'
 
 import { View } from '@app/types'
-import { formatSearchParams } from '@app/utils/formatters'
+import { formatSearchParams } from '@app/profile/utils/formatters'
 
 export interface SelectViewProps {
   initialValue: View
