@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 
 import { ProfilePageProps } from '@app/profile/types'
@@ -8,16 +8,16 @@ import { validateTimeRange } from '@app/utils/time-range'
 import { GenreChip, SeeMoreButton } from '@app/components/common'
 import { DefaultSection } from '@app/sections'
 import { getTopGenres } from '@app/api/fetchers'
+import { validateUserId } from '@app/utils/user-id'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,
   params,
 }: ProfilePageProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
-  const userId = params[USER_ID]?.toString()
+  const userId = validateUserId(params[USER_ID])
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  if (!userId) return notFound()
   if (!accessToken) redirect('/')
 
   const { genres } = await getTopGenres(accessToken, {

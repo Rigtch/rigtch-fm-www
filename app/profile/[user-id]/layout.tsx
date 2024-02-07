@@ -10,6 +10,7 @@ import { ProfileLayoutBaseProps } from '../types'
 
 import { NavigationSidebar } from '@app/components/navigation'
 import { USER_ID } from '@app/constants'
+import { validateUserId } from '@app/utils/user-id'
 
 export interface ProfileLayoutProps extends ProfileLayoutBaseProps {
   profile: ReactNode
@@ -27,7 +28,7 @@ export default function ProfileLayout({
   params,
 }: ProfileLayoutProps) {
   const pathname = usePathname()
-  const userId = params[USER_ID]?.toString()
+  const userId = validateUserId(params[USER_ID])
 
   const isProfileHomePage = pathname === `/profile/${userId}`
 
