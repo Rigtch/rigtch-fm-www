@@ -1,22 +1,22 @@
 import { notFound, redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 
-import { PageProps } from '@app/types'
 import { TIME_RANGE, USER_ID } from '@app/constants'
 import { validateTimeRange } from '@app/utils/time-range'
 import { GenreChip, ToggleTimeRange } from '@app/components/common'
 import { getTopGenres } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { ACCESS_TOKEN } from '@app/api/constants'
+import { ProfilePageProps } from '@app/profile/types'
 
 export const runtime = 'edge'
 
 export default async function ProfileTopGenresPage({
   searchParams,
   params,
-}: PageProps) {
+}: ProfilePageProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
-  const userId = params?.[USER_ID]?.toString()
+  const userId = params[USER_ID]?.toString()
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
   if (!userId) return notFound()
