@@ -9,7 +9,6 @@ import {
   ProfileAnalysisSection,
   TopGenresSkeleton,
   AnalysisSkeleton,
-  ProfileSection,
 } from '../sections'
 import { ItemsListSkeleton } from '../components/items'
 
@@ -24,6 +23,8 @@ import {
 import { ErrorBoundary } from '@app/error-boundary'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 
+export const runtime = 'edge'
+
 export default function ProfilePage({ searchParams, params }: PageProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
   const view = validateView(searchParams[VIEW])
@@ -33,8 +34,6 @@ export default function ProfilePage({ searchParams, params }: PageProps) {
 
   return (
     <>
-      <ProfileSection userId={userId} />
-
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
         <ToggleTimeRange initialValue={timeRange} />
 

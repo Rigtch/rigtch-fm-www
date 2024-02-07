@@ -4,11 +4,13 @@ import { notFound, redirect } from 'next/navigation'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopTracks } from '@app/api/fetchers'
 import { PageProps } from '@app/types'
-import { ProfileSection, TopItemsSection } from '@app/profile/sections'
+import { TopItemsSection } from '@app/profile/sections'
 import { validateTimeRange } from '@app/utils/time-range'
 import { validateView } from '@app/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { SelectView, ToggleTimeRange } from '@app/components/common'
+
+export const runtime = 'edge'
 
 export default async function ProfileTopTracksPage({
   searchParams,
@@ -42,8 +44,6 @@ export default async function ProfileTopTracksPage({
 
   return (
     <>
-      <ProfileSection userId={userId} />
-
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
         <ToggleTimeRange initialValue={timeRange} />
 
