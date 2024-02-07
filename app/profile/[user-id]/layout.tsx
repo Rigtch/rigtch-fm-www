@@ -10,7 +10,7 @@ import { ProfileLayoutBaseProps } from '../types'
 
 import { NavigationSidebar } from '@app/components/navigation'
 import { USER_ID } from '@app/constants'
-import { validateUserId } from '@app/utils/user-id'
+import { validateUserId } from '@app/profile/utils/user-id'
 
 export interface ProfileLayoutProps extends ProfileLayoutBaseProps {
   profile: ReactNode

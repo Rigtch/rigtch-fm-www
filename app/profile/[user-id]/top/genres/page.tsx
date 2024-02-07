@@ -2,13 +2,13 @@ import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 
 import { TIME_RANGE, USER_ID } from '@app/constants'
-import { validateTimeRange } from '@app/utils/time-range'
+import { validateTimeRange } from '@app/profile/utils/time-range'
 import { GenreChip, ToggleTimeRange } from '@app/components/common'
 import { getTopGenres } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { ProfilePageProps } from '@app/profile/types'
-import { validateUserId } from '@app/utils/user-id'
+import { validateUserId } from '@app/profile/utils/user-id'
 
 export const runtime = 'edge'
 

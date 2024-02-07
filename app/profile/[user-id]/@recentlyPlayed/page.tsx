@@ -7,7 +7,7 @@ import { USER_ID } from '@app/constants'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getRecentlyPlayed } from '@app/api/fetchers'
 import { SeeMoreButton } from '@app/components/common'
-import { validateUserId } from '@app/utils/user-id'
+import { validateUserId } from '@app/profile/utils/user-id'
 
 export default async function ProfileRecentlyPlayedSubPage({
   params,

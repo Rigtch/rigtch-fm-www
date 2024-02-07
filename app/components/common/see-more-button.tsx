@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation'
 
 import { Button } from '../ui/button'
 
-import { formatSearchParams } from '@app/utils/formatters'
+import { formatSearchParams } from '@app/profile/utils/formatters'
 
 export function SeeMoreButton({ href, ...props }: ComponentProps<typeof Link>) {
   const searchParams = useSearchParams()

@@ -3,13 +3,13 @@ import { redirect } from 'next/navigation'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopArtists } from '@app/api/fetchers'
-import { validateTimeRange } from '@app/utils/time-range'
+import { validateTimeRange } from '@app/profile/utils/time-range'
 import { TopItemsSection } from '@app/profile/sections'
-import { validateView } from '@app/utils/view'
+import { validateView } from '@app/profile/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { ToggleTimeRange, SelectView } from '@app/components/common'
 import { ProfilePageProps } from '@app/profile/types'
-import { validateUserId } from '@app/utils/user-id'
+import { validateUserId } from '@app/profile/utils/user-id'
 
 export const runtime = 'edge'
 

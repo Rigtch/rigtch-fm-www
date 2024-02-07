@@ -4,12 +4,12 @@ import { redirect } from 'next/navigation'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopTracks } from '@app/api/fetchers'
 import { TopItemsSection } from '@app/profile/sections'
-import { validateTimeRange } from '@app/utils/time-range'
-import { validateView } from '@app/utils/view'
+import { validateTimeRange } from '@app/profile/utils/time-range'
+import { validateView } from '@app/profile/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { SeeMoreButton } from '@app/components/common'
 import { ProfilePageProps } from '@app/profile/types'
-import { validateUserId } from '@app/utils/user-id'
+import { validateUserId } from '@app/profile/utils/user-id'
 
 export default async function ProfileTopTracksSubPage({
   searchParams,

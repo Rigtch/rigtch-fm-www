@@ -7,7 +7,7 @@ import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
 import { ProfilePageProps } from '@app/profile/types'
 import { USER_ID } from '@app/constants'
-import { validateUserId } from '@app/utils/user-id'
+import { validateUserId } from '@app/profile/utils/user-id'
 
 export interface Item {
   title: string

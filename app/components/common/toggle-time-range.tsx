@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { ToggleGroup, ToggleGroupItem } from '../ui/toggle-group'
 
 import { TimeRange } from '@app/api/types'
-import { formatSearchParams } from '@app/utils/formatters'
+import { formatSearchParams } from '@app/profile/utils/formatters'
 
 export interface ToggleTimeRangeProps {
   initialValue: TimeRange
