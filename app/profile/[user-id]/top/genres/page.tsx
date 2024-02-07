@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 
 import { TIME_RANGE, USER_ID } from '@app/constants'
@@ -8,6 +8,7 @@ import { getTopGenres } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { ProfilePageProps } from '@app/profile/types'
+import { validateUserId } from '@app/utils/user-id'
 
 export const runtime = 'edge'
 
@@ -16,10 +17,9 @@ export default async function ProfileTopGenresPage({
   params,
 }: ProfilePageProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
-  const userId = params[USER_ID]?.toString()
+  const userId = validateUserId(params[USER_ID])
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
-  if (!userId) return notFound()
   if (!accessToken) redirect('/')
 
   const { genres } = await getTopGenres(accessToken, {

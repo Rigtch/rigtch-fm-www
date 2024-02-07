@@ -1,5 +1,5 @@
 import { cookies } from 'next/headers'
-import { notFound, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getAnalysis } from '@app/api/fetchers'
@@ -7,6 +7,7 @@ import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
 import { ProfilePageProps } from '@app/profile/types'
 import { USER_ID } from '@app/constants'
+import { validateUserId } from '@app/utils/user-id'
 
 export interface Item {
   title: string
@@ -20,9 +21,8 @@ export default async function ProfileAnalysisSubPage({
   params,
 }: ProfilePageProps) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
-  const userId = params[USER_ID]?.toString()
+  const userId = validateUserId(params[USER_ID])
 
-  if (!userId) return notFound()
   if (!accessToken) redirect('/')
 
   const {
