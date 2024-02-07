@@ -19,7 +19,7 @@ import {
   RelativeTime,
 } from '@app/components/common'
 import { Skeleton } from '@app/components/ui/skeleton'
-import { usePlaybackStateContext } from '@app/context/playback-state'
+import { usePlaybackStateContext } from '@app/profile/context/playback-state'
 import { cn } from '@app/utils/cn'
 import { formatArtists } from '@app/profile/utils/formatters'
 import { USER_ID } from '@app/constants'
