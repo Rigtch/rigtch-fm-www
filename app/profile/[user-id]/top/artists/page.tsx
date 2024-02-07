@@ -3,22 +3,22 @@ import { notFound, redirect } from 'next/navigation'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopArtists } from '@app/api/fetchers'
-import { PageProps } from '@app/types'
 import { validateTimeRange } from '@app/utils/time-range'
 import { TopItemsSection } from '@app/profile/sections'
 import { validateView } from '@app/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { ToggleTimeRange, SelectView } from '@app/components/common'
+import { ProfilePageProps } from '@app/profile/types'
 
 export const runtime = 'edge'
 
 export default async function ProfileTopArtistsPage({
   searchParams,
   params,
-}: PageProps) {
+}: ProfilePageProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
   const view = validateView(searchParams[VIEW])
-  const userId = params?.[USER_ID]?.toString()
+  const userId = params[USER_ID]?.toString()
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
