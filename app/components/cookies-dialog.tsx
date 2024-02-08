@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useCookies } from 'react-cookie'
 
-import { USER_ACCEPT_COOKIES } from './api/constants'
+import { USER_ACCEPT_COOKIES } from '../api/constants'
 
 import {
   Dialog,
