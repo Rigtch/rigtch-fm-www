@@ -10,7 +10,7 @@ import { LayoutProps } from './types'
 import { Profile } from './api/types'
 import { Footer } from './components/footer'
 import { USER_ID } from './constants'
-import { CookiesDialog } from './cookies-dialog'
+import { CookiesDialog } from './components/cookies-dialog'
 import { Toaster } from './components/ui/toaster'
 
 export const metadata = {
