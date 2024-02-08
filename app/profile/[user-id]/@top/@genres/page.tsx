@@ -1,7 +1,7 @@
-import { redirect } from 'next/navigation'
 'use server'
 
 import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 import { ProfilePageProps } from '@app/profile/types'
 import { TIME_RANGE, USER_ID } from '@app/constants'
