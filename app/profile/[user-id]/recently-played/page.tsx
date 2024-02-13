@@ -25,10 +25,12 @@ export default async function ProfileRecentlyPlayedPage({
   })
 
   return (
-    <ItemsSection
-      items={recentlyPlayedTracks.items}
-      title="Recently Played"
-      withoutPosition
-    />
+    <>
+      <ItemsSection
+        items={recentlyPlayedTracks.items}
+        title="Recently Played"
+        withoutPosition
+      />
+    </>
   )
 }
