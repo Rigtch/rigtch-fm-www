@@ -92,7 +92,7 @@
     "eslint-plugin-vitest": "^0.3.20",
     "husky": "^9.0.7",
     "jsdom": "^24.0.0",
-    "lint-staged": "^15.2.0",
+    "lint-staged": "^15.2.2",
     "postcss": "^8.4.32",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
