@@ -33,10 +33,10 @@ export function TopItemCardSkeleton({
           <ItemImageSkeleton className="w-[164px] h-[164px]" />
         </div>
 
-        <div className="flex flex-col items-center">
-          <Skeleton className="w-[7rem] h-[1.5rem]" />
+        <div className="flex flex-col items-center gap-1">
+          <Skeleton className="w-[7rem] h-[32px]" />
 
-          {artists && <Skeleton className="w-[6rem] h-[1rem]" />}
+          {artists && <Skeleton className="w-[6rem] h-[28px]" />}
         </div>
 
         <div className="flex flex-col justify-center items-center gap-4">
