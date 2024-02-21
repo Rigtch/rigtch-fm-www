@@ -10,6 +10,7 @@ export interface ItemsListSkeletonProps {
   withoutPosition?: boolean
   artists?: boolean
   playedAt?: boolean
+  genres?: boolean
 }
 
 export function ItemsListSkeleton({
@@ -17,6 +18,7 @@ export function ItemsListSkeleton({
   withoutPosition,
   playedAt,
   artists,
+  genres,
 }: ItemsListSkeletonProps) {
   return (
     <div className="flex flex-col gap-8">
@@ -24,12 +26,21 @@ export function ItemsListSkeleton({
         <div className="flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full">
           <div className="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full">
             {[2, 1].map((position, index) => (
-              <TopItemCardSkeleton key={index} position={position} />
+              <TopItemCardSkeleton
+                key={index}
+                position={position}
+                artists={artists}
+                genres={genres}
+              />
             ))}
           </div>
 
           <div className="md:w-1/3 h-full">
-            <TopItemCardSkeleton position={3} />
+            <TopItemCardSkeleton
+              position={3}
+              artists={artists}
+              genres={genres}
+            />
           </div>
         </div>
       )}
