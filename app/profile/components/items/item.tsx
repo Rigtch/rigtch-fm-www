@@ -29,7 +29,7 @@ export function Item({
   return (
     <div
       className={cn(
-        'flex flex-row justify-between p-2 gap-2 md:gap-4',
+        'flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]',
         !position && 'md:px-4'
       )}
     >
