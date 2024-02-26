@@ -2,13 +2,13 @@ import { ItemsListSkeleton } from '@app/profile/components/items'
 import { DefaultSection } from '@app/sections'
 
 export interface TopTracksSkeletonProps {
-  isTop?: boolean
+  view?: boolean
 }
 
-export function TopTracksSkeleton({ isTop }: TopTracksSkeletonProps) {
+export function TopTracksSkeleton({ view }: TopTracksSkeletonProps) {
   return (
     <DefaultSection title={'Top Tracks'}>
-      <ItemsListSkeleton artists={true} isTop={isTop} />
+      <ItemsListSkeleton artists={true} view={view} />
     </DefaultSection>
   )
 }

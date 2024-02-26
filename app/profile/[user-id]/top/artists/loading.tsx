@@ -7,13 +7,14 @@ import { TopArtistsSkeleton } from '@app/profile/sections'
 import { View } from '@app/types'
 import { TIME_RANGE, VIEW } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
+import { validateView } from '@app/profile/utils/view'
 
 export default function ProfileTopArtistsLoading() {
   const searchParams = useSearchParams()
 
   const timeRange = validateTimeRange(searchParams.get(TIME_RANGE))
 
-  const view = searchParams.get(VIEW)
+  const view = validateView(searchParams.get(VIEW))
 
   return (
     <>
@@ -21,11 +22,11 @@ export default function ProfileTopArtistsLoading() {
         <ToggleTimeRange initialValue={timeRange} />
 
         <div>
-          <SelectView initialValue={view === 'card' ? View.CARD : View.LIST} />
+          <SelectView initialValue={view} />
         </div>
       </div>
 
-      <TopArtistsSkeleton isTop={view === 'card'} />
+      <TopArtistsSkeleton view={view === View.CARD} />
     </>
   )
 }
