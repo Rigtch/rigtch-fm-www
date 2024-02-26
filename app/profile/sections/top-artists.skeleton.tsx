@@ -1,8 +1,9 @@
 import { ItemsListSkeleton } from '@app/profile/components/items'
 import { DefaultSection } from '@app/sections'
+import { View } from '@app/types'
 
 export interface TopArtistsSkeletonProps {
-  view?: boolean
+  view?: View
 }
 
 export function TopArtistsSkeleton({ view }: TopArtistsSkeletonProps) {
