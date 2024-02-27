@@ -19,7 +19,7 @@ export function ItemSkeleton({
   return (
     <div
       className={cn(
-        'flex flex-row justify-between p-2 gap-2 md:gap-4',
+        'flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]',
         withoutPosition && 'md:px-4'
       )}
     >
@@ -28,7 +28,7 @@ export function ItemSkeleton({
           <span className="text-center text-3xl w-[2rem]">{position}</span>
         )}
 
-        <ItemImageSkeleton className="w-[48px] h-[48px]" />
+        <ItemImageSkeleton className="min-w-[48px] h-[48px]" />
 
         <div className="flex flex-col w-full gap-2 overflow-hidden">
           <Skeleton className="w-[10rem] h-[1.5rem]" />

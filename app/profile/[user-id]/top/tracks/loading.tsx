@@ -4,14 +4,16 @@ import { useSearchParams } from 'next/navigation'
 
 import { SelectView, ToggleTimeRange } from '@app/components/common'
 import { TopTracksSkeleton } from '@app/profile/sections'
-import { View } from '@app/types'
-import { TIME_RANGE } from '@app/constants'
+import { TIME_RANGE, VIEW } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
+import { validateView } from '@app/profile/utils/view'
 
 export default function ProfileTopTracksLoading() {
   const searchParams = useSearchParams()
 
   const timeRange = validateTimeRange(searchParams.get(TIME_RANGE))
+
+  const view = validateView(searchParams.get(VIEW))
 
   return (
     <>
@@ -19,11 +21,11 @@ export default function ProfileTopTracksLoading() {
         <ToggleTimeRange initialValue={timeRange} />
 
         <div>
-          <SelectView initialValue={View.CARD} />
+          <SelectView initialValue={view} />
         </div>
       </div>
 
-      <TopTracksSkeleton />
+      <TopTracksSkeleton view={view} />
     </>
   )
 }

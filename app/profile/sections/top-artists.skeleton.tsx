@@ -1,10 +1,15 @@
 import { ItemsListSkeleton } from '@app/profile/components/items'
 import { DefaultSection } from '@app/sections'
+import { View } from '@app/types'
 
-export function TopArtistsSkeleton() {
+export interface TopArtistsSkeletonProps {
+  view?: View
+}
+
+export function TopArtistsSkeleton({ view }: TopArtistsSkeletonProps) {
   return (
     <DefaultSection title={'Top Artists'}>
-      <ItemsListSkeleton isTop />
+      <ItemsListSkeleton view={view} genres={true} />
     </DefaultSection>
   )
 }

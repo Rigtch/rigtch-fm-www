@@ -12,7 +12,7 @@ export function TopGenresSkeleton({ length = 50 }: TopGenresSkeletonProps) {
         {Array.from({ length: length }).map((_, index) => (
           <div key={index}>
             <Skeleton
-              className="h-[2rem] rounded-lg"
+              className="h-[40px] rounded-lg"
               style={{
                 width: `${Math.floor(Math.random() * (10 - 6) + 6)}rem`,
               }}
