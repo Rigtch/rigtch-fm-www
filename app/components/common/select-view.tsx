@@ -16,9 +16,12 @@ import { formatSearchParams } from '@app/profile/utils/formatters'
 
 export interface SelectViewProps {
   initialValue: View
+  routeName?: string
 }
 
-export function SelectView({ initialValue }: SelectViewProps) {
+export function SelectView({ initialValue, routeName }: SelectViewProps) {
+  const view = 'view'
+
   const viewOptions = [
     {
       icon: <LuLayers />,
@@ -43,6 +46,12 @@ export function SelectView({ initialValue }: SelectViewProps) {
         scroll: true,
       }
     )
+
+    window.localStorage.setItem(`${view}-${routeName}`, value)
+
+    console.log(window.localStorage.getItem(`${view}-${routeName}`))
+
+    console.log('done')
   }
 
   return (

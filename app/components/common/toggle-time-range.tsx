@@ -10,9 +10,13 @@ import { formatSearchParams } from '@app/profile/utils/formatters'
 
 export interface ToggleTimeRangeProps {
   initialValue: TimeRange
+  routeName?: string
 }
 
-export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
+export function ToggleTimeRange({
+  initialValue,
+  routeName,
+}: ToggleTimeRangeProps) {
   const timeRangeOptions = [
     { label: '4 weeks', value: TimeRange.SHORT_TERM },
     { label: '6 months', value: TimeRange.MEDIUM_TERM },
@@ -22,6 +26,16 @@ export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
+  const timeRange = 'time-range'
+
+  const saveTimeRangeToLocalStorage = (value: TimeRange) => {
+    localStorage.setItem(`${timeRange}-${routeName}`, value)
+
+    console.log(localStorage.getItem(`${timeRange}-${routeName}`))
+
+    console.log('done')
+  }
+
   return (
     <ToggleGroup value={initialValue} type="single">
       {timeRangeOptions.map(({ label, value }) => (
@@ -29,9 +43,12 @@ export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
           <Link
             href={`${pathname}?${formatSearchParams(
               searchParams,
-              'time-range',
+              timeRange,
               value
             )}`}
+            onClick={() => {
+              saveTimeRangeToLocalStorage(value)
+            }}
           >
             {label}
           </Link>
