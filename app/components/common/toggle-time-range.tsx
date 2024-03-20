@@ -7,16 +7,15 @@ import { ToggleGroup, ToggleGroupItem } from '../ui/toggle-group'
 
 import { TimeRange } from '@app/api/types'
 import { formatSearchParams } from '@app/profile/utils/formatters'
+import { createSettingsCookie } from '@app/utils/settings-cookies'
+import { useRouteName } from '@app/hooks/use-route-name'
+import { TIME_RANGE } from '@app/constants'
 
 export interface ToggleTimeRangeProps {
   initialValue: TimeRange
-  routeName?: string
 }
 
-export function ToggleTimeRange({
-  initialValue,
-  routeName,
-}: ToggleTimeRangeProps) {
+export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
   const timeRangeOptions = [
     { label: '4 weeks', value: TimeRange.SHORT_TERM },
     { label: '6 months', value: TimeRange.MEDIUM_TERM },
@@ -25,13 +24,10 @@ export function ToggleTimeRange({
 
   const pathname = usePathname()
   const searchParams = useSearchParams()
+  const routeName = useRouteName()
 
-  const timeRange = 'time-range'
-
-  const saveTimeRangeToLocalStorage = (value: TimeRange) => {
-    localStorage.setItem(`${timeRange}-${routeName}`, value)
-
-    console.log(localStorage.getItem(`${timeRange}-${routeName}`))
+  const saveTimeRangeToLocalStorage = async (value: TimeRange) => {
+    await createSettingsCookie(routeName, value, 'timeRange')
 
     console.log('done')
   }
@@ -43,11 +39,11 @@ export function ToggleTimeRange({
           <Link
             href={`${pathname}?${formatSearchParams(
               searchParams,
-              timeRange,
+              TIME_RANGE,
               value
             )}`}
-            onClick={() => {
-              saveTimeRangeToLocalStorage(value)
+            onClick={async () => {
+              await saveTimeRangeToLocalStorage(value)
             }}
           >
             {label}

@@ -31,7 +31,7 @@ export default async function ProfileTopGenresPage({
   return (
     <>
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
-        <ToggleTimeRange initialValue={timeRange} routeName="genres" />
+        <ToggleTimeRange initialValue={timeRange} />
       </div>
 
       <DefaultSection title="Top Genres" className="gap-12 items-center">

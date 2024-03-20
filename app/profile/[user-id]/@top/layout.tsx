@@ -27,10 +27,10 @@ export default function ProfileTopGenresSubLayout({
   return (
     <>
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
-        <ToggleTimeRange initialValue={timeRange} routeName="home" />
+        <ToggleTimeRange initialValue={timeRange} />
 
         <div>
-          <SelectView initialValue={view} routeName="home" />
+          <SelectView initialValue={view} />
         </div>
       </div>
 

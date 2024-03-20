@@ -44,10 +44,10 @@ export default async function ProfileTopArtistsPage({
   return (
     <>
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
-        <ToggleTimeRange initialValue={timeRange} routeName="top-artists" />
+        <ToggleTimeRange initialValue={timeRange} />
 
         <div>
-          <SelectView initialValue={view} routeName="top-artists" />
+          <SelectView initialValue={view} />
         </div>
       </div>
 

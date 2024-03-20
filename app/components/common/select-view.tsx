@@ -13,15 +13,14 @@ import {
 
 import { View } from '@app/types'
 import { formatSearchParams } from '@app/profile/utils/formatters'
+import { createSettingsCookie } from '@app/utils/settings-cookies'
+import { useRouteName } from '@app/hooks/use-route-name'
 
 export interface SelectViewProps {
   initialValue: View
-  routeName?: string
 }
 
-export function SelectView({ initialValue, routeName }: SelectViewProps) {
-  const view = 'view'
-
+export function SelectView({ initialValue }: SelectViewProps) {
   const viewOptions = [
     {
       icon: <LuLayers />,
@@ -36,10 +35,11 @@ export function SelectView({ initialValue, routeName }: SelectViewProps) {
   ]
 
   const pathname = usePathname()
+  const routeName = useRouteName()
   const searchParams = useSearchParams()
   const router = useRouter()
 
-  function handleOnValueChange(value: View) {
+  async function handleOnValueChange(value: View) {
     router.push(
       `${pathname}?${formatSearchParams(searchParams, 'view', value)}`,
       {
@@ -47,9 +47,7 @@ export function SelectView({ initialValue, routeName }: SelectViewProps) {
       }
     )
 
-    window.localStorage.setItem(`${view}-${routeName}`, value)
-
-    console.log(window.localStorage.getItem(`${view}-${routeName}`))
+    await createSettingsCookie(routeName, value, 'view')
 
     console.log('done')
   }

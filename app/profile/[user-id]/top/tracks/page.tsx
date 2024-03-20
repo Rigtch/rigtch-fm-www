@@ -45,10 +45,10 @@ export default async function ProfileTopTracksPage({
   return (
     <>
       <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
-        <ToggleTimeRange initialValue={timeRange} routeName="top-tracks" />
+        <ToggleTimeRange initialValue={timeRange} />
 
         <div>
-          <SelectView initialValue={view} routeName="top-tracks" />
+          <SelectView initialValue={view} />
         </div>
       </div>
 
