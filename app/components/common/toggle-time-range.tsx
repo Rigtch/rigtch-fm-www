@@ -27,7 +27,7 @@ export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
   const routeName = useRouteName()
 
   const saveTimeRangeToLocalStorage = async (value: TimeRange) => {
-    await createSettingsCookie(routeName, value, 'timeRange')
+    await createSettingsCookie(routeName, value, 'time-range')
 
     console.log('done')
   }

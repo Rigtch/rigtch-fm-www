@@ -18,11 +18,18 @@ export async function middleware(request: NextRequest) {
     new Date(expirationDateCookie?.value ?? Date.now()).valueOf() - Date.now() <
     1800 * 1000
 
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-url', request.nextUrl.pathname)
+
   const response = ['/profile', '/profile/undefined'].includes(
     request.nextUrl.pathname
   )
     ? NextResponse.redirect(new URL(`/profile/${userId}`, new URL(request.url)))
-    : NextResponse.next()
+    : NextResponse.next({
+        request: {
+          headers: requestHeaders,
+        },
+      })
 
   if (!refreshToken || !shouldRefresh || !userId) return response
 

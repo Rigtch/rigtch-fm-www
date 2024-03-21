@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 
 import { TIME_RANGE, USER_ID } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
@@ -9,6 +9,7 @@ import { DefaultSection } from '@app/sections'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { ProfilePageProps } from '@app/profile/types'
 import { validateUserId } from '@app/profile/utils/user-id'
+import { getSettingsCookie } from '@app/utils/settings-cookies'
 
 export const runtime = 'edge'
 
@@ -27,6 +28,26 @@ export default async function ProfileTopGenresPage({
     timeRange,
     userId,
   })
+
+  const headersList = headers()
+
+  const header_url = headersList.get('x-url') ?? ''
+
+  let routeName = ''
+
+  if (header_url.split('/').length > 3)
+    routeName = `-${header_url.split('/')[4]}`
+
+  const urlParams = new URLSearchParams()
+
+  const timeRangeCookie =
+    (await getSettingsCookie(routeName, 'time-range')) ?? ''
+
+  if (timeRangeCookie) urlParams.set('time-range', timeRangeCookie)
+
+  console.log(urlParams.toString())
+
+  console.log(timeRangeCookie)
 
   return (
     <>

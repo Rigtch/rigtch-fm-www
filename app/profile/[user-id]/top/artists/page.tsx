@@ -1,4 +1,4 @@
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 import { ACCESS_TOKEN } from '@app/api/constants'
@@ -10,7 +10,7 @@ import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { ToggleTimeRange, SelectView } from '@app/components/common'
 import { ProfilePageProps } from '@app/profile/types'
 import { validateUserId } from '@app/profile/utils/user-id'
-
+import { getSettingsCookie } from '@app/utils/settings-cookies'
 export const runtime = 'edge'
 
 export default async function ProfileTopArtistsPage({
@@ -40,6 +40,30 @@ export default async function ProfileTopArtistsPage({
   // Remove the first item of the second part to avoid duplicates
   artistsSecondPart.items.shift()
   const artists = artistsFirstPart.items.concat(artistsSecondPart.items)
+
+  const headersList = headers()
+
+  const header_url = headersList.get('x-url') ?? ''
+
+  let routeName = ''
+
+  if (header_url.split('/').length > 3)
+    routeName = `-${header_url.split('/')[4]}`
+
+  const urlParams = new URLSearchParams()
+
+  const timeRangeCookie =
+    (await getSettingsCookie(routeName, 'time-range')) ?? ''
+
+  const viewCookie = (await getSettingsCookie(routeName, 'view')) ?? ''
+
+  if (timeRangeCookie) urlParams.set('time-range', timeRangeCookie)
+
+  if (viewCookie) urlParams.set('view', viewCookie)
+
+  console.log(urlParams.toString())
+
+  console.log(timeRangeCookie, viewCookie)
 
   return (
     <>
