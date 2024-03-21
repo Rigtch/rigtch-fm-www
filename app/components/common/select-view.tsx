@@ -13,6 +13,8 @@ import {
 
 import { View } from '@app/types'
 import { formatSearchParams } from '@app/profile/utils/formatters'
+import { createSettingsCookie } from '@app/utils/settings-cookies'
+import { useRouteName } from '@app/hooks/use-route-name'
 
 export interface SelectViewProps {
   initialValue: View
@@ -33,16 +35,21 @@ export function SelectView({ initialValue }: SelectViewProps) {
   ]
 
   const pathname = usePathname()
+  const routeName = useRouteName()
   const searchParams = useSearchParams()
   const router = useRouter()
 
-  function handleOnValueChange(value: View) {
+  async function handleOnValueChange(value: View) {
     router.push(
       `${pathname}?${formatSearchParams(searchParams, 'view', value)}`,
       {
         scroll: true,
       }
     )
+
+    await createSettingsCookie(routeName, value, 'view')
+
+    console.log('done')
   }
 
   return (
