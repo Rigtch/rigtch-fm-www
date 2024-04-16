@@ -9,3 +9,9 @@ export interface Artist {
 }
 
 export type TrackArtist = Omit<Artist, 'genres' | 'images'>
+
+export interface ArtistEntity extends Artist {
+  popularity: number
+  externalId: string
+  followers: number
+}

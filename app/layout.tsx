@@ -31,6 +31,8 @@ export default async function RootLayout({ children }: LayoutProps) {
       profile = await getUser(accessToken, { userId }).then(
         ({ profile }) => profile
       )
+
+    console.log('p', profile)
   } catch {
     profile = undefined
   }

@@ -20,6 +20,8 @@ export default async function ProfileTopGenresPage({
   const userId = validateUserId(params[USER_ID])
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 
+  console.log(accessToken)
+
   if (!accessToken) redirect('/')
 
   const { genres } = await getTopGenres(accessToken, {

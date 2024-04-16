@@ -16,5 +16,7 @@ export default async function ProfileSubPage({ params }: ProfilePageProps) {
 
   const { profile } = await getUser(accessToken, { userId })
 
+  console.log(profile)
+
   return <ProfileCard {...profile} />
 }
