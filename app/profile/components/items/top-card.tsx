@@ -6,7 +6,6 @@ import { ItemImage } from './image'
 
 import { Badge } from '@app/components/ui/badge'
 import { TrackArtist } from '@app/api/types'
-import { formatArtists } from '@app/profile/utils/formatters'
 import { cn } from '@app/utils/cn'
 
 export interface TopItemCardProps {
@@ -49,7 +48,12 @@ export function TopItemCard({
 
           {artists && (
             <h4 className="text-xl text-primary-foreground/80">
-              {formatArtists(artists)}
+              {artists.map((artist, index) => (
+                <a key={index} href={`/artist/${artist.id}`}>
+                  {artist.name}
+                  {index < artists.length - 1 && ', '}
+                </a>
+              ))}
             </h4>
           )}
         </div>
