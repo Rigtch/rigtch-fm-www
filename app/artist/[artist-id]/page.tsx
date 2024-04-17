@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import Image from 'next/image'
 
 import { ArtistPageProps } from '../types/props'
@@ -8,7 +8,7 @@ import { ARTIST_ID } from '@app/constants'
 import { OpenInSpotifyButton } from '@app/components/common'
 
 export default async function ArtistPage({ params }: ArtistPageProps) {
-  if (!params[ARTIST_ID]) redirect('/not-found')
+  if (!params[ARTIST_ID]) notFound()
 
   const artist = await getArtist({ id: params[ARTIST_ID] })
 
