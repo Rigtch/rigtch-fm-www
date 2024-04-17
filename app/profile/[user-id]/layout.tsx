@@ -31,9 +31,6 @@ export default function ProfileLayout({
   const userId = validateUserId(params[USER_ID])
 
   const isProfileHomePage = pathname === `/profile/${userId}`
-
-  console.log(children)
-
   return (
     <div className="flex">
       <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden lg:block top-[60px] sticky">
