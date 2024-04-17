@@ -46,7 +46,12 @@ export function TopItemCard({
 
         <div className="flex flex-col items-center">
           <h3 className="text-2xl font-bold text-center">{name}</h3>
-          {formatArtists(artists)}
+
+          {artists && (
+            <h4 className="text-xl text-primary-foreground/80">
+              {formatArtists(artists)}
+            </h4>
+          )}
         </div>
 
         <div className="flex flex-col justify-center items-center gap-4">

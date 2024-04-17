@@ -1,22 +1,16 @@
-import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import Image from 'next/image'
 
 import { ArtistPageProps } from '../types/props'
 
-import { ACCESS_TOKEN } from '@app/api/constants'
 import { getArtist } from '@app/api/fetchers/get-artist'
 import { ARTIST_ID } from '@app/constants'
 import { OpenInSpotifyButton } from '@app/components/common'
 
 export default async function ArtistPage({ params }: ArtistPageProps) {
-  const accessToken = cookies().get(ACCESS_TOKEN)?.value
+  if (!params[ARTIST_ID]) redirect('/not-found')
 
-  if (!accessToken) redirect('/')
-
-  if (!params[ARTIST_ID]) redirect('/profile')
-
-  const artist = await getArtist(accessToken, { id: params[ARTIST_ID] })
+  const artist = await getArtist({ id: params[ARTIST_ID] })
 
   const followerCount = new Intl.NumberFormat('en-EN').format(artist.followers)
 
