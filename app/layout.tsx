@@ -61,11 +61,13 @@ export default async function RootLayout({ children }: LayoutProps) {
       <body className="bg-background text-white">
         <RootProviders>
           <div className="flex flex-col justify-between min-h-screen">
-            <NavigationBar profile={profile} />
+            <div>
+              <NavigationBar profile={profile} />
 
-            <CookiesDialog isAccepted={isAccepted} />
+              <CookiesDialog isAccepted={isAccepted} />
 
-            <div>{children}</div>
+              <div>{children}</div>
+            </div>
 
             <Footer />
 
