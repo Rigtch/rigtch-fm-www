@@ -7,7 +7,6 @@ export interface ItemParams {
 }
 
 export function getArtist(token: string, { id }: ItemParams) {
-  console.log('getArtist', id)
   return fetchApi<ArtistEntity>(`/artists/${id}`, {
     token,
   })
