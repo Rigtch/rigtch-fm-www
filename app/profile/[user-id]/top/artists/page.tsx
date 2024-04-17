@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
+import { validateId } from '@app/utils/validate-id'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getTopArtists } from '@app/api/fetchers'
 import { validateTimeRange } from '@app/profile/utils/time-range'
@@ -9,7 +10,6 @@ import { validateView } from '@app/profile/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { ToggleTimeRange, SelectView } from '@app/components/common'
 import { ProfilePageProps } from '@app/profile/types'
-import { validateUserId } from '@app/profile/utils/user-id'
 
 export const runtime = 'edge'
 
@@ -19,7 +19,7 @@ export default async function ProfileTopArtistsPage({
 }: ProfilePageProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
   const view = validateView(searchParams[VIEW])
-  const userId = validateUserId(params[USER_ID])
+  const userId = validateId(params[USER_ID])
 
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
 

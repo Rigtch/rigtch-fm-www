@@ -3,13 +3,13 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
+import { validateId } from '@app/utils/validate-id'
 import { ACCESS_TOKEN } from '@app/api/constants'
 import { getAnalysis } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
 import { ProfilePageProps } from '@app/profile/types'
 import { USER_ID } from '@app/constants'
-import { validateUserId } from '@app/profile/utils/user-id'
 
 export interface Item {
   title: string
@@ -23,7 +23,7 @@ export default async function ProfileAnalysisSubPage({
   params,
 }: ProfilePageProps) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
-  const userId = validateUserId(params[USER_ID])
+  const userId = validateId(params[USER_ID])
 
   if (!accessToken) redirect('/')
 
