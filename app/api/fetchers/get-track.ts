@@ -1,4 +1,4 @@
-import { Track } from '../types'
+import { TrackEntity } from '../types'
 
 import { fetchApi } from './fetch-api'
 
@@ -7,5 +7,5 @@ export interface ItemParams {
 }
 
 export function getTrack({ id }: ItemParams) {
-  return fetchApi<Track>(`/tracks/${id}`)
+  return fetchApi<TrackEntity>(`/tracks/${id}`)
 }
