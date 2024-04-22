@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { ArtistPageProps } from '../types/props'
+import { ArtistPageProps } from '../types'
 
 import { getArtist } from '@app/api/fetchers/get-artist'
 import { ARTIST_ID } from '@app/constants'
