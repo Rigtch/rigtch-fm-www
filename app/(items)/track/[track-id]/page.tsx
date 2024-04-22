@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { TrackPageProps } from '../types/props'
+import { TrackPageProps } from '../../types'
 
 import { getTrack } from '@app/api/fetchers/get-track'
 import { OpenInSpotifyButton } from '@app/components/common'
@@ -36,16 +36,14 @@ export default async function TrackPage({ params }: TrackPageProps) {
           <span className="text-5xl">{name}</span>
 
           <div className="flex flex-row gap-2">
-            {artists.map(({ name, href }, index) => (
+            {artists.map(({ name, id }, index) => (
               <Button
                 key={index}
                 variant="link"
                 asChild
                 className="leading-none p-0 text-lg text-primary-foreground/80"
               >
-                <Link href={href} replace target="_blank">
-                  {name}
-                </Link>
+                <Link href={`/artist/${id}`}>{name}</Link>
               </Button>
             ))}
           </div>

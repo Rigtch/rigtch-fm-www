@@ -1,5 +1,5 @@
-import { Album } from './album'
-import { TrackArtist } from './artist'
+import { type Album, type AlbumEntity } from './album'
+import { type ArtistEntity, type TrackArtist } from './artist'
 
 export interface Track {
   id: string
@@ -10,4 +10,10 @@ export interface Track {
   duration: number
   playedAt?: string
   progress?: number
+}
+
+export interface TrackEntity extends Omit<Track, 'artists' | 'album'> {
+  externalId: string
+  artists: ArtistEntity[]
+  album: Omit<AlbumEntity, 'tracks'>
 }
