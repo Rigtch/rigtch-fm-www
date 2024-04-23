@@ -1,7 +1,7 @@
 import { Image } from './image'
 
 export interface Artist {
-  id?: string
+  id: string
   name: string
   genres: string[]
   href: string
