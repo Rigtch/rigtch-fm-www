@@ -8,6 +8,7 @@ export * from './get-top-tracks'
 export * from './get-recently-played'
 export * from './get-playback-state'
 export * from './get-analysis'
+export * from './get-history'
 
 export * from './put-player-resume'
 export * from './put-player-pause'
