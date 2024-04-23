@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
-import { TrackPageProps } from '../../types'
-
+import { TrackPageProps } from '@app/(items)/types'
 import { getTrack } from '@app/api/fetchers/get-track'
 import { OpenInSpotifyButton } from '@app/components/common'
 import { TRACK_ID } from '@app/constants'
