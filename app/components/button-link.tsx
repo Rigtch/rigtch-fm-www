@@ -15,10 +15,7 @@ export function ButtonLink({ children, className, ...props }: ButtonLinkProps) {
     <Button
       variant="link"
       asChild
-      className={cn(
-        'leading-none p-0 text-lg text-primary-foreground/80',
-        className
-      )}
+      className={cn('leading-none p-0 text-lg', className)}
     >
       <Link {...props}>{children}</Link>
     </Button>

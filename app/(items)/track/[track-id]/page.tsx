@@ -35,7 +35,11 @@ export default async function TrackPage({ params }: TrackPageProps) {
 
           <div className="flex flex-row gap-2">
             {artists.map(({ name, id }) => (
-              <ButtonLink key={id} href={`/artist/${id}`}>
+              <ButtonLink
+                key={id}
+                href={`/artist/${id}`}
+                className="text-primary-foreground/80"
+              >
                 {name}
               </ButtonLink>
             ))}

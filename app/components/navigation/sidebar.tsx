@@ -57,8 +57,8 @@ export function NavigationSidebar() {
         </section>
 
         <NavigationSidebarSectionItem
-          href={`/profile/${userId}/recently-played`}
-          label="Recently Played"
+          href={`/profile/${userId}/history`}
+          label="History"
           pathname={pathname}
           icon={LuClock}
         />
