@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
-import { ArtistPageProps } from '../../types'
-
+import { ArtistPageProps } from '@app/(items)/types'
 import { getArtist } from '@app/api/fetchers/get-artist'
 import { ARTIST_ID } from '@app/constants'
 import { OpenInSpotifyButton } from '@app/components/common'
