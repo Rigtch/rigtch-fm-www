@@ -12,10 +12,10 @@ export * from './time-range'
 export * from './spotify-response'
 export * from './cursors'
 export * from './user'
+export * from './pagination'
 
 export * from './refresh-token'
 
-export * from './users-params'
-export * from './get-top-items-params'
+export * from './params'
 
 export * from './http-method'
