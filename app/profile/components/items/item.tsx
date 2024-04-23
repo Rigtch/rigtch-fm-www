@@ -6,6 +6,7 @@ import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
 import { ArtistEntity, TrackArtist } from '@app/api/types'
 import { cn } from '@app/utils/cn'
 import { ButtonLink } from '@app/components/button-link'
+import { isEntity } from '@app/utils/is-entity'
 
 export interface ItemProps {
   id: string
@@ -62,8 +63,8 @@ export function Item({
                 <span key={name}>
                   <ButtonLink
                     className="text-primary-foreground/80 h-auto text-md"
-                    href={'externalId' in artist ? `/artist/${id}` : href}
-                    {...(!('externalId' in artist) && {
+                    href={isEntity(artist) ? `/artist/${id}` : href}
+                    {...(!isEntity(artist) && {
                       replace: true,
                       target: '_blank',
                     })}
