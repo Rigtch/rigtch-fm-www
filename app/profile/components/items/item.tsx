@@ -1,11 +1,8 @@
 'use client'
 
-import Link from 'next/link'
-
 import { ItemImage } from './image'
 
 import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
-import { Button } from '@app/components/ui/button'
 import { ArtistEntity, TrackArtist } from '@app/api/types'
 import { cn } from '@app/utils/cn'
 import { ButtonLink } from '@app/components/button-link'
@@ -63,20 +60,16 @@ export function Item({
             <div>
               {artists?.map(({ name, href, id, ...artist }, index) => (
                 <span key={name}>
-                  <Button
-                    key={name}
-                    variant="link"
-                    className="text-md leading-none text-primary-foreground/80 p-0 h-auto"
-                    asChild
+                  <ButtonLink
+                    className="text-primary-foreground/80 h-auto text-md"
+                    href={'externalId' in artist ? `/artist/${id}` : href}
+                    {...(!('externalId' in artist) && {
+                      replace: true,
+                      target: '_blank',
+                    })}
                   >
-                    {'externalId' in artist ? (
-                      <Link href={`/artist/${id}`}>{name}</Link>
-                    ) : (
-                      <Link href={href} replace target="_blank">
-                        {name}
-                      </Link>
-                    )}
-                  </Button>
+                    {name}
+                  </ButtonLink>
 
                   {index !== artists.length - 1 && <span>, </span>}
                 </span>

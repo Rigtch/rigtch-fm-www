@@ -16,7 +16,7 @@ export interface ProfileLayoutProps extends ProfileLayoutBaseProps {
   profile: ReactNode
   analysis: ReactNode
   top: ReactNode
-  recentlyPlayed: ReactNode
+  history: ReactNode
 }
 
 export default function ProfileLayout({
@@ -24,7 +24,7 @@ export default function ProfileLayout({
   profile,
   analysis,
   top,
-  recentlyPlayed,
+  history,
   params,
 }: ProfileLayoutProps) {
   const pathname = usePathname()
@@ -44,7 +44,7 @@ export default function ProfileLayout({
             <>
               {top}
               {analysis}
-              {recentlyPlayed}
+              {history}
             </>
           ) : (
             <>{children}</>
