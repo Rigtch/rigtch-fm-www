@@ -6,25 +6,30 @@ import { ItemImage } from './image'
 
 import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
 import { Button } from '@app/components/ui/button'
-import { TrackArtist } from '@app/api/types'
+import { ArtistEntity, TrackArtist } from '@app/api/types'
 import { cn } from '@app/utils/cn'
+import { ButtonLink } from '@app/components/button-link'
 
 export interface ItemProps {
+  id: string
   name: string
   image: string
   href?: string
-  artists?: TrackArtist[]
+  artists?: TrackArtist[] | ArtistEntity[]
   playedAt?: string
   position?: number
+  externalId?: string
 }
 
 export function Item({
+  id,
   name,
   image,
   href,
   position,
   artists,
   playedAt,
+  externalId,
 }: ItemProps) {
   return (
     <div
@@ -42,12 +47,21 @@ export function Item({
 
         <div className="flex flex-col w-full overflow-hidden">
           <h3 className="text-xl md:text-2xl leading-5 overflow-hidden text-ellipsis whitespace-nowrap">
-            {name}
+            {externalId ? (
+              <ButtonLink
+                href={`/${artists ? 'track' : 'artist'}/${id}`}
+                className="p-0 font-normal text-xl md:text-2xl leading-5 overflow-hidden text-ellipsis whitespace-nowrap"
+              >
+                {name}
+              </ButtonLink>
+            ) : (
+              <>{name}</>
+            )}
           </h3>
 
           <div className="flex justify-between w-full items-center">
             <div>
-              {artists?.map(({ name, href }, index) => (
+              {artists?.map(({ name, href, id, ...artist }, index) => (
                 <span key={name}>
                   <Button
                     key={name}
@@ -55,9 +69,13 @@ export function Item({
                     className="text-md leading-none text-primary-foreground/80 p-0 h-auto"
                     asChild
                   >
-                    <Link href={href} replace target="_blank">
-                      {name}
-                    </Link>
+                    {'externalId' in artist ? (
+                      <Link href={`/artist/${id}`}>{name}</Link>
+                    ) : (
+                      <Link href={href} replace target="_blank">
+                        {name}
+                      </Link>
+                    )}
                   </Button>
 
                   {index !== artists.length - 1 && <span>, </span>}
