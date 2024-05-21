@@ -27,7 +27,6 @@ yarn-error.log*
 
 # local env files
 .env*.local
-.eslintcache
 
 # vercel
 .vercel
@@ -36,3 +35,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env
+
+# Package manager
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
