@@ -15,6 +15,7 @@ export function getHistory(
     `/users/${userId}/history?${searchParams.toString()}`,
     {
       token,
+      cache: 'no-cache',
     }
   )
 }
