@@ -48,7 +48,7 @@ export function ItemsList({ items, isTop, withoutPosition }: ItemsListProps) {
           <div key={index}>
             <Item {...item} image={getImage(item)} />
 
-            {index !== items.length - (isTop ? 4 : 1) && <Separator />}
+            <Separator />
           </div>
         ))}
       </div>
