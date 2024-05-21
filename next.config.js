@@ -17,6 +17,11 @@ export default {
         hostname: 'i.scdn.co',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'iili.io',
+        port: '',
+      },
     ],
   },
 }
