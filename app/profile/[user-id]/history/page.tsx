@@ -6,28 +6,20 @@ import { validateId } from '@app/utils/validate-id'
 import { ProfilePageProps } from '@app/profile/types'
 import { USER_ID } from '@app/constants'
 import { getHistory } from '@app/api/fetchers'
-import { ItemsSection } from '@app/profile/sections'
+import { HistorySection } from '@app/profile/sections'
 
 export default async function ProfileHistoryPage({ params }: ProfilePageProps) {
   const accessToken = cookies().get(ACCESS_TOKEN)?.value
   const userId = validateId(params[USER_ID])
+  const limit = 20
 
   if (!accessToken) redirect('/')
 
-  const { items } = await getHistory(accessToken, {
+  const initialData = await getHistory(accessToken, {
     userId,
-    limit: 10,
+    limit,
     page: 1,
   })
 
-  return (
-    <ItemsSection
-      items={items.map(({ track, playedAt }) => ({
-        ...track,
-        playedAt,
-      }))}
-      title="History"
-      withoutPosition
-    />
-  )
+  return <HistorySection initialData={initialData} limit={limit} />
 }
