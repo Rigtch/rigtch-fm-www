@@ -1,0 +1,26 @@
+name: 'Setup Node Env, Get & Cache Dependencies'
+description: 'Setup Node Env, Get & Cache Dependencies(via yarn) for faster builds'
+runs:
+  using: 'composite'
+  steps:
+    - name: Enable Corepack
+      run: corepack enable
+      shell: bash
+
+    - name: Setup node env 🏗
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'yarn'
+
+    - name: 'Cache Dependencies 🕓'
+      uses: 'actions/cache@v3'
+      id: cache-node-modules
+      with:
+        path: 'node_modules'
+        key: deps-node-modules-${{ hashFiles('**/yarn.lock') }}
+
+    - name: Install Dependencies 👨🏻‍💻
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
+      run: yarn install
+      shell: bash
