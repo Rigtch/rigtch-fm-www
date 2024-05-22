@@ -12,16 +12,13 @@ export interface ItemsListProps {
   withoutPosition?: boolean
 }
 
-const getImage = (item: Artist | Track) => {
-  console.log(item)
-
-  return 'images' in item
+const getImage = (item: Artist | Track) =>
+  'images' in item
     ? item.images[0].url
     : // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       item.album
       ? item.album.images[0].url
       : 'https://iili.io/HlHy9Yx.png'
-}
 
 export function ItemsList({ items, isTop, withoutPosition }: ItemsListProps) {
   const sortedItems = items.map((artist, index) => ({
