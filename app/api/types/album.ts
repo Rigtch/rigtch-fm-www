@@ -1,3 +1,4 @@
+import { ArtistEntity } from './artist'
 import { Image } from './image'
 import { type TrackEntity } from './track'
 
@@ -13,4 +14,5 @@ export interface Album {
 export interface AlbumEntity extends Album {
   externalId: string
   tracks: TrackEntity[]
+  artists: ArtistEntity[]
 }

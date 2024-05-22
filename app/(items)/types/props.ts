@@ -1,4 +1,4 @@
-import { ARTIST_ID, TRACK_ID } from '@app/constants'
+import { ALBUM_ID, ARTIST_ID, TRACK_ID } from '@app/constants'
 
 export interface ArtistPageProps {
   params: {
@@ -9,5 +9,11 @@ export interface ArtistPageProps {
 export interface TrackPageProps {
   params: {
     [TRACK_ID]?: string
+  }
+}
+
+export interface AlbumPageProps {
+  params: {
+    [ALBUM_ID]?: string
   }
 }
