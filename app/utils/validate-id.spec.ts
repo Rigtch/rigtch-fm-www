@@ -1,12 +1,12 @@
 import { notFound } from 'next/navigation'
-import { Mock } from 'vitest'
+import { MockedFunction } from 'vitest'
 
 import { validateId } from './validate-id'
 
 vi.mock('next/navigation')
 
 describe('validateId', () => {
-  let notFoundMock: Mock
+  let notFoundMock: MockedFunction<typeof notFound>
 
   beforeEach(() => {
     notFoundMock = vi.mocked(notFound)
