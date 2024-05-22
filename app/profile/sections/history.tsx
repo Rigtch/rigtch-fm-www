@@ -35,20 +35,22 @@ export function HistorySection({
     <DefaultSection title="History" {...props}>
       <div>
         {data.pages.map(({ items }) => (
-          <ItemsList
-            items={items.map(({ track, playedAt }) => ({
-              ...track,
-              playedAt,
-            }))}
-            key={items[0].id}
-            withoutPosition
-          />
+          <div className="relative" key={items[0].id}>
+            <ItemsList
+              items={items.map(({ track, playedAt }) => ({
+                ...track,
+                playedAt,
+              }))}
+              withoutPosition
+            />
+
+            <div ref={ref} className="absolute bottom-1/4" />
+          </div>
         ))}
       </div>
 
       <div className="flex justify-center">
         <Button
-          ref={ref}
           onClick={() => fetchNextPage()}
           disabled={!hasNextPage || isFetchingNextPage}
         >

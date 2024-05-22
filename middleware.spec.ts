@@ -37,7 +37,6 @@ describe('middleware', () => {
   })
 
   beforeEach(() => {
-    // @ts-expect-error mockDeep doesn't support this
     vi.spyOn(requestMock.cookies, 'get').mockImplementation((...args) => {
       if (args[0] === EXPIRATION_DATE) {
         return {
