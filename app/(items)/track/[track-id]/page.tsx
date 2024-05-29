@@ -34,13 +34,14 @@ export default async function TrackPage({ params }: TrackPageProps) {
           <span className="text-5xl">{name}</span>
 
           <div className="flex flex-row gap-2">
-            {artists.map(({ name, id }) => (
+            {artists.map(({ name, id }, index) => (
               <ButtonLink
                 key={id}
                 href={`/artist/${id}`}
                 className="text-primary-foreground/80"
               >
                 {name}
+                {index + 1 < artists.length && ','}
               </ButtonLink>
             ))}
           </div>
