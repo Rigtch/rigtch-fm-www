@@ -16,7 +16,20 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
 
   const dateOfRelease = new Date(releaseDate)
 
-  console.log(tracks)
+  const numberOfDiscs = Math.max(...tracks.map(track => track.discNumber))
+
+  const discTracks = []
+
+  for (let index = 1; index <= numberOfDiscs; index++) {
+    discTracks.push(
+      tracks
+        .filter(track => track.discNumber === index)
+        .sort(
+          (firstTrack, secondTrack) =>
+            firstTrack.trackNumber - secondTrack.trackNumber
+        )
+    )
+  }
 
   return (
     <div className="w-full flex flex-col p-12 gap-2">
@@ -51,27 +64,35 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
         </div>
       </div>
 
-      <div className="w-full">
-        <div className="text-3xl">Tracks</div>
+      <div className="w-full flex flex-col gap-6">
+        <div className="text-4xl">Tracks</div>
 
-        <div className="grid grid-cols-4 gap-4 p-4">
-          {tracks.map((track, index) => (
-            <div
-              key={index}
-              className="flex flex-row items-center justify-between gap-4 p-2 px-4 bg-neutral-800 rounded-xl"
-            >
-              <div className="flex flex-row items-center gap-3">
-                <span className="text-xl">{index + 1}</span>
+        {discTracks.map((disc, index) => (
+          <div key={index} className="flex flex-col gap-4">
+            <span className="text-2xl">Disc {index + 1}</span>
 
-                <ButtonLink href={`/track/${track.id}`}>
-                  <span>{track.name}</span>
-                </ButtonLink>
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 p-4">
+              {disc.map((track, index) => (
+                <div
+                  key={index}
+                  className="flex flex-row w-full items-center justify-between gap-4 p-2 px-4 bg-neutral-800 rounded-xl"
+                >
+                  <div className="flex flex-row items-center gap-3">
+                    <span className="text-xl">{track.trackNumber}</span>
 
-              <OpenInSpotifyButton href={track.href} />
+                    <ButtonLink href={`/track/${track.id}`}>
+                      <span className="truncate w-[30vw] md:w-[50vw] lg:w-[28vw] xl:w-[13vw]">
+                        {track.name}
+                      </span>
+                    </ButtonLink>
+                  </div>
+
+                  <OpenInSpotifyButton href={track.href} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   )

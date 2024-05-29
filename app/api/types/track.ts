@@ -16,6 +16,8 @@ export interface TrackEntity extends Omit<Track, 'artists' | 'album'> {
   externalId: string
   artists: ArtistEntity[]
   album: Omit<AlbumEntity, 'tracks'>
+  trackNumber: number
+  discNumber: number
 }
 
 export interface HistoryTrack {
