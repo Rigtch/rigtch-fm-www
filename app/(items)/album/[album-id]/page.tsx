@@ -31,6 +31,8 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
     )
   }
 
+  console.log(discTracks)
+
   return (
     <div className="w-full flex flex-col p-12 gap-2">
       <div className="w-full flex md:flex-row flex-col p-12 gap-8">
@@ -44,7 +46,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
 
         <div className="flex flex-col gap-6 justify-center">
           <div className="flex flex-col gap-2">
-            <span className="text-5xl">{name}</span>
+            <span className="text-2xl md:text-5xl">{name}</span>
 
             <div className="flex flex-row items-center gap-2 mr-4">
               <OpenInSpotifyButton href={href} />
@@ -69,7 +71,9 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
 
         {discTracks.map((disc, index) => (
           <div key={index} className="flex flex-col gap-4">
-            <span className="text-2xl">Disc {index + 1}</span>
+            {numberOfDiscs > 1 && (
+              <span className="text-2xl">Disc {index + 1}</span>
+            )}
 
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 p-4">
               {disc.map((track, index) => (
@@ -80,11 +84,13 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
                   <div className="flex flex-row items-center gap-3">
                     <span className="text-xl">{track.trackNumber}</span>
 
-                    <ButtonLink href={`/track/${track.id}`}>
-                      <span className="truncate w-[30vw] md:w-[50vw] lg:w-[28vw] xl:w-[13vw]">
-                        {track.name}
-                      </span>
-                    </ButtonLink>
+                    <div>
+                      <ButtonLink href={`/track/${track.id}`}>
+                        <span className="truncate w-[30vw] md:w-[50vw] lg:w-[28vw] xl:w-[13vw]">
+                          {track.name}
+                        </span>
+                      </ButtonLink>
+                    </div>
                   </div>
 
                   <OpenInSpotifyButton href={track.href} />
