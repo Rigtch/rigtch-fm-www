@@ -85,23 +85,27 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
                   key={index}
                   className="flex flex-row w-full items-center justify-between gap-4 p-2 px-4 bg-neutral-800 rounded-xl"
                 >
-                  <div className="flex flex-row items-center gap-3">
-                    <span className="text-xl">{track.trackNumber}</span>
+                  <div className="flex flex-row items-center gap-3 pt-0">
+                    <span className="text-xl w-[25px] text-center">
+                      {track.trackNumber}
+                    </span>
 
-                    <div>
-                      <ButtonLink href={`/track/${track.id}`}>
-                        <span className="truncate w-[30vw] md:w-[50vw] lg:w-[28vw] xl:w-[13vw]">
-                          {track.name}
-                        </span>
-                      </ButtonLink>
+                    <div className="flex flex-col justify-center">
+                      <a
+                        href={`/track/${track.id}`}
+                        className="hover:underline truncate w-[30vw] md:w-[50vw] lg:w-[28vw] xl:w-[13vw]"
+                      >
+                        {track.name}
+                      </a>
 
-                      <div className="text-sm">
+                      <span className="text-sm font-semibold text-gray-400">
                         {track.artists.map((artist, index) => (
-                          <ButtonLink key={index} href={`/artist/${artist.id}`}>
+                          <span key={index}>
                             {artist.name}
-                          </ButtonLink>
+                            {index + 1 < track.artists.length && ', '}
+                          </span>
                         ))}
-                      </div>
+                      </span>
                     </div>
                   </div>
 
