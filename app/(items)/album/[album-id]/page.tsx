@@ -14,7 +14,11 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
     id: albumId,
   })
 
-  const dateOfRelease = new Date(releaseDate)
+  const dateOfRelease = new Date(releaseDate).toLocaleString('default', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
 
   const numberOfDiscs = Math.max(...tracks.map(track => track.discNumber))
 
@@ -61,7 +65,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
               </span>
             </div>
 
-            <div>Release date: {dateOfRelease.toLocaleDateString()}</div>
+            <div>Release date: {dateOfRelease}</div>
           </div>
         </div>
       </div>
@@ -90,6 +94,14 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
                           {track.name}
                         </span>
                       </ButtonLink>
+
+                      <div className="text-sm">
+                        {track.artists.map((artist, index) => (
+                          <ButtonLink key={index} href={`/artist/${artist.id}`}>
+                            {artist.name}
+                          </ButtonLink>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
