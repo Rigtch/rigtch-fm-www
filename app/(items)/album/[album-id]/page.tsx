@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 import { AlbumPageProps } from '@app/(items)/types'
 import { getAlbum } from '@app/api/fetchers/get-album'
-import { ALBUM_ID } from '@app/constants'
-import { validateId } from '@app/utils/validate-id'
-import { OpenInSpotifyButton } from '@app/components/common'
 import { ButtonLink } from '@app/components/button-link'
+import { OpenInSpotifyButton } from '@app/components/common'
+import { ALBUM_ID } from '@app/constants'
 import { getImage } from '@app/utils/get-image'
+import { validateId } from '@app/utils/validate-id'
 
 export default async function AlbumPage({ params }: AlbumPageProps) {
   const albumId = validateId(params[ALBUM_ID])
@@ -23,7 +23,6 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
   } = await getAlbum({
     id: albumId,
   })
-
 
   const options: Intl.DateTimeFormatOptions = {
     month:
