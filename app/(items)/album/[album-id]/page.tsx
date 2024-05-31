@@ -12,15 +12,30 @@ import { getImage } from '@app/utils/get-image'
 export default async function AlbumPage({ params }: AlbumPageProps) {
   const albumId = validateId(params[ALBUM_ID])
 
-  const { name, images, artists, href, releaseDate, tracks } = await getAlbum({
+  const {
+    name,
+    images,
+    artists,
+    href,
+    releaseDate,
+    releaseDatePrecision,
+    tracks,
+  } = await getAlbum({
     id: albumId,
   })
 
-  const dateOfRelease = new Date(releaseDate).toLocaleString('default', {
-    month: 'long',
-    day: 'numeric',
+  console.log(releaseDatePrecision)
+
+  const options: Intl.DateTimeFormatOptions = {
+    month:
+      releaseDatePrecision === 'day' || releaseDatePrecision === 'month'
+        ? 'long'
+        : undefined,
+    day: releaseDatePrecision === 'day' ? 'numeric' : undefined,
     year: 'numeric',
-  })
+  }
+
+  const dateOfRelease = new Date(releaseDate).toLocaleString('default', options)
 
   const numberOfDiscs = Math.max(...tracks.map(track => track.discNumber))
 
@@ -56,7 +71,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
               <OpenInSpotifyButton href={href} />
 
               <span className="text-xl">
-                by
+                by{' '}
                 {artists.map((artist, index) => (
                   <ButtonLink key={index} href={`/artist/${artist.id}`}>
                     {artist.name}
