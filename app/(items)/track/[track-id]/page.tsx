@@ -49,7 +49,7 @@ export default async function TrackPage({ params }: TrackPageProps) {
 
         <div className="flex flex-row items-center gap-2 text-xl">
           <OpenInSpotifyButton href={href} />
-          From album:{' '}
+          From album:
           <ButtonLink href={`/album/${album.id}`}>{album.name}</ButtonLink>
         </div>
       </div>
