@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { AlbumPageProps } from '@app/(items)/types'
 import { getAlbum } from '@app/api/fetchers/get-album'
@@ -89,23 +90,23 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
                     </span>
 
                     <div className="flex flex-col justify-center">
-                      <a
+                      <Link
                         href={`/track/${track.id}`}
                         className="hover:underline truncate w-[30vw] md:w-[50vw] lg:w-[28vw] xl:w-[13vw]"
                       >
                         {track.name}
-                      </a>
+                      </Link>
 
                       <span className="text-sm font-semibold text-gray-400">
                         {track.artists.map((artist, index) => (
-                          <a
+                          <Link
                             href={`/artist/${artist.id}`}
                             key={index}
                             className="hover:underline"
                           >
                             {artist.name}
                             {index + 1 < track.artists.length && ', '}
-                          </a>
+                          </Link>
                         ))}
                       </span>
                     </div>
