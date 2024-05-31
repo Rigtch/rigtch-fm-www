@@ -35,16 +35,14 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
     )
   }
 
-  console.log(discTracks)
-
   return (
     <div className="w-full flex flex-col p-12 gap-2">
       <div className="w-full flex md:flex-row flex-col p-12 gap-8">
         <Image
           src={images[0].url}
           className="rounded-xl md:rounded-md w-full md:h-[200px] md:w-[200px]"
-          width="200"
-          height="200"
+          width="350"
+          height="350"
           alt={name}
         />
 
@@ -56,7 +54,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
               <OpenInSpotifyButton href={href} />
 
               <span className="text-xl">
-                by{' '}
+                by
                 {artists.map((artist, index) => (
                   <ButtonLink key={index} href={`/artist/${artist.id}`}>
                     {artist.name}
@@ -100,10 +98,14 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
 
                       <span className="text-sm font-semibold text-gray-400">
                         {track.artists.map((artist, index) => (
-                          <span key={index}>
+                          <a
+                            href={`/artist/${artist.id}`}
+                            key={index}
+                            className="hover:underline"
+                          >
                             {artist.name}
                             {index + 1 < track.artists.length && ', '}
-                          </span>
+                          </a>
                         ))}
                       </span>
                     </div>
