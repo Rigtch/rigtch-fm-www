@@ -6,6 +6,7 @@ export interface Album {
   id: string
   href: string
   releaseDate: string
+  releaseDatePrecision: string
   totalTracks: number
   name: string
   images: Image[]
