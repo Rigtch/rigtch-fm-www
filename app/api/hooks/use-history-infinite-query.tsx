@@ -5,21 +5,21 @@ import { getHistory } from '../fetchers'
 import { HISTORY } from '../constants'
 import { HistoryTrack, Pagination } from '../types'
 
-import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 import { USER_ID } from '@app/constants'
+import { useToken } from '@app/hooks/use-token'
 
 export const useHistoryInfiniteQuery = (
   limit = 20,
   initialData: Pagination<HistoryTrack>
 ) => {
-  const { accessToken } = useAuthCookies()
   const params = useParams()
   const userId = params[USER_ID].toString()
+  const token = useToken()
 
   return useInfiniteQuery({
     queryKey: [HISTORY],
     queryFn: ({ pageParam = 1 }) =>
-      getHistory(accessToken, {
+      getHistory(token, {
         userId,
         limit,
         page: pageParam,

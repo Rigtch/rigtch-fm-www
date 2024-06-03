@@ -5,12 +5,12 @@ import { useParams } from 'next/navigation'
 import { PLAYBACK_STATE } from '../constants'
 import { getPlaybackState } from '../fetchers'
 
-import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 import { USER_ID } from '@app/constants'
+import { useToken } from '@app/hooks/use-token'
 
 export const usePlaybackStateQuery = () => {
   const [refetchInterval, setRefetchInterval] = useState(1000)
-  const { accessToken } = useAuthCookies()
+  const token = useToken()
   const params = useParams()
 
   const userId = params[USER_ID].toString()
@@ -18,7 +18,7 @@ export const usePlaybackStateQuery = () => {
   const query = useQuery({
     queryKey: [PLAYBACK_STATE],
     queryFn: () =>
-      getPlaybackState(accessToken, {
+      getPlaybackState(token, {
         userId,
       }),
     refetchInterval,

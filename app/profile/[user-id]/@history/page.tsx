@@ -1,23 +1,22 @@
-import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
 import { ItemsSection } from '@app/profile/sections'
 import { ProfilePageProps } from '@app/profile/types'
 import { USER_ID } from '@app/constants'
-import { ACCESS_TOKEN } from '@app/api/constants'
 import { getHistory } from '@app/api/fetchers'
 import { SeeMoreButton } from '@app/components/common'
+import { getServerToken } from '@app/api/auth'
 
 export default async function ProfileHistorySubPage({
   params,
 }: ProfilePageProps) {
   const userId = validateId(params[USER_ID])
-  const accessToken = cookies().get(ACCESS_TOKEN)?.value
+  const token = await getServerToken()
 
-  if (!accessToken) redirect('/')
+  if (!token) redirect('/')
 
-  const recentlyPlayedTracks = await getHistory(accessToken, {
+  const recentlyPlayedTracks = await getHistory(token, {
     limit: 10,
     userId,
     page: 1,
