@@ -1,15 +1,14 @@
 'use server'
 
-import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
-import { ACCESS_TOKEN } from '@app/api/constants'
 import { getAnalysis } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
 import { ProfilePageProps } from '@app/profile/types'
 import { USER_ID } from '@app/constants'
+import { getServerToken } from '@app/api/auth'
 
 export interface Item {
   title: string
@@ -22,10 +21,10 @@ export interface Item {
 export default async function ProfileAnalysisSubPage({
   params,
 }: ProfilePageProps) {
-  const accessToken = cookies().get(ACCESS_TOKEN)?.value
   const userId = validateId(params[USER_ID])
+  const token = await getServerToken()
 
-  if (!accessToken) redirect('/')
+  if (!token) redirect('/')
 
   const {
     danceability,
@@ -37,7 +36,7 @@ export default async function ProfileAnalysisSubPage({
     valence,
     loudness,
     tempo,
-  } = await getAnalysis(accessToken, {
+  } = await getAnalysis(token, {
     userId,
   })
 

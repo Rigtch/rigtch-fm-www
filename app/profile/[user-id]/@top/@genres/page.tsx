@@ -1,16 +1,15 @@
 'use server'
 
-import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
 import { ProfilePageProps } from '@app/profile/types'
 import { TIME_RANGE, USER_ID } from '@app/constants'
-import { ACCESS_TOKEN } from '@app/api/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { GenreChip, SeeMoreButton } from '@app/components/common'
 import { DefaultSection } from '@app/sections'
 import { getTopGenres } from '@app/api/fetchers'
+import { getServerToken } from '@app/api/auth'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,
@@ -18,11 +17,11 @@ export default async function ProfileTopGenresSubPage({
 }: ProfilePageProps) {
   const timeRange = validateTimeRange(searchParams[TIME_RANGE])
   const userId = validateId(params[USER_ID])
-  const accessToken = cookies().get(ACCESS_TOKEN)?.value
+  const token = await getServerToken()
 
-  if (!accessToken) redirect('/')
+  if (!token) redirect('/')
 
-  const { genres } = await getTopGenres(accessToken, {
+  const { genres } = await getTopGenres(token, {
     limit: 10,
     timeRange,
     userId,
