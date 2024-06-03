@@ -2,7 +2,7 @@ import {
   GetTopItemsParams,
   SpotifyResponseWithOffset,
   TimeRange,
-  Track,
+  TrackEntity,
 } from '../types'
 
 import { fetchApi } from './fetch-api'
@@ -22,7 +22,7 @@ export function getTopTracks(
     offset: offset + '',
   })
 
-  return fetchApi<SpotifyResponseWithOffset<Track>>(
+  return fetchApi<SpotifyResponseWithOffset<TrackEntity>>(
     `/users/${userId}/profile/top/tracks?${searchParams.toString()}`,
     { token }
   )
