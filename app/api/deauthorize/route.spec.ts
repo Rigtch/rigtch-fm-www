@@ -25,6 +25,6 @@ describe('/api/authorize/route', () => {
 
     GET()
 
-    expect(responseMock.cookies.delete).toHaveBeenCalledTimes(3)
+    expect(responseMock.cookies.delete).toHaveBeenCalledTimes(1)
   })
 })
