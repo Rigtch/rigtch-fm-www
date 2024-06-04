@@ -21,7 +21,11 @@ jobs:
       - name: Build Application 🧱
         run: bun run build
         env:
-          NEXT_PUBLIC_API_URL: 'https://api.example.com'
+          NEXT_PUBLIC_API_URL: https://api.example.com
+          AUTH_SPOTIFY_ID: secret
+          AUTH_SPOTIFY_SECRET: secret
+          NEXTAUTH_URL: https://example.com
+          NEXTAUTH_SECRET: secret
 
   lint:
     name: 'Lint 🐱'
