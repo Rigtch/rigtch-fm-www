@@ -9,8 +9,8 @@ import {
 import { useQueryClient } from '@tanstack/react-query'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { signOut } from 'next-auth/react'
 import { LuUserCircle } from 'react-icons/lu'
+import { User } from 'next-auth'
 
 import {
   NavigationMenu,
@@ -27,14 +27,17 @@ import { NavigationListItem } from './list-item'
 
 import { ProfileAvatar } from '@app/profile/components/profile'
 import { useAuthCookies } from '@app/hooks/use-auth-cookies'
-import { useCurrentUser } from '@app/hooks/use-current-user'
+import { handleSignOut } from '@app/auth/actions'
 
-export function NavigationBar() {
-  const { userId, removeAuthCookies } = useAuthCookies()
+export interface NavigationBarProps {
+  user?: User
+}
+
+export function NavigationBar({ user }: NavigationBarProps) {
+  const { userId } = useAuthCookies()
   const queryClient = useQueryClient()
   const pathname = usePathname()
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const user = useCurrentUser()
 
   useEffect(() => {
     setIsSidebarOpen(false)
@@ -43,8 +46,7 @@ export function NavigationBar() {
   async function disconnect() {
     queryClient.clear()
 
-    await removeAuthCookies()
-    await signOut({ callbackUrl: '/', redirect: true })
+    await handleSignOut()
   }
 
   return (
@@ -65,7 +67,7 @@ export function NavigationBar() {
 
       <NavigationMenu className="w-full">
         <NavigationMenuList>
-          {user ? (
+          {user?.name ? (
             <>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="flex gap-2 p-2 min-w-[100px]">
@@ -80,10 +82,14 @@ export function NavigationBar() {
                     </Link>
                   </NavigationListItem>
 
-                  <NavigationListItem className="gap-2" onClick={disconnect}>
-                    <FaArrowRightToBracket />
-                    Disconnect
-                  </NavigationListItem>
+                  <form action={disconnect}>
+                    <button type="submit" className="w-full">
+                      <NavigationListItem className="gap-2">
+                        <FaArrowRightToBracket />
+                        Disconnect
+                      </NavigationListItem>
+                    </button>
+                  </form>
 
                   <NavigationListItem asChild className="gap-2">
                     <Link

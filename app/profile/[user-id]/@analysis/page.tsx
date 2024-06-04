@@ -8,7 +8,7 @@ import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
 import { ProfilePageProps } from '@app/profile/types'
 import { USER_ID } from '@app/constants'
-import { getServerToken } from '@app/api/auth'
+import { getServerToken } from '@app/auth/utils'
 
 export interface Item {
   title: string

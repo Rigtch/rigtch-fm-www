@@ -5,7 +5,7 @@ import { USER_ID } from '@app/constants'
 import { getUser } from '@app/api/fetchers'
 import { ProfileCard } from '@app/profile/components/profile'
 import { ProfilePageProps } from '@app/profile/types'
-import { getServerToken } from '@app/api/auth'
+import { getServerToken } from '@app/auth/utils'
 
 export default async function ProfileSubPage({ params }: ProfilePageProps) {
   const userId = validateId(params[USER_ID])

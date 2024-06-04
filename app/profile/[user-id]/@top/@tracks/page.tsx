@@ -8,7 +8,7 @@ import { validateView } from '@app/profile/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { SeeMoreButton } from '@app/components/common'
 import { ProfilePageProps } from '@app/profile/types'
-import { getServerToken } from '@app/api/auth'
+import { getServerToken } from '@app/auth/utils'
 
 export default async function ProfileTopTracksSubPage({
   searchParams,
