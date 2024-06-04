@@ -7,7 +7,7 @@ import { GenreChip, ToggleTimeRange } from '@app/components/common'
 import { getTopGenres } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { ProfilePageProps } from '@app/profile/types'
-import { getServerToken } from '@app/api/auth'
+import { getServerToken } from '@app/auth/utils'
 
 export const runtime = 'edge'
 

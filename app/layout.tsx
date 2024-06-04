@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers'
-import { getServerSession } from 'next-auth'
 
 import './globals.css'
 
@@ -10,6 +9,7 @@ import { LayoutProps } from './types'
 import { Footer } from './components/footer'
 import { CookiesDialog } from './components/cookies-dialog'
 import { Toaster } from './components/ui/toaster'
+import { auth } from './auth'
 
 export const metadata = {
   title: 'rigtch.fm',
@@ -20,7 +20,7 @@ export const metadata = {
 export default async function RootLayout({ children }: LayoutProps) {
   const isAccepted = cookies().has(USER_ACCEPT_COOKIES)
 
-  const session = await getServerSession()
+  const session = await auth()
 
   return (
     <html lang="en">
@@ -47,7 +47,7 @@ export default async function RootLayout({ children }: LayoutProps) {
         <RootProviders session={session!}>
           <div className="flex flex-col justify-between min-h-screen">
             <div>
-              <NavigationBar />
+              <NavigationBar user={session?.user} />
 
               <CookiesDialog isAccepted={isAccepted} />
 

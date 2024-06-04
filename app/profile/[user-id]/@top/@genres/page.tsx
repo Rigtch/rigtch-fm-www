@@ -9,7 +9,7 @@ import { validateTimeRange } from '@app/profile/utils/time-range'
 import { GenreChip, SeeMoreButton } from '@app/components/common'
 import { DefaultSection } from '@app/sections'
 import { getTopGenres } from '@app/api/fetchers'
-import { getServerToken } from '@app/api/auth'
+import { getServerToken } from '@app/auth/utils'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,
