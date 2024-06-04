@@ -4,7 +4,11 @@ import SpotifyProvider from 'next-auth/providers/spotify'
 import { signInEvent } from './sign-in-event'
 
 export const nextAuthConfig: NextAuthConfig = {
-  providers: [SpotifyProvider],
+  providers: [
+    SpotifyProvider({
+      checks: ['none'],
+    }),
+  ],
   events: {
     signIn: signInEvent,
   },
