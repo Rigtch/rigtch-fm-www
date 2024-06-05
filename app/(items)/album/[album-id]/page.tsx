@@ -7,6 +7,7 @@ import { ALBUM_ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 import { OpenInSpotifyButton } from '@app/components/common'
 import { ButtonLink } from '@app/components/button-link'
+import { getImage } from '@app/utils/get-image'
 
 export default async function AlbumPage({ params }: AlbumPageProps) {
   const albumId = validateId(params[ALBUM_ID])
@@ -40,7 +41,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
     <div className="w-full flex flex-col p-12 gap-2">
       <div className="w-full flex md:flex-row flex-col p-12 gap-8">
         <Image
-          src={images[0].url}
+          src={getImage(images, 200)}
           className="rounded-xl md:rounded-md w-full md:h-[200px] md:w-[200px]"
           width="350"
           height="350"

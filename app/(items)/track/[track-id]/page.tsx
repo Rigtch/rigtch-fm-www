@@ -6,6 +6,7 @@ import { OpenInSpotifyButton } from '@app/components/common'
 import { TRACK_ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 import { ButtonLink } from '@app/components/button-link'
+import { getImage } from '@app/utils/get-image'
 
 export default async function TrackPage({ params }: TrackPageProps) {
   const trackId = validateId(params[TRACK_ID])
@@ -22,7 +23,7 @@ export default async function TrackPage({ params }: TrackPageProps) {
   return (
     <div className="w-full flex md:flex-row flex-col p-12 gap-8">
       <Image
-        src={images[0].url}
+        src={getImage(images, 200)}
         className="rounded-xl md:rounded-md w-full md:h-[200px] md:w-[200px]"
         width="200"
         height="200"

@@ -24,6 +24,7 @@ import { cn } from '@app/utils/cn'
 import { formatArtists } from '@app/profile/utils/formatters'
 import { USER_ID } from '@app/constants'
 import { useAuthCookies } from '@app/hooks/use-auth-cookies'
+import { getImage } from '@app/utils/get-image'
 
 export function PlaybackCard() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
@@ -60,7 +61,7 @@ export function PlaybackCard() {
     >
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
         <Image
-          src={album.images[0].url}
+          src={getImage(album, 96)}
           width={96}
           height={96}
           alt={album.name}
