@@ -24,7 +24,7 @@ export default async function ProfileHistorySubPage({
 
   return (
     <ItemsSection
-      items={recentlyPlayedTracks.items.map(({ track, playedAt }) => ({
+      items={recentlyPlayedTracks.data.map(({ track, playedAt }) => ({
         ...track,
         playedAt,
       }))}

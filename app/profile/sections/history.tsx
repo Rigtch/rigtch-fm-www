@@ -34,10 +34,10 @@ export function HistorySection({
   return (
     <DefaultSection title="History" {...props}>
       <div>
-        {data.pages.map(({ items }) => (
-          <div className="relative" key={items[0].id}>
+        {data.pages.map(({ data }) => (
+          <div className="relative" key={data[0].id}>
             <ItemsList
-              items={items.map(({ track, playedAt }) => ({
+              items={data.map(({ track, playedAt }) => ({
                 ...track,
                 playedAt,
               }))}
