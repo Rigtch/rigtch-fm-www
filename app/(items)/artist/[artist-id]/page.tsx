@@ -5,6 +5,7 @@ import { getArtist } from '@app/api/fetchers/get-artist'
 import { ARTIST_ID } from '@app/constants'
 import { OpenInSpotifyButton } from '@app/components/common'
 import { validateId } from '@app/utils/validate-id'
+import { getImage } from '@app/utils/get-image'
 
 export default async function ArtistPage({ params }: ArtistPageProps) {
   const artistId = validateId(params[ARTIST_ID])
@@ -18,7 +19,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   return (
     <div className="w-full flex md:flex-row flex-col p-12 gap-8">
       <Image
-        src={images[0].url}
+        src={getImage(images, 200)}
         className="rounded-xl md:rounded-md w-full md:h-[200px] md:w-[200px]"
         width="200"
         height="200"
