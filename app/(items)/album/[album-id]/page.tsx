@@ -24,7 +24,6 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
     id: albumId,
   })
 
-  console.log(releaseDatePrecision)
 
   const options: Intl.DateTimeFormatOptions = {
     month:
