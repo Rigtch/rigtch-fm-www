@@ -25,15 +25,12 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
   })
 
   const options: Intl.DateTimeFormatOptions = {
-    month:
-      releaseDatePrecision === 'day' || releaseDatePrecision === 'month'
-        ? 'long'
-        : undefined,
+    month: releaseDatePrecision === 'year' ? undefined : 'long',
     day: releaseDatePrecision === 'day' ? 'numeric' : undefined,
     year: 'numeric',
   }
 
-  const dateOfRelease = new Date(releaseDate).toLocaleString('default', options)
+  const dateOfRelease = new Date(releaseDate).toLocaleString('EN-en', options)
 
   const numberOfDiscs = Math.max(...tracks.map(track => track.discNumber))
 
@@ -69,7 +66,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
               <OpenInSpotifyButton href={href} />
 
               <span className="text-xl">
-                by{' '}
+                by&nbsp;
                 {artists.map((artist, index) => (
                   <ButtonLink key={index} href={`/artist/${artist.id}`}>
                     {artist.name}
