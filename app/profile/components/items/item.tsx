@@ -2,10 +2,10 @@
 
 import { ItemImage } from './image'
 
-import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
 import { ArtistEntity, TrackArtist } from '@app/api/types'
-import { cn } from '@app/utils/cn'
 import { ButtonLink } from '@app/components/button-link'
+import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
+import { cn } from '@app/utils/cn'
 import { isEntity } from '@app/utils/is-entity'
 
 export interface ItemProps {
@@ -43,19 +43,21 @@ export function Item({
 
         <ItemImage src={image} alt={name} width={48} height={48} />
 
-        <div className="flex flex-col w-full overflow-hidden">
-          <h3 className="text-xl md:text-2xl leading-5 overflow-hidden text-ellipsis whitespace-nowrap">
-            {externalId ? (
-              <ButtonLink
-                href={`/${artists ? 'track' : 'artist'}/${id}`}
-                className="p-0 font-normal text-xl md:text-2xl leading-5 overflow-hidden text-ellipsis whitespace-nowrap"
-              >
+        <div className="flex flex-col items-start w-full overflow-hidden">
+          {externalId ? (
+            <ButtonLink
+              href={`/${artists ? 'track' : 'artist'}/${id}`}
+              className="p-0 leading-5"
+            >
+              <h3 className="text-xl md:text-2xl truncate w-[40vw] md:w-[60vw] lg:w-auto">
                 {name}
-              </ButtonLink>
-            ) : (
-              <>{name}</>
-            )}
-          </h3>
+              </h3>
+            </ButtonLink>
+          ) : (
+            <span className="truncate w-[40vw] md:w-[60vw] lg:w-auto">
+              {name}
+            </span>
+          )}
 
           <div className="flex justify-between w-full items-center">
             <div>

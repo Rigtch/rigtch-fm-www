@@ -53,12 +53,14 @@ export function TopItemCard({
           {externalId ? (
             <ButtonLink
               href={`/${artists ? 'track' : 'artist'}/${id}`}
-              className="p-0 leading-5 overflow-hidden text-ellipsis whitespace-nowrap"
+              className="p-0 leading-5"
             >
-              <h3 className="text-2xl font-bold text-center">{name}</h3>
+              <h3 className="text-2xl font-bold text-center truncate w-[80vw] md:w-auto">
+                {name}
+              </h3>
             </ButtonLink>
           ) : (
-            <>{name}</>
+            <span className="w-[80vw] md:w-auto truncate">{name}</span>
           )}
 
           {artists && (
