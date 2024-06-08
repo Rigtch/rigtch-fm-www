@@ -4,10 +4,10 @@ import { FaStar } from 'react-icons/fa6'
 
 import { ItemImage } from './image'
 
-import { Badge } from '@app/components/ui/badge'
 import { ArtistEntity, TrackArtist } from '@app/api/types'
-import { cn } from '@app/utils/cn'
 import { ButtonLink } from '@app/components/button-link'
+import { Badge } from '@app/components/ui/badge'
+import { cn } from '@app/utils/cn'
 import { isEntity } from '@app/utils/is-entity'
 
 export interface TopItemCardProps {
