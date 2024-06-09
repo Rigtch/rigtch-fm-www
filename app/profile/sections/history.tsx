@@ -1,15 +1,15 @@
 'use client'
 
-import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 import { CgSpinnerAlt } from 'react-icons/cg'
+import { useInView } from 'react-intersection-observer'
 
 import { ItemsList } from '../components/items'
 
 import { useHistoryInfiniteQuery } from '@app/api/hooks'
 import { HistoryTrack, Pagination } from '@app/api/types'
-import { DefaultSection, DefaultSectionProps } from '@app/sections'
 import { Button } from '@app/components/ui/button'
+import { DefaultSection, DefaultSectionProps } from '@app/sections'
 
 export type HistorySectionProps = Omit<DefaultSectionProps, 'title'> & {
   initialData: Pagination<HistoryTrack>
@@ -41,6 +41,7 @@ export function HistorySection({
                 ...track,
                 playedAt,
               }))}
+              seperator
               withoutPosition
             />
 
