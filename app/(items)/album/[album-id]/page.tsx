@@ -100,10 +100,10 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
                       {track.trackNumber}
                     </span>
 
-                    <div className="flex flex-col justify-center">
+                    <div className="grid justify-center">
                       <Link
                         href={`/track/${track.id}`}
-                        className="hover:underline truncate w-[30vw] md:w-[50vw] lg:w-[28vw] xl:w-[13vw]"
+                        className="hover:underline truncate"
                       >
                         {track.name}
                       </Link>
