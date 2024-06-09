@@ -47,16 +47,12 @@ export function Item({
           {externalId ? (
             <ButtonLink
               href={`/${artists ? 'track' : 'artist'}/${id}`}
-              className="p-0 leading-5"
+              className="p-0 leading-5 inline-grid"
             >
-              <h3 className="text-xl md:text-2xl truncate w-[40vw] md:w-[60vw] lg:w-auto">
-                {name}
-              </h3>
+              <h3 className="text-xl md:text-2xl truncate">{name}</h3>
             </ButtonLink>
           ) : (
-            <span className="truncate w-[40vw] md:w-[60vw] lg:w-auto">
-              {name}
-            </span>
+            <span className="truncate">{name}</span>
           )}
 
           <div className="flex justify-between w-full items-center">
