@@ -1,19 +1,25 @@
 'use client'
 
-import { TopItemCard } from './top-card'
 import { Item } from './item'
+import { TopItemCard } from './top-card'
 
-import { Separator } from '@app/components/ui/separator'
 import { ArtistEntity, TrackEntity } from '@app/api/types'
+import { Separator } from '@app/components/ui/separator'
 import { getImage } from '@app/utils/get-image'
 
 export interface ItemsListProps {
   items: (ArtistEntity | TrackEntity)[]
   isTop?: boolean
   withoutPosition?: boolean
+  className?: string
 }
 
-export function ItemsList({ items, isTop, withoutPosition }: ItemsListProps) {
+export function ItemsList({
+  items,
+  isTop,
+  withoutPosition,
+  className,
+}: ItemsListProps) {
   const sortedItems = items.map((artist, index) => ({
     ...artist,
     ...(!withoutPosition && {
@@ -52,7 +58,7 @@ export function ItemsList({ items, isTop, withoutPosition }: ItemsListProps) {
       <div className="flex flex-col gap-2">
         {sortedItems.slice(isTop ? 3 : 0).map((item, index) => (
           <div key={index}>
-            <Item {...item} image={getImage(item, 48)} />
+            <Item {...item} image={getImage(item, 48)} className={className} />
 
             <Separator />
           </div>

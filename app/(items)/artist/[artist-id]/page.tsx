@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { ArtistPageProps } from '@app/(items)/types'
 import { getArtist } from '@app/api/fetchers/get-artist'
 import { getArtistTopTracks } from '@app/api/fetchers/get-artist-top-tracks'
-import { ButtonLink } from '@app/components/button-link'
 import { OpenInSpotifyButton } from '@app/components/common'
 import { ARTIST_ID } from '@app/constants'
+import { ItemsList } from '@app/profile/components/items'
 import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
 
@@ -21,8 +21,8 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   const followerCount = new Intl.NumberFormat('en-EN').format(followers)
 
   return (
-    <div className="flex flex-col p-12">
-      <div className="w-full flex md:flex-row flex-col p-12 gap-8">
+    <div className="flex flex-row p-12">
+      <div className="w-1/2 flex md:flex-row flex-col p-12 gap-8">
         <Image
           src={getImage(images, 200)}
           className="rounded-xl md:rounded-md w-full md:h-[200px] md:w-[200px]"
@@ -31,7 +31,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
           alt={name}
         />
 
-        <div className="flex flex-col gap-6 justify-center">
+        <div className="flex flex-col gap-6 justify-start">
           <div className="flex flex-col gap-2">
             <span className="text-5xl">{name}</span>
 
@@ -52,33 +52,10 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
         </div>
       </div>
 
-      <div>
+      <div className="w-1/2 flex flex-col gap-4">
         <div className="text-4xl">Top Tracks</div>
 
-        <div className="flex flex-row flex-wrap justify-start gap-4 p-12">
-          {tracks.slice(0, 5).map(({ id, name, href, album }) => (
-            <div
-              className="flex flex-col gap-2 bg-neutral-800 p-4 rounded-lg"
-              key={id}
-            >
-              <Image
-                src={getImage(album.images, 200)}
-                className="rounded-md h-[180px] w-[180px]"
-                width="200"
-                height="200"
-                alt={name}
-              />
-
-              <div className="flex flex-row justify-between gap-2">
-                <ButtonLink href={`/track/${id}`}>
-                  <span className="text-xl truncate w-[150px]">{name}</span>
-                </ButtonLink>
-
-                <OpenInSpotifyButton href={href} />
-              </div>
-            </div>
-          ))}
-        </div>
+        <ItemsList items={tracks.slice(0, 5)} className="text-2xl" />
       </div>
     </div>
   )
