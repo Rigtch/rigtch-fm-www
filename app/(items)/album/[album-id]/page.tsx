@@ -10,7 +10,7 @@ import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
 
 export default async function AlbumPage({ params }: AlbumPageProps) {
-  const albumId = validateId(params[ALBUM_ID])
+  const id = validateId(params[ALBUM_ID])
 
   const {
     name,
@@ -21,7 +21,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
     releaseDatePrecision,
     tracks,
   } = await getAlbum({
-    id: albumId,
+    id,
   })
 
   const options: Intl.DateTimeFormatOptions = {

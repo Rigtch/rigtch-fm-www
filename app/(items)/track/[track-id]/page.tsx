@@ -2,14 +2,14 @@ import Image from 'next/image'
 
 import { TrackPageProps } from '@app/(items)/types'
 import { getTrack } from '@app/api/fetchers/get-track'
+import { ButtonLink } from '@app/components/button-link'
 import { OpenInSpotifyButton } from '@app/components/common'
 import { TRACK_ID } from '@app/constants'
-import { validateId } from '@app/utils/validate-id'
-import { ButtonLink } from '@app/components/button-link'
 import { getImage } from '@app/utils/get-image'
+import { validateId } from '@app/utils/validate-id'
 
 export default async function TrackPage({ params }: TrackPageProps) {
-  const trackId = validateId(params[TRACK_ID])
+  const id = validateId(params[TRACK_ID])
 
   const {
     name,
@@ -17,7 +17,7 @@ export default async function TrackPage({ params }: TrackPageProps) {
     artists,
     href,
   } = await getTrack({
-    id: trackId,
+    id,
   })
 
   return (
