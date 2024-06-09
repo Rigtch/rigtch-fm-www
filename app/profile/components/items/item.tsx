@@ -17,7 +17,7 @@ export interface ItemProps {
   playedAt?: string
   position?: number
   externalId?: string
-  className?: string
+  positionClassName?: string
 }
 
 export function Item({
@@ -29,7 +29,7 @@ export function Item({
   artists,
   playedAt,
   externalId,
-  className,
+  positionClassName,
 }: ItemProps) {
   return (
     <div
@@ -40,7 +40,12 @@ export function Item({
     >
       <header className="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]">
         {position && (
-          <span className={cn('text-center w-[2rem]', className ?? 'text-3xl')}>
+          <span
+            className={cn(
+              'text-center w-[2rem]',
+              positionClassName ?? 'text-3xl'
+            )}
+          >
             {position}
           </span>
         )}

@@ -11,7 +11,7 @@ export interface ItemsListProps {
   items: (ArtistEntity | TrackEntity)[]
   isTop?: boolean
   withoutPosition?: boolean
-  className?: string
+  positionClassName?: string
   seperator?: boolean
 }
 
@@ -19,7 +19,7 @@ export function ItemsList({
   items,
   isTop,
   withoutPosition,
-  className,
+  positionClassName,
   seperator = false,
 }: ItemsListProps) {
   const sortedItems = items.map((artist, index) => ({
@@ -60,7 +60,11 @@ export function ItemsList({
       <div className="flex flex-col gap-2">
         {sortedItems.slice(isTop ? 3 : 0).map((item, index, items) => (
           <div key={index}>
-            <Item {...item} image={getImage(item, 48)} className={className} />
+            <Item
+              {...item}
+              image={getImage(item, 48)}
+              positionClassName={positionClassName}
+            />
 
             {items.length === index + 1 ? (
               seperator ? (

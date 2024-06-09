@@ -55,7 +55,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
       <div className="w-1/2 flex flex-col gap-4">
         <div className="text-4xl">Top Tracks</div>
 
-        <ItemsList items={tracks.slice(0, 5)} className="text-2xl" />
+        <ItemsList items={tracks.slice(0, 5)} positionClassName="text-2xl" />
       </div>
     </div>
   )
