@@ -12,6 +12,7 @@ export interface ItemsListProps {
   isTop?: boolean
   withoutPosition?: boolean
   className?: string
+  seperator?: boolean
 }
 
 export function ItemsList({
@@ -19,6 +20,7 @@ export function ItemsList({
   isTop,
   withoutPosition,
   className,
+  seperator = false,
 }: ItemsListProps) {
   const sortedItems = items.map((artist, index) => ({
     ...artist,
@@ -56,11 +58,17 @@ export function ItemsList({
       )}
 
       <div className="flex flex-col gap-2">
-        {sortedItems.slice(isTop ? 3 : 0).map((item, index) => (
+        {sortedItems.slice(isTop ? 3 : 0).map((item, index, items) => (
           <div key={index}>
             <Item {...item} image={getImage(item, 48)} className={className} />
 
-            <Separator />
+            {items.length === index + 1 ? (
+              seperator ? (
+                <Separator />
+              ) : null
+            ) : (
+              <Separator />
+            )}
           </div>
         ))}
       </div>
