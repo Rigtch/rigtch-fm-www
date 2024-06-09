@@ -10,13 +10,13 @@ import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
 
 export default async function ArtistPage({ params }: ArtistPageProps) {
-  const artistId = validateId(params[ARTIST_ID])
+  const id = validateId(params[ARTIST_ID])
 
   const { followers, images, name, href, genres } = await getArtist({
-    id: artistId,
+    id,
   })
 
-  const { tracks } = await getArtistTopTracks({ id: artistId })
+  const { tracks } = await getArtistTopTracks({ id })
 
   const followerCount = new Intl.NumberFormat('en-EN').format(followers)
 
