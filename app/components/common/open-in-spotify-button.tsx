@@ -31,10 +31,10 @@ export function OpenInSpotifyButton({
             >
               <Image
                 src="/spotify-icon-white.png"
-                width={25}
-                height={25}
+                width={20}
+                height={20}
                 alt={''}
-                className="w-[20px] h-[20px]"
+                className="min-w-[20px] h-[20px]"
               />
             </Link>
           </TooltipTrigger>
