@@ -11,6 +11,8 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { LuUserCircle } from 'react-icons/lu'
 import { User } from 'next-auth'
+import { RxHamburgerMenu } from 'react-icons/rx'
+import { IoClose } from 'react-icons/io5'
 
 import {
   NavigationMenu,
@@ -57,8 +59,36 @@ export function NavigationBar({ user }: NavigationBarProps) {
           alt="Rigtch"
           width={42}
           height={42}
-          className="rounded-lg"
+          className="rounded-lg hidden md:block"
         />
+
+        <div className="md:hidden">
+          <Sheet
+            open={isSidebarOpen}
+            onOpenChange={isOpen => {
+              setIsSidebarOpen(isOpen)
+            }}
+          >
+            <SheetTrigger
+              onClick={() => {
+                setIsSidebarOpen(true)
+              }}
+              className="cursor-pointer"
+            >
+              {isSidebarOpen ? (
+                <IoClose size={28} />
+              ) : (
+                <RxHamburgerMenu size={28} />
+              )}
+            </SheetTrigger>
+
+            <SheetContent side="bottom">
+              <div className="min-h-[50vh]">
+                <NavigationSidebar />
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
 
         <h1 className="text-2xl md:text-3xl md:block hidden font-semibold">
           rigtch.fm
@@ -104,37 +134,9 @@ export function NavigationBar({ user }: NavigationBarProps) {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <ProfileAvatar
-                className="hidden md:block"
-                src={user.image}
-                displayName={user.name}
-              />
-
-              <div className="md:hidden">
-                <Sheet
-                  open={isSidebarOpen}
-                  onOpenChange={isOpen => {
-                    setIsSidebarOpen(isOpen)
-                  }}
-                >
-                  <SheetTrigger
-                    onClick={() => {
-                      setIsSidebarOpen(true)
-                    }}
-                    className="cursor-pointer"
-                  >
-                    <ProfileAvatar
-                      className="items-center"
-                      src={user.image}
-                      displayName={user.name}
-                    />
-                  </SheetTrigger>
-
-                  <SheetContent>
-                    <NavigationSidebar />
-                  </SheetContent>
-                </Sheet>
-              </div>
+              <Link href={`/profile/${userId}`}>
+                <ProfileAvatar src={user.image} displayName={user.name} />
+              </Link>
             </>
           ) : (
             <ConnectButton variant="success" />
