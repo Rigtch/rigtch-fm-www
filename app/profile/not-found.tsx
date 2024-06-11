@@ -1,8 +1,12 @@
-import Link from 'next/link'
+'use client'
+
+import { useRouter } from 'next/router'
 
 import { Button } from '@app/components/ui/button'
 
 export default function ProfileNotFound() {
+  const router = useRouter()
+
   return (
     <div className="flex flex-col gap-6 p-4">
       <header className="flex flex-col gap-4">
@@ -20,8 +24,12 @@ export default function ProfileNotFound() {
       </header>
 
       <main className="flex justify-end">
-        <Button>
-          <Link href="/profile">Go back</Link>
+        <Button
+          onClick={() => {
+            router.back()
+          }}
+        >
+          Go back
         </Button>
       </main>
     </div>
