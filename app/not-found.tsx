@@ -1,8 +1,12 @@
-import Link from 'next/link'
+'use client'
+
+import { useRouter } from 'next/navigation'
 
 import { Button } from '@app/components/ui/button'
 
 export default function NotFound() {
+  const router = useRouter()
+
   return (
     <div className="relative flex flex-col overflow-hidden items-center justify-center gap-6 w-full h-[600px]">
       <span className="text-[200px] md:text-[600px] absolute opacity-[0.1]">
@@ -17,9 +21,13 @@ export default function NotFound() {
         </h2>
       </header>
 
-      <main className="flex">
-        <Button>
-          <Link href="/profile">Go back</Link>
+      <main className="flex z-10">
+        <Button
+          onClick={() => {
+            router.back()
+          }}
+        >
+          Go back
         </Button>
       </main>
     </div>
