@@ -47,22 +47,7 @@ module.exports = {
     'testing-library',
     'prettier',
   ],
-  extends: [
-    'plugin:@next/next/recommended',
-    'plugin:@typescript-eslint/strict-type-checked',
-    'plugin:@typescript-eslint/stylistic-type-checked',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
-    'plugin:eslint-comments/recommended',
-    'plugin:vitest/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
-    'plugin:jsx-a11y/recommended',
-    'plugin:sonarjs/recommended',
-    'plugin:unicorn/recommended',
-    'prettier',
-  ],
+  extends: ['plugin:@next/next/recommended', 'plugin:@typescript-eslint/strict-type-checked', 'plugin:@typescript-eslint/stylistic-type-checked', 'plugin:react/recommended', 'plugin:react/jsx-runtime', 'plugin:react-hooks/recommended', 'plugin:eslint-comments/recommended', 'plugin:vitest/recommended', 'plugin:import/recommended', 'plugin:import/typescript', 'plugin:jsx-a11y/recommended', 'plugin:sonarjs/recommended', 'plugin:unicorn/recommended', 'prettier', 'plugin:storybook/recommended'],
   overrides: [
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],

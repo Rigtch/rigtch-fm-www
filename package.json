@@ -20,7 +20,9 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "shadcn-ui": "npx shadcn-ui@latest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
@@ -57,10 +59,19 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.5.0",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/types": "^19.0.3",
     "@next/eslint-plugin-next": "14.2.3",
+    "@storybook/addon-essentials": "^8.1.6",
+    "@storybook/addon-interactions": "^8.1.6",
+    "@storybook/addon-links": "^8.1.6",
+    "@storybook/addon-onboarding": "^8.1.6",
+    "@storybook/blocks": "^8.1.6",
+    "@storybook/nextjs": "^8.1.6",
+    "@storybook/react": "^8.1.6",
+    "@storybook/test": "^8.1.6",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
     "@testing-library/user-event": "^14.5.2",
@@ -89,6 +100,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^0.23.0",
+    "eslint-plugin-storybook": "^0.8.0",
     "eslint-plugin-testing-library": "^6.2.0",
     "eslint-plugin-unicorn": "^51.0.1",
     "eslint-plugin-vitest": "^0.3.20",
@@ -98,6 +110,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.14",
+    "storybook": "^8.1.6",
     "stylelint": "^15.11.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-standard": "^34.0.0",
