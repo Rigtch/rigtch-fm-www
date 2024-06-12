@@ -47,7 +47,7 @@ export function SelectView({ initialValue }: SelectViewProps) {
 
   return (
     <Select defaultValue={initialValue} onValueChange={handleOnValueChange}>
-      <SelectTrigger className="min-w-[120px]">
+      <SelectTrigger className="min-w-[120px] text-white">
         <SelectValue placeholder="Select view" />
       </SelectTrigger>
 
