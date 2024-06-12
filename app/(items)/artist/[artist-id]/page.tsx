@@ -21,8 +21,8 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   const followerCount = new Intl.NumberFormat('en-EN').format(followers)
 
   return (
-    <div className="flex flex-row p-12">
-      <div className="w-1/2 flex md:flex-row flex-col p-12 gap-8">
+    <div className="flex flex-col md:flex-row p-12">
+      <div className="w-full md:w-1/2 flex flex-row flex-wrap p-12 gap-8">
         <Image
           src={getImage(images, 200)}
           className="rounded-xl md:rounded-md w-full md:h-[200px] md:w-[200px]"
@@ -33,16 +33,18 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
 
         <div className="flex flex-col gap-6 justify-start">
           <div className="flex flex-col gap-2">
-            <span className="text-5xl">{name}</span>
+            <span className="text-4xl md:text-5xl">{name}</span>
 
             <div className="flex flex-row items-center gap-2 mr-4">
               <SpotifyLink href={href} />
 
-              <span className="text-xl">Followers: {followerCount}</span>
+              <span className="text-md md:text-xl">
+                Followers: {followerCount}
+              </span>
             </div>
           </div>
 
-          <div className="flex flex-row flex-wrap gap-4">
+          <div className="flex flex-row flex-wrap justify-center gap-4">
             {genres.slice(0, 3).map(genre => (
               <div className="rounded-xl bg-neutral-800 p-2" key={genre}>
                 {genre}
@@ -52,7 +54,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
         </div>
       </div>
 
-      <div className="w-1/2 flex flex-col gap-4">
+      <div className="w-full md:w-1/2 flex flex-col gap-4">
         <div className="text-4xl">Top Tracks</div>
 
         <ItemsList items={tracks.slice(0, 5)} positionClassName="text-2xl" />
