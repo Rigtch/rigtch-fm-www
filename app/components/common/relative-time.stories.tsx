@@ -5,7 +5,7 @@ import { RelativeTime } from './relative-time'
 type RelativeTimeType = typeof RelativeTime
 
 const meta: Meta<RelativeTimeType> = {
-  title: 'Common/RelativeTime',
+  title: 'Components/Common/RelativeTime',
   component: RelativeTime,
   argTypes: {
     value: {
