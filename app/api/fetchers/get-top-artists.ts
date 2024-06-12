@@ -1,5 +1,5 @@
 import {
-  Artist,
+  ArtistEntity,
   GetTopItemsParams,
   SpotifyResponseWithOffset,
   TimeRange,
@@ -24,7 +24,7 @@ export function getTopArtists(
 
   const path = `/users/${userId}/profile/top/artists`
 
-  return fetchApi<SpotifyResponseWithOffset<Artist>>(
+  return fetchApi<SpotifyResponseWithOffset<ArtistEntity>>(
     `${path}?${params.toString()}`,
     { token }
   )

@@ -3,18 +3,18 @@ import { useParams } from 'next/navigation'
 import { putPlayerPause, putPlayerResume } from '../fetchers'
 
 import { USER_ID } from '@app/constants'
-import { useAuthCookies } from '@app/hooks/use-auth-cookies'
+import { useToken } from '@app/hooks/use-token'
 
 export const useTogglePlaybackStateQuery = () => {
-  const { accessToken } = useAuthCookies()
+  const token = useToken()
   const params = useParams()
 
   const userId = params[USER_ID].toString()
 
   function toggle(isPlaying = false) {
     return isPlaying
-      ? putPlayerPause(accessToken, { userId })
-      : putPlayerResume(accessToken, { userId })
+      ? putPlayerPause(token, { userId })
+      : putPlayerResume(token, { userId })
   }
 
   return {

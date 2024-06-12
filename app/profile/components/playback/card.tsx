@@ -1,29 +1,30 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 import { PlaybackCardSkeleton } from './card.skeleton'
 import { PlaybackStateToggleButton } from './state-toggle-button'
 
+import {
+  AudioBars,
+  OpenInSpotifyButton,
+  RelativeTime,
+} from '@app/components/common'
 import {
   Card,
   CardFooter,
   CardHeader,
   CardTitle,
 } from '@app/components/ui/card'
-import {
-  AudioBars,
-  OpenInSpotifyButton,
-  RelativeTime,
-} from '@app/components/common'
 import { Skeleton } from '@app/components/ui/skeleton'
-import { usePlaybackStateContext } from '@app/profile/context/playback-state'
-import { cn } from '@app/utils/cn'
-import { formatArtists } from '@app/profile/utils/formatters'
 import { USER_ID } from '@app/constants'
 import { useAuthCookies } from '@app/hooks/use-auth-cookies'
+import { usePlaybackStateContext } from '@app/profile/context/playback-state'
+import { formatArtists } from '@app/profile/utils/formatters'
+import { cn } from '@app/utils/cn'
+import { getImage } from '@app/utils/get-image'
 
 export function PlaybackCard() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
@@ -60,7 +61,7 @@ export function PlaybackCard() {
     >
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
         <Image
-          src={album.images[0].url}
+          src={getImage(album, 96)}
           width={96}
           height={96}
           alt={album.name}
@@ -82,7 +83,9 @@ export function PlaybackCard() {
               {track.name}
             </p>
 
-            <p className="text-neutral-300">{formatArtists(track.artists)}</p>
+            <p className="text-neutral-300 truncate max-w-[380px]">
+              {formatArtists(track.artists)}
+            </p>
           </CardTitle>
 
           <CardFooter className="flex justify-between items-center w-full">

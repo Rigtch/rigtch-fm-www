@@ -7,9 +7,10 @@ import {
   FaArrowUpRightFromSquare,
 } from 'react-icons/fa6'
 import { useQueryClient } from '@tanstack/react-query'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { LuUserCircle } from 'react-icons/lu'
+import { User } from 'next-auth'
 
 import {
   NavigationMenu,
@@ -25,17 +26,16 @@ import { NavigationSidebar } from './sidebar'
 import { NavigationListItem } from './list-item'
 
 import { ProfileAvatar } from '@app/profile/components/profile'
-import { Profile } from '@app/api/types'
 import { useAuthCookies } from '@app/hooks/use-auth-cookies'
+import { handleSignOut } from '@app/auth/actions'
 
 export interface NavigationBarProps {
-  profile?: Profile
+  user?: User
 }
 
-export function NavigationBar({ profile }: NavigationBarProps) {
-  const { removeAuthCookies, userId } = useAuthCookies()
+export function NavigationBar({ user }: NavigationBarProps) {
+  const { userId } = useAuthCookies()
   const queryClient = useQueryClient()
-  const router = useRouter()
   const pathname = usePathname()
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
@@ -46,10 +46,7 @@ export function NavigationBar({ profile }: NavigationBarProps) {
   async function disconnect() {
     queryClient.clear()
 
-    await removeAuthCookies()
-
-    router.push('/')
-    router.refresh()
+    await handleSignOut()
   }
 
   return (
@@ -70,13 +67,11 @@ export function NavigationBar({ profile }: NavigationBarProps) {
 
       <NavigationMenu className="w-full">
         <NavigationMenuList>
-          {profile ? (
+          {user?.name ? (
             <>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="flex gap-2 p-2 min-w-[100px]">
-                  <p className="text-lg truncate max-w-[150px]">
-                    {profile.displayName}
-                  </p>
+                  <p className="text-lg truncate max-w-[150px]">{user.name}</p>
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
@@ -87,13 +82,21 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                     </Link>
                   </NavigationListItem>
 
-                  <NavigationListItem className="gap-2" onClick={disconnect}>
-                    <FaArrowRightToBracket />
-                    Disconnect
-                  </NavigationListItem>
+                  <form action={disconnect}>
+                    <button type="submit" className="w-full">
+                      <NavigationListItem className="gap-2">
+                        <FaArrowRightToBracket />
+                        Disconnect
+                      </NavigationListItem>
+                    </button>
+                  </form>
 
                   <NavigationListItem asChild className="gap-2">
-                    <Link href={profile.href} replace target="_blank">
+                    <Link
+                      href={`https://open.spotify.com/user/${user.id}`}
+                      replace
+                      target="_blank"
+                    >
                       <FaArrowUpRightFromSquare />
                       Open in Spotify
                     </Link>
@@ -102,9 +105,9 @@ export function NavigationBar({ profile }: NavigationBarProps) {
               </NavigationMenuItem>
 
               <ProfileAvatar
-                src={profile.images?.[0]?.url}
                 className="hidden md:block"
-                displayName={profile.displayName}
+                src={user.image}
+                displayName={user.name}
               />
 
               <div className="md:hidden">
@@ -121,9 +124,9 @@ export function NavigationBar({ profile }: NavigationBarProps) {
                     className="cursor-pointer"
                   >
                     <ProfileAvatar
-                      src={profile.images?.[0]?.url}
                       className="items-center"
-                      displayName={profile.displayName}
+                      src={user.image}
+                      displayName={user.name}
                     />
                   </SheetTrigger>
 

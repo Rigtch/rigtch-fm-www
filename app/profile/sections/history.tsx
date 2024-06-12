@@ -1,15 +1,15 @@
 'use client'
 
-import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 import { CgSpinnerAlt } from 'react-icons/cg'
+import { useInView } from 'react-intersection-observer'
 
 import { ItemsList } from '../components/items'
 
 import { useHistoryInfiniteQuery } from '@app/api/hooks'
 import { HistoryTrack, Pagination } from '@app/api/types'
-import { DefaultSection, DefaultSectionProps } from '@app/sections'
 import { Button } from '@app/components/ui/button'
+import { DefaultSection, DefaultSectionProps } from '@app/sections'
 
 export type HistorySectionProps = Omit<DefaultSectionProps, 'title'> & {
   initialData: Pagination<HistoryTrack>
@@ -34,13 +34,14 @@ export function HistorySection({
   return (
     <DefaultSection title="History" {...props}>
       <div>
-        {data.pages.map(({ items }) => (
-          <div className="relative" key={items[0].id}>
+        {data.pages.map(({ data }) => (
+          <div className="relative" key={data[0].id}>
             <ItemsList
-              items={items.map(({ track, playedAt }) => ({
+              items={data.map(({ track, playedAt }) => ({
                 ...track,
                 playedAt,
               }))}
+              seperator
               withoutPosition
             />
 

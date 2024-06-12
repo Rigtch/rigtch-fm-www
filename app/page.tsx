@@ -1,47 +1,29 @@
 import Image from 'next/image'
+import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 
 import { ConnectButton } from './components/connect'
-import { Profile } from './api/types'
-import { getUser } from './api/fetchers'
-import { ACCESS_TOKEN } from './api/constants'
+import { getServerUser } from './auth/utils'
 import { USER_ID } from './constants'
 
 export default async function HomePage() {
-  const accessToken = cookies().get(ACCESS_TOKEN)?.value
+  const currentUser = await getServerUser()
   const userId = cookies().get(USER_ID)?.value
 
-  let profile: Profile | undefined
-
-  try {
-    if (userId && accessToken)
-      profile = await getUser(accessToken, { userId }).then(
-        ({ profile }) => profile
-      )
-  } catch {
-    profile = undefined
-  }
+  if (currentUser) redirect(`/profile/${userId}`)
 
   return (
     <div className="flex flex-col w-full justify-center items-center pt-12 gap-24 h-[80vh]">
       <header className="flex flex-col justify-center items-center gap-8 px-4 md:p-0">
         <h1 className="font-semibold text-5xl text-center">
-          {profile
-            ? `Welcome back ${profile.displayName}!`
-            : 'Welcome to rigtch.fm'}
+          Welcome to rigtch.fm
         </h1>
 
         <h2 className="font-light text-2xl text-center">
-          {profile
-            ? "We've been waiting for you!"
-            : 'Share your music interests with your friends'}
+          Share your music interests with your friends
         </h2>
 
-        <ConnectButton
-          className="px-12 py-6 text-lg"
-          variant="default"
-          profile={profile}
-        />
+        <ConnectButton className="px-12 py-6 text-lg" variant="default" />
       </header>
 
       <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full">

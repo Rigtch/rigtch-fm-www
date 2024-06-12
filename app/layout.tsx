@@ -4,14 +4,12 @@ import './globals.css'
 
 import { RootProviders } from './providers'
 import { NavigationBar } from './components/navigation'
-import { getUser } from './api/fetchers'
-import { ACCESS_TOKEN, USER_ACCEPT_COOKIES } from './api/constants'
+import { USER_ACCEPT_COOKIES } from './api/constants'
 import { LayoutProps } from './types'
-import { Profile } from './api/types'
 import { Footer } from './components/footer'
-import { USER_ID } from './constants'
 import { CookiesDialog } from './components/cookies-dialog'
 import { Toaster } from './components/ui/toaster'
+import { auth } from './auth'
 
 export const metadata = {
   title: 'rigtch.fm',
@@ -20,20 +18,9 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }: LayoutProps) {
-  const accessToken = cookies().get(ACCESS_TOKEN)?.value
-  const userId = cookies().get(USER_ID)?.value
   const isAccepted = cookies().has(USER_ACCEPT_COOKIES)
 
-  let profile: Profile | undefined
-
-  try {
-    if (userId && accessToken)
-      profile = await getUser(accessToken, { userId }).then(
-        ({ profile }) => profile
-      )
-  } catch {
-    profile = undefined
-  }
+  const session = await auth()
 
   return (
     <html lang="en">
@@ -57,10 +44,10 @@ export default async function RootLayout({ children }: LayoutProps) {
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" />
 
       <body className="bg-background text-white">
-        <RootProviders>
+        <RootProviders session={session!}>
           <div className="flex flex-col justify-between min-h-screen">
             <div>
-              <NavigationBar profile={profile} />
+              <NavigationBar user={session?.user} />
 
               <CookiesDialog isAccepted={isAccepted} />
 

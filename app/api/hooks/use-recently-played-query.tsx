@@ -4,11 +4,11 @@ import { useParams } from 'next/navigation'
 import { RECENTLY_PLAYED } from '../constants'
 import { getRecentlyPlayed } from '../fetchers'
 
-import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 import { USER_ID } from '@app/constants'
+import { useToken } from '@app/hooks/use-token'
 
 export const useRecentlyPlayedQuery = () => {
-  const { accessToken } = useAuthCookies()
+  const token = useToken()
   const params = useParams()
 
   const userId = params[USER_ID].toString()
@@ -16,7 +16,7 @@ export const useRecentlyPlayedQuery = () => {
   return useQuery({
     queryKey: [RECENTLY_PLAYED],
     queryFn: () =>
-      getRecentlyPlayed(accessToken, {
+      getRecentlyPlayed(token, {
         userId,
       }),
   })

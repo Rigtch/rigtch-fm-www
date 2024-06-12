@@ -4,25 +4,30 @@ import { FaStar } from 'react-icons/fa6'
 
 import { ItemImage } from './image'
 
+import { ArtistEntity, TrackArtist } from '@app/api/types'
+import { ButtonLink } from '@app/components/button-link'
 import { Badge } from '@app/components/ui/badge'
-import { TrackArtist } from '@app/api/types'
 import { cn } from '@app/utils/cn'
-import { formatArtists } from '@app/profile/utils/formatters'
+import { isEntity } from '@app/utils/is-entity'
 
 export interface TopItemCardProps {
+  id: string
   name: string
   image: string
   position?: number
   genres?: string[]
-  artists?: TrackArtist[]
+  artists?: TrackArtist[] | ArtistEntity[]
+  externalId?: string
 }
 
 export function TopItemCard({
+  id,
   name,
   image,
   position,
   genres,
   artists,
+  externalId,
 }: TopItemCardProps) {
   const stars = [1, 2, 3, 2, 1]
 
@@ -45,11 +50,37 @@ export function TopItemCard({
         </div>
 
         <div className="flex flex-col items-center">
-          <h3 className="text-2xl font-bold text-center">{name}</h3>
+          {externalId ? (
+            <ButtonLink
+              href={`/${artists ? 'track' : 'artist'}/${id}`}
+              className="p-0 leading-5"
+            >
+              <h3 className="text-2xl font-bold text-center truncate w-[80vw] md:w-auto">
+                {name}
+              </h3>
+            </ButtonLink>
+          ) : (
+            <span className="w-[80vw] md:w-auto truncate">{name}</span>
+          )}
 
           {artists && (
             <h4 className="text-xl text-primary-foreground/80">
-              {formatArtists(artists)}
+              {artists.map(({ name, href, id, ...artist }, index) => (
+                <span key={name}>
+                  <ButtonLink
+                    className="text-primary-foreground/80 h-auto text-md"
+                    href={isEntity(artist) ? `/artist/${id}` : href}
+                    {...(!isEntity(artist) && {
+                      replace: true,
+                      target: '_blank',
+                    })}
+                  >
+                    {name}
+                  </ButtonLink>
+
+                  {index !== artists.length - 1 && <span>, </span>}
+                </span>
+              ))}
             </h4>
           )}
         </div>

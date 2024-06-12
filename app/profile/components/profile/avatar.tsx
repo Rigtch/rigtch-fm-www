@@ -6,7 +6,7 @@ import { cn } from '@app/utils/cn'
 
 export interface ProfileAvatarProps {
   className?: string
-  src?: string
+  src?: string | null
   displayName?: string
   size?: 'sm' | 'lg'
 }
@@ -27,7 +27,11 @@ export function ProfileAvatar({
           className
         )}
       >
-        <AvatarImage className="rounded-full" src={src} alt={displayName} />
+        <AvatarImage
+          className="rounded-full"
+          src={src ?? undefined}
+          alt={displayName}
+        />
 
         <AvatarFallback
           className={cn(

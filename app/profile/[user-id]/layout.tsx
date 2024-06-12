@@ -33,8 +33,10 @@ export default function ProfileLayout({
   const isProfileHomePage = pathname === `/profile/${userId}`
   return (
     <div className="flex">
-      <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden lg:block top-[60px] sticky">
-        <NavigationSidebar />
+      <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden lg:block top-[65px] sticky">
+        <div className="sticky top-[calc(65px+16px)]">
+          <NavigationSidebar />
+        </div>
       </aside>
 
       <main className="my-8 md:my-16 w-full min-h-[200vh] flex flex-col items-stretch justify-start px-4 md:px-12 gap-8">

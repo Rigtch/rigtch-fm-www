@@ -2,10 +2,10 @@
 
 import { ItemImage } from './image'
 
-import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
 import { ArtistEntity, TrackArtist } from '@app/api/types'
-import { cn } from '@app/utils/cn'
 import { ButtonLink } from '@app/components/button-link'
+import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
+import { cn } from '@app/utils/cn'
 import { isEntity } from '@app/utils/is-entity'
 
 export interface ItemProps {
@@ -17,6 +17,7 @@ export interface ItemProps {
   playedAt?: string
   position?: number
   externalId?: string
+  positionClassName?: string
 }
 
 export function Item({
@@ -28,6 +29,7 @@ export function Item({
   artists,
   playedAt,
   externalId,
+  positionClassName,
 }: ItemProps) {
   return (
     <div
@@ -38,24 +40,29 @@ export function Item({
     >
       <header className="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]">
         {position && (
-          <span className="text-center text-3xl w-[2rem]">{position}</span>
+          <span
+            className={cn(
+              'text-center w-[2rem]',
+              positionClassName ?? 'text-3xl'
+            )}
+          >
+            {position}
+          </span>
         )}
 
         <ItemImage src={image} alt={name} width={48} height={48} />
 
-        <div className="flex flex-col w-full overflow-hidden">
-          <h3 className="text-xl md:text-2xl leading-5 overflow-hidden text-ellipsis whitespace-nowrap">
-            {externalId ? (
-              <ButtonLink
-                href={`/${artists ? 'track' : 'artist'}/${id}`}
-                className="p-0 font-normal text-xl md:text-2xl leading-5 overflow-hidden text-ellipsis whitespace-nowrap"
-              >
-                {name}
-              </ButtonLink>
-            ) : (
-              <>{name}</>
-            )}
-          </h3>
+        <div className="flex flex-col items-start w-full overflow-hidden">
+          {externalId ? (
+            <ButtonLink
+              href={`/${artists ? 'track' : 'artist'}/${id}`}
+              className="p-0 leading-5 inline-grid"
+            >
+              <h3 className="text-xl md:text-2xl truncate">{name}</h3>
+            </ButtonLink>
+          ) : (
+            <span className="truncate">{name}</span>
+          )}
 
           <div className="flex justify-between w-full items-center">
             <div>
