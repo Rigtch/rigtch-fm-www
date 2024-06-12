@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 
-import './globals.css'
+import './styles/globals.css'
 
 import { RootProviders } from './providers'
 import { NavigationBar } from './components/navigation'
