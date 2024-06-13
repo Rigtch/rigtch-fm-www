@@ -151,13 +151,13 @@ module.exports = {
       },
     ],
     'import/no-cycle': 'warn',
+    'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
     'import/order': [
       'warn',
       {
         'newlines-between': 'always',
       },
     ],
-    'import/consistent-type-specifier-style': ['warn', 'prefer-inline'],
     'react/prop-types': 'off',
   },
 }
