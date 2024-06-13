@@ -151,7 +151,7 @@ module.exports = {
       },
     ],
     'import/no-cycle': 'warn',
-    'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+    'import/consistent-type-specifier-style': ['off'],
     'import/order': [
       'warn',
       {
