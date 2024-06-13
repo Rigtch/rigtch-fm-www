@@ -6,7 +6,7 @@ import { TopItemsSection } from '@app/profile/sections'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { validateView } from '@app/profile/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
-import { SeeMoreButton } from '@app/components/common'
+import { SeeMoreButton } from '@app/components/common/buttons'
 import { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 
