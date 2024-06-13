@@ -1,6 +1,6 @@
 'use client'
 
-import { Item } from './item'
+import { ItemsListElement } from './list/element'
 import { TopItemCard } from './top-card'
 
 import { ArtistEntity, TrackEntity } from '@app/api/types'
@@ -60,7 +60,7 @@ export function ItemsList({
       <div className="flex flex-col gap-2">
         {sortedItems.slice(isTop ? 3 : 0).map((item, index, items) => (
           <div key={index}>
-            <Item
+            <ItemsListElement
               {...item}
               image={getImage(item, 48)}
               positionClassName={positionClassName}
