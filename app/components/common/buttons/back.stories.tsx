@@ -10,6 +10,4 @@ export default {
   component: BackButton,
 } satisfies Meta<BackButtonType>
 
-export const Default: BackButtonStory = {
-  args: {},
-}
+export const Default: BackButtonStory = {}
