@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { CgSpinnerAlt } from 'react-icons/cg'
 import { useInView } from 'react-intersection-observer'
 
-import { ItemsList } from '../components/items'
+import { ItemsList } from '../../components/items'
 
 import { useHistoryInfiniteQuery } from '@app/api/hooks'
 import { HistoryTrack, Pagination } from '@app/api/types'

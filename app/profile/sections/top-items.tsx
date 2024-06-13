@@ -3,7 +3,7 @@
 import { ItemsSectionProps } from './items'
 
 import { DefaultSection } from '@app/sections'
-import { ItemsList } from '@app/profile/components/items'
+import { ItemsList } from '@app/components/items'
 import { View } from '@app/types'
 
 export interface TopItemsSectionProps extends ItemsSectionProps {
