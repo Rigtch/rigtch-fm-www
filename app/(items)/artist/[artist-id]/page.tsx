@@ -5,7 +5,7 @@ import { getArtist } from '@app/api/fetchers/get-artist'
 import { getArtistTopTracks } from '@app/api/fetchers/get-artist-top-tracks'
 import { SpotifyLink } from '@app/components/common'
 import { ARTIST_ID } from '@app/constants'
-import { ItemsList } from '@app/profile/components/items'
+import { ItemsList } from '@app/components/items'
 import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
 

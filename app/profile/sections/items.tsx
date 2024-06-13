@@ -1,6 +1,6 @@
 import { DefaultSection, DefaultSectionProps } from '@app/sections'
 import { ArtistEntity, TrackEntity } from '@app/api/types'
-import { ItemsList } from '@app/profile/components/items'
+import { ItemsList } from '@app/components/items'
 
 export type ItemsSectionProps = DefaultSectionProps & {
   items: (ArtistEntity | TrackEntity)[]
