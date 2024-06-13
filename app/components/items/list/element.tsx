@@ -1,7 +1,7 @@
 'use client'
 
 import { ItemImage } from '../image'
-import { ItemArtists } from '../item-artists'
+import { ItemArtists } from '../artists'
 
 import {
   ItemsListElementPosition,

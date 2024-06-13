@@ -1,10 +1,10 @@
 import { ButtonLink } from '../button-link'
 
-import type { TrackArtist, ArtistEntity } from '@app/api/types'
+import type { TrackArtist, ArtistEntity, Artist } from '@app/api/types'
 import { isEntity } from '@app/utils/is-entity'
 
 export interface ItemArtistProps {
-  artists: TrackArtist[] | ArtistEntity[]
+  artists: TrackArtist[] | Artist[] | ArtistEntity[]
 }
 
 export function ItemArtists({ artists }: ItemArtistProps) {
