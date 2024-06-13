@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { MockInstance } from 'vitest'
 import { usePathname, useSearchParams } from 'next/navigation'
-import userEvent from '@testing-library/user-event'
+import userEvent, { type UserEvent } from '@testing-library/user-event'
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider'
 import mockRouter from 'next-router-mock'
 
@@ -17,12 +17,14 @@ describe('ToggleTimeRange', () => {
 
   let useSearchParamsSpy: MockInstance
   let usePathnameSpy: MockInstance
+  let user: UserEvent
 
   beforeEach(() => {
     const searchParams = new URLSearchParams()
 
     useSearchParamsSpy = vi.mocked(useSearchParams)
     usePathnameSpy = vi.mocked(usePathname)
+    user = userEvent.setup()
 
     usePathnameSpy.mockReturnValue(pathname)
     useSearchParamsSpy.mockReturnValue(searchParams)
@@ -38,8 +40,6 @@ describe('ToggleTimeRange', () => {
     render(<ToggleTimeRange initialValue={TimeRange.SHORT_TERM} />, {
       wrapper: MemoryRouterProvider,
     })
-
-    const user = userEvent.setup()
 
     await user.click(screen.getByText('6 months'))
 
