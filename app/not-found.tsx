@@ -1,4 +1,4 @@
-import { GoBackButton } from './components/common'
+import { BackButton } from './components/common/buttons'
 
 export default function NotFound() {
   return (
@@ -16,7 +16,7 @@ export default function NotFound() {
       </header>
 
       <main className="flex z-10">
-        <GoBackButton />
+        <BackButton />
       </main>
     </div>
   )
