@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from './ui/button'
+import { Button, ButtonProps } from '../ui/button'
 
 import { handleSignIn } from '@app/auth/actions'
 

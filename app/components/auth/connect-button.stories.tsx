@@ -23,7 +23,7 @@ export default {
       defaultValue: 'default',
     },
   },
-} as Meta<ConnectButtonType>
+} satisfies Meta<ConnectButtonType>
 
 export const Default: ConnectButtonStory = {}
 
