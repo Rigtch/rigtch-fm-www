@@ -20,6 +20,8 @@ export default defineConfig({
     ],
   },
   test: {
+    resolveSnapshotPath: (testPath, snapshotExtension) =>
+      `./tests/snapshots/${testPath.split('/').at(-1)}${snapshotExtension}`,
     globals: true,
     environment: 'jsdom',
     setupFiles: './tests/setup.ts',
