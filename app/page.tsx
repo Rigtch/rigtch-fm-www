@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 
-import { ConnectButton } from './components/connect'
+import { ConnectButton } from './components/connect-button'
 import { getServerUser } from './auth/utils'
 import { USER_ID } from './constants'
 
