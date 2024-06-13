@@ -6,7 +6,7 @@ type ConnectButtonType = typeof ConnectButton
 type ConnectButtonStory = StoryObj<ConnectButtonType>
 
 export default {
-  title: 'Components/ConnectButton',
+  title: 'Components/Auth/ConnectButton',
   component: ConnectButton,
   argTypes: {
     variant: {
