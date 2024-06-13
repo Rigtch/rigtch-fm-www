@@ -21,7 +21,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuContent,
 } from '../ui/navigation-menu'
-import { ConnectButton } from '../connect-button'
+import { ConnectButton } from '../auth'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
 
 import { NavigationSidebar } from './sidebar'
