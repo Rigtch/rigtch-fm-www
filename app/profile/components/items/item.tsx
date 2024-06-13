@@ -4,7 +4,7 @@ import { ItemImage } from './image'
 
 import { ArtistEntity, TrackArtist } from '@app/api/types'
 import { ButtonLink } from '@app/components/button-link'
-import { OpenInSpotifyButton, RelativeTime } from '@app/components/common'
+import { SpotifyLink, RelativeTime } from '@app/components/common'
 import { cn } from '@app/utils/cn'
 import { isEntity } from '@app/utils/is-entity'
 
@@ -92,7 +92,7 @@ export function Item({
       </header>
 
       <div className="self-end min-w-[22px]">
-        <OpenInSpotifyButton href={href ?? ''} />
+        <SpotifyLink href={href ?? ''} />
       </div>
     </div>
   )

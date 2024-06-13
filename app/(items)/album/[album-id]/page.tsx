@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { AlbumPageProps } from '@app/(items)/types'
 import { getAlbum } from '@app/api/fetchers/get-album'
 import { ButtonLink } from '@app/components/button-link'
-import { OpenInSpotifyButton } from '@app/components/common'
+import { SpotifyLink } from '@app/components/common'
 import { ALBUM_ID } from '@app/constants'
 import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
@@ -63,7 +63,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
             <span className="text-2xl md:text-5xl">{name}</span>
 
             <div className="flex flex-row items-center gap-2 mr-4">
-              <OpenInSpotifyButton href={href} />
+              <SpotifyLink href={href} />
 
               <span className="text-xl">
                 by&nbsp;
@@ -123,7 +123,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
                     </div>
                   </div>
 
-                  <OpenInSpotifyButton href={track.href} />
+                  <SpotifyLink href={track.href} />
                 </div>
               ))}
             </div>

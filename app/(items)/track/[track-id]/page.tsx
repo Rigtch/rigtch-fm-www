@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { TrackPageProps } from '@app/(items)/types'
 import { getTrack } from '@app/api/fetchers/get-track'
 import { ButtonLink } from '@app/components/button-link'
-import { OpenInSpotifyButton } from '@app/components/common'
+import { SpotifyLink } from '@app/components/common'
 import { TRACK_ID } from '@app/constants'
 import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
@@ -49,7 +49,7 @@ export default async function TrackPage({ params }: TrackPageProps) {
         </div>
 
         <div className="flex flex-row items-center gap-2 text-xl">
-          <OpenInSpotifyButton href={href} />
+          <SpotifyLink href={href} />
           From album:
           <ButtonLink href={`/album/${album.id}`}>{album.name}</ButtonLink>
         </div>
