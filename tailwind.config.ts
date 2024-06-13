@@ -1,4 +1,5 @@
 import { type Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 import TailwindCSSAnimate from 'tailwindcss-animate'
 
 export default {
@@ -73,12 +74,40 @@ export default {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        'up-down': {
+          '0%': { transform: 'translateY(0)' },
+          '10%': { transform: 'translateY(15px)' },
+          '20%': { transform: 'translateY(0)' },
+          '30%': { transform: 'translateY(10px)' },
+          '40%': { transform: 'translateY(20px)' },
+          '50%': { transform: 'translateY(15px)' },
+          '60%': { transform: 'translateY(30px)' },
+          '70%': { transform: 'translateY(20px)' },
+          '80%': { transform: 'translateY(15px)' },
+          '90%': { transform: 'translateY(20px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'up-down': 'up-down 2.5s linear infinite',
       },
     },
   },
-  plugins: [TailwindCSSAnimate],
+  plugins: [
+    TailwindCSSAnimate,
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          'animation-delay': value => ({
+            'animation-delay': value,
+          }),
+        },
+        {
+          values: theme('transitionDelay'),
+        }
+      )
+    }),
+  ],
 } satisfies Config
