@@ -5,8 +5,9 @@ import { SelectView } from './select-view'
 import { View } from '@app/types'
 
 type SelectViewType = typeof SelectView
+type SelectViewStory = StoryObj<SelectViewType>
 
-const meta: Meta<SelectViewType> = {
+export default {
   title: 'Components/Common/SelectView',
   component: SelectView,
   argTypes: {
@@ -17,13 +18,9 @@ const meta: Meta<SelectViewType> = {
       },
     },
   },
-}
+} satisfies Meta<SelectViewType>
 
-export default meta
-
-type Story = StoryObj<SelectViewType>
-
-export const Default: Story = {
+export const Default: SelectViewStory = {
   args: {
     initialValue: View.CARD,
   },

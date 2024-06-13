@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { RelativeTime } from './relative-time'
 
 type RelativeTimeType = typeof RelativeTime
+type RelativeTimeStory = StoryObj<RelativeTimeType>
 
-const meta: Meta<RelativeTimeType> = {
+export default {
   title: 'Components/Common/RelativeTime',
   component: RelativeTime,
   argTypes: {
@@ -12,13 +13,9 @@ const meta: Meta<RelativeTimeType> = {
       control: 'text',
     },
   },
-}
+} satisfies Meta<RelativeTimeType>
 
-export default meta
-
-type Story = StoryObj<RelativeTimeType>
-
-export const Default: Story = {
+export const Default: RelativeTimeStory = {
   args: {
     value: '2022-01-01',
   },
