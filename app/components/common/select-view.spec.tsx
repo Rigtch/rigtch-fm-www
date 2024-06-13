@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import userEvent, { type UserEvent } from '@testing-library/user-event'
 import { MockInstance } from 'vitest'
 import { useRouter, useSearchParams } from 'next/navigation'
 
@@ -10,12 +10,14 @@ import { View } from '@app/types'
 vi.mock('next/navigation')
 
 describe('SelectView', () => {
+  let user: UserEvent
   let useRouterSpy: MockInstance
   let useSearchParamsSpy: MockInstance
 
   beforeEach(() => {
     useRouterSpy = vi.mocked(useRouter)
     useSearchParamsSpy = vi.mocked(useSearchParams)
+    user = userEvent.setup()
   })
 
   test('should match snapshot', () => {
@@ -33,12 +35,11 @@ describe('SelectView', () => {
 
     render(<SelectView initialValue={View.CARD} />)
 
-    const user = userEvent.setup()
-
     const selectButton = screen.getByRole('combobox')
 
-    await user.click(selectButton)
+    expect(selectButton).toHaveTextContent('Card')
 
+    await user.click(selectButton)
     await user.click(screen.getByRole('option', { name: 'List' }))
 
     expect(selectButton).toHaveTextContent('List')
