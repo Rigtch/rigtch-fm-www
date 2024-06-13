@@ -3,7 +3,7 @@ import { PlaybackCard } from '../playback'
 import { ProfileAvatarSkeleton } from './avatar.skeleton'
 
 import { Skeleton } from '@app/components/ui/skeleton'
-import { OpenInSpotifyButton } from '@app/components/common'
+import { SpotifyLink } from '@app/components/common'
 import { Card, CardHeader } from '@app/components/ui/card'
 
 export function ProfileCardSkeleton() {
@@ -19,7 +19,7 @@ export function ProfileCardSkeleton() {
             <Skeleton className="w-28 h-4" />
 
             <div className="flex flex-row gap-2 items-left">
-              <OpenInSpotifyButton href={''} />
+              <SpotifyLink href={''} />
             </div>
           </div>
         </div>

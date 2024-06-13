@@ -9,6 +9,14 @@ type SelectViewType = typeof SelectView
 const meta: Meta<SelectViewType> = {
   title: 'Components/Common/SelectView',
   component: SelectView,
+  argTypes: {
+    initialValue: {
+      options: Object.values(View),
+      control: {
+        type: 'select',
+      },
+    },
+  },
 }
 
 export default meta

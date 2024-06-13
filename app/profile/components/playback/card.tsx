@@ -7,11 +7,7 @@ import { useEffect, useState } from 'react'
 import { PlaybackCardSkeleton } from './card.skeleton'
 import { PlaybackStateToggleButton } from './state-toggle-button'
 
-import {
-  AudioBars,
-  OpenInSpotifyButton,
-  RelativeTime,
-} from '@app/components/common'
+import { AudioBars, SpotifyLink, RelativeTime } from '@app/components/common'
 import {
   Card,
   CardFooter,
@@ -105,7 +101,7 @@ export function PlaybackCard() {
                 <RelativeTime value={track.playedAt} />
               )}
 
-              <OpenInSpotifyButton href={track.href} />
+              <SpotifyLink href={track.href} />
             </div>
           </CardFooter>
         </div>

@@ -23,7 +23,7 @@ export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
   const searchParams = useSearchParams()
 
   return (
-    <ToggleGroup value={initialValue} type="single">
+    <ToggleGroup value={initialValue} type="single" className="text-white">
       {timeRangeOptions.map(({ label, value }) => (
         <ToggleGroupItem key={value} value={value} asChild>
           <Link

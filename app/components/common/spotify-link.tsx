@@ -8,16 +8,12 @@ import {
   TooltipTrigger,
 } from '../ui/tooltip'
 
-export interface OpenInSpotifyButtonProps extends Omit<LinkProps, 'href'> {
+export interface SpotifyLinkProps extends Omit<LinkProps, 'href'> {
   href?: string
   className?: string
 }
 
-export function OpenInSpotifyButton({
-  href,
-  className,
-  ...props
-}: OpenInSpotifyButtonProps) {
+export function SpotifyLink({ href, className, ...props }: SpotifyLinkProps) {
   return (
     <>
       <TooltipProvider>

@@ -4,7 +4,7 @@ import { ProfileAvatar } from './avatar'
 import { ShareButton } from './share-button'
 
 import { Profile } from '@app/api/types'
-import { OpenInSpotifyButton } from '@app/components/common'
+import { SpotifyLink } from '@app/components/common'
 import {
   Card,
   CardDescription,
@@ -36,7 +36,7 @@ export function ProfileCard({ displayName, images, followers, href }: Profile) {
             </div>
 
             <div className="flex flex-row gap-2 items-left">
-              <OpenInSpotifyButton href={href} className="h-[20px] w-[20px]" />
+              <SpotifyLink href={href} className="h-[20px] w-[20px]" />
 
               <ShareButton />
             </div>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ArtistPageProps } from '@app/(items)/types'
 import { getArtist } from '@app/api/fetchers/get-artist'
 import { getArtistTopTracks } from '@app/api/fetchers/get-artist-top-tracks'
-import { OpenInSpotifyButton } from '@app/components/common'
+import { SpotifyLink } from '@app/components/common'
 import { ARTIST_ID } from '@app/constants'
 import { ItemsList } from '@app/profile/components/items'
 import { getImage } from '@app/utils/get-image'
@@ -36,7 +36,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
             <span className="text-5xl">{name}</span>
 
             <div className="flex flex-row items-center gap-2 mr-4">
-              <OpenInSpotifyButton href={href} />
+              <SpotifyLink href={href} />
 
               <span className="text-xl">Followers: {followerCount}</span>
             </div>
