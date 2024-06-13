@@ -1,4 +1,4 @@
-import { act, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { MockInstance } from 'vitest'
 import { usePathname, useSearchParams } from 'next/navigation'
 import userEvent from '@testing-library/user-event'
@@ -8,6 +8,7 @@ import mockRouter from 'next-router-mock'
 import { ToggleTimeRange } from './toggle-time-range'
 
 import { TimeRange } from '@app/api/types'
+import { TIME_RANGE } from '@app/constants'
 
 vi.mock('next/navigation')
 
@@ -40,16 +41,12 @@ describe('ToggleTimeRange', () => {
 
     const user = userEvent.setup()
 
-    await act(async () => {
-      await user.click(screen.getByText('6 months'))
-    })
+    await user.click(screen.getByText('6 months'))
 
-    expect(mockRouter.asPath).toEqual(`${pathname}?time-range=medium_term`)
+    expect(mockRouter.query[TIME_RANGE]).toEqual(TimeRange.MEDIUM_TERM)
 
-    await act(async () => {
-      await user.click(screen.getByText('lifetime'))
-    })
+    await user.click(screen.getByText('lifetime'))
 
-    expect(mockRouter.asPath).toEqual(`${pathname}?time-range=long_term`)
+    expect(mockRouter.query[TIME_RANGE]).toEqual(TimeRange.LONG_TERM)
   })
 })
