@@ -5,7 +5,9 @@ export interface ProfileAvatarSkeletonProps {
   size?: 'sm' | 'lg'
 }
 
-export function ProfileAvatarSkeleton({ size }: ProfileAvatarSkeletonProps) {
+export function ProfileAvatarSkeleton({
+  size = 'sm',
+}: ProfileAvatarSkeletonProps) {
   return (
     <Skeleton
       className={cn(
