@@ -1,5 +1,3 @@
 export * from './spotify-link'
 export * from './toggle-time-range'
-export * from './genre-chip'
-export * from './relative-time'
 export * from './select-view'

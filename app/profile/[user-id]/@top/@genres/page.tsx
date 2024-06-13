@@ -10,7 +10,7 @@ import { SeeMoreButton } from '@app/components/common/buttons'
 import { DefaultSection } from '@app/sections'
 import { getTopGenres } from '@app/api/fetchers'
 import { getServerToken } from '@app/auth/utils'
-import { GenreChip } from '@app/components/common'
+import { GenreChip } from '@app/components/items'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,

@@ -2,6 +2,7 @@
 
 import { ItemImage } from '../image'
 import { ItemArtists } from '../artists'
+import { RelativeTime } from '../relative-time'
 
 import {
   ItemsListElementPosition,
@@ -10,7 +11,7 @@ import {
 
 import type { ArtistEntity, TrackArtist } from '@app/api/types'
 import { ButtonLink } from '@app/components/button-link'
-import { SpotifyLink, RelativeTime } from '@app/components/common'
+import { SpotifyLink } from '@app/components/common'
 import { cn } from '@app/utils/cn'
 
 export interface ItemsListElementProps {
