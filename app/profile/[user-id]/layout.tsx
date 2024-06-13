@@ -1,7 +1,5 @@
 'use client'
 
-import '@app/styles/audio-bars.css'
-
 import { ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
 
