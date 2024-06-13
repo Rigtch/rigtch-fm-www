@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MockInstance } from 'vitest'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { act } from 'react'
 
 import { SelectView } from './select-view'
 
@@ -38,13 +37,9 @@ describe('SelectView', () => {
 
     const selectButton = screen.getByRole('combobox')
 
-    await act(async () => {
-      await user.click(selectButton)
-    })
+    await user.click(selectButton)
 
-    await act(async () => {
-      await user.click(screen.getByRole('option', { name: 'List' }))
-    })
+    await user.click(screen.getByRole('option', { name: 'List' }))
 
     expect(selectButton).toHaveTextContent('List')
   })
