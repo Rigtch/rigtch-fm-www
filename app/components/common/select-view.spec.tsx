@@ -10,12 +10,12 @@ import { View } from '@app/types'
 vi.mock('next/navigation')
 
 describe('SelectView', () => {
-  let routerSpy: MockInstance
-  let searchParamsSpy: MockInstance
+  let useRouterSpy: MockInstance
+  let useSearchParamsSpy: MockInstance
 
   beforeEach(() => {
-    routerSpy = vi.mocked(useRouter)
-    searchParamsSpy = vi.mocked(useSearchParams)
+    useRouterSpy = vi.mocked(useRouter)
+    useSearchParamsSpy = vi.mocked(useSearchParams)
   })
 
   test('should match snapshot', () => {
@@ -28,8 +28,8 @@ describe('SelectView', () => {
     const pushSpy = vi.fn()
     const searchParams = new URLSearchParams()
 
-    routerSpy.mockReturnValue({ push: pushSpy })
-    searchParamsSpy.mockReturnValue(searchParams)
+    useRouterSpy.mockReturnValue({ push: pushSpy })
+    useSearchParamsSpy.mockReturnValue(searchParams)
 
     render(<SelectView initialValue={View.CARD} />)
 

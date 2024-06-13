@@ -15,17 +15,17 @@ vi.mock('next/navigation')
 describe('ToggleTimeRange', () => {
   const pathname = '/profile/id'
 
-  let searchParamsSpy: MockInstance
-  let pathnameSpy: MockInstance
+  let useSearchParamsSpy: MockInstance
+  let usePathnameSpy: MockInstance
 
   beforeEach(() => {
     const searchParams = new URLSearchParams()
 
-    searchParamsSpy = vi.mocked(useSearchParams)
-    pathnameSpy = vi.mocked(usePathname)
+    useSearchParamsSpy = vi.mocked(useSearchParams)
+    usePathnameSpy = vi.mocked(usePathname)
 
-    pathnameSpy.mockReturnValue(pathname)
-    searchParamsSpy.mockReturnValue(searchParams)
+    usePathnameSpy.mockReturnValue(pathname)
+    useSearchParamsSpy.mockReturnValue(searchParams)
   })
 
   test('should match snapshot', () => {

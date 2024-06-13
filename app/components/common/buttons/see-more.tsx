@@ -4,8 +4,7 @@ import Link from 'next/link'
 import { ComponentProps } from 'react'
 import { useSearchParams } from 'next/navigation'
 
-import { Button } from '../ui/button'
-
+import { Button } from '@app/components/ui/button'
 import { formatSearchParams } from '@app/profile/utils/formatters'
 
 export function SeeMoreButton({ href, ...props }: ComponentProps<typeof Link>) {
