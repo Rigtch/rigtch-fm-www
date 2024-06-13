@@ -6,7 +6,7 @@ exports[`ToggleTimeRange > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex items-center justify-center gap-1"
+        class="flex items-center justify-center gap-1 text-white"
         dir="ltr"
         role="group"
         style="outline: none;"
@@ -53,7 +53,7 @@ exports[`ToggleTimeRange > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex items-center justify-center gap-1"
+      class="flex items-center justify-center gap-1 text-white"
       dir="ltr"
       role="group"
       style="outline: none;"
