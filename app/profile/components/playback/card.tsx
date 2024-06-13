@@ -8,7 +8,8 @@ import { PlaybackCardSkeleton } from './card.skeleton'
 import { PlaybackToggleStateButton } from './toggle-state-button'
 import { AudioBars } from './audio-bars'
 
-import { SpotifyLink, RelativeTime } from '@app/components/common'
+import { RelativeTime } from '@app/components/items'
+import { SpotifyLink } from '@app/components/common'
 import {
   Card,
   CardFooter,
