@@ -1,4 +1,4 @@
-import { PlaybackStateToggleButton } from './state-toggle-button'
+import { PlaybackToggleStateButton } from './toggle-state-button'
 import { AudioBars } from './audio-bars'
 
 import {
@@ -25,7 +25,7 @@ export function PlaybackCardSkeleton() {
             <div className="flex gap-2 items-center">
               <AudioBars isPlaying={false} />
 
-              <PlaybackStateToggleButton
+              <PlaybackToggleStateButton
                 isPlaying={false}
                 hasAccess
                 isDeviceAvailable={false}
