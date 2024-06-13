@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ProfileAvatar } from './avatar'
+import { ProfileAvatarSkeleton } from './avatar.skeleton'
 
 type ProfileAvatarType = typeof ProfileAvatar
 type ProfileAvatarStory = StoryObj<ProfileAvatarType>
@@ -40,4 +41,8 @@ export const Fallback: ProfileAvatarStory = {
     displayName: 'Mnigos',
     size: 'lg',
   },
+}
+
+export const Skeleton: ProfileAvatarStory = {
+  render: () => <ProfileAvatarSkeleton size="lg" />,
 }
