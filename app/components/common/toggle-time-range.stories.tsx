@@ -5,8 +5,9 @@ import { ToggleTimeRange } from './toggle-time-range'
 import { TimeRange } from '@app/api/types'
 
 type ToggleTimeRangeType = typeof ToggleTimeRange
+type ToggleTimeRangeStory = StoryObj<ToggleTimeRangeType>
 
-const meta: Meta<ToggleTimeRangeType> = {
+export default {
   title: 'Components/Common/ToggleTimeRange',
   component: ToggleTimeRange,
   argTypes: {
@@ -17,13 +18,9 @@ const meta: Meta<ToggleTimeRangeType> = {
       },
     },
   },
-}
+} satisfies Meta<ToggleTimeRangeType>
 
-export default meta
-
-type Story = StoryObj<ToggleTimeRangeType>
-
-export const Default: Story = {
+export const Default: ToggleTimeRangeStory = {
   args: {
     initialValue: TimeRange.SHORT_TERM,
   },
