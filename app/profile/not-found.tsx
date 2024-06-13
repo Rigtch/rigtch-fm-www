@@ -1,4 +1,4 @@
-import { GoBackButton } from '@app/components/common'
+import { BackButton } from '@app/components/common/buttons'
 
 export default function ProfileNotFound() {
   return (
@@ -18,7 +18,7 @@ export default function ProfileNotFound() {
       </header>
 
       <main className="flex justify-end">
-        <GoBackButton />
+        <BackButton />
       </main>
     </div>
   )
