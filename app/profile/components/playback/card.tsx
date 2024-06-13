@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 import { PlaybackCardSkeleton } from './card.skeleton'
-import { PlaybackStateToggleButton } from './state-toggle-button'
+import { PlaybackToggleStateButton } from './toggle-state-button'
 import { AudioBars } from './audio-bars'
 
 import { SpotifyLink, RelativeTime } from '@app/components/common'
@@ -89,7 +89,7 @@ export function PlaybackCard() {
             <div className="flex gap-2 items-center">
               <AudioBars isPlaying={isPlaying} />
 
-              <PlaybackStateToggleButton
+              <PlaybackToggleStateButton
                 isPlaying={isPlayingState}
                 isDeviceAvailable={!!device}
                 hasAccess={routeUserId === userId}

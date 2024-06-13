@@ -4,19 +4,19 @@ import { FaPlay, FaPause } from 'react-icons/fa'
 
 import { Button } from '@app/components/ui/button'
 
-export interface PlaybackStateToggleButtonProps {
+export interface PlaybackToggleStateButtonProps {
   isPlaying: boolean
   isDeviceAvailable: boolean
   hasAccess: boolean
   toggleState: () => Promise<void>
 }
 
-export function PlaybackStateToggleButton({
+export function PlaybackToggleStateButton({
   isPlaying,
   isDeviceAvailable,
   toggleState,
   hasAccess,
-}: PlaybackStateToggleButtonProps) {
+}: PlaybackToggleStateButtonProps) {
   return (
     <Button
       variant="ghost"
