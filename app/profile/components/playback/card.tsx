@@ -6,8 +6,9 @@ import { useEffect, useState } from 'react'
 
 import { PlaybackCardSkeleton } from './card.skeleton'
 import { PlaybackStateToggleButton } from './state-toggle-button'
+import { AudioBars } from './audio-bars'
 
-import { AudioBars, SpotifyLink, RelativeTime } from '@app/components/common'
+import { SpotifyLink, RelativeTime } from '@app/components/common'
 import {
   Card,
   CardFooter,

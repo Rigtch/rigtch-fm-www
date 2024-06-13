@@ -1,6 +1,6 @@
 import { PlaybackStateToggleButton } from './state-toggle-button'
+import { AudioBars } from './audio-bars'
 
-import { AudioBars } from '@app/components/common'
 import {
   Card,
   CardFooter,
