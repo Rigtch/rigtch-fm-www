@@ -17,16 +17,9 @@ export function TopItemsSection({
   view,
   ...props
 }: TopItemsSectionProps) {
-  const sortedItems = items.map((item, index) => ({
-    ...item,
-    position: index + 1,
-  }))
-
-  sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])
-
   return (
     <DefaultSection title={title} {...props}>
-      <ItemsList items={sortedItems} isTop={view === View.CARD} />
+      <ItemsList items={items} isTop={view === View.CARD} />
 
       {children}
     </DefaultSection>

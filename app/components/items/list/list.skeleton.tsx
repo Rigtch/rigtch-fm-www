@@ -16,7 +16,7 @@ export interface ItemsListSkeletonProps {
 }
 
 export function ItemsListSkeleton({
-  view,
+  view = View.LIST,
   withoutPosition,
   playedAt,
   artists,
