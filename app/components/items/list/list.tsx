@@ -1,7 +1,8 @@
 'use client'
 
-import { ItemsListElement } from './list/element'
-import { TopItemCard } from './top-card'
+import { TopItemCard } from '../top-card'
+
+import { ItemsListElement } from './element'
 
 import { ArtistEntity, TrackEntity } from '@app/api/types'
 import { Separator } from '@app/components/ui/separator'
