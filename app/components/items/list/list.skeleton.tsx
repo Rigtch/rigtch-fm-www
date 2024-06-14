@@ -1,7 +1,8 @@
 'use client'
 
-import { TopItemCardSkeleton } from './top-card.skeleton'
-import { ItemsListElementSkeleton } from './list/element.skeleton'
+import { TopItemCardSkeleton } from '../top-card.skeleton'
+
+import { ItemsListElementSkeleton } from './element.skeleton'
 
 import { Separator } from '@app/components/ui/separator'
 import { View } from '@app/types'
