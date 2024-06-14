@@ -3,25 +3,28 @@
 import { TopItemCard } from '../top-card'
 
 import { ItemsListElement } from './element'
+import { ItemsListElementPositionProps } from './element-position'
 
 import { ArtistEntity, TrackEntity } from '@app/api/types'
 import { Separator } from '@app/components/ui/separator'
 import { getImage } from '@app/utils/get-image'
 
 export interface ItemsListProps {
-  items: (ArtistEntity | TrackEntity)[]
+  items: ArtistEntity[] | TrackEntity[]
   isTop?: boolean
   withoutPosition?: boolean
+  positionSize?: ItemsListElementPositionProps['size']
   positionClassName?: string
-  seperator?: boolean
+  lastItemSeparator?: boolean
 }
 
 export function ItemsList({
   items,
   isTop,
   withoutPosition,
+  positionSize,
   positionClassName,
-  seperator = false,
+  lastItemSeparator = false,
 }: ItemsListProps) {
   const sortedItems = items.map((artist, index) => ({
     ...artist,
@@ -64,11 +67,12 @@ export function ItemsList({
             <ItemsListElement
               {...item}
               image={getImage(item, 48)}
+              positionSize={positionSize}
               positionClassName={positionClassName}
             />
 
             {items.length === index + 1 ? (
-              seperator ? (
+              lastItemSeparator ? (
                 <Separator />
               ) : null
             ) : (

@@ -41,7 +41,7 @@ export function HistorySection({
                 ...track,
                 playedAt,
               }))}
-              seperator
+              lastItemSeparator
               withoutPosition
             />
 

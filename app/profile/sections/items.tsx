@@ -3,7 +3,7 @@ import { ArtistEntity, TrackEntity } from '@app/api/types'
 import { ItemsList } from '@app/components/items'
 
 export type ItemsSectionProps = DefaultSectionProps & {
-  items: (ArtistEntity | TrackEntity)[]
+  items: ArtistEntity[] | TrackEntity[]
   withoutPosition?: boolean
 }
 
