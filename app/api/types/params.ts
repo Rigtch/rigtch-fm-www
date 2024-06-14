@@ -4,6 +4,10 @@ export interface UsersParams {
   userId: string
 }
 
+export interface ItemParams {
+  id: string
+}
+
 export interface PaginationParams {
   limit?: number
   page?: number
