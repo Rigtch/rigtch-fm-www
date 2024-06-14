@@ -68,7 +68,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
       <div className="flex flex-col gap-6">
         <div className="text-4xl">Albums</div>
 
-        <div className="flex flex-wrap justify-center gap-y-4 gap-x-2 md:gap-x-6 w-full">
+        <div className="flex flex-wrap justify-center lg:justify-between gap-y-4 gap-x-2 md:gap-x-6 w-full">
           {albums.map(
             ({ id, name, images, href, releaseDate, albumType }, index) => (
               <div key={index} className="p-4 bg-neutral-800 rounded-lg">
