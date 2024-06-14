@@ -5,6 +5,8 @@ import { RelativeTime } from './relative-time'
 type RelativeTimeType = typeof RelativeTime
 type RelativeTimeStory = StoryObj<RelativeTimeType>
 
+const relativeTimeValue = '2022-01-01'
+
 export default {
   title: 'Components/Common/RelativeTime',
   component: RelativeTime,
@@ -13,10 +15,9 @@ export default {
       control: 'text',
     },
   },
+  args: {
+    value: relativeTimeValue,
+  },
 } satisfies Meta<RelativeTimeType>
 
-export const Default: RelativeTimeStory = {
-  args: {
-    value: '2022-01-01',
-  },
-}
+export const Default: RelativeTimeStory = {}

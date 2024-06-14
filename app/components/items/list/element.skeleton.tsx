@@ -3,19 +3,19 @@ import { ItemImageSkeleton } from '../image.skeleton'
 import { cn } from '@app/utils/cn'
 import { Skeleton } from '@app/components/ui/skeleton'
 
-export interface ItemSkeletonProps {
+export interface ItemsListElementSkeletonProps {
   artists?: boolean
   playedAt?: boolean
   position?: number
   withoutPosition?: boolean
 }
 
-export function ItemSkeleton({
+export function ItemsListElementSkeleton({
   position,
   artists,
   playedAt,
   withoutPosition,
-}: ItemSkeletonProps) {
+}: ItemsListElementSkeletonProps) {
   return (
     <div
       className={cn(
@@ -31,12 +31,12 @@ export function ItemSkeleton({
         <ItemImageSkeleton className="min-w-[48px] h-[48px]" />
 
         <div className="flex flex-col w-full gap-2 overflow-hidden">
-          <Skeleton className="w-[10rem] h-[1.5rem]" />
+          <Skeleton className="w-[16rem] h-[1.5rem]" />
 
           <div className="flex justify-between w-full items-center">
-            <div>{artists && <Skeleton className="w-[5rem] h-[1rem]" />}</div>
+            <div>{artists && <Skeleton className="w-[6rem] h-[1rem]" />}</div>
 
-            {playedAt && <Skeleton className="w-[6rem] h-[1rem]" />}
+            {playedAt && <Skeleton className="w-[4rem] h-[1rem]" />}
           </div>
         </div>
       </header>
