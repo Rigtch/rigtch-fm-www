@@ -7,6 +7,7 @@ export interface Album {
   href: string
   releaseDate: string
   releaseDatePrecision: string
+  albumType: string
   totalTracks: number
   name: string
   images: Image[]
