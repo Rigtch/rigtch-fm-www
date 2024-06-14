@@ -1,7 +1,7 @@
 'use client'
 
 import { TopItemCardSkeleton } from './top-card.skeleton'
-import { ItemSkeleton } from './list/element.skeleton'
+import { ItemsListElementSkeleton } from './list/element.skeleton'
 
 import { Separator } from '@app/components/ui/separator'
 import { View } from '@app/types'
@@ -50,7 +50,7 @@ export function ItemsListSkeleton({
               .fill(0)
               .map((_, index) => (
                 <div key={index}>
-                  <ItemSkeleton
+                  <ItemsListElementSkeleton
                     position={index + 4}
                     artists={artists}
                     withoutPosition={withoutPosition}
@@ -70,7 +70,7 @@ export function ItemsListSkeleton({
             .fill(0)
             .map((_, index) => (
               <div key={index}>
-                <ItemSkeleton
+                <ItemsListElementSkeleton
                   position={index + 1}
                   artists={artists}
                   withoutPosition={withoutPosition}

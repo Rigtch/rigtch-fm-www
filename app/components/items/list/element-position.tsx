@@ -11,13 +11,13 @@ export interface ItemsListElementPositionProps
 export function ItemsListElementPosition({
   position,
   className,
-  size = 'sm',
+  size = 'md',
 }: ItemsListElementPositionProps) {
   return (
     <span
       className={cn(
         'text-center w-[2rem]',
-        size === 'sm' && 'text-sm',
+        size === 'sm' && 'text-sm md:text-md',
         size === 'md' && 'text-xl',
         size === 'lg' && 'text-3xl',
         className

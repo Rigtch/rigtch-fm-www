@@ -66,15 +66,13 @@ export function ItemsListElement({
               <h3 className="text-xl md:text-2xl truncate">{name}</h3>
             </ButtonLink>
           ) : (
-            <span className="truncate">{name}</span>
+            <h3 className="text-xl md:text-2xl truncate">{name}</h3>
           )}
 
           <div className="flex justify-between w-full items-center">
             {artists && <ItemArtists artists={artists} />}
 
-            {playedAt && (
-              <RelativeTime value={playedAt} className="text-sm md:text-md" />
-            )}
+            {playedAt && <RelativeTime value={playedAt} />}
           </div>
         </div>
       </header>
