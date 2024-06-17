@@ -9,35 +9,58 @@ import {
   type ItemsListElementPositionProps,
 } from './element-position'
 
-import type { ArtistEntity, TrackArtist } from '@app/api/types'
+import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { ButtonLink } from '@app/components/button-link'
 import { SpotifyLink } from '@app/components/common'
 import { cn } from '@app/utils/cn'
+import { getImage } from '@app/utils/get-image'
 
-export interface ItemsListElementProps {
-  id: string
-  name: string
-  image: string
-  href?: string
-  artists?: TrackArtist[] | ArtistEntity[]
-  playedAt?: string
-  position?: number
-  positionSize?: ItemsListElementPositionProps['size']
-  positionClassName?: string
-  externalId?: string
-}
+export type ItemsListElementPlayedAtOrPositionProps =
+  | {
+      playedAt: string
+      position?: never
+      positionSize?: never
+      positionClassName?: never
+    }
+  | {
+      position: number
+      positionSize?: ItemsListElementPositionProps['size']
+      positionClassName?: string
+      playedAt?: never
+    }
+
+export type ItemsListElementAlbumOrImagesProps =
+  | {
+      album: Pick<AlbumEntity, 'images'>
+      artists: Pick<ArtistEntity, 'id' | 'name'>[]
+      images?: never
+    }
+  | {
+      images: Pick<AlbumEntity, 'images'>
+      artists: Pick<ArtistEntity, 'id' | 'name'>[]
+      album?: never
+    }
+  | {
+      images: Pick<ArtistEntity, 'images'>
+      album?: never
+      artists?: never
+    }
+
+export type ItemsListElementProps = ItemsListElementPlayedAtOrPositionProps &
+  ItemsListElementAlbumOrImagesProps &
+  Pick<AlbumEntity, 'name' | 'href' | 'id'>
 
 export function ItemsListElement({
   id,
   name,
-  image,
+  images,
   href,
   position,
   positionSize,
   positionClassName,
   artists,
   playedAt,
-  externalId,
+  album,
 }: ItemsListElementProps) {
   return (
     <div
@@ -55,19 +78,20 @@ export function ItemsListElement({
           />
         )}
 
-        <ItemImage src={image} alt={name} width={48} height={48} />
+        <ItemImage
+          src={getImage(images ?? album, 48)}
+          alt={name}
+          width={48}
+          height={48}
+        />
 
         <div className="flex flex-col items-start w-full overflow-hidden">
-          {externalId ? (
-            <ButtonLink
-              href={`/${artists ? 'track' : 'artist'}/${id}`}
-              className="p-0 leading-5 inline-grid"
-            >
-              <h3 className="text-xl md:text-2xl truncate">{name}</h3>
-            </ButtonLink>
-          ) : (
+          <ButtonLink
+            href={`/${artists ? 'track' : 'artist'}/${id}`}
+            className="p-0 leading-5 inline-grid"
+          >
             <h3 className="text-xl md:text-2xl truncate">{name}</h3>
-          )}
+          </ButtonLink>
 
           <div className="flex justify-between w-full items-center">
             {artists && <ItemArtists artists={artists} />}
