@@ -5,76 +5,6 @@ exports[`ItemCard > should match snapshot as album 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <a
-        href="/album/undefined"
-      >
-        <div
-          class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
-        >
-          <img
-            alt="Album 1"
-            class="rounded-md"
-            data-nimg="1"
-            decoding="async"
-            height="200"
-            loading="lazy"
-            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
-            style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
-            width="200"
-          />
-          <div>
-            <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-              href="/album/undefined"
-            >
-              <span
-                class="truncate max-w-[200px]"
-              >
-                Album 1
-              </span>
-            </a>
-            <div
-              class="flex flex-row justify-between"
-            >
-              <div>
-                NaN
-                 • 
-                <span
-                  class="capitalize"
-                />
-              </div>
-              <button
-                data-state="closed"
-              >
-                <a
-                  href="https://spotify.com"
-                  target="_blank"
-                >
-                  <img
-                    alt=""
-                    class="min-w-[20px] h-[20px]"
-                    data-nimg="1"
-                    decoding="async"
-                    height="20"
-                    loading="lazy"
-                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                    style="color: transparent;"
-                    width="20"
-                  />
-                </a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </body>,
-  "container": <div>
-    <a
-      href="/album/undefined"
-    >
       <div
         class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
       >
@@ -104,13 +34,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
           <div
             class="flex flex-row justify-between"
           >
-            <div>
-              NaN
-               • 
-              <span
-                class="capitalize"
-              />
-            </div>
+            <div />
             <button
               data-state="closed"
             >
@@ -135,7 +59,63 @@ exports[`ItemCard > should match snapshot as album 1`] = `
           </div>
         </div>
       </div>
-    </a>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
+    >
+      <img
+        alt="Album 1"
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="200"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+        style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+        width="200"
+      />
+      <div>
+        <a
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+          href="/album/undefined"
+        >
+          <span
+            class="truncate max-w-[200px]"
+          >
+            Album 1
+          </span>
+        </a>
+        <div
+          class="flex flex-row justify-between"
+        >
+          <div />
+          <button
+            data-state="closed"
+          >
+            <a
+              href="https://spotify.com"
+              target="_blank"
+            >
+              <img
+                alt=""
+                class="min-w-[20px] h-[20px]"
+                data-nimg="1"
+                decoding="async"
+                height="20"
+                loading="lazy"
+                src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                style="color: transparent;"
+                width="20"
+              />
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -196,70 +176,6 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <a
-        href="/album/123"
-      >
-        <div
-          class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
-        >
-          <img
-            alt="Darkthrone"
-            class="rounded-md"
-            data-nimg="1"
-            decoding="async"
-            height="200"
-            loading="lazy"
-            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
-            style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
-            width="200"
-          />
-          <div>
-            <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-              href="/album/123"
-            >
-              <span
-                class="truncate max-w-[200px]"
-              >
-                Darkthrone
-              </span>
-            </a>
-            <div
-              class="flex flex-row justify-between"
-            >
-              <div />
-              <button
-                data-state="closed"
-              >
-                <a
-                  href="https://spotify.com"
-                  target="_blank"
-                >
-                  <img
-                    alt=""
-                    class="min-w-[20px] h-[20px]"
-                    data-nimg="1"
-                    decoding="async"
-                    height="20"
-                    loading="lazy"
-                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                    style="color: transparent;"
-                    width="20"
-                  />
-                </a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </body>,
-  "container": <div>
-    <a
-      href="/album/123"
-    >
       <div
         class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
       >
@@ -314,7 +230,63 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
           </div>
         </div>
       </div>
-    </a>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
+    >
+      <img
+        alt="Darkthrone"
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="200"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+        style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+        width="200"
+      />
+      <div>
+        <a
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+          href="/album/123"
+        >
+          <span
+            class="truncate max-w-[200px]"
+          >
+            Darkthrone
+          </span>
+        </a>
+        <div
+          class="flex flex-row justify-between"
+        >
+          <div />
+          <button
+            data-state="closed"
+          >
+            <a
+              href="https://spotify.com"
+              target="_blank"
+            >
+              <img
+                alt=""
+                class="min-w-[20px] h-[20px]"
+                data-nimg="1"
+                decoding="async"
+                height="20"
+                loading="lazy"
+                src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                style="color: transparent;"
+                width="20"
+              />
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -375,79 +347,6 @@ exports[`ItemCard > should match snapshot as track 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <a
-        href="/album/123"
-      >
-        <div
-          class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
-        >
-          <img
-            alt="Track 1"
-            class="rounded-md"
-            data-nimg="1"
-            decoding="async"
-            height="200"
-            loading="lazy"
-            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
-            style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
-            width="200"
-          />
-          <div>
-            <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-              href="/album/123"
-            >
-              <span
-                class="truncate max-w-[200px]"
-              >
-                Track 1
-              </span>
-            </a>
-            <div
-              class="flex flex-row justify-between"
-            >
-              <div>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="/artist/123"
-                  >
-                    Darkthrone
-                  </a>
-                </span>
-              </div>
-              <button
-                data-state="closed"
-              >
-                <a
-                  href="https://spotify.com"
-                  target="_blank"
-                >
-                  <img
-                    alt=""
-                    class="min-w-[20px] h-[20px]"
-                    data-nimg="1"
-                    decoding="async"
-                    height="20"
-                    loading="lazy"
-                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                    style="color: transparent;"
-                    width="20"
-                  />
-                </a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </body>,
-  "container": <div>
-    <a
-      href="/album/123"
-    >
       <div
         class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
       >
@@ -511,7 +410,72 @@ exports[`ItemCard > should match snapshot as track 1`] = `
           </div>
         </div>
       </div>
-    </a>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="border border-card text-card-foreground shadow p-4 bg-neutral-800 rounded-lg flex flex-col gap-3"
+    >
+      <img
+        alt="Track 1"
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="200"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+        style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+        width="200"
+      />
+      <div>
+        <a
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+          href="/album/123"
+        >
+          <span
+            class="truncate max-w-[200px]"
+          >
+            Track 1
+          </span>
+        </a>
+        <div
+          class="flex flex-row justify-between"
+        >
+          <div>
+            <span>
+              <a
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                href="/artist/123"
+              >
+                Darkthrone
+              </a>
+            </span>
+          </div>
+          <button
+            data-state="closed"
+          >
+            <a
+              href="https://spotify.com"
+              target="_blank"
+            >
+              <img
+                alt=""
+                class="min-w-[20px] h-[20px]"
+                data-nimg="1"
+                decoding="async"
+                height="20"
+                loading="lazy"
+                src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                style="color: transparent;"
+                width="20"
+              />
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
