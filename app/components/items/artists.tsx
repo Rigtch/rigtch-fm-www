@@ -1,24 +1,19 @@
 import { ButtonLink } from '../button-link'
 
-import type { TrackArtist, ArtistEntity, Artist } from '@app/api/types'
-import { isEntity } from '@app/utils/is-entity'
+import type { ArtistEntity } from '@app/api/types'
 
 export interface ItemArtistProps {
-  artists: TrackArtist[] | Artist[] | ArtistEntity[]
+  artists: Pick<ArtistEntity, 'id' | 'name'>[]
 }
 
 export function ItemArtists({ artists }: ItemArtistProps) {
   return (
     <div>
-      {artists.map(({ name, href, id, ...artist }, index) => (
+      {artists.map(({ name, id }, index) => (
         <span key={name}>
           <ButtonLink
             className="text-primary-foreground/80 h-auto text-md"
-            href={isEntity(artist) ? `/artist/${id}` : href}
-            {...(!isEntity(artist) && {
-              replace: true,
-              target: '_blank',
-            })}
+            href={`/artist/${id}`}
           >
             {name}
           </ButtonLink>
