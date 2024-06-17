@@ -6,6 +6,13 @@ import type { ItemPositionProps } from '../misc'
 import { ItemsListElement } from './items-list-element'
 
 import type { ArtistEntity, TrackEntity } from '@app/api/types'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@app/components/ui/carousel'
 import { Separator } from '@app/components/ui/separator'
 
 export interface ItemsListProps {
@@ -30,24 +37,40 @@ export function ItemsList({
     }),
   }))
 
+  const carouselItems = sortedItems.slice(0, 3)
+
   isTop && sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])
 
   return (
     <div className="flex flex-col gap-8">
       {isTop && (
-        <div className="flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full">
-          <div className="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full">
-            {sortedItems.slice(0, 2).map(item => (
-              <ItemTopCard {...item} key={item.id} />
-            ))}
+        <>
+          <div className="hidden md:flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full">
+            <div className="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full">
+              {sortedItems.slice(0, 2).map(item => (
+                <ItemTopCard {...item} key={item.id} />
+              ))}
+            </div>
+
+            <div className="md:w-1/3 h-full">
+              {sortedItems.slice(2, 3).map(item => (
+                <ItemTopCard {...item} key={item.id} />
+              ))}
+            </div>
           </div>
 
-          <div className="md:w-1/3 h-full">
-            {sortedItems.slice(2, 3).map(item => (
-              <ItemTopCard {...item} key={item.id} />
-            ))}
-          </div>
-        </div>
+          <Carousel className="md:hidden self-center w-full max-w-xs">
+            <CarouselContent>
+              {carouselItems.slice(0, 3).map(item => (
+                <CarouselItem key={item.id}>
+                  <ItemTopCard {...item} carousel />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </>
       )}
 
       <div className="flex flex-col gap-2">
