@@ -6,9 +6,9 @@ import { ItemImage } from './item-image'
 import { ItemName } from './item-name'
 import { ItemArtists } from './item-artists'
 import { ItemPosition } from './item-position'
+import { GenreBadge } from './genre/genre-badge'
 
-import type { AlbumEntity, ArtistEntity, TrackEntity } from '@app/api/types'
-import { Badge } from '@app/components/ui/badge'
+import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { cn } from '@app/utils/cn'
 
 export type ItemTopCardConditionalProps =
@@ -16,16 +16,19 @@ export type ItemTopCardConditionalProps =
       artists?: never
       album?: never
     })
-  | (Pick<TrackEntity, 'artists' | 'album'> & {
+  | {
       images?: never
       genres?: never
-    })
-  | (Pick<AlbumEntity, 'images' | 'genres' | 'artists'> & {
+      artists: Pick<ArtistEntity, 'id' | 'name'>[]
+      album: Pick<AlbumEntity, 'images'>
+    }
+  | (Pick<AlbumEntity, 'images' | 'genres'> & {
       album?: never
+      artists: Pick<ArtistEntity, 'id' | 'name'>[]
     })
 
 export type ItemTopCardProps = ItemTopCardConditionalProps &
-  Pick<ArtistEntity, 'id' | 'name'> & {
+  Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
     position?: number
   }
 
@@ -74,9 +77,7 @@ export function ItemTopCard({
           {genres && (
             <div className="flex flex-row gap-2 flex-wrap justify-center h-full">
               {genres.slice(0, 3).map((genre, index) => (
-                <Badge key={index} className="text-primary-foreground/80">
-                  {genre}
-                </Badge>
+                <GenreBadge key={index} genre={genre} />
               ))}
             </div>
           )}
