@@ -5,10 +5,9 @@ import { ItemImage } from './image'
 import { ItemName } from './name'
 import { ItemArtists } from './artists'
 
-import { AlbumEntity, ArtistEntity } from '@app/api/types'
+import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { getImage } from '@app/utils/get-image'
 
-export type ItemCardBaseProps = Pick<AlbumEntity, 'name' | 'href' | 'id'>
 export type ItemCardConditionalProps =
   | (Pick<AlbumEntity, 'images' | 'albumType' | 'releaseDate'> & {
       artists?: Pick<ArtistEntity, 'id' | 'name'>[]
@@ -28,7 +27,8 @@ export type ItemCardConditionalProps =
       releaseDate?: never
     })
 
-export type ItemCardProps = ItemCardBaseProps & ItemCardConditionalProps
+export type ItemCardProps = ItemCardConditionalProps &
+  Pick<AlbumEntity, 'name' | 'href' | 'id'>
 
 export function ItemCard({
   id,
