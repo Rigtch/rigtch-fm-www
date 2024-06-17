@@ -60,17 +60,16 @@ export function PlaybackCard() {
       )}
     >
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
-        {isImageLoaded && (
+        {isImageLoaded ? (
           <Image
             src={imgSource}
             width={96}
             height={96}
             alt={album.name}
-            className={'rounded-md w-full sm:w-auto transition-none'}
+            className={'rounded-md w-full sm:w-auto'}
             style={{ height: '128px', width: '128px' }}
           />
-        )}
-        {!isImageLoaded && (
+        ) : (
           <div>
             {/* Dummy Image */}
             <Image
