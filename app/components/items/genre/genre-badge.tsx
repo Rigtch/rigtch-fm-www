@@ -1,3 +1,5 @@
+'use client'
+
 import { GenreProps } from './props'
 
 import { Badge } from '@app/components/ui/badge'

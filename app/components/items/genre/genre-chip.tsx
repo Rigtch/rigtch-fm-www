@@ -1,3 +1,5 @@
+'use client'
+
 import { GenreProps } from './props'
 
 export function GenreChip({ genre }: GenreProps) {
