@@ -1,2 +1,2 @@
-export * from './back'
-export * from './see-more'
+export * from './back-button'
+export * from './see-more-button'

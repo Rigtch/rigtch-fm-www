@@ -1,4 +1,4 @@
-import { ArtistPageProps } from '@app/(items)/types'
+import type { ArtistPageProps } from '@app/(items)/types'
 import {
   getArtist,
   getArtistAlbums,
@@ -6,9 +6,8 @@ import {
 } from '@app/api/fetchers'
 import { SpotifyLink, FollowersCount } from '@app/components/common'
 import { ItemImage, ItemsList } from '@app/components/items'
-import { ItemCard } from '@app/components/items/card'
+import { ItemCard } from '@app/components/items/item-card'
 import { ARTIST_ID } from '@app/constants'
-import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
 
 export default async function ArtistPage({ params }: ArtistPageProps) {
@@ -30,12 +29,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
     <div className="flex flex-col p-12 gap-8 md:gap-0">
       <div className="flex flex-row flex-wrap">
         <div className="w-full md:w-1/2 flex flex-row flex-wrap p-12 gap-8">
-          <ItemImage
-            src={getImage(images, 200)}
-            width="200"
-            height="200"
-            alt={name}
-          />
+          <ItemImage images={images} size={200} alt={name} />
 
           <div className="flex flex-col gap-6 justify-start">
             <div className="flex flex-col gap-2">

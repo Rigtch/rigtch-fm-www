@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 
-import { PlaybackToggleStateButton } from './toggle-state-button'
+import { ToggleStateButton } from './toggle-state-button'
 
-type PlaybackToggleStateButtonType = typeof PlaybackToggleStateButton
+type PlaybackToggleStateButtonType = typeof ToggleStateButton
 type PlaybackToggleStateButtonStory = StoryObj<PlaybackToggleStateButtonType>
 
 export default {
   title: 'Components/Profile/Playback/ToggleStateButton',
-  component: PlaybackToggleStateButton,
+  component: ToggleStateButton,
   argTypes: {
     isDeviceAvailable: {
       control: {
@@ -32,7 +32,7 @@ export const Default: PlaybackToggleStateButtonStory = {
     const [isPlaying, setIsPlaying] = useState(args.isPlaying)
 
     return (
-      <PlaybackToggleStateButton
+      <ToggleStateButton
         {...args}
         isPlaying={isPlaying}
         toggleState={() => {

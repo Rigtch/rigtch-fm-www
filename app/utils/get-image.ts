@@ -10,8 +10,9 @@ export type ItemWithImages =
   | {
       album: Pick<AlbumEntity, 'images'>
     }
+  | Image[]
 
-export function getImage(item: ItemWithImages | Image[], minWidth = 0) {
+export function getImage(item: ItemWithImages, minWidth = 0) {
   if ('images' in item)
     return (
       item.images.find(getImagePredicate(minWidth))?.url ?? item.images[0].url
