@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 import { AlbumPageProps } from '@app/(items)/types'
 import { getAlbum } from '@app/api/fetchers'
-import { LinkButton } from '@app/components/common/buttons'
 import { SpotifyLink } from '@app/components/common'
+import { LinkButton } from '@app/components/common/buttons'
 import { ALBUM_ID } from '@app/constants'
 import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
@@ -20,6 +20,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
     releaseDate,
     releaseDatePrecision,
     tracks,
+    copyrights,
   } = await getAlbum({
     id,
   })
@@ -49,7 +50,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
 
   return (
     <div className="w-full flex flex-col p-12 gap-2">
-      <div className="w-full flex md:flex-row flex-col p-12 gap-8">
+      <div className="w-full flex md:flex-row flex-col p-4 sm:p-8 md:p-12 gap-8">
         <Image
           src={getImage(images, 200)}
           className="rounded-xl md:rounded-md w-full md:h-[200px] md:w-[200px]"
@@ -76,6 +77,8 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
             </div>
 
             <div>Release date: {dateOfRelease}</div>
+
+            <span className="text-sm">{copyrights[0]}</span>
           </div>
         </div>
       </div>
