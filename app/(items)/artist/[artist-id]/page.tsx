@@ -22,6 +22,12 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
 
   const followerCount = new Intl.NumberFormat('en-EN').format(followers)
 
+  const sortedAlbums = albums.sort(
+    (firstAlbum, secondAlbum) =>
+      new Date(secondAlbum.releaseDate).getFullYear() -
+      new Date(firstAlbum.releaseDate).getFullYear()
+  )
+
   return (
     <div className="flex flex-col p-12 gap-8 md:gap-0">
       <div className="flex flex-row flex-wrap">
@@ -67,37 +73,31 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
         <div className="text-4xl">Albums</div>
 
         <div className="flex flex-wrap justify-start gap-y-4 md:gap-x-6 w-full">
-          {albums
-            .sort(
-              (firstAlbum, secondAlbum) =>
-                new Date(secondAlbum.releaseDate).getFullYear() -
-                new Date(firstAlbum.releaseDate).getFullYear()
-            )
-            .map(
-              ({ id, name, images, href, releaseDate, albumType }, index) => (
-                <div key={index} className="p-4 bg-neutral-800 rounded-lg">
-                  <ItemImage
-                    src={getImage(images, 200)}
-                    alt={name}
-                    width="200"
-                    height="200"
-                  />
+          {sortedAlbums.map(
+            ({ id, name, images, href, releaseDate, albumType }, index) => (
+              <div key={index} className="p-4 bg-neutral-800 rounded-lg">
+                <ItemImage
+                  src={getImage(images, 200)}
+                  alt={name}
+                  width="200"
+                  height="200"
+                />
 
-                  <div className="flex flex-row justify-between">
-                    <ButtonLink href={`/album/${id}`}>
-                      <span className="truncate w-[170px]">{name}</span>
-                    </ButtonLink>
+                <div className="flex flex-row justify-between">
+                  <ButtonLink href={`/album/${id}`}>
+                    <span className="truncate w-[170px]">{name}</span>
+                  </ButtonLink>
 
-                    <SpotifyLink href={href} />
-                  </div>
-
-                  <div>
-                    {new Date(releaseDate).getFullYear()} &bull;&nbsp;
-                    {albumType.charAt(0).toUpperCase() + albumType.slice(1)}
-                  </div>
+                  <SpotifyLink href={href} />
                 </div>
-              )
-            )}
+
+                <div>
+                  {new Date(releaseDate).getFullYear()} &bull;&nbsp;
+                  <span className="capitalize">{albumType}</span>
+                </div>
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>
