@@ -1,6 +1,6 @@
 'use client'
 
-import { TopItemCardSkeleton } from '../item-top-card.skeleton'
+import { TopItemCardSkeleton } from '../cards/item-top-card.skeleton'
 
 import { ItemsListElementSkeleton } from './items-list-element.skeleton'
 

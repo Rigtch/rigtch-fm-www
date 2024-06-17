@@ -6,7 +6,7 @@ import {
 } from '@app/api/fetchers'
 import { SpotifyLink, FollowersCount } from '@app/components/common'
 import { ItemImage, ItemsList } from '@app/components/items'
-import { ItemCard } from '@app/components/items/item-card'
+import { ItemCard } from '@app/components/items/cards/item-card'
 import { ARTIST_ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 
