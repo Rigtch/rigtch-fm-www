@@ -1,9 +1,11 @@
 'use client'
 
-import { ItemImage } from '../item-image'
-import { ItemArtists } from '../item-artists'
-import { RelativeTime } from '../relative-time'
-import { ItemPosition, type ItemPositionProps } from '../item-position'
+import type { Simplify } from 'type-fest'
+
+import { ItemImage } from '../misc/item-image'
+import { ItemArtists } from '../misc/item-artists'
+import { RelativeTime } from '../misc/relative-time'
+import { ItemPosition, type ItemPositionProps } from '../misc/item-position'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { ButtonLink } from '@app/components/button-link'
@@ -39,9 +41,11 @@ export type ItemsListElementAlbumOrImagesProps =
       artists?: never
     })
 
-export type ItemsListElementProps = ItemsListElementPlayedAtOrPositionProps &
-  ItemsListElementAlbumOrImagesProps &
-  Pick<AlbumEntity, 'name' | 'href' | 'id'>
+export type ItemsListElementProps = Simplify<
+  ItemsListElementPlayedAtOrPositionProps &
+    ItemsListElementAlbumOrImagesProps &
+    Pick<AlbumEntity, 'name' | 'href' | 'id'>
+>
 
 export function ItemsListElement({
   id,
@@ -55,8 +59,6 @@ export function ItemsListElement({
   playedAt,
   album,
 }: ItemsListElementProps) {
-  console.log(position)
-
   return (
     <div
       className={cn(

@@ -1,9 +1,12 @@
-import { SpotifyLink } from '../common'
-import { Card } from '../ui/card'
+'use client'
 
-import { ItemImage } from './item-image'
-import { ItemName } from './item-name'
-import { ItemArtists } from './item-artists'
+import type { Simplify } from 'type-fest'
+
+import { SpotifyLink } from '../../common'
+import { Card } from '../../ui/card'
+import { ItemImage } from '../misc/item-image'
+import { ItemName } from '../misc/item-name'
+import { ItemArtists } from '../misc/item-artists'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 
@@ -26,8 +29,9 @@ export type ItemCardConditionalProps =
       releaseDate?: never
     })
 
-export type ItemCardProps = ItemCardConditionalProps &
-  Pick<AlbumEntity, 'name' | 'href' | 'id'>
+export type ItemCardProps = Simplify<
+  ItemCardConditionalProps & Pick<AlbumEntity, 'name' | 'href' | 'id'>
+>
 
 export function ItemCard({
   id,

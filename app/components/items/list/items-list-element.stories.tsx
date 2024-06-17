@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { artistExample } from '../examples'
+
 import { ItemsListElement } from './items-list-element'
 import { ItemsListElementSkeleton } from './items-list-element.skeleton'
 
@@ -7,7 +9,7 @@ type ItemsListElementType = typeof ItemsListElement
 type ItemsListElementStory = StoryObj<ItemsListElementType>
 
 export default {
-  title: 'Components/Items/List/Element',
+  title: 'Components/Items/List/ItemsListElement',
   component: ItemsListElement,
   argTypes: {
     name: {
@@ -30,34 +32,11 @@ export default {
       control: 'text',
     },
   },
-  args: {
-    name: 'Kathaarian Life Code - Studio',
-    artists: [
-      {
-        name: 'Darkthrone',
-        id: '4ynKJK9w2Dv2y0Qy0ggj2w',
-      },
-    ],
-    images: [
-      {
-        url: 'https://i.scdn.co/image/ab67616d00001e02754029bf280ce924ef682664',
-        width: 200,
-        height: 200,
-      },
-    ],
-    href: 'https://open.spotify.com/track/1Y9x9Zj2w4wJK2b2g1Z0Qh',
-  },
+  args: artistExample,
 } satisfies Meta<ItemsListElementType>
 
 export const Default: ItemsListElementStory = {
   args: {
-    position: 1,
-  },
-}
-
-export const AsEntity: ItemsListElementStory = {
-  args: {
-    id: '4ynKJK9w2Dv2y0Qy0ggj2w',
     position: 1,
   },
 }

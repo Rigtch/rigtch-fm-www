@@ -1,12 +1,13 @@
 'use client'
 
 import { FaStar } from 'react-icons/fa6'
+import type { Simplify } from 'type-fest'
 
-import { ItemImage } from './item-image'
-import { ItemName } from './item-name'
-import { ItemArtists } from './item-artists'
-import { ItemPosition } from './item-position'
-import { GenreBadge } from './genre/genre-badge'
+import { ItemImage } from '../misc/item-image'
+import { ItemName } from '../misc/item-name'
+import { ItemArtists } from '../misc/item-artists'
+import { ItemPosition } from '../misc/item-position'
+import { GenreBadge } from '../genre/genre-badge'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { cn } from '@app/utils/cn'
@@ -27,10 +28,12 @@ export type ItemTopCardConditionalProps =
       artists: Pick<ArtistEntity, 'id' | 'name'>[]
     })
 
-export type ItemTopCardProps = ItemTopCardConditionalProps &
-  Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
-    position?: number
-  }
+export type ItemTopCardProps = Simplify<
+  ItemTopCardConditionalProps &
+    Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
+      position?: number
+    }
+>
 
 export function ItemTopCard({
   id,

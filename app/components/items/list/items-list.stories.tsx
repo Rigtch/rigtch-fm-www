@@ -64,7 +64,7 @@ const items = [
 ]
 
 export default {
-  title: 'Components/Items/List',
+  title: 'Components/Items/List/ItemsList',
   component: ItemsList,
   argTypes: {
     isTop: {
