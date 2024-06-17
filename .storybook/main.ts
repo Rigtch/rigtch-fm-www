@@ -13,6 +13,7 @@ const config: StorybookConfig = {
     name: '@storybook/nextjs',
     options: {},
   },
+  typescript: { reactDocgen: 'react-docgen' },
   features: {
     experimentalRSC: true,
   },
