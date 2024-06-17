@@ -18,4 +18,5 @@ export interface AlbumEntity extends Album {
   tracks: TrackEntity[]
   genres: string[]
   artists: ArtistEntity[]
+  copyrights: string[]
 }
