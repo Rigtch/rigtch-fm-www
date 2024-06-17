@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { AlbumPageProps } from '@app/(items)/types'
-import { getAlbum } from '@app/api/fetchers/get-album'
-import { ButtonLink } from '@app/components/button-link'
+import { getAlbum } from '@app/api/fetchers'
+import { LinkButton } from '@app/components/common/buttons'
 import { SpotifyLink } from '@app/components/common'
 import { ALBUM_ID } from '@app/constants'
 import { getImage } from '@app/utils/get-image'
@@ -68,9 +68,9 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
               <span className="text-xl">
                 by&nbsp;
                 {artists.map((artist, index) => (
-                  <ButtonLink key={index} href={`/artist/${artist.id}`}>
+                  <LinkButton key={index} href={`/artist/${artist.id}`}>
                     {artist.name}
-                  </ButtonLink>
+                  </LinkButton>
                 ))}
               </span>
             </div>

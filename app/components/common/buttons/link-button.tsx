@@ -1,16 +1,16 @@
 import Link, { LinkProps } from 'next/link'
 import { ReactNode } from 'react'
 
-import { Button } from './ui/button'
+import { Button } from '../../ui/button'
 
 import { cn } from '@app/utils/cn'
 
-export interface ButtonLinkProps extends LinkProps {
+export interface LinkButtonProps extends LinkProps {
   children: ReactNode
   className?: string
 }
 
-export function ButtonLink({ children, className, ...props }: ButtonLinkProps) {
+export function LinkButton({ children, className, ...props }: LinkButtonProps) {
   return (
     <Button
       variant="link"

@@ -2,13 +2,16 @@
 
 import type { Simplify } from 'type-fest'
 
-import { ItemImage } from '../misc/item-image'
-import { ItemArtists } from '../misc/item-artists'
-import { RelativeTime } from '../misc/relative-time'
-import { ItemPosition, type ItemPositionProps } from '../misc/item-position'
+import {
+  ItemImage,
+  ItemArtists,
+  RelativeTime,
+  ItemPosition,
+  type ItemPositionProps,
+} from '../misc'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
-import { ButtonLink } from '@app/components/button-link'
+import { LinkButton } from '@app/components/common/buttons'
 import { SpotifyLink } from '@app/components/common'
 import { cn } from '@app/utils/cn'
 
@@ -78,12 +81,12 @@ export function ItemsListElement({
         <ItemImage images={images ?? album} alt={name} size={48} />
 
         <div className="flex flex-col items-start w-full overflow-hidden">
-          <ButtonLink
+          <LinkButton
             href={`/${artists ? 'track' : 'artist'}/${id}`}
             className="p-0 leading-5 inline-grid"
           >
             <h3 className="text-xl md:text-2xl truncate">{name}</h3>
-          </ButtonLink>
+          </LinkButton>
 
           <div className="flex justify-between w-full items-center">
             {artists && <ItemArtists artists={artists} />}

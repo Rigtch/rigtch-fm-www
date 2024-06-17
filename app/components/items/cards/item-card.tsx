@@ -2,12 +2,10 @@
 
 import type { Simplify } from 'type-fest'
 
-import { SpotifyLink } from '../../common'
-import { Card } from '../../ui/card'
-import { ItemImage } from '../misc/item-image'
-import { ItemName } from '../misc/item-name'
-import { ItemArtists } from '../misc/item-artists'
+import { ItemImage, ItemName, ItemArtists } from '../misc'
 
+import { Card } from '@app/components/ui/card'
+import { SpotifyLink } from '@app/components/common'
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 
 export type ItemCardConditionalProps =
