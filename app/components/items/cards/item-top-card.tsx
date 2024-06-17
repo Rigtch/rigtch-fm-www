@@ -3,11 +3,8 @@
 import { FaStar } from 'react-icons/fa6'
 import type { Simplify } from 'type-fest'
 
-import { ItemImage } from '../misc/item-image'
-import { ItemName } from '../misc/item-name'
-import { ItemArtists } from '../misc/item-artists'
-import { ItemPosition } from '../misc/item-position'
-import { GenreBadge } from '../genre/genre-badge'
+import { ItemImage, ItemName, ItemArtists, ItemPosition } from '../misc'
+import { GenreBadge } from '../genre'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { cn } from '@app/utils/cn'

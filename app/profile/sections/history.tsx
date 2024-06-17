@@ -42,7 +42,6 @@ export function HistorySection({
                 playedAt,
               }))}
               lastItemSeparator
-              withoutPosition
             />
 
             <div ref={ref} className="absolute bottom-1/4" />

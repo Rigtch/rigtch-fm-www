@@ -29,7 +29,6 @@ export default async function ProfileHistorySubPage({
         playedAt,
       }))}
       title="History"
-      withoutPosition
     >
       <SeeMoreButton href={`/profile/${userId}/history`} />
     </ItemsSection>

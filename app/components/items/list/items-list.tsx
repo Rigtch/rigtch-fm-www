@@ -1,7 +1,7 @@
 'use client'
 
-import { ItemTopCard } from '../cards/item-top-card'
-import type { ItemPositionProps } from '../misc/item-position'
+import { ItemTopCard } from '../cards'
+import type { ItemPositionProps } from '../misc'
 
 import { ItemsListElement } from './items-list-element'
 

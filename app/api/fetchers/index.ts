@@ -2,6 +2,8 @@ export * from './fetch-api'
 
 export * from './get-analysis'
 export * from './get-artist'
+export * from './get-album'
+export * from './get-track'
 export * from './get-artist-albums'
 export * from './get-artist-top-tracks'
 export * from './get-history'

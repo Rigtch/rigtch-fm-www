@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { TrackPageProps } from '@app/(items)/types'
 import { getTrack } from '@app/api/fetchers/get-track'
-import { ButtonLink } from '@app/components/button-link'
+import { LinkButton } from '@app/components/common/buttons'
 import { SpotifyLink } from '@app/components/common'
 import { TRACK_ID } from '@app/constants'
 import { getImage } from '@app/utils/get-image'
@@ -36,14 +36,14 @@ export default async function TrackPage({ params }: TrackPageProps) {
 
           <div className="flex flex-row gap-2">
             {artists.map(({ name, id }, index) => (
-              <ButtonLink
+              <LinkButton
                 key={id}
                 href={`/artist/${id}`}
                 className="text-primary-foreground/80"
               >
                 {name}
                 {index + 1 < artists.length && ','}
-              </ButtonLink>
+              </LinkButton>
             ))}
           </div>
         </div>
@@ -51,7 +51,7 @@ export default async function TrackPage({ params }: TrackPageProps) {
         <div className="flex flex-row items-center gap-2 text-xl">
           <SpotifyLink href={href} />
           From album:
-          <ButtonLink href={`/album/${album.id}`}>{album.name}</ButtonLink>
+          <LinkButton href={`/album/${album.id}`}>{album.name}</LinkButton>
         </div>
       </div>
     </div>

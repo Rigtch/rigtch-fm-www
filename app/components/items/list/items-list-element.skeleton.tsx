@@ -1,5 +1,4 @@
-import { ItemImageSkeleton } from '../misc/item-image.skeleton'
-import { ItemPosition, ItemPositionProps } from '../misc/item-position'
+import { ItemImageSkeleton, ItemPosition, ItemPositionProps } from '../misc'
 
 import { cn } from '@app/utils/cn'
 import { Skeleton } from '@app/components/ui/skeleton'

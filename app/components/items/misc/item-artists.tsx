@@ -1,11 +1,13 @@
 'use client'
 
-import { ButtonLink, ButtonLinkProps } from '../../button-link'
-
+import {
+  LinkButton,
+  type LinkButtonProps,
+} from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
 import type { ArtistEntity } from '@app/api/types'
 
-export interface ItemArtistProps extends Pick<ButtonLinkProps, 'className'> {
+export interface ItemArtistProps extends Pick<LinkButtonProps, 'className'> {
   artists: Pick<ArtistEntity, 'id' | 'name'>[]
 }
 
@@ -14,7 +16,7 @@ export function ItemArtists({ artists, className }: ItemArtistProps) {
     <div>
       {artists.map(({ name, id }, index) => (
         <span key={name}>
-          <ButtonLink
+          <LinkButton
             className={cn(
               'text-primary-foreground/80 h-auto',
               className ?? 'text-md'
@@ -22,7 +24,7 @@ export function ItemArtists({ artists, className }: ItemArtistProps) {
             href={`/artist/${id}`}
           >
             {name}
-          </ButtonLink>
+          </LinkButton>
 
           {index !== artists.length - 1 && <span>, </span>}
         </span>
