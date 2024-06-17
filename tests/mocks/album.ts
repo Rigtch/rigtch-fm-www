@@ -4,11 +4,11 @@ import { imagesMock } from './images'
 
 import { hrefMock } from '.'
 
-import { Album } from '@app/api/types'
+import type { AlbumEntity } from '@app/api/types'
 
 export const albumNameMock = 'Album 1'
 
-export const albumMock = mockDeep<Album>({
+export const albumMock = mockDeep<AlbumEntity>({
   name: albumNameMock,
   href: hrefMock,
   images: imagesMock,
