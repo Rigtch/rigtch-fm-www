@@ -5,7 +5,7 @@ import {
   getArtistTopTracks,
 } from '@app/api/fetchers'
 import { ButtonLink } from '@app/components/button-link'
-import { SpotifyLink } from '@app/components/common'
+import { SpotifyLink, FollowersCount } from '@app/components/common'
 import { ItemImage, ItemsList } from '@app/components/items'
 import { ARTIST_ID } from '@app/constants'
 import { getImage } from '@app/utils/get-image'
@@ -19,8 +19,6 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   })
   const { tracks } = await getArtistTopTracks({ id })
   const { albums } = await getArtistAlbums({ id })
-
-  const followerCount = new Intl.NumberFormat('en-EN').format(followers)
 
   const sortedAlbums = albums.sort(
     (firstAlbum, secondAlbum) =>
@@ -46,9 +44,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
               <div className="flex flex-row items-center gap-2 mr-4">
                 <SpotifyLink href={href} />
 
-                <span className="text-md md:text-xl">
-                  Followers: {followerCount}
-                </span>
+                <FollowersCount value={followers} />
               </div>
             </div>
 
