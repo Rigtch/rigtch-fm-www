@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
@@ -8,7 +7,7 @@ import { PlaybackCardSkeleton } from './playback-card.skeleton'
 import { ToggleStateButton } from './toggle-state-button'
 import { AudioBars } from './audio-bars'
 
-import { RelativeTime } from '@app/components/items'
+import { ItemImage, RelativeTime } from '@app/components/items'
 import { SpotifyLink } from '@app/components/common'
 import {
   Card,
@@ -22,7 +21,6 @@ import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 import { usePlaybackStateContext } from '@app/profile/context/playback-state'
 import { formatArtists } from '@app/profile/utils/formatters'
 import { cn } from '@app/utils/cn'
-import { getImage } from '@app/utils/get-image'
 
 export function PlaybackCard() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
@@ -58,22 +56,27 @@ export function PlaybackCard() {
       )}
     >
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
-        <Image
-          src={getImage(album, 96)}
-          width={96}
-          height={96}
-          alt={album.name}
-          className={cn(
-            'rounded-md w-full sm:w-auto',
-            isImageLoaded ? 'opacity-100' : 'opacity-0'
-          )}
-          style={{ height: '128px', width: '128px' }}
-          onLoad={() => {
-            setIsImageLoaded(true)
-          }}
-        />
-
-        {!isImageLoaded && <Skeleton className="h-[128px] w-[128px]" />}
+        {isImageLoaded ? (
+          <ItemImage
+            images={album}
+            size={128}
+            alt={album.name}
+            className={'rounded-md w-full sm:w-auto'}
+          />
+        ) : (
+          <div>
+            {/* Dummy Image */}
+            <ItemImage
+              size={0}
+              onLoad={() => {
+                setIsImageLoaded(true)
+              }}
+              images={album}
+              alt={''}
+            />
+            <Skeleton className="h-[128px] w-[128px]" />
+          </div>
+        )}
 
         <div className="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0">
           <CardTitle className="whitespace-nowrap font-normal flex flex-col gap-1">
