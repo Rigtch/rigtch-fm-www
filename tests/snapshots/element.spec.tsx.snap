@@ -402,8 +402,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                 <span>
                   <a
                     class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="https://spotify.com"
-                    target="_blank"
+                    href="/artist/123"
                   >
                     Darkthrone
                   </a>
@@ -414,8 +413,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                 <span>
                   <a
                     class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="https://spotify.com"
-                    target="_blank"
+                    href="/artist/2"
                   >
                     Mayhem
                   </a>
@@ -426,8 +424,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                 <span>
                   <a
                     class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="https://spotify.com"
-                    target="_blank"
+                    href="/artist/3"
                   >
                     Darkthrone
                   </a>
@@ -438,8 +435,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                 <span>
                   <a
                     class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="https://spotify.com"
-                    target="_blank"
+                    href="/artist/4"
                   >
                     Darkthrone
                   </a>
@@ -510,8 +506,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
               <span>
                 <a
                   class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                  href="https://spotify.com"
-                  target="_blank"
+                  href="/artist/123"
                 >
                   Darkthrone
                 </a>
@@ -522,8 +517,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
               <span>
                 <a
                   class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                  href="https://spotify.com"
-                  target="_blank"
+                  href="/artist/2"
                 >
                   Mayhem
                 </a>
@@ -534,8 +528,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
               <span>
                 <a
                   class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                  href="https://spotify.com"
-                  target="_blank"
+                  href="/artist/3"
                 >
                   Darkthrone
                 </a>
@@ -546,8 +539,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
               <span>
                 <a
                   class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                  href="https://spotify.com"
-                  target="_blank"
+                  href="/artist/4"
                 >
                   Darkthrone
                 </a>
