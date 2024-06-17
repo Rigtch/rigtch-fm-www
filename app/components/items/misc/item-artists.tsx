@@ -1,4 +1,6 @@
-import { ButtonLink, ButtonLinkProps } from '../button-link'
+'use client'
+
+import { ButtonLink, ButtonLinkProps } from '../../button-link'
 
 import { cn } from '@app/utils/cn'
 import type { ArtistEntity } from '@app/api/types'
