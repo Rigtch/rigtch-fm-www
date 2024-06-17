@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
 import userEvent, { type UserEvent } from '@testing-library/user-event'
 
-import { PlaybackToggleStateButton } from './toggle-state-button'
+import { ToggleStateButton } from './toggle-state-button'
 
-describe('PlaybackToggleStateButton', () => {
+describe('ToggleStateButton', () => {
   let user: UserEvent
 
   beforeEach(() => {
@@ -12,7 +12,7 @@ describe('PlaybackToggleStateButton', () => {
 
   test('should match snapshot as resumed', () => {
     const view = render(
-      <PlaybackToggleStateButton
+      <ToggleStateButton
         isPlaying={true}
         isDeviceAvailable={true}
         hasAccess={true}
@@ -25,7 +25,7 @@ describe('PlaybackToggleStateButton', () => {
 
   test('should match snapshot as paused', () => {
     const view = render(
-      <PlaybackToggleStateButton
+      <ToggleStateButton
         isPlaying={false}
         isDeviceAvailable={true}
         hasAccess={true}
@@ -38,7 +38,7 @@ describe('PlaybackToggleStateButton', () => {
 
   test('should match snapshot as disabled', () => {
     const view = render(
-      <PlaybackToggleStateButton
+      <ToggleStateButton
         isPlaying={true}
         isDeviceAvailable={false}
         hasAccess={false}
@@ -53,7 +53,7 @@ describe('PlaybackToggleStateButton', () => {
     const toggleState = vi.fn()
 
     render(
-      <PlaybackToggleStateButton
+      <ToggleStateButton
         isPlaying={true}
         isDeviceAvailable={true}
         hasAccess={true}

@@ -1,49 +1,37 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ToggleStateButton > should match snapshot as disabled 1`] = `
+exports[`ItemImage > should match snapshot with size 64 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
-        disabled=""
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 448 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
-          />
-        </svg>
-      </button>
+      <img
+        alt=""
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="64"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d000048515fdcfafcc8e7831c5fe2c618&w=128&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d000048515fdcfafcc8e7831c5fe2c618&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d000048515fdcfafcc8e7831c5fe2c618&w=128&q=75 2x"
+        style="color: transparent; min-height: 64px; max-height: 64px; min-width: 64px; max-width: 64px; object-fit: cover;"
+        width="64"
+      />
     </div>
   </body>,
   "container": <div>
-    <button
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
-      disabled=""
-    >
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 448 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
-        />
-      </svg>
-    </button>
+    <img
+      alt=""
+      class="rounded-md"
+      data-nimg="1"
+      decoding="async"
+      height="64"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d000048515fdcfafcc8e7831c5fe2c618&w=128&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d000048515fdcfafcc8e7831c5fe2c618&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d000048515fdcfafcc8e7831c5fe2c618&w=128&q=75 2x"
+      style="color: transparent; min-height: 64px; max-height: 64px; min-width: 64px; max-width: 64px; object-fit: cover;"
+      width="64"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -99,50 +87,38 @@ exports[`ToggleStateButton > should match snapshot as disabled 1`] = `
 }
 `;
 
-exports[`ToggleStateButton > should match snapshot as paused 1`] = `
+exports[`ItemImage > should match snapshot with size 300 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
-      >
-        <svg
-          class="ml-[1px]"
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 448 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-          />
-        </svg>
-      </button>
+      <img
+        alt=""
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="300"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d00001e025fdcfafcc8e7831c5fe2c618&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d00001e025fdcfafcc8e7831c5fe2c618&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d00001e025fdcfafcc8e7831c5fe2c618&w=640&q=75 2x"
+        style="color: transparent; min-height: 300px; max-height: 300px; min-width: 300px; max-width: 300px; object-fit: cover;"
+        width="300"
+      />
     </div>
   </body>,
   "container": <div>
-    <button
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
-    >
-      <svg
-        class="ml-[1px]"
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 448 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-        />
-      </svg>
-    </button>
+    <img
+      alt=""
+      class="rounded-md"
+      data-nimg="1"
+      decoding="async"
+      height="300"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d00001e025fdcfafcc8e7831c5fe2c618&w=640&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d00001e025fdcfafcc8e7831c5fe2c618&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d00001e025fdcfafcc8e7831c5fe2c618&w=640&q=75 2x"
+      style="color: transparent; min-height: 300px; max-height: 300px; min-width: 300px; max-width: 300px; object-fit: cover;"
+      width="300"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -198,48 +174,38 @@ exports[`ToggleStateButton > should match snapshot as paused 1`] = `
 }
 `;
 
-exports[`ToggleStateButton > should match snapshot as resumed 1`] = `
+exports[`ItemImage > should match snapshot with size 640 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 448 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
-          />
-        </svg>
-      </button>
+      <img
+        alt=""
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="640"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b2735fdcfafcc8e7831c5fe2c618&w=1920&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b2735fdcfafcc8e7831c5fe2c618&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b2735fdcfafcc8e7831c5fe2c618&w=1920&q=75 2x"
+        style="color: transparent; min-height: 640px; max-height: 640px; min-width: 640px; max-width: 640px; object-fit: cover;"
+        width="640"
+      />
     </div>
   </body>,
   "container": <div>
-    <button
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
-    >
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 448 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
-        />
-      </svg>
-    </button>
+    <img
+      alt=""
+      class="rounded-md"
+      data-nimg="1"
+      decoding="async"
+      height="640"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b2735fdcfafcc8e7831c5fe2c618&w=1920&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b2735fdcfafcc8e7831c5fe2c618&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b2735fdcfafcc8e7831c5fe2c618&w=1920&q=75 2x"
+      style="color: transparent; min-height: 640px; max-height: 640px; min-width: 640px; max-width: 640px; object-fit: cover;"
+      width="640"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -16,5 +16,6 @@ export interface Album {
 export interface AlbumEntity extends Album {
   externalId: string
   tracks: TrackEntity[]
+  genres: string[]
   artists: ArtistEntity[]
 }

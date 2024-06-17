@@ -1,3 +1,3 @@
-export * from './card'
+export * from './playback-card'
 export * from './toggle-state-button'
 export * from './audio-bars'

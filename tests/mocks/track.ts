@@ -5,11 +5,11 @@ import { albumMock } from './album'
 
 import { hrefMock, idMock } from '.'
 
-import { Track } from '@app/api/types'
+import type { TrackEntity } from '@app/api/types'
 
 export const trackNameMock = 'Track 1'
 
-export const trackMock = mockDeep<Track>({
+export const trackMock = mockDeep<TrackEntity>({
   id: idMock,
   name: trackNameMock,
   href: hrefMock,

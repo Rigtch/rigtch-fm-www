@@ -1,49 +1,23 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ToggleStateButton > should match snapshot as disabled 1`] = `
+exports[`ItemPosition > should match snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
-        disabled=""
+      <span
+        class="text-center w-[2rem] text-xl"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 448 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
-          />
-        </svg>
-      </button>
+        1
+      </span>
     </div>
   </body>,
   "container": <div>
-    <button
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
-      disabled=""
+    <span
+      class="text-center w-[2rem] text-xl"
     >
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 448 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
-        />
-      </svg>
-    </button>
+      1
+    </span>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -99,50 +73,24 @@ exports[`ToggleStateButton > should match snapshot as disabled 1`] = `
 }
 `;
 
-exports[`ToggleStateButton > should match snapshot as paused 1`] = `
+exports[`ItemPosition > should match snapshot with size lg 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+      <span
+        class="text-center w-[2rem] text-3xl"
       >
-        <svg
-          class="ml-[1px]"
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 448 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-          />
-        </svg>
-      </button>
+        1
+      </span>
     </div>
   </body>,
   "container": <div>
-    <button
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+    <span
+      class="text-center w-[2rem] text-3xl"
     >
-      <svg
-        class="ml-[1px]"
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 448 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-        />
-      </svg>
-    </button>
+      1
+    </span>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -198,48 +146,24 @@ exports[`ToggleStateButton > should match snapshot as paused 1`] = `
 }
 `;
 
-exports[`ToggleStateButton > should match snapshot as resumed 1`] = `
+exports[`ItemPosition > should match snapshot with size md 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+      <span
+        class="text-center w-[2rem] text-xl"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 448 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
-          />
-        </svg>
-      </button>
+        1
+      </span>
     </div>
   </body>,
   "container": <div>
-    <button
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+    <span
+      class="text-center w-[2rem] text-xl"
     >
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 448 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
-        />
-      </svg>
-    </button>
+      1
+    </span>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

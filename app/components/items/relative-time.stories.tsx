@@ -8,7 +8,7 @@ type RelativeTimeStory = StoryObj<RelativeTimeType>
 const relativeTimeValue = '2022-01-01'
 
 export default {
-  title: 'Components/Items/RelativeTime',
+  title: 'Components/Items/Misc/RelativeTime',
   component: RelativeTime,
   argTypes: {
     value: {
