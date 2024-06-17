@@ -17,9 +17,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   const { followers, images, name, href, genres } = await getArtist({
     id,
   })
-
   const { tracks } = await getArtistTopTracks({ id })
-
   const { albums } = await getArtistAlbums({ id })
 
   const followerCount = new Intl.NumberFormat('en-EN').format(followers)
@@ -72,10 +70,9 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
           {albums
             .sort(
               (firstAlbum, secondAlbum) =>
-                new Date(firstAlbum.releaseDate).getFullYear() -
-                new Date(secondAlbum.releaseDate).getFullYear()
+                new Date(secondAlbum.releaseDate).getFullYear() -
+                new Date(firstAlbum.releaseDate).getFullYear()
             )
-            .reverse()
             .map(
               ({ id, name, images, href, releaseDate, albumType }, index) => (
                 <div key={index} className="p-4 bg-neutral-800 rounded-lg">
