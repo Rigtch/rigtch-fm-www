@@ -23,7 +23,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
         <div>
           <a
             class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-            href="/album/undefined"
+            href="/artist/undefined"
           >
             <span
               class="truncate max-w-[200px]"
@@ -80,7 +80,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
       <div>
         <a
           class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-          href="/album/undefined"
+          href="/artist/undefined"
         >
           <span
             class="truncate max-w-[200px]"
@@ -194,7 +194,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
         <div>
           <a
             class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-            href="/album/123"
+            href="/artist/123"
           >
             <span
               class="truncate max-w-[200px]"
@@ -251,7 +251,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
       <div>
         <a
           class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-          href="/album/123"
+          href="/artist/123"
         >
           <span
             class="truncate max-w-[200px]"
@@ -365,7 +365,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
         <div>
           <a
             class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-            href="/album/123"
+            href="/track/123"
           >
             <span
               class="truncate max-w-[200px]"
@@ -431,7 +431,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
       <div>
         <a
           class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
-          href="/album/123"
+          href="/track/123"
         >
           <span
             class="truncate max-w-[200px]"
