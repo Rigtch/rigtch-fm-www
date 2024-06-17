@@ -44,6 +44,8 @@ export function PlaybackCard() {
     track: { album, ...track },
   } = data
 
+  const imgSource = getImage(album, 96)
+
   async function handleToggleState() {
     setIsPlayingState(isPlaying => !isPlaying)
 
@@ -58,22 +60,31 @@ export function PlaybackCard() {
       )}
     >
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
-        <Image
-          src={getImage(album, 96)}
-          width={96}
-          height={96}
-          alt={album.name}
-          className={cn(
-            'rounded-md w-full sm:w-auto',
-            isImageLoaded ? 'opacity-100' : 'opacity-0'
-          )}
-          style={{ height: '128px', width: '128px' }}
-          onLoad={() => {
-            setIsImageLoaded(true)
-          }}
-        />
-
-        {!isImageLoaded && <Skeleton className="h-[128px] w-[128px]" />}
+        {isImageLoaded && (
+          <Image
+            src={imgSource}
+            width={96}
+            height={96}
+            alt={album.name}
+            className={'rounded-md w-full sm:w-auto transition-none'}
+            style={{ height: '128px', width: '128px' }}
+          />
+        )}
+        {!isImageLoaded && (
+          <div>
+            {/* Dummy Image */}
+            <Image
+              height={0}
+              width={0}
+              onLoad={() => {
+                setIsImageLoaded(true)
+              }}
+              src={imgSource}
+              alt={''}
+            />
+            <Skeleton className="h-[128px] w-[128px]" />
+          </div>
+        )}
 
         <div className="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0">
           <CardTitle className="whitespace-nowrap font-normal flex flex-col gap-1">
