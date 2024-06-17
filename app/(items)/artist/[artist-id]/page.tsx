@@ -95,7 +95,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
                   </div>
 
                   <div>
-                    {new Date(releaseDate).getFullYear()} &bull;{' '}
+                    {new Date(releaseDate).getFullYear()} &bull;&nbsp;
                     {albumType.charAt(0).toUpperCase() + albumType.slice(1)}
                   </div>
                 </div>
