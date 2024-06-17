@@ -78,7 +78,11 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
 
             <div>Release date: {dateOfRelease}</div>
 
-            <span className="text-sm">{copyrights[0]}</span>
+            {copyrights.map((copyright, index) => (
+              <span className="text-sm" key={index}>
+                {copyright}
+              </span>
+            ))}
           </div>
         </div>
       </div>
