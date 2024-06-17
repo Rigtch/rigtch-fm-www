@@ -3,8 +3,8 @@
 import { FaStar } from 'react-icons/fa6'
 import type { Simplify } from 'type-fest'
 
-import { ItemImage, ItemName, ItemArtists, ItemPosition } from '../misc'
 import { GenreBadge } from '../genre'
+import { ItemArtists, ItemImage, ItemName, ItemPosition } from '../misc'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { cn } from '@app/utils/cn'
@@ -29,6 +29,7 @@ export type ItemTopCardProps = Simplify<
   ItemTopCardConditionalProps &
     Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
       position?: number
+      carousel?: boolean
     }
 >
 
@@ -40,6 +41,7 @@ export function ItemTopCard({
   genres,
   artists,
   album,
+  carousel,
 }: ItemTopCardProps) {
   const stars = [1, 2, 3, 2, 1]
 
@@ -47,8 +49,8 @@ export function ItemTopCard({
     <div
       className={cn(
         'w-full flex flex-col justify-start gap-2 h-full relative',
-        position === 1 && '-top-16 lg:-top-24',
-        position === 2 && '-top-8 lg:-top-12'
+        !carousel && position === 1 && '-top-16 lg:-top-24',
+        !carousel && position === 2 && '-top-8 lg:-top-12'
       )}
     >
       <header className="w-full flex flex-col gap-2 items-center p-0">

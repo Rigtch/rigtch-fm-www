@@ -52,6 +52,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.1.5",
     "luxon": "^3.4.4",
     "next": "14.2.3",
     "next-auth": "5.0.0-beta.19",
