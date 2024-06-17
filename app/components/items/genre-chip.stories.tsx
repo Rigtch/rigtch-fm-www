@@ -6,7 +6,7 @@ type GenreChipType = typeof GenreChip
 type GenreChipStory = StoryObj<GenreChipType>
 
 export default {
-  title: 'Components/Common/GenreChip',
+  title: 'Components/Items/GenreChip',
   component: GenreChip,
   argTypes: {
     genre: {
