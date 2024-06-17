@@ -6,6 +6,9 @@
 .pnp.js
 .eslintcache
 
+# storybook
+/storybook-static
+
 # testing
 /coverage
 

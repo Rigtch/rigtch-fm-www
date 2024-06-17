@@ -23,7 +23,7 @@
     "shadcn-ui": "npx shadcn-ui@latest",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
