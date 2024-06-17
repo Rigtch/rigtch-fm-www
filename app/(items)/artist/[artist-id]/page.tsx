@@ -4,9 +4,9 @@ import {
   getArtistAlbums,
   getArtistTopTracks,
 } from '@app/api/fetchers'
-import { ButtonLink } from '@app/components/button-link'
 import { SpotifyLink, FollowersCount } from '@app/components/common'
 import { ItemImage, ItemsList } from '@app/components/items'
+import { ItemCard } from '@app/components/items/card'
 import { ARTIST_ID } from '@app/constants'
 import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
@@ -69,31 +69,9 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
         <div className="text-4xl">Albums</div>
 
         <div className="flex flex-wrap justify-start gap-y-4 md:gap-x-6 w-full">
-          {sortedAlbums.map(
-            ({ id, name, images, href, releaseDate, albumType }, index) => (
-              <div key={index} className="p-4 bg-neutral-800 rounded-lg">
-                <ItemImage
-                  src={getImage(images, 200)}
-                  alt={name}
-                  width="200"
-                  height="200"
-                />
-
-                <div className="flex flex-row justify-between">
-                  <ButtonLink href={`/album/${id}`}>
-                    <span className="truncate w-[170px]">{name}</span>
-                  </ButtonLink>
-
-                  <SpotifyLink href={href} />
-                </div>
-
-                <div>
-                  {new Date(releaseDate).getFullYear()} &bull;&nbsp;
-                  <span className="capitalize">{albumType}</span>
-                </div>
-              </div>
-            )
-          )}
+          {sortedAlbums.map(album => (
+            <ItemCard key={album.id} {...album} />
+          ))}
         </div>
       </div>
     </div>
