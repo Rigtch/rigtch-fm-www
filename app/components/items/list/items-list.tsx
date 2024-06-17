@@ -30,8 +30,6 @@ export function ItemsList({
     }),
   }))
 
-  console.log('playedAt' in items[0])
-
   isTop && sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])
 
   return (
