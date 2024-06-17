@@ -62,7 +62,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
     "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.4",
+    "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/types": "^19.0.3",
     "@next/eslint-plugin-next": "14.2.3",
     "@storybook/addon-essentials": "^8.1.8",
