@@ -21,6 +21,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
     releaseDatePrecision,
     tracks,
     copyrights,
+    label,
   } = await getAlbum({
     id,
   })
@@ -76,7 +77,9 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
               </span>
             </div>
 
-            <div>Release date: {dateOfRelease}</div>
+            <div>
+              Release date: {dateOfRelease} &bull; {label}
+            </div>
 
             {copyrights.map((copyright, index) => (
               <span className="text-sm" key={index}>
