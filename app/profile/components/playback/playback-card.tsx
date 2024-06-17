@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
@@ -8,7 +7,7 @@ import { PlaybackCardSkeleton } from './playback-card.skeleton'
 import { ToggleStateButton } from './toggle-state-button'
 import { AudioBars } from './audio-bars'
 
-import { RelativeTime } from '@app/components/items'
+import { ItemImage, RelativeTime } from '@app/components/items'
 import { SpotifyLink } from '@app/components/common'
 import {
   Card,
@@ -22,7 +21,6 @@ import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 import { usePlaybackStateContext } from '@app/profile/context/playback-state'
 import { formatArtists } from '@app/profile/utils/formatters'
 import { cn } from '@app/utils/cn'
-import { getImage } from '@app/utils/get-image'
 
 export function PlaybackCard() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()
@@ -44,8 +42,6 @@ export function PlaybackCard() {
     track: { album, ...track },
   } = data
 
-  const imgSource = getImage(album, 96)
-
   async function handleToggleState() {
     setIsPlayingState(isPlaying => !isPlaying)
 
@@ -61,24 +57,21 @@ export function PlaybackCard() {
     >
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
         {isImageLoaded ? (
-          <Image
-            src={imgSource}
-            width={96}
-            height={96}
+          <ItemImage
+            images={album}
+            size={128}
             alt={album.name}
             className={'rounded-md w-full sm:w-auto'}
-            style={{ height: '128px', width: '128px' }}
           />
         ) : (
           <div>
             {/* Dummy Image */}
-            <Image
-              height={0}
-              width={0}
+            <ItemImage
+              size={0}
               onLoad={() => {
                 setIsImageLoaded(true)
               }}
-              src={imgSource}
+              images={album}
               alt={''}
             />
             <Skeleton className="h-[128px] w-[128px]" />
