@@ -1,10 +1,17 @@
 'use client'
 
-import { GenreProps } from './props'
+import type { GenreProps } from './props'
 
-export function GenreChip({ genre }: GenreProps) {
+import { cn } from '@app/utils/cn'
+
+export function GenreChip({ genre, className }: GenreProps) {
   return (
-    <div className="w-max p-2 rounded-xl whitespace-nowrap bg-neutral-700 text-white">
+    <div
+      className={cn(
+        'w-max p-2 rounded-xl whitespace-nowrap text-white',
+        className ?? 'bg-neutral-700'
+      )}
+    >
       {genre}
     </div>
   )
