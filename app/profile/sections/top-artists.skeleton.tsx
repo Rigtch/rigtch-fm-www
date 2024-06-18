@@ -1,4 +1,4 @@
-import { ItemsListSkeleton } from '@app/components/items'
+import { ItemsListSkeleton } from '@app/components/items/list'
 import { DefaultSection } from '@app/sections'
 import { View } from '@app/types'
 
