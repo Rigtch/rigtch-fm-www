@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 
 import { SelectView, ToggleTimeRange } from '@app/components/common'
-import { TopArtistsSkeleton } from '@app/profile/sections'
+import { TopArtistsSkeletonSection } from '@app/profile/sections'
 import { TIME_RANGE, VIEW } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { validateView } from '@app/profile/utils/view'
@@ -25,7 +25,7 @@ export default function ProfileTopArtistsLoading() {
         </div>
       </div>
 
-      <TopArtistsSkeleton view={view} />
+      <TopArtistsSkeletonSection view={view} />
     </>
   )
 }

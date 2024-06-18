@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 
 import { SelectView, ToggleTimeRange } from '@app/components/common'
-import { TopTracksSkeleton } from '@app/profile/sections'
+import { TopTracksSkeletonSection } from '@app/profile/sections'
 import { TIME_RANGE, VIEW } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { validateView } from '@app/profile/utils/view'
@@ -25,7 +25,7 @@ export default function ProfileTopTracksLoading() {
         </div>
       </div>
 
-      <TopTracksSkeleton view={view} />
+      <TopTracksSkeletonSection view={view} />
     </>
   )
 }
