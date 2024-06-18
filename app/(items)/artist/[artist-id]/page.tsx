@@ -1,4 +1,3 @@
-import { ItemsList } from '@app/components/items/list'
 import type { ArtistPageProps } from '@app/(items)/types'
 import {
   getArtist,
@@ -6,8 +5,8 @@ import {
   getArtistTopTracks,
 } from '@app/api/fetchers'
 import { SpotifyLink, FollowersCount } from '@app/components/common'
+import { ItemsList } from '@app/components/items/list'
 import { ItemCard } from '@app/components/items/cards/item-card'
-import { GenreChip } from '@app/components/items/genre'
 import { ARTIST_ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 import { ItemImage } from '@app/components/items/misc'
@@ -28,7 +27,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   )
 
   return (
-    <div className="flex flex-col p-12 gap-8 md:gap-12">
+    <div className="flex flex-col p-12 gap-8 md:gap-0">
       <div className="flex flex-row flex-wrap">
         <div className="w-full md:w-1/2 flex flex-row flex-wrap p-12 gap-8">
           <ItemImage images={images} size={200} alt={name} />
@@ -45,12 +44,10 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
             </div>
 
             <div className="flex flex-row flex-wrap justify-start gap-4">
-              {genres.slice(0, 3).map(genre => (
-                <GenreChip
-                  className="bg-neutral-800"
-                  key={genre}
-                  genre={genre}
-                />
+              {genres.slice(0, 3).map((genre, index) => (
+                <div className="rounded-xl bg-neutral-800 p-2" key={index}>
+                  {genre}
+                </div>
               ))}
             </div>
           </div>
@@ -66,7 +63,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
       <div className="flex flex-col gap-6">
         <div className="text-4xl">Albums</div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center gap-4">
+        <div className="flex flex-wrap justify-start gap-y-4 md:gap-x-6 w-full">
           {sortedAlbums.map(album => (
             <ItemCard key={album.id} {...album} />
           ))}
