@@ -59,7 +59,7 @@ export function ItemsList({
             </div>
           </div>
 
-          <Carousel className="md:hidden self-center w-full max-w-xs">
+          <Carousel className="md:hidden self-center max-w-[60vw] sm:max-w-[300px]">
             <CarouselContent>
               {carouselItems.slice(0, 3).map(item => (
                 <CarouselItem key={item.id}>

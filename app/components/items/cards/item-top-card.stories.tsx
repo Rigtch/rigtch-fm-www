@@ -22,6 +22,9 @@ export default {
     position: {
       control: 'number',
     },
+    carousel: {
+      control: 'boolean',
+    },
   },
   args: {
     id: idExample,

@@ -56,6 +56,17 @@ export const WithRelativeTime: ItemsListStory = {
   },
 }
 
+export const Carousel: ItemsListStory = {
+  args: {
+    isTop: true,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'mobile2',
+    },
+  },
+}
+
 export const Skeleton: ItemsListStory = {
   render: () => <ItemsListSkeleton />,
 }
