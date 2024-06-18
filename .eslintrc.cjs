@@ -120,6 +120,7 @@ module.exports = {
       { ignoredTypeNames: ['Url'] },
     ],
     '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/consistent-type-imports': 'warn',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
