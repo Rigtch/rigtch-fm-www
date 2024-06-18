@@ -2,11 +2,13 @@ import { ItemsListSkeleton } from '@app/components/items'
 import { DefaultSection } from '@app/sections'
 import { View } from '@app/types'
 
-export interface TopArtistsSkeletonProps {
+export interface TopArtistsSkeletonSectionProps {
   view?: View
 }
 
-export function TopArtistsSkeleton({ view }: TopArtistsSkeletonProps) {
+export function TopArtistsSkeletonSection({
+  view = View.CARD,
+}: TopArtistsSkeletonSectionProps) {
   return (
     <DefaultSection title={'Top Artists'}>
       <ItemsListSkeleton view={view} genres={true} />
