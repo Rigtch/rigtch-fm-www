@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { GenreBadge } from './genre-badge'
+import { genreExample } from './examples'
 
 type GenreBadgeType = typeof GenreBadge
 type GenreBadgeStory = StoryObj<GenreBadgeType>
@@ -14,7 +15,7 @@ export default {
     },
   },
   args: {
-    genre: 'Black Metal',
+    genre: genreExample,
   },
 } satisfies Meta<GenreBadgeType>
 

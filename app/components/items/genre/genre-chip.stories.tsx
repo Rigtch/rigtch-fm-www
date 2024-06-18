@@ -1,6 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react'
 
 import { GenreChip } from './genre-chip'
+import { genreExample } from './examples'
 
 type GenreChipType = typeof GenreChip
 type GenreChipStory = StoryObj<GenreChipType>
@@ -11,13 +12,17 @@ export default {
   argTypes: {
     genre: {
       control: 'text',
-      defaultValue: 'Black Metal',
     },
+  },
+  args: {
+    genre: genreExample,
   },
 } satisfies Meta<GenreChipType>
 
-export const Default: GenreChipStory = {
+export const Default: GenreChipStory = {}
+
+export const CustomClassName: GenreChipStory = {
   args: {
-    genre: 'Black Metal',
+    className: 'bg-neutral-800',
   },
 }

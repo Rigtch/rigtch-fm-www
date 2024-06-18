@@ -1,3 +1,4 @@
+import { ItemsList } from '@app/components/items/list'
 import type { ArtistPageProps } from '@app/(items)/types'
 import {
   getArtist,
@@ -5,10 +6,11 @@ import {
   getArtistTopTracks,
 } from '@app/api/fetchers'
 import { SpotifyLink, FollowersCount } from '@app/components/common'
-import { ItemImage, ItemsList } from '@app/components/items'
 import { ItemCard } from '@app/components/items/cards/item-card'
+import { GenreChip } from '@app/components/items/genre'
 import { ARTIST_ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
+import { ItemImage } from '@app/components/items/misc'
 
 export default async function ArtistPage({ params }: ArtistPageProps) {
   const id = validateId(params[ARTIST_ID])
@@ -44,9 +46,11 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
 
             <div className="flex flex-row flex-wrap justify-start gap-4">
               {genres.slice(0, 3).map(genre => (
-                <div className="rounded-xl bg-neutral-800 p-2" key={genre}>
-                  {genre}
-                </div>
+                <GenreChip
+                  className="bg-neutral-800"
+                  key={genre}
+                  genre={genre}
+                />
               ))}
             </div>
           </div>
