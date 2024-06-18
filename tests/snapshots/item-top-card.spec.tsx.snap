@@ -9,7 +9,7 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
         class="w-full flex flex-col justify-start gap-2 h-full relative"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0"
+          class="w-full flex flex-col gap-2 items-center p-0 m-0"
         >
           <div
             class="p-1 rounded-xl"
@@ -133,7 +133,7 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
       class="w-full flex flex-col justify-start gap-2 h-full relative"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0"
+        class="w-full flex flex-col gap-2 items-center p-0 m-0"
       >
         <div
           class="p-1 rounded-xl"
@@ -314,7 +314,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
         class="w-full flex flex-col justify-start gap-2 h-full relative"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0"
+          class="w-full flex flex-col gap-2 items-center p-0 m-0"
         >
           <div
             class="p-1 rounded-xl"
@@ -350,7 +350,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
             class="flex flex-col justify-center items-center gap-4"
           >
             <div
-              class="flex flex-row gap-2 flex-wrap justify-center h-full"
+              class="flex gap-2 flex-wrap justify-center h-full flex-row"
             >
               <div
                 class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -457,7 +457,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
       class="w-full flex flex-col justify-start gap-2 h-full relative"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0"
+        class="w-full flex flex-col gap-2 items-center p-0 m-0"
       >
         <div
           class="p-1 rounded-xl"
@@ -493,7 +493,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
           class="flex flex-col justify-center items-center gap-4"
         >
           <div
-            class="flex flex-row gap-2 flex-wrap justify-center h-full"
+            class="flex gap-2 flex-wrap justify-center h-full flex-row"
           >
             <div
               class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -657,7 +657,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
         class="w-full flex flex-col justify-start gap-2 h-full relative -top-8 lg:-top-12"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0"
+          class="w-full flex flex-col gap-2 items-center p-0 m-0"
         >
           <div
             class="p-1 rounded-xl"
@@ -794,7 +794,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
       class="w-full flex flex-col justify-start gap-2 h-full relative -top-8 lg:-top-12"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0"
+        class="w-full flex flex-col gap-2 items-center p-0 m-0"
       >
         <div
           class="p-1 rounded-xl"
@@ -988,7 +988,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
         class="w-full flex flex-col justify-start gap-2 h-full relative"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0"
+          class="w-full flex flex-col gap-2 items-center p-0 m-0"
         >
           <div
             class="p-1 rounded-xl"
@@ -1125,7 +1125,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
       class="w-full flex flex-col justify-start gap-2 h-full relative"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0"
+        class="w-full flex flex-col gap-2 items-center p-0 m-0"
       >
         <div
           class="p-1 rounded-xl"
@@ -1319,7 +1319,7 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
         class="w-full flex flex-col justify-start gap-2 h-full relative"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0"
+          class="w-full flex flex-col gap-2 items-center p-0 m-0"
         >
           <div
             class="p-1 rounded-xl"
@@ -1451,7 +1451,7 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
       class="w-full flex flex-col justify-start gap-2 h-full relative"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0"
+        class="w-full flex flex-col gap-2 items-center p-0 m-0"
       >
         <div
           class="p-1 rounded-xl"

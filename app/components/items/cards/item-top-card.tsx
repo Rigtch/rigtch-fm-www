@@ -53,7 +53,7 @@ export function ItemTopCard({
         !carousel && position === 2 && '-top-8 lg:-top-12'
       )}
     >
-      <header className="w-full flex flex-col gap-2 items-center p-0">
+      <header className="w-full flex flex-col gap-2 items-center p-0 m-0">
         <div
           style={{
             backgroundImage: 'linear-gradient(to top right, #9400d5, #1e89ee)',
@@ -77,7 +77,12 @@ export function ItemTopCard({
           {position && <ItemPosition position={position} size="xl" />}
 
           {genres && (
-            <div className="flex flex-row gap-2 flex-wrap justify-center h-full">
+            <div
+              className={cn(
+                'flex gap-2 flex-wrap justify-center h-full',
+                carousel ? 'flex-col' : 'flex-row'
+              )}
+            >
               {genres.slice(0, 3).map((genre, index) => (
                 <GenreBadge key={index} genre={genre} />
               ))}
