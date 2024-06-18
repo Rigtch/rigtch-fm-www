@@ -7,7 +7,7 @@ import { PlaybackCardSkeleton } from './playback-card.skeleton'
 import { ToggleStateButton } from './toggle-state-button'
 import { AudioBars } from './audio-bars'
 
-import { ItemImage, RelativeTime } from '@app/components/items'
+import { ItemImage, RelativeTime } from '@app/components/items/misc'
 import { SpotifyLink } from '@app/components/common'
 import {
   Card,

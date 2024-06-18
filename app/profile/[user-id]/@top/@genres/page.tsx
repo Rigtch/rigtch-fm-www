@@ -3,14 +3,14 @@
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
-import { ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { TIME_RANGE, USER_ID } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { DefaultSection } from '@app/sections'
 import { getTopGenres } from '@app/api/fetchers'
 import { getServerToken } from '@app/auth/utils'
-import { GenreChip } from '@app/components/items'
+import { GenreChip } from '@app/components/items/genre'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,
