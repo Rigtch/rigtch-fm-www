@@ -3,11 +3,11 @@ import { redirect } from 'next/navigation'
 import { validateId } from '@app/utils/validate-id'
 import { getTopArtists } from '@app/api/fetchers'
 import { validateTimeRange } from '@app/profile/utils/time-range'
-import { TopItemsSection } from '@app/profile/sections'
+import { ItemsSection } from '@app/profile/sections'
 import { validateView } from '@app/profile/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { ToggleTimeRange, SelectView } from '@app/components/common'
-import { ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 
 export const runtime = 'edge'
@@ -50,7 +50,7 @@ export default async function ProfileTopArtistsPage({
         </div>
       </div>
 
-      <TopItemsSection items={artists} title="Top Artists" view={view} />
+      <ItemsSection items={artists} title="Top Artists" view={view} />
     </>
   )
 }

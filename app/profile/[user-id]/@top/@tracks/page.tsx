@@ -2,12 +2,12 @@ import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
 import { getTopTracks } from '@app/api/fetchers'
-import { TopItemsSection } from '@app/profile/sections'
+import { ItemsSection } from '@app/profile/sections'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { validateView } from '@app/profile/utils/view'
 import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
 import { SeeMoreButton } from '@app/components/common/buttons'
-import { ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 
 export default async function ProfileTopTracksSubPage({
@@ -29,8 +29,8 @@ export default async function ProfileTopTracksSubPage({
   })
 
   return (
-    <TopItemsSection items={tracks} title="Top Tracks" view={view}>
+    <ItemsSection items={tracks} title="Top Tracks" view={view}>
       <SeeMoreButton href={`/profile/${userId}/top/tracks`} />
-    </TopItemsSection>
+    </ItemsSection>
   )
 }
