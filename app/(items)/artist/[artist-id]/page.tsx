@@ -43,8 +43,8 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
             </div>
 
             <div className="flex flex-row flex-wrap justify-start gap-4">
-              {genres.slice(0, 3).map(genre => (
-                <div className="rounded-xl bg-neutral-800 p-2" key={genre}>
+              {genres.slice(0, 3).map((genre, index) => (
+                <div className="rounded-xl bg-neutral-800 p-2" key={index}>
                   {genre}
                 </div>
               ))}
