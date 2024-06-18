@@ -28,7 +28,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   )
 
   return (
-    <div className="flex flex-col p-12 gap-8 md:gap-0">
+    <div className="flex flex-col p-12 gap-8 md:gap-12">
       <div className="flex flex-row flex-wrap">
         <div className="w-full md:w-1/2 flex flex-row flex-wrap p-12 gap-8">
           <ItemImage images={images} size={200} alt={name} />
@@ -66,7 +66,7 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
       <div className="flex flex-col gap-6">
         <div className="text-4xl">Albums</div>
 
-        <div className="flex flex-wrap justify-start gap-y-4 md:gap-x-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center gap-4">
           {sortedAlbums.map(album => (
             <ItemCard key={album.id} {...album} />
           ))}
