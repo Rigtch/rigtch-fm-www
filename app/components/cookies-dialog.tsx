@@ -49,7 +49,7 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
 
         <DialogFooter className="flex flex-row justify-between w-full">
           <form action={declineUserCookiesAction}>
-            <Button type="button" variant="secondary">
+            <Button type="submit" variant="secondary">
               Decline
             </Button>
           </form>
