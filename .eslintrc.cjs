@@ -86,6 +86,12 @@ module.exports = {
         'unicorn/no-empty-file': 'off',
       },
     },
+    {
+      files: ['**/actions/**/*.ts'],
+      rules: {
+        '@typescript-eslint/require-await': 'off',
+      },
+    },
   ],
   ignorePatterns: [
     '**/node_modules/**',

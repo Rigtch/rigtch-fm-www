@@ -1,10 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import { useCookies } from 'react-cookie'
-
-import { USER_ACCEPT_COOKIES } from '../api/constants'
 
 import {
   Dialog,
@@ -16,24 +12,23 @@ import {
   DialogTitle,
 } from '@app/components/ui/dialog'
 import { Button } from '@app/components/ui/button'
+import {
+  acceptUserCookiesAction,
+  declineUserCookiesAction,
+} from '@app/actions/user-cookies'
 
 export interface CookiesDialogProps {
   isAccepted: boolean
 }
 
 export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
-  const router = useRouter()
   const [isMounted, setIsMounted] = useState(false)
-
-  const [, setAcceptCookies] = useCookies([USER_ACCEPT_COOKIES])
 
   useEffect(() => {
     setIsMounted(true)
   }, [])
 
-  if (!isMounted || isAccepted) {
-    return null
-  }
+  if (!isMounted || isAccepted) return null
 
   return (
     <Dialog defaultOpen>
@@ -53,26 +48,22 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
         </DialogHeader>
 
         <DialogFooter className="flex flex-row justify-between w-full">
-          <Button
-            type="button"
-            variant="secondary"
-            onClick={() => {
-              router.push('https://google.com')
-            }}
-          >
-            Decline
-          </Button>
-
-          <DialogClose
-            asChild
-            onClick={() => {
-              setAcceptCookies(USER_ACCEPT_COOKIES, true, { path: '/' })
-            }}
-          >
-            <Button className="bg-purple-800 hover:bg-purple-900">
-              Accept
+          <form action={declineUserCookiesAction}>
+            <Button type="button" variant="secondary">
+              Decline
             </Button>
-          </DialogClose>
+          </form>
+
+          <form action={acceptUserCookiesAction}>
+            <DialogClose asChild>
+              <Button
+                className="bg-purple-800 hover:bg-purple-900"
+                type="submit"
+              >
+                Accept
+              </Button>
+            </DialogClose>
+          </form>
         </DialogFooter>
       </DialogContent>
     </Dialog>
