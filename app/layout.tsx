@@ -5,11 +5,12 @@ import './styles/globals.css'
 import { RootProviders } from './providers'
 import { NavigationBar } from './components/navigation'
 import { USER_ACCEPT_COOKIES } from './api/constants'
-import { LayoutProps } from './types'
+import type { LayoutProps } from './types'
 import { Footer } from './components/footer'
 import { CookiesDialog } from './components/cookies-dialog'
 import { Toaster } from './components/ui/toaster'
 import { auth } from './auth'
+import { USER_ID } from './constants'
 
 export const metadata = {
   title: 'rigtch.fm',
@@ -19,6 +20,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }: LayoutProps) {
   const isAccepted = cookies().has(USER_ACCEPT_COOKIES)
+  const userId = cookies().get(USER_ID)?.value
 
   const session = await auth()
 
@@ -47,7 +49,7 @@ export default async function RootLayout({ children }: LayoutProps) {
         <RootProviders session={session!}>
           <div className="flex flex-col justify-between min-h-screen">
             <div>
-              <NavigationBar user={session?.user} />
+              <NavigationBar user={session?.user} userId={userId} />
 
               <CookiesDialog isAccepted={isAccepted} />
 

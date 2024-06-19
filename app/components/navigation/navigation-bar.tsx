@@ -28,15 +28,14 @@ import { NavigationSidebar } from './sidebar'
 import { NavigationListItem } from './navigation-list-item'
 
 import { ProfileAvatar } from '@app/profile/components/profile'
-import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 import { handleSignOut } from '@app/auth/actions'
 
 export interface NavigationBarProps {
   user?: User
+  userId?: string
 }
 
-export function NavigationBar({ user }: NavigationBarProps) {
-  const { userId } = useAuthCookies()
+export function NavigationBar({ user, userId }: NavigationBarProps) {
   const queryClient = useQueryClient()
   const pathname = usePathname()
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
