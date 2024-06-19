@@ -3,11 +3,11 @@
 import { useParams, usePathname, useSearchParams } from 'next/navigation'
 import { LuUserCircle, LuDisc3, LuMic2, LuMusic, LuClock } from 'react-icons/lu'
 
-import { NavigationSidebarSectionItem } from './sidebar-section-item'
+import { SidebarSectionItem } from './sidebar-section-item'
 
 import { USER_ID } from '@app/constants'
 
-export function NavigationSidebar() {
+export function Sidebar() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const params = useParams()
@@ -21,7 +21,7 @@ export function NavigationSidebar() {
       </header>
 
       <main className="flex flex-col gap-2">
-        <NavigationSidebarSectionItem
+        <SidebarSectionItem
           href={`/profile/${userId}?${searchParams.toString()}`}
           label="Overview"
           pathname={pathname}
@@ -34,20 +34,20 @@ export function NavigationSidebar() {
           </header>
 
           <main>
-            <NavigationSidebarSectionItem
+            <SidebarSectionItem
               href={`/profile/${userId}/top/genres?${searchParams.toString()}`}
               label="Top Genres"
               pathname={pathname}
               icon={LuDisc3}
             />
 
-            <NavigationSidebarSectionItem
+            <SidebarSectionItem
               href={`/profile/${userId}/top/artists?${searchParams.toString()}`}
               label="Top Artists"
               pathname={pathname}
               icon={LuMic2}
             />
-            <NavigationSidebarSectionItem
+            <SidebarSectionItem
               href={`/profile/${userId}/top/tracks?${searchParams.toString()}`}
               label="Top Tracks"
               pathname={pathname}
@@ -56,7 +56,7 @@ export function NavigationSidebar() {
           </main>
         </section>
 
-        <NavigationSidebarSectionItem
+        <SidebarSectionItem
           href={`/profile/${userId}/history`}
           label="History"
           pathname={pathname}

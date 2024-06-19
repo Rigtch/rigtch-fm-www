@@ -23,8 +23,8 @@ import {
 } from '../ui/navigation-menu'
 import { ConnectButton } from '../auth'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
+import { Sidebar } from '../sidebar'
 
-import { NavigationSidebar } from './sidebar'
 import { NavigationListItem } from './navigation-list-item'
 
 import { ProfileAvatar } from '@app/profile/components/profile'
@@ -83,7 +83,7 @@ export function NavigationBar({ user, userId }: NavigationBarProps) {
 
             <SheetContent side="bottom">
               <div className="min-h-[50vh]">
-                <NavigationSidebar />
+                <Sidebar />
               </div>
             </SheetContent>
           </Sheet>
