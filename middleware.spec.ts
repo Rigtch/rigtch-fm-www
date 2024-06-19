@@ -1,9 +1,9 @@
-import { MockInstance } from 'vitest'
-import { NextRequest, NextResponse } from 'next/server'
+import type { MockInstance } from 'vitest'
+import { type NextRequest, NextResponse } from 'next/server'
 import { mock } from 'vitest-mock-extended'
-import { AppRouteHandlerFnContext } from 'next-auth/lib/types'
-import { ReadonlyRequestCookies } from 'next/dist/server/web/spec-extension/adapters/request-cookies'
+import type { AppRouteHandlerFnContext } from 'next-auth/lib/types'
 import { cookies } from 'next/headers'
+import type { ReadonlyRequestCookies } from 'next/dist/server/web/spec-extension/adapters/request-cookies'
 
 import middleware from './middleware'
 
