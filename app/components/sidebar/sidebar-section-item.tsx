@@ -1,21 +1,21 @@
 import Link from 'next/link'
-import { IconType } from 'react-icons'
+import type { IconType } from 'react-icons'
 
 import { Button } from '../ui/button'
 
-export interface NavigationSidebarSectionItemProps {
+export interface SidebarSectionItemProps {
   label: string
   href: string
   icon?: IconType
   pathname?: string
 }
 
-export function NavigationSidebarSectionItem({
+export function SidebarSectionItem({
   label,
   href,
   icon: Icon,
   pathname,
-}: NavigationSidebarSectionItemProps) {
+}: SidebarSectionItemProps) {
   const isActive = pathname === href
 
   return (

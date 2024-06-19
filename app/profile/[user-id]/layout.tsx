@@ -1,14 +1,14 @@
 'use client'
 
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
 
 import { ProfileProviders } from '../providers'
-import { ProfileLayoutBaseProps } from '../types'
+import type { ProfileLayoutBaseProps } from '../types'
 import { validateId } from '../../utils/validate-id'
 
-import { NavigationSidebar } from '@app/components/navigation'
 import { USER_ID } from '@app/constants'
+import { Sidebar } from '@app/components/sidebar'
 
 export interface ProfileLayoutProps extends ProfileLayoutBaseProps {
   profile: ReactNode
@@ -33,7 +33,7 @@ export default function ProfileLayout({
     <div className="flex">
       <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden lg:block top-[65px] sticky">
         <div className="sticky top-[calc(65px+16px)]">
-          <NavigationSidebar />
+          <Sidebar />
         </div>
       </aside>
 
