@@ -10,7 +10,7 @@ import { useQueryClient } from '@tanstack/react-query'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { LuUserCircle } from 'react-icons/lu'
-import { User } from 'next-auth'
+import type { User } from 'next-auth'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { IoClose } from 'react-icons/io5'
 
@@ -25,7 +25,7 @@ import { ConnectButton } from '../auth'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
 
 import { NavigationSidebar } from './sidebar'
-import { NavigationListItem } from './list-item'
+import { NavigationListItem } from './navigation-list-item'
 
 import { ProfileAvatar } from '@app/profile/components/profile'
 import { useAuthCookies } from '@app/hooks/use-auth-cookies'
