@@ -1,16 +1,16 @@
 'use client'
 
-import { DateTime, DateTimeOptions } from 'luxon'
+import { DateTime, type DateTimeOptions } from 'luxon'
 
 import { cn } from '@app/utils/cn'
 
-export interface relativeTimeProps {
+export interface RelativeTimeProps {
   value: string
   className?: string
   options?: DateTimeOptions
 }
 
-export function RelativeTime({ value, options, className }: relativeTimeProps) {
+export function RelativeTime({ value, options, className }: RelativeTimeProps) {
   return (
     <p
       className={cn('text-primary-foreground/80 whitespace-nowrap', className)}
