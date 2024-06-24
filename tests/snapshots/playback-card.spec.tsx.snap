@@ -1,0 +1,1416 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PlaybackCard > should match snapshot as disabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+      >
+        <div
+          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        >
+          <div>
+            <img
+              alt=""
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="0"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+              style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+              width="0"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          >
+            <h3
+              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            >
+              <p
+                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              >
+                Track 1
+              </p>
+              <p
+                class="text-neutral-300 truncate max-w-[380px]"
+              >
+                Darkthrone
+              </p>
+            </h3>
+            <div
+              class="flex justify-between items-center w-full"
+            >
+              <div
+                class="flex gap-2 items-center"
+              >
+                <div
+                  class="w-[28px] h-[28px] relative overflow-hidden"
+                >
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                  />
+                </div>
+                <button
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                  disabled=""
+                >
+                  <svg
+                    class="ml-[1px]"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex flex-row gap-2 min-w-max"
+              >
+                <button
+                  data-state="closed"
+                >
+                  <a
+                    href="https://spotify.com"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      class="min-w-[20px] h-[20px]"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                      srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+    >
+      <div
+        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+      >
+        <div>
+          <img
+            alt=""
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="0"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+            style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+            width="0"
+          />
+          <div
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+        >
+          <h3
+            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+          >
+            <p
+              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+            >
+              Track 1
+            </p>
+            <p
+              class="text-neutral-300 truncate max-w-[380px]"
+            >
+              Darkthrone
+            </p>
+          </h3>
+          <div
+            class="flex justify-between items-center w-full"
+          >
+            <div
+              class="flex gap-2 items-center"
+            >
+              <div
+                class="w-[28px] h-[28px] relative overflow-hidden"
+              >
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                />
+              </div>
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                disabled=""
+              >
+                <svg
+                  class="ml-[1px]"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-row gap-2 min-w-max"
+            >
+              <button
+                data-state="closed"
+              >
+                <a
+                  href="https://spotify.com"
+                  target="_blank"
+                >
+                  <img
+                    alt=""
+                    class="min-w-[20px] h-[20px]"
+                    data-nimg="1"
+                    decoding="async"
+                    height="20"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                    style="color: transparent;"
+                    width="20"
+                  />
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+      >
+        <div
+          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        >
+          <div>
+            <img
+              alt=""
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="0"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+              style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+              width="0"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          >
+            <h3
+              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            >
+              <p
+                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              >
+                Track 1
+              </p>
+              <p
+                class="text-neutral-300 truncate max-w-[380px]"
+              >
+                Darkthrone
+              </p>
+            </h3>
+            <div
+              class="flex justify-between items-center w-full"
+            >
+              <div
+                class="flex gap-2 items-center"
+              >
+                <div
+                  class="w-[28px] h-[28px] relative overflow-hidden"
+                >
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                  />
+                </div>
+                <button
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                  disabled=""
+                >
+                  <svg
+                    class="ml-[1px]"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex flex-row gap-2 min-w-max"
+              >
+                <button
+                  data-state="closed"
+                >
+                  <a
+                    href="https://spotify.com"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      class="min-w-[20px] h-[20px]"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                      srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+    >
+      <div
+        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+      >
+        <div>
+          <img
+            alt=""
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="0"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+            style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+            width="0"
+          />
+          <div
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+        >
+          <h3
+            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+          >
+            <p
+              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+            >
+              Track 1
+            </p>
+            <p
+              class="text-neutral-300 truncate max-w-[380px]"
+            >
+              Darkthrone
+            </p>
+          </h3>
+          <div
+            class="flex justify-between items-center w-full"
+          >
+            <div
+              class="flex gap-2 items-center"
+            >
+              <div
+                class="w-[28px] h-[28px] relative overflow-hidden"
+              >
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                />
+              </div>
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                disabled=""
+              >
+                <svg
+                  class="ml-[1px]"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-row gap-2 min-w-max"
+            >
+              <button
+                data-state="closed"
+              >
+                <a
+                  href="https://spotify.com"
+                  target="_blank"
+                >
+                  <img
+                    alt=""
+                    class="min-w-[20px] h-[20px]"
+                    data-nimg="1"
+                    decoding="async"
+                    height="20"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                    style="color: transparent;"
+                    width="20"
+                  />
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="rounded-xl border text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-success border-success"
+      >
+        <div
+          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        >
+          <div>
+            <img
+              alt=""
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="0"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+              style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+              width="0"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          >
+            <h3
+              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            >
+              <p
+                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              >
+                Track 1
+              </p>
+              <p
+                class="text-neutral-300 truncate max-w-[380px]"
+              >
+                Darkthrone
+              </p>
+            </h3>
+            <div
+              class="flex justify-between items-center w-full"
+            >
+              <div
+                class="flex gap-2 items-center"
+              >
+                <div
+                  class="w-[28px] h-[28px] relative overflow-hidden"
+                >
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px]"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px]"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px]"
+                  />
+                </div>
+                <button
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex flex-row gap-2 min-w-max"
+              >
+                <button
+                  data-state="closed"
+                >
+                  <a
+                    href="https://spotify.com"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      class="min-w-[20px] h-[20px]"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                      srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="rounded-xl border text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-success border-success"
+    >
+      <div
+        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+      >
+        <div>
+          <img
+            alt=""
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="0"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+            style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+            width="0"
+          />
+          <div
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+        >
+          <h3
+            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+          >
+            <p
+              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+            >
+              Track 1
+            </p>
+            <p
+              class="text-neutral-300 truncate max-w-[380px]"
+            >
+              Darkthrone
+            </p>
+          </h3>
+          <div
+            class="flex justify-between items-center w-full"
+          >
+            <div
+              class="flex gap-2 items-center"
+            >
+              <div
+                class="w-[28px] h-[28px] relative overflow-hidden"
+              >
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px]"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px]"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px]"
+                />
+              </div>
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-row gap-2 min-w-max"
+            >
+              <button
+                data-state="closed"
+              >
+                <a
+                  href="https://spotify.com"
+                  target="_blank"
+                >
+                  <img
+                    alt=""
+                    class="min-w-[20px] h-[20px]"
+                    data-nimg="1"
+                    decoding="async"
+                    height="20"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                    style="color: transparent;"
+                    width="20"
+                  />
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`PlaybackCard > should match snapshot as paused 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+      >
+        <div
+          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        >
+          <div>
+            <img
+              alt=""
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="0"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+              style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+              width="0"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          >
+            <h3
+              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            >
+              <p
+                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              >
+                Track 1
+              </p>
+              <p
+                class="text-neutral-300 truncate max-w-[380px]"
+              >
+                Darkthrone
+              </p>
+            </h3>
+            <div
+              class="flex justify-between items-center w-full"
+            >
+              <div
+                class="flex gap-2 items-center"
+              >
+                <div
+                  class="w-[28px] h-[28px] relative overflow-hidden"
+                >
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px]"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px]"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px]"
+                  />
+                </div>
+                <button
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                >
+                  <svg
+                    class="ml-[1px]"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex flex-row gap-2 min-w-max"
+              >
+                <button
+                  data-state="closed"
+                >
+                  <a
+                    href="https://spotify.com"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      class="min-w-[20px] h-[20px]"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                      srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+    >
+      <div
+        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+      >
+        <div>
+          <img
+            alt=""
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="0"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+            style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+            width="0"
+          />
+          <div
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+        >
+          <h3
+            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+          >
+            <p
+              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+            >
+              Track 1
+            </p>
+            <p
+              class="text-neutral-300 truncate max-w-[380px]"
+            >
+              Darkthrone
+            </p>
+          </h3>
+          <div
+            class="flex justify-between items-center w-full"
+          >
+            <div
+              class="flex gap-2 items-center"
+            >
+              <div
+                class="w-[28px] h-[28px] relative overflow-hidden"
+              >
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px]"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px]"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px]"
+                />
+              </div>
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+              >
+                <svg
+                  class="ml-[1px]"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-row gap-2 min-w-max"
+            >
+              <button
+                data-state="closed"
+              >
+                <a
+                  href="https://spotify.com"
+                  target="_blank"
+                >
+                  <img
+                    alt=""
+                    class="min-w-[20px] h-[20px]"
+                    data-nimg="1"
+                    decoding="async"
+                    height="20"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                    style="color: transparent;"
+                    width="20"
+                  />
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`PlaybackCard > should match snapshot as resumed 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="rounded-xl border text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-success border-success"
+      >
+        <div
+          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        >
+          <div>
+            <img
+              alt=""
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="0"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+              style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+              width="0"
+            />
+            <div
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          >
+            <h3
+              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            >
+              <p
+                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              >
+                Track 1
+              </p>
+              <p
+                class="text-neutral-300 truncate max-w-[380px]"
+              >
+                Darkthrone
+              </p>
+            </h3>
+            <div
+              class="flex justify-between items-center w-full"
+            >
+              <div
+                class="flex gap-2 items-center"
+              >
+                <div
+                  class="w-[28px] h-[28px] relative overflow-hidden"
+                >
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                  />
+                  <span
+                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                  />
+                </div>
+                <button
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="flex flex-row gap-2 min-w-max"
+              >
+                <button
+                  data-state="closed"
+                >
+                  <a
+                    href="https://spotify.com"
+                    target="_blank"
+                  >
+                    <img
+                      alt=""
+                      class="min-w-[20px] h-[20px]"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                      srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="rounded-xl border text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-success border-success"
+    >
+      <div
+        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+      >
+        <div>
+          <img
+            alt=""
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="0"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=16&q=75 1x"
+            style="color: transparent; min-height: 0px; max-height: 0px; min-width: 0px; max-width: 0px; object-fit: cover;"
+            width="0"
+          />
+          <div
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+        >
+          <h3
+            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+          >
+            <p
+              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+            >
+              Track 1
+            </p>
+            <p
+              class="text-neutral-300 truncate max-w-[380px]"
+            >
+              Darkthrone
+            </p>
+          </h3>
+          <div
+            class="flex justify-between items-center w-full"
+          >
+            <div
+              class="flex gap-2 items-center"
+            >
+              <div
+                class="w-[28px] h-[28px] relative overflow-hidden"
+              >
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                />
+                <span
+                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                />
+              </div>
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-row gap-2 min-w-max"
+            >
+              <button
+                data-state="closed"
+              >
+                <a
+                  href="https://spotify.com"
+                  target="_blank"
+                >
+                  <img
+                    alt=""
+                    class="min-w-[20px] h-[20px]"
+                    data-nimg="1"
+                    decoding="async"
+                    height="20"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                    style="color: transparent;"
+                    width="20"
+                  />
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
