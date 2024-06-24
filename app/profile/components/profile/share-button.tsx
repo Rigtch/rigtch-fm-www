@@ -1,3 +1,5 @@
+'use client'
+
 import { Share1Icon } from '@radix-ui/react-icons'
 
 import { Button } from '@app/components/ui/button'

@@ -1,9 +1,9 @@
-'use client'
+import type { HTMLAttributes } from 'react'
 
 import { ProfileAvatar } from './profile-avatar'
 import { ShareButton } from './share-button'
 
-import { Profile } from '@app/api/types'
+import type { Profile } from '@app/api/types'
 import { SpotifyLink, FollowersCount } from '@app/components/common'
 import {
   Card,
@@ -11,15 +11,27 @@ import {
   CardHeader,
   CardTitle,
 } from '@app/components/ui/card'
-import { PlaybackCard } from '@app/profile/components/playback'
+import { getImage } from '@app/utils/get-image'
 
-export function ProfileCard({ displayName, images, followers, href }: Profile) {
+export type ProfileCardProps = Pick<
+  Profile,
+  'displayName' | 'images' | 'followers' | 'href'
+> &
+  Pick<HTMLAttributes<HTMLDivElement>, 'children'>
+
+export function ProfileCard({
+  displayName,
+  images,
+  followers,
+  href,
+  children,
+}: ProfileCardProps) {
   return (
     <Card className="min-w-[75%]">
       <CardHeader className="lg:flex-row justify-between lg:items-center gap-8 p-4">
         <div className="flex flex-wrap items-center sm:justify-start justify-center gap-4 p-4 ">
           <ProfileAvatar
-            src={images?.[1]?.url}
+            src={getImage(images, 128)}
             displayName={displayName}
             size="lg"
           />
@@ -43,7 +55,7 @@ export function ProfileCard({ displayName, images, followers, href }: Profile) {
           </div>
         </div>
 
-        <PlaybackCard />
+        {children}
       </CardHeader>
     </Card>
   )
