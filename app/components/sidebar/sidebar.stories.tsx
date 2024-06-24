@@ -16,9 +16,6 @@ export default {
         query: {
           example: 'value',
         },
-        params: {
-          [USER_ID]: '1',
-        },
         segments: [[USER_ID, '1']],
       },
     },
