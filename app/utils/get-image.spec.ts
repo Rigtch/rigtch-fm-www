@@ -1,6 +1,6 @@
 import { getImage } from './get-image'
 
-import { Image } from '@app/api/types'
+import type { Image } from '@app/api/types'
 
 describe('getImage', () => {
   let imagesMock: Image[]
@@ -18,6 +18,10 @@ describe('getImage', () => {
         height: 128,
       },
     ]
+  })
+
+  test('should return empty string if item is undefined', () => {
+    expect(getImage(undefined)).toEqual('')
   })
 
   test('should return image with width greater than or equal to minWidth', () => {
