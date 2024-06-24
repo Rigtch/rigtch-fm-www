@@ -7,7 +7,7 @@ type ProfileAvatarType = typeof ProfileAvatar
 type ProfileAvatarStory = StoryObj<ProfileAvatarType>
 
 export default {
-  title: 'Components/Profile/Avatar',
+  title: 'Components/Profile/ProfileAvatar',
   component: ProfileAvatar,
   argTypes: {
     size: {
