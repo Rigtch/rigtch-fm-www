@@ -1,9 +1,7 @@
 'use client'
 
-import { useParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-import { PlaybackCardSkeleton } from './playback-card.skeleton'
 import { ToggleStateButton } from './toggle-state-button'
 import { AudioBars } from './audio-bars'
 
@@ -16,43 +14,36 @@ import {
   CardTitle,
 } from '@app/components/ui/card'
 import { Skeleton } from '@app/components/ui/skeleton'
-import { USER_ID } from '@app/constants'
-import { useAuthCookies } from '@app/hooks/use-auth-cookies'
-import { usePlaybackStateContext } from '@app/profile/context/playback-state'
 import { formatArtists } from '@app/profile/utils/formatters'
 import { cn } from '@app/utils/cn'
+import type { Device, Track } from '@app/api/types'
 
-export function PlaybackCard() {
-  const { data, isPlaying, toggleState } = usePlaybackStateContext()
+export interface PlaybackCardProps {
+  isPlaying?: boolean
+  isPlayingOptimistic?: boolean
+  track: Track
+  device?: Device
+  userId?: string
+  routeUserId?: string
+  handleToggleState: () => Promise<void>
+}
+
+export function PlaybackCard({
+  isPlaying = false,
+  isPlayingOptimistic = false,
+  track: { album, artists, ...track },
+  device,
+  userId,
+  routeUserId,
+  handleToggleState,
+}: PlaybackCardProps) {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
-  const [isPlayingState, setIsPlayingState] = useState(isPlaying)
-  const { userId } = useAuthCookies()
-  const params = useParams()
-
-  const routeUserId = params[USER_ID].toString()
-
-  useEffect(() => {
-    setIsPlayingState(isPlaying)
-  }, [isPlaying])
-
-  if (!data?.track) return <PlaybackCardSkeleton />
-
-  const {
-    device,
-    track: { album, ...track },
-  } = data
-
-  async function handleToggleState() {
-    setIsPlayingState(isPlaying => !isPlaying)
-
-    await toggleState(isPlaying)
-  }
 
   return (
     <Card
       className={cn(
         'p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5',
-        isPlayingState ? 'bg-success border-success' : 'bg-neutral-800/50 '
+        isPlayingOptimistic ? 'bg-success border-success' : 'bg-neutral-800/50 '
       )}
     >
       <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
@@ -85,7 +76,7 @@ export function PlaybackCard() {
             </p>
 
             <p className="text-neutral-300 truncate max-w-[380px]">
-              {formatArtists(track.artists)}
+              {formatArtists(artists)}
             </p>
           </CardTitle>
 
@@ -94,7 +85,7 @@ export function PlaybackCard() {
               <AudioBars isPlaying={isPlaying} />
 
               <ToggleStateButton
-                isPlaying={isPlayingState}
+                isPlaying={isPlayingOptimistic}
                 isDeviceAvailable={!!device}
                 hasAccess={routeUserId === userId}
                 toggleState={handleToggleState}

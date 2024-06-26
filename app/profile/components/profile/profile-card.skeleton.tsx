@@ -1,4 +1,4 @@
-import { PlaybackCard } from '../playback'
+import { Playback } from '../playback'
 
 import { ProfileAvatarSkeleton } from './profile-avatar.skeleton'
 
@@ -24,7 +24,7 @@ export function ProfileCardSkeleton() {
           </div>
         </div>
 
-        <PlaybackCard />
+        <Playback />
       </CardHeader>
     </Card>
   )

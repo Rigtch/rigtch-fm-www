@@ -1,5 +1,5 @@
 import {
-  ReactNode,
+  type ReactNode,
   createContext,
   useContext,
   useEffect,
@@ -7,7 +7,7 @@ import {
 } from 'react'
 import { useRouter } from 'next/navigation'
 
-import { Device, Track } from '@app/api/types'
+import type { Device, Track } from '@app/api/types'
 import {
   useRecentlyPlayedQuery,
   usePlaybackStateQuery,
