@@ -63,7 +63,7 @@ export function ItemsList({
             <CarouselContent>
               {carouselItems.slice(0, 3).map(item => (
                 <CarouselItem key={item.id}>
-                  <ItemTopCard {...item} carousel />
+                  <ItemTopCard {...item} isCarousel />
                 </CarouselItem>
               ))}
             </CarouselContent>

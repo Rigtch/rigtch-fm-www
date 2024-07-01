@@ -29,7 +29,7 @@ export type ItemTopCardProps = Simplify<
   ItemTopCardConditionalProps &
     Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
       position?: number
-      carousel?: boolean
+      isCarousel?: boolean
     }
 >
 
@@ -41,7 +41,7 @@ export function ItemTopCard({
   genres,
   artists,
   album,
-  carousel,
+  isCarousel,
 }: ItemTopCardProps) {
   const stars = [1, 2, 3, 2, 1]
 
@@ -49,8 +49,8 @@ export function ItemTopCard({
     <div
       className={cn(
         'w-full flex flex-col justify-start gap-2 h-full relative',
-        !carousel && position === 1 && '-top-16 lg:-top-24',
-        !carousel && position === 2 && '-top-8 lg:-top-12'
+        !isCarousel && position === 1 && '-top-16 lg:-top-24',
+        !isCarousel && position === 2 && '-top-8 lg:-top-12'
       )}
     >
       <header className="w-full flex flex-col gap-2 items-center p-0 m-0">
@@ -80,7 +80,7 @@ export function ItemTopCard({
             <div
               className={cn(
                 'flex gap-2 flex-wrap justify-center h-full',
-                carousel ? 'flex-col' : 'flex-row'
+                isCarousel ? 'flex-col' : 'flex-row'
               )}
             >
               {genres.slice(0, 3).map((genre, index) => (

@@ -22,7 +22,7 @@ export default {
     position: {
       control: 'number',
     },
-    carousel: {
+    isCarousel: {
       control: 'boolean',
     },
   },
