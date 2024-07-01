@@ -31,7 +31,7 @@ export function ProfileCard({
       <CardHeader className="lg:flex-row justify-between lg:items-center gap-8 p-4">
         <div className="flex flex-wrap items-center sm:justify-start justify-center gap-4 p-4 ">
           <ProfileAvatar
-            src={getImage(images, 128)}
+            src={images.length > 0 ? getImage(images, 128) : undefined}
             displayName={displayName}
             size="lg"
           />
