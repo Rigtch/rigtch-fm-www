@@ -4,11 +4,10 @@ import { validateId } from '@app/utils/validate-id'
 import { TIME_RANGE, USER_ID } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { ToggleTimeRange } from '@app/components/common/'
-import { GenreChip } from '@app/components/items/genre'
 import { getTopGenres } from '@app/api/fetchers'
-import { DefaultSection } from '@app/sections'
 import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
+import { TopGenresSection } from '@app/profile/sections'
 
 export const runtime = 'edge'
 
@@ -34,15 +33,7 @@ export default async function ProfileTopGenresPage({
         <ToggleTimeRange initialValue={timeRange} />
       </div>
 
-      <DefaultSection title="Top Genres" className="gap-12 items-center">
-        <div className="flex flex-row flex-wrap gap-2">
-          {genres.map(genre => (
-            <div key={genre}>
-              <GenreChip genre={genre} />
-            </div>
-          ))}
-        </div>
-      </DefaultSection>
+      <TopGenresSection items={genres} />
     </>
   )
 }
