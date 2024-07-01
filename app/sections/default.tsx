@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 import { cn } from '@app/utils/cn'
 
