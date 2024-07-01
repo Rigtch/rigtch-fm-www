@@ -6,6 +6,33 @@ import { View } from '@app/types'
 import { tracksMock } from '@tests/mocks/track'
 import { artistEntitiesMocks } from '@tests/mocks/artist'
 
+Object.defineProperty(window, 'IntersectionObserver', {
+  writable: true,
+  value: vi.fn().mockImplementation(() => ({
+    observe: vi.fn(),
+    unobserve: vi.fn(),
+    disconnect: vi.fn(),
+  })),
+})
+
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: vi.fn().mockReturnValue({
+    matches: false,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+  }),
+})
+
+Object.defineProperty(window, 'ResizeObserver', {
+  writable: true,
+  value: vi.fn().mockReturnValue({
+    observe: vi.fn(),
+    unobserve: vi.fn(),
+    disconnect: vi.fn(),
+  }),
+})
+
 describe('ItemsSection', () => {
   const title = 'Top Items'
 
