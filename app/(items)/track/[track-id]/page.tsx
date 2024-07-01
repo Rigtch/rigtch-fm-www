@@ -1,12 +1,9 @@
-import Image from 'next/image'
-
-import { TrackPageProps } from '@app/(items)/types'
+import type { TrackPageProps } from '@app/(items)/types'
 import { getTrack } from '@app/api/fetchers/get-track'
 import { LinkButton } from '@app/components/common/buttons'
-import { SpotifyLink } from '@app/components/common'
 import { TRACK_ID } from '@app/constants'
-import { getImage } from '@app/utils/get-image'
 import { validateId } from '@app/utils/validate-id'
+import { ItemHeaderSection } from '@app/(items)/sections'
 
 export default async function TrackPage({ params }: TrackPageProps) {
   const id = validateId(params[TRACK_ID])
@@ -22,38 +19,20 @@ export default async function TrackPage({ params }: TrackPageProps) {
 
   return (
     <div className="w-full flex md:flex-row flex-col p-12 gap-8">
-      <Image
-        src={getImage(images, 200)}
-        className="rounded-xl md:rounded-md w-full md:h-[200px] md:w-[200px]"
-        width="200"
-        height="200"
-        alt={name}
-      />
-
-      <div className="flex flex-col gap-6 justify-center">
+      <ItemHeaderSection
+        name={name}
+        images={images}
+        artists={artists}
+        href={href}
+      >
         <div className="flex flex-col">
-          <span className="text-5xl">{name}</span>
+          <span className="text-lg">From album:</span>
 
-          <div className="flex flex-row gap-2">
-            {artists.map(({ name, id }, index) => (
-              <LinkButton
-                key={id}
-                href={`/artist/${id}`}
-                className="text-primary-foreground/80"
-              >
-                {name}
-                {index + 1 < artists.length && ','}
-              </LinkButton>
-            ))}
-          </div>
+          <LinkButton href={`/album/${album.id}`} className="justify-start">
+            {album.name}
+          </LinkButton>
         </div>
-
-        <div className="flex flex-row items-center gap-2 text-xl">
-          <SpotifyLink href={href} />
-          From album:
-          <LinkButton href={`/album/${album.id}`}>{album.name}</LinkButton>
-        </div>
-      </div>
+      </ItemHeaderSection>
     </div>
   )
 }
