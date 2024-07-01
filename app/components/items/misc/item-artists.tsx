@@ -13,7 +13,7 @@ export interface ItemArtistProps extends Pick<LinkButtonProps, 'className'> {
 
 export function ItemArtists({ artists, className }: ItemArtistProps) {
   return (
-    <div>
+    <>
       {artists.map(({ name, id }, index) => (
         <span key={name}>
           <LinkButton
@@ -29,6 +29,6 @@ export function ItemArtists({ artists, className }: ItemArtistProps) {
           {index !== artists.length - 1 && <span>, </span>}
         </span>
       ))}
-    </div>
+    </>
   )
 }
