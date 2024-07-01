@@ -4,7 +4,7 @@ export interface Profile {
   id: string
   displayName: string
   email: string
-  images?: Image[] | []
+  images: Image[] | []
   country: string
   href: string
   followers: number
