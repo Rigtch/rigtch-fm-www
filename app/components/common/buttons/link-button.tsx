@@ -1,5 +1,6 @@
-import Link, { LinkProps } from 'next/link'
-import { ReactNode } from 'react'
+import type { LinkProps } from 'next/link'
+import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 import { Button } from '../../ui/button'
 
