@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { TopGenresSection } from './top-genres'
+import { TopGenresSection } from './top-genres-section'
 
 import { genresExample } from '@app/components/items/examples'
 
