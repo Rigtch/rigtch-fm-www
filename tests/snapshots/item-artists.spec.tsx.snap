@@ -5,20 +5,6 @@ exports[`ItemArtists > should match snapshot with artist entity 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        <span>
-          <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-            href="/artist/123"
-          >
-            Darkthrone
-          </a>
-        </span>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div>
       <span>
         <a
           class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
@@ -28,6 +14,16 @@ exports[`ItemArtists > should match snapshot with artist entity 1`] = `
         </a>
       </span>
     </div>
+  </body>,
+  "container": <div>
+    <span>
+      <a
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+        href="/artist/123"
+      >
+        Darkthrone
+      </a>
+    </span>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -88,53 +84,6 @@ exports[`ItemArtists > should match snapshot with multiple artist entities 1`] =
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        <span>
-          <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-            href="/artist/123"
-          >
-            Darkthrone
-          </a>
-          <span>
-            , 
-          </span>
-        </span>
-        <span>
-          <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-            href="/artist/2"
-          >
-            Darkthrone
-          </a>
-          <span>
-            , 
-          </span>
-        </span>
-        <span>
-          <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-            href="/artist/3"
-          >
-            Darkthrone
-          </a>
-          <span>
-            , 
-          </span>
-        </span>
-        <span>
-          <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-            href="/artist/4"
-          >
-            Darkthrone
-          </a>
-        </span>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div>
       <span>
         <a
           class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
@@ -177,6 +126,49 @@ exports[`ItemArtists > should match snapshot with multiple artist entities 1`] =
         </a>
       </span>
     </div>
+  </body>,
+  "container": <div>
+    <span>
+      <a
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+        href="/artist/123"
+      >
+        Darkthrone
+      </a>
+      <span>
+        , 
+      </span>
+    </span>
+    <span>
+      <a
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+        href="/artist/2"
+      >
+        Darkthrone
+      </a>
+      <span>
+        , 
+      </span>
+    </span>
+    <span>
+      <a
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+        href="/artist/3"
+      >
+        Darkthrone
+      </a>
+      <span>
+        , 
+      </span>
+    </span>
+    <span>
+      <a
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+        href="/artist/4"
+      >
+        Darkthrone
+      </a>
+    </span>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
