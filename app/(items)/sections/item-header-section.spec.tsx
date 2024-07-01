@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { ItemHeaderSection } from './item-header'
+import { ItemHeaderSection } from './item-header-section'
 
 import { imagesMock } from '@tests/mocks/images'
 import { trackNameMock } from '@tests/mocks/track'

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ItemsSection } from './items'
-import { TopTracksSkeletonSection } from './top-tracks.skeleton'
-import { TopArtistsSkeletonSection } from './top-artists.skeleton'
+import { ItemsSection } from './items-section'
+import { TopTracksSkeletonSection } from './top-tracks-section.skeleton'
+import { TopArtistsSkeletonSection } from './top-artists-section.skeleton'
 
 import { View } from '@app/types'
 import { trackExamples } from '@app/components/items/examples'

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { ItemsSection } from './items'
+import { ItemsSection } from './items-section'
 
 import { View } from '@app/types'
 import { tracksMock } from '@tests/mocks/track'

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ItemHeaderSection } from './item-header'
+import { ItemHeaderSection } from './item-header-section'
 
 import {
   albumExample,
