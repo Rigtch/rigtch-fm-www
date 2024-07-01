@@ -7,10 +7,9 @@ import type { ProfilePageProps } from '@app/profile/types'
 import { TIME_RANGE, USER_ID } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { SeeMoreButton } from '@app/components/common/buttons'
-import { DefaultSection } from '@app/sections'
 import { getTopGenres } from '@app/api/fetchers'
 import { getServerToken } from '@app/auth/utils'
-import { GenreChip } from '@app/components/items/genre'
+import { TopGenresSection } from '@app/profile/sections'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,
@@ -29,16 +28,8 @@ export default async function ProfileTopGenresSubPage({
   })
 
   return (
-    <DefaultSection title="Top Genres" className="gap-12">
-      <div className="flex flex-row flex-wrap gap-2">
-        {genres.map(genre => (
-          <div key={genre}>
-            <GenreChip genre={genre} />
-          </div>
-        ))}
-      </div>
-
+    <TopGenresSection items={genres}>
       <SeeMoreButton href={`/profile/${userId}/top/genres`} />
-    </DefaultSection>
+    </TopGenresSection>
   )
 }

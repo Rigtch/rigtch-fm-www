@@ -1,5 +1,6 @@
 export * from './items'
 export * from './history'
+export * from './top-genres'
 
 export * from './top-genres.skeleton'
 export * from './analysis.skeleton'
