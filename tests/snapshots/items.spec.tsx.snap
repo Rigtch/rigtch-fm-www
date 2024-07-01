@@ -1209,16 +1209,14 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           Track 1
                         </span>
                       </a>
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </div>
                     <div
                       class="flex flex-col justify-center items-center gap-4"
@@ -1345,16 +1343,14 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           Track 1
                         </span>
                       </a>
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </div>
                     <div
                       class="flex flex-col justify-center items-center gap-4"
@@ -1485,16 +1481,14 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           Track 1
                         </span>
                       </a>
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </div>
                     <div
                       class="flex flex-col justify-center items-center gap-4"
@@ -1656,16 +1650,14 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         Track 1
                       </span>
                     </a>
-                    <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                    </div>
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </div>
                   <div
                     class="flex flex-col justify-center items-center gap-4"
@@ -1792,16 +1784,14 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         Track 1
                       </span>
                     </a>
-                    <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                    </div>
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </div>
                   <div
                     class="flex flex-col justify-center items-center gap-4"
@@ -1932,16 +1922,14 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         Track 1
                       </span>
                     </a>
-                    <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                    </div>
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </div>
                   <div
                     class="flex flex-col justify-center items-center gap-4"
@@ -2162,16 +2150,14 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       <div
                         class="flex justify-between w-full items-center"
                       >
-                        <div>
-                          <span>
-                            <a
-                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                              href="/artist/123"
-                            >
-                              Darkthrone
-                            </a>
-                          </span>
-                        </div>
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </div>
                     </div>
                   </header>
@@ -2247,16 +2233,14 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       <div
                         class="flex justify-between w-full items-center"
                       >
-                        <div>
-                          <span>
-                            <a
-                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                              href="/artist/123"
-                            >
-                              Darkthrone
-                            </a>
-                          </span>
-                        </div>
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </div>
                     </div>
                   </header>
@@ -2332,16 +2316,14 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       <div
                         class="flex justify-between w-full items-center"
                       >
-                        <div>
-                          <span>
-                            <a
-                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                              href="/artist/123"
-                            >
-                              Darkthrone
-                            </a>
-                          </span>
-                        </div>
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </div>
                     </div>
                   </header>
@@ -2440,16 +2422,14 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                     <div
                       class="flex justify-between w-full items-center"
                     >
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </div>
                   </div>
                 </header>
@@ -2525,16 +2505,14 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                     <div
                       class="flex justify-between w-full items-center"
                     >
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </div>
                   </div>
                 </header>
@@ -2610,16 +2588,14 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                     <div
                       class="flex justify-between w-full items-center"
                     >
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </div>
                   </div>
                 </header>
@@ -2770,16 +2746,14 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       <div
                         class="flex justify-between w-full items-center"
                       >
-                        <div>
-                          <span>
-                            <a
-                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                              href="/artist/123"
-                            >
-                              Darkthrone
-                            </a>
-                          </span>
-                        </div>
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                         <p
                           class="text-primary-foreground/80 whitespace-nowrap"
                         >
@@ -2855,16 +2829,14 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       <div
                         class="flex justify-between w-full items-center"
                       >
-                        <div>
-                          <span>
-                            <a
-                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                              href="/artist/123"
-                            >
-                              Darkthrone
-                            </a>
-                          </span>
-                        </div>
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                         <p
                           class="text-primary-foreground/80 whitespace-nowrap"
                         >
@@ -2940,16 +2912,14 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       <div
                         class="flex justify-between w-full items-center"
                       >
-                        <div>
-                          <span>
-                            <a
-                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                              href="/artist/123"
-                            >
-                              Darkthrone
-                            </a>
-                          </span>
-                        </div>
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                         <p
                           class="text-primary-foreground/80 whitespace-nowrap"
                         >
@@ -3048,16 +3018,14 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                     <div
                       class="flex justify-between w-full items-center"
                     >
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
@@ -3133,16 +3101,14 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                     <div
                       class="flex justify-between w-full items-center"
                     >
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
@@ -3218,16 +3184,14 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                     <div
                       class="flex justify-between w-full items-center"
                     >
-                      <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
-                        </span>
-                      </div>
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
