@@ -3,6 +3,7 @@ import { DefaultSection } from '@app/sections'
 import type { ArtistEntity, TrackEntity } from '@app/api/types'
 import { ItemsList } from '@app/components/items/list'
 import { View } from '@app/types'
+import { NoDataAlert } from '@app/components/common'
 
 export type ItemsSectionProps = DefaultSectionProps & {
   items: ArtistEntity[] | TrackEntity[]
@@ -18,7 +19,11 @@ export function ItemsSection({
 }: ItemsSectionProps) {
   return (
     <DefaultSection title={title} {...props}>
-      <ItemsList items={items} isTop={view === View.CARD} />
+      {items.length > 0 && (
+        <ItemsList items={items} isTop={view === View.CARD} />
+      )}
+
+      {items.length === 0 && <NoDataAlert />}
 
       {children}
     </DefaultSection>

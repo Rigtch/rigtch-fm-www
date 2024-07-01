@@ -51,4 +51,12 @@ describe('ItemsSection', () => {
 
     expect(view).toMatchSnapshot()
   })
+
+  test('should match snapshot with no data', () => {
+    const view = render(
+      <ItemsSection view={View.CARD} title={title} items={[]} />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
 })
