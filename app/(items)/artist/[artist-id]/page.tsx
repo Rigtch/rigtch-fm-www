@@ -4,12 +4,12 @@ import {
   getArtistAlbums,
   getArtistTopTracks,
 } from '@app/api/fetchers'
-import { SpotifyLink, FollowersCount } from '@app/components/common'
 import { ItemsList } from '@app/components/items/list'
 import { ItemCard } from '@app/components/items/cards/item-card'
 import { ARTIST_ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
-import { ItemImage } from '@app/components/items/misc'
+import { ItemHeaderSection } from '@app/(items)/sections'
+import { GenreChip } from '@app/components/items/genre'
 
 export default async function ArtistPage({ params }: ArtistPageProps) {
   const id = validateId(params[ARTIST_ID])
@@ -27,29 +27,20 @@ export default async function ArtistPage({ params }: ArtistPageProps) {
   )
 
   return (
-    <div className="flex flex-col p-12 gap-8 md:gap-0">
-      <div className="flex flex-row flex-wrap">
-        <div className="w-full md:w-1/2 flex flex-row flex-wrap p-12 gap-8">
-          <ItemImage images={images} size={200} alt={name} />
+    <div className="flex flex-col p-12 gap-8">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col gap-4">
+          <ItemHeaderSection
+            name={name}
+            images={images}
+            href={href}
+            followers={followers}
+          />
 
-          <div className="flex flex-col gap-6 justify-start">
-            <div className="flex flex-col gap-2">
-              <span className="text-3xl md:text-4xl">{name}</span>
-
-              <div className="flex flex-row items-center gap-2 mr-4">
-                <SpotifyLink href={href} />
-
-                <FollowersCount value={followers} />
-              </div>
-            </div>
-
-            <div className="flex flex-row flex-wrap justify-start gap-4">
-              {genres.slice(0, 3).map((genre, index) => (
-                <div className="rounded-xl bg-neutral-800 p-2" key={index}>
-                  {genre}
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-row flex-wrap justify-start gap-2">
+            {genres.slice(0, 3).map((genre, index) => (
+              <GenreChip genre={genre} key={index} />
+            ))}
           </div>
         </div>
 

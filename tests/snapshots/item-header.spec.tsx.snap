@@ -1,0 +1,636 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+      >
+        <img
+          alt="Track 1"
+          class="rounded-md"
+          data-nimg="1"
+          decoding="async"
+          height="200"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+          style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+          width="200"
+        />
+        <div
+          class="flex flex-col gap-2 justify-around"
+        >
+          <div
+            class="flex flex-col gap-2"
+          >
+            <span
+              class="text-3xl md:text-4xl lg:text-5xl"
+            >
+              Track 1
+            </span>
+            <div
+              class="flex items-center mr-4 gap-2"
+            >
+              <button
+                data-state="closed"
+              >
+                <a
+                  href=""
+                  target="_blank"
+                >
+                  <img
+                    alt=""
+                    class="min-w-[20px] h-[20px]"
+                    data-nimg="1"
+                    decoding="async"
+                    height="20"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                    style="color: transparent;"
+                    width="20"
+                  />
+                </a>
+              </button>
+              <span
+                class="text-xl w-full"
+              >
+                by 
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/123"
+                  >
+                    Darkthrone
+                  </a>
+                  <span>
+                    , 
+                  </span>
+                </span>
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/2"
+                  >
+                    Darkthrone
+                  </a>
+                  <span>
+                    , 
+                  </span>
+                </span>
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/3"
+                  >
+                    Darkthrone
+                  </a>
+                  <span>
+                    , 
+                  </span>
+                </span>
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/4"
+                  >
+                    Darkthrone
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+    >
+      <img
+        alt="Track 1"
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="200"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+        style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+        width="200"
+      />
+      <div
+        class="flex flex-col gap-2 justify-around"
+      >
+        <div
+          class="flex flex-col gap-2"
+        >
+          <span
+            class="text-3xl md:text-4xl lg:text-5xl"
+          >
+            Track 1
+          </span>
+          <div
+            class="flex items-center mr-4 gap-2"
+          >
+            <button
+              data-state="closed"
+            >
+              <a
+                href=""
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  class="min-w-[20px] h-[20px]"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </a>
+            </button>
+            <span
+              class="text-xl w-full"
+            >
+              by 
+              <span>
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                  href="/artist/123"
+                >
+                  Darkthrone
+                </a>
+                <span>
+                  , 
+                </span>
+              </span>
+              <span>
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                  href="/artist/2"
+                >
+                  Darkthrone
+                </a>
+                <span>
+                  , 
+                </span>
+              </span>
+              <span>
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                  href="/artist/3"
+                >
+                  Darkthrone
+                </a>
+                <span>
+                  , 
+                </span>
+              </span>
+              <span>
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                  href="/artist/4"
+                >
+                  Darkthrone
+                </a>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ItemHeaderSection > should match snapshot with children 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+      >
+        <img
+          alt="Track 1"
+          class="rounded-md"
+          data-nimg="1"
+          decoding="async"
+          height="200"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+          style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+          width="200"
+        />
+        <div
+          class="flex flex-col gap-2 justify-around"
+        >
+          <div
+            class="flex flex-col gap-2"
+          >
+            <span
+              class="text-3xl md:text-4xl lg:text-5xl"
+            >
+              Track 1
+            </span>
+            <div
+              class="flex flex-row items-center gap-2 mr-4"
+            >
+              <button
+                data-state="closed"
+              >
+                <a
+                  href=""
+                  target="_blank"
+                >
+                  <img
+                    alt=""
+                    class="min-w-[20px] h-[20px]"
+                    data-nimg="1"
+                    decoding="async"
+                    height="20"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                    style="color: transparent;"
+                    width="20"
+                  />
+                </a>
+              </button>
+              <span
+                class="text-md md:text-xl"
+              >
+                Followers: 
+                100
+              </span>
+            </div>
+          </div>
+          <div>
+            Children
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+    >
+      <img
+        alt="Track 1"
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="200"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+        style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+        width="200"
+      />
+      <div
+        class="flex flex-col gap-2 justify-around"
+      >
+        <div
+          class="flex flex-col gap-2"
+        >
+          <span
+            class="text-3xl md:text-4xl lg:text-5xl"
+          >
+            Track 1
+          </span>
+          <div
+            class="flex flex-row items-center gap-2 mr-4"
+          >
+            <button
+              data-state="closed"
+            >
+              <a
+                href=""
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  class="min-w-[20px] h-[20px]"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </a>
+            </button>
+            <span
+              class="text-md md:text-xl"
+            >
+              Followers: 
+              100
+            </span>
+          </div>
+        </div>
+        <div>
+          Children
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+      >
+        <img
+          alt="Track 1"
+          class="rounded-md"
+          data-nimg="1"
+          decoding="async"
+          height="200"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+          style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+          width="200"
+        />
+        <div
+          class="flex flex-col gap-2 justify-around"
+        >
+          <div
+            class="flex flex-col gap-2"
+          >
+            <span
+              class="text-3xl md:text-4xl lg:text-5xl"
+            >
+              Track 1
+            </span>
+            <div
+              class="flex flex-row items-center gap-2 mr-4"
+            >
+              <button
+                data-state="closed"
+              >
+                <a
+                  href=""
+                  target="_blank"
+                >
+                  <img
+                    alt=""
+                    class="min-w-[20px] h-[20px]"
+                    data-nimg="1"
+                    decoding="async"
+                    height="20"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                    srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                    style="color: transparent;"
+                    width="20"
+                  />
+                </a>
+              </button>
+              <span
+                class="text-md md:text-xl"
+              >
+                Followers: 
+                100
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+    >
+      <img
+        alt="Track 1"
+        class="rounded-md"
+        data-nimg="1"
+        decoding="async"
+        height="200"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=640&q=75 2x"
+        style="color: transparent; min-height: 200px; max-height: 200px; min-width: 200px; max-width: 200px; object-fit: cover;"
+        width="200"
+      />
+      <div
+        class="flex flex-col gap-2 justify-around"
+      >
+        <div
+          class="flex flex-col gap-2"
+        >
+          <span
+            class="text-3xl md:text-4xl lg:text-5xl"
+          >
+            Track 1
+          </span>
+          <div
+            class="flex flex-row items-center gap-2 mr-4"
+          >
+            <button
+              data-state="closed"
+            >
+              <a
+                href=""
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  class="min-w-[20px] h-[20px]"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </a>
+            </button>
+            <span
+              class="text-md md:text-xl"
+            >
+              Followers: 
+              100
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
