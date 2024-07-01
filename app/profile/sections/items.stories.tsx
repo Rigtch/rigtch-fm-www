@@ -46,6 +46,12 @@ export const WithRelativeTime: ItemsSectionStory = {
   },
 }
 
+export const NoData: ItemsSectionStory = {
+  args: {
+    items: [],
+  },
+}
+
 export const TopTracksSkeletonCardView: ItemsSectionStory = {
   render: () => <TopTracksSkeletonSection />,
 }
