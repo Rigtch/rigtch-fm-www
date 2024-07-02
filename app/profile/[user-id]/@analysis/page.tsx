@@ -6,7 +6,7 @@ import { validateId } from '@app/utils/validate-id'
 import { getAnalysis } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
-import { ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { USER_ID } from '@app/constants'
 import { getServerToken } from '@app/auth/utils'
 
@@ -85,7 +85,7 @@ export default async function ProfileAnalysisSubPage({
       title: 'Tempo',
       description:
         'The overall estimated tempo of your music in beats per minute (BPM).',
-      value: (tempo / 260) * 100,
+      value: tempo,
     },
   ]
 
