@@ -74,16 +74,16 @@ describe('ItemsListElement', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should match snapshot with playTime', () => {
+  test('should match snapshot with playtime', () => {
     const view = render(
       <ItemsListElement
         id={idMock}
         name={trackNameMock}
         href={hrefMock}
         images={imagesMock}
-        playTime={playTimeExample}
+        playtime={playtimeExample}
         position={1}
-        maxPlayTime={maxPlayTimeExample}
+        maxPlaytime={maxPlaytimeExample}
       />
     )
 
