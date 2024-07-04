@@ -1692,7 +1692,7 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
                 <div
                   aria-valuemax="100"
                   aria-valuemin="0"
-                  class="relative rounded-full *:transition-all *:duration-700 *:ease-in-out w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12"
+                  class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
                   data-max="100"
                   data-state="indeterminate"
                   role="progressbar"
@@ -1773,7 +1773,7 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
               <div
                 aria-valuemax="100"
                 aria-valuemin="0"
-                class="relative rounded-full *:transition-all *:duration-700 *:ease-in-out w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12"
+                class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
                 data-max="100"
                 data-state="indeterminate"
                 role="progressbar"
@@ -1911,7 +1911,7 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
                 <div
                   aria-valuemax="100"
                   aria-valuemin="0"
-                  class="relative rounded-full *:transition-all *:duration-700 *:ease-in-out w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12"
+                  class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
                   data-max="100"
                   data-state="indeterminate"
                   role="progressbar"
@@ -1992,7 +1992,7 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
               <div
                 aria-valuemax="100"
                 aria-valuemin="0"
-                class="relative rounded-full *:transition-all *:duration-700 *:ease-in-out w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12"
+                class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
                 data-max="100"
                 data-state="indeterminate"
                 role="progressbar"
