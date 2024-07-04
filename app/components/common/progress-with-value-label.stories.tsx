@@ -54,3 +54,12 @@ export const LargeProgress: ProgressWithValueLabelStory = {
     label: '99 plays',
   },
 }
+
+export const WithAnimation: ProgressWithValueLabelStory = {
+  args: {
+    value: 99,
+    max: 100,
+    label: '99 plays',
+    animate: true,
+  },
+}
