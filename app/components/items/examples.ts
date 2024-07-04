@@ -111,3 +111,8 @@ export const trackExamples = [
     'https://i.scdn.co/image/ab67616d00001e0260db4ca924d17bc6754e89aa'
   ),
 ]
+
+export const playsExample = 115
+export const maxPlaysExample = 1256
+export const playTimeExample = 1000 * 60 * 60 * 4 + 1000 * 60 * 10
+export const maxPlayTimeExample = 1000 * 60 * 60 * 6 + 1000 * 60 * 18

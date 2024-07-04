@@ -36,4 +36,20 @@ describe('ItemTopCard', () => {
 
     expect(view).toMatchSnapshot()
   })
+
+  test('should match snapshot as track with play time', () => {
+    const view = render(
+      <ItemTopCard {...trackMock} playTime={1000} maxPlayTime={2000} />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
+
+  test('should match snapshot as track with play time and plays', () => {
+    const view = render(
+      <ItemTopCard {...trackMock} playTime={1000} maxPlayTime={2000} />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
 })
