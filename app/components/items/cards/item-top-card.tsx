@@ -46,8 +46,8 @@ export function ItemTopCard({
   artists,
   album,
   isCarousel,
-  playTime,
-  maxPlayTime,
+  playtime,
+  maxPlaytime,
   plays,
   maxPlays,
 }: ItemTopCardProps) {
