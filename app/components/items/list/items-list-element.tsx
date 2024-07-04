@@ -65,26 +65,26 @@ export function ItemsListElement({
   artists,
   playedAt,
   album,
-  playTime,
-  maxPlayTime,
+  playtime,
+  maxPlaytime,
   plays,
   maxPlays,
 }: ItemsListElementProps) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
   useEffect(() => {
-    if (plays ?? playTime) {
+    if (plays ?? playtime) {
       setTimeout(() => {
         setProgressWidth(
-          ((plays ?? playTime) / (maxPlays ?? maxPlayTime)) * 100
+          ((plays ?? playtime) / (maxPlays ?? maxPlaytime)) * 100
         )
       }, 200)
     }
-  }, [plays, playTime, maxPlays, maxPlayTime])
+  }, [plays, playtime, maxPlays, maxPlaytime])
 
   return (
     <div className="h-[72px] relative overflow-hidden">
-      {(plays ?? playTime) && (
+      {(plays ?? playtime) && (
         <div
           className="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
           style={{
@@ -123,7 +123,7 @@ export function ItemsListElement({
 
               {playedAt && <RelativeTime value={playedAt} />}
 
-              {playTime && prettyMilliseconds(playTime)}
+              {playtime && prettyMilliseconds(playtime)}
 
               {plays && `${plays} ${plays > 1 ? 'plays' : 'play'}`}
             </div>

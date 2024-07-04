@@ -70,13 +70,13 @@ describe('ItemsList', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should match snapshot with playTime', () => {
+  test('should match snapshot with playtime', () => {
     const view = render(
       <ItemsList
         items={tracksMock.map(track => ({
           ...track,
-          playTime: 1000 * 60 * 60 * 2,
-          maxPlayTime: 1000 * 60 * 60 * 2,
+          playtime: 1000 * 60 * 60 * 2,
+          maxPlaytime: 1000 * 60 * 60 * 2,
         }))}
       />
     )
@@ -84,14 +84,14 @@ describe('ItemsList', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should match snapshot with playTime and top', () => {
+  test('should match snapshot with playtime and top', () => {
     const view = render(
       <ItemsList
         isTop
         items={tracksMock.map(track => ({
           ...track,
-          playTime: 1000 * 60 * 60 * 2,
-          maxPlayTime: 1000 * 60 * 60 * 2,
+          playtime: 1000 * 60 * 60 * 2,
+          maxPlaytime: 1000 * 60 * 60 * 2,
         }))}
       />
     )

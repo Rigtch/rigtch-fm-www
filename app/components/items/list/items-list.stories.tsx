@@ -94,22 +94,22 @@ const maxPlaytime = 1000 * 60 * 60 * trackExamples.length
 const calculatePlaytime = (index: number) =>
   1000 * 60 * 60 * (trackExamples.length - index) + 1000 * 60 * index + 2
 
-export const WithPlayTime: ItemsListStory = {
+export const WithPlaytime: ItemsListStory = {
   args: {
     items: trackExamples.map((item, index) => ({
       ...item,
-      playTime: calculatePlaytime(index),
+      playtime: calculatePlaytime(index),
       maxPlaytime,
     })),
   },
 }
 
-export const WithPlayTimeAndTop: ItemsListStory = {
+export const WithPlaytimeAndTop: ItemsListStory = {
   args: {
     isTop: true,
     items: trackExamples.map((item, index) => ({
       ...item,
-      playTime: calculatePlaytime(index),
+      playtime: calculatePlaytime(index),
       maxPlaytime,
     })),
   },

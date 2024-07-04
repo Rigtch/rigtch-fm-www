@@ -289,7 +289,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
 }
 `;
 
-exports[`ItemsListElement > should match snapshot with playTime 1`] = `
+exports[`ItemsListElement > should match snapshot with playtime 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
