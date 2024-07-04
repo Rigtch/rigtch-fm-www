@@ -298,8 +298,8 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
         class="h-[72px] relative overflow-hidden"
       >
         <div
-          class="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
-          style="width: calc(66.13756613756614% + 16px);"
+          class="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          style="width: calc(0% + 16px);"
         />
         <div
           class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -378,8 +378,8 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
       class="h-[72px] relative overflow-hidden"
     >
       <div
-        class="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
-        style="width: calc(66.13756613756614% + 16px);"
+        class="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+        style="width: calc(0% + 16px);"
       />
       <div
         class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -722,8 +722,8 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
         class="h-[72px] relative overflow-hidden"
       >
         <div
-          class="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
-          style="width: calc(9.156050955414011% + 16px);"
+          class="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          style="width: calc(0% + 16px);"
         />
         <div
           class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -802,8 +802,8 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
       class="h-[72px] relative overflow-hidden"
     >
       <div
-        class="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
-        style="width: calc(9.156050955414011% + 16px);"
+        class="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+        style="width: calc(0% + 16px);"
       />
       <div
         class="flex flex-row justify-between p-2 gap-2 md:gap-4"
