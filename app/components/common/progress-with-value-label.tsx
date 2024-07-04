@@ -23,7 +23,7 @@ export function ProgressWithValueLabel({
     if (animate)
       setTimeout(() => {
         setProgressValue((value / max) * 100)
-      }, 500)
+      }, 200)
     else setProgressValue((value / max) * 100)
   }, [value, max, animate])
 

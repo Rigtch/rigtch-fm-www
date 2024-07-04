@@ -78,7 +78,7 @@ export function ItemsListElement({
         setProgressWidth(
           ((plays ?? playTime) / (maxPlays ?? maxPlayTime)) * 100
         )
-      }, 500)
+      }, 200)
     }
   }, [plays, playTime, maxPlays, maxPlayTime])
 
