@@ -109,7 +109,7 @@ export const WithPlayTimeAndTop: ItemsListStory = {
     isTop: true,
     items: trackExamples.map((item, index) => ({
       ...item,
-      playTime: calculatePlayTime(index),
+      playTime: calculatePlaytime(index),
       maxPlaytime,
     })),
   },
