@@ -50,7 +50,7 @@ export type ItemsListElementAlbumOrImagesProps =
 export type ItemsListElementProps = Simplify<
   ItemsListElementPlayedAtOrPositionProps &
     ItemsListElementAlbumOrImagesProps &
-    PlayTimeOrPlaysProps &
+    PlaytimeOrPlaysProps &
     Pick<AlbumEntity, 'name' | 'href' | 'id'>
 >
 
