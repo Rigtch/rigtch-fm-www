@@ -90,7 +90,7 @@ export const WithPlaysAndTop: ItemsListStory = {
   },
 }
 
-const maxPlayTime = 1000 * 60 * 60 * trackExamples.length
+const maxPlaytime = 1000 * 60 * 60 * trackExamples.length
 const calculatePlaytime = (index: number) =>
   1000 * 60 * 60 * (trackExamples.length - index) + 1000 * 60 * index + 2
 
