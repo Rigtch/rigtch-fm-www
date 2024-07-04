@@ -30,7 +30,7 @@ export type ItemTopCardTrackAlbumOrArtistProps =
 
 export type ItemTopCardProps = Simplify<
   ItemTopCardTrackAlbumOrArtistProps &
-    PlayTimeOrPlaysProps &
+    PlaytimeOrPlaysProps &
     Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
       position?: number
       isCarousel?: boolean
