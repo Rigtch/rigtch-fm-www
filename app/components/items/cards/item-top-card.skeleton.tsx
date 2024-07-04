@@ -7,17 +7,19 @@ import { ItemImageSkeleton } from '../misc'
 import { cn } from '@app/utils/cn'
 import { Skeleton } from '@app/components/ui/skeleton'
 
-export interface TopItemCardSkeletonProps {
+export interface ItemTopCardSkeletonProps {
   position?: number
   genres?: boolean
   artists?: boolean
+  progress?: boolean
 }
 
-export function TopItemCardSkeleton({
+export function ItemTopCardSkeleton({
   position,
   genres,
   artists,
-}: TopItemCardSkeletonProps) {
+  progress,
+}: ItemTopCardSkeletonProps) {
   const stars = [1, 2, 3, 2, 1]
 
   return (
@@ -54,22 +56,25 @@ export function TopItemCardSkeleton({
           )}
 
           <div className="flex flex-row gap-1 mt-4">
-            {stars.map((size, index) => (
-              <FaStar
-                key={index}
-                className={cn(
-                  position === 1
-                    ? 'text-yellow-600'
-                    : position === 2
-                      ? 'text-slate-400'
-                      : 'text-yellow-900'
-                )}
-                style={{
-                  fontSize: `${size * 14}px`,
-                  marginTop: `-${size * 4}px`,
-                }}
-              />
-            ))}
+            {!progress &&
+              stars.map((size, index) => (
+                <FaStar
+                  key={index}
+                  className={cn(
+                    position === 1
+                      ? 'text-yellow-600'
+                      : position === 2
+                        ? 'text-slate-400'
+                        : 'text-yellow-900'
+                  )}
+                  style={{
+                    fontSize: `${size * 14}px`,
+                    marginTop: `-${size * 4}px`,
+                  }}
+                />
+              ))}
+
+            {progress && <Skeleton className="w-[20rem] h-7 rounded-full" />}
           </div>
         </div>
       </header>

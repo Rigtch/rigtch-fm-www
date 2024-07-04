@@ -2,14 +2,17 @@
 
 import { FaStar } from 'react-icons/fa6'
 import type { Simplify } from 'type-fest'
+import prettyMilliseconds from 'pretty-ms'
 
 import { GenreBadge } from '../genre'
 import { ItemArtists, ItemImage, ItemName, ItemPosition } from '../misc'
+import type { PlayTimeOrPlaysProps } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { cn } from '@app/utils/cn'
+import { ProgressWithValueLabel } from '@app/components/common'
 
-export type ItemTopCardConditionalProps =
+export type ItemTopCardTrackAlbumOrArtistProps =
   | (Pick<ArtistEntity, 'images' | 'genres'> & {
       artists?: never
       album?: never
@@ -26,7 +29,8 @@ export type ItemTopCardConditionalProps =
     })
 
 export type ItemTopCardProps = Simplify<
-  ItemTopCardConditionalProps &
+  ItemTopCardTrackAlbumOrArtistProps &
+    PlayTimeOrPlaysProps &
     Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
       position?: number
       isCarousel?: boolean
@@ -42,6 +46,10 @@ export function ItemTopCard({
   artists,
   album,
   isCarousel,
+  playTime,
+  maxPlayTime,
+  plays,
+  maxPlays,
 }: ItemTopCardProps) {
   const stars = [1, 2, 3, 2, 1]
 
@@ -73,7 +81,7 @@ export function ItemTopCard({
           {artists && <ItemArtists artists={artists} className="text-xl" />}
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-4">
+        <div className="flex flex-col justify-center items-center gap-4 w-full">
           {position && <ItemPosition position={position} size="xl" />}
 
           {genres && (
@@ -89,23 +97,41 @@ export function ItemTopCard({
             </div>
           )}
 
-          <div className="flex flex-row gap-1 mt-4">
-            {stars.map((size, index) => (
-              <FaStar
-                key={index}
-                className={cn(
-                  position === 1
-                    ? 'text-yellow-600'
-                    : position === 2
-                      ? 'text-slate-400'
-                      : 'text-yellow-900'
-                )}
-                style={{
-                  fontSize: `${size * 14}px`,
-                  marginTop: `-${size * 4}px`,
-                }}
+          <div className="flex flex-row gap-1 mt-4 w-full justify-center">
+            {!playTime &&
+              !plays &&
+              stars.map((size, index) => (
+                <FaStar
+                  key={index}
+                  className={cn(
+                    position === 1
+                      ? 'text-yellow-600'
+                      : position === 2
+                        ? 'text-slate-400'
+                        : 'text-yellow-900'
+                  )}
+                  style={{
+                    fontSize: `${size * 14}px`,
+                    marginTop: `-${size * 4}px`,
+                  }}
+                />
+              ))}
+
+            {plays && (
+              <ProgressWithValueLabel
+                value={plays}
+                max={maxPlays}
+                label={`${plays} ${plays > 1 ? 'plays' : 'play'}`}
               />
-            ))}
+            )}
+
+            {playTime && (
+              <ProgressWithValueLabel
+                value={playTime}
+                max={maxPlayTime}
+                label={prettyMilliseconds(playTime)}
+              />
+            )}
           </div>
         </div>
       </header>
