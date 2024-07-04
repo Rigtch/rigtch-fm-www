@@ -99,7 +99,7 @@ export const WithPlayTime: ItemsListStory = {
     items: trackExamples.map((item, index) => ({
       ...item,
       playTime: calculatePlaytime(index),
-      maxPlayTime,
+      maxPlaytime,
     })),
   },
 }
