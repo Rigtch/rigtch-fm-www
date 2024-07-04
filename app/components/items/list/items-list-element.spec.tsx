@@ -1,5 +1,12 @@
 import { render } from '@testing-library/react'
 
+import {
+  maxPlayTimeExample,
+  maxPlaysExample,
+  playTimeExample,
+  playsExample,
+} from '../examples'
+
 import { ItemsListElement } from './items-list-element'
 
 import { hrefMock, idMock } from '@tests/mocks'
@@ -45,6 +52,38 @@ describe('ItemsListElement', () => {
         href={hrefMock}
         images={imagesMock}
         playedAt="2022-01-01"
+      />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
+
+  test('should match snapshot with plays', () => {
+    const view = render(
+      <ItemsListElement
+        id={idMock}
+        name={trackNameMock}
+        href={hrefMock}
+        images={imagesMock}
+        plays={playsExample}
+        position={1}
+        maxPlays={maxPlaysExample}
+      />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
+
+  test('should match snapshot with playTime', () => {
+    const view = render(
+      <ItemsListElement
+        id={idMock}
+        name={trackNameMock}
+        href={hrefMock}
+        images={imagesMock}
+        playTime={playTimeExample}
+        position={1}
+        maxPlayTime={maxPlayTimeExample}
       />
     )
 

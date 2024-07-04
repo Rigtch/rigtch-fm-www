@@ -67,6 +67,54 @@ export const Carousel: ItemsListStory = {
   },
 }
 
+const calculatePlays = (index: number) => 100 - index * 10
+
+export const WithPlays: ItemsListStory = {
+  args: {
+    items: trackExamples.map((item, index) => ({
+      ...item,
+      plays: calculatePlays(index),
+      maxPlays: 100,
+    })),
+  },
+}
+
+export const WithPlaysAndTop: ItemsListStory = {
+  args: {
+    isTop: true,
+    items: trackExamples.map((item, index) => ({
+      ...item,
+      plays: calculatePlays(index),
+      maxPlays: 100,
+    })),
+  },
+}
+
+const maxPlayTime = 1000 * 60 * 60 * trackExamples.length
+const calculatePlayTime = (index: number) =>
+  1000 * 60 * 60 * (trackExamples.length - index) + 1000 * 60 * index + 2
+
+export const WithPlayTime: ItemsListStory = {
+  args: {
+    items: trackExamples.map((item, index) => ({
+      ...item,
+      playTime: calculatePlayTime(index),
+      maxPlayTime,
+    })),
+  },
+}
+
+export const WithPlayTimeAndTop: ItemsListStory = {
+  args: {
+    isTop: true,
+    items: trackExamples.map((item, index) => ({
+      ...item,
+      playTime: calculatePlayTime(index),
+      maxPlayTime,
+    })),
+  },
+}
+
 export const Skeleton: ItemsListStory = {
   render: () => <ItemsListSkeleton />,
 }

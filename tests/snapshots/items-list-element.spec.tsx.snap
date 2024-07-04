@@ -6,7 +6,126 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
+        class="h-[72px] relative overflow-hidden"
+      >
+        <div
+          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        >
+          <header
+            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          >
+            <span
+              class="text-center w-[2rem] text-xl"
+            >
+              1
+            </span>
+            <img
+              alt="Track 1"
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+              style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+              width="48"
+            />
+            <div
+              class="flex flex-col items-start w-full overflow-hidden"
+            >
+              <a
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                href="/track/123"
+              >
+                <h3
+                  class="text-xl md:text-2xl truncate"
+                >
+                  Track 1
+                </h3>
+              </a>
+              <div
+                class="flex justify-between w-full items-center"
+              >
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/123"
+                  >
+                    Darkthrone
+                  </a>
+                  <span>
+                    , 
+                  </span>
+                </span>
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/2"
+                  >
+                    Mayhem
+                  </a>
+                  <span>
+                    , 
+                  </span>
+                </span>
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/3"
+                  >
+                    Darkthrone
+                  </a>
+                  <span>
+                    , 
+                  </span>
+                </span>
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/4"
+                  >
+                    Darkthrone
+                  </a>
+                </span>
+              </div>
+            </div>
+          </header>
+          <div
+            class="self-end min-w-[22px]"
+          >
+            <button
+              data-state="closed"
+            >
+              <a
+                href="https://spotify.com"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  class="min-w-[20px] h-[20px]"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-[72px] relative overflow-hidden"
+    >
+      <div
+        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
       >
         <header
           class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -115,115 +234,221 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
         </div>
       </div>
     </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ItemsListElement > should match snapshot with playTime 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="h-[72px] relative overflow-hidden"
+      >
+        <div
+          class="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          style="width: calc(66.13756613756614% + 16px);"
+        />
+        <div
+          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        >
+          <header
+            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          >
+            <span
+              class="text-center w-[2rem] text-xl"
+            >
+              1
+            </span>
+            <img
+              alt="Track 1"
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+              style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+              width="48"
+            />
+            <div
+              class="flex flex-col items-start w-full overflow-hidden"
+            >
+              <a
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                href="/artist/123"
+              >
+                <h3
+                  class="text-xl md:text-2xl truncate"
+                >
+                  Track 1
+                </h3>
+              </a>
+              <div
+                class="flex justify-between w-full items-center"
+              >
+                4h 10m
+              </div>
+            </div>
+          </header>
+          <div
+            class="self-end min-w-[22px]"
+          >
+            <button
+              data-state="closed"
+            >
+              <a
+                href="https://spotify.com"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  class="min-w-[20px] h-[20px]"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>,
   "container": <div>
     <div
-      class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
+      class="h-[72px] relative overflow-hidden"
     >
-      <header
-        class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-      >
-        <span
-          class="text-center w-[2rem] text-xl"
-        >
-          1
-        </span>
-        <img
-          alt="Track 1"
-          class="rounded-md"
-          data-nimg="1"
-          decoding="async"
-          height="48"
-          loading="lazy"
-          src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-          srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-          style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-          width="48"
-        />
-        <div
-          class="flex flex-col items-start w-full overflow-hidden"
-        >
-          <a
-            class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-            href="/track/123"
-          >
-            <h3
-              class="text-xl md:text-2xl truncate"
-            >
-              Track 1
-            </h3>
-          </a>
-          <div
-            class="flex justify-between w-full items-center"
-          >
-            <span>
-              <a
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                href="/artist/123"
-              >
-                Darkthrone
-              </a>
-              <span>
-                , 
-              </span>
-            </span>
-            <span>
-              <a
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                href="/artist/2"
-              >
-                Mayhem
-              </a>
-              <span>
-                , 
-              </span>
-            </span>
-            <span>
-              <a
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                href="/artist/3"
-              >
-                Darkthrone
-              </a>
-              <span>
-                , 
-              </span>
-            </span>
-            <span>
-              <a
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                href="/artist/4"
-              >
-                Darkthrone
-              </a>
-            </span>
-          </div>
-        </div>
-      </header>
       <div
-        class="self-end min-w-[22px]"
+        class="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+        style="width: calc(66.13756613756614% + 16px);"
+      />
+      <div
+        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
       >
-        <button
-          data-state="closed"
+        <header
+          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
         >
-          <a
-            href="https://spotify.com"
-            target="_blank"
+          <span
+            class="text-center w-[2rem] text-xl"
           >
-            <img
-              alt=""
-              class="min-w-[20px] h-[20px]"
-              data-nimg="1"
-              decoding="async"
-              height="20"
-              loading="lazy"
-              src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-              srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-              style="color: transparent;"
-              width="20"
-            />
-          </a>
-        </button>
+            1
+          </span>
+          <img
+            alt="Track 1"
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="48"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+            style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+            width="48"
+          />
+          <div
+            class="flex flex-col items-start w-full overflow-hidden"
+          >
+            <a
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              href="/artist/123"
+            >
+              <h3
+                class="text-xl md:text-2xl truncate"
+              >
+                Track 1
+              </h3>
+            </a>
+            <div
+              class="flex justify-between w-full items-center"
+            >
+              4h 10m
+            </div>
+          </div>
+        </header>
+        <div
+          class="self-end min-w-[22px]"
+        >
+          <button
+            data-state="closed"
+          >
+            <a
+              href="https://spotify.com"
+              target="_blank"
+            >
+              <img
+                alt=""
+                class="min-w-[20px] h-[20px]"
+                data-nimg="1"
+                decoding="async"
+                height="20"
+                loading="lazy"
+                src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                style="color: transparent;"
+                width="20"
+              />
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   </div>,
@@ -287,7 +512,85 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px] md:px-4"
+        class="h-[72px] relative overflow-hidden"
+      >
+        <div
+          class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+        >
+          <header
+            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          >
+            <img
+              alt="Track 1"
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+              style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+              width="48"
+            />
+            <div
+              class="flex flex-col items-start w-full overflow-hidden"
+            >
+              <a
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                href="/artist/123"
+              >
+                <h3
+                  class="text-xl md:text-2xl truncate"
+                >
+                  Track 1
+                </h3>
+              </a>
+              <div
+                class="flex justify-between w-full items-center"
+              >
+                <p
+                  class="text-primary-foreground/80 whitespace-nowrap"
+                >
+                  2 years ago
+                </p>
+              </div>
+            </div>
+          </header>
+          <div
+            class="self-end min-w-[22px]"
+          >
+            <button
+              data-state="closed"
+            >
+              <a
+                href="https://spotify.com"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  class="min-w-[20px] h-[20px]"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-[72px] relative overflow-hidden"
+    >
+      <div
+        class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
       >
         <header
           class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -355,74 +658,221 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
         </div>
       </div>
     </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ItemsListElement > should match snapshot with plays 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="h-[72px] relative overflow-hidden"
+      >
+        <div
+          class="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          style="width: calc(9.156050955414011% + 16px);"
+        />
+        <div
+          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        >
+          <header
+            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          >
+            <span
+              class="text-center w-[2rem] text-xl"
+            >
+              1
+            </span>
+            <img
+              alt="Track 1"
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+              style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+              width="48"
+            />
+            <div
+              class="flex flex-col items-start w-full overflow-hidden"
+            >
+              <a
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                href="/artist/123"
+              >
+                <h3
+                  class="text-xl md:text-2xl truncate"
+                >
+                  Track 1
+                </h3>
+              </a>
+              <div
+                class="flex justify-between w-full items-center"
+              >
+                115 plays
+              </div>
+            </div>
+          </header>
+          <div
+            class="self-end min-w-[22px]"
+          >
+            <button
+              data-state="closed"
+            >
+              <a
+                href="https://spotify.com"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  class="min-w-[20px] h-[20px]"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>,
   "container": <div>
     <div
-      class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px] md:px-4"
+      class="h-[72px] relative overflow-hidden"
     >
-      <header
-        class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-      >
-        <img
-          alt="Track 1"
-          class="rounded-md"
-          data-nimg="1"
-          decoding="async"
-          height="48"
-          loading="lazy"
-          src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-          srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-          style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-          width="48"
-        />
-        <div
-          class="flex flex-col items-start w-full overflow-hidden"
-        >
-          <a
-            class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-            href="/artist/123"
-          >
-            <h3
-              class="text-xl md:text-2xl truncate"
-            >
-              Track 1
-            </h3>
-          </a>
-          <div
-            class="flex justify-between w-full items-center"
-          >
-            <p
-              class="text-primary-foreground/80 whitespace-nowrap"
-            >
-              2 years ago
-            </p>
-          </div>
-        </div>
-      </header>
       <div
-        class="self-end min-w-[22px]"
+        class="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+        style="width: calc(9.156050955414011% + 16px);"
+      />
+      <div
+        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
       >
-        <button
-          data-state="closed"
+        <header
+          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
         >
-          <a
-            href="https://spotify.com"
-            target="_blank"
+          <span
+            class="text-center w-[2rem] text-xl"
           >
-            <img
-              alt=""
-              class="min-w-[20px] h-[20px]"
-              data-nimg="1"
-              decoding="async"
-              height="20"
-              loading="lazy"
-              src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-              srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-              style="color: transparent;"
-              width="20"
-            />
-          </a>
-        </button>
+            1
+          </span>
+          <img
+            alt="Track 1"
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="48"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+            style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+            width="48"
+          />
+          <div
+            class="flex flex-col items-start w-full overflow-hidden"
+          >
+            <a
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              href="/artist/123"
+            >
+              <h3
+                class="text-xl md:text-2xl truncate"
+              >
+                Track 1
+              </h3>
+            </a>
+            <div
+              class="flex justify-between w-full items-center"
+            >
+              115 plays
+            </div>
+          </div>
+        </header>
+        <div
+          class="self-end min-w-[22px]"
+        >
+          <button
+            data-state="closed"
+          >
+            <a
+              href="https://spotify.com"
+              target="_blank"
+            >
+              <img
+                alt=""
+                class="min-w-[20px] h-[20px]"
+                data-nimg="1"
+                decoding="async"
+                height="20"
+                loading="lazy"
+                src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                style="color: transparent;"
+                width="20"
+              />
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   </div>,
@@ -486,7 +936,84 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
+        class="h-[72px] relative overflow-hidden"
+      >
+        <div
+          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        >
+          <header
+            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          >
+            <span
+              class="text-center w-[2rem] text-xl"
+            >
+              1
+            </span>
+            <img
+              alt="Track 1"
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+              style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+              width="48"
+            />
+            <div
+              class="flex flex-col items-start w-full overflow-hidden"
+            >
+              <a
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                href="/artist/123"
+              >
+                <h3
+                  class="text-xl md:text-2xl truncate"
+                >
+                  Track 1
+                </h3>
+              </a>
+              <div
+                class="flex justify-between w-full items-center"
+              />
+            </div>
+          </header>
+          <div
+            class="self-end min-w-[22px]"
+          >
+            <button
+              data-state="closed"
+            >
+              <a
+                href="https://spotify.com"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  class="min-w-[20px] h-[20px]"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-[72px] relative overflow-hidden"
+    >
+      <div
+        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
       >
         <header
           class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -551,75 +1078,6 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
             </a>
           </button>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
-    >
-      <header
-        class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-      >
-        <span
-          class="text-center w-[2rem] text-xl"
-        >
-          1
-        </span>
-        <img
-          alt="Track 1"
-          class="rounded-md"
-          data-nimg="1"
-          decoding="async"
-          height="48"
-          loading="lazy"
-          src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-          srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-          style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-          width="48"
-        />
-        <div
-          class="flex flex-col items-start w-full overflow-hidden"
-        >
-          <a
-            class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-            href="/artist/123"
-          >
-            <h3
-              class="text-xl md:text-2xl truncate"
-            >
-              Track 1
-            </h3>
-          </a>
-          <div
-            class="flex justify-between w-full items-center"
-          />
-        </div>
-      </header>
-      <div
-        class="self-end min-w-[22px]"
-      >
-        <button
-          data-state="closed"
-        >
-          <a
-            href="https://spotify.com"
-            target="_blank"
-          >
-            <img
-              alt=""
-              class="min-w-[20px] h-[20px]"
-              data-nimg="1"
-              decoding="async"
-              height="20"
-              loading="lazy"
-              src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-              srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-              style="color: transparent;"
-              width="20"
-            />
-          </a>
-        </button>
       </div>
     </div>
   </div>,
