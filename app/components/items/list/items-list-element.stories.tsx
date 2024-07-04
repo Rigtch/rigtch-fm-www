@@ -60,10 +60,10 @@ export const WithPlays: ItemsListElementStory = {
   },
 }
 
-export const WithPlayTime: ItemsListElementStory = {
+export const WithPlaytime: ItemsListElementStory = {
   args: {
-    playTime: playTimeExample,
-    maxPlayTime: maxPlayTimeExample,
+    playtime: playtimeExample,
+    maxPlaytime: maxPlaytimeExample,
   },
 }
 
