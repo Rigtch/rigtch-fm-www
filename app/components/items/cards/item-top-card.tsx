@@ -122,6 +122,7 @@ export function ItemTopCard({
                 value={plays}
                 max={maxPlays}
                 label={`${plays} ${plays > 1 ? 'plays' : 'play'}`}
+                animate
               />
             )}
 
@@ -130,6 +131,7 @@ export function ItemTopCard({
                 value={playTime}
                 max={maxPlayTime}
                 label={prettyMilliseconds(playTime)}
+                animate
               />
             )}
           </div>
