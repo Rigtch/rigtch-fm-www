@@ -11,7 +11,7 @@ import {
   ItemPosition,
   type ItemPositionProps,
 } from '../misc'
-import type { PlayTimeOrPlaysProps } from '../props'
+import type { PlaytimeOrPlaysProps } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { LinkButton } from '@app/components/common/buttons'
