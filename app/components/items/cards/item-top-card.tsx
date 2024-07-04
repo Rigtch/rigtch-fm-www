@@ -98,7 +98,7 @@ export function ItemTopCard({
           )}
 
           <div className="flex flex-row gap-1 mt-4 w-full justify-center">
-            {!playTime &&
+            {!playtime &&
               !plays &&
               stars.map((size, index) => (
                 <FaStar
