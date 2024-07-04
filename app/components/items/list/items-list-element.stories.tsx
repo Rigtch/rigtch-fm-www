@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import {
   artistExample,
-  maxPlayTimeExample,
+  maxPlaytimeExample,
   maxPlaysExample,
-  playTimeExample,
+  playtimeExample,
   playsExample,
 } from '../examples'
 
