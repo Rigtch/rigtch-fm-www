@@ -6,7 +6,7 @@ import prettyMilliseconds from 'pretty-ms'
 
 import { GenreBadge } from '../genre'
 import { ItemArtists, ItemImage, ItemName, ItemPosition } from '../misc'
-import type { PlayTimeOrPlaysProps } from '../props'
+import type { PlaytimeOrPlaysProps } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { cn } from '@app/utils/cn'
