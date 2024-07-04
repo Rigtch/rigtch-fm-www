@@ -1,6 +1,7 @@
 'use client'
 
 import type { Simplify } from 'type-fest'
+import prettyMilliseconds from 'pretty-ms'
 
 import {
   ItemImage,
@@ -9,6 +10,7 @@ import {
   ItemPosition,
   type ItemPositionProps,
 } from '../misc'
+import type { PlayTimeOrPlaysProps } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { LinkButton } from '@app/components/common/buttons'
@@ -47,6 +49,7 @@ export type ItemsListElementAlbumOrImagesProps =
 export type ItemsListElementProps = Simplify<
   ItemsListElementPlayedAtOrPositionProps &
     ItemsListElementAlbumOrImagesProps &
+    PlayTimeOrPlaysProps &
     Pick<AlbumEntity, 'name' | 'href' | 'id'>
 >
 
@@ -61,43 +64,62 @@ export function ItemsListElement({
   artists,
   playedAt,
   album,
+  playTime,
+  maxPlayTime,
+  plays,
+  maxPlays,
 }: ItemsListElementProps) {
   return (
-    <div
-      className={cn(
-        'flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]',
-        !position && 'md:px-4'
+    <div className="h-[72px] relative overflow-hidden">
+      {(plays ?? playTime) && (
+        <div
+          className="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          style={{
+            width: `calc(${((plays ?? playTime) / (maxPlays ?? maxPlayTime)) * 100}% + 16px)`,
+          }}
+        />
       )}
-    >
-      <header className="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]">
-        {position && (
-          <ItemPosition
-            position={position}
-            size={positionSize}
-            className={positionClassName}
-          />
+
+      <div
+        className={cn(
+          'flex flex-row justify-between p-2 gap-2 md:gap-4',
+          !position && 'md:px-4'
         )}
+      >
+        <header className="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]">
+          {position && (
+            <ItemPosition
+              position={position}
+              size={positionSize}
+              className={positionClassName}
+            />
+          )}
 
-        <ItemImage images={images ?? album} alt={name} size={48} />
+          <ItemImage images={images ?? album} alt={name} size={48} />
 
-        <div className="flex flex-col items-start w-full overflow-hidden">
-          <LinkButton
-            href={`/${artists ? 'track' : 'artist'}/${id}`}
-            className="p-0 leading-5 inline-grid"
-          >
-            <h3 className="text-xl md:text-2xl truncate">{name}</h3>
-          </LinkButton>
+          <div className="flex flex-col items-start w-full overflow-hidden">
+            <LinkButton
+              href={`/${artists ? 'track' : 'artist'}/${id}`}
+              className="p-0 leading-5 inline-grid"
+            >
+              <h3 className="text-xl md:text-2xl truncate">{name}</h3>
+            </LinkButton>
 
-          <div className="flex justify-between w-full items-center">
-            {artists && <ItemArtists artists={artists} />}
+            <div className="flex justify-between w-full items-center">
+              {artists && <ItemArtists artists={artists} />}
 
-            {playedAt && <RelativeTime value={playedAt} />}
+              {playedAt && <RelativeTime value={playedAt} />}
+
+              {playTime && prettyMilliseconds(playTime)}
+
+              {plays && `${plays} ${plays > 1 ? 'plays' : 'play'}`}
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <div className="self-end min-w-[22px]">
-        <SpotifyLink href={href} />
+        <div className="self-end min-w-[22px]">
+          <SpotifyLink href={href} />
+        </div>
       </div>
     </div>
   )

@@ -66,7 +66,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </a>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4"
+                      class="flex flex-col justify-center items-center gap-4 w-full"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -93,7 +93,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-row gap-1 mt-4"
+                        class="flex flex-row gap-1 mt-4 w-full justify-center"
                       >
                         <svg
                           class="text-slate-400"
@@ -211,7 +211,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </a>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4"
+                      class="flex flex-col justify-center items-center gap-4 w-full"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -238,7 +238,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-row gap-1 mt-4"
+                        class="flex flex-row gap-1 mt-4 w-full justify-center"
                       >
                         <svg
                           class="text-yellow-600"
@@ -360,7 +360,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </a>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4"
+                      class="flex flex-col justify-center items-center gap-4 w-full"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -387,7 +387,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-row gap-1 mt-4"
+                        class="flex flex-row gap-1 mt-4 w-full justify-center"
                       >
                         <svg
                           class="text-yellow-900"
@@ -524,7 +524,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </a>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4"
+                          class="flex flex-col justify-center items-center gap-4 w-full"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -551,7 +551,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex flex-row gap-1 mt-4"
+                            class="flex flex-row gap-1 mt-4 w-full justify-center"
                           >
                             <svg
                               class="text-yellow-600"
@@ -675,7 +675,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </a>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4"
+                          class="flex flex-col justify-center items-center gap-4 w-full"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -702,7 +702,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex flex-row gap-1 mt-4"
+                            class="flex flex-row gap-1 mt-4 w-full justify-center"
                           >
                             <svg
                               class="text-slate-400"
@@ -826,7 +826,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </a>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4"
+                          class="flex flex-col justify-center items-center gap-4 w-full"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -853,7 +853,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex flex-row gap-1 mt-4"
+                            class="flex flex-row gap-1 mt-4 w-full justify-center"
                           >
                             <svg
                               class="text-yellow-900"
@@ -989,74 +989,78 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
               </button>
             </div>
             <div
-              class="flex flex-col gap-2"
+              class="flex flex-col"
             >
               <div>
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
+                  class="h-[72px] relative overflow-hidden"
                 >
-                  <header
-                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-                  >
-                    <span
-                      class="text-center w-[2rem] text-xl"
-                    >
-                      4
-                    </span>
-                    <img
-                      alt="Darkthrone"
-                      class="rounded-md"
-                      data-nimg="1"
-                      decoding="async"
-                      height="48"
-                      loading="lazy"
-                      src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-                      srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-                      style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-                      width="48"
-                    />
-                    <div
-                      class="flex flex-col items-start w-full overflow-hidden"
-                    >
-                      <a
-                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-                        href="/artist/4"
-                      >
-                        <h3
-                          class="text-xl md:text-2xl truncate"
-                        >
-                          Darkthrone
-                        </h3>
-                      </a>
-                      <div
-                        class="flex justify-between w-full items-center"
-                      />
-                    </div>
-                  </header>
                   <div
-                    class="self-end min-w-[22px]"
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4"
                   >
-                    <button
-                      data-state="closed"
+                    <header
+                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
                     >
-                      <a
-                        href="https://spotify.com"
-                        target="_blank"
+                      <span
+                        class="text-center w-[2rem] text-xl"
                       >
-                        <img
-                          alt=""
-                          class="min-w-[20px] h-[20px]"
-                          data-nimg="1"
-                          decoding="async"
-                          height="20"
-                          loading="lazy"
-                          src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                          srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                          style="color: transparent;"
-                          width="20"
+                        4
+                      </span>
+                      <img
+                        alt="Darkthrone"
+                        class="rounded-md"
+                        data-nimg="1"
+                        decoding="async"
+                        height="48"
+                        loading="lazy"
+                        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+                        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+                        style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+                        width="48"
+                      />
+                      <div
+                        class="flex flex-col items-start w-full overflow-hidden"
+                      >
+                        <a
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          href="/artist/4"
+                        >
+                          <h3
+                            class="text-xl md:text-2xl truncate"
+                          >
+                            Darkthrone
+                          </h3>
+                        </a>
+                        <div
+                          class="flex justify-between w-full items-center"
                         />
-                      </a>
-                    </button>
+                      </div>
+                    </header>
+                    <div
+                      class="self-end min-w-[22px]"
+                    >
+                      <button
+                        data-state="closed"
+                      >
+                        <a
+                          href="https://spotify.com"
+                          target="_blank"
+                        >
+                          <img
+                            alt=""
+                            class="min-w-[20px] h-[20px]"
+                            data-nimg="1"
+                            decoding="async"
+                            height="20"
+                            loading="lazy"
+                            src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                            srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                            style="color: transparent;"
+                            width="20"
+                          />
+                        </a>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1128,7 +1132,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     </a>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4"
+                    class="flex flex-col justify-center items-center gap-4 w-full"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -1155,7 +1159,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-1 mt-4"
+                      class="flex flex-row gap-1 mt-4 w-full justify-center"
                     >
                       <svg
                         class="text-slate-400"
@@ -1273,7 +1277,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     </a>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4"
+                    class="flex flex-col justify-center items-center gap-4 w-full"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -1300,7 +1304,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-1 mt-4"
+                      class="flex flex-row gap-1 mt-4 w-full justify-center"
                     >
                       <svg
                         class="text-yellow-600"
@@ -1422,7 +1426,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     </a>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4"
+                    class="flex flex-col justify-center items-center gap-4 w-full"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -1449,7 +1453,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-1 mt-4"
+                      class="flex flex-row gap-1 mt-4 w-full justify-center"
                     >
                       <svg
                         class="text-yellow-900"
@@ -1586,7 +1590,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </a>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4"
+                        class="flex flex-col justify-center items-center gap-4 w-full"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -1613,7 +1617,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-row gap-1 mt-4"
+                          class="flex flex-row gap-1 mt-4 w-full justify-center"
                         >
                           <svg
                             class="text-yellow-600"
@@ -1737,7 +1741,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </a>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4"
+                        class="flex flex-col justify-center items-center gap-4 w-full"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -1764,7 +1768,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-row gap-1 mt-4"
+                          class="flex flex-row gap-1 mt-4 w-full justify-center"
                         >
                           <svg
                             class="text-slate-400"
@@ -1888,7 +1892,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </a>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4"
+                        class="flex flex-col justify-center items-center gap-4 w-full"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -1915,7 +1919,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-row gap-1 mt-4"
+                          class="flex flex-row gap-1 mt-4 w-full justify-center"
                         >
                           <svg
                             class="text-yellow-900"
@@ -2051,74 +2055,78 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
             </button>
           </div>
           <div
-            class="flex flex-col gap-2"
+            class="flex flex-col"
           >
             <div>
               <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
+                class="h-[72px] relative overflow-hidden"
               >
-                <header
-                  class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-                >
-                  <span
-                    class="text-center w-[2rem] text-xl"
-                  >
-                    4
-                  </span>
-                  <img
-                    alt="Darkthrone"
-                    class="rounded-md"
-                    data-nimg="1"
-                    decoding="async"
-                    height="48"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-                    style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-                    width="48"
-                  />
-                  <div
-                    class="flex flex-col items-start w-full overflow-hidden"
-                  >
-                    <a
-                      class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-                      href="/artist/4"
-                    >
-                      <h3
-                        class="text-xl md:text-2xl truncate"
-                      >
-                        Darkthrone
-                      </h3>
-                    </a>
-                    <div
-                      class="flex justify-between w-full items-center"
-                    />
-                  </div>
-                </header>
                 <div
-                  class="self-end min-w-[22px]"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4"
                 >
-                  <button
-                    data-state="closed"
+                  <header
+                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
                   >
-                    <a
-                      href="https://spotify.com"
-                      target="_blank"
+                    <span
+                      class="text-center w-[2rem] text-xl"
                     >
-                      <img
-                        alt=""
-                        class="min-w-[20px] h-[20px]"
-                        data-nimg="1"
-                        decoding="async"
-                        height="20"
-                        loading="lazy"
-                        src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                        srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                        style="color: transparent;"
-                        width="20"
+                      4
+                    </span>
+                    <img
+                      alt="Darkthrone"
+                      class="rounded-md"
+                      data-nimg="1"
+                      decoding="async"
+                      height="48"
+                      loading="lazy"
+                      src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+                      srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+                      style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+                      width="48"
+                    />
+                    <div
+                      class="flex flex-col items-start w-full overflow-hidden"
+                    >
+                      <a
+                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                        href="/artist/4"
+                      >
+                        <h3
+                          class="text-xl md:text-2xl truncate"
+                        >
+                          Darkthrone
+                        </h3>
+                      </a>
+                      <div
+                        class="flex justify-between w-full items-center"
                       />
-                    </a>
-                  </button>
+                    </div>
+                  </header>
+                  <div
+                    class="self-end min-w-[22px]"
+                  >
+                    <button
+                      data-state="closed"
+                    >
+                      <a
+                        href="https://spotify.com"
+                        target="_blank"
+                      >
+                        <img
+                          alt=""
+                          class="min-w-[20px] h-[20px]"
+                          data-nimg="1"
+                          decoding="async"
+                          height="20"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                          srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                          style="color: transparent;"
+                          width="20"
+                        />
+                      </a>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2416,7 +2424,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       </span>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4"
+                      class="flex flex-col justify-center items-center gap-4 w-full"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -2424,7 +2432,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         2
                       </span>
                       <div
-                        class="flex flex-row gap-1 mt-4"
+                        class="flex flex-row gap-1 mt-4 w-full justify-center"
                       >
                         <svg
                           class="text-slate-400"
@@ -2550,7 +2558,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       </span>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4"
+                      class="flex flex-col justify-center items-center gap-4 w-full"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -2558,7 +2566,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         1
                       </span>
                       <div
-                        class="flex flex-row gap-1 mt-4"
+                        class="flex flex-row gap-1 mt-4 w-full justify-center"
                       >
                         <svg
                           class="text-yellow-600"
@@ -2688,7 +2696,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       </span>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4"
+                      class="flex flex-col justify-center items-center gap-4 w-full"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -2696,7 +2704,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         3
                       </span>
                       <div
-                        class="flex flex-row gap-1 mt-4"
+                        class="flex flex-row gap-1 mt-4 w-full justify-center"
                       >
                         <svg
                           class="text-yellow-900"
@@ -2841,7 +2849,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4"
+                          class="flex flex-col justify-center items-center gap-4 w-full"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -2849,7 +2857,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             1
                           </span>
                           <div
-                            class="flex flex-row gap-1 mt-4"
+                            class="flex flex-row gap-1 mt-4 w-full justify-center"
                           >
                             <svg
                               class="text-yellow-600"
@@ -2981,7 +2989,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4"
+                          class="flex flex-col justify-center items-center gap-4 w-full"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -2989,7 +2997,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             2
                           </span>
                           <div
-                            class="flex flex-row gap-1 mt-4"
+                            class="flex flex-row gap-1 mt-4 w-full justify-center"
                           >
                             <svg
                               class="text-slate-400"
@@ -3121,7 +3129,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4"
+                          class="flex flex-col justify-center items-center gap-4 w-full"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -3129,7 +3137,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             3
                           </span>
                           <div
-                            class="flex flex-row gap-1 mt-4"
+                            class="flex flex-row gap-1 mt-4 w-full justify-center"
                           >
                             <svg
                               class="text-yellow-900"
@@ -3265,7 +3273,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
               </button>
             </div>
             <div
-              class="flex flex-col gap-2"
+              class="flex flex-col"
             />
           </div>
         </main>
@@ -3342,7 +3350,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     </span>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4"
+                    class="flex flex-col justify-center items-center gap-4 w-full"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -3350,7 +3358,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       2
                     </span>
                     <div
-                      class="flex flex-row gap-1 mt-4"
+                      class="flex flex-row gap-1 mt-4 w-full justify-center"
                     >
                       <svg
                         class="text-slate-400"
@@ -3476,7 +3484,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     </span>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4"
+                    class="flex flex-col justify-center items-center gap-4 w-full"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -3484,7 +3492,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       1
                     </span>
                     <div
-                      class="flex flex-row gap-1 mt-4"
+                      class="flex flex-row gap-1 mt-4 w-full justify-center"
                     >
                       <svg
                         class="text-yellow-600"
@@ -3614,7 +3622,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     </span>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4"
+                    class="flex flex-col justify-center items-center gap-4 w-full"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -3622,7 +3630,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       3
                     </span>
                     <div
-                      class="flex flex-row gap-1 mt-4"
+                      class="flex flex-row gap-1 mt-4 w-full justify-center"
                     >
                       <svg
                         class="text-yellow-900"
@@ -3767,7 +3775,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         </span>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4"
+                        class="flex flex-col justify-center items-center gap-4 w-full"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -3775,7 +3783,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           1
                         </span>
                         <div
-                          class="flex flex-row gap-1 mt-4"
+                          class="flex flex-row gap-1 mt-4 w-full justify-center"
                         >
                           <svg
                             class="text-yellow-600"
@@ -3907,7 +3915,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         </span>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4"
+                        class="flex flex-col justify-center items-center gap-4 w-full"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -3915,7 +3923,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           2
                         </span>
                         <div
-                          class="flex flex-row gap-1 mt-4"
+                          class="flex flex-row gap-1 mt-4 w-full justify-center"
                         >
                           <svg
                             class="text-slate-400"
@@ -4047,7 +4055,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         </span>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4"
+                        class="flex flex-col justify-center items-center gap-4 w-full"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -4055,7 +4063,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           3
                         </span>
                         <div
-                          class="flex flex-row gap-1 mt-4"
+                          class="flex flex-row gap-1 mt-4 w-full justify-center"
                         >
                           <svg
                             class="text-yellow-900"
@@ -4191,7 +4199,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
             </button>
           </div>
           <div
-            class="flex flex-col gap-2"
+            class="flex flex-col"
           />
         </div>
       </main>
@@ -4275,11 +4283,298 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
             class="flex flex-col gap-8"
           >
             <div
-              class="flex flex-col gap-2"
+              class="flex flex-col"
             >
               <div>
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
+                  class="h-[72px] relative overflow-hidden"
+                >
+                  <div
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                  >
+                    <header
+                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    >
+                      <span
+                        class="text-center w-[2rem] text-xl"
+                      >
+                        1
+                      </span>
+                      <img
+                        alt="Track 1"
+                        class="rounded-md"
+                        data-nimg="1"
+                        decoding="async"
+                        height="48"
+                        loading="lazy"
+                        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+                        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+                        style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+                        width="48"
+                      />
+                      <div
+                        class="flex flex-col items-start w-full overflow-hidden"
+                      >
+                        <a
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          href="/track/123"
+                        >
+                          <h3
+                            class="text-xl md:text-2xl truncate"
+                          >
+                            Track 1
+                          </h3>
+                        </a>
+                        <div
+                          class="flex justify-between w-full items-center"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </header>
+                    <div
+                      class="self-end min-w-[22px]"
+                    >
+                      <button
+                        data-state="closed"
+                      >
+                        <a
+                          href="https://spotify.com"
+                          target="_blank"
+                        >
+                          <img
+                            alt=""
+                            class="min-w-[20px] h-[20px]"
+                            data-nimg="1"
+                            decoding="async"
+                            height="20"
+                            loading="lazy"
+                            src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                            srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                            style="color: transparent;"
+                            width="20"
+                          />
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="shrink-0 bg-border h-[1px] w-full"
+                  data-orientation="horizontal"
+                  role="none"
+                />
+              </div>
+              <div>
+                <div
+                  class="h-[72px] relative overflow-hidden"
+                >
+                  <div
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                  >
+                    <header
+                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    >
+                      <span
+                        class="text-center w-[2rem] text-xl"
+                      >
+                        2
+                      </span>
+                      <img
+                        alt="Track 1"
+                        class="rounded-md"
+                        data-nimg="1"
+                        decoding="async"
+                        height="48"
+                        loading="lazy"
+                        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+                        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+                        style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+                        width="48"
+                      />
+                      <div
+                        class="flex flex-col items-start w-full overflow-hidden"
+                      >
+                        <a
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          href="/track/2"
+                        >
+                          <h3
+                            class="text-xl md:text-2xl truncate"
+                          >
+                            Track 1
+                          </h3>
+                        </a>
+                        <div
+                          class="flex justify-between w-full items-center"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </header>
+                    <div
+                      class="self-end min-w-[22px]"
+                    >
+                      <button
+                        data-state="closed"
+                      >
+                        <a
+                          href="https://spotify.com"
+                          target="_blank"
+                        >
+                          <img
+                            alt=""
+                            class="min-w-[20px] h-[20px]"
+                            data-nimg="1"
+                            decoding="async"
+                            height="20"
+                            loading="lazy"
+                            src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                            srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                            style="color: transparent;"
+                            width="20"
+                          />
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="shrink-0 bg-border h-[1px] w-full"
+                  data-orientation="horizontal"
+                  role="none"
+                />
+              </div>
+              <div>
+                <div
+                  class="h-[72px] relative overflow-hidden"
+                >
+                  <div
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                  >
+                    <header
+                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    >
+                      <span
+                        class="text-center w-[2rem] text-xl"
+                      >
+                        3
+                      </span>
+                      <img
+                        alt="Track 1"
+                        class="rounded-md"
+                        data-nimg="1"
+                        decoding="async"
+                        height="48"
+                        loading="lazy"
+                        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+                        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+                        style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+                        width="48"
+                      />
+                      <div
+                        class="flex flex-col items-start w-full overflow-hidden"
+                      >
+                        <a
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          href="/track/3"
+                        >
+                          <h3
+                            class="text-xl md:text-2xl truncate"
+                          >
+                            Track 1
+                          </h3>
+                        </a>
+                        <div
+                          class="flex justify-between w-full items-center"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </header>
+                    <div
+                      class="self-end min-w-[22px]"
+                    >
+                      <button
+                        data-state="closed"
+                      >
+                        <a
+                          href="https://spotify.com"
+                          target="_blank"
+                        >
+                          <img
+                            alt=""
+                            class="min-w-[20px] h-[20px]"
+                            data-nimg="1"
+                            decoding="async"
+                            height="20"
+                            loading="lazy"
+                            src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                            srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                            style="color: transparent;"
+                            width="20"
+                          />
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
+    >
+      <header
+        class="flex justify-between"
+      >
+        <h2
+          class="text-5xl"
+        >
+          Top Items
+        </h2>
+      </header>
+      <main
+        class="flex flex-col gap-4"
+      >
+        <div
+          class="flex flex-col gap-8"
+        >
+          <div
+            class="flex flex-col"
+          >
+            <div>
+              <div
+                class="h-[72px] relative overflow-hidden"
+              >
+                <div
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -4354,15 +4649,19 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                     </button>
                   </div>
                 </div>
-                <div
-                  class="shrink-0 bg-border h-[1px] w-full"
-                  data-orientation="horizontal"
-                  role="none"
-                />
               </div>
-              <div>
+              <div
+                class="shrink-0 bg-border h-[1px] w-full"
+                data-orientation="horizontal"
+                role="none"
+              />
+            </div>
+            <div>
+              <div
+                class="h-[72px] relative overflow-hidden"
+              >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -4437,15 +4736,19 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                     </button>
                   </div>
                 </div>
-                <div
-                  class="shrink-0 bg-border h-[1px] w-full"
-                  data-orientation="horizontal"
-                  role="none"
-                />
               </div>
-              <div>
+              <div
+                class="shrink-0 bg-border h-[1px] w-full"
+                data-orientation="horizontal"
+                role="none"
+              />
+            </div>
+            <div>
+              <div
+                class="h-[72px] relative overflow-hidden"
+              >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -4519,277 +4822,6 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       </a>
                     </button>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </section>
-    </div>
-  </body>,
-  "container": <div>
-    <section
-      class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
-    >
-      <header
-        class="flex justify-between"
-      >
-        <h2
-          class="text-5xl"
-        >
-          Top Items
-        </h2>
-      </header>
-      <main
-        class="flex flex-col gap-4"
-      >
-        <div
-          class="flex flex-col gap-8"
-        >
-          <div
-            class="flex flex-col gap-2"
-          >
-            <div>
-              <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
-              >
-                <header
-                  class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-                >
-                  <span
-                    class="text-center w-[2rem] text-xl"
-                  >
-                    1
-                  </span>
-                  <img
-                    alt="Track 1"
-                    class="rounded-md"
-                    data-nimg="1"
-                    decoding="async"
-                    height="48"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-                    style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-                    width="48"
-                  />
-                  <div
-                    class="flex flex-col items-start w-full overflow-hidden"
-                  >
-                    <a
-                      class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-                      href="/track/123"
-                    >
-                      <h3
-                        class="text-xl md:text-2xl truncate"
-                      >
-                        Track 1
-                      </h3>
-                    </a>
-                    <div
-                      class="flex justify-between w-full items-center"
-                    >
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="self-end min-w-[22px]"
-                >
-                  <button
-                    data-state="closed"
-                  >
-                    <a
-                      href="https://spotify.com"
-                      target="_blank"
-                    >
-                      <img
-                        alt=""
-                        class="min-w-[20px] h-[20px]"
-                        data-nimg="1"
-                        decoding="async"
-                        height="20"
-                        loading="lazy"
-                        src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                        srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                        style="color: transparent;"
-                        width="20"
-                      />
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="shrink-0 bg-border h-[1px] w-full"
-                data-orientation="horizontal"
-                role="none"
-              />
-            </div>
-            <div>
-              <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
-              >
-                <header
-                  class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-                >
-                  <span
-                    class="text-center w-[2rem] text-xl"
-                  >
-                    2
-                  </span>
-                  <img
-                    alt="Track 1"
-                    class="rounded-md"
-                    data-nimg="1"
-                    decoding="async"
-                    height="48"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-                    style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-                    width="48"
-                  />
-                  <div
-                    class="flex flex-col items-start w-full overflow-hidden"
-                  >
-                    <a
-                      class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-                      href="/track/2"
-                    >
-                      <h3
-                        class="text-xl md:text-2xl truncate"
-                      >
-                        Track 1
-                      </h3>
-                    </a>
-                    <div
-                      class="flex justify-between w-full items-center"
-                    >
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="self-end min-w-[22px]"
-                >
-                  <button
-                    data-state="closed"
-                  >
-                    <a
-                      href="https://spotify.com"
-                      target="_blank"
-                    >
-                      <img
-                        alt=""
-                        class="min-w-[20px] h-[20px]"
-                        data-nimg="1"
-                        decoding="async"
-                        height="20"
-                        loading="lazy"
-                        src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                        srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                        style="color: transparent;"
-                        width="20"
-                      />
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="shrink-0 bg-border h-[1px] w-full"
-                data-orientation="horizontal"
-                role="none"
-              />
-            </div>
-            <div>
-              <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]"
-              >
-                <header
-                  class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-                >
-                  <span
-                    class="text-center w-[2rem] text-xl"
-                  >
-                    3
-                  </span>
-                  <img
-                    alt="Track 1"
-                    class="rounded-md"
-                    data-nimg="1"
-                    decoding="async"
-                    height="48"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-                    style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-                    width="48"
-                  />
-                  <div
-                    class="flex flex-col items-start w-full overflow-hidden"
-                  >
-                    <a
-                      class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-                      href="/track/3"
-                    >
-                      <h3
-                        class="text-xl md:text-2xl truncate"
-                      >
-                        Track 1
-                      </h3>
-                    </a>
-                    <div
-                      class="flex justify-between w-full items-center"
-                    >
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="self-end min-w-[22px]"
-                >
-                  <button
-                    data-state="closed"
-                  >
-                    <a
-                      href="https://spotify.com"
-                      target="_blank"
-                    >
-                      <img
-                        alt=""
-                        class="min-w-[20px] h-[20px]"
-                        data-nimg="1"
-                        decoding="async"
-                        height="20"
-                        loading="lazy"
-                        src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                        srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                        style="color: transparent;"
-                        width="20"
-                      />
-                    </a>
-                  </button>
                 </div>
               </div>
             </div>
@@ -4876,11 +4908,298 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
             class="flex flex-col gap-8"
           >
             <div
-              class="flex flex-col gap-2"
+              class="flex flex-col"
             >
               <div>
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px] md:px-4"
+                  class="h-[72px] relative overflow-hidden"
+                >
+                  <div
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                  >
+                    <header
+                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    >
+                      <img
+                        alt="Track 1"
+                        class="rounded-md"
+                        data-nimg="1"
+                        decoding="async"
+                        height="48"
+                        loading="lazy"
+                        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+                        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+                        style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+                        width="48"
+                      />
+                      <div
+                        class="flex flex-col items-start w-full overflow-hidden"
+                      >
+                        <a
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          href="/track/123"
+                        >
+                          <h3
+                            class="text-xl md:text-2xl truncate"
+                          >
+                            Track 1
+                          </h3>
+                        </a>
+                        <div
+                          class="flex justify-between w-full items-center"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
+                          <p
+                            class="text-primary-foreground/80 whitespace-nowrap"
+                          >
+                            0 seconds ago
+                          </p>
+                        </div>
+                      </div>
+                    </header>
+                    <div
+                      class="self-end min-w-[22px]"
+                    >
+                      <button
+                        data-state="closed"
+                      >
+                        <a
+                          href="https://spotify.com"
+                          target="_blank"
+                        >
+                          <img
+                            alt=""
+                            class="min-w-[20px] h-[20px]"
+                            data-nimg="1"
+                            decoding="async"
+                            height="20"
+                            loading="lazy"
+                            src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                            srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                            style="color: transparent;"
+                            width="20"
+                          />
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="shrink-0 bg-border h-[1px] w-full"
+                  data-orientation="horizontal"
+                  role="none"
+                />
+              </div>
+              <div>
+                <div
+                  class="h-[72px] relative overflow-hidden"
+                >
+                  <div
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                  >
+                    <header
+                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    >
+                      <img
+                        alt="Track 1"
+                        class="rounded-md"
+                        data-nimg="1"
+                        decoding="async"
+                        height="48"
+                        loading="lazy"
+                        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+                        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+                        style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+                        width="48"
+                      />
+                      <div
+                        class="flex flex-col items-start w-full overflow-hidden"
+                      >
+                        <a
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          href="/track/2"
+                        >
+                          <h3
+                            class="text-xl md:text-2xl truncate"
+                          >
+                            Track 1
+                          </h3>
+                        </a>
+                        <div
+                          class="flex justify-between w-full items-center"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
+                          <p
+                            class="text-primary-foreground/80 whitespace-nowrap"
+                          >
+                            1 second ago
+                          </p>
+                        </div>
+                      </div>
+                    </header>
+                    <div
+                      class="self-end min-w-[22px]"
+                    >
+                      <button
+                        data-state="closed"
+                      >
+                        <a
+                          href="https://spotify.com"
+                          target="_blank"
+                        >
+                          <img
+                            alt=""
+                            class="min-w-[20px] h-[20px]"
+                            data-nimg="1"
+                            decoding="async"
+                            height="20"
+                            loading="lazy"
+                            src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                            srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                            style="color: transparent;"
+                            width="20"
+                          />
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="shrink-0 bg-border h-[1px] w-full"
+                  data-orientation="horizontal"
+                  role="none"
+                />
+              </div>
+              <div>
+                <div
+                  class="h-[72px] relative overflow-hidden"
+                >
+                  <div
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                  >
+                    <header
+                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    >
+                      <img
+                        alt="Track 1"
+                        class="rounded-md"
+                        data-nimg="1"
+                        decoding="async"
+                        height="48"
+                        loading="lazy"
+                        src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+                        srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+                        style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+                        width="48"
+                      />
+                      <div
+                        class="flex flex-col items-start w-full overflow-hidden"
+                      >
+                        <a
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          href="/track/3"
+                        >
+                          <h3
+                            class="text-xl md:text-2xl truncate"
+                          >
+                            Track 1
+                          </h3>
+                        </a>
+                        <div
+                          class="flex justify-between w-full items-center"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
+                          <p
+                            class="text-primary-foreground/80 whitespace-nowrap"
+                          >
+                            2 seconds ago
+                          </p>
+                        </div>
+                      </div>
+                    </header>
+                    <div
+                      class="self-end min-w-[22px]"
+                    >
+                      <button
+                        data-state="closed"
+                      >
+                        <a
+                          href="https://spotify.com"
+                          target="_blank"
+                        >
+                          <img
+                            alt=""
+                            class="min-w-[20px] h-[20px]"
+                            data-nimg="1"
+                            decoding="async"
+                            height="20"
+                            loading="lazy"
+                            src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
+                            srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
+                            style="color: transparent;"
+                            width="20"
+                          />
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
+    >
+      <header
+        class="flex justify-between"
+      >
+        <h2
+          class="text-5xl"
+        >
+          Top Items
+        </h2>
+      </header>
+      <main
+        class="flex flex-col gap-4"
+      >
+        <div
+          class="flex flex-col gap-8"
+        >
+          <div
+            class="flex flex-col"
+          >
+            <div>
+              <div
+                class="h-[72px] relative overflow-hidden"
+              >
+                <div
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -4955,15 +5274,19 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                     </button>
                   </div>
                 </div>
-                <div
-                  class="shrink-0 bg-border h-[1px] w-full"
-                  data-orientation="horizontal"
-                  role="none"
-                />
               </div>
-              <div>
+              <div
+                class="shrink-0 bg-border h-[1px] w-full"
+                data-orientation="horizontal"
+                role="none"
+              />
+            </div>
+            <div>
+              <div
+                class="h-[72px] relative overflow-hidden"
+              >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px] md:px-4"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5038,15 +5361,19 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                     </button>
                   </div>
                 </div>
-                <div
-                  class="shrink-0 bg-border h-[1px] w-full"
-                  data-orientation="horizontal"
-                  role="none"
-                />
               </div>
-              <div>
+              <div
+                class="shrink-0 bg-border h-[1px] w-full"
+                data-orientation="horizontal"
+                role="none"
+              />
+            </div>
+            <div>
+              <div
+                class="h-[72px] relative overflow-hidden"
+              >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px] md:px-4"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5120,277 +5447,6 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       </a>
                     </button>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </section>
-    </div>
-  </body>,
-  "container": <div>
-    <section
-      class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
-    >
-      <header
-        class="flex justify-between"
-      >
-        <h2
-          class="text-5xl"
-        >
-          Top Items
-        </h2>
-      </header>
-      <main
-        class="flex flex-col gap-4"
-      >
-        <div
-          class="flex flex-col gap-8"
-        >
-          <div
-            class="flex flex-col gap-2"
-          >
-            <div>
-              <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px] md:px-4"
-              >
-                <header
-                  class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-                >
-                  <img
-                    alt="Track 1"
-                    class="rounded-md"
-                    data-nimg="1"
-                    decoding="async"
-                    height="48"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-                    style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-                    width="48"
-                  />
-                  <div
-                    class="flex flex-col items-start w-full overflow-hidden"
-                  >
-                    <a
-                      class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-                      href="/track/123"
-                    >
-                      <h3
-                        class="text-xl md:text-2xl truncate"
-                      >
-                        Track 1
-                      </h3>
-                    </a>
-                    <div
-                      class="flex justify-between w-full items-center"
-                    >
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                      <p
-                        class="text-primary-foreground/80 whitespace-nowrap"
-                      >
-                        0 seconds ago
-                      </p>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="self-end min-w-[22px]"
-                >
-                  <button
-                    data-state="closed"
-                  >
-                    <a
-                      href="https://spotify.com"
-                      target="_blank"
-                    >
-                      <img
-                        alt=""
-                        class="min-w-[20px] h-[20px]"
-                        data-nimg="1"
-                        decoding="async"
-                        height="20"
-                        loading="lazy"
-                        src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                        srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                        style="color: transparent;"
-                        width="20"
-                      />
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="shrink-0 bg-border h-[1px] w-full"
-                data-orientation="horizontal"
-                role="none"
-              />
-            </div>
-            <div>
-              <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px] md:px-4"
-              >
-                <header
-                  class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-                >
-                  <img
-                    alt="Track 1"
-                    class="rounded-md"
-                    data-nimg="1"
-                    decoding="async"
-                    height="48"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-                    style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-                    width="48"
-                  />
-                  <div
-                    class="flex flex-col items-start w-full overflow-hidden"
-                  >
-                    <a
-                      class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-                      href="/track/2"
-                    >
-                      <h3
-                        class="text-xl md:text-2xl truncate"
-                      >
-                        Track 1
-                      </h3>
-                    </a>
-                    <div
-                      class="flex justify-between w-full items-center"
-                    >
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                      <p
-                        class="text-primary-foreground/80 whitespace-nowrap"
-                      >
-                        1 second ago
-                      </p>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="self-end min-w-[22px]"
-                >
-                  <button
-                    data-state="closed"
-                  >
-                    <a
-                      href="https://spotify.com"
-                      target="_blank"
-                    >
-                      <img
-                        alt=""
-                        class="min-w-[20px] h-[20px]"
-                        data-nimg="1"
-                        decoding="async"
-                        height="20"
-                        loading="lazy"
-                        src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                        srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                        style="color: transparent;"
-                        width="20"
-                      />
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="shrink-0 bg-border h-[1px] w-full"
-                data-orientation="horizontal"
-                role="none"
-              />
-            </div>
-            <div>
-              <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px] md:px-4"
-              >
-                <header
-                  class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
-                >
-                  <img
-                    alt="Track 1"
-                    class="rounded-md"
-                    data-nimg="1"
-                    decoding="async"
-                    height="48"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
-                    style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
-                    width="48"
-                  />
-                  <div
-                    class="flex flex-col items-start w-full overflow-hidden"
-                  >
-                    <a
-                      class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
-                      href="/track/3"
-                    >
-                      <h3
-                        class="text-xl md:text-2xl truncate"
-                      >
-                        Track 1
-                      </h3>
-                    </a>
-                    <div
-                      class="flex justify-between w-full items-center"
-                    >
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
-                      </span>
-                      <p
-                        class="text-primary-foreground/80 whitespace-nowrap"
-                      >
-                        2 seconds ago
-                      </p>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="self-end min-w-[22px]"
-                >
-                  <button
-                    data-state="closed"
-                  >
-                    <a
-                      href="https://spotify.com"
-                      target="_blank"
-                    >
-                      <img
-                        alt=""
-                        class="min-w-[20px] h-[20px]"
-                        data-nimg="1"
-                        decoding="async"
-                        height="20"
-                        loading="lazy"
-                        src="/_next/image?url=%2Fspotify-icon-white.png&w=48&q=75"
-                        srcset="/_next/image?url=%2Fspotify-icon-white.png&w=32&q=75 1x, /_next/image?url=%2Fspotify-icon-white.png&w=48&q=75 2x"
-                        style="color: transparent;"
-                        width="20"
-                      />
-                    </a>
-                  </button>
                 </div>
               </div>
             </div>

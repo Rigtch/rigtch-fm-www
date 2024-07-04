@@ -73,7 +73,7 @@ export function ItemsList({
         </>
       )}
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col">
         {sortedItems.slice(isTop ? 3 : 0).map((item, index, items) => (
           <div key={index}>
             {/* @ts-expect-error: conditional types are already handled */}

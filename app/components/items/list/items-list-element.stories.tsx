@@ -1,6 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { artistExample } from '../examples'
+import {
+  artistExample,
+  maxPlayTimeExample,
+  maxPlaysExample,
+  playTimeExample,
+  playsExample,
+} from '../examples'
 
 import { ItemsListElement } from './items-list-element'
 import { ItemsListElementSkeleton } from './items-list-element.skeleton'
@@ -44,6 +50,20 @@ export const Default: ItemsListElementStory = {
 export const WithRelativeTime: ItemsListElementStory = {
   args: {
     playedAt: '2022-01-01',
+  },
+}
+
+export const WithPlays: ItemsListElementStory = {
+  args: {
+    plays: playsExample,
+    maxPlays: maxPlaysExample,
+  },
+}
+
+export const WithPlayTime: ItemsListElementStory = {
+  args: {
+    playTime: playTimeExample,
+    maxPlayTime: maxPlayTimeExample,
   },
 }
 

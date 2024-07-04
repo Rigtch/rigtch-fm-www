@@ -1,6 +1,6 @@
 'use client'
 
-import { TopItemCardSkeleton } from '../cards'
+import { ItemTopCardSkeleton } from '../cards'
 
 import { ItemsListElementSkeleton } from './items-list-element.skeleton'
 
@@ -29,7 +29,7 @@ export function ItemsListSkeleton({
           <div className="flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full">
             <div className="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full">
               {[2, 1].map((position, index) => (
-                <TopItemCardSkeleton
+                <ItemTopCardSkeleton
                   key={index}
                   position={position}
                   artists={artists}
@@ -39,7 +39,7 @@ export function ItemsListSkeleton({
             </div>
 
             <div className="md:w-1/3 h-full">
-              <TopItemCardSkeleton
+              <ItemTopCardSkeleton
                 position={3}
                 artists={artists}
                 genres={genres}
