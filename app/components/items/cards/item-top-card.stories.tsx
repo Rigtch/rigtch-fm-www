@@ -4,9 +4,9 @@ import {
   albumExample,
   artistExample,
   idExample,
-  maxPlayTimeExample,
+  maxPlaytimeExample,
   maxPlaysExample,
-  playTimeExample,
+  playtimeExample,
   playsExample,
   trackExample,
 } from '../examples'
