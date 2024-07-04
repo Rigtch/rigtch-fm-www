@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 
 import { Progress } from '../ui/progress'
 
+import { cn } from '@app/utils/cn'
+
 export interface ProgressWithValueLabelProps {
   value: number
   max: number
@@ -17,21 +19,27 @@ export function ProgressWithValueLabel({
   label,
   animate = false,
 }: ProgressWithValueLabelProps) {
-  const [progressValue, setProgressValue] = useState<number>(0)
+  const defaultProgressValue = (value / max) * 100
+
+  const [progressValue, setProgressValue] = useState<number>(
+    animate ? 0 : defaultProgressValue
+  )
 
   useEffect(() => {
     if (animate)
       setTimeout(() => {
-        setProgressValue((value / max) * 100)
+        setProgressValue(defaultProgressValue)
       }, 200)
-    else setProgressValue((value / max) * 100)
-  }, [value, max, animate])
+  }, [value, max, animate, defaultProgressValue])
 
   return (
     <div className="relative w-full">
       <Progress
         value={progressValue}
-        className="*:transition-all *:duration-700 *:ease-in-out w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12"
+        className={cn(
+          'w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12',
+          animate && '*:transition-all *:duration-700 *:ease-in-out'
+        )}
       />
 
       <div className="absolute top-[2px] left-[15px]">{label}</div>
