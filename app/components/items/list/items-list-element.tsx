@@ -2,6 +2,7 @@
 
 import type { Simplify } from 'type-fest'
 import prettyMilliseconds from 'pretty-ms'
+import { useEffect, useState } from 'react'
 
 import {
   ItemImage,
@@ -69,13 +70,25 @@ export function ItemsListElement({
   plays,
   maxPlays,
 }: ItemsListElementProps) {
+  const [progressWidth, setProgressWidth] = useState<number>(0)
+
+  useEffect(() => {
+    if (plays ?? playTime) {
+      setTimeout(() => {
+        setProgressWidth(
+          ((plays ?? playTime) / (maxPlays ?? maxPlayTime)) * 100
+        )
+      }, 500)
+    }
+  }, [plays, playTime, maxPlays, maxPlayTime])
+
   return (
     <div className="h-[72px] relative overflow-hidden">
       {(plays ?? playTime) && (
         <div
-          className="absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          className="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
           style={{
-            width: `calc(${((plays ?? playTime) / (maxPlays ?? maxPlayTime)) * 100}% + 16px)`,
+            width: `calc(${progressWidth}% + 16px)`,
           }}
         />
       )}
