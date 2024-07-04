@@ -126,11 +126,11 @@ export function ItemTopCard({
               />
             )}
 
-            {playTime && (
+            {playtime && (
               <ProgressWithValueLabel
-                value={playTime}
-                max={maxPlayTime}
-                label={prettyMilliseconds(playTime)}
+                value={playtime}
+                max={maxPlaytime}
+                label={prettyMilliseconds(playtime)}
                 animate
               />
             )}
