@@ -71,10 +71,10 @@ export const WithPlays: ItemTopCardStory = {
   },
 }
 
-export const WithPlayTime: ItemTopCardStory = {
+export const WithPlaytime: ItemTopCardStory = {
   args: {
-    playTime: playTimeExample,
-    maxPlayTime: maxPlayTimeExample,
+    playtime: playtimeExample,
+    maxPlaytime: maxPlaytimeExample,
     ...artistExample,
   },
 }
