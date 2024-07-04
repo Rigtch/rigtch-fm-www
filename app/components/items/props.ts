@@ -1,4 +1,4 @@
-export type PlayTimeOrPlaysProps =
+export type PlaytimeOrPlaysProps =
   | {
       playtime: number
       maxPlaytime: number

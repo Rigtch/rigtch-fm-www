@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react'
 
 import {
-  maxPlayTimeExample,
+  maxPlaytimeExample,
   maxPlaysExample,
-  playTimeExample,
+  playtimeExample,
   playsExample,
 } from '../examples'
 

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ItemsList > should match snapshot with playTime 1`] = `
+exports[`ItemsList > should match snapshot with playtime 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -621,7 +621,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
 }
 `;
 
-exports[`ItemsList > should match snapshot with playTime and top 1`] = `
+exports[`ItemsList > should match snapshot with playtime and top 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
