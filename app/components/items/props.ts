@@ -1,19 +1,19 @@
 export type PlayTimeOrPlaysProps =
   | {
-      playTime: number
-      maxPlayTime: number
+      playtime: number
+      maxPlaytime: number
       plays?: never
       maxPlays?: never
     }
   | {
-      playTime?: never
-      maxPlayTime?: never
+      playtime?: never
+      maxPlaytime?: never
       plays: number
       maxPlays: number
     }
   | {
-      playTime?: never
-      maxPlayTime?: never
+      playtime?: never
+      maxPlaytime?: never
       plays?: never
       maxPlays?: never
     }
