@@ -1,9 +1,9 @@
-import {
+import type {
   ArtistEntity,
   GetTopItemsParams,
   SpotifyResponseWithOffset,
-  TimeRange,
 } from '../types'
+import { SpotifyTimeRange } from '../types'
 
 import { fetchApi } from './fetch-api'
 
@@ -11,7 +11,7 @@ export function getTopArtists(
   token: string,
   {
     userId,
-    timeRange = TimeRange.LONG_TERM,
+    timeRange = SpotifyTimeRange.LONG_TERM,
     limit = 10,
     offset = 0,
   }: GetTopItemsParams
