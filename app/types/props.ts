@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
-import { Params, SearchParams } from './params'
-import { View } from './view'
+import type { Params, SearchParams } from './params'
+import type { View } from './view'
 
 export interface PageProps {
   params?: Params
