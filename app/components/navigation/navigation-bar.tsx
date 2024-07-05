@@ -1,34 +1,34 @@
 'use client'
 
+import { useQueryClient } from '@tanstack/react-query'
+import type { User } from 'next-auth'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import {
   FaArrowRightToBracket,
   FaArrowUpRightFromSquare,
 } from 'react-icons/fa6'
-import { useQueryClient } from '@tanstack/react-query'
-import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
-import { LuUserCircle } from 'react-icons/lu'
-import type { User } from 'next-auth'
-import { RxHamburgerMenu } from 'react-icons/rx'
 import { IoClose } from 'react-icons/io5'
+import { LuUserCircle } from 'react-icons/lu'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
+import { ConnectButton } from '../auth'
+import { Sidebar } from '../sidebar'
 import {
   NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuTrigger,
   NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
 } from '../ui/navigation-menu'
-import { ConnectButton } from '../auth'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
-import { Sidebar } from '../sidebar'
 
 import { NavigationListItem } from './navigation-list-item'
 
-import { ProfileAvatar } from '@app/profile/components/profile'
 import { handleSignOut } from '@app/auth/actions'
+import { ProfileAvatar } from '@app/profile/components/profile'
 
 export interface NavigationBarProps {
   user?: User

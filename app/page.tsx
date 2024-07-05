@@ -1,9 +1,9 @@
+import { cookies } from 'next/headers'
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
-import { cookies } from 'next/headers'
 
-import { ConnectButton } from './components/auth'
 import { getServerUser } from './auth/utils'
+import { ConnectButton } from './components/auth'
 import { USER_ID } from './constants'
 
 export default async function HomePage() {
@@ -13,7 +13,7 @@ export default async function HomePage() {
   if (currentUser && userId) redirect(`/profile/${userId}`)
 
   return (
-    <div className="flex flex-col w-full justify-center items-center pt-12 gap-24 h-[80vh]">
+    <div className="flex flex-col w-full justify-center items-center pt-12 gap-12">
       <header className="flex flex-col justify-center items-center gap-8 px-4 md:p-0">
         <h1 className="font-semibold text-5xl text-center">
           Welcome to rigtch.fm
@@ -26,7 +26,7 @@ export default async function HomePage() {
         <ConnectButton className="px-12 py-6 text-lg" variant="default" />
       </header>
 
-      <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full">
+      <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full pb-8">
         <Image
           src="/rigtch-icon.png"
           alt={'spotify'}
