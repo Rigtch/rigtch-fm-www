@@ -10,7 +10,7 @@ export default async function HomePage() {
   const currentUser = await getServerUser()
   const userId = cookies().get(USER_ID)?.value
 
-  if (currentUser) redirect(`/profile/${userId}`)
+  if (currentUser && userId) redirect(`/profile/${userId}`)
 
   return (
     <div className="flex flex-col w-full justify-center items-center pt-12 gap-24 h-[80vh]">
