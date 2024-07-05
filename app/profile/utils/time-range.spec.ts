@@ -1,18 +1,18 @@
-import { isTimeRange, validateTimeRange } from './time-range'
+import { isSpotifyTimeRange, validateTimeRange } from './time-range'
 
-import { TimeRange } from '@app/api/types'
+import { SpotifyTimeRange } from '@app/api/types'
 
 describe('TimeRange', () => {
-  const timeRange = TimeRange.MEDIUM_TERM
+  const timeRange = SpotifyTimeRange.MEDIUM_TERM
   const invalid = 'invalid'
 
   describe('isTimeRange', () => {
     test('should return true when value is a TimeRange', () => {
-      expect(isTimeRange(timeRange)).toBeTruthy()
+      expect(isSpotifyTimeRange(timeRange)).toBeTruthy()
     })
 
     test('should return false when value is not a TimeRange', () => {
-      expect(isTimeRange(invalid)).toBeFalsy()
+      expect(isSpotifyTimeRange(invalid)).toBeFalsy()
     })
   })
 
@@ -22,7 +22,7 @@ describe('TimeRange', () => {
     })
 
     test('should return TimeRange.SHORT_TERM when timeRange is not a TimeRange', () => {
-      expect(validateTimeRange(invalid)).toEqual(TimeRange.SHORT_TERM)
+      expect(validateTimeRange(invalid)).toEqual(SpotifyTimeRange.SHORT_TERM)
     })
   })
 })
