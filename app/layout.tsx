@@ -2,15 +2,15 @@ import { cookies } from 'next/headers'
 
 import './styles/globals.css'
 
-import { RootProviders } from './providers'
-import { NavigationBar } from './components/navigation'
 import { USER_ACCEPT_COOKIES } from './api/constants'
-import type { LayoutProps } from './types'
-import { Footer } from './components/footer'
-import { CookiesDialog } from './components/cookies-dialog'
-import { Toaster } from './components/ui/toaster'
 import { auth } from './auth'
+import { CookiesDialog } from './components/cookies-dialog'
+import { Footer } from './components/footer'
+import { NavigationBar } from './components/navigation'
+import { Toaster } from './components/ui/toaster'
 import { USER_ID } from './constants'
+import { RootProviders } from './providers'
+import type { LayoutProps } from './types'
 
 export const metadata = {
   title: 'rigtch.fm',
