@@ -49,7 +49,7 @@ export function ItemsListElementSkeleton({
             <div className="flex flex-row gap-3 items-center">
               {playedAt && <Skeleton className="w-[4rem] h-[1rem]" />}
 
-              <SpotifyLink skeleton />
+              <SpotifyLink isDisabled />
             </div>
           </div>
         </div>

@@ -11,8 +11,8 @@ describe('SpotifyLink', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should match snapshot with skeleton', () => {
-    const view = render(<SpotifyLink href={href} skeleton />)
+  test('should match snapshot with isDisabled', () => {
+    const view = render(<SpotifyLink href={href} isDisabled />)
 
     expect(view).toMatchSnapshot()
   })

@@ -35,7 +35,7 @@ export function PlaybackCardSkeleton() {
                 />
               </div>
 
-              <SpotifyLink skeleton />
+              <SpotifyLink isDisabled />
             </div>
           </CardFooter>
         </div>

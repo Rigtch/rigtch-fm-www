@@ -109,7 +109,7 @@ exports[`SpotifyLink > should match snapshot 1`] = `
 }
 `;
 
-exports[`SpotifyLink > should match snapshot with skeleton 1`] = `
+exports[`SpotifyLink > should match snapshot with isDisabled 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
