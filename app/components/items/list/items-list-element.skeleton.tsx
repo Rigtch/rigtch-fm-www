@@ -1,7 +1,9 @@
-import { ItemImageSkeleton, ItemPosition, ItemPositionProps } from '../misc'
+import type { ItemPositionProps } from '../misc'
+import { ItemImageSkeleton, ItemPosition } from '../misc'
 
-import { cn } from '@app/utils/cn'
+import { SpotifyLink } from '@app/components/common'
 import { Skeleton } from '@app/components/ui/skeleton'
+import { cn } from '@app/utils/cn'
 
 export interface ItemsListElementSkeletonProps {
   artists?: boolean
@@ -44,7 +46,11 @@ export function ItemsListElementSkeleton({
           <div className="flex justify-between w-full items-center">
             <div>{artists && <Skeleton className="w-[6rem] h-[1rem]" />}</div>
 
-            {playedAt && <Skeleton className="w-[4rem] h-[1rem]" />}
+            <div className="flex flex-row gap-3 items-center">
+              {playedAt && <Skeleton className="w-[4rem] h-[1rem]" />}
+
+              <SpotifyLink skeleton />
+            </div>
           </div>
         </div>
       </header>
