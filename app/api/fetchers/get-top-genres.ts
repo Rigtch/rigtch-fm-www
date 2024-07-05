@@ -1,10 +1,15 @@
-import { GetTopItemsParams, TimeRange } from '../types'
+import type { GetTopItemsParams } from '../types'
+import { SpotifyTimeRange } from '../types'
 
 import { fetchApi } from './fetch-api'
 
 export function getTopGenres(
   token: string,
-  { userId, timeRange = TimeRange.LONG_TERM, limit = 10 }: GetTopItemsParams
+  {
+    userId,
+    timeRange = SpotifyTimeRange.LONG_TERM,
+    limit = 10,
+  }: GetTopItemsParams
 ) {
   const searchParams = new URLSearchParams({
     timeRange,
