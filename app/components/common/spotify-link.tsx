@@ -15,13 +15,13 @@ import {
 export interface SpotifyLinkProps extends Omit<LinkProps, 'href'> {
   href?: string
   className?: string
-  skeleton?: boolean
+  isDisabled?: boolean
 }
 
 export function SpotifyLink({
   href,
   className,
-  skeleton,
+  isDisabled,
   ...props
 }: SpotifyLinkProps) {
   return (
@@ -38,7 +38,7 @@ export function SpotifyLink({
               <IconContext.Provider
                 value={{
                   className: 'min-w-[20px] h-[20px]',
-                  color: skeleton ? 'gray' : '',
+                  color: isDisabled ? 'gray' : '',
                 }}
               >
                 <FaSpotify />
