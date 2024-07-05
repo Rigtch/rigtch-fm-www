@@ -15,3 +15,9 @@ export const Default: SpotifyLinkStory = {
     href: 'https://open.spotify.com/track/1DXdKZKfQZ4Wlk0b6xZ3Km',
   },
 }
+
+export const Skeleton: SpotifyLinkStory = {
+  args: {
+    skeleton: true,
+  },
+}

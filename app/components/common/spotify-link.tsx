@@ -1,5 +1,9 @@
-import Image from 'next/image'
-import Link, { LinkProps } from 'next/link'
+'use client'
+
+import type { LinkProps } from 'next/link'
+import Link from 'next/link'
+import { IconContext } from 'react-icons'
+import { FaSpotify } from 'react-icons/fa6'
 
 import {
   Tooltip,
@@ -11,9 +15,15 @@ import {
 export interface SpotifyLinkProps extends Omit<LinkProps, 'href'> {
   href?: string
   className?: string
+  skeleton?: boolean
 }
 
-export function SpotifyLink({ href, className, ...props }: SpotifyLinkProps) {
+export function SpotifyLink({
+  href,
+  className,
+  skeleton,
+  ...props
+}: SpotifyLinkProps) {
   return (
     <>
       <TooltipProvider>
@@ -25,13 +35,14 @@ export function SpotifyLink({ href, className, ...props }: SpotifyLinkProps) {
               className={className}
               {...props}
             >
-              <Image
-                src="/spotify-icon-white.png"
-                width={20}
-                height={20}
-                alt={''}
-                className="min-w-[20px] h-[20px]"
-              />
+              <IconContext.Provider
+                value={{
+                  className: 'min-w-[20px] h-[20px]',
+                  color: skeleton ? 'gray' : '',
+                }}
+              >
+                <FaSpotify />
+              </IconContext.Provider>
             </Link>
           </TooltipTrigger>
 
