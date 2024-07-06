@@ -24,7 +24,7 @@ export function getRigtchTopGenres(
   if (before) params.append('before', before.toISOString())
   if (limit) params.append('limit', limit + '')
 
-  return fetchApi<RigtchStatsResponse<string, typeof measurement>>(
+  return fetchApi<RigtchStatsResponse<string>>(
     `/users/${userId}/stats/rigtch/top-genres?${params.toString()}`,
     {
       token,

@@ -25,7 +25,7 @@ export function getRigtchTopTracks(
   if (before) params.append('before', before.toISOString())
   if (limit) params.append('limit', limit + '')
 
-  return fetchApi<RigtchStatsResponse<TrackEntity, typeof measurement>>(
+  return fetchApi<RigtchStatsResponse<TrackEntity>>(
     `/users/${userId}/stats/rigtch/top-tracks?${params.toString()}`,
     {
       token,

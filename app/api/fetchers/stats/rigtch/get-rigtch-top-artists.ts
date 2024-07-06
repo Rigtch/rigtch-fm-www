@@ -25,7 +25,7 @@ export function getRigtchTopArtists(
   if (before) params.append('before', before.toISOString())
   if (limit) params.append('limit', limit + '')
 
-  return fetchApi<RigtchStatsResponse<ArtistEntity, typeof measurement>>(
+  return fetchApi<RigtchStatsResponse<ArtistEntity>>(
     `/users/${userId}/stats/rigtch/top-artists?${params.toString()}`,
     {
       token,
