@@ -24,25 +24,52 @@ exports[`TopGenresSection > should match snapshot 1`] = `
             class="flex flex-row flex-wrap gap-2"
           >
             <div>
-              <div
-                class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-700"
+              <button
+                class="cursor-default"
+                data-state="closed"
               >
-                Atmospheric Black Metal
-              </div>
+                <div
+                  class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+                >
+                  <div
+                    class="p-2 whitespace-nowrap text-white block"
+                  >
+                    Atmospheric Black Metal
+                  </div>
+                </div>
+              </button>
             </div>
             <div>
-              <div
-                class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-700"
+              <button
+                class="cursor-default"
+                data-state="closed"
               >
-                Black Metal
-              </div>
+                <div
+                  class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+                >
+                  <div
+                    class="p-2 whitespace-nowrap text-white block"
+                  >
+                    Black Metal
+                  </div>
+                </div>
+              </button>
             </div>
             <div>
-              <div
-                class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-700"
+              <button
+                class="cursor-default"
+                data-state="closed"
               >
-                Metal
-              </div>
+                <div
+                  class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+                >
+                  <div
+                    class="p-2 whitespace-nowrap text-white block"
+                  >
+                    Metal
+                  </div>
+                </div>
+              </button>
             </div>
           </div>
         </main>
@@ -69,25 +96,52 @@ exports[`TopGenresSection > should match snapshot 1`] = `
           class="flex flex-row flex-wrap gap-2"
         >
           <div>
-            <div
-              class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-700"
+            <button
+              class="cursor-default"
+              data-state="closed"
             >
-              Atmospheric Black Metal
-            </div>
+              <div
+                class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+              >
+                <div
+                  class="p-2 whitespace-nowrap text-white block"
+                >
+                  Atmospheric Black Metal
+                </div>
+              </div>
+            </button>
           </div>
           <div>
-            <div
-              class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-700"
+            <button
+              class="cursor-default"
+              data-state="closed"
             >
-              Black Metal
-            </div>
+              <div
+                class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+              >
+                <div
+                  class="p-2 whitespace-nowrap text-white block"
+                >
+                  Black Metal
+                </div>
+              </div>
+            </button>
           </div>
           <div>
-            <div
-              class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-700"
+            <button
+              class="cursor-default"
+              data-state="closed"
             >
-              Metal
-            </div>
+              <div
+                class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+              >
+                <div
+                  class="p-2 whitespace-nowrap text-white block"
+                >
+                  Metal
+                </div>
+              </div>
+            </button>
           </div>
         </div>
       </main>

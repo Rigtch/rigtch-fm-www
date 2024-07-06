@@ -5,19 +5,37 @@ exports[`GenreChip > should match snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-700"
+      <button
+        class="cursor-default"
+        data-state="closed"
       >
-        Black Metal
-      </div>
+        <div
+          class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+        >
+          <div
+            class="p-2 whitespace-nowrap text-white block"
+          >
+            Black Metal
+          </div>
+        </div>
+      </button>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-700"
+    <button
+      class="cursor-default"
+      data-state="closed"
     >
-      Black Metal
-    </div>
+      <div
+        class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+      >
+        <div
+          class="p-2 whitespace-nowrap text-white block"
+        >
+          Black Metal
+        </div>
+      </div>
+    </button>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -78,19 +96,235 @@ exports[`GenreChip > should match snapshot with custom className 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-800"
+      <button
+        class="cursor-default"
+        data-state="closed"
       >
-        Black Metal
-      </div>
+        <div
+          class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-800"
+        >
+          <div
+            class="p-2 whitespace-nowrap text-white block"
+          >
+            Black Metal
+          </div>
+        </div>
+      </button>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="w-max p-2 rounded-xl whitespace-nowrap text-white bg-neutral-800"
+    <button
+      class="cursor-default"
+      data-state="closed"
     >
-      Black Metal
+      <div
+        class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-800"
+      >
+        <div
+          class="p-2 whitespace-nowrap text-white block"
+        >
+          Black Metal
+        </div>
+      </div>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`GenreChip > should match snapshot with plays 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor-pointer"
+        data-state="closed"
+      >
+        <div
+          class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+        >
+          <div
+            class="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+            style="width: calc(0% + 10px);"
+          />
+          <div
+            class="p-2 whitespace-nowrap text-white block"
+          >
+            Black Metal
+          </div>
+        </div>
+      </button>
     </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor-pointer"
+      data-state="closed"
+    >
+      <div
+        class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+      >
+        <div
+          class="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+          style="width: calc(0% + 10px);"
+        />
+        <div
+          class="p-2 whitespace-nowrap text-white block"
+        >
+          Black Metal
+        </div>
+      </div>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`GenreChip > should match snapshot with playtime 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor-pointer"
+        data-state="closed"
+      >
+        <div
+          class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+        >
+          <div
+            class="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+            style="width: calc(0% + 10px);"
+          />
+          <div
+            class="p-2 whitespace-nowrap text-white block"
+          >
+            Black Metal
+          </div>
+        </div>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor-pointer"
+      data-state="closed"
+    >
+      <div
+        class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+      >
+        <div
+          class="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+          style="width: calc(0% + 10px);"
+        />
+        <div
+          class="p-2 whitespace-nowrap text-white block"
+        >
+          Black Metal
+        </div>
+      </div>
+    </button>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
