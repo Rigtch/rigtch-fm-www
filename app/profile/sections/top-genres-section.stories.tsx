@@ -17,6 +17,24 @@ export default {
 
 export const Default: GenresSectionStory = {}
 
+export const WithPlays: GenresSectionStory = {
+  args: {
+    items: genresExample.map((genre, index) => ({
+      item: genre,
+      plays: 100 / (index + 1),
+    })),
+  },
+}
+
+export const WithPlaytime: GenresSectionStory = {
+  args: {
+    items: genresExample.map((genre, index) => ({
+      item: genre,
+      playtime: (1000 * 60 * 60 * 4) / (index + 1),
+    })),
+  },
+}
+
 export const NoData: GenresSectionStory = {
   args: {
     items: [],
