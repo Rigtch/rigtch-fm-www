@@ -1,10 +1,12 @@
-import { NoDataAlert } from '@app/components/common'
+import { NoDataAlert } from '../components/common'
+
+import type { RigtchStatsResponse } from '@app/api/types'
 import { GenreChip } from '@app/components/items/genre'
 import { DefaultSection, type DefaultSectionProps } from '@app/sections'
 
 export interface TopGenresSectionProps
   extends Pick<DefaultSectionProps, 'children'> {
-  items: string[]
+  items: string[] | RigtchStatsResponse<string>
 }
 
 export function TopGenresSection({ items, children }: TopGenresSectionProps) {
@@ -13,8 +15,24 @@ export function TopGenresSection({ items, children }: TopGenresSectionProps) {
       {items.length > 0 && (
         <div className="flex flex-row flex-wrap gap-2">
           {items.map(genre => (
-            <div key={genre}>
-              <GenreChip genre={genre} />
+            <div key={typeof genre === 'string' ? genre : genre.item}>
+              <GenreChip
+                genre={typeof genre === 'string' ? genre : genre.item}
+                {...(typeof genre !== 'string' &&
+                items.every(item => typeof item !== 'string')
+                  ? 'plays' in genre
+                    ? {
+                        plays: genre.plays!,
+                        maxPlays: Math.max(...items.map(item => item.plays!)),
+                      }
+                    : {
+                        playtime: genre.playtime,
+                        maxPlaytime: Math.max(
+                          ...items.map(item => item.playtime!)
+                        ),
+                      }
+                  : {})}
+              />
             </div>
           ))}
         </div>

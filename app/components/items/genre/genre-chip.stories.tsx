@@ -26,3 +26,17 @@ export const CustomClassName: GenreChipStory = {
     className: 'bg-neutral-800',
   },
 }
+
+export const WithPlays: GenreChipStory = {
+  args: {
+    plays: 100,
+    maxPlays: 110,
+  },
+}
+
+export const WithPlaytime: GenreChipStory = {
+  args: {
+    playtime: 1000 * 60 * 60 * 4,
+    maxPlaytime: 1000 * 60 * 60 * 6,
+  },
+}
