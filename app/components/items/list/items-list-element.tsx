@@ -119,7 +119,7 @@ export function ItemsListElement({
             </LinkButton>
 
             <div className="flex justify-between w-full items-center">
-              {artists && <ItemArtists artists={artists} />}
+              <div>{artists && <ItemArtists artists={artists} />}</div>
 
               {playedAt && <RelativeTime value={playedAt} />}
 

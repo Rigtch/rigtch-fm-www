@@ -5,7 +5,13 @@ import type { ItemPositionProps } from '../misc'
 
 import { ItemsListElement } from './items-list-element'
 
-import type { ArtistEntity, TrackEntity } from '@app/api/types'
+import type {
+  AlbumEntity,
+  ArtistEntity,
+  RigtchStatsResponse,
+  StatsMeasurement,
+  TrackEntity,
+} from '@app/api/types'
 import {
   Carousel,
   CarouselContent,
@@ -16,7 +22,10 @@ import {
 import { Separator } from '@app/components/ui/separator'
 
 export interface ItemsListProps {
-  items: ArtistEntity[] | TrackEntity[]
+  items:
+    | ArtistEntity[]
+    | TrackEntity[]
+    | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
   isTop?: boolean
   positionSize?: ItemPositionProps['size']
   positionClassName?: string
@@ -30,12 +39,40 @@ export function ItemsList({
   positionClassName,
   lastItemSeparator = false,
 }: ItemsListProps) {
-  const sortedItems = items.map((artist, index) => ({
-    ...artist,
-    ...(!('playedAt' in items[0]) && {
-      position: index + 1,
-    }),
-  }))
+  const sortedItems: (ArtistEntity | TrackEntity | AlbumEntity)[] = items.map(
+    (item, index) => ({
+      ...('item' in item
+        ? 'plays' in item
+          ? {
+              ...item.item,
+              plays: item.plays,
+              maxPlays: Math.max(
+                ...(
+                  items as RigtchStatsResponse<
+                    ArtistEntity | TrackEntity | AlbumEntity,
+                    StatsMeasurement.PLAYS
+                  >
+                ).map(item => item.plays)
+              ),
+            }
+          : {
+              ...item.item,
+              playtime: item.playtime,
+              maxPlaytime: Math.max(
+                ...(
+                  items as RigtchStatsResponse<
+                    ArtistEntity | TrackEntity | AlbumEntity,
+                    StatsMeasurement.PLAY_TIME
+                  >
+                ).map(item => item.playtime)
+              ),
+            }
+        : item),
+      ...(!('playedAt' in items[0]) && {
+        position: index + 1,
+      }),
+    })
+  )
 
   const carouselItems = sortedItems.slice(0, 3)
 
