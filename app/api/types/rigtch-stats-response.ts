@@ -10,9 +10,9 @@ export type RigtchStatsResponse<
 } & (TMeasurement extends StatsMeasurement.PLAYS
   ? {
       plays: number
-      playtime?: never
+      playTime?: never
     }
   : {
-      playtime: number
+      playTime: number
       plays?: never
     }))[]

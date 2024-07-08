@@ -1,19 +1,19 @@
-export type PlaytimeOrPlaysProps =
+export type PlayTimeOrPlaysProps =
   | {
-      playtime: number
-      maxPlaytime: number
+      playTime: number
+      maxPlayTime: number
       plays?: never
       maxPlays?: never
     }
   | {
-      playtime?: never
-      maxPlaytime?: never
+      playTime?: never
+      maxPlayTime?: never
       plays: number
       maxPlays: number
     }
   | {
-      playtime?: never
-      maxPlaytime?: never
+      playTime?: never
+      maxPlayTime?: never
       plays?: never
       maxPlays?: never
     }

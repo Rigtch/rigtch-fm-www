@@ -11,8 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@app/components/ui/select'
-import { formatSearchParams } from '@app/profile/utils/formatters'
 import { STATS_MEASUREMENT } from '@app/constants'
+import { formatSearchParams } from '@app/profile/utils/formatters'
 
 export interface SelectStatsMeasurementProps {
   initialValue: StatsMeasurement
@@ -29,7 +29,7 @@ export function SelectStatsMeasurement({
     },
     {
       value: StatsMeasurement.PLAY_TIME,
-      label: 'Playtime',
+      label: 'PlayTime',
       icon: <LuHourglass />,
     },
   ]

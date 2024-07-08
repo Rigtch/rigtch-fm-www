@@ -1,18 +1,18 @@
 import { render } from '@testing-library/react'
 
 import {
-  maxPlaytimeExample,
   maxPlaysExample,
-  playtimeExample,
+  maxPlayTimeExample,
   playsExample,
+  playtimeExample,
 } from '../examples'
 
 import { ItemsListElement } from './items-list-element'
 
 import { hrefMock, idMock } from '@tests/mocks'
-import { trackNameMock } from '@tests/mocks/track'
-import { imagesMock } from '@tests/mocks/images'
 import { artistsMock } from '@tests/mocks/artist'
+import { imagesMock } from '@tests/mocks/images'
+import { trackNameMock } from '@tests/mocks/track'
 
 describe('ItemsListElement', () => {
   test('should match snapshot with position', () => {
@@ -74,16 +74,16 @@ describe('ItemsListElement', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should match snapshot with playtime', () => {
+  test('should match snapshot with playTime', () => {
     const view = render(
       <ItemsListElement
         id={idMock}
         name={trackNameMock}
         href={hrefMock}
         images={imagesMock}
-        playtime={playtimeExample}
+        playTime={playtimeExample}
         position={1}
-        maxPlaytime={maxPlaytimeExample}
+        maxPlayTime={maxPlayTimeExample}
       />
     )
 

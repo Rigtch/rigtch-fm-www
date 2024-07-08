@@ -3,7 +3,7 @@ vi.mock('next/navigation')
 import { render, screen } from '@testing-library/react'
 import userEvent, { type UserEvent } from '@testing-library/user-event'
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider'
-import { useSearchParams, usePathname, useRouter } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import type { MockInstance } from 'vitest'
 
 import { SelectStatsMeasurement } from './select-stats-measurement'
@@ -53,8 +53,8 @@ describe('SelectStatsMeasurement', () => {
     expect(selectButton).toHaveTextContent('Plays')
 
     await user.click(selectButton)
-    await user.click(screen.getByRole('option', { name: 'Playtime' }))
+    await user.click(screen.getByRole('option', { name: 'PlayTime' }))
 
-    expect(selectButton).toHaveTextContent('Playtime')
+    expect(selectButton).toHaveTextContent('PlayTime')
   })
 })

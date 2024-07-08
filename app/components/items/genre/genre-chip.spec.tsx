@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 
-import { GenreChip } from './genre-chip'
 import { genreExample } from './examples'
+import { GenreChip } from './genre-chip'
 
 describe('GenreChip', () => {
   test('should match snapshot', () => {
@@ -26,12 +26,12 @@ describe('GenreChip', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should match snapshot with playtime', () => {
+  test('should match snapshot with playTime', () => {
     const view = render(
       <GenreChip
         genre={genreExample}
-        playtime={1000 * 60 * 60 * 4}
-        maxPlaytime={1000 * 60 * 60 * 6}
+        playTime={1000 * 60 * 60 * 4}
+        maxPlayTime={1000 * 60 * 60 * 6}
       />
     )
 

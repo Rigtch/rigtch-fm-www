@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import {
   artistExample,
-  maxPlaytimeExample,
   maxPlaysExample,
-  playtimeExample,
+  maxPlayTimeExample,
   playsExample,
+  playtimeExample,
 } from '../examples'
 
 import { ItemsListElement } from './items-list-element'
@@ -60,10 +60,10 @@ export const WithPlays: ItemsListElementStory = {
   },
 }
 
-export const WithPlaytime: ItemsListElementStory = {
+export const WithPlayTime: ItemsListElementStory = {
   args: {
-    playtime: playtimeExample,
-    maxPlaytime: maxPlaytimeExample,
+    playTime: playtimeExample,
+    maxPlayTime: maxPlayTimeExample,
   },
 }
 
