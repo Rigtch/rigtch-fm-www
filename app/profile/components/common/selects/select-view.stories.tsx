@@ -8,7 +8,7 @@ type SelectViewType = typeof SelectView
 type SelectViewStory = StoryObj<SelectViewType>
 
 export default {
-  title: 'Components/Common/SelectView',
+  title: 'Components/Profile/Common/Selects/SelectView',
   component: SelectView,
   argTypes: {
     initialValue: {

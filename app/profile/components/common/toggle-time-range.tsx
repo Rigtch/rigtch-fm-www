@@ -3,20 +3,19 @@
 import { usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
-import { ToggleGroup, ToggleGroupItem } from '../ui/toggle-group'
-
-import { TimeRange } from '@app/api/types'
+import { ToggleGroup, ToggleGroupItem } from '@app/components/ui/toggle-group'
+import { SpotifyTimeRange } from '@app/api/types'
 import { formatSearchParams } from '@app/profile/utils/formatters'
 
 export interface ToggleTimeRangeProps {
-  initialValue: TimeRange
+  initialValue: SpotifyTimeRange
 }
 
 export function ToggleTimeRange({ initialValue }: ToggleTimeRangeProps) {
   const timeRangeOptions = [
-    { label: '4 weeks', value: TimeRange.SHORT_TERM },
-    { label: '6 months', value: TimeRange.MEDIUM_TERM },
-    { label: 'lifetime', value: TimeRange.LONG_TERM },
+    { label: '4 weeks', value: SpotifyTimeRange.SHORT_TERM },
+    { label: '6 months', value: SpotifyTimeRange.MEDIUM_TERM },
+    { label: 'lifetime', value: SpotifyTimeRange.LONG_TERM },
   ]
 
   const pathname = usePathname()

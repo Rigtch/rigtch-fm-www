@@ -9,8 +9,7 @@ import {
   SelectTrigger,
   SelectContent,
   SelectValue,
-} from '../ui/select'
-
+} from '@app/components/ui/select'
 import { View } from '@app/types'
 import { formatSearchParams } from '@app/profile/utils/formatters'
 

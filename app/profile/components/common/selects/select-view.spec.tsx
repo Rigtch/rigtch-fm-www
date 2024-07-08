@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent, { type UserEvent } from '@testing-library/user-event'
-import { MockInstance } from 'vitest'
+import type { MockInstance } from 'vitest'
 import { useRouter, useSearchParams } from 'next/navigation'
 
 import { SelectView } from './select-view'

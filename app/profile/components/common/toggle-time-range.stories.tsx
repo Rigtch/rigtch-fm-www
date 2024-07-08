@@ -2,17 +2,17 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { ToggleTimeRange } from './toggle-time-range'
 
-import { TimeRange } from '@app/api/types'
+import { SpotifyTimeRange } from '@app/api/types'
 
 type ToggleTimeRangeType = typeof ToggleTimeRange
 type ToggleTimeRangeStory = StoryObj<ToggleTimeRangeType>
 
 export default {
-  title: 'Components/Common/ToggleTimeRange',
+  title: 'Components/Profile/Common/ToggleTimeRange',
   component: ToggleTimeRange,
   argTypes: {
     initialValue: {
-      options: Object.values(TimeRange),
+      options: Object.values(SpotifyTimeRange),
       control: {
         type: 'select',
       },
@@ -22,6 +22,6 @@ export default {
 
 export const Default: ToggleTimeRangeStory = {
   args: {
-    initialValue: TimeRange.SHORT_TERM,
+    initialValue: SpotifyTimeRange.SHORT_TERM,
   },
 }
