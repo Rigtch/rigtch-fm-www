@@ -1,4 +1,4 @@
-import { Cursors } from './cursors'
+import type { Cursors } from './cursors'
 
 export interface SpotifyResponse<T = unknown> {
   href: string

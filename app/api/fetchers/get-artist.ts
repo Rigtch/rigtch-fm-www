@@ -1,4 +1,4 @@
-import { ArtistEntity, ItemParams } from '../types'
+import type { ArtistEntity, ItemParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 

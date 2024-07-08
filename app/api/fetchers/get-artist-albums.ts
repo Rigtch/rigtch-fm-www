@@ -1,4 +1,4 @@
-import { AlbumEntity, ItemParams } from '../types'
+import type { AlbumEntity, ItemParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 

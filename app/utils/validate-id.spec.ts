@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { MockedFunction } from 'vitest'
+import type { MockedFunction } from 'vitest'
 
 import { validateId } from './validate-id'
 

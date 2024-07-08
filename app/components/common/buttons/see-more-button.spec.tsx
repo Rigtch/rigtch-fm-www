@@ -2,7 +2,7 @@ vi.mock('next/navigation')
 
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { MockInstance } from 'vitest'
+import type { MockInstance } from 'vitest'
 import { useSearchParams } from 'next/navigation'
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider'
 import mockRouter from 'next-router-mock'
@@ -10,7 +10,7 @@ import mockRouter from 'next-router-mock'
 import { SeeMoreButton } from './see-more-button'
 
 import { TIME_RANGE } from '@app/constants'
-import { TimeRange } from '@app/api/types'
+import { SpotifyTimeRange } from '@app/api/types'
 
 describe('SeeMoreButton', () => {
   const href = '/profile'
@@ -42,7 +42,7 @@ describe('SeeMoreButton', () => {
   })
 
   test('should navigate on click with query', async () => {
-    searchParams.append(TIME_RANGE, TimeRange.MEDIUM_TERM)
+    searchParams.append(TIME_RANGE, SpotifyTimeRange.MEDIUM_TERM)
 
     useSearchParamsSpy.mockReturnValue(searchParams)
 
@@ -56,7 +56,7 @@ describe('SeeMoreButton', () => {
 
     expect(mockRouter.pathname).toEqual(href)
     expect(mockRouter.query).toEqual({
-      [TIME_RANGE]: TimeRange.MEDIUM_TERM,
+      [TIME_RANGE]: SpotifyTimeRange.MEDIUM_TERM,
     })
   })
 })

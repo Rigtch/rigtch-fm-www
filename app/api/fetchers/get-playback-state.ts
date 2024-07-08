@@ -1,4 +1,4 @@
-import { PlaybackState, UsersParams } from '../types'
+import type { PlaybackState, UsersParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 

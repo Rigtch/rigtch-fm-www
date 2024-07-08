@@ -1,4 +1,4 @@
-import { HistoryParams, HistoryTrack, Pagination } from '../types'
+import type { HistoryParams, HistoryTrack, Pagination } from '../types'
 
 import { fetchApi } from './fetch-api'
 

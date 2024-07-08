@@ -1,4 +1,4 @@
-import { Analysis, UsersParams } from '../types'
+import type { Analysis, UsersParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 
