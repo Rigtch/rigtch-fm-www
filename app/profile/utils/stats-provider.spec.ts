@@ -1,9 +1,9 @@
-import type { StatsProvider } from '../types'
+import { StatsProvider } from '../types'
 
 import { isStatsProvider, validateStatsProvider } from './stats-provider'
 
 describe('StatsProvider', () => {
-  const statsProvider: StatsProvider = 'spotify'
+  const statsProvider: StatsProvider = StatsProvider.SPOTIFY
   const invalid = 'invalid'
 
   describe('isStatsProvider', () => {
@@ -22,7 +22,7 @@ describe('StatsProvider', () => {
     })
 
     test('should return StatsProvider.SPOTIFY when statsProvider is not a StatsProvider', () => {
-      expect(validateStatsProvider(invalid)).toEqual('spotify')
+      expect(validateStatsProvider(invalid)).toEqual(StatsProvider.SPOTIFY)
     })
   })
 })
