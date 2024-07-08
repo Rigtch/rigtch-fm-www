@@ -26,11 +26,11 @@ export const WithPlays: GenresSectionStory = {
   },
 }
 
-export const WithPlaytime: GenresSectionStory = {
+export const WithPlayTime: GenresSectionStory = {
   args: {
     items: genresExample.map((genre, index) => ({
       item: genre,
-      playtime: (1000 * 60 * 60 * 4) / (index + 1),
+      playTime: (1000 * 60 * 60 * 4) / (index + 1),
     })),
   },
 }

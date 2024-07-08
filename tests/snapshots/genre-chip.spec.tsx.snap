@@ -281,7 +281,7 @@ exports[`GenreChip > should match snapshot with plays 1`] = `
 }
 `;
 
-exports[`GenreChip > should match snapshot with playtime 1`] = `
+exports[`GenreChip > should match snapshot with playTime 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

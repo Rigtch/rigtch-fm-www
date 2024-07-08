@@ -4,10 +4,10 @@ import {
   albumExample,
   artistExample,
   idExample,
-  maxPlaytimeExample,
   maxPlaysExample,
-  playtimeExample,
+  maxPlayTimeExample,
   playsExample,
+  playtimeExample,
   trackExample,
 } from '../examples'
 
@@ -71,10 +71,10 @@ export const WithPlays: ItemTopCardStory = {
   },
 }
 
-export const WithPlaytime: ItemTopCardStory = {
+export const WithPlayTime: ItemTopCardStory = {
   args: {
-    playtime: playtimeExample,
-    maxPlaytime: maxPlaytimeExample,
+    playTime: playtimeExample,
+    maxPlayTime: maxPlayTimeExample,
     ...artistExample,
   },
 }

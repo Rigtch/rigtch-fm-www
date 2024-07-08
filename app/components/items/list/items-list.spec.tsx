@@ -2,8 +2,8 @@ import { render } from '@testing-library/react'
 
 import { ItemsList } from './items-list'
 
-import { tracksMock } from '@tests/mocks/track'
 import { artistEntitiesMocks } from '@tests/mocks/artist'
+import { tracksMock } from '@tests/mocks/track'
 
 import '@tests/mocks/window'
 
@@ -70,13 +70,13 @@ describe('ItemsList', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should match snapshot with playtime', () => {
+  test('should match snapshot with playTime', () => {
     const view = render(
       <ItemsList
         items={tracksMock.map(track => ({
           ...track,
-          playtime: 1000 * 60 * 60 * 2,
-          maxPlaytime: 1000 * 60 * 60 * 2,
+          playTime: 1000 * 60 * 60 * 2,
+          maxPlayTime: 1000 * 60 * 60 * 2,
         }))}
       />
     )
@@ -84,14 +84,14 @@ describe('ItemsList', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should match snapshot with playtime and top', () => {
+  test('should match snapshot with playTime and top', () => {
     const view = render(
       <ItemsList
         isTop
         items={tracksMock.map(track => ({
           ...track,
-          playtime: 1000 * 60 * 60 * 2,
-          maxPlaytime: 1000 * 60 * 60 * 2,
+          playTime: 1000 * 60 * 60 * 2,
+          maxPlayTime: 1000 * 60 * 60 * 2,
         }))}
       />
     )

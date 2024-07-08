@@ -2,9 +2,9 @@ import { render } from '@testing-library/react'
 
 import { ItemTopCard } from './item-top-card'
 
-import { trackMock } from '@tests/mocks/track'
 import { albumMock } from '@tests/mocks/album'
 import { artistMock } from '@tests/mocks/artist'
+import { trackMock } from '@tests/mocks/track'
 
 describe('ItemTopCard', () => {
   test('should match snapshot as track', () => {
@@ -39,7 +39,7 @@ describe('ItemTopCard', () => {
 
   test('should match snapshot as track with play time', () => {
     const view = render(
-      <ItemTopCard {...trackMock} playtime={1000} maxPlaytime={2000} />
+      <ItemTopCard {...trackMock} playTime={1000} maxPlayTime={2000} />
     )
 
     expect(view).toMatchSnapshot()
@@ -47,7 +47,7 @@ describe('ItemTopCard', () => {
 
   test('should match snapshot as track with play time and plays', () => {
     const view = render(
-      <ItemTopCard {...trackMock} playtime={1000} maxPlaytime={2000} />
+      <ItemTopCard {...trackMock} playTime={1000} maxPlayTime={2000} />
     )
 
     expect(view).toMatchSnapshot()

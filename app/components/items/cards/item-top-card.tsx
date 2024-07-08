@@ -1,16 +1,16 @@
 'use client'
 
+import prettyMilliseconds from 'pretty-ms'
 import { FaStar } from 'react-icons/fa6'
 import type { Simplify } from 'type-fest'
-import prettyMilliseconds from 'pretty-ms'
 
 import { GenreBadge } from '../genre'
 import { ItemArtists, ItemImage, ItemName, ItemPosition } from '../misc'
-import type { PlaytimeOrPlaysProps } from '../props'
+import type { PlayTimeOrPlaysProps } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
-import { cn } from '@app/utils/cn'
 import { ProgressWithValueLabel } from '@app/components/common'
+import { cn } from '@app/utils/cn'
 
 export type ItemTopCardTrackAlbumOrArtistProps =
   | (Pick<ArtistEntity, 'images' | 'genres'> & {
@@ -30,7 +30,7 @@ export type ItemTopCardTrackAlbumOrArtistProps =
 
 export type ItemTopCardProps = Simplify<
   ItemTopCardTrackAlbumOrArtistProps &
-    PlaytimeOrPlaysProps &
+    PlayTimeOrPlaysProps &
     Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
       position?: number
       isCarousel?: boolean
@@ -46,8 +46,8 @@ export function ItemTopCard({
   artists,
   album,
   isCarousel,
-  playtime,
-  maxPlaytime,
+  playTime,
+  maxPlayTime,
   plays,
   maxPlays,
 }: ItemTopCardProps) {
@@ -98,7 +98,7 @@ export function ItemTopCard({
           )}
 
           <div className="flex flex-row gap-1 mt-4 w-full justify-center">
-            {!playtime &&
+            {!playTime &&
               !plays &&
               stars.map((size, index) => (
                 <FaStar
@@ -126,11 +126,11 @@ export function ItemTopCard({
               />
             )}
 
-            {playtime && (
+            {playTime && (
               <ProgressWithValueLabel
-                value={playtime}
-                max={maxPlaytime}
-                label={prettyMilliseconds(playtime)}
+                value={playTime}
+                max={maxPlayTime}
+                label={prettyMilliseconds(playTime)}
                 animate
               />
             )}

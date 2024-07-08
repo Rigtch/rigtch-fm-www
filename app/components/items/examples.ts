@@ -115,4 +115,4 @@ export const trackExamples = [
 export const playsExample = 115
 export const maxPlaysExample = 1256
 export const playtimeExample = 1000 * 60 * 60 * 4 + 1000 * 60 * 10
-export const maxPlaytimeExample = 1000 * 60 * 60 * 6 + 1000 * 60 * 18
+export const maxPlayTimeExample = 1000 * 60 * 60 * 6 + 1000 * 60 * 18

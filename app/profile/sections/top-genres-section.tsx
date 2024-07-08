@@ -26,9 +26,9 @@ export function TopGenresSection({ items, children }: TopGenresSectionProps) {
                         maxPlays: Math.max(...items.map(item => item.plays!)),
                       }
                     : {
-                        playtime: genre.playtime,
-                        maxPlaytime: Math.max(
-                          ...items.map(item => item.playtime!)
+                        playTime: genre.playTime,
+                        maxPlayTime: Math.max(
+                          ...items.map(item => item.playTime!)
                         ),
                       }
                   : {})}

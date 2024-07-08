@@ -90,27 +90,27 @@ export const WithPlaysAndTop: ItemsListStory = {
   },
 }
 
-const maxPlaytime = 1000 * 60 * 60 * trackExamples.length
-const calculatePlaytime = (index: number) =>
+const maxPlayTime = 1000 * 60 * 60 * trackExamples.length
+const calculatePlayTime = (index: number) =>
   1000 * 60 * 60 * (trackExamples.length - index) + 1000 * 60 * index + 2
 
-export const WithPlaytime: ItemsListStory = {
+export const WithPlayTime: ItemsListStory = {
   args: {
     items: trackExamples.map((item, index) => ({
       ...item,
-      playtime: calculatePlaytime(index),
-      maxPlaytime,
+      playTime: calculatePlayTime(index),
+      maxPlayTime,
     })),
   },
 }
 
-export const WithPlaytimeAndTop: ItemsListStory = {
+export const WithPlayTimeAndTop: ItemsListStory = {
   args: {
     isTop: true,
     items: trackExamples.map((item, index) => ({
       ...item,
-      playtime: calculatePlaytime(index),
-      maxPlaytime,
+      playTime: calculatePlayTime(index),
+      maxPlayTime,
     })),
   },
 }

@@ -1,21 +1,21 @@
 'use client'
 
-import type { Simplify } from 'type-fest'
 import prettyMilliseconds from 'pretty-ms'
 import { useEffect, useState } from 'react'
+import type { Simplify } from 'type-fest'
 
 import {
-  ItemImage,
   ItemArtists,
-  RelativeTime,
+  ItemImage,
   ItemPosition,
+  RelativeTime,
   type ItemPositionProps,
 } from '../misc'
-import type { PlaytimeOrPlaysProps } from '../props'
+import type { PlayTimeOrPlaysProps } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
-import { LinkButton } from '@app/components/common/buttons'
 import { SpotifyLink } from '@app/components/common'
+import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
 
 export type ItemsListElementPlayedAtOrPositionProps =
@@ -50,7 +50,7 @@ export type ItemsListElementAlbumOrImagesProps =
 export type ItemsListElementProps = Simplify<
   ItemsListElementPlayedAtOrPositionProps &
     ItemsListElementAlbumOrImagesProps &
-    PlaytimeOrPlaysProps &
+    PlayTimeOrPlaysProps &
     Pick<AlbumEntity, 'name' | 'href' | 'id'>
 >
 
@@ -65,26 +65,26 @@ export function ItemsListElement({
   artists,
   playedAt,
   album,
-  playtime,
-  maxPlaytime,
+  playTime,
+  maxPlayTime,
   plays,
   maxPlays,
 }: ItemsListElementProps) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
   useEffect(() => {
-    if (plays ?? playtime) {
+    if (plays ?? playTime) {
       setTimeout(() => {
         setProgressWidth(
-          ((plays ?? playtime) / (maxPlays ?? maxPlaytime)) * 100
+          ((plays ?? playTime) / (maxPlays ?? maxPlayTime)) * 100
         )
       }, 200)
     }
-  }, [plays, playtime, maxPlays, maxPlaytime])
+  }, [plays, playTime, maxPlays, maxPlayTime])
 
   return (
     <div className="h-[72px] relative overflow-hidden">
-      {(plays ?? playtime) && (
+      {(plays ?? playTime) && (
         <div
           className="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
           style={{
@@ -123,7 +123,7 @@ export function ItemsListElement({
 
               {playedAt && <RelativeTime value={playedAt} />}
 
-              {playtime && prettyMilliseconds(playtime)}
+              {playTime && prettyMilliseconds(playTime)}
 
               {plays && `${plays} ${plays > 1 ? 'plays' : 'play'}`}
             </div>

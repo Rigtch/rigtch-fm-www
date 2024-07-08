@@ -1,48 +1,48 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import prettyMilliseconds from 'pretty-ms'
+import { useEffect, useState } from 'react'
 
-import type { PlaytimeOrPlaysProps } from '../props'
+import type { PlayTimeOrPlaysProps } from '../props'
 
 import type { GenreProps } from './props'
 
-import { cn } from '@app/utils/cn'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from '@app/components/ui/tooltip'
+import { cn } from '@app/utils/cn'
 
-export type GenreChipProps = GenreProps & PlaytimeOrPlaysProps
+export type GenreChipProps = GenreProps & PlayTimeOrPlaysProps
 
 export function GenreChip({
   genre,
   className,
   plays,
   maxPlays,
-  playtime,
-  maxPlaytime,
+  playTime,
+  maxPlayTime,
 }: GenreChipProps) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
   useEffect(() => {
-    if (plays ?? playtime) {
+    if (plays ?? playTime) {
       setTimeout(() => {
         setProgressWidth(
-          ((plays ?? playtime) / (maxPlays ?? maxPlaytime)) * 100
+          ((plays ?? playTime) / (maxPlays ?? maxPlayTime)) * 100
         )
       }, 200)
     }
-  }, [plays, playtime, maxPlays, maxPlaytime])
+  }, [plays, playTime, maxPlays, maxPlayTime])
 
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger
           className={cn(
-            plays ?? playtime ? 'cursor-pointer' : 'cursor-default'
+            plays ?? playTime ? 'cursor-pointer' : 'cursor-default'
           )}
         >
           <div
@@ -51,7 +51,7 @@ export function GenreChip({
               className ?? 'bg-neutral-700'
             )}
           >
-            {(plays ?? playtime) && (
+            {(plays ?? playTime) && (
               <div
                 className="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
                 style={{
@@ -67,8 +67,8 @@ export function GenreChip({
         </TooltipTrigger>
 
         {plays && <TooltipContent>{plays} plays</TooltipContent>}
-        {playtime && (
-          <TooltipContent>{prettyMilliseconds(playtime)}</TooltipContent>
+        {playTime && (
+          <TooltipContent>{prettyMilliseconds(playTime)}</TooltipContent>
         )}
       </Tooltip>
     </TooltipProvider>

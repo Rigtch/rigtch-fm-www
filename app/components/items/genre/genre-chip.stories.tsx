@@ -1,7 +1,7 @@
-import type { StoryObj, Meta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { GenreChip } from './genre-chip'
 import { genreExample } from './examples'
+import { GenreChip } from './genre-chip'
 
 type GenreChipType = typeof GenreChip
 type GenreChipStory = StoryObj<GenreChipType>
@@ -34,9 +34,9 @@ export const WithPlays: GenreChipStory = {
   },
 }
 
-export const WithPlaytime: GenreChipStory = {
+export const WithPlayTime: GenreChipStory = {
   args: {
-    playtime: 1000 * 60 * 60 * 4,
-    maxPlaytime: 1000 * 60 * 60 * 6,
+    playTime: 1000 * 60 * 60 * 4,
+    maxPlayTime: 1000 * 60 * 60 * 6,
   },
 }

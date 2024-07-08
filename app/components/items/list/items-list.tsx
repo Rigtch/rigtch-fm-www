@@ -57,14 +57,14 @@ export function ItemsList({
             }
           : {
               ...item.item,
-              playtime: item.playtime,
-              maxPlaytime: Math.max(
+              playTime: item.playTime,
+              maxPlayTime: Math.max(
                 ...(
                   items as RigtchStatsResponse<
                     ArtistEntity | TrackEntity | AlbumEntity,
                     StatsMeasurement.PLAY_TIME
                   >
-                ).map(item => item.playtime)
+                ).map(item => item.playTime)
               ),
             }
         : item),
