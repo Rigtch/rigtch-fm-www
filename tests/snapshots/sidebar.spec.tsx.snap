@@ -75,21 +75,20 @@ exports[`Sidebar > should match snapshot 1`] = `
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
+                  <path
+                    d="M21 15V6"
                   />
                   <path
-                    d="M6 12c0-1.7.7-3.2 1.8-4.2"
-                  />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="2"
+                    d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
                   />
                   <path
-                    d="M18 12c0 1.7-.7 3.2-1.8 4.2"
+                    d="M12 12H3"
+                  />
+                  <path
+                    d="M16 6H3"
+                  />
+                  <path
+                    d="M12 18H3"
                   />
                 </svg>
                 Top Genres
@@ -119,6 +118,40 @@ exports[`Sidebar > should match snapshot 1`] = `
                   />
                 </svg>
                 Top Artists
+              </a>
+              <a
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/albums?view=list"
+              >
+                <svg
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                  />
+                  <path
+                    d="M6 12c0-1.7.7-3.2 1.8-4.2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="2"
+                  />
+                  <path
+                    d="M18 12c0 1.7-.7 3.2-1.8 4.2"
+                  />
+                </svg>
+                Top Albums
               </a>
               <a
                 class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
@@ -254,21 +287,20 @@ exports[`Sidebar > should match snapshot 1`] = `
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
+                <path
+                  d="M21 15V6"
                 />
                 <path
-                  d="M6 12c0-1.7.7-3.2 1.8-4.2"
-                />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="2"
+                  d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
                 />
                 <path
-                  d="M18 12c0 1.7-.7 3.2-1.8 4.2"
+                  d="M12 12H3"
+                />
+                <path
+                  d="M16 6H3"
+                />
+                <path
+                  d="M12 18H3"
                 />
               </svg>
               Top Genres
@@ -298,6 +330,40 @@ exports[`Sidebar > should match snapshot 1`] = `
                 />
               </svg>
               Top Artists
+            </a>
+            <a
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/albums?view=list"
+            >
+              <svg
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <path
+                  d="M6 12c0-1.7.7-3.2 1.8-4.2"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="2"
+                />
+                <path
+                  d="M18 12c0 1.7-.7 3.2-1.8 4.2"
+                />
+              </svg>
+              Top Albums
             </a>
             <a
               class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
