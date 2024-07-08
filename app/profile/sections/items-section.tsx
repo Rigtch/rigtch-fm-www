@@ -1,12 +1,21 @@
+import { NoDataAlert } from '../components/common'
+
 import type { DefaultSectionProps } from '@app/sections'
 import { DefaultSection } from '@app/sections'
-import type { ArtistEntity, TrackEntity } from '@app/api/types'
+import type {
+  AlbumEntity,
+  ArtistEntity,
+  RigtchStatsResponse,
+  TrackEntity,
+} from '@app/api/types'
 import { ItemsList } from '@app/components/items/list'
 import { View } from '@app/types'
-import { NoDataAlert } from '@app/components/common'
 
 export type ItemsSectionProps = DefaultSectionProps & {
-  items: ArtistEntity[] | TrackEntity[]
+  items:
+    | ArtistEntity[]
+    | TrackEntity[]
+    | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
   view: View
 }
 
