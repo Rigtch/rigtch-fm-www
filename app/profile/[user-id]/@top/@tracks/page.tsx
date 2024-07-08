@@ -5,31 +5,64 @@ import { getTopTracks } from '@app/api/fetchers'
 import { ItemsSection } from '@app/profile/sections'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { validateView } from '@app/profile/utils/view'
-import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
+import {
+  STATS_MEASUREMENT,
+  STATS_PROVIDER,
+  TIME_RANGE,
+  USER_ID,
+  VIEW,
+} from '@app/constants'
 import { SeeMoreButton } from '@app/components/common/buttons'
-import type { ProfilePageProps } from '@app/profile/types'
+import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
+import { validateStatsProvider } from '@app/profile/utils/stats-provider'
+import type {
+  RigtchStatsResponse,
+  SpotifyTimeRange,
+  TrackEntity,
+  RigtchTimeRange,
+} from '@app/api/types'
+import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
+import { getAfterParam } from '@app/profile/utils/get-after-param'
+import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
 
 export default async function ProfileTopTracksSubPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const timeRange = validateTimeRange(searchParams[TIME_RANGE])
-  const view = validateView(searchParams[VIEW])
   const userId = validateId(params[USER_ID])
+  const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
+  const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
+  const statsMeasurement = validateStatsMeasurement(
+    searchParams[STATS_MEASUREMENT]
+  )
+  const view = validateView(searchParams[VIEW])
 
   const token = await getServerToken()
 
   if (!token) redirect('/')
 
-  const { items: tracks } = await getTopTracks(token, {
-    timeRange,
-    userId,
-    limit: 10,
-  })
+  let items: TrackEntity[] | RigtchStatsResponse<TrackEntity>
+
+  if (statsProvider === StatsProvider.RIGTCH) {
+    items = await getRigtchTopTracks(token, {
+      after: getAfterParam(timeRange as RigtchTimeRange),
+      userId,
+      limit: 10,
+      measurement: statsMeasurement,
+    })
+  } else {
+    const response = await getTopTracks(token, {
+      timeRange: timeRange as SpotifyTimeRange,
+      userId,
+      limit: 10,
+    })
+
+    items = response.items
+  }
 
   return (
-    <ItemsSection items={tracks} title="Top Tracks" view={view}>
+    <ItemsSection items={items} title="Top Tracks" view={view}>
       <SeeMoreButton href={`/profile/${userId}/top/tracks`} />
     </ItemsSection>
   )

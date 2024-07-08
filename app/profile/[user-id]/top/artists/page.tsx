@@ -5,10 +5,25 @@ import { getTopArtists } from '@app/api/fetchers'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { ItemsSection } from '@app/profile/sections'
 import { validateView } from '@app/profile/utils/view'
-import { TIME_RANGE, USER_ID, VIEW } from '@app/constants'
-import { ToggleTimeRange, SelectView } from '@app/components/common'
-import type { ProfilePageProps } from '@app/profile/types'
+import {
+  STATS_MEASUREMENT,
+  STATS_PROVIDER,
+  TIME_RANGE,
+  USER_ID,
+  VIEW,
+} from '@app/constants'
+import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
+import type {
+  SpotifyTimeRange,
+  ArtistEntity,
+  RigtchStatsResponse,
+  RigtchTimeRange,
+} from '@app/api/types'
+import { validateStatsProvider } from '@app/profile/utils/stats-provider'
+import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
+import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
+import { getAfterParam } from '@app/profile/utils/get-after-param'
 
 export const runtime = 'edge'
 
@@ -16,41 +31,45 @@ export default async function ProfileTopArtistsPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const timeRange = validateTimeRange(searchParams[TIME_RANGE])
-  const view = validateView(searchParams[VIEW])
   const userId = validateId(params[USER_ID])
+  const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
+  const statsMeasurement = validateStatsMeasurement(
+    searchParams[STATS_MEASUREMENT]
+  )
+  const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
+  const view = validateView(searchParams[VIEW])
 
   const token = await getServerToken()
 
   if (!token) redirect('/')
 
-  const artistsFirstPart = await getTopArtists(token, {
-    timeRange,
-    userId,
-    limit: 50,
-  })
-  const artistsSecondPart = await getTopArtists(token, {
-    timeRange,
-    userId,
-    limit: 50,
-    offset: 49,
-  })
+  let items: ArtistEntity[] | RigtchStatsResponse<ArtistEntity>
 
-  // Remove the first item of the second part to avoid duplicates
-  artistsSecondPart.items.shift()
-  const artists = artistsFirstPart.items.concat(artistsSecondPart.items)
+  if (statsProvider === StatsProvider.RIGTCH) {
+    items = await getRigtchTopArtists(token, {
+      after: getAfterParam(timeRange as RigtchTimeRange),
+      userId,
+      limit: 100,
+      measurement: statsMeasurement,
+    })
+  } else {
+    const { items: responseFirstPart } = await getTopArtists(token, {
+      timeRange: timeRange as SpotifyTimeRange,
+      userId,
+      limit: 50,
+    })
+    const { items: responseSecondPart } = await getTopArtists(token, {
+      timeRange: timeRange as SpotifyTimeRange,
+      userId,
+      limit: 50,
+      offset: 49,
+    })
 
-  return (
-    <>
-      <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
-        <ToggleTimeRange initialValue={timeRange} />
+    // Remove the first item of the second part to avoid duplicates
+    responseFirstPart.shift()
 
-        <div>
-          <SelectView initialValue={view} />
-        </div>
-      </div>
+    items = responseFirstPart.concat(responseSecondPart)
+  }
 
-      <ItemsSection items={artists} title="Top Artists" view={view} />
-    </>
-  )
+  return <ItemsSection items={items} title="Top Artists" view={view} />
 }
