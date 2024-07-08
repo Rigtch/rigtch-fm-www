@@ -6,13 +6,13 @@ import {
 } from '@app/api/fetchers'
 import { ItemsList } from '@app/components/items/list'
 import { ItemCard } from '@app/components/items/cards/item-card'
-import { ARTIST_ID } from '@app/constants'
+import { ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { GenreChip } from '@app/components/items/genre'
 
 export default async function ArtistPage({ params }: ArtistPageProps) {
-  const id = validateId(params[ARTIST_ID])
+  const id = validateId(params[ID])
 
   const { followers, images, name, href, genres } = await getArtist({
     id,

@@ -1,12 +1,12 @@
 import type { TrackPageProps } from '@app/(items)/types'
 import { getTrack } from '@app/api/fetchers/get-track'
 import { LinkButton } from '@app/components/common/buttons'
-import { TRACK_ID } from '@app/constants'
+import { ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 import { ItemHeaderSection } from '@app/(items)/sections'
 
 export default async function TrackPage({ params }: TrackPageProps) {
-  const id = validateId(params[TRACK_ID])
+  const id = validateId(params[ID])
 
   const {
     name,

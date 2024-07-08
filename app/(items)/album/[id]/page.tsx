@@ -4,13 +4,13 @@ import { FaCompactDisc } from 'react-icons/fa'
 import type { AlbumPageProps } from '@app/(items)/types'
 import { getAlbum } from '@app/api/fetchers'
 import { SpotifyLink } from '@app/components/common'
-import { ALBUM_ID } from '@app/constants'
+import { ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { ItemArtists } from '@app/components/items/misc'
 
 export default async function AlbumPage({ params }: AlbumPageProps) {
-  const id = validateId(params[ALBUM_ID])
+  const id = validateId(params[ID])
 
   const {
     name,
