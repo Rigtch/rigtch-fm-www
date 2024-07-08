@@ -1,16 +1,15 @@
 import Link from 'next/link'
 import { FaCompactDisc } from 'react-icons/fa'
 
-import type { AlbumPageProps } from '@app/(items)/types'
 import { getAlbum } from '@app/api/fetchers'
 import { SpotifyLink } from '@app/components/common'
-import { ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { ItemArtists } from '@app/components/items/misc'
+import type { PageWithIdParamProps } from '@app/types'
 
-export default async function AlbumPage({ params }: AlbumPageProps) {
-  const id = validateId(params[ID])
+export default async function AlbumPage({ params }: PageWithIdParamProps) {
+  const id = validateId(params.id)
 
   const {
     name,

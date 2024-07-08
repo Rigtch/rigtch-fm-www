@@ -4,12 +4,7 @@ import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
-import {
-  ID,
-  STATS_MEASUREMENT,
-  STATS_PROVIDER,
-  TIME_RANGE,
-} from '@app/constants'
+import { STATS_MEASUREMENT, STATS_PROVIDER, TIME_RANGE } from '@app/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { getTopGenres } from '@app/api/fetchers'
@@ -29,7 +24,7 @@ export default async function ProfileTopGenresSubPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[ID])
+  const userId = validateId(params.id)
   const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]

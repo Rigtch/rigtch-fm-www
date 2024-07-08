@@ -7,7 +7,6 @@ import { ProfileProviders } from '../providers'
 import type { ProfileLayoutBaseProps } from '../types'
 import { validateId } from '../../utils/validate-id'
 
-import { ID } from '@app/constants'
 import { Sidebar } from '@app/components/sidebar'
 
 export interface ProfileLayoutProps extends ProfileLayoutBaseProps {
@@ -26,7 +25,7 @@ export default function ProfileLayout({
   params,
 }: ProfileLayoutProps) {
   const pathname = usePathname()
-  const userId = validateId(params[ID])
+  const userId = validateId(params.id)
 
   const isProfileHomePage = pathname === `/profile/${userId}`
 

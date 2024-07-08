@@ -6,7 +6,6 @@ import { validateTimeRange } from '@app/profile/utils/time-range'
 import { ItemsSection } from '@app/profile/sections'
 import { validateView } from '@app/profile/utils/view'
 import {
-  ID,
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
@@ -31,7 +30,7 @@ export default async function ProfileTopArtistsPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[ID])
+  const userId = validateId(params.id)
   const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]

@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import { getRigtchTopAlbums } from '@app/api/fetchers/stats/rigtch'
 import type { RigtchTimeRange } from '@app/api/types'
 import { getServerToken } from '@app/auth'
-import { STATS_MEASUREMENT, TIME_RANGE, VIEW, ID } from '@app/constants'
+import { STATS_MEASUREMENT, TIME_RANGE, VIEW } from '@app/constants'
 import { ItemsSection } from '@app/profile/sections'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getAfterParam } from '@app/profile/utils/get-after-param'
@@ -18,7 +18,7 @@ export default async function ProfileTopAlbumsPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[ID])
+  const userId = validateId(params.id)
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )
