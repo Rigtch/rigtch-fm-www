@@ -2,11 +2,11 @@ import { redirect } from 'next/navigation'
 
 import { getServerToken } from '@app/auth'
 import {
-  USER_ID,
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
   STATS_MEASUREMENT,
+  ID,
 } from '@app/constants'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { validateStatsProvider } from '@app/profile/utils/stats-provider'
@@ -24,7 +24,7 @@ export default async function ProfileTopAlbumsSubPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[USER_ID])
+  const userId = validateId(params[ID])
   const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]

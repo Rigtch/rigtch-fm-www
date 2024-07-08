@@ -7,7 +7,7 @@ import { getAnalysis } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
 import type { ProfilePageProps } from '@app/profile/types'
-import { USER_ID } from '@app/constants'
+import { ID } from '@app/constants'
 import { getServerToken } from '@app/auth/utils'
 
 export interface Item {
@@ -21,7 +21,7 @@ export interface Item {
 export default async function ProfileAnalysisSubPage({
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[USER_ID])
+  const userId = validateId(params[ID])
   const token = await getServerToken()
 
   if (!token) redirect('/')

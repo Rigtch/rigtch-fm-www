@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import { validateId } from '@app/utils/validate-id'
 import { ItemsSection } from '@app/profile/sections'
 import type { ProfilePageProps } from '@app/profile/types'
-import { USER_ID } from '@app/constants'
+import { ID } from '@app/constants'
 import { getHistory } from '@app/api/fetchers'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { getServerToken } from '@app/auth/utils'
@@ -12,7 +12,7 @@ import { View } from '@app/types'
 export default async function ProfileHistorySubPage({
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[USER_ID])
+  const userId = validateId(params[ID])
   const token = await getServerToken()
 
   if (!token) redirect('/')
