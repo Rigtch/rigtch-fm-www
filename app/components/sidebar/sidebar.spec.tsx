@@ -11,7 +11,10 @@ vi.mock('next/navigation')
 describe('Sidebar', () => {
   beforeEach(() => {
     vi.mocked(useParams).mockReturnValue({ [USER_ID]: '1' })
-    ;(vi.mocked(useSearchParams) as Mock).mockReturnValue({ toString: vi.fn() })
+    ;(vi.mocked(useSearchParams) as Mock).mockReturnValue({
+      toString: vi.fn(),
+      get: vi.fn().mockReturnValue('list'),
+    })
   })
 
   test('should match snapshot', () => {
