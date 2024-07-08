@@ -47,47 +47,49 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
               <div
                 class="flex justify-between w-full items-center"
               >
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="/artist/123"
-                  >
-                    Darkthrone
-                  </a>
+                <div>
                   <span>
-                    , 
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      href="/artist/123"
+                    >
+                      Darkthrone
+                    </a>
+                    <span>
+                      , 
+                    </span>
                   </span>
-                </span>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="/artist/2"
-                  >
-                    Mayhem
-                  </a>
                   <span>
-                    , 
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      href="/artist/2"
+                    >
+                      Mayhem
+                    </a>
+                    <span>
+                      , 
+                    </span>
                   </span>
-                </span>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="/artist/3"
-                  >
-                    Darkthrone
-                  </a>
                   <span>
-                    , 
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      href="/artist/3"
+                    >
+                      Darkthrone
+                    </a>
+                    <span>
+                      , 
+                    </span>
                   </span>
-                </span>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                    href="/artist/4"
-                  >
-                    Darkthrone
-                  </a>
-                </span>
+                  <span>
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      href="/artist/4"
+                    >
+                      Darkthrone
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </header>
@@ -165,47 +167,49 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
             <div
               class="flex justify-between w-full items-center"
             >
-              <span>
-                <a
-                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                  href="/artist/123"
-                >
-                  Darkthrone
-                </a>
+              <div>
                 <span>
-                  , 
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/123"
+                  >
+                    Darkthrone
+                  </a>
+                  <span>
+                    , 
+                  </span>
                 </span>
-              </span>
-              <span>
-                <a
-                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                  href="/artist/2"
-                >
-                  Mayhem
-                </a>
                 <span>
-                  , 
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/2"
+                  >
+                    Mayhem
+                  </a>
+                  <span>
+                    , 
+                  </span>
                 </span>
-              </span>
-              <span>
-                <a
-                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                  href="/artist/3"
-                >
-                  Darkthrone
-                </a>
                 <span>
-                  , 
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/3"
+                  >
+                    Darkthrone
+                  </a>
+                  <span>
+                    , 
+                  </span>
                 </span>
-              </span>
-              <span>
-                <a
-                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                  href="/artist/4"
-                >
-                  Darkthrone
-                </a>
-              </span>
+                <span>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    href="/artist/4"
+                  >
+                    Darkthrone
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </header>
@@ -335,6 +339,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
               <div
                 class="flex justify-between w-full items-center"
               >
+                <div />
                 <p
                   class="text-primary-foreground/80 whitespace-nowrap"
                 >
@@ -412,6 +417,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
             <div
               class="flex justify-between w-full items-center"
             >
+              <div />
               <p
                 class="text-primary-foreground/80 whitespace-nowrap"
               >
@@ -555,6 +561,7 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
               <div
                 class="flex justify-between w-full items-center"
               >
+                <div />
                 115 plays
               </div>
             </div>
@@ -637,6 +644,7 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
             <div
               class="flex justify-between w-full items-center"
             >
+              <div />
               115 plays
             </div>
           </div>
@@ -776,6 +784,7 @@ exports[`ItemsListElement > should match snapshot with playtime 1`] = `
               <div
                 class="flex justify-between w-full items-center"
               >
+                <div />
                 4h 10m
               </div>
             </div>
@@ -858,6 +867,7 @@ exports[`ItemsListElement > should match snapshot with playtime 1`] = `
             <div
               class="flex justify-between w-full items-center"
             >
+              <div />
               4h 10m
             </div>
           </div>
@@ -992,7 +1002,9 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
               </a>
               <div
                 class="flex justify-between w-full items-center"
-              />
+              >
+                <div />
+              </div>
             </div>
           </header>
           <div
@@ -1068,7 +1080,9 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
             </a>
             <div
               class="flex justify-between w-full items-center"
-            />
+            >
+              <div />
+            </div>
           </div>
         </header>
         <div
