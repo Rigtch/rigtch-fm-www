@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-import { Progress } from '../ui/progress'
-
+import { Progress } from '@app/components/ui/progress'
 import { cn } from '@app/utils/cn'
 
 export interface ProgressWithValueLabelProps {
