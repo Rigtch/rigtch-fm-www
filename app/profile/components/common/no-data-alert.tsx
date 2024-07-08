@@ -1,6 +1,6 @@
 import { HiOutlineEmojiSad } from 'react-icons/hi'
 
-import { Alert, AlertDescription, AlertTitle } from '../ui/alert'
+import { Alert, AlertDescription, AlertTitle } from '@app/components/ui/alert'
 
 export function NoDataAlert() {
   return (

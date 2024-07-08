@@ -6,7 +6,7 @@ type NoDataAlertType = typeof NoDataAlert
 type NoDataAlertStory = StoryObj<NoDataAlertType>
 
 export default {
-  title: 'Components/Common/NoDataAlert',
+  title: 'Components/Profile/Common/NoDataAlert',
   component: NoDataAlert,
 } satisfies Meta<NoDataAlertType>
 
