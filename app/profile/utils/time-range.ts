@@ -1,4 +1,4 @@
-import type { StatsProvider } from '../types'
+import { StatsProvider } from '../types'
 
 import { RigtchTimeRange, SpotifyTimeRange } from '@app/api/types'
 
@@ -11,20 +11,18 @@ export function isRigtchTimeRange(value: string): value is RigtchTimeRange {
 }
 
 export function validateTimeRange(
-  timeRange?: string | string[] | null,
-  provider: StatsProvider = 'spotify'
+  timeRange: string | string[] | null | undefined,
+  provider: StatsProvider
 ) {
-  if (
-    provider === 'spotify' &&
-    typeof timeRange === 'string' &&
-    isSpotifyTimeRange(timeRange)
-  )
-    return timeRange
+  if (typeof timeRange === 'string') {
+    if (provider === StatsProvider.SPOTIFY && isSpotifyTimeRange(timeRange))
+      return timeRange
 
-  if (typeof timeRange === 'string' && isRigtchTimeRange(timeRange))
-    return timeRange
+    if (provider === StatsProvider.RIGTCH && isRigtchTimeRange(timeRange))
+      return timeRange
+  }
 
-  return provider === 'spotify'
+  return provider === StatsProvider.SPOTIFY
     ? SpotifyTimeRange.SHORT_TERM
     : RigtchTimeRange.WEEK
 }

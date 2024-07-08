@@ -1,28 +1,65 @@
-import { isSpotifyTimeRange, validateTimeRange } from './time-range'
+import { StatsProvider } from '../types'
 
-import { SpotifyTimeRange } from '@app/api/types'
+import {
+  isRigtchTimeRange,
+  isSpotifyTimeRange,
+  validateTimeRange,
+} from './time-range'
+
+import { RigtchTimeRange, SpotifyTimeRange } from '@app/api/types'
 
 describe('TimeRange', () => {
-  const timeRange = SpotifyTimeRange.MEDIUM_TERM
+  const spotifyTimeRange = SpotifyTimeRange.MEDIUM_TERM
+  const rigtchTimeRange = RigtchTimeRange.TWO_WEEKS
   const invalid = 'invalid'
 
-  describe('isTimeRange', () => {
-    test('should return true when value is a TimeRange', () => {
-      expect(isSpotifyTimeRange(timeRange)).toBeTruthy()
+  describe('isSpotifyTimeRange', () => {
+    test('should return true when value is a SpotifyTimeRange', () => {
+      expect(isSpotifyTimeRange(spotifyTimeRange)).toBeTruthy()
     })
 
-    test('should return false when value is not a TimeRange', () => {
+    test('should return false when value is not a SpotifyTimeRange', () => {
       expect(isSpotifyTimeRange(invalid)).toBeFalsy()
     })
   })
 
-  describe('validateTimeRange', () => {
-    test('should return timeRange when timeRange is a TimeRange', () => {
-      expect(validateTimeRange(timeRange)).toEqual(timeRange)
+  describe('isRigtchTimeRange', () => {
+    test('should return true when value is a RigtchTimeRange', () => {
+      expect(isRigtchTimeRange(rigtchTimeRange)).toBeTruthy()
     })
 
-    test('should return TimeRange.SHORT_TERM when timeRange is not a TimeRange', () => {
-      expect(validateTimeRange(invalid)).toEqual(SpotifyTimeRange.SHORT_TERM)
+    test('should return false when value is not a RigtchTimeRange', () => {
+      expect(isRigtchTimeRange(invalid)).toBeFalsy()
+    })
+  })
+
+  describe('validateTimeRange', () => {
+    describe('With Spotify provider', () => {
+      test('should return timeRange when timeRange is a SpotifyTimeRange', () => {
+        expect(
+          validateTimeRange(spotifyTimeRange, StatsProvider.SPOTIFY)
+        ).toEqual(spotifyTimeRange)
+      })
+
+      test('should return SpotifyTimeRange.SHORT_TERM when timeRange is not a SpotifyTimeRange', () => {
+        expect(validateTimeRange(invalid, StatsProvider.SPOTIFY)).toEqual(
+          SpotifyTimeRange.SHORT_TERM
+        )
+      })
+    })
+
+    describe('With Rigtch provider', () => {
+      test('should return timeRange when timeRange is a RigtchTimeRange', () => {
+        expect(
+          validateTimeRange(rigtchTimeRange, StatsProvider.RIGTCH)
+        ).toEqual(rigtchTimeRange)
+      })
+
+      test('should return RigtchTimeRange.WEEK when timeRange is not a RigtchTimeRange', () => {
+        expect(validateTimeRange(invalid, StatsProvider.RIGTCH)).toEqual(
+          RigtchTimeRange.WEEK
+        )
+      })
     })
   })
 })
