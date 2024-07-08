@@ -1,6 +1,6 @@
-import { ReactElement } from 'react'
+import type { ReactElement } from 'react'
 import {
-  RenderOptions,
+  type RenderOptions,
   fireEvent,
   render,
   screen,
@@ -8,9 +8,9 @@ import {
 import {
   QueryClient,
   QueryClientProvider,
-  UseQueryResult,
+  type UseQueryResult,
 } from '@tanstack/react-query'
-import { DeepMockProxy, mockDeep } from 'vitest-mock-extended'
+import { type DeepMockProxy, mockDeep } from 'vitest-mock-extended'
 import { useRouter } from 'next/navigation'
 
 import {
@@ -18,7 +18,7 @@ import {
   usePlaybackStateContext,
 } from './playback-state'
 
-import { PlaybackState } from '@app/api/types'
+import type { PlaybackState } from '@app/api/types'
 import {
   useRecentlyPlayedQuery,
   usePlaybackStateQuery,

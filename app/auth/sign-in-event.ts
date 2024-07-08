@@ -1,7 +1,7 @@
 'use server'
 
 import { cookies } from 'next/headers'
-import { Account, Profile, User } from 'next-auth'
+import type { Account, Profile, User } from 'next-auth'
 
 import { postMeUser } from '@app/api/fetchers'
 import { USER_ID } from '@app/constants'

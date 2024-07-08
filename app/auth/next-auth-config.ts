@@ -1,4 +1,4 @@
-import { NextAuthConfig } from 'next-auth'
+import type { NextAuthConfig } from 'next-auth'
 import SpotifyProvider from 'next-auth/providers/spotify'
 
 import { signInEvent } from './sign-in-event'

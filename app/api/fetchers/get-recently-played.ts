@@ -1,4 +1,4 @@
-import { SpotifyResponseWithCursors, Track, UsersParams } from '../types'
+import type { SpotifyResponseWithCursors, Track, UsersParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 

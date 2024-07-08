@@ -1,7 +1,6 @@
 'use client'
 
-import type { LinkProps } from 'next/link'
-import Link from 'next/link'
+import Link, { type LinkProps } from 'next/link'
 import { IconContext } from 'react-icons'
 import { FaSpotify } from 'react-icons/fa6'
 

@@ -3,7 +3,7 @@ import { useParams } from 'next/navigation'
 
 import { getHistory } from '../fetchers'
 import { HISTORY } from '../constants'
-import { HistoryTrack, Pagination } from '../types'
+import type { HistoryTrack, Pagination } from '../types'
 
 import { USER_ID } from '@app/constants'
 import { useToken } from '@app/hooks/use-token'

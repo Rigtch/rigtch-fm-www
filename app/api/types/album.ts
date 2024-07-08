@@ -1,6 +1,6 @@
-import { ArtistEntity } from './artist'
-import { Image } from './image'
-import { type TrackEntity } from './track'
+import type { ArtistEntity } from './artist'
+import type { Image } from './image'
+import type { TrackEntity } from './track'
 
 export interface Album {
   id: string

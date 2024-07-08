@@ -6,7 +6,7 @@ import {
   USER_NOT_FOUND,
   VALIDATION_FAILED_UUID_EXPECTED,
 } from '@app/api/constants'
-import { ErrorProps } from '@app/types'
+import type { ErrorProps } from '@app/types'
 
 export default function ProfileError({ error, reset }: ErrorProps) {
   console.error(error)

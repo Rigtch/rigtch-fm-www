@@ -1,5 +1,5 @@
-import { Device } from './device'
-import { Track } from './track'
+import type { Device } from './device'
+import type { Track } from './track'
 
 export interface PlaybackState {
   device: Device

@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 
 import { Button } from './components/ui/button'
-import { ErrorProps } from './types'
+import type { ErrorProps } from './types'
 
 export default function GlobalError({ error, reset }: ErrorProps) {
   const router = useRouter()

@@ -1,10 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 
 import { cn } from '@app/utils/cn'
-import { ItemWithImages, getImage } from '@app/utils/get-image'
+import { type ItemWithImages, getImage } from '@app/utils/get-image'
 
 export interface ItemImageProps
   extends Omit<ComponentProps<typeof Image>, 'src'> {

@@ -1,4 +1,4 @@
-import { HttpMethod, User } from '../types'
+import { HttpMethod, type User } from '../types'
 
 import { fetchApi } from './fetch-api'
 

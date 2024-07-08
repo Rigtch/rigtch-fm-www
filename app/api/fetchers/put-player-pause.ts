@@ -1,4 +1,4 @@
-import { HttpMethod, Success, UsersParams } from '../types'
+import { HttpMethod, type Success, type UsersParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 

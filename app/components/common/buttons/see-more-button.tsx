@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 import { Button } from '@app/components/ui/button'

@@ -1,4 +1,4 @@
-import { ItemParams, TrackEntity } from '../types'
+import type { ItemParams, TrackEntity } from '../types'
 
 import { fetchApi } from './fetch-api'
 

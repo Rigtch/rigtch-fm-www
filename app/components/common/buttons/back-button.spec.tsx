@@ -1,5 +1,5 @@
 import { useRouter } from 'next/navigation'
-import { MockInstance } from 'vitest'
+import type { MockInstance } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
