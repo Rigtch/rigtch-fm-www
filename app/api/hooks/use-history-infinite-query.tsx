@@ -5,7 +5,7 @@ import { getHistory } from '../fetchers'
 import { HISTORY } from '../constants'
 import type { HistoryTrack, Pagination } from '../types'
 
-import { USER_ID } from '@app/constants'
+import { ID } from '@app/constants'
 import { useToken } from '@app/hooks/use-token'
 
 export const useHistoryInfiniteQuery = (
@@ -13,7 +13,7 @@ export const useHistoryInfiniteQuery = (
   initialData: Pagination<HistoryTrack>
 ) => {
   const params = useParams()
-  const userId = params[USER_ID].toString()
+  const userId = params[ID].toString()
   const token = useToken()
 
   return useInfiniteQuery({

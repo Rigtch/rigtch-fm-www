@@ -1,58 +1,58 @@
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
-import { getTopTracks } from '@app/api/fetchers'
-import { ItemsSection } from '@app/profile/sections'
+import { getTopArtists } from '@app/api/fetchers'
 import { validateTimeRange } from '@app/profile/utils/time-range'
+import { ItemsSection } from '@app/profile/sections'
 import { validateView } from '@app/profile/utils/view'
 import {
+  ID,
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
-  USER_ID,
   VIEW,
 } from '@app/constants'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
 import type {
+  ArtistEntity,
   RigtchStatsResponse,
-  SpotifyTimeRange,
-  TrackEntity,
   RigtchTimeRange,
+  SpotifyTimeRange,
 } from '@app/api/types'
-import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
+import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
 import { getAfterParam } from '@app/profile/utils/get-after-param'
+import { validateStatsProvider } from '@app/profile/utils/stats-provider'
 import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
 
-export default async function ProfileTopTracksSubPage({
+export default async function ProfileTopArtistsSubPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[USER_ID])
+  const userId = validateId(params[ID])
   const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
-  const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )
+  const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
   const view = validateView(searchParams[VIEW])
 
   const token = await getServerToken()
 
   if (!token) redirect('/')
 
-  let items: TrackEntity[] | RigtchStatsResponse<TrackEntity>
+  let items: ArtistEntity[] | RigtchStatsResponse<ArtistEntity>
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopTracks(token, {
+    items = await getRigtchTopArtists(token, {
       after: getAfterParam(timeRange as RigtchTimeRange),
       userId,
       limit: 10,
       measurement: statsMeasurement,
     })
   } else {
-    const response = await getTopTracks(token, {
+    const response = await getTopArtists(token, {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 10,
@@ -62,8 +62,8 @@ export default async function ProfileTopTracksSubPage({
   }
 
   return (
-    <ItemsSection items={items} title="Top Tracks" view={view}>
-      <SeeMoreButton href={`/profile/${userId}/top/tracks`} />
+    <ItemsSection items={items} title="Top Artists" view={view}>
+      <SeeMoreButton href={`/profile/${userId}/top/artists`} />
     </ItemsSection>
   )
 }

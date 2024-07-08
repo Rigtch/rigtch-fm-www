@@ -12,14 +12,14 @@ import {
 
 import { SidebarSectionItem } from './sidebar-section-item'
 
-import { USER_ID, VIEW } from '@app/constants'
+import { ID, VIEW } from '@app/constants'
 
 export function Sidebar() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const params = useParams()
 
-  const userId = params[USER_ID].toString()
+  const userId = params[ID].toString()
   const view = searchParams.get(VIEW)
 
   return (

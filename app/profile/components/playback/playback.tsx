@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { PlaybackCardSkeleton } from './playback-card.skeleton'
 import { PlaybackCard } from './playback-card'
 
-import { USER_ID } from '@app/constants'
+import { ID } from '@app/constants'
 import { useAuthCookies } from '@app/hooks/use-auth-cookies'
 import { usePlaybackStateContext } from '@app/profile/context/playback-state'
 
@@ -16,7 +16,7 @@ export function Playback() {
   const { userId } = useAuthCookies()
   const params = useParams()
 
-  const routeUserId = params[USER_ID].toString()
+  const routeUserId = params[ID].toString()
 
   useEffect(() => {
     setIsPlayingOptimistic(isPlaying)

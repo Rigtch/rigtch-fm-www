@@ -6,20 +6,13 @@ import type {
   StatsMeasurement,
 } from '@app/api/types'
 import type {
+  ID,
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
-  USER_ID,
   VIEW,
 } from '@app/constants'
-import type { LayoutProps, PageProps, View } from '@app/types'
-
-export interface ProfilePageProps extends PageProps {
-  params: {
-    [USER_ID]?: string
-  }
-  searchParams: ProfilePageSearchParams
-}
+import type { LayoutProps, View } from '@app/types'
 
 export type ProfilePageSearchParams =
   | {
@@ -35,8 +28,14 @@ export type ProfilePageSearchParams =
       [STATS_MEASUREMENT]: StatsMeasurement
     }
 
+export interface ProfilePageParams {
+  [ID]?: string
+}
+export interface ProfilePageProps {
+  params: ProfilePageParams
+  searchParams: ProfilePageSearchParams
+}
+
 export interface ProfileLayoutBaseProps extends LayoutProps {
-  params: {
-    [USER_ID]?: string
-  }
+  params: ProfilePageParams
 }

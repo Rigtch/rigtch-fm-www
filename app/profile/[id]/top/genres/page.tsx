@@ -1,75 +1,61 @@
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
-import { getTopArtists } from '@app/api/fetchers'
-import { validateTimeRange } from '@app/profile/utils/time-range'
-import { ItemsSection } from '@app/profile/sections'
-import { validateView } from '@app/profile/utils/view'
 import {
+  ID,
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
-  USER_ID,
-  VIEW,
 } from '@app/constants'
+import { validateTimeRange } from '@app/profile/utils/time-range'
+import { getTopGenres } from '@app/api/fetchers'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
+import { TopGenresSection } from '@app/profile/sections'
 import type {
-  SpotifyTimeRange,
-  ArtistEntity,
   RigtchStatsResponse,
   RigtchTimeRange,
+  SpotifyTimeRange,
 } from '@app/api/types'
 import { validateStatsProvider } from '@app/profile/utils/stats-provider'
 import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
-import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
+import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { getAfterParam } from '@app/profile/utils/get-after-param'
 
 export const runtime = 'edge'
 
-export default async function ProfileTopArtistsPage({
+export default async function ProfileTopGenresPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[USER_ID])
+  const userId = validateId(params[ID])
   const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )
   const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
-  const view = validateView(searchParams[VIEW])
-
   const token = await getServerToken()
 
   if (!token) redirect('/')
 
-  let items: ArtistEntity[] | RigtchStatsResponse<ArtistEntity>
+  let items: string[] | RigtchStatsResponse<string>
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopArtists(token, {
+    items = await getRigtchTopGenres(token, {
+      limit: 100,
       after: getAfterParam(timeRange as RigtchTimeRange),
       userId,
-      limit: 100,
       measurement: statsMeasurement,
     })
   } else {
-    const { items: responseFirstPart } = await getTopArtists(token, {
+    const { genres } = await getTopGenres(token, {
+      limit: 50,
       timeRange: timeRange as SpotifyTimeRange,
       userId,
-      limit: 50,
-    })
-    const { items: responseSecondPart } = await getTopArtists(token, {
-      timeRange: timeRange as SpotifyTimeRange,
-      userId,
-      limit: 50,
-      offset: 49,
     })
 
-    // Remove the first item of the second part to avoid duplicates
-    responseFirstPart.shift()
-
-    items = responseFirstPart.concat(responseSecondPart)
+    items = genres
   }
 
-  return <ItemsSection items={items} title="Top Artists" view={view} />
+  return <TopGenresSection items={items} />
 }

@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation'
 import { PLAYBACK_STATE } from '../constants'
 import { getPlaybackState } from '../fetchers'
 
-import { USER_ID } from '@app/constants'
+import { ID } from '@app/constants'
 import { useToken } from '@app/hooks/use-token'
 
 export const usePlaybackStateQuery = () => {
@@ -13,7 +13,7 @@ export const usePlaybackStateQuery = () => {
   const token = useToken()
   const params = useParams()
 
-  const userId = params[USER_ID].toString()
+  const userId = params[ID].toString()
 
   const query = useQuery({
     queryKey: [PLAYBACK_STATE],

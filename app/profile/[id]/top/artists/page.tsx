@@ -1,37 +1,37 @@
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
-import { getTopTracks } from '@app/api/fetchers'
-import { ItemsSection } from '@app/profile/sections'
+import { getTopArtists } from '@app/api/fetchers'
 import { validateTimeRange } from '@app/profile/utils/time-range'
+import { ItemsSection } from '@app/profile/sections'
 import { validateView } from '@app/profile/utils/view'
 import {
+  ID,
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
-  USER_ID,
   VIEW,
 } from '@app/constants'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
 import type {
+  SpotifyTimeRange,
+  ArtistEntity,
   RigtchStatsResponse,
   RigtchTimeRange,
-  SpotifyTimeRange,
-  TrackEntity,
 } from '@app/api/types'
-import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
+import { validateStatsProvider } from '@app/profile/utils/stats-provider'
+import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
+import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
 import { getAfterParam } from '@app/profile/utils/get-after-param'
 
 export const runtime = 'edge'
 
-export default async function ProfileTopTracksPage({
+export default async function ProfileTopArtistsPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const userId = validateId(params[USER_ID])
+  const userId = validateId(params[ID])
   const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
@@ -43,23 +43,22 @@ export default async function ProfileTopTracksPage({
 
   if (!token) redirect('/')
 
-  let items: TrackEntity[] | RigtchStatsResponse<TrackEntity>
+  let items: ArtistEntity[] | RigtchStatsResponse<ArtistEntity>
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopTracks(token, {
+    items = await getRigtchTopArtists(token, {
       after: getAfterParam(timeRange as RigtchTimeRange),
       userId,
       limit: 100,
       measurement: statsMeasurement,
     })
   } else {
-    const { items: responseFirstPart } = await getTopTracks(token, {
+    const { items: responseFirstPart } = await getTopArtists(token, {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 50,
-      offset: 0,
     })
-    const { items: responseSecondPart } = await getTopTracks(token, {
+    const { items: responseSecondPart } = await getTopArtists(token, {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 50,
@@ -72,5 +71,5 @@ export default async function ProfileTopTracksPage({
     items = responseFirstPart.concat(responseSecondPart)
   }
 
-  return <ItemsSection items={items} title="Top Tracks" view={view} />
+  return <ItemsSection items={items} title="Top Artists" view={view} />
 }
