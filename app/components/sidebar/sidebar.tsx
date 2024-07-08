@@ -1,11 +1,18 @@
 'use client'
 
 import { useParams, usePathname, useSearchParams } from 'next/navigation'
-import { LuUserCircle, LuDisc3, LuMic2, LuMusic, LuClock } from 'react-icons/lu'
+import {
+  LuUserCircle,
+  LuDisc3,
+  LuMic2,
+  LuMusic,
+  LuClock,
+  LuListMusic,
+} from 'react-icons/lu'
 
 import { SidebarSectionItem } from './sidebar-section-item'
 
-import { USER_ID } from '@app/constants'
+import { USER_ID, VIEW } from '@app/constants'
 
 export function Sidebar() {
   const pathname = usePathname()
@@ -13,6 +20,7 @@ export function Sidebar() {
   const params = useParams()
 
   const userId = params[USER_ID].toString()
+  const view = searchParams.get(VIEW)
 
   return (
     <section className="flex flex-col gap-2">
@@ -38,7 +46,7 @@ export function Sidebar() {
               href={`/profile/${userId}/top/genres?${searchParams.toString()}`}
               label="Top Genres"
               pathname={pathname}
-              icon={LuDisc3}
+              icon={LuListMusic}
             />
 
             <SidebarSectionItem
@@ -47,6 +55,20 @@ export function Sidebar() {
               pathname={pathname}
               icon={LuMic2}
             />
+
+            <SidebarSectionItem
+              href={`/profile/${userId}/top/albums?${
+                view
+                  ? new URLSearchParams({
+                      [VIEW]: view,
+                    }).toString()
+                  : ''
+              }`}
+              label="Top Albums"
+              pathname={pathname}
+              icon={LuDisc3}
+            />
+
             <SidebarSectionItem
               href={`/profile/${userId}/top/tracks?${searchParams.toString()}`}
               label="Top Tracks"
