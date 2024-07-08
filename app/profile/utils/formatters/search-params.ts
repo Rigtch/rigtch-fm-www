@@ -1,7 +1,5 @@
-import type { ReadonlyURLSearchParams } from 'next/navigation'
-
 export function formatSearchParams(
-  searchParams: ReadonlyURLSearchParams,
+  searchParams: URLSearchParams,
   key?: string,
   value?: string
 ) {
