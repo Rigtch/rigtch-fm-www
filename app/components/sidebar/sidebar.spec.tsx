@@ -4,13 +4,11 @@ import type { Mock } from 'vitest'
 
 import { Sidebar } from './sidebar'
 
-import { ID } from '@app/constants'
-
 vi.mock('next/navigation')
 
 describe('Sidebar', () => {
   beforeEach(() => {
-    vi.mocked(useParams).mockReturnValue({ [ID]: '1' })
+    vi.mocked(useParams).mockReturnValue({ id: '1' })
     ;(vi.mocked(useSearchParams) as Mock).mockReturnValue({
       toString: vi.fn(),
       get: vi.fn().mockReturnValue('list'),

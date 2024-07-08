@@ -2,14 +2,12 @@ import { useParams } from 'next/navigation'
 
 import { putPlayerPause, putPlayerResume } from '../fetchers'
 
-import { ID } from '@app/constants'
 import { useToken } from '@app/hooks/use-token'
+import type { ParamsWithId } from '@app/types'
 
 export const useTogglePlaybackStateQuery = () => {
   const token = useToken()
-  const params = useParams()
-
-  const userId = params[ID].toString()
+  const { id: userId } = useParams<ParamsWithId>()
 
   function toggle(isPlaying = false) {
     return isPlaying

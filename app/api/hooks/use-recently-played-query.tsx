@@ -4,14 +4,12 @@ import { useParams } from 'next/navigation'
 import { RECENTLY_PLAYED } from '../constants'
 import { getRecentlyPlayed } from '../fetchers'
 
-import { ID } from '@app/constants'
 import { useToken } from '@app/hooks/use-token'
+import type { ParamsWithId } from '@app/types'
 
 export const useRecentlyPlayedQuery = () => {
   const token = useToken()
-  const params = useParams()
-
-  const userId = params[ID].toString()
+  const { id: userId } = useParams<ParamsWithId>()
 
   return useQuery({
     queryKey: [RECENTLY_PLAYED],

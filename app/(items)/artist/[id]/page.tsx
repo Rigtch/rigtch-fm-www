@@ -1,4 +1,3 @@
-import type { ArtistPageProps } from '@app/(items)/types'
 import {
   getArtist,
   getArtistAlbums,
@@ -6,13 +5,13 @@ import {
 } from '@app/api/fetchers'
 import { ItemsList } from '@app/components/items/list'
 import { ItemCard } from '@app/components/items/cards/item-card'
-import { ID } from '@app/constants'
 import { validateId } from '@app/utils/validate-id'
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { GenreChip } from '@app/components/items/genre'
+import type { PageWithIdParamProps } from '@app/types'
 
-export default async function ArtistPage({ params }: ArtistPageProps) {
-  const id = validateId(params[ID])
+export default async function ArtistPage({ params }: PageWithIdParamProps) {
+  const id = validateId(params.id)
 
   const { followers, images, name, href, genres } = await getArtist({
     id,
