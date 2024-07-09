@@ -14,12 +14,14 @@ import {
   SelectTimeRange,
   SelectView,
 } from '@app/profile/components/common/selects'
-import { validateTimeRange } from '@app/profile/utils/time-range'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
-import { validateView } from '@app/profile/utils/view'
 import type { ProfileLayoutBaseProps } from '@app/profile/types'
 import { StatsProvider } from '@app/profile/types'
+import {
+  validateStatsProvider,
+  validateView,
+  validateTimeRange,
+  validateStatsMeasurement,
+} from '@app/profile/utils/validators'
 
 export default function ProfileTopLayout({ children }: ProfileLayoutBaseProps) {
   const pathname = usePathname()

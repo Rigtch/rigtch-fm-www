@@ -1,12 +1,11 @@
-import { StatsProvider } from '../types'
-
+import { StatsProvider } from '@app/profile/types'
 import { RigtchTimeRange, SpotifyTimeRange } from '@app/api/types'
 
-export function isSpotifyTimeRange(value: string): value is SpotifyTimeRange {
+function isSpotifyTimeRange(value: string): value is SpotifyTimeRange {
   return Object.values(SpotifyTimeRange).includes(value as SpotifyTimeRange)
 }
 
-export function isRigtchTimeRange(value: string): value is RigtchTimeRange {
+function isRigtchTimeRange(value: string): value is RigtchTimeRange {
   return Object.values(RigtchTimeRange).includes(value as RigtchTimeRange)
 }
 

@@ -9,7 +9,6 @@ import {
   STATS_PROVIDER,
   TIME_RANGE,
 } from '@app/profile/constants'
-import { validateTimeRange } from '@app/profile/utils/time-range'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { getTopGenres } from '@app/api/fetchers'
 import { getServerToken } from '@app/auth/utils'
@@ -20,9 +19,12 @@ import type {
   RigtchTimeRange,
   SpotifyTimeRange,
 } from '@app/api/types'
-import { getAfterParam } from '@app/profile/utils/get-after-param'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
+import {
+  validateStatsProvider,
+  validateStatsMeasurement,
+  validateTimeRange,
+} from '@app/profile/utils/validators'
+import { afterParamFactory } from '@app/profile/utils/factories'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,
@@ -43,7 +45,7 @@ export default async function ProfileTopGenresSubPage({
 
   if (statsProvider === StatsProvider.RIGTCH) {
     items = await getRigtchTopGenres(token, {
-      after: getAfterParam(timeRange as RigtchTimeRange),
+      after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       limit: 10,
       measurement: statsMeasurement,

@@ -8,16 +8,18 @@ import {
   STATS_MEASUREMENT,
 } from '@app/profile/constants'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
-import { validateTimeRange } from '@app/profile/utils/time-range'
-import { validateView } from '@app/profile/utils/view'
 import { validateId } from '@app/utils/validate-id'
 import { getRigtchTopAlbums } from '@app/api/fetchers/stats/rigtch'
-import { getAfterParam } from '@app/profile/utils/get-after-param'
 import type { RigtchTimeRange } from '@app/api/types'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { ItemsSection } from '@app/profile/sections'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
+import {
+  validateStatsMeasurement,
+  validateStatsProvider,
+  validateTimeRange,
+  validateView,
+} from '@app/profile/utils/validators'
+import { afterParamFactory } from '@app/profile/utils/factories'
 
 export default async function ProfileTopAlbumsSubPage({
   searchParams,
@@ -38,7 +40,7 @@ export default async function ProfileTopAlbumsSubPage({
   if (statsProvider === StatsProvider.SPOTIFY) return null
 
   const items = await getRigtchTopAlbums(token, {
-    after: getAfterParam(timeRange as RigtchTimeRange),
+    after: afterParamFactory(timeRange as RigtchTimeRange),
     userId,
     limit: 10,
     measurement: statsMeasurement,

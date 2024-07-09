@@ -4,8 +4,10 @@ import { useSearchParams } from 'next/navigation'
 
 import { STATS_PROVIDER, VIEW } from '@app/profile/constants'
 import { TopAlbumsSkeletonSection } from '@app/profile/sections'
-import { validateView } from '@app/profile/utils/view'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
+import {
+  validateStatsProvider,
+  validateView,
+} from '@app/profile/utils/validators'
 import { StatsProvider } from '@app/profile/types'
 
 export default function ProfileTopAlbumsSubLoading() {

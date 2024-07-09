@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation'
 
 import { VIEW } from '@app/profile/constants'
 import { TopArtistsSkeletonSection } from '@app/profile/sections'
-import { validateView } from '@app/profile/utils/view'
+import { validateView } from '@app/profile/utils/validators'
 
 export default function ProfileTopArtistsSubLoading() {
   const searchParams = useSearchParams()

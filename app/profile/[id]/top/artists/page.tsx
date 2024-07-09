@@ -2,9 +2,7 @@ import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
 import { getTopArtists } from '@app/api/fetchers'
-import { validateTimeRange } from '@app/profile/utils/time-range'
 import { ItemsSection } from '@app/profile/sections'
-import { validateView } from '@app/profile/utils/view'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
@@ -19,10 +17,14 @@ import type {
   RigtchStatsResponse,
   RigtchTimeRange,
 } from '@app/api/types'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
 import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
-import { getAfterParam } from '@app/profile/utils/get-after-param'
+import {
+  validateStatsProvider,
+  validateStatsMeasurement,
+  validateTimeRange,
+  validateView,
+} from '@app/profile/utils/validators'
+import { afterParamFactory } from '@app/profile/utils/factories'
 
 export const runtime = 'edge'
 
@@ -46,7 +48,7 @@ export default async function ProfileTopArtistsPage({
 
   if (statsProvider === StatsProvider.RIGTCH) {
     items = await getRigtchTopArtists(token, {
-      after: getAfterParam(timeRange as RigtchTimeRange),
+      after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       limit: 100,
       measurement: statsMeasurement,

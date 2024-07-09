@@ -182,7 +182,7 @@ exports[`GenreChip > should match snapshot with custom className 1`] = `
 }
 `;
 
-exports[`GenreChip > should match snapshot with plays 1`] = `
+exports[`GenreChip > should match snapshot with playTime 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -281,7 +281,7 @@ exports[`GenreChip > should match snapshot with plays 1`] = `
 }
 `;
 
-exports[`GenreChip > should match snapshot with playTime 1`] = `
+exports[`GenreChip > should match snapshot with plays 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
