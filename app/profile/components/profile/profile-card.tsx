@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@app/components/ui/card'
-import { getImage } from '@app/utils/get-image'
+import { findImage } from '@app/utils/find-image'
 
 export type ProfileCardProps = Pick<
   Profile,
@@ -31,7 +31,7 @@ export function ProfileCard({
       <CardHeader className="lg:flex-row justify-between lg:items-center gap-8 p-4">
         <div className="flex flex-wrap items-center sm:justify-start justify-center gap-4 p-4 ">
           <ProfileAvatar
-            src={images.length > 0 ? getImage(images, 128) : undefined}
+            src={images.length > 0 ? findImage(images, 128) : undefined}
             displayName={displayName}
             size="lg"
           />
