@@ -12,7 +12,7 @@ import {
 
 import { SidebarSectionItem } from './sidebar-section-item'
 
-import { VIEW } from '@app/constants'
+import { VIEW } from '@app/profile/constants'
 import type { ParamsWithId } from '@app/types'
 
 export function Sidebar() {
