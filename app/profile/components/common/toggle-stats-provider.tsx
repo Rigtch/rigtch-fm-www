@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { ToggleGroup, ToggleGroupItem } from '@app/components/ui/toggle-group'
 import { formatSearchParams } from '@app/profile/utils/formatters'
-import { STATS_PROVIDER, VIEW } from '@app/constants'
+import { STATS_PROVIDER, VIEW } from '@app/profile/constants'
 import { StatsProvider } from '@app/profile/types'
 
 export interface ToggleStatsProviderProps {

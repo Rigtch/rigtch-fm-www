@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 
 import { TopTracksSkeletonSection } from '@app/profile/sections'
-import { VIEW } from '@app/constants'
+import { VIEW } from '@app/profile/constants'
 import { validateView } from '@app/profile/utils/view'
 
 export default function ProfileTopTracksLoading() {
