@@ -3,7 +3,7 @@ import type { Mock } from 'vitest'
 
 import { acceptUserCookiesAction } from './accept-user-cookies-action'
 
-import { USER_ACCEPT_COOKIES } from '@app/api/constants'
+import { USER_ACCEPT_COOKIES } from '@app/constants'
 
 vi.mock('next/headers')
 
