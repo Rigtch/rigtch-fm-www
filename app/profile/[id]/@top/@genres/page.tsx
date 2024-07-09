@@ -10,10 +10,10 @@ import {
   TIME_RANGE,
 } from '@app/profile/constants'
 import { SeeMoreButton } from '@app/components/common/buttons'
-import { getTopGenres } from '@app/api/fetchers'
 import { getServerToken } from '@app/auth/utils'
 import { TopGenresSection } from '@app/profile/sections'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
+import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
 import type {
   RigtchStatsResponse,
   RigtchTimeRange,
@@ -51,7 +51,7 @@ export default async function ProfileTopGenresSubPage({
       measurement: statsMeasurement,
     })
   } else {
-    const { genres } = await getTopGenres(token, {
+    const { genres } = await getSpotifyTopGenres(token, {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 10,

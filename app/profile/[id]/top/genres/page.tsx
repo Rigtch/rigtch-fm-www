@@ -6,7 +6,6 @@ import {
   STATS_PROVIDER,
   TIME_RANGE,
 } from '@app/profile/constants'
-import { getTopGenres } from '@app/api/fetchers'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { TopGenresSection } from '@app/profile/sections'
@@ -16,6 +15,7 @@ import type {
   SpotifyTimeRange,
 } from '@app/api/types'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
+import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
 import {
   validateStatsProvider,
   validateStatsMeasurement,
@@ -49,7 +49,7 @@ export default async function ProfileTopGenresPage({
       measurement: statsMeasurement,
     })
   } else {
-    const { genres } = await getTopGenres(token, {
+    const { genres } = await getSpotifyTopGenres(token, {
       limit: 50,
       timeRange: timeRange as SpotifyTimeRange,
       userId,

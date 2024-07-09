@@ -3,11 +3,11 @@
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validators'
-import { getAnalysis } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
 import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
+import { getSpotifyAnalysis } from '@app/api/fetchers/stats/spotify'
 
 export interface Item {
   title: string
@@ -35,7 +35,7 @@ export default async function ProfileAnalysisSubPage({
     valence,
     loudness,
     tempo,
-  } = await getAnalysis(token, {
+  } = await getSpotifyAnalysis(token, {
     userId,
   })
 
