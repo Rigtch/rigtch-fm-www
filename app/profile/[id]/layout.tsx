@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 import { ProfileProviders } from '../providers'
 import type { ProfileLayoutBaseProps } from '../types'
-import { validateId } from '../../utils/validate-id'
+import { validateId } from '../../utils/validators'
 
 import { Sidebar } from '@app/components/sidebar'
 

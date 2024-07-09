@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation'
 
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { getAnalysis } from '@app/api/fetchers'
 import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'

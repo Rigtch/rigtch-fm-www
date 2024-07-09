@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { getUser } from '@app/api/fetchers'
 import { ProfileCard } from '@app/profile/components/profile'
 import type { ProfilePageProps } from '@app/profile/types'

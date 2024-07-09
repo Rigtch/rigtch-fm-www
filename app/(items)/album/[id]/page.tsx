@@ -3,7 +3,7 @@ import { FaCompactDisc } from 'react-icons/fa'
 
 import { getAlbum } from '@app/api/fetchers'
 import { SpotifyLink } from '@app/components/common'
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { ItemArtists } from '@app/components/items/misc'
 import type { PageWithIdParamProps } from '@app/types'

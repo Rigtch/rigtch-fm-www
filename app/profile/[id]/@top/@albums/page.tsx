@@ -8,7 +8,7 @@ import {
   STATS_MEASUREMENT,
 } from '@app/profile/constants'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { getRigtchTopAlbums } from '@app/api/fetchers/stats/rigtch'
 import type { RigtchTimeRange } from '@app/api/types'
 import { SeeMoreButton } from '@app/components/common/buttons'

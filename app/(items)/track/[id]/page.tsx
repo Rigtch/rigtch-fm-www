@@ -1,6 +1,6 @@
 import { getTrack } from '@app/api/fetchers/get-track'
 import { LinkButton } from '@app/components/common/buttons'
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { ItemHeaderSection } from '@app/(items)/sections'
 import type { PageWithIdParamProps } from '@app/types'
 
