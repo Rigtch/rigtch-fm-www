@@ -4,7 +4,7 @@ import { usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 import { ToggleGroup, ToggleGroupItem } from '@app/components/ui/toggle-group'
-import { formatSearchParams } from '@app/profile/utils/formatters'
+import { formatSearchParams } from '@app/utils/formatters'
 import { STATS_PROVIDER, VIEW } from '@app/profile/constants'
 import { StatsProvider } from '@app/profile/types'
 

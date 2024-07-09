@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from '@app/components/ui/card'
 import { Skeleton } from '@app/components/ui/skeleton'
-import { formatArtists } from '@app/profile/utils/formatters'
+import { formatArtists } from '@app/utils/formatters'
 import { cn } from '@app/utils/cn'
 import type { Device, Track } from '@app/api/types'
 
