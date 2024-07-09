@@ -6,7 +6,7 @@ import { getServerToken } from '@app/auth'
 import { STATS_MEASUREMENT, TIME_RANGE, VIEW } from '@app/profile/constants'
 import { ItemsSection } from '@app/profile/sections'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import {
   validateStatsMeasurement,
   validateTimeRange,

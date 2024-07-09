@@ -6,7 +6,7 @@ import {
   TIME_RANGE,
   VIEW,
 } from '@app/profile/constants'
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { getTopTracks } from '@app/api/fetchers'
 import { ItemsSection } from '@app/profile/sections'
 import { SeeMoreButton } from '@app/components/common/buttons'

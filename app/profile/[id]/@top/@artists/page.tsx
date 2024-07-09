@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { getTopArtists } from '@app/api/fetchers'
 import { ItemsSection } from '@app/profile/sections'
 import {

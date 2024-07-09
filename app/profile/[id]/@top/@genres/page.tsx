@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation'
 
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import {
   STATS_MEASUREMENT,

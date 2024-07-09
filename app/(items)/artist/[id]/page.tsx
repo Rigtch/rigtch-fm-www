@@ -5,7 +5,7 @@ import {
 } from '@app/api/fetchers'
 import { ItemsList } from '@app/components/items/list'
 import { ItemCard } from '@app/components/items/cards/item-card'
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { GenreChip } from '@app/components/items/genre'
 import type { PageWithIdParamProps } from '@app/types'

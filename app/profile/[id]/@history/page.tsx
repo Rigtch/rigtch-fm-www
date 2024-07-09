@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 
-import { validateId } from '@app/utils/validate-id'
+import { validateId } from '@app/utils/validators'
 import { ItemsSection } from '@app/profile/sections'
 import type { ProfilePageProps } from '@app/profile/types'
 import { getHistory } from '@app/api/fetchers'
