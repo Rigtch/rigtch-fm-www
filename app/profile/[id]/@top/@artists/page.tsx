@@ -1,7 +1,6 @@
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validators'
-import { getTopArtists } from '@app/api/fetchers'
 import { ItemsSection } from '@app/profile/sections'
 import {
   STATS_MEASUREMENT,
@@ -19,6 +18,7 @@ import type {
   SpotifyTimeRange,
 } from '@app/api/types'
 import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
+import { getSpotifyTopArtists } from '@app/api/fetchers/stats/spotify'
 import {
   validateStatsProvider,
   validateStatsMeasurement,
@@ -53,7 +53,7 @@ export default async function ProfileTopArtistsSubPage({
       measurement: statsMeasurement,
     })
   } else {
-    const response = await getTopArtists(token, {
+    const response = await getSpotifyTopArtists(token, {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 10,

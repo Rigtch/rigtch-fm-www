@@ -7,7 +7,6 @@ import {
   VIEW,
 } from '@app/profile/constants'
 import { validateId } from '@app/utils/validators'
-import { getTopTracks } from '@app/api/fetchers'
 import { ItemsSection } from '@app/profile/sections'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
@@ -19,6 +18,7 @@ import type {
   RigtchTimeRange,
 } from '@app/api/types'
 import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
+import { getSpotifyTopTracks } from '@app/api/fetchers/stats/spotify'
 import {
   validateStatsProvider,
   validateTimeRange,
@@ -53,7 +53,7 @@ export default async function ProfileTopTracksSubPage({
       measurement: statsMeasurement,
     })
   } else {
-    const response = await getTopTracks(token, {
+    const response = await getSpotifyTopTracks(token, {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 10,

@@ -1,13 +1,12 @@
-import type {
-  ArtistEntity,
-  GetTopItemsParams,
-  SpotifyResponseWithOffset,
-} from '../types'
-import { SpotifyTimeRange } from '../types'
+import {
+  SpotifyTimeRange,
+  type ArtistEntity,
+  type GetTopItemsParams,
+  type SpotifyResponseWithOffset,
+} from '@app/api/types'
+import { fetchApi } from '@app/api/fetchers'
 
-import { fetchApi } from './fetch-api'
-
-export function getTopArtists(
+export function getSpotifyTopArtists(
   token: string,
   {
     userId,
@@ -22,10 +21,8 @@ export function getTopArtists(
     offset: offset + '',
   })
 
-  const path = `/users/${userId}/profile/top/artists`
-
   return fetchApi<SpotifyResponseWithOffset<ArtistEntity>>(
-    `${path}?${params.toString()}`,
+    `/users/${userId}/stats/spotify/top-artists?${params.toString()}`,
     { token }
   )
 }

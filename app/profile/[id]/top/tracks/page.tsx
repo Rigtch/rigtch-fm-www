@@ -1,7 +1,6 @@
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validators'
-import { getTopTracks } from '@app/api/fetchers'
 import { ItemsSection } from '@app/profile/sections'
 import {
   STATS_MEASUREMENT,
@@ -18,6 +17,7 @@ import type {
   TrackEntity,
 } from '@app/api/types'
 import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
+import { getSpotifyTopTracks } from '@app/api/fetchers/stats/spotify'
 import {
   validateStatsMeasurement,
   validateStatsProvider,
@@ -54,13 +54,13 @@ export default async function ProfileTopTracksPage({
       measurement: statsMeasurement,
     })
   } else {
-    const { items: responseFirstPart } = await getTopTracks(token, {
+    const { items: responseFirstPart } = await getSpotifyTopTracks(token, {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 50,
       offset: 0,
     })
-    const { items: responseSecondPart } = await getTopTracks(token, {
+    const { items: responseSecondPart } = await getSpotifyTopTracks(token, {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 50,
