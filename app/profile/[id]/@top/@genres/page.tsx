@@ -4,7 +4,11 @@ import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
-import { STATS_MEASUREMENT, STATS_PROVIDER, TIME_RANGE } from '@app/constants'
+import {
+  STATS_MEASUREMENT,
+  STATS_PROVIDER,
+  TIME_RANGE,
+} from '@app/profile/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { getTopGenres } from '@app/api/fetchers'

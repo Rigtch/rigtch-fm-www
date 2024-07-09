@@ -9,7 +9,7 @@ import {
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
-} from '@app/constants'
+} from '@app/profile/constants'
 import { validateTimeRange } from '@app/profile/utils/time-range'
 import { validateView } from '@app/profile/utils/view'
 import { StatsProvider, type ProfileLayoutBaseProps } from '@app/profile/types'

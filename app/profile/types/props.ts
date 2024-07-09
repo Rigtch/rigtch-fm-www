@@ -10,7 +10,7 @@ import type {
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
-} from '@app/constants'
+} from '@app/profile/constants'
 import type { LayoutProps, PageWithIdParamProps, View } from '@app/types'
 
 export type ProfilePageSearchParams =

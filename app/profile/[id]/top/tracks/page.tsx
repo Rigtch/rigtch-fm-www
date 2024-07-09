@@ -10,7 +10,7 @@ import {
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
-} from '@app/constants'
+} from '@app/profile/constants'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { validateStatsProvider } from '@app/profile/utils/stats-provider'

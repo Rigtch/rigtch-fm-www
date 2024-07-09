@@ -9,7 +9,7 @@ import mockRouter from 'next-router-mock'
 
 import { SeeMoreButton } from './see-more-button'
 
-import { TIME_RANGE } from '@app/constants'
+import { TIME_RANGE } from '@app/profile/constants'
 import { SpotifyTimeRange } from '@app/api/types'
 
 describe('SeeMoreButton', () => {
