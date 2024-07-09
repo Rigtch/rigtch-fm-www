@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from '@app/components/ui/select'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
-import { formatSearchParams } from '@app/profile/utils/formatters'
+import { formatSearchParams } from '@app/utils/formatters'
 
 export interface SelectStatsMeasurementProps {
   initialValue: StatsMeasurement
