@@ -3,8 +3,6 @@ import { redirect } from 'next/navigation'
 import { validateId } from '@app/utils/validate-id'
 import { getTopTracks } from '@app/api/fetchers'
 import { ItemsSection } from '@app/profile/sections'
-import { validateTimeRange } from '@app/profile/utils/time-range'
-import { validateView } from '@app/profile/utils/view'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
@@ -13,8 +11,6 @@ import {
 } from '@app/profile/constants'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
 import type {
   RigtchStatsResponse,
   RigtchTimeRange,
@@ -22,7 +18,13 @@ import type {
   TrackEntity,
 } from '@app/api/types'
 import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
-import { getAfterParam } from '@app/profile/utils/get-after-param'
+import {
+  validateStatsMeasurement,
+  validateStatsProvider,
+  validateTimeRange,
+  validateView,
+} from '@app/profile/utils/validators'
+import { afterParamFactory } from '@app/profile/utils/factories'
 
 export const runtime = 'edge'
 
@@ -46,7 +48,7 @@ export default async function ProfileTopTracksPage({
 
   if (statsProvider === StatsProvider.RIGTCH) {
     items = await getRigtchTopTracks(token, {
-      after: getAfterParam(timeRange as RigtchTimeRange),
+      after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       limit: 100,
       measurement: statsMeasurement,

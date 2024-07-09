@@ -2,9 +2,7 @@ import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validate-id'
 import { getTopArtists } from '@app/api/fetchers'
-import { validateTimeRange } from '@app/profile/utils/time-range'
 import { ItemsSection } from '@app/profile/sections'
-import { validateView } from '@app/profile/utils/view'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
@@ -21,9 +19,13 @@ import type {
   SpotifyTimeRange,
 } from '@app/api/types'
 import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
-import { getAfterParam } from '@app/profile/utils/get-after-param'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
+import {
+  validateStatsProvider,
+  validateStatsMeasurement,
+  validateTimeRange,
+  validateView,
+} from '@app/profile/utils/validators'
+import { afterParamFactory } from '@app/profile/utils/factories'
 
 export default async function ProfileTopArtistsSubPage({
   searchParams,
@@ -45,7 +47,7 @@ export default async function ProfileTopArtistsSubPage({
 
   if (statsProvider === StatsProvider.RIGTCH) {
     items = await getRigtchTopArtists(token, {
-      after: getAfterParam(timeRange as RigtchTimeRange),
+      after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       limit: 10,
       measurement: statsMeasurement,

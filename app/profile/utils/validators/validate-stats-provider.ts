@@ -1,6 +1,6 @@
-import { StatsProvider } from '../types'
+import { StatsProvider } from '@app/profile/types'
 
-export function isStatsProvider(value: string): value is StatsProvider {
+function isStatsProvider(value: string): value is StatsProvider {
   return Object.values(StatsProvider).includes(value as StatsProvider)
 }
 

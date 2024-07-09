@@ -1,6 +1,6 @@
 import { StatsMeasurement } from '@app/api/types'
 
-export function isStatsMeasurement(value: string): value is StatsMeasurement {
+function isStatsMeasurement(value: string): value is StatsMeasurement {
   return Object.values(StatsMeasurement).includes(value as StatsMeasurement)
 }
 

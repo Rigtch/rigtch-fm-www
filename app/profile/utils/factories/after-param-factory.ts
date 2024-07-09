@@ -1,6 +1,6 @@
 import { RigtchTimeRange } from '@app/api/types'
 
-export function getAfterParam(timeRange: RigtchTimeRange) {
+export function afterParamFactory(timeRange: RigtchTimeRange) {
   switch (timeRange) {
     case RigtchTimeRange.WEEK: {
       return new Date(Date.now() - 1000 * 60 * 60 * 24 * 7)

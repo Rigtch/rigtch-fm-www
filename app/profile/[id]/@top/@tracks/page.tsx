@@ -9,12 +9,9 @@ import {
 import { validateId } from '@app/utils/validate-id'
 import { getTopTracks } from '@app/api/fetchers'
 import { ItemsSection } from '@app/profile/sections'
-import { validateTimeRange } from '@app/profile/utils/time-range'
-import { validateView } from '@app/profile/utils/view'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
 import type {
   RigtchStatsResponse,
   SpotifyTimeRange,
@@ -22,8 +19,13 @@ import type {
   RigtchTimeRange,
 } from '@app/api/types'
 import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
-import { getAfterParam } from '@app/profile/utils/get-after-param'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
+import {
+  validateStatsProvider,
+  validateTimeRange,
+  validateStatsMeasurement,
+  validateView,
+} from '@app/profile/utils/validators'
+import { afterParamFactory } from '@app/profile/utils/factories'
 
 export default async function ProfileTopTracksSubPage({
   searchParams,
@@ -45,7 +47,7 @@ export default async function ProfileTopTracksSubPage({
 
   if (statsProvider === StatsProvider.RIGTCH) {
     items = await getRigtchTopTracks(token, {
-      after: getAfterParam(timeRange as RigtchTimeRange),
+      after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       limit: 10,
       measurement: statsMeasurement,

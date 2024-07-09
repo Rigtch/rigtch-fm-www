@@ -10,16 +10,18 @@ import {
   TIME_RANGE,
   VIEW,
 } from '@app/profile/constants'
-import { validateTimeRange } from '@app/profile/utils/time-range'
-import { validateView } from '@app/profile/utils/view'
 import { StatsProvider, type ProfileLayoutBaseProps } from '@app/profile/types'
-import { validateStatsProvider } from '@app/profile/utils/stats-provider'
 import {
   SelectStatsMeasurement,
   SelectTimeRange,
   SelectView,
 } from '@app/profile/components/common/selects'
-import { validateStatsMeasurement } from '@app/profile/utils/stats-measurement'
+import {
+  validateStatsMeasurement,
+  validateStatsProvider,
+  validateTimeRange,
+  validateView,
+} from '@app/profile/utils/validators'
 
 export interface ProfileTopGenresSubLayoutProps extends ProfileLayoutBaseProps {
   genres: ReactNode

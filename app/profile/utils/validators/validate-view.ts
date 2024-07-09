@@ -1,6 +1,6 @@
 import { View } from '@app/types'
 
-export function isView(value: string): value is View {
+function isView(value: string): value is View {
   return Object.values(View).includes(value as View)
 }
 
