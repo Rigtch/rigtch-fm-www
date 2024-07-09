@@ -2,7 +2,7 @@ import {
   getArtist,
   getArtistAlbums,
   getArtistTopTracks,
-} from '@app/api/fetchers'
+} from '@app/api/fetchers/items'
 import { ItemsList } from '@app/components/items/list'
 import { ItemCard } from '@app/components/items/cards/item-card'
 import { validateId } from '@app/utils/validators'

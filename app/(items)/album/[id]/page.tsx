@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FaCompactDisc } from 'react-icons/fa'
 
-import { getAlbum } from '@app/api/fetchers'
+import { getAlbum } from '@app/api/fetchers/items'
 import { SpotifyLink } from '@app/components/common'
 import { validateId } from '@app/utils/validators'
 import { ItemHeaderSection } from '@app/(items)/sections'
