@@ -1,4 +1,4 @@
-import { getImage } from './get-image'
+import { findImage } from './find-image'
 
 import type { Image } from '@app/api/types'
 
@@ -21,16 +21,16 @@ describe('getImage', () => {
   })
 
   test('should return empty string if item is undefined', () => {
-    expect(getImage(undefined)).toEqual('')
+    expect(findImage(undefined)).toEqual('')
   })
 
   test('should return image with width greater than or equal to minWidth', () => {
-    expect(getImage(imagesMock, 48)).toEqual(imagesMock[0].url)
-    expect(getImage(imagesMock, 128)).toEqual(imagesMock[1].url)
+    expect(findImage(imagesMock, 48)).toEqual(imagesMock[0].url)
+    expect(findImage(imagesMock, 128)).toEqual(imagesMock[1].url)
   })
 
   test('should return first image if no image with width greater than or equal to minWidth', () => {
-    expect(getImage(imagesMock, 200)).toEqual(imagesMock[0].url)
+    expect(findImage(imagesMock, 200)).toEqual(imagesMock[0].url)
   })
 
   describe('when item is track object', () => {
@@ -49,11 +49,11 @@ describe('getImage', () => {
     })
 
     test('should return image with width greater than or equal to minWidth', () => {
-      expect(getImage(trackMock, 48)).toEqual(imagesMock[0].url)
+      expect(findImage(trackMock, 48)).toEqual(imagesMock[0].url)
     })
 
     test('should return first image if no image with width greater than or equal to minWidth', () => {
-      expect(getImage(trackMock, 300)).toEqual(imagesMock[0].url)
+      expect(findImage(trackMock, 300)).toEqual(imagesMock[0].url)
     })
   })
 
@@ -69,11 +69,11 @@ describe('getImage', () => {
     })
 
     test('should return image with width greater than or equal to minWidth', () => {
-      expect(getImage(albumOrArtistMock, 48)).toEqual(imagesMock[0].url)
+      expect(findImage(albumOrArtistMock, 48)).toEqual(imagesMock[0].url)
     })
 
     test('should return first image if no image with width greater than or equal to minWidth', () => {
-      expect(getImage(albumOrArtistMock, 300)).toEqual(imagesMock[0].url)
+      expect(findImage(albumOrArtistMock, 300)).toEqual(imagesMock[0].url)
     })
   })
 })

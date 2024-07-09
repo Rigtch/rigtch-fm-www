@@ -2,7 +2,7 @@ import type { Simplify } from 'type-fest'
 
 import type { AlbumEntity, Image } from '@app/api/types'
 
-const getImagePredicate =
+const findImagePredicate =
   (minWidth = 0) =>
   (image: Image) =>
     image.width >= minWidth
@@ -17,18 +17,18 @@ export type ItemWithImages =
     >
   | []
 
-export function getImage(item?: ItemWithImages, minWidth = 0) {
+export function findImage(item?: ItemWithImages, minWidth = 0) {
   if (!item) return ''
 
   if ('images' in item)
     return (
-      item.images.find(getImagePredicate(minWidth))?.url ?? item.images[0].url
+      item.images.find(findImagePredicate(minWidth))?.url ?? item.images[0].url
     )
   else if (Array.isArray(item))
-    return item.find(getImagePredicate(minWidth))?.url ?? item[0].url
+    return item.find(findImagePredicate(minWidth))?.url ?? item[0].url
 
   return (
-    item.album.images.find(getImagePredicate(minWidth))?.url ??
+    item.album.images.find(findImagePredicate(minWidth))?.url ??
     item.album.images[0].url
   )
 }

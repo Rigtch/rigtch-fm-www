@@ -4,7 +4,7 @@ import Image from 'next/image'
 import type { ComponentProps } from 'react'
 
 import { cn } from '@app/utils/cn'
-import { type ItemWithImages, getImage } from '@app/utils/get-image'
+import { type ItemWithImages, findImage } from '@app/utils/find-image'
 
 export interface ItemImageProps
   extends Omit<ComponentProps<typeof Image>, 'src'> {
@@ -22,7 +22,7 @@ export function ItemImage({
   return (
     <Image
       {...props}
-      src={getImage(images, size)}
+      src={findImage(images, size)}
       alt={alt}
       width={size}
       height={size}
