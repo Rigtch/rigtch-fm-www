@@ -1,9 +1,3 @@
-export const PROFILE = 'profile' as const
-export const REFRESH = 'refresh' as const
-export const TOP_GENRES = 'top/genres' as const
-export const TOP_ARTISTS = 'top/artists' as const
-export const TOP_TRACKS = 'top/tracks' as const
 export const RECENTLY_PLAYED = 'recently-played' as const
 export const PLAYBACK_STATE = 'playback-state' as const
-export const ANALYSIS = 'analysis' as const
 export const HISTORY = 'history' as const
