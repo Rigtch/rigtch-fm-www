@@ -7,7 +7,7 @@ import {
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
-} from '@app/constants'
+} from '@app/profile/constants'
 import { ToggleStatsProvider } from '@app/profile/components/common'
 import {
   SelectStatsMeasurement,

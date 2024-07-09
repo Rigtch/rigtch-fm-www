@@ -1,16 +1,16 @@
 import { redirect } from 'next/navigation'
 
-import { validateId } from '@app/utils/validate-id'
-import { getTopTracks } from '@app/api/fetchers'
-import { ItemsSection } from '@app/profile/sections'
-import { validateTimeRange } from '@app/profile/utils/time-range'
-import { validateView } from '@app/profile/utils/view'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
-} from '@app/constants'
+} from '@app/profile/constants'
+import { validateId } from '@app/utils/validate-id'
+import { getTopTracks } from '@app/api/fetchers'
+import { ItemsSection } from '@app/profile/sections'
+import { validateTimeRange } from '@app/profile/utils/time-range'
+import { validateView } from '@app/profile/utils/view'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'

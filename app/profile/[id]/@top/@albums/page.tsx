@@ -6,7 +6,7 @@ import {
   TIME_RANGE,
   VIEW,
   STATS_MEASUREMENT,
-} from '@app/constants'
+} from '@app/profile/constants'
 import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
 import { validateStatsProvider } from '@app/profile/utils/stats-provider'
 import { validateTimeRange } from '@app/profile/utils/time-range'

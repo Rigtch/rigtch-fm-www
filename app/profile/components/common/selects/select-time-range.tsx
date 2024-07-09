@@ -12,7 +12,7 @@ import {
 } from '@app/components/ui/select'
 import { SpotifyTimeRange, RigtchTimeRange } from '@app/api/types'
 import { formatSearchParams } from '@app/profile/utils/formatters'
-import { TIME_RANGE } from '@app/constants'
+import { TIME_RANGE } from '@app/profile/constants'
 import type { StatsProvider } from '@app/profile/types'
 
 export interface SelectTimeRangeProps<TStatsProvider extends StatsProvider> {
