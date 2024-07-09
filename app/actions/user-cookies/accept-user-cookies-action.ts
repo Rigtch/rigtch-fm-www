@@ -2,7 +2,7 @@
 
 import { cookies } from 'next/headers'
 
-import { USER_ACCEPT_COOKIES } from '@app/api/constants'
+import { USER_ACCEPT_COOKIES } from '@app/constants'
 
 export async function acceptUserCookiesAction() {
   cookies().set(USER_ACCEPT_COOKIES, 'true', { path: '/' })

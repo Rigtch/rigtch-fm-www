@@ -2,13 +2,12 @@ import { cookies } from 'next/headers'
 
 import './styles/globals.css'
 
-import { USER_ACCEPT_COOKIES } from './api/constants'
+import { USER_ACCEPT_COOKIES, USER_ID } from './constants'
 import { auth } from './auth'
 import { CookiesDialog } from './components/cookies-dialog'
 import { Footer } from './components/footer'
 import { NavigationBar } from './components/navigation'
 import { Toaster } from './components/ui/toaster'
-import { USER_ID } from './constants'
 import { RootProviders } from './providers'
 import type { LayoutProps } from './types'
 
