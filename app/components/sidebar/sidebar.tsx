@@ -12,8 +12,10 @@ import {
 
 import { SidebarSectionItem } from './sidebar-section-item'
 
-import { VIEW } from '@app/profile/constants'
+import { STATS_PROVIDER, VIEW } from '@app/profile/constants'
 import type { ParamsWithId } from '@app/types'
+import { StatsProvider } from '@app/profile/types'
+import { formatSearchParams } from '@app/utils/formatters'
 
 export function Sidebar() {
   const pathname = usePathname()
@@ -57,13 +59,13 @@ export function Sidebar() {
             />
 
             <SidebarSectionItem
-              href={`/profile/${userId}/top/albums?${
+              href={`/profile/${userId}/top/albums?${formatSearchParams(
                 view
-                  ? new URLSearchParams({
-                      [VIEW]: view,
-                    }).toString()
-                  : ''
-              }`}
+                  ? new URLSearchParams({ [VIEW]: view })
+                  : new URLSearchParams(),
+                STATS_PROVIDER,
+                StatsProvider.RIGTCH
+              )}`}
               label="Top Albums"
               pathname={pathname}
               icon={LuDisc3}
