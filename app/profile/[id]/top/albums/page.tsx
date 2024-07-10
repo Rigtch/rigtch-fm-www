@@ -1,11 +1,10 @@
 import { redirect } from 'next/navigation'
 
 import { getRigtchTopAlbums } from '@app/api/fetchers/stats/rigtch'
-import type { RigtchTimeRange } from '@app/api/types'
 import { getServerToken } from '@app/auth'
 import { STATS_MEASUREMENT, TIME_RANGE, VIEW } from '@app/profile/constants'
 import { ItemsSection } from '@app/profile/sections'
-import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { validateId } from '@app/utils/validators'
 import {
   validateStatsMeasurement,
@@ -13,6 +12,7 @@ import {
   validateView,
 } from '@app/profile/utils/validators'
 import { afterParamFactory } from '@app/profile/utils/factories'
+import { StatsProvider, type RigtchTimeRange } from '@app/profile/enums'
 
 export const runtime = 'edge'
 

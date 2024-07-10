@@ -1,4 +1,4 @@
-import { StatsProvider } from '@app/profile/types'
+import { StatsProvider } from '@app/profile/enums'
 
 function isStatsProvider(value: string): value is StatsProvider {
   return Object.values(StatsProvider).includes(value as StatsProvider)

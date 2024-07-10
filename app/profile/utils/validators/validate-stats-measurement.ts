@@ -1,4 +1,4 @@
-import { StatsMeasurement } from '@app/api/types'
+import { StatsMeasurement } from '@app/api/enums'
 
 function isStatsMeasurement(value: string): value is StatsMeasurement {
   return Object.values(StatsMeasurement).includes(value as StatsMeasurement)

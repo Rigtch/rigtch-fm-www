@@ -10,10 +10,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@app/components/ui/select'
-import { SpotifyTimeRange, RigtchTimeRange } from '@app/api/types'
+import {
+  SpotifyTimeRange,
+  RigtchTimeRange,
+  type StatsProvider,
+} from '@app/profile/enums'
 import { formatSearchParams } from '@app/utils/formatters'
 import { TIME_RANGE } from '@app/profile/constants'
-import type { StatsProvider } from '@app/profile/types'
 
 export interface SelectTimeRangeProps<TStatsProvider extends StatsProvider> {
   initialValue: TStatsProvider extends StatsProvider.RIGTCH

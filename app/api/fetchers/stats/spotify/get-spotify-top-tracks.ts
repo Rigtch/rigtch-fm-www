@@ -1,10 +1,10 @@
 import { fetchApi } from '@app/api/fetchers'
-import {
-  SpotifyTimeRange,
-  type GetTopItemsParams,
-  type SpotifyResponseWithOffset,
-  type TrackEntity,
+import type {
+  GetTopItemsParams,
+  SpotifyResponseWithOffset,
+  TrackEntity,
 } from '@app/api/types'
+import { SpotifyTimeRange } from '@app/profile/enums'
 
 export function getSpotifyTopTracks(
   token: string,

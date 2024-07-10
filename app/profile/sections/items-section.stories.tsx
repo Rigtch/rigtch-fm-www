@@ -5,7 +5,7 @@ import { TopTracksSectionSkeleton } from './top-tracks-section.skeleton'
 import { TopArtistsSectionSkeleton } from './top-artists-section.skeleton'
 import { TopAlbumsSectionSkeleton } from './top-albums-section.skeleton'
 
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 import { trackExamples } from '@app/components/items/examples'
 
 type ItemsSectionType = typeof ItemsSection

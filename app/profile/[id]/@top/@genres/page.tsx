@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validators'
-import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
@@ -14,17 +14,18 @@ import { getServerToken } from '@app/auth/utils'
 import { TopGenresSection } from '@app/profile/sections'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
-import type {
-  RigtchStatsResponse,
-  RigtchTimeRange,
-  SpotifyTimeRange,
-} from '@app/api/types'
+import type { RigtchStatsResponse } from '@app/api/types'
 import {
   validateStatsProvider,
   validateStatsMeasurement,
   validateTimeRange,
 } from '@app/profile/utils/validators'
 import { afterParamFactory } from '@app/profile/utils/factories'
+import {
+  StatsProvider,
+  type RigtchTimeRange,
+  type SpotifyTimeRange,
+} from '@app/profile/enums'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,

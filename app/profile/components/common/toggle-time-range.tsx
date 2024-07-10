@@ -4,7 +4,7 @@ import { usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 import { ToggleGroup, ToggleGroupItem } from '@app/components/ui/toggle-group'
-import { SpotifyTimeRange } from '@app/api/types'
+import { SpotifyTimeRange } from '@app/profile/enums'
 import { formatSearchParams } from '@app/utils/formatters'
 
 export interface ToggleTimeRangeProps {

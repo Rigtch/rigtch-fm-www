@@ -5,11 +5,11 @@ import type { ItemPositionProps } from '../misc'
 
 import { ItemsListElement } from './items-list-element'
 
+import type { StatsMeasurement } from '@app/api/enums'
 import type {
   AlbumEntity,
   ArtistEntity,
   RigtchStatsResponse,
-  StatsMeasurement,
   TrackEntity,
 } from '@app/api/types'
 import {

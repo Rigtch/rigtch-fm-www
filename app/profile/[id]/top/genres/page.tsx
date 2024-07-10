@@ -6,14 +6,10 @@ import {
   STATS_PROVIDER,
   TIME_RANGE,
 } from '@app/profile/constants'
-import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { TopGenresSection } from '@app/profile/sections'
-import type {
-  RigtchStatsResponse,
-  RigtchTimeRange,
-  SpotifyTimeRange,
-} from '@app/api/types'
+import type { RigtchStatsResponse } from '@app/api/types'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
 import {
@@ -22,6 +18,11 @@ import {
   validateTimeRange,
 } from '@app/profile/utils/validators'
 import { afterParamFactory } from '@app/profile/utils/factories'
+import {
+  StatsProvider,
+  type RigtchTimeRange,
+  type SpotifyTimeRange,
+} from '@app/profile/enums'
 
 export const runtime = 'edge'
 

@@ -1,6 +1,6 @@
 import { validateStatsMeasurement } from './validate-stats-measurement'
 
-import { StatsMeasurement } from '@app/api/types'
+import { StatsMeasurement } from '@app/api/enums'
 
 describe('validateStatsMeasurement', () => {
   const statsMeasurement = StatsMeasurement.PLAYS

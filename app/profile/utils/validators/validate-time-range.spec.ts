@@ -1,8 +1,10 @@
-import { StatsProvider } from '../../types'
-
 import { validateTimeRange } from './validate-time-range'
 
-import { RigtchTimeRange, SpotifyTimeRange } from '@app/api/types'
+import {
+  StatsProvider,
+  RigtchTimeRange,
+  SpotifyTimeRange,
+} from '@app/profile/enums'
 
 describe('validateTimeRange', () => {
   const spotifyTimeRange = SpotifyTimeRange.MEDIUM_TERM

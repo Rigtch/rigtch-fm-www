@@ -5,7 +5,7 @@ import { ItemTopCardSkeleton } from '../cards'
 import { ItemsListElementSkeleton } from './items-list-element.skeleton'
 
 import { Separator } from '@app/components/ui/separator'
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 
 export interface ItemsListSkeletonProps {
   view?: View

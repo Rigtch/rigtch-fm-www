@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react'
 
 import { SelectTimeRange } from './select-time-range'
 
-import { RigtchTimeRange, SpotifyTimeRange } from '@app/api/types'
+import { RigtchTimeRange, SpotifyTimeRange } from '@app/profile/enums'
 
 type SelectRigtchTimeRangeType = typeof SelectTimeRange
 type SelectRigtchTimeRangeStory = StoryObj<SelectRigtchTimeRangeType>

@@ -9,14 +9,9 @@ import {
   VIEW,
 } from '@app/profile/constants'
 import { SeeMoreButton } from '@app/components/common/buttons'
-import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
-import type {
-  ArtistEntity,
-  RigtchStatsResponse,
-  RigtchTimeRange,
-  SpotifyTimeRange,
-} from '@app/api/types'
+import type { ArtistEntity, RigtchStatsResponse } from '@app/api/types'
 import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopArtists } from '@app/api/fetchers/stats/spotify'
 import {
@@ -26,6 +21,11 @@ import {
   validateView,
 } from '@app/profile/utils/validators'
 import { afterParamFactory } from '@app/profile/utils/factories'
+import {
+  StatsProvider,
+  type RigtchTimeRange,
+  type SpotifyTimeRange,
+} from '@app/profile/enums'
 
 export default async function ProfileTopArtistsSubPage({
   searchParams,

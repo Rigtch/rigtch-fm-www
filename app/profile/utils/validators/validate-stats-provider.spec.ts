@@ -1,6 +1,6 @@
 import { validateStatsProvider } from './validate-stats-provider'
 
-import { StatsProvider } from '@app/profile/types'
+import { StatsProvider } from '@app/profile/enums'
 
 describe('validateStatsProvider', () => {
   const statsProvider: StatsProvider = StatsProvider.SPOTIFY

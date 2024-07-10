@@ -6,7 +6,7 @@ import type { ProfilePageProps } from '@app/profile/types'
 import { getHistory } from '@app/api/fetchers'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { getServerToken } from '@app/auth/utils'
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 
 export default async function ProfileHistorySubPage({
   params,

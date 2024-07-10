@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 import { SelectView } from './select-view'
 
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 
 vi.mock('next/navigation')
 

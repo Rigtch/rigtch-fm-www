@@ -1,5 +1,6 @@
-import { SpotifyTimeRange, type GetTopItemsParams } from '@app/api/types'
+import type { GetTopItemsParams } from '@app/api/types'
 import { fetchApi } from '@app/api/fetchers'
+import { SpotifyTimeRange } from '@app/profile/enums'
 
 export function getSpotifyTopGenres(
   token: string,

@@ -8,7 +8,7 @@ import type { MockInstance } from 'vitest'
 
 import { SelectStatsMeasurement } from './select-stats-measurement'
 
-import { StatsMeasurement } from '@app/api/types'
+import { StatsMeasurement } from '@app/api/enums'
 
 describe('SelectStatsMeasurement', () => {
   let user: UserEvent

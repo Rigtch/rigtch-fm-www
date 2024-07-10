@@ -8,7 +8,7 @@ import mockRouter from 'next-router-mock'
 import { ToggleStatsProvider } from './toggle-stats-provider'
 
 import { STATS_PROVIDER } from '@app/profile/constants'
-import { StatsProvider } from '@app/profile/types'
+import { StatsProvider } from '@app/profile/enums'
 
 vi.mock('next/navigation')
 

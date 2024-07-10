@@ -6,7 +6,7 @@ import { render, screen } from '@testing-library/react'
 
 import { SelectTimeRange } from './select-time-range'
 
-import { RigtchTimeRange, SpotifyTimeRange } from '@app/api/types'
+import { RigtchTimeRange, SpotifyTimeRange } from '@app/profile/enums'
 
 vi.mock('next/navigation')
 

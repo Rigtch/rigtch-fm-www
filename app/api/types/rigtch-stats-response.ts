@@ -1,4 +1,4 @@
-import type { StatsMeasurement } from './stats-measurement'
+import type { StatsMeasurement } from '../enums'
 
 import type { AlbumEntity, ArtistEntity, TrackEntity } from '@app/api/types'
 

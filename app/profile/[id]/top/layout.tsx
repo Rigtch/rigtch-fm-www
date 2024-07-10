@@ -15,7 +15,7 @@ import {
   SelectView,
 } from '@app/profile/components/common/selects'
 import type { ProfileLayoutBaseProps } from '@app/profile/types'
-import { StatsProvider } from '@app/profile/types'
+import { StatsProvider } from '@app/profile/enums'
 import {
   validateStatsProvider,
   validateView,
