@@ -1,0 +1,482 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Sidebar > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="flex flex-col gap-2"
+      >
+        <header>
+          <h3
+            class="text-xl font-semibold px-2"
+          >
+            Profile
+          </h3>
+        </header>
+        <main
+          class="flex flex-col gap-2"
+        >
+          <a
+            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+            href="/profile/1?undefined"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <circle
+                cx="12"
+                cy="10"
+                r="3"
+              />
+              <path
+                d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"
+              />
+            </svg>
+            Overview
+          </a>
+          <section
+            class="pl-4 flex flex-col gap-2"
+          >
+            <header>
+              <h4
+                class="text-lg font-semibold px-2"
+              >
+                Top
+              </h4>
+            </header>
+            <main>
+              <a
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/genres?undefined"
+              >
+                <svg
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 15V6"
+                  />
+                  <path
+                    d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                  />
+                  <path
+                    d="M12 12H3"
+                  />
+                  <path
+                    d="M16 6H3"
+                  />
+                  <path
+                    d="M12 18H3"
+                  />
+                </svg>
+                Top Genres
+              </a>
+              <a
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/artists?undefined"
+              >
+                <svg
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m12 8-9.04 9.06a2.82 2.82 0 1 0 3.98 3.98L16 12"
+                  />
+                  <circle
+                    cx="17"
+                    cy="7"
+                    r="5"
+                  />
+                </svg>
+                Top Artists
+              </a>
+              <a
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/albums?view=list&stats-provider=rigtch"
+              >
+                <svg
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                  />
+                  <path
+                    d="M6 12c0-1.7.7-3.2 1.8-4.2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="2"
+                  />
+                  <path
+                    d="M18 12c0 1.7-.7 3.2-1.8 4.2"
+                  />
+                </svg>
+                Top Albums
+              </a>
+              <a
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/tracks?undefined"
+              >
+                <svg
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18V5l12-2v13"
+                  />
+                  <circle
+                    cx="6"
+                    cy="18"
+                    r="3"
+                  />
+                  <circle
+                    cx="18"
+                    cy="16"
+                    r="3"
+                  />
+                </svg>
+                Top Tracks
+              </a>
+            </main>
+          </section>
+          <a
+            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+            href="/profile/1/history"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <polyline
+                points="12 6 12 12 16 14"
+              />
+            </svg>
+            History
+          </a>
+        </main>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="flex flex-col gap-2"
+    >
+      <header>
+        <h3
+          class="text-xl font-semibold px-2"
+        >
+          Profile
+        </h3>
+      </header>
+      <main
+        class="flex flex-col gap-2"
+      >
+        <a
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+          href="/profile/1?undefined"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <circle
+              cx="12"
+              cy="10"
+              r="3"
+            />
+            <path
+              d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"
+            />
+          </svg>
+          Overview
+        </a>
+        <section
+          class="pl-4 flex flex-col gap-2"
+        >
+          <header>
+            <h4
+              class="text-lg font-semibold px-2"
+            >
+              Top
+            </h4>
+          </header>
+          <main>
+            <a
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/genres?undefined"
+            >
+              <svg
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 15V6"
+                />
+                <path
+                  d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                />
+                <path
+                  d="M12 12H3"
+                />
+                <path
+                  d="M16 6H3"
+                />
+                <path
+                  d="M12 18H3"
+                />
+              </svg>
+              Top Genres
+            </a>
+            <a
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/artists?undefined"
+            >
+              <svg
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 8-9.04 9.06a2.82 2.82 0 1 0 3.98 3.98L16 12"
+                />
+                <circle
+                  cx="17"
+                  cy="7"
+                  r="5"
+                />
+              </svg>
+              Top Artists
+            </a>
+            <a
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/albums?view=list&stats-provider=rigtch"
+            >
+              <svg
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <path
+                  d="M6 12c0-1.7.7-3.2 1.8-4.2"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="2"
+                />
+                <path
+                  d="M18 12c0 1.7-.7 3.2-1.8 4.2"
+                />
+              </svg>
+              Top Albums
+            </a>
+            <a
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/tracks?undefined"
+            >
+              <svg
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18V5l12-2v13"
+                />
+                <circle
+                  cx="6"
+                  cy="18"
+                  r="3"
+                />
+                <circle
+                  cx="18"
+                  cy="16"
+                  r="3"
+                />
+              </svg>
+              Top Tracks
+            </a>
+          </main>
+        </section>
+        <a
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+          href="/profile/1/history"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <polyline
+              points="12 6 12 12 16 14"
+            />
+          </svg>
+          History
+        </a>
+      </main>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

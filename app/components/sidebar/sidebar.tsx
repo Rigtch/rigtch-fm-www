@@ -2,19 +2,19 @@
 
 import { useParams, usePathname, useSearchParams } from 'next/navigation'
 import {
-  LuUserCircle,
+  LuClock,
   LuDisc3,
+  LuListMusic,
   LuMic2,
   LuMusic,
-  LuClock,
-  LuListMusic,
+  LuUserCircle,
 } from 'react-icons/lu'
 
 import { SidebarSectionItem } from './sidebar-section-item'
 
 import { STATS_PROVIDER, VIEW } from '@app/profile/constants'
+import { StatsProvider } from '@app/profile/enums'
 import type { ParamsWithId } from '@app/types'
-import { StatsProvider } from '@app/profile/types'
 import { formatSearchParams } from '@app/utils/formatters'
 
 export function Sidebar() {
