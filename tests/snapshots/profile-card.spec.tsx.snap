@@ -35,13 +35,12 @@ exports[`ProfileCard > should match snapshot 1`] = `
                   Mnigos
                 </h3>
                 <p
-                  class="text-muted-foreground text-lg whitespace-nowrap leading-5 flex items-center gap-2"
+                  class="text-lg text-foreground whitespace-nowrap leading-5 flex items-center gap-2"
                 >
                   <button
                     data-state="closed"
                   >
                     <a
-                      class="h-[20px] w-[20px]"
                       href="https://open.spotify.com/user/moneyigos"
                       target="_blank"
                     >
@@ -129,13 +128,12 @@ exports[`ProfileCard > should match snapshot 1`] = `
                 Mnigos
               </h3>
               <p
-                class="text-muted-foreground text-lg whitespace-nowrap leading-5 flex items-center gap-2"
+                class="text-lg text-foreground whitespace-nowrap leading-5 flex items-center gap-2"
               >
                 <button
                   data-state="closed"
                 >
                   <a
-                    class="h-[20px] w-[20px]"
                     href="https://open.spotify.com/user/moneyigos"
                     target="_blank"
                   >

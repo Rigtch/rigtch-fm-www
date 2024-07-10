@@ -7491,7 +7491,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
-                        2 years ago
+                        2 lata temu
                       </p>
                     </div>
                   </div>
@@ -7582,7 +7582,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
-                        2 years ago
+                        2 lata temu
                       </p>
                     </div>
                   </div>
@@ -7673,7 +7673,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
-                        2 years ago
+                        2 lata temu
                       </p>
                     </div>
                   </div>
@@ -7770,7 +7770,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     <p
                       class="text-primary-foreground/80 whitespace-nowrap"
                     >
-                      2 years ago
+                      2 lata temu
                     </p>
                   </div>
                 </div>
@@ -7861,7 +7861,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     <p
                       class="text-primary-foreground/80 whitespace-nowrap"
                     >
-                      2 years ago
+                      2 lata temu
                     </p>
                   </div>
                 </div>
@@ -7952,7 +7952,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     <p
                       class="text-primary-foreground/80 whitespace-nowrap"
                     >
-                      2 years ago
+                      2 lata temu
                     </p>
                   </div>
                 </div>
