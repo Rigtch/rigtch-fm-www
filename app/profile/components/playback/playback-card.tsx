@@ -2,11 +2,12 @@
 
 import { useState } from 'react'
 
-import { ToggleStateButton } from './toggle-state-button'
 import { AudioBars } from './audio-bars'
+import { ToggleStateButton } from './toggle-state-button'
 
-import { ItemImage, RelativeTime } from '@app/components/items/misc'
+import type { Device, Track } from '@app/api/types'
 import { SpotifyLink } from '@app/components/common'
+import { ItemImage, RelativeTime } from '@app/components/items/misc'
 import {
   Card,
   CardFooter,
@@ -14,9 +15,8 @@ import {
   CardTitle,
 } from '@app/components/ui/card'
 import { Skeleton } from '@app/components/ui/skeleton'
-import { formatArtists } from '@app/utils/formatters'
 import { cn } from '@app/utils/cn'
-import type { Device, Track } from '@app/api/types'
+import { formatArtists } from '@app/utils/formatters'
 
 export interface PlaybackCardProps {
   isPlaying?: boolean
