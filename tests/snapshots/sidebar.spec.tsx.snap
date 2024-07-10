@@ -121,7 +121,7 @@ exports[`Sidebar > should match snapshot 1`] = `
               </a>
               <a
                 class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-                href="/profile/1/top/albums?view=list"
+                href="/profile/1/top/albums?view=list&stats-provider=rigtch"
               >
                 <svg
                   fill="none"
@@ -333,7 +333,7 @@ exports[`Sidebar > should match snapshot 1`] = `
             </a>
             <a
               class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-              href="/profile/1/top/albums?view=list"
+              href="/profile/1/top/albums?view=list&stats-provider=rigtch"
             >
               <svg
                 fill="none"
