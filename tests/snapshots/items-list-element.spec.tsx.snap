@@ -566,7 +566,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
                 <p
                   class="text-primary-foreground/80 whitespace-nowrap"
                 >
-                  2 lata temu
+                  2 years ago
                 </p>
               </div>
             </div>
@@ -644,7 +644,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
               <p
                 class="text-primary-foreground/80 whitespace-nowrap"
               >
-                2 lata temu
+                2 years ago
               </p>
             </div>
           </div>

@@ -4993,7 +4993,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                           <p
                             class="text-primary-foreground/80 whitespace-nowrap"
                           >
-                            0 sekund temu
+                            0 seconds ago
                           </p>
                         </div>
                       </div>
@@ -5084,7 +5084,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                           <p
                             class="text-primary-foreground/80 whitespace-nowrap"
                           >
-                            1 sekundę temu
+                            1 second ago
                           </p>
                         </div>
                       </div>
@@ -5175,7 +5175,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                           <p
                             class="text-primary-foreground/80 whitespace-nowrap"
                           >
-                            2 sekundy temu
+                            2 seconds ago
                           </p>
                         </div>
                       </div>
@@ -5289,7 +5289,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         <p
                           class="text-primary-foreground/80 whitespace-nowrap"
                         >
-                          0 sekund temu
+                          0 seconds ago
                         </p>
                       </div>
                     </div>
@@ -5380,7 +5380,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         <p
                           class="text-primary-foreground/80 whitespace-nowrap"
                         >
-                          1 sekundę temu
+                          1 second ago
                         </p>
                       </div>
                     </div>
@@ -5471,7 +5471,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         <p
                           class="text-primary-foreground/80 whitespace-nowrap"
                         >
-                          2 sekundy temu
+                          2 seconds ago
                         </p>
                       </div>
                     </div>
