@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ItemsSection } from './items-section'
-import { TopTracksSkeletonSection } from './top-tracks-section.skeleton'
-import { TopArtistsSkeletonSection } from './top-artists-section.skeleton'
-import { TopAlbumsSkeletonSection } from './top-albums-section.skeleton'
+import { TopTracksSectionSkeleton } from './top-tracks-section.skeleton'
+import { TopArtistsSectionSkeleton } from './top-artists-section.skeleton'
+import { TopAlbumsSectionSkeleton } from './top-albums-section.skeleton'
 
 import { View } from '@app/types'
 import { trackExamples } from '@app/components/items/examples'
@@ -54,25 +54,25 @@ export const NoData: ItemsSectionStory = {
 }
 
 export const TopTracksSkeletonCardView: ItemsSectionStory = {
-  render: () => <TopTracksSkeletonSection />,
+  render: () => <TopTracksSectionSkeleton />,
 }
 
 export const TopTracksSkeletonListView: ItemsSectionStory = {
-  render: () => <TopTracksSkeletonSection view={View.LIST} />,
+  render: () => <TopTracksSectionSkeleton view={View.LIST} />,
 }
 
 export const TopArtistsSkeletonCardView: ItemsSectionStory = {
-  render: () => <TopArtistsSkeletonSection />,
+  render: () => <TopArtistsSectionSkeleton />,
 }
 
 export const TopArtistsSkeletonListView: ItemsSectionStory = {
-  render: () => <TopArtistsSkeletonSection view={View.LIST} />,
+  render: () => <TopArtistsSectionSkeleton view={View.LIST} />,
 }
 
 export const TopAlbumsSkeletonCardView: ItemsSectionStory = {
-  render: () => <TopAlbumsSkeletonSection />,
+  render: () => <TopAlbumsSectionSkeleton />,
 }
 
 export const TopAlbumsSkeletonListView: ItemsSectionStory = {
-  render: () => <TopAlbumsSkeletonSection view={View.LIST} />,
+  render: () => <TopAlbumsSectionSkeleton view={View.LIST} />,
 }

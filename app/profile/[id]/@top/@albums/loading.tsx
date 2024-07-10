@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 
 import { STATS_PROVIDER, VIEW } from '@app/profile/constants'
-import { TopAlbumsSkeletonSection } from '@app/profile/sections'
+import { TopAlbumsSectionSkeleton } from '@app/profile/sections'
 import {
   validateStatsProvider,
   validateView,
@@ -18,5 +18,5 @@ export default function ProfileTopAlbumsSubLoading() {
 
   if (statsProvider === StatsProvider.SPOTIFY) return null
 
-  return <TopAlbumsSkeletonSection view={view} />
+  return <TopAlbumsSectionSkeleton view={view} />
 }
