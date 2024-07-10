@@ -1,11 +1,13 @@
 import { Skeleton } from '@app/components/ui/skeleton'
 import { DefaultSection } from '@app/sections'
 
-export interface TopGenresSkeletonProps {
+export interface TopGenresSectionSkeletonProps {
   length?: number
 }
 
-export function TopGenresSkeleton({ length = 50 }: TopGenresSkeletonProps) {
+export function TopGenresSectionSkeleton({
+  length = 50,
+}: TopGenresSectionSkeletonProps) {
   return (
     <DefaultSection title="Top Genres" className="gap-12">
       <div className="flex flex-row flex-wrap justify-left gap-2">

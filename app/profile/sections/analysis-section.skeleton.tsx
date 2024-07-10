@@ -1,7 +1,7 @@
 import { Skeleton } from '@app/components/ui/skeleton'
 import { DefaultSection } from '@app/sections'
 
-export function AnalysisSkeleton() {
+export function AnalysisSectionSkeleton() {
   return (
     <DefaultSection title="Analysis">
       <div className="flex flex-col md:flex-row md:justify-around flex-wrap gap-8 px-4 py-6">
