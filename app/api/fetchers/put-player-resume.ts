@@ -1,4 +1,4 @@
-import { HttpMethod, type Success, type UsersParams } from '../types'
+import type { Success, UsersParams } from '../types'
 
 import { fetchApi } from './fetch-api'
 
@@ -8,6 +8,6 @@ export async function putPlayerResume(
 ): Promise<Success> {
   return fetchApi<Success>(`/users/${userId}/playback/resume`, {
     token,
-    method: HttpMethod.PUT,
+    method: 'PUT',
   })
 }

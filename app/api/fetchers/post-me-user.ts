@@ -1,4 +1,4 @@
-import { HttpMethod, type User } from '../types'
+import type { User } from '../types'
 
 import { fetchApi } from './fetch-api'
 
@@ -7,6 +7,6 @@ export function postMeUser(refreshToken: string) {
     body: {
       refreshToken,
     },
-    method: HttpMethod.POST,
+    method: 'POST',
   })
 }

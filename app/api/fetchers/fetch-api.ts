@@ -1,4 +1,4 @@
-import { HttpMethod } from '../types'
+import type { HttpMethod } from '../types'
 
 import { env } from '@app/config/env'
 
@@ -12,7 +12,7 @@ export interface FetchApiOptions<TBody = unknown> {
 export async function fetchApi<TData, TBody = unknown>(
   path: string,
   {
-    method = HttpMethod.GET,
+    method = 'GET',
     token,
     body,
     cache = 'force-cache',
