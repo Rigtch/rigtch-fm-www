@@ -1,5 +1,6 @@
-import type { StatsMeasurement } from './stats-measurement'
-import type { SpotifyTimeRange } from './time-range'
+import type { StatsMeasurement } from '../enums'
+
+import type { SpotifyTimeRange } from '@app/profile/enums'
 
 export interface UsersParams {
   userId: string

@@ -1,5 +1,8 @@
-import { StatsProvider } from '@app/profile/types'
-import { RigtchTimeRange, SpotifyTimeRange } from '@app/api/types'
+import {
+  RigtchTimeRange,
+  SpotifyTimeRange,
+  StatsProvider,
+} from '@app/profile/enums'
 
 function isSpotifyTimeRange(value: string): value is SpotifyTimeRange {
   return Object.values(SpotifyTimeRange).includes(value as SpotifyTimeRange)

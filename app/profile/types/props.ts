@@ -1,17 +1,18 @@
-import type { StatsProvider } from './stats-provider'
-
 import type {
+  StatsProvider,
   RigtchTimeRange,
   SpotifyTimeRange,
-  StatsMeasurement,
-} from '@app/api/types'
+  View,
+} from '../enums'
+
+import type { StatsMeasurement } from '@app/api/enums'
 import type {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
 } from '@app/profile/constants'
-import type { LayoutProps, PageWithIdParamProps, View } from '@app/types'
+import type { LayoutProps, PageWithIdParamProps } from '@app/types'
 
 export type ProfilePageSearchParams =
   | {

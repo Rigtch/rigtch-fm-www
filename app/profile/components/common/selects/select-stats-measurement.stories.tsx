@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react'
 
 import { SelectStatsMeasurement } from './select-stats-measurement'
 
-import { StatsMeasurement } from '@app/api/types'
+import { StatsMeasurement } from '@app/api/enums'
 
 type SelectStatsMeasurementType = typeof SelectStatsMeasurement
 type SelectStatsMeasurementStory = StoryObj<SelectStatsMeasurementType>

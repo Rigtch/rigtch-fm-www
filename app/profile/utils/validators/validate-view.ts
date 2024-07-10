@@ -1,4 +1,4 @@
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 
 function isView(value: string): value is View {
   return Object.values(View).includes(value as View)

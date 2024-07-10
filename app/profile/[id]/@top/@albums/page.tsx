@@ -7,10 +7,9 @@ import {
   VIEW,
   STATS_MEASUREMENT,
 } from '@app/profile/constants'
-import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { validateId } from '@app/utils/validators'
 import { getRigtchTopAlbums } from '@app/api/fetchers/stats/rigtch'
-import type { RigtchTimeRange } from '@app/api/types'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { ItemsSection } from '@app/profile/sections'
 import {
@@ -20,6 +19,7 @@ import {
   validateView,
 } from '@app/profile/utils/validators'
 import { afterParamFactory } from '@app/profile/utils/factories'
+import { StatsProvider, type RigtchTimeRange } from '@app/profile/enums'
 
 export default async function ProfileTopAlbumsSubPage({
   searchParams,

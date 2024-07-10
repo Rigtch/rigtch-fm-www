@@ -10,7 +10,7 @@ import {
   SelectContent,
   SelectValue,
 } from '@app/components/ui/select'
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 import { formatSearchParams } from '@app/utils/formatters'
 
 export interface SelectViewProps {

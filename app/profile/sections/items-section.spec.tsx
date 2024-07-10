@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 
 import { ItemsSection } from './items-section'
 
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 import { tracksMock } from '@tests/mocks/track'
 import { artistEntitiesMocks } from '@tests/mocks/artist'
 

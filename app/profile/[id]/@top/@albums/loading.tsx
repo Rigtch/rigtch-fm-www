@@ -8,7 +8,7 @@ import {
   validateStatsProvider,
   validateView,
 } from '@app/profile/utils/validators'
-import { StatsProvider } from '@app/profile/types'
+import { StatsProvider } from '@app/profile/enums'
 
 export default function ProfileTopAlbumsSubLoading() {
   const searchParams = useSearchParams()

@@ -1,4 +1,4 @@
-import { RigtchTimeRange } from '@app/api/types'
+import { RigtchTimeRange } from '@app/profile/enums'
 
 export function afterParamFactory(timeRange: RigtchTimeRange) {
   switch (timeRange) {

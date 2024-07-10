@@ -1,7 +1,6 @@
-import { fetchApi } from '../../fetch-api'
-
+import { StatsMeasurement } from '@app/api/enums'
+import { fetchApi } from '@app/api/fetchers'
 import {
-  StatsMeasurement,
   type ArtistEntity,
   type RigtchStatsParams,
   type RigtchStatsResponse,

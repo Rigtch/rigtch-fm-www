@@ -10,7 +10,7 @@ import {
   TIME_RANGE,
   VIEW,
 } from '@app/profile/constants'
-import { StatsProvider, type ProfileLayoutBaseProps } from '@app/profile/types'
+import type { ProfileLayoutBaseProps } from '@app/profile/types'
 import {
   SelectStatsMeasurement,
   SelectTimeRange,
@@ -22,6 +22,7 @@ import {
   validateTimeRange,
   validateView,
 } from '@app/profile/utils/validators'
+import { StatsProvider } from '@app/profile/enums'
 
 export interface ProfileTopGenresSubLayoutProps extends ProfileLayoutBaseProps {
   genres: ReactNode

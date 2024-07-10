@@ -1,10 +1,10 @@
 import {
-  SpotifyTimeRange,
   type ArtistEntity,
   type GetTopItemsParams,
   type SpotifyResponseWithOffset,
 } from '@app/api/types'
 import { fetchApi } from '@app/api/fetchers'
+import { SpotifyTimeRange } from '@app/profile/enums'
 
 export function getSpotifyTopArtists(
   token: string,

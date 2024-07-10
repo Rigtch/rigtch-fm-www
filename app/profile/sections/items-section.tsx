@@ -9,7 +9,7 @@ import type {
   TrackEntity,
 } from '@app/api/types'
 import { ItemsList } from '@app/components/items/list'
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 
 export type ItemsSectionProps = DefaultSectionProps & {
   items:

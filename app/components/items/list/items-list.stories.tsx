@@ -5,7 +5,7 @@ import { trackExamples } from '../examples'
 import { ItemsList } from './items-list'
 import { ItemsListSkeleton } from './items-list.skeleton'
 
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 
 type ItemsListType = typeof ItemsList
 type ItemsListStory = StoryObj<ItemsListType>

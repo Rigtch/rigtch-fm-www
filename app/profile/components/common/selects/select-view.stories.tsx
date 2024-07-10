@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { SelectView } from './select-view'
 
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 
 type SelectViewType = typeof SelectView
 type SelectViewStory = StoryObj<SelectViewType>

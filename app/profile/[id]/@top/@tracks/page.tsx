@@ -9,14 +9,9 @@ import {
 import { validateId } from '@app/utils/validators'
 import { ItemsSection } from '@app/profile/sections'
 import { SeeMoreButton } from '@app/components/common/buttons'
-import { StatsProvider, type ProfilePageProps } from '@app/profile/types'
+import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
-import type {
-  RigtchStatsResponse,
-  SpotifyTimeRange,
-  TrackEntity,
-  RigtchTimeRange,
-} from '@app/api/types'
+import type { RigtchStatsResponse, TrackEntity } from '@app/api/types'
 import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopTracks } from '@app/api/fetchers/stats/spotify'
 import {
@@ -26,6 +21,11 @@ import {
   validateView,
 } from '@app/profile/utils/validators'
 import { afterParamFactory } from '@app/profile/utils/factories'
+import {
+  StatsProvider,
+  type RigtchTimeRange,
+  type SpotifyTimeRange,
+} from '@app/profile/enums'
 
 export default async function ProfileTopTracksSubPage({
   searchParams,

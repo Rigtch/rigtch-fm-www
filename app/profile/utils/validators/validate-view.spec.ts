@@ -1,6 +1,6 @@
 import { validateView } from './validate-view'
 
-import { View } from '@app/types'
+import { View } from '@app/profile/enums'
 
 describe('validateView', () => {
   const view = View.CARD
