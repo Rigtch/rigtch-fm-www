@@ -25,24 +25,26 @@ export default async function RootLayout({ children }: LayoutProps) {
 
   return (
     <html lang="en">
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="theme-color" content="#0e1315" />
+      <head>
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#0e1315" />
 
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" />
+      </head>
 
       <body className="bg-background text-white">
         <RootProviders session={session!}>

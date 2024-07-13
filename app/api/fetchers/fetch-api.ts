@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation'
+
 import type { HttpMethod } from '../types'
 
 import { env } from '@app/config/env'
@@ -38,6 +40,8 @@ export async function fetchApi<TData, TBody = unknown>(
     if (parsedResponse.message === 'No device is currently playing') {
       return parsedResponse
     }
+
+    if (response.status === 404) return notFound()
 
     console.error(parsedResponse)
 
