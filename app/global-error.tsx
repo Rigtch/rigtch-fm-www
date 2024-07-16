@@ -8,7 +8,7 @@ import type { ErrorProps } from './types'
 export default function GlobalError({ error, reset }: ErrorProps) {
   const router = useRouter()
 
-  // Refreshing the page is almoust always the solution
+  // Refreshing the page is almost always the solution
   router.refresh()
 
   if (error.message === 'The access token expired') reset()

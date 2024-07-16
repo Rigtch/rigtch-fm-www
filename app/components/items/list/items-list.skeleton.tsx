@@ -7,21 +7,23 @@ import { ItemsListElementSkeleton } from './items-list-element.skeleton'
 import { Separator } from '@app/components/ui/separator'
 import { View } from '@app/profile/enums'
 
-export interface ItemsListSkeletonProps {
-  view?: View
-  withoutPosition?: boolean
-  artists?: boolean
-  playedAt?: boolean
-  genres?: boolean
+namespace ItemsListSkeleton {
+  export interface Props {
+    view?: View
+    withoutPosition?: boolean
+    artists?: boolean
+    playedAt?: boolean
+    genres?: boolean
+  }
 }
 
-export function ItemsListSkeleton({
+function ItemsListSkeleton({
   view = View.LIST,
   withoutPosition,
   playedAt,
   artists,
   genres,
-}: ItemsListSkeletonProps) {
+}: ItemsListSkeleton.Props) {
   return (
     <div className="flex flex-col gap-8">
       {view === View.CARD && (
@@ -86,3 +88,5 @@ export function ItemsListSkeleton({
     </div>
   )
 }
+
+export { ItemsListSkeleton }

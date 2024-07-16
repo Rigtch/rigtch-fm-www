@@ -1,27 +1,28 @@
-import type { ItemPositionProps } from '../misc'
 import { ItemImageSkeleton, ItemPosition } from '../misc'
 
 import { SpotifyLink } from '@app/components/common'
 import { Skeleton } from '@app/components/ui/skeleton'
 import { cn } from '@app/utils/cn'
 
-export interface ItemsListElementSkeletonProps {
-  artists?: boolean
-  playedAt?: boolean
-  position?: number
-  positionSize?: ItemPositionProps['size']
-  positionClassName?: string
-  withoutPosition?: boolean
+namespace ItemsListElementSkeleton {
+  export interface Props {
+    artists?: boolean
+    playedAt?: boolean
+    position?: number
+    positionSize?: ItemPosition.Props['size']
+    positionClassName?: string
+    withoutPosition?: boolean
+  }
 }
 
-export function ItemsListElementSkeleton({
+function ItemsListElementSkeleton({
   position,
   positionSize,
   positionClassName,
   withoutPosition,
   artists,
   playedAt,
-}: ItemsListElementSkeletonProps) {
+}: ItemsListElementSkeleton.Props) {
   return (
     <div
       className={cn(
@@ -57,3 +58,5 @@ export function ItemsListElementSkeleton({
     </div>
   )
 }
+
+export { ItemsListElementSkeleton }
