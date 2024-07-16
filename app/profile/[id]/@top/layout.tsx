@@ -24,19 +24,21 @@ import {
 } from '@app/profile/utils/validators'
 import { StatsProvider } from '@app/profile/enums'
 
-export interface ProfileTopGenresSubLayoutProps extends ProfileLayoutBaseProps {
-  genres: ReactNode
-  artists: ReactNode
-  tracks: ReactNode
-  albums: ReactNode
+namespace ProfileTopGenresSubLayout {
+  export interface Props extends ProfileLayoutBaseProps {
+    genres: ReactNode
+    artists: ReactNode
+    tracks: ReactNode
+    albums: ReactNode
+  }
 }
 
-export default function ProfileTopGenresSubLayout({
+function ProfileTopGenresSubLayout({
   genres,
   artists,
   tracks,
   albums,
-}: ProfileTopGenresSubLayoutProps) {
+}: ProfileTopGenresSubLayout.Props) {
   const searchParams = useSearchParams()
   const statsProvider = validateStatsProvider(searchParams.get(STATS_PROVIDER))
   const timeRange = validateTimeRange(
@@ -71,3 +73,5 @@ export default function ProfileTopGenresSubLayout({
     </>
   )
 }
+
+export default ProfileTopGenresSubLayout

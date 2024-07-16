@@ -3,19 +3,21 @@ import type { IconType } from 'react-icons'
 
 import { Button } from '../ui/button'
 
-export interface SidebarSectionItemProps {
-  label: string
-  href: string
-  icon?: IconType
-  pathname?: string
+namespace SidebarSectionItem {
+  export interface Props {
+    label: string
+    href: string
+    icon?: IconType
+    pathname?: string
+  }
 }
 
-export function SidebarSectionItem({
+function SidebarSectionItem({
   label,
   href,
   icon: Icon,
   pathname,
-}: SidebarSectionItemProps) {
+}: SidebarSectionItem.Props) {
   const isActive = pathname === href
 
   return (
@@ -31,3 +33,5 @@ export function SidebarSectionItem({
     </Button>
   )
 }
+
+export { SidebarSectionItem }

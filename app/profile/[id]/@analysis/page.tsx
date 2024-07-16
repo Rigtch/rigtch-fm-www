@@ -9,7 +9,7 @@ import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { getSpotifyAnalysis } from '@app/api/fetchers/stats/spotify'
 
-export interface Item {
+interface AnalysisItem {
   title: string
   description?: string
   value: number
@@ -39,7 +39,7 @@ export default async function ProfileAnalysisSubPage({
     userId,
   })
 
-  const items: Item[] = [
+  const items: AnalysisItem[] = [
     {
       title: 'Danceable',
       value: danceability * 100,

@@ -3,18 +3,16 @@
 import { usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
+import type { ProfileSelectProps } from './selects/props'
+
 import { ToggleGroup, ToggleGroupItem } from '@app/components/ui/toggle-group'
 import { formatSearchParams } from '@app/utils/formatters'
 import { STATS_PROVIDER, VIEW } from '@app/profile/constants'
 import { StatsProvider } from '@app/profile/enums'
 
-export interface ToggleStatsProviderProps {
-  initialValue: StatsProvider
-}
-
 export function ToggleStatsProvider({
   initialValue,
-}: ToggleStatsProviderProps) {
+}: ProfileSelectProps<StatsProvider>) {
   const statsProviderOptions = [
     {
       value: StatsProvider.SPOTIFY,

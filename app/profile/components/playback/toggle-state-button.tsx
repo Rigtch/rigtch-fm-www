@@ -4,19 +4,21 @@ import { FaPlay, FaPause } from 'react-icons/fa'
 
 import { Button } from '@app/components/ui/button'
 
-export interface ToggleStateButtonProps {
-  isPlaying: boolean
-  isDeviceAvailable: boolean
-  hasAccess: boolean
-  toggleState: () => Promise<void>
+namespace ToggleStateButton {
+  export interface Props {
+    isPlaying: boolean
+    isDeviceAvailable: boolean
+    hasAccess: boolean
+    toggleState: () => Promise<void>
+  }
 }
 
-export function ToggleStateButton({
+function ToggleStateButton({
   isPlaying,
   isDeviceAvailable,
   toggleState,
   hasAccess,
-}: ToggleStateButtonProps) {
+}: ToggleStateButton.Props) {
   return (
     <Button
       variant="ghost"
@@ -29,3 +31,5 @@ export function ToggleStateButton({
     </Button>
   )
 }
+
+export { ToggleStateButton }

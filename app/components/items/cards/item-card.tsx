@@ -8,7 +8,7 @@ import { Card } from '@app/components/ui/card'
 import { SpotifyLink } from '@app/components/common'
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 
-export type ItemCardConditionalProps =
+type ItemCardArtistsOrTracksOrAlbumsProps =
   | (Pick<AlbumEntity, 'images' | 'albumType' | 'releaseDate'> & {
       artists?: Pick<ArtistEntity, 'id' | 'name'>[]
       album?: never
@@ -27,11 +27,14 @@ export type ItemCardConditionalProps =
       releaseDate?: never
     })
 
-export type ItemCardProps = Simplify<
-  ItemCardConditionalProps & Pick<AlbumEntity, 'name' | 'href' | 'id'>
->
+namespace ItemCard {
+  export type Props = Simplify<
+    ItemCardArtistsOrTracksOrAlbumsProps &
+      Pick<AlbumEntity, 'name' | 'href' | 'id'>
+  >
+}
 
-export function ItemCard({
+function ItemCard({
   id,
   name,
   href,
@@ -40,7 +43,7 @@ export function ItemCard({
   images,
   artists,
   album,
-}: ItemCardProps) {
+}: ItemCard.Props) {
   return (
     <Card className="p-4 bg-neutral-800 rounded-lg flex flex-col gap-3">
       <ItemImage images={images ?? album} alt={name} size={200} />
@@ -70,3 +73,5 @@ export function ItemCard({
     </Card>
   )
 }
+
+export { ItemCard }

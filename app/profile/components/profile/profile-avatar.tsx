@@ -4,19 +4,21 @@ import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar'
 
 import { cn } from '@app/utils/cn'
 
-export interface ProfileAvatarProps {
-  className?: string
-  src?: string | null
-  displayName?: string
-  size?: 'sm' | 'lg'
+namespace ProfileAvatar {
+  export interface Props {
+    className?: string
+    src?: string | null
+    displayName?: string
+    size?: 'sm' | 'lg'
+  }
 }
 
-export function ProfileAvatar({
+function ProfileAvatar({
   src,
   displayName,
   className,
   size = 'sm',
-}: ProfileAvatarProps) {
+}: ProfileAvatar.Props) {
   return (
     <span>
       <Avatar
@@ -46,3 +48,5 @@ export function ProfileAvatar({
     </span>
   )
 }
+
+export { ProfileAvatar }

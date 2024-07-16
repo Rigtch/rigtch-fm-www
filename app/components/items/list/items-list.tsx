@@ -1,7 +1,7 @@
 'use client'
 
 import { ItemTopCard } from '../cards'
-import type { ItemPositionProps } from '../misc'
+import type { ItemPosition } from '../misc'
 
 import { ItemsListElement } from './items-list-element'
 
@@ -21,24 +21,26 @@ import {
 } from '@app/components/ui/carousel'
 import { Separator } from '@app/components/ui/separator'
 
-export interface ItemsListProps {
-  items:
-    | ArtistEntity[]
-    | TrackEntity[]
-    | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
-  isTop?: boolean
-  positionSize?: ItemPositionProps['size']
-  positionClassName?: string
-  lastItemSeparator?: boolean
+namespace ItemsList {
+  export interface Props {
+    items:
+      | ArtistEntity[]
+      | TrackEntity[]
+      | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
+    isTop?: boolean
+    positionSize?: ItemPosition.Props['size']
+    positionClassName?: string
+    lastItemSeparator?: boolean
+  }
 }
 
-export function ItemsList({
+function ItemsList({
   items,
   isTop,
   positionSize,
   positionClassName,
   lastItemSeparator = false,
-}: ItemsListProps) {
+}: ItemsList.Props) {
   const sortedItems: (ArtistEntity | TrackEntity | AlbumEntity)[] = items.map(
     (item, index) => ({
       ...('item' in item
@@ -133,3 +135,5 @@ export function ItemsList({
     </div>
   )
 }
+
+export { ItemsList }

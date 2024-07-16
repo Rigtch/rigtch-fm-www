@@ -12,7 +12,7 @@ import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { ProgressWithValueLabel } from '@app/components/common'
 import { cn } from '@app/utils/cn'
 
-export type ItemTopCardTrackAlbumOrArtistProps =
+type ItemTopCardTrackOrAlbumOrArtistProps =
   | (Pick<ArtistEntity, 'images' | 'genres'> & {
       artists?: never
       album?: never
@@ -28,16 +28,18 @@ export type ItemTopCardTrackAlbumOrArtistProps =
       artists: Pick<ArtistEntity, 'id' | 'name'>[]
     })
 
-export type ItemTopCardProps = Simplify<
-  ItemTopCardTrackAlbumOrArtistProps &
-    PlayTimeOrPlaysProps &
-    Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
-      position?: number
-      isCarousel?: boolean
-    }
->
+namespace ItemTopCard {
+  export type Props = Simplify<
+    ItemTopCardTrackOrAlbumOrArtistProps &
+      PlayTimeOrPlaysProps &
+      Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
+        position?: number
+        isCarousel?: boolean
+      }
+  >
+}
 
-export function ItemTopCard({
+function ItemTopCard({
   id,
   name,
   images,
@@ -50,7 +52,7 @@ export function ItemTopCard({
   maxPlayTime,
   plays,
   maxPlays,
-}: ItemTopCardProps) {
+}: ItemTopCard.Props) {
   const stars = [1, 2, 3, 2, 1]
 
   return (
@@ -140,3 +142,5 @@ export function ItemTopCard({
     </div>
   )
 }
+
+export { ItemTopCard }

@@ -5,19 +5,21 @@ import { useState, useEffect } from 'react'
 import { Progress } from '@app/components/ui/progress'
 import { cn } from '@app/utils/cn'
 
-export interface ProgressWithValueLabelProps {
-  value: number
-  max: number
-  label: string
-  animate?: boolean
+namespace ProgressWithValueLabel {
+  export interface Props {
+    value: number
+    max: number
+    label: string
+    animate?: boolean
+  }
 }
 
-export function ProgressWithValueLabel({
+function ProgressWithValueLabel({
   value,
   max,
   label,
   animate = false,
-}: ProgressWithValueLabelProps) {
+}: ProgressWithValueLabel.Props) {
   const defaultProgressValue = (value / max) * 100
 
   const [progressValue, setProgressValue] = useState<number>(
@@ -45,3 +47,5 @@ export function ProgressWithValueLabel({
     </div>
   )
 }
+
+export { ProgressWithValueLabel }

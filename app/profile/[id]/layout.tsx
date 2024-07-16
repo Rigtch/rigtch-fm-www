@@ -9,21 +9,23 @@ import { validateId } from '../../utils/validators'
 
 import { Sidebar } from '@app/components/sidebar'
 
-export interface ProfileLayoutProps extends ProfileLayoutBaseProps {
-  profile: ReactNode
-  analysis: ReactNode
-  top: ReactNode
-  history: ReactNode
+namespace ProfileLayout {
+  export interface Props extends ProfileLayoutBaseProps {
+    profile: ReactNode
+    analysis: ReactNode
+    top: ReactNode
+    history: ReactNode
+  }
 }
 
-export default function ProfileLayout({
+function ProfileLayout({
   children,
   profile,
   analysis,
   top,
   history,
   params,
-}: ProfileLayoutProps) {
+}: ProfileLayout.Props) {
   const pathname = usePathname()
   const userId = validateId(params.id)
 
@@ -54,3 +56,5 @@ export default function ProfileLayout({
     </div>
   )
 }
+
+export default ProfileLayout

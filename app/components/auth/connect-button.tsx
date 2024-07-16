@@ -2,12 +2,14 @@ import { Button, type ButtonProps } from '../ui/button'
 
 import { handleSignIn } from '@app/auth/actions'
 
-export interface ConnectButtonProps {
-  className?: string
-  variant?: ButtonProps['variant']
+namespace ConnectButton {
+  export interface Props {
+    className?: string
+    variant?: ButtonProps['variant']
+  }
 }
 
-export function ConnectButton({ className, variant }: ConnectButtonProps) {
+function ConnectButton({ className, variant }: ConnectButton.Props) {
   return (
     <form action={handleSignIn}>
       <Button variant={variant} className={className} type="submit">
@@ -16,3 +18,5 @@ export function ConnectButton({ className, variant }: ConnectButtonProps) {
     </form>
   )
 }
+
+export { ConnectButton }

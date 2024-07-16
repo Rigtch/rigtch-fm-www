@@ -2,16 +2,17 @@ import type { LinkProps } from 'next/link'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 
-import { Button } from '../../ui/button'
-
+import { Button } from '@app/components/ui/button'
 import { cn } from '@app/utils/cn'
 
-export interface LinkButtonProps extends LinkProps {
-  children: ReactNode
-  className?: string
+namespace LinkButton {
+  export interface Props extends LinkProps {
+    children: ReactNode
+    className?: string
+  }
 }
 
-export function LinkButton({ children, className, ...props }: LinkButtonProps) {
+function LinkButton({ children, className, ...props }: LinkButton.Props) {
   return (
     <Button
       variant="link"
@@ -22,3 +23,5 @@ export function LinkButton({ children, className, ...props }: LinkButtonProps) {
     </Button>
   )
 }
+
+export { LinkButton }

@@ -5,15 +5,17 @@ import { Component } from 'react'
 
 import { Button } from './components/ui/button'
 
-export interface ErrorBoundaryProps {
-  children: ReactNode
-  hasError?: boolean
+namespace ErrorBoundary {
+  export interface Props {
+    children: ReactNode
+    hasError?: boolean
+  }
 }
 
-export class ErrorBoundary extends Component {
+class ErrorBoundary extends Component {
   state: { hasError: boolean }
 
-  constructor(readonly props: ErrorBoundaryProps) {
+  constructor(readonly props: ErrorBoundary.Props) {
     super(props)
     this.state = { hasError: false }
   }
@@ -45,3 +47,5 @@ export class ErrorBoundary extends Component {
     return this.props.children
   }
 }
+
+export { ErrorBoundary }

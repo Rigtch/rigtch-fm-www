@@ -1,15 +1,12 @@
 'use client'
 
-import {
-  LinkButton,
-  type LinkButtonProps,
-} from '@app/components/common/buttons'
+import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
 import type { AlbumEntity } from '@app/api/types'
 
 export interface ItemNameProps
   extends Pick<AlbumEntity, 'name'>,
-    Pick<LinkButtonProps, 'className'> {
+    Pick<LinkButton.Props, 'className'> {
   href: string
 }
 

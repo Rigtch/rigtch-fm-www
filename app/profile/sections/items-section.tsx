@@ -1,6 +1,5 @@
 import { NoDataAlert } from '../components/common'
 
-import type { DefaultSectionProps } from '@app/sections'
 import { DefaultSection } from '@app/sections'
 import type {
   AlbumEntity,
@@ -11,21 +10,23 @@ import type {
 import { ItemsList } from '@app/components/items/list'
 import { View } from '@app/profile/enums'
 
-export type ItemsSectionProps = DefaultSectionProps & {
-  items:
-    | ArtistEntity[]
-    | TrackEntity[]
-    | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
-  view: View
+namespace ItemsSection {
+  export type Props = DefaultSection.Props & {
+    items:
+      | ArtistEntity[]
+      | TrackEntity[]
+      | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
+    view: View
+  }
 }
 
-export function ItemsSection({
+function ItemsSection({
   items,
   title,
   children,
   view = View.LIST,
   ...props
-}: ItemsSectionProps) {
+}: ItemsSection.Props) {
   return (
     <DefaultSection title={title} {...props}>
       {items.length > 0 && (
@@ -38,3 +39,5 @@ export function ItemsSection({
     </DefaultSection>
   )
 }
+
+export { ItemsSection }

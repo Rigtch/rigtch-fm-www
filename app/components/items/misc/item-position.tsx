@@ -4,16 +4,18 @@ import type { HTMLAttributes } from 'react'
 
 import { cn } from '@app/utils/cn'
 
-export interface ItemPositionProps extends HTMLAttributes<HTMLSpanElement> {
-  size?: 'sm' | 'md' | 'lg' | 'xl'
-  position: number
+namespace ItemPosition {
+  export interface Props extends HTMLAttributes<HTMLSpanElement> {
+    size?: 'sm' | 'md' | 'lg' | 'xl'
+    position: number
+  }
 }
 
-export function ItemPosition({
+function ItemPosition({
   position,
   className,
   size = 'md',
-}: ItemPositionProps) {
+}: ItemPosition.Props) {
   return (
     <span
       className={cn(
@@ -29,3 +31,5 @@ export function ItemPosition({
     </span>
   )
 }
+
+export { ItemPosition }

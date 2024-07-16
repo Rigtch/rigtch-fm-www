@@ -3,6 +3,8 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { LuHourglass, LuPlay } from 'react-icons/lu'
 
+import type { ProfileSelectProps } from './props'
+
 import {
   Select,
   SelectContent,
@@ -14,13 +16,9 @@ import { STATS_MEASUREMENT } from '@app/profile/constants'
 import { formatSearchParams } from '@app/utils/formatters'
 import { StatsMeasurement } from '@app/api/enums'
 
-export interface SelectStatsMeasurementProps {
-  initialValue: StatsMeasurement
-}
-
 export function SelectStatsMeasurement({
   initialValue,
-}: SelectStatsMeasurementProps) {
+}: ProfileSelectProps<StatsMeasurement>) {
   const statsMeasurementOptions = [
     {
       value: StatsMeasurement.PLAYS,

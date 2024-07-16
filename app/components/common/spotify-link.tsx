@@ -11,18 +11,20 @@ import {
   TooltipTrigger,
 } from '../ui/tooltip'
 
-export interface SpotifyLinkProps extends Omit<LinkProps, 'href'> {
-  href?: string
-  className?: string
-  isDisabled?: boolean
+namespace SpotifyLink {
+  export interface Props extends Omit<LinkProps, 'href'> {
+    href?: string
+    className?: string
+    isDisabled?: boolean
+  }
 }
 
-export function SpotifyLink({
+function SpotifyLink({
   href,
   className,
   isDisabled,
   ...props
-}: SpotifyLinkProps) {
+}: SpotifyLink.Props) {
   return (
     <>
       <TooltipProvider>
@@ -51,3 +53,5 @@ export function SpotifyLink({
     </>
   )
 }
+
+export { SpotifyLink }

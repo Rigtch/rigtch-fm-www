@@ -6,19 +6,20 @@ import type { ComponentProps } from 'react'
 import { cn } from '@app/utils/cn'
 import { type ItemWithImages, findImage } from '@app/utils/find-image'
 
-export interface ItemImageProps
-  extends Omit<ComponentProps<typeof Image>, 'src'> {
-  size: number
-  images: ItemWithImages
+namespace ItemImage {
+  export interface Props extends Omit<ComponentProps<typeof Image>, 'src'> {
+    size: number
+    images: ItemWithImages
+  }
 }
 
-export function ItemImage({
+function ItemImage({
   images,
   alt,
   size,
   className,
   ...props
-}: ItemImageProps) {
+}: ItemImage.Props) {
   return (
     <Image
       {...props}
@@ -38,3 +39,5 @@ export function ItemImage({
     />
   )
 }
+
+export { ItemImage }

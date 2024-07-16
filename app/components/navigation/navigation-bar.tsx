@@ -30,12 +30,14 @@ import { NavigationListItem } from './navigation-list-item'
 import { handleSignOut } from '@app/auth/actions'
 import { ProfileAvatar } from '@app/profile/components/profile'
 
-export interface NavigationBarProps {
-  user?: User
-  userId?: string
+namespace NavigationBar {
+  export interface Props {
+    user?: User
+    userId?: string
+  }
 }
 
-export function NavigationBar({ user, userId }: NavigationBarProps) {
+function NavigationBar({ user, userId }: NavigationBar.Props) {
   const queryClient = useQueryClient()
   const pathname = usePathname()
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -145,3 +147,5 @@ export function NavigationBar({ user, userId }: NavigationBarProps) {
     </header>
   )
 }
+
+export { NavigationBar }
