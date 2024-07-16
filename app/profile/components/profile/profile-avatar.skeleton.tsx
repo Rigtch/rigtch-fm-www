@@ -1,13 +1,13 @@
 import { Skeleton } from '@app/components/ui/skeleton'
 import { cn } from '@app/utils/cn'
 
-export interface ProfileAvatarSkeletonProps {
-  size?: 'sm' | 'lg'
+namespace ProfileAvatarSkeleton {
+  export interface Props {
+    size?: 'sm' | 'lg'
+  }
 }
 
-export function ProfileAvatarSkeleton({
-  size = 'sm',
-}: ProfileAvatarSkeletonProps) {
+function ProfileAvatarSkeleton({ size = 'sm' }: ProfileAvatarSkeleton.Props) {
   return (
     <Skeleton
       className={cn(
@@ -18,3 +18,5 @@ export function ProfileAvatarSkeleton({
     />
   )
 }
+
+export { ProfileAvatarSkeleton }

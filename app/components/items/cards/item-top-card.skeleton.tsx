@@ -7,19 +7,21 @@ import { ItemImageSkeleton } from '../misc'
 import { cn } from '@app/utils/cn'
 import { Skeleton } from '@app/components/ui/skeleton'
 
-export interface ItemTopCardSkeletonProps {
-  position?: number
-  genres?: boolean
-  artists?: boolean
-  progress?: boolean
+namespace ItemTopCardSkeleton {
+  export interface Props {
+    position?: number
+    genres?: boolean
+    artists?: boolean
+    progress?: boolean
+  }
 }
 
-export function ItemTopCardSkeleton({
+function ItemTopCardSkeleton({
   position,
   genres,
   artists,
   progress,
-}: ItemTopCardSkeletonProps) {
+}: ItemTopCardSkeleton.Props) {
   const stars = [1, 2, 3, 2, 1]
 
   return (
@@ -81,3 +83,5 @@ export function ItemTopCardSkeleton({
     </div>
   )
 }
+
+export { ItemTopCardSkeleton }
