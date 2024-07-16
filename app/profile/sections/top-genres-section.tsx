@@ -2,14 +2,15 @@ import { NoDataAlert } from '../components/common'
 
 import type { RigtchStatsResponse } from '@app/api/types'
 import { GenreChip } from '@app/components/items/genre'
-import { DefaultSection, type DefaultSectionProps } from '@app/sections'
+import { DefaultSection } from '@app/sections'
 
-export interface TopGenresSectionProps
-  extends Pick<DefaultSectionProps, 'children'> {
-  items: string[] | RigtchStatsResponse<string>
+namespace TopGenresSection {
+  export type Props = Pick<DefaultSection.Props, 'children'> & {
+    items: string[] | RigtchStatsResponse<string>
+  }
 }
 
-export function TopGenresSection({ items, children }: TopGenresSectionProps) {
+function TopGenresSection({ items, children }: TopGenresSection.Props) {
   return (
     <DefaultSection title="Top Genres" className="gap-12">
       {items.length > 0 && (
@@ -44,3 +45,5 @@ export function TopGenresSection({ items, children }: TopGenresSectionProps) {
     </DefaultSection>
   )
 }
+
+export { TopGenresSection }

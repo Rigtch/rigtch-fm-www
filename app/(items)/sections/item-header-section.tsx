@@ -4,7 +4,7 @@ import type { ArtistEntity, Image } from '@app/api/types'
 import { ItemArtists, ItemImage } from '@app/components/items/misc'
 import { FollowersCount, SpotifyLink } from '@app/components/common'
 
-export type ArtistsOrFollowers =
+type ArtistsOrFollowers =
   | {
       artists: Pick<ArtistEntity, 'id' | 'name'>[]
       href: string
@@ -16,20 +16,22 @@ export type ArtistsOrFollowers =
       artists?: never
     }
 
-export type ItemHeaderSectionProps = ArtistsOrFollowers &
-  Pick<HtmlHTMLAttributes<HTMLDivElement>, 'children'> & {
-    name: string
-    images: Image[]
-  }
+namespace ItemHeaderSection {
+  export type Props = ArtistsOrFollowers &
+    Pick<HtmlHTMLAttributes<HTMLDivElement>, 'children'> & {
+      name: string
+      images: Image[]
+    }
+}
 
-export function ItemHeaderSection({
+function ItemHeaderSection({
   name,
   images,
   children,
   artists,
   followers,
   href,
-}: ItemHeaderSectionProps) {
+}: ItemHeaderSection.Props) {
   return (
     <div className="w-full flex flex-col md:flex-row md:p-8 gap-8">
       <ItemImage images={images} size={200} alt={name} />
@@ -62,3 +64,5 @@ export function ItemHeaderSection({
     </div>
   )
 }
+
+export { ItemHeaderSection }

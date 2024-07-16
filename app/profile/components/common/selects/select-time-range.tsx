@@ -3,6 +3,8 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { LuClock } from 'react-icons/lu'
 
+import type { ProfileSelectProps } from './props'
+
 import {
   Select,
   SelectContent,
@@ -18,15 +20,17 @@ import {
 import { formatSearchParams } from '@app/utils/formatters'
 import { TIME_RANGE } from '@app/profile/constants'
 
-export interface SelectTimeRangeProps<TStatsProvider extends StatsProvider> {
-  initialValue: TStatsProvider extends StatsProvider.RIGTCH
-    ? RigtchTimeRange
-    : SpotifyTimeRange
+namespace SelectTimeRange {
+  export type Props<TStatsProvider extends StatsProvider> = ProfileSelectProps<
+    TStatsProvider extends StatsProvider.RIGTCH
+      ? RigtchTimeRange
+      : SpotifyTimeRange
+  >
 }
 
-export function SelectTimeRange<TStatsProvider extends StatsProvider>({
+function SelectTimeRange<TStatsProvider extends StatsProvider>({
   initialValue,
-}: SelectTimeRangeProps<TStatsProvider>) {
+}: SelectTimeRange.Props<TStatsProvider>) {
   const timeRangeOptions = Object.values(RigtchTimeRange).includes(
     initialValue as RigtchTimeRange
   )
@@ -86,3 +90,5 @@ export function SelectTimeRange<TStatsProvider extends StatsProvider>({
     </Select>
   )
 }
+
+export { SelectTimeRange }

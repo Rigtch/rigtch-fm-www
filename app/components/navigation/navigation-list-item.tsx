@@ -9,13 +9,15 @@ import {
 
 import { cn } from '@app/utils/cn'
 
-export type NavigationListItemProps = ComponentProps<typeof NavigationMenuLink>
+namespace NavigationListItem {
+  export type Props = ComponentProps<typeof NavigationMenuLink>
+}
 
-export function NavigationListItem({
+function NavigationListItem({
   children,
   className,
   ...props
-}: NavigationListItemProps) {
+}: NavigationListItem.Props) {
   return (
     <NavigationMenuLink
       className={cn(
@@ -29,3 +31,5 @@ export function NavigationListItem({
     </NavigationMenuLink>
   )
 }
+
+export { NavigationListItem }

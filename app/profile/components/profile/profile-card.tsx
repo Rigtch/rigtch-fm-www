@@ -13,19 +13,21 @@ import {
 } from '@app/components/ui/card'
 import { findImage } from '@app/utils/find-image'
 
-export type ProfileCardProps = Pick<
-  Profile,
-  'displayName' | 'images' | 'followers' | 'href'
-> &
-  Pick<HTMLAttributes<HTMLDivElement>, 'children'>
+namespace ProfileCard {
+  export type Props = Pick<
+    Profile,
+    'displayName' | 'images' | 'followers' | 'href'
+  > &
+    Pick<HTMLAttributes<HTMLDivElement>, 'children'>
+}
 
-export function ProfileCard({
+function ProfileCard({
   displayName,
   images,
   followers,
   href,
   children,
-}: ProfileCardProps) {
+}: ProfileCard.Props) {
   return (
     <Card className="min-w-[75%]">
       <CardHeader className="lg:flex-row justify-between lg:items-center gap-8 p-4">
@@ -60,3 +62,5 @@ export function ProfileCard({
     </Card>
   )
 }
+
+export { ProfileCard }

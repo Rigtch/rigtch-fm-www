@@ -8,11 +8,13 @@ import type { Session } from 'next-auth'
 
 import type { LayoutProps } from './types'
 
-export interface RootProvidersProps extends LayoutProps {
-  session: Session
+namespace RootProviders {
+  export interface Props extends LayoutProps {
+    session: Session
+  }
 }
 
-export function RootProviders({ children, session }: RootProvidersProps) {
+function RootProviders({ children, session }: RootProviders.Props) {
   const [queryClient] = useState(() => new QueryClient())
 
   return (
@@ -26,3 +28,5 @@ export function RootProviders({ children, session }: RootProvidersProps) {
     </SessionProvider>
   )
 }
+
+export { RootProviders }

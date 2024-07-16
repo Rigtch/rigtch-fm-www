@@ -1,10 +1,12 @@
 import { cn } from '@app/utils/cn'
 
-export interface AudioBarsProps {
-  isPlaying: boolean
+namespace AudioBars {
+  export interface Props {
+    isPlaying: boolean
+  }
 }
 
-export function AudioBars({ isPlaying = false }: AudioBarsProps) {
+function AudioBars({ isPlaying = false }: AudioBars.Props) {
   return (
     <div className={cn('w-[28px] h-[28px] relative overflow-hidden')}>
       {Array.from({ length: 4 }).map((_, index) => (
@@ -26,3 +28,5 @@ export function AudioBars({ isPlaying = false }: AudioBarsProps) {
     </div>
   )
 }
+
+export { AudioBars }

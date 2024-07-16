@@ -4,13 +4,7 @@ import prettyMilliseconds from 'pretty-ms'
 import { useEffect, useState } from 'react'
 import type { Simplify } from 'type-fest'
 
-import {
-  ItemArtists,
-  ItemImage,
-  ItemPosition,
-  RelativeTime,
-  type ItemPositionProps,
-} from '../misc'
+import { ItemArtists, ItemImage, ItemPosition, RelativeTime } from '../misc'
 import type { PlayTimeOrPlaysProps } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
@@ -18,7 +12,7 @@ import { SpotifyLink } from '@app/components/common'
 import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
 
-export type ItemsListElementPlayedAtOrPositionProps =
+type ItemsListElementPlayedAtOrPositionProps =
   | {
       playedAt: string
       position?: never
@@ -27,12 +21,12 @@ export type ItemsListElementPlayedAtOrPositionProps =
     }
   | {
       position: number
-      positionSize?: ItemPositionProps['size']
+      positionSize?: ItemPosition.Props['size']
       positionClassName?: string
       playedAt?: never
     }
 
-export type ItemsListElementAlbumOrImagesProps =
+type ItemsListElementAlbumOrImagesProps =
   | {
       album: Pick<AlbumEntity, 'images'>
       artists: Pick<ArtistEntity, 'id' | 'name'>[]
@@ -47,14 +41,16 @@ export type ItemsListElementAlbumOrImagesProps =
       artists?: never
     })
 
-export type ItemsListElementProps = Simplify<
-  ItemsListElementPlayedAtOrPositionProps &
-    ItemsListElementAlbumOrImagesProps &
-    PlayTimeOrPlaysProps &
-    Pick<AlbumEntity, 'name' | 'href' | 'id'>
->
+namespace ItemsListElement {
+  export type Props = Simplify<
+    ItemsListElementPlayedAtOrPositionProps &
+      ItemsListElementAlbumOrImagesProps &
+      PlayTimeOrPlaysProps &
+      Pick<AlbumEntity, 'name' | 'href' | 'id'>
+  >
+}
 
-export function ItemsListElement({
+function ItemsListElement({
   id,
   name,
   images,
@@ -69,7 +65,7 @@ export function ItemsListElement({
   maxPlayTime,
   plays,
   maxPlays,
-}: ItemsListElementProps) {
+}: ItemsListElement.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
   useEffect(() => {
@@ -137,3 +133,5 @@ export function ItemsListElement({
     </div>
   )
 }
+
+export { ItemsListElement }

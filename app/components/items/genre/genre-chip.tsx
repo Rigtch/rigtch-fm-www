@@ -15,16 +15,18 @@ import {
 } from '@app/components/ui/tooltip'
 import { cn } from '@app/utils/cn'
 
-export type GenreChipProps = GenreProps & PlayTimeOrPlaysProps
+namespace GenreChip {
+  export type Props = GenreProps & PlayTimeOrPlaysProps
+}
 
-export function GenreChip({
+function GenreChip({
   genre,
   className,
   plays,
   maxPlays,
   playTime,
   maxPlayTime,
-}: GenreChipProps) {
+}: GenreChip.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
   useEffect(() => {
@@ -74,3 +76,5 @@ export function GenreChip({
     </TooltipProvider>
   )
 }
+
+export { GenreChip }

@@ -4,13 +4,15 @@ import { DateTime, type DateTimeOptions } from 'luxon'
 
 import { cn } from '@app/utils/cn'
 
-export interface RelativeTimeProps {
-  value: string
-  className?: string
-  options?: DateTimeOptions
+namespace RelativeTime {
+  export interface Props {
+    value: string
+    className?: string
+    options?: DateTimeOptions
+  }
 }
 
-export function RelativeTime({ value, options, className }: RelativeTimeProps) {
+function RelativeTime({ value, options, className }: RelativeTime.Props) {
   return (
     <p
       className={cn('text-primary-foreground/80 whitespace-nowrap', className)}
@@ -20,3 +22,5 @@ export function RelativeTime({ value, options, className }: RelativeTimeProps) {
     </p>
   )
 }
+
+export { RelativeTime }

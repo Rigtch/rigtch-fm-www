@@ -3,6 +3,8 @@
 import { LuLayers, LuList } from 'react-icons/lu'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
+import type { ProfileSelectProps } from './props'
+
 import {
   Select,
   SelectItem,
@@ -13,11 +15,7 @@ import {
 import { View } from '@app/profile/enums'
 import { formatSearchParams } from '@app/utils/formatters'
 
-export interface SelectViewProps {
-  initialValue: View
-}
-
-export function SelectView({ initialValue }: SelectViewProps) {
+export function SelectView({ initialValue }: ProfileSelectProps<View>) {
   const viewOptions = [
     {
       icon: <LuLayers />,

@@ -18,17 +18,19 @@ import { Skeleton } from '@app/components/ui/skeleton'
 import { cn } from '@app/utils/cn'
 import { formatArtists } from '@app/utils/formatters'
 
-export interface PlaybackCardProps {
-  isPlaying?: boolean
-  isPlayingOptimistic?: boolean
-  track: Track
-  device?: Device
-  userId?: string
-  routeUserId?: string
-  handleToggleState: () => Promise<void>
+namespace PlaybackCard {
+  export interface Props {
+    isPlaying?: boolean
+    isPlayingOptimistic?: boolean
+    track: Track
+    device?: Device
+    userId?: string
+    routeUserId?: string
+    handleToggleState: () => Promise<void>
+  }
 }
 
-export function PlaybackCard({
+function PlaybackCard({
   isPlaying = false,
   isPlayingOptimistic = false,
   track: { album, artists, ...track },
@@ -36,7 +38,7 @@ export function PlaybackCard({
   userId,
   routeUserId,
   handleToggleState,
-}: PlaybackCardProps) {
+}: PlaybackCard.Props) {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   return (
@@ -105,3 +107,5 @@ export function PlaybackCard({
     </Card>
   )
 }
+
+export { PlaybackCard }

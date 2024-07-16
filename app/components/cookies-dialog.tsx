@@ -17,11 +17,13 @@ import {
   declineUserCookiesAction,
 } from '@app/actions/user-cookies'
 
-export interface CookiesDialogProps {
-  isAccepted: boolean
+namespace CookiesDialog {
+  export interface Props {
+    isAccepted: boolean
+  }
 }
 
-export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
+function CookiesDialog({ isAccepted }: CookiesDialog.Props) {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -69,3 +71,5 @@ export function CookiesDialog({ isAccepted }: CookiesDialogProps) {
     </Dialog>
   )
 }
+
+export { CookiesDialog }

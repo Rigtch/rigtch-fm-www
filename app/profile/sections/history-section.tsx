@@ -8,19 +8,20 @@ import { ItemsList } from '@app/components/items/list'
 import { useHistoryInfiniteQuery } from '@app/api/hooks'
 import type { HistoryTrack, Pagination } from '@app/api/types'
 import { Button } from '@app/components/ui/button'
-import type { DefaultSectionProps } from '@app/sections'
 import { DefaultSection } from '@app/sections'
 
-export type HistorySectionProps = Omit<DefaultSectionProps, 'title'> & {
-  initialData: Pagination<HistoryTrack>
-  limit: number
+namespace HistorySection {
+  export type Props = Omit<DefaultSection.Props, 'title'> & {
+    initialData: Pagination<HistoryTrack>
+    limit: number
+  }
 }
 
-export function HistorySection({
+function HistorySection({
   initialData,
   limit = 20,
   ...props
-}: HistorySectionProps) {
+}: HistorySection.Props) {
   const { ref, inView } = useInView()
 
   const { data, fetchNextPage, isFetchingNextPage, hasNextPage } =
@@ -69,3 +70,5 @@ export function HistorySection({
     </DefaultSection>
   )
 }
+
+export { HistorySection }
