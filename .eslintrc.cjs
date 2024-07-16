@@ -127,6 +127,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/consistent-type-imports': 'warn',
+    '@typescript-eslint/no-namespace': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
