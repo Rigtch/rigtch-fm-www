@@ -1,6 +1,6 @@
 import { ReadonlyURLSearchParams } from 'next/navigation'
 
-import { formatSearchParams } from './search-params'
+import { formatSearchParams } from './format-search-params'
 
 describe('formatSearchParams', () => {
   test('should return search params string', () => {

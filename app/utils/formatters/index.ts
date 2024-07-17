@@ -1,2 +1,2 @@
-export * from './artists'
-export * from './search-params'
+export * from './format-artists'
+export * from './format-search-params'

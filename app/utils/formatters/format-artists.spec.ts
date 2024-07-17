@@ -1,4 +1,4 @@
-import { formatArtists } from './artists'
+import { formatArtists } from './format-artists'
 
 describe('formatArtists', () => {
   test('should return artists names separated by comma', () => {
