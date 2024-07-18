@@ -2,41 +2,39 @@
 
 import prettyMilliseconds from 'pretty-ms'
 import { FaStar } from 'react-icons/fa6'
-import type { Simplify } from 'type-fest'
 
 import { GenreBadge } from '../genre'
 import { ItemArtists, ItemImage, ItemName, ItemPosition } from '../misc'
-import type { PlayTimeOrPlaysProps } from '../props'
+import type { PlayTimeOrPlays } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { ProgressWithValueLabel } from '@app/components/common'
 import { cn } from '@app/utils/cn'
 
-type ItemTopCardTrackOrAlbumOrArtistProps =
-  | (Pick<ArtistEntity, 'images' | 'genres'> & {
-      artists?: never
-      album?: never
-    })
-  | {
-      images?: never
-      genres?: never
-      artists: Pick<ArtistEntity, 'id' | 'name'>[]
-      album: Pick<AlbumEntity, 'images'>
-    }
-  | (Pick<AlbumEntity, 'images' | 'genres'> & {
-      album?: never
-      artists: Pick<ArtistEntity, 'id' | 'name'>[]
-    })
+interface ItemTopCardAlbum extends Pick<AlbumEntity, 'images' | 'genres'> {
+  artists?: never
+  album?: never
+}
+
+interface ItemTopCardTrack {
+  artists: Pick<ArtistEntity, 'id' | 'name'>[]
+  album: Pick<AlbumEntity, 'images'>
+  images?: never
+  genres?: never
+}
+
+interface ItemTopCardArtist extends Pick<ArtistEntity, 'images' | 'genres'> {
+  artists: Pick<ArtistEntity, 'id' | 'name'>[]
+  album?: never
+}
 
 namespace ItemTopCard {
-  export type Props = Simplify<
-    ItemTopCardTrackOrAlbumOrArtistProps &
-      PlayTimeOrPlaysProps &
-      Pick<ArtistEntity, 'id' | 'name' | 'href'> & {
-        position?: number
-        isCarousel?: boolean
-      }
-  >
+  export type Props = PlayTimeOrPlays &
+    Pick<ArtistEntity, 'id' | 'name' | 'href'> &
+    (ItemTopCardAlbum | ItemTopCardTrack | ItemTopCardArtist) & {
+      position?: number
+      isCarousel?: boolean
+    }
 }
 
 function ItemTopCard({

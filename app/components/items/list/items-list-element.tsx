@@ -5,14 +5,30 @@ import { useEffect, useState } from 'react'
 import type { Simplify } from 'type-fest'
 
 import { ItemArtists, ItemImage, ItemPosition, RelativeTime } from '../misc'
-import type { PlayTimeOrPlaysProps } from '../props'
+import type { PlayTimeOrPlays } from '../props'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { SpotifyLink } from '@app/components/common'
 import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
 
-type ItemsListElementPlayedAtOrPositionProps =
+interface ItemsListElementAlbum extends Pick<AlbumEntity, 'images'> {
+  artists?: never
+  album?: never
+}
+
+interface ItemsListElementTrack {
+  artists: Pick<ArtistEntity, 'id' | 'name'>[]
+  album: Pick<AlbumEntity, 'images'>
+  images?: never
+}
+
+interface ItemsListElementArtist extends Pick<ArtistEntity, 'images'> {
+  artists: Pick<ArtistEntity, 'id' | 'name'>[]
+  album?: never
+}
+
+type PlayedAtOrPosition =
   | {
       playedAt: string
       position?: never
@@ -26,26 +42,11 @@ type ItemsListElementPlayedAtOrPositionProps =
       playedAt?: never
     }
 
-type ItemsListElementAlbumOrImagesProps =
-  | {
-      album: Pick<AlbumEntity, 'images'>
-      artists: Pick<ArtistEntity, 'id' | 'name'>[]
-      images?: never
-    }
-  | (Pick<AlbumEntity, 'images'> & {
-      artists: Pick<ArtistEntity, 'id' | 'name'>[]
-      album?: never
-    })
-  | (Pick<AlbumEntity, 'images'> & {
-      album?: never
-      artists?: never
-    })
-
 namespace ItemsListElement {
   export type Props = Simplify<
-    ItemsListElementPlayedAtOrPositionProps &
-      ItemsListElementAlbumOrImagesProps &
-      PlayTimeOrPlaysProps &
+    PlayedAtOrPosition &
+      PlayTimeOrPlays &
+      (ItemsListElementAlbum | ItemsListElementTrack | ItemsListElementArtist) &
       Pick<AlbumEntity, 'name' | 'href' | 'id'>
   >
 }

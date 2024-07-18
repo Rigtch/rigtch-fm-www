@@ -1,37 +1,35 @@
 'use client'
 
-import type { Simplify } from 'type-fest'
-
 import { ItemImage, ItemName, ItemArtists } from '../misc'
 
 import { Card } from '@app/components/ui/card'
 import { SpotifyLink } from '@app/components/common'
-import type { AlbumEntity, ArtistEntity } from '@app/api/types'
+import type { AlbumEntity, ArtistEntity, TrackEntity } from '@app/api/types'
 
-type ItemCardArtistsOrTracksOrAlbumsProps =
-  | (Pick<AlbumEntity, 'images' | 'albumType' | 'releaseDate'> & {
-      artists?: Pick<ArtistEntity, 'id' | 'name'>[]
-      album?: never
-    })
-  | {
-      artists: Pick<ArtistEntity, 'id' | 'name'>[]
-      album: Pick<AlbumEntity, 'images'>
-      images?: never
-      albumType?: never
-      releaseDate?: never
-    }
-  | (Pick<ArtistEntity, 'images'> & {
-      artists?: never
-      album?: never
-      albumType?: never
-      releaseDate?: never
-    })
+interface ItemCardAlbum
+  extends Pick<AlbumEntity, 'images' | 'albumType' | 'releaseDate'> {
+  artists?: Pick<ArtistEntity, 'id' | 'name'>[]
+  album?: never
+}
+
+interface ItemCardTrack {
+  artists: Pick<TrackEntity, 'id' | 'name'>[]
+  album: Pick<AlbumEntity, 'images'>
+  images?: never
+  albumType?: never
+  releaseDate?: never
+}
+
+interface ItemCardArtist extends Pick<ArtistEntity, 'images'> {
+  artists?: never
+  album?: never
+  albumType?: never
+  releaseDate?: never
+}
 
 namespace ItemCard {
-  export type Props = Simplify<
-    ItemCardArtistsOrTracksOrAlbumsProps &
-      Pick<AlbumEntity, 'name' | 'href' | 'id'>
-  >
+  export type Props = Pick<AlbumEntity, 'name' | 'href' | 'id'> &
+    (ItemCardAlbum | ItemCardTrack | ItemCardArtist)
 }
 
 function ItemCard({

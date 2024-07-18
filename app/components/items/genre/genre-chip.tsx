@@ -3,7 +3,7 @@
 import prettyMilliseconds from 'pretty-ms'
 import { useEffect, useState } from 'react'
 
-import type { PlayTimeOrPlaysProps } from '../props'
+import type { PlayTimeOrPlays } from '../props'
 
 import type { GenreProps } from './props'
 
@@ -16,7 +16,7 @@ import {
 import { cn } from '@app/utils/cn'
 
 namespace GenreChip {
-  export type Props = GenreProps & PlayTimeOrPlaysProps
+  export type Props = GenreProps & PlayTimeOrPlays
 }
 
 function GenreChip({
