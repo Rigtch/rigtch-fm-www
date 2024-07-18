@@ -1070,6 +1070,9 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="flex justify-center"
+          />
         </main>
       </section>
     </div>
@@ -2140,6 +2143,9 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
             </div>
           </div>
         </div>
+        <div
+          class="flex justify-center"
+        />
       </main>
     </section>
   </div>,
@@ -2249,6 +2255,9 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
               Oops... Looks like nothing's there yet.
             </div>
           </div>
+          <div
+            class="flex justify-center"
+          />
         </main>
       </section>
     </div>
@@ -2301,6 +2310,9 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
             Oops... Looks like nothing's there yet.
           </div>
         </div>
+        <div
+          class="flex justify-center"
+        />
       </main>
     </section>
   </div>,
@@ -3284,6 +3296,9 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
               class="flex flex-col"
             />
           </div>
+          <div
+            class="flex justify-center"
+          />
         </main>
       </section>
     </div>
@@ -4210,6 +4225,9 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
             class="flex flex-col"
           />
         </div>
+        <div
+          class="flex justify-center"
+        />
       </main>
     </section>
   </div>,
@@ -4563,6 +4581,9 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="flex justify-center"
+          />
         </main>
       </section>
     </div>
@@ -4859,6 +4880,9 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
             </div>
           </div>
         </div>
+        <div
+          class="flex justify-center"
+        />
       </main>
     </section>
   </div>,
@@ -5212,6 +5236,9 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
               </div>
             </div>
           </div>
+          <div
+            class="flex justify-center"
+          />
         </main>
       </section>
     </div>
@@ -5508,6 +5535,9 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
             </div>
           </div>
         </div>
+        <div
+          class="flex justify-center"
+        />
       </main>
     </section>
   </div>,
