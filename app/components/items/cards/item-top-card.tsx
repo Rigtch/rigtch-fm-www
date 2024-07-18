@@ -5,7 +5,7 @@ import { FaStar } from 'react-icons/fa6'
 
 import { GenreBadge } from '../genre'
 import { ItemArtists, ItemImage, ItemName, ItemPosition } from '../misc'
-import type { PlayTimeOrPlays } from '../props'
+import type { PlayTimeOrPlays } from '../types'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { ProgressWithValueLabel } from '@app/components/common'

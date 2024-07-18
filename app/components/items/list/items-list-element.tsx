@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import type { Simplify } from 'type-fest'
 
 import { ItemArtists, ItemImage, ItemPosition, RelativeTime } from '../misc'
-import type { PlayTimeOrPlays } from '../props'
+import type { PlayTimeOrPlays } from '../types'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { SpotifyLink } from '@app/components/common'

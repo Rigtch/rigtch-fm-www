@@ -3,7 +3,7 @@
 import prettyMilliseconds from 'pretty-ms'
 import { useEffect, useState } from 'react'
 
-import type { PlayTimeOrPlays } from '../props'
+import type { PlayTimeOrPlays } from '../types'
 
 import type { GenreProps } from './props'
 
