@@ -12,7 +12,7 @@ import { SpotifyLink } from '@app/components/common'
 import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
 
-interface ItemsListElementAlbum extends Pick<AlbumEntity, 'images'> {
+interface ItemsListElementAlbum extends Pick<ArtistEntity, 'images'> {
   artists?: never
   album?: never
 }
@@ -23,7 +23,7 @@ interface ItemsListElementTrack {
   images?: never
 }
 
-interface ItemsListElementArtist extends Pick<ArtistEntity, 'images'> {
+interface ItemsListElementArtist extends Pick<AlbumEntity, 'images'> {
   artists: Pick<ArtistEntity, 'id' | 'name'>[]
   album?: never
 }
