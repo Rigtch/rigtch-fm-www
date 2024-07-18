@@ -80,7 +80,7 @@ function ItemsListElement({
   }, [plays, playTime, maxPlays, maxPlayTime])
 
   return (
-    <div className="h-[72px] relative overflow-hidden">
+    <div className="relative overflow-hidden">
       {(plays ?? playTime) && (
         <div
           className="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"

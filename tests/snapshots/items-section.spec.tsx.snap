@@ -993,7 +993,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
             >
               <div>
                 <div
-                  class="h-[72px] relative overflow-hidden"
+                  class="relative overflow-hidden"
                 >
                   <div
                     class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -2066,7 +2066,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
           >
             <div>
               <div
-                class="h-[72px] relative overflow-hidden"
+                class="relative overflow-hidden"
               >
                 <div
                   class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -4313,7 +4313,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
             >
               <div>
                 <div
-                  class="h-[72px] relative overflow-hidden"
+                  class="relative overflow-hidden"
                 >
                   <div
                     class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -4404,7 +4404,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
               </div>
               <div>
                 <div
-                  class="h-[72px] relative overflow-hidden"
+                  class="relative overflow-hidden"
                 >
                   <div
                     class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -4495,7 +4495,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
               </div>
               <div>
                 <div
-                  class="h-[72px] relative overflow-hidden"
+                  class="relative overflow-hidden"
                 >
                   <div
                     class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -4612,7 +4612,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
           >
             <div>
               <div
-                class="h-[72px] relative overflow-hidden"
+                class="relative overflow-hidden"
               >
                 <div
                   class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -4703,7 +4703,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
             </div>
             <div>
               <div
-                class="h-[72px] relative overflow-hidden"
+                class="relative overflow-hidden"
               >
                 <div
                   class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -4794,7 +4794,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
             </div>
             <div>
               <div
-                class="h-[72px] relative overflow-hidden"
+                class="relative overflow-hidden"
               >
                 <div
                   class="flex flex-row justify-between p-2 gap-2 md:gap-4"
@@ -4968,7 +4968,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
             >
               <div>
                 <div
-                  class="h-[72px] relative overflow-hidden"
+                  class="relative overflow-hidden"
                 >
                   <div
                     class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
@@ -5059,7 +5059,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
               </div>
               <div>
                 <div
-                  class="h-[72px] relative overflow-hidden"
+                  class="relative overflow-hidden"
                 >
                   <div
                     class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
@@ -5150,7 +5150,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
               </div>
               <div>
                 <div
-                  class="h-[72px] relative overflow-hidden"
+                  class="relative overflow-hidden"
                 >
                   <div
                     class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
@@ -5267,7 +5267,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
           >
             <div>
               <div
-                class="h-[72px] relative overflow-hidden"
+                class="relative overflow-hidden"
               >
                 <div
                   class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
@@ -5358,7 +5358,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
             </div>
             <div>
               <div
-                class="h-[72px] relative overflow-hidden"
+                class="relative overflow-hidden"
               >
                 <div
                   class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
@@ -5449,7 +5449,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
             </div>
             <div>
               <div
-                class="h-[72px] relative overflow-hidden"
+                class="relative overflow-hidden"
               >
                 <div
                   class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
