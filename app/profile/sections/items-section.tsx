@@ -22,20 +22,19 @@ namespace ItemsSection {
 
 function ItemsSection({
   items,
-  title,
   children,
   view = View.LIST,
   ...props
 }: ItemsSection.Props) {
   return (
-    <DefaultSection title={title} {...props}>
+    <DefaultSection {...props}>
       {items.length > 0 && (
         <ItemsList items={items} isTop={view === View.CARD} />
       )}
 
       {items.length === 0 && <NoDataAlert />}
 
-      {children}
+      <div className="flex justify-center">{children}</div>
     </DefaultSection>
   )
 }
