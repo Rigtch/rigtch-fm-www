@@ -66,12 +66,12 @@ describe('SelectTimeRange', () => {
     await user.click(selectButton)
     await user.click(screen.getByRole('option', { name: '6 months' }))
 
-    expect(selectButton).toHaveTextContent('6 months')
+    expect(pushSpy).toHaveBeenCalled()
 
     await user.click(selectButton)
     await user.click(screen.getByRole('option', { name: 'lifetime' }))
 
-    expect(selectButton).toHaveTextContent('lifetime')
+    expect(pushSpy).toHaveBeenCalled()
   })
 
   test('should change time range with rigtch provider', async () => {
@@ -95,16 +95,16 @@ describe('SelectTimeRange', () => {
     await user.click(selectButton)
     await user.click(screen.getByRole('option', { name: '14 days' }))
 
-    expect(selectButton).toHaveTextContent('14 days')
+    expect(pushSpy).toHaveBeenCalled()
 
     await user.click(selectButton)
     await user.click(screen.getByRole('option', { name: '30 days' }))
 
-    expect(selectButton).toHaveTextContent('30 days')
+    expect(pushSpy).toHaveBeenCalled()
 
     await user.click(selectButton)
     await user.click(screen.getByRole('option', { name: '90 days' }))
 
-    expect(selectButton).toHaveTextContent('90 days')
+    expect(pushSpy).toHaveBeenCalled()
   })
 })

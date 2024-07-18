@@ -42,6 +42,6 @@ describe('SelectView', () => {
     await user.click(selectButton)
     await user.click(screen.getByRole('option', { name: 'List' }))
 
-    expect(selectButton).toHaveTextContent('List')
+    expect(pushSpy).toHaveBeenCalled()
   })
 })

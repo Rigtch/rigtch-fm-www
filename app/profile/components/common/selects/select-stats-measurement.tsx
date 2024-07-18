@@ -46,7 +46,7 @@ export function SelectStatsMeasurement({
   }
 
   return (
-    <Select defaultValue={initialValue} onValueChange={handleOnValueChange}>
+    <Select value={initialValue} onValueChange={handleOnValueChange}>
       <SelectTrigger className="min-w-[120px] text-white">
         <SelectValue placeholder="Select stats measurement" />
       </SelectTrigger>

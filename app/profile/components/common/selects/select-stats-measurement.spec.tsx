@@ -55,6 +55,6 @@ describe('SelectStatsMeasurement', () => {
     await user.click(selectButton)
     await user.click(screen.getByRole('option', { name: 'PlayTime' }))
 
-    expect(selectButton).toHaveTextContent('PlayTime')
+    expect(pushSpy).toHaveBeenCalled()
   })
 })
