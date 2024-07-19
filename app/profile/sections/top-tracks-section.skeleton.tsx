@@ -9,7 +9,7 @@ export function TopTracksSectionSkeleton({
 }: TopItemsSectionSkeletonProps) {
   return (
     <DefaultSection title={'Top Tracks'}>
-      <ItemsListSkeleton artists={true} view={view} />
+      <ItemsListSkeleton withArtists={true} view={view} />
     </DefaultSection>
   )
 }

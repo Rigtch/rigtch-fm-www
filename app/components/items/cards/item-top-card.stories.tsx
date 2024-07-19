@@ -84,21 +84,21 @@ export const Skeleton: ItemTopCardStory = {
 }
 
 export const SkeletonWithGenres: ItemTopCardStory = {
-  render: () => <ItemTopCardSkeleton genres />,
+  render: () => <ItemTopCardSkeleton withGenres />,
 }
 
 export const SkeletonWithArtists: ItemTopCardStory = {
-  render: () => <ItemTopCardSkeleton artists />,
+  render: () => <ItemTopCardSkeleton withArtists />,
 }
 
 export const SkeletonWithProgress: ItemTopCardStory = {
-  render: () => <ItemTopCardSkeleton progress />,
+  render: () => <ItemTopCardSkeleton withProgress />,
 }
 
 export const SkeletonWithProgressAndArtists: ItemTopCardStory = {
-  render: () => <ItemTopCardSkeleton artists progress />,
+  render: () => <ItemTopCardSkeleton withArtists withProgress />,
 }
 
 export const SkeletonWithProgressAndGenres: ItemTopCardStory = {
-  render: () => <ItemTopCardSkeleton genres progress />,
+  render: () => <ItemTopCardSkeleton withGenres withProgress />,
 }

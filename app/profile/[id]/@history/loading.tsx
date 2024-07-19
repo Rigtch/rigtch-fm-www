@@ -5,7 +5,12 @@ import { View } from '@app/profile/enums'
 export default function ProfileHistorySubLoading() {
   return (
     <DefaultSection title={'History'}>
-      <ItemsListSkeleton playedAt withoutPosition artists view={View.LIST} />
+      <ItemsListSkeleton
+        withPlayedAt
+        withoutPosition
+        withArtists
+        view={View.LIST}
+      />
     </DefaultSection>
   )
 }

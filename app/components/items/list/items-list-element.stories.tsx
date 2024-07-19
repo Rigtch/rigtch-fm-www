@@ -76,13 +76,13 @@ export const SkeletonWithPosition: ItemsListElementStory = {
 }
 
 export const SkeletonWithArtists: ItemsListElementStory = {
-  render: () => <ItemsListElementSkeleton artists />,
+  render: () => <ItemsListElementSkeleton withArtists />,
 }
 
 export const SkeletonWithRelativeTime: ItemsListElementStory = {
-  render: () => <ItemsListElementSkeleton playedAt />,
+  render: () => <ItemsListElementSkeleton withPlayedAt />,
 }
 
 export const SkeletonWithRelativeTimeAndArtists: ItemsListElementStory = {
-  render: () => <ItemsListElementSkeleton playedAt artists />,
+  render: () => <ItemsListElementSkeleton withPlayedAt withArtists />,
 }

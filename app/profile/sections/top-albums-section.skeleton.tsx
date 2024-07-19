@@ -9,7 +9,7 @@ export function TopAlbumsSectionSkeleton({
 }: TopItemsSectionSkeletonProps) {
   return (
     <DefaultSection title={'Top Albums'}>
-      <ItemsListSkeleton artists={true} view={view} />
+      <ItemsListSkeleton withArtists={true} view={view} />
     </DefaultSection>
   )
 }
