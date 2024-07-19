@@ -72,6 +72,9 @@ exports[`TopGenresSection > should match snapshot 1`] = `
               </button>
             </div>
           </div>
+          <div
+            class="flex justify-center"
+          />
         </main>
       </section>
     </div>
@@ -144,6 +147,9 @@ exports[`TopGenresSection > should match snapshot 1`] = `
             </button>
           </div>
         </div>
+        <div
+          class="flex justify-center"
+        />
       </main>
     </section>
   </div>,
@@ -253,6 +259,9 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
               Oops... Looks like nothing's there yet.
             </div>
           </div>
+          <div
+            class="flex justify-center"
+          />
         </main>
       </section>
     </div>
@@ -305,6 +314,9 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
             Oops... Looks like nothing's there yet.
           </div>
         </div>
+        <div
+          class="flex justify-center"
+        />
       </main>
     </section>
   </div>,

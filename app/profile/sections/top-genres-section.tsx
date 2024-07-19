@@ -41,7 +41,7 @@ function TopGenresSection({ items, children }: TopGenresSection.Props) {
 
       {items.length === 0 && <NoDataAlert />}
 
-      {children}
+      <div className="flex justify-center">{children}</div>
     </DefaultSection>
   )
 }
