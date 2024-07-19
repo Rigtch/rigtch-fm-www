@@ -44,6 +44,7 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'eslint-plugin-import-helpers',
+    'react-refresh',
     'testing-library',
     'prettier',
   ],
@@ -167,5 +168,11 @@ module.exports = {
       },
     ],
     'react/prop-types': 'off',
+    'react-refresh/only-export-components': [
+      'warn',
+      {
+        allowConstantExport: true,
+      },
+    ],
   },
 }
