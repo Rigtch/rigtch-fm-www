@@ -38,6 +38,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
                 data-state="closed"
               >
                 <a
+                  class="cursor-pointer"
                   href=""
                   target="_blank"
                 >
@@ -143,6 +144,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
               data-state="closed"
             >
               <a
+                class="cursor-pointer"
                 href=""
                 target="_blank"
               >
@@ -305,6 +307,7 @@ exports[`ItemHeaderSection > should match snapshot with children 1`] = `
                 data-state="closed"
               >
                 <a
+                  class="cursor-pointer"
                   href=""
                   target="_blank"
                 >
@@ -373,6 +376,7 @@ exports[`ItemHeaderSection > should match snapshot with children 1`] = `
               data-state="closed"
             >
               <a
+                class="cursor-pointer"
                 href=""
                 target="_blank"
               >
@@ -498,6 +502,7 @@ exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
                 data-state="closed"
               >
                 <a
+                  class="cursor-pointer"
                   href=""
                   target="_blank"
                 >
@@ -563,6 +568,7 @@ exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
               data-state="closed"
             >
               <a
+                class="cursor-pointer"
                 href=""
                 target="_blank"
               >

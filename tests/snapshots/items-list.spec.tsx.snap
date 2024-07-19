@@ -79,6 +79,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -175,6 +176,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -271,6 +273,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -373,6 +376,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -469,6 +473,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -565,6 +570,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -1987,6 +1993,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -2083,6 +2090,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -2179,6 +2187,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -2281,6 +2290,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -2377,6 +2387,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -2473,6 +2484,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -3881,6 +3893,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -3963,6 +3976,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -4045,6 +4059,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -4127,6 +4142,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -4215,6 +4231,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -4297,6 +4314,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -4379,6 +4397,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -4461,6 +4480,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -5571,6 +5591,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -6624,6 +6645,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -6769,6 +6791,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -6851,6 +6874,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -6933,6 +6957,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -7015,6 +7040,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -7103,6 +7129,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -7185,6 +7212,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -7267,6 +7295,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -7349,6 +7378,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -7445,7 +7475,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
               class="relative overflow-hidden"
             >
               <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
               >
                 <header
                   class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -7503,6 +7533,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -7536,7 +7567,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
               class="relative overflow-hidden"
             >
               <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
               >
                 <header
                   class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -7594,6 +7625,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -7627,7 +7659,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
               class="relative overflow-hidden"
             >
               <div
-                class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
               >
                 <header
                   class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -7685,6 +7717,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     data-state="closed"
                   >
                     <a
+                      class="cursor-pointer"
                       href="https://spotify.com"
                       target="_blank"
                     >
@@ -7724,7 +7757,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
             class="relative overflow-hidden"
           >
             <div
-              class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+              class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
             >
               <header
                 class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -7782,6 +7815,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -7815,7 +7849,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
             class="relative overflow-hidden"
           >
             <div
-              class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+              class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
             >
               <header
                 class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -7873,6 +7907,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -7906,7 +7941,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
             class="relative overflow-hidden"
           >
             <div
-              class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+              class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
             >
               <header
                 class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -7964,6 +7999,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >

@@ -39,6 +39,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
               data-state="closed"
             >
               <a
+                class="cursor-pointer"
                 href="https://spotify.com"
                 target="_blank"
               >
@@ -98,6 +99,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
             data-state="closed"
           >
             <a
+              class="cursor-pointer"
               href="https://spotify.com"
               target="_blank"
             >
@@ -214,6 +216,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
               data-state="closed"
             >
               <a
+                class="cursor-pointer"
                 href="https://spotify.com"
                 target="_blank"
               >
@@ -273,6 +276,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
             data-state="closed"
           >
             <a
+              class="cursor-pointer"
               href="https://spotify.com"
               target="_blank"
             >
@@ -396,6 +400,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
               data-state="closed"
             >
               <a
+                class="cursor-pointer"
                 href="https://spotify.com"
                 target="_blank"
               >
@@ -462,6 +467,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
             data-state="closed"
           >
             <a
+              class="cursor-pointer"
               href="https://spotify.com"
               target="_blank"
             >

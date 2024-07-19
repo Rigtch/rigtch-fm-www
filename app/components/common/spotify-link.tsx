@@ -11,6 +11,8 @@ import {
   TooltipTrigger,
 } from '../ui/tooltip'
 
+import { cn } from '@app/utils/cn'
+
 namespace SpotifyLink {
   export interface Props extends Omit<LinkProps, 'href'> {
     href?: string
@@ -28,12 +30,16 @@ function SpotifyLink({
   return (
     <>
       <TooltipProvider>
-        <Tooltip>
+        <Tooltip open={isDisabled ? false : undefined}>
           <TooltipTrigger>
             <Link
               href={href ?? ''}
               target="_blank"
-              className={className}
+              className={cn(
+                isDisabled ? 'cursor-default' : 'cursor-pointer',
+                className
+              )}
+              aria-disabled={isDisabled}
               {...props}
             >
               <IconContext.Provider

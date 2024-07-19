@@ -9,6 +9,7 @@ exports[`SpotifyLink > should match snapshot 1`] = `
         data-state="closed"
       >
         <a
+          class="cursor-pointer"
           href="https://spotify.com"
           target="_blank"
         >
@@ -35,6 +36,7 @@ exports[`SpotifyLink > should match snapshot 1`] = `
       data-state="closed"
     >
       <a
+        class="cursor-pointer"
         href="https://spotify.com"
         target="_blank"
       >
@@ -118,6 +120,8 @@ exports[`SpotifyLink > should match snapshot with isDisabled 1`] = `
         data-state="closed"
       >
         <a
+          aria-disabled="true"
+          class="cursor-default"
           href="https://spotify.com"
           target="_blank"
         >
@@ -145,6 +149,8 @@ exports[`SpotifyLink > should match snapshot with isDisabled 1`] = `
       data-state="closed"
     >
       <a
+        aria-disabled="true"
+        class="cursor-default"
         href="https://spotify.com"
         target="_blank"
       >

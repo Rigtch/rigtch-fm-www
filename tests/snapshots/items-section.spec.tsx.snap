@@ -1045,6 +1045,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         data-state="closed"
                       >
                         <a
+                          class="cursor-pointer"
                           href="https://spotify.com"
                           target="_blank"
                         >
@@ -2118,6 +2119,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       data-state="closed"
                     >
                       <a
+                        class="cursor-pointer"
                         href="https://spotify.com"
                         target="_blank"
                       >
@@ -4374,6 +4376,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                         data-state="closed"
                       >
                         <a
+                          class="cursor-pointer"
                           href="https://spotify.com"
                           target="_blank"
                         >
@@ -4465,6 +4468,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                         data-state="closed"
                       >
                         <a
+                          class="cursor-pointer"
                           href="https://spotify.com"
                           target="_blank"
                         >
@@ -4556,6 +4560,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                         data-state="closed"
                       >
                         <a
+                          class="cursor-pointer"
                           href="https://spotify.com"
                           target="_blank"
                         >
@@ -4673,6 +4678,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       data-state="closed"
                     >
                       <a
+                        class="cursor-pointer"
                         href="https://spotify.com"
                         target="_blank"
                       >
@@ -4764,6 +4770,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       data-state="closed"
                     >
                       <a
+                        class="cursor-pointer"
                         href="https://spotify.com"
                         target="_blank"
                       >
@@ -4855,6 +4862,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       data-state="closed"
                     >
                       <a
+                        class="cursor-pointer"
                         href="https://spotify.com"
                         target="_blank"
                       >
@@ -4971,7 +4979,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
                   >
                     <header
                       class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5029,6 +5037,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         data-state="closed"
                       >
                         <a
+                          class="cursor-pointer"
                           href="https://spotify.com"
                           target="_blank"
                         >
@@ -5062,7 +5071,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
                   >
                     <header
                       class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5120,6 +5129,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         data-state="closed"
                       >
                         <a
+                          class="cursor-pointer"
                           href="https://spotify.com"
                           target="_blank"
                         >
@@ -5153,7 +5163,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
                   >
                     <header
                       class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5211,6 +5221,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         data-state="closed"
                       >
                         <a
+                          class="cursor-pointer"
                           href="https://spotify.com"
                           target="_blank"
                         >
@@ -5270,7 +5281,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5328,6 +5339,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       data-state="closed"
                     >
                       <a
+                        class="cursor-pointer"
                         href="https://spotify.com"
                         target="_blank"
                       >
@@ -5361,7 +5373,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5419,6 +5431,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       data-state="closed"
                     >
                       <a
+                        class="cursor-pointer"
                         href="https://spotify.com"
                         target="_blank"
                       >
@@ -5452,7 +5465,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:px-4"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5510,6 +5523,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       data-state="closed"
                     >
                       <a
+                        class="cursor-pointer"
                         href="https://spotify.com"
                         target="_blank"
                       >
