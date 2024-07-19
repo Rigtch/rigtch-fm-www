@@ -12,8 +12,15 @@ export interface ItemNameProps
 
 export function ItemName({ name, href, className }: ItemNameProps) {
   return (
-    <LinkButton href={href} className="justify-start">
-      <span className={cn('truncate max-w-[200px]', className)}>{name}</span>
+    <LinkButton href={href} className="flex justify-start">
+      <p
+        className={cn(
+          'truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]',
+          className
+        )}
+      >
+        {name}
+      </p>
     </LinkButton>
   )
 }
