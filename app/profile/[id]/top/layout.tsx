@@ -49,10 +49,9 @@ export default function ProfileTopLayout({ children }: ProfileLayoutBaseProps) {
         </div>
 
         <div className="flex gap-2">
-          {statsProvider === StatsProvider.RIGTCH ||
-            (route === 'albums' && (
-              <SelectStatsMeasurement initialValue={statsMeasurement} />
-            ))}
+          {(statsProvider === StatsProvider.RIGTCH || route === 'albums') && (
+            <SelectStatsMeasurement initialValue={statsMeasurement} />
+          )}
 
           <SelectTimeRange initialValue={timeRange} />
 
