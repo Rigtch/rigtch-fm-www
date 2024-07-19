@@ -10,17 +10,17 @@ import { Skeleton } from '@app/components/ui/skeleton'
 namespace ItemTopCardSkeleton {
   export interface Props {
     position?: number
-    genres?: boolean
-    artists?: boolean
-    progress?: boolean
+    withGenres?: boolean
+    withArtists?: boolean
+    withProgress?: boolean
   }
 }
 
 function ItemTopCardSkeleton({
   position,
-  genres,
-  artists,
-  progress,
+  withGenres,
+  withArtists,
+  withProgress,
 }: ItemTopCardSkeleton.Props) {
   const stars = [1, 2, 3, 2, 1]
 
@@ -40,13 +40,13 @@ function ItemTopCardSkeleton({
         <div className="flex flex-col items-center gap-1">
           <Skeleton className="w-[7rem] h-[32px]" />
 
-          {artists && <Skeleton className="w-[6rem] h-[28px]" />}
+          {withArtists && <Skeleton className="w-[6rem] h-[28px]" />}
         </div>
 
         <div className="flex flex-col justify-center items-center gap-4">
           <span className="text-center text-5xl">{position}</span>
 
-          {genres && (
+          {withGenres && (
             <div className="flex flex-row gap-2 flex-wrap justify-center h-full">
               {Array.from({ length: 3 }).map((_, index) => (
                 <Skeleton
@@ -58,7 +58,9 @@ function ItemTopCardSkeleton({
           )}
 
           <div className="flex flex-row gap-1 mt-4">
-            {!progress &&
+            {withProgress ? (
+              <Skeleton className="w-[20rem] h-7 rounded-full" />
+            ) : (
               stars.map((size, index) => (
                 <FaStar
                   key={index}
@@ -74,9 +76,8 @@ function ItemTopCardSkeleton({
                     marginTop: `-${size * 4}px`,
                   }}
                 />
-              ))}
-
-            {progress && <Skeleton className="w-[20rem] h-7 rounded-full" />}
+              ))
+            )}
           </div>
         </div>
       </header>

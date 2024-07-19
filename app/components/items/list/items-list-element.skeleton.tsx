@@ -6,8 +6,8 @@ import { cn } from '@app/utils/cn'
 
 namespace ItemsListElementSkeleton {
   export interface Props {
-    artists?: boolean
-    playedAt?: boolean
+    withArtists?: boolean
+    withPlayedAt?: boolean
     position?: number
     positionSize?: ItemPosition.Props['size']
     positionClassName?: string
@@ -20,8 +20,8 @@ function ItemsListElementSkeleton({
   positionSize,
   positionClassName,
   withoutPosition,
-  artists,
-  playedAt,
+  withArtists,
+  withPlayedAt,
 }: ItemsListElementSkeleton.Props) {
   return (
     <div
@@ -45,10 +45,12 @@ function ItemsListElementSkeleton({
           <Skeleton className="w-[16rem] h-[1.5rem]" />
 
           <div className="flex justify-between w-full items-center">
-            <div>{artists && <Skeleton className="w-[6rem] h-[1rem]" />}</div>
+            <div>
+              {withArtists && <Skeleton className="w-[6rem] h-[1rem]" />}
+            </div>
 
             <div className="flex flex-row gap-3 items-center">
-              {playedAt && <Skeleton className="w-[4rem] h-[1rem]" />}
+              {withPlayedAt && <Skeleton className="w-[4rem] h-[1rem]" />}
 
               <SpotifyLink isDisabled />
             </div>

@@ -124,13 +124,13 @@ export const SkeletonWithTop: ItemsListStory = {
 }
 
 export const SkeletonWithArtists: ItemsListStory = {
-  render: () => <ItemsListSkeleton artists />,
+  render: () => <ItemsListSkeleton withArtists />,
 }
 
 export const SkeletonWithPlayedAtWithoutPosition: ItemsListStory = {
-  render: () => <ItemsListSkeleton withoutPosition playedAt />,
+  render: () => <ItemsListSkeleton withoutPosition withPlayedAt />,
 }
 
 export const SkeletonWithGenres: ItemsListStory = {
-  render: () => <ItemsListSkeleton genres view={View.CARD} />,
+  render: () => <ItemsListSkeleton withGenres view={View.CARD} />,
 }

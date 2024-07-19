@@ -11,18 +11,18 @@ namespace ItemsListSkeleton {
   export interface Props {
     view?: View
     withoutPosition?: boolean
-    artists?: boolean
-    playedAt?: boolean
-    genres?: boolean
+    withArtists?: boolean
+    withPlayedAt?: boolean
+    withGenres?: boolean
   }
 }
 
 function ItemsListSkeleton({
   view = View.LIST,
   withoutPosition,
-  playedAt,
-  artists,
-  genres,
+  withPlayedAt,
+  withArtists,
+  withGenres,
 }: ItemsListSkeleton.Props) {
   return (
     <div className="flex flex-col gap-8">
@@ -33,18 +33,18 @@ function ItemsListSkeleton({
               {[2, 1].map((position, index) => (
                 <ItemTopCardSkeleton
                   key={index}
-                  position={position}
-                  artists={artists}
-                  genres={genres}
+                  withPosition={position}
+                  withArtists={withArtists}
+                  withGenres={withGenres}
                 />
               ))}
             </div>
 
             <div className="md:w-1/3 h-full">
               <ItemTopCardSkeleton
-                position={3}
-                artists={artists}
-                genres={genres}
+                withPosition={3}
+                withArtists={withArtists}
+                withGenres={withGenres}
               />
             </div>
           </div>
@@ -55,9 +55,9 @@ function ItemsListSkeleton({
                 <div key={index}>
                   <ItemsListElementSkeleton
                     position={index + 4}
-                    artists={artists}
+                    withArtists={withArtists}
                     withoutPosition={withoutPosition}
-                    playedAt={playedAt}
+                    withPlayedAt={withPlayedAt}
                   />
 
                   {index !== 10 - 4 && <Separator />}
@@ -75,9 +75,9 @@ function ItemsListSkeleton({
               <div key={index}>
                 <ItemsListElementSkeleton
                   position={index + 1}
-                  artists={artists}
+                  withArtists={withArtists}
                   withoutPosition={withoutPosition}
-                  playedAt={playedAt}
+                  withPlayedAt={withPlayedAt}
                 />
 
                 {index !== 10 - 1 && <Separator />}
