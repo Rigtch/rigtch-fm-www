@@ -31,14 +31,14 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
             class="flex flex-col items-center"
           >
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+              class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
               href="/artist/undefined"
             >
-              <span
-                class="truncate max-w-[200px] text-2xl"
+              <p
+                class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Album 1
-              </span>
+              </p>
             </a>
           </div>
           <div
@@ -155,14 +155,14 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
           class="flex flex-col items-center"
         >
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/artist/undefined"
           >
-            <span
-              class="truncate max-w-[200px] text-2xl"
+            <p
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Album 1
-            </span>
+            </p>
           </a>
         </div>
         <div
@@ -336,14 +336,14 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
             class="flex flex-col items-center"
           >
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+              class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
               href="/artist/123"
             >
-              <span
-                class="truncate max-w-[200px] text-2xl"
+              <p
+                class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Darkthrone
-              </span>
+              </p>
             </a>
           </div>
           <div
@@ -479,14 +479,14 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
           class="flex flex-col items-center"
         >
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/artist/123"
           >
-            <span
-              class="truncate max-w-[200px] text-2xl"
+            <p
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Darkthrone
-            </span>
+            </p>
           </a>
         </div>
         <div
@@ -679,14 +679,14 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
             class="flex flex-col items-center"
           >
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+              class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
               href="/track/123"
             >
-              <span
-                class="truncate max-w-[200px] text-2xl"
+              <p
+                class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
-              </span>
+              </p>
             </a>
             <span>
               <a
@@ -816,14 +816,14 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
           class="flex flex-col items-center"
         >
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/track/123"
           >
-            <span
-              class="truncate max-w-[200px] text-2xl"
+            <p
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
-            </span>
+            </p>
           </a>
           <span>
             <a
@@ -1010,14 +1010,14 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
             class="flex flex-col items-center"
           >
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+              class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
               href="/track/123"
             >
-              <span
-                class="truncate max-w-[200px] text-2xl"
+              <p
+                class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
-              </span>
+              </p>
             </a>
             <span>
               <a
@@ -1147,14 +1147,14 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
           class="flex flex-col items-center"
         >
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/track/123"
           >
-            <span
-              class="truncate max-w-[200px] text-2xl"
+            <p
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
-            </span>
+            </p>
           </a>
           <span>
             <a
@@ -1341,14 +1341,14 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
             class="flex flex-col items-center"
           >
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+              class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
               href="/track/123"
             >
-              <span
-                class="truncate max-w-[200px] text-2xl"
+              <p
+                class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
-              </span>
+              </p>
             </a>
             <span>
               <a
@@ -1473,14 +1473,14 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
           class="flex flex-col items-center"
         >
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/track/123"
           >
-            <span
-              class="truncate max-w-[200px] text-2xl"
+            <p
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
-            </span>
+            </p>
           </a>
           <span>
             <a
@@ -1662,14 +1662,14 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
             class="flex flex-col items-center"
           >
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+              class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
               href="/track/123"
             >
-              <span
-                class="truncate max-w-[200px] text-2xl"
+              <p
+                class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
-              </span>
+              </p>
             </a>
             <span>
               <a
@@ -1743,14 +1743,14 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
           class="flex flex-col items-center"
         >
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/track/123"
           >
-            <span
-              class="truncate max-w-[200px] text-2xl"
+            <p
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
-            </span>
+            </p>
           </a>
           <span>
             <a
@@ -1881,14 +1881,14 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
             class="flex flex-col items-center"
           >
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+              class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
               href="/track/123"
             >
-              <span
-                class="truncate max-w-[200px] text-2xl"
+              <p
+                class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
-              </span>
+              </p>
             </a>
             <span>
               <a
@@ -1962,14 +1962,14 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
           class="flex flex-col items-center"
         >
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/track/123"
           >
-            <span
-              class="truncate max-w-[200px] text-2xl"
+            <p
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
-            </span>
+            </p>
           </a>
           <span>
             <a

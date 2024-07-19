@@ -6,27 +6,27 @@ exports[`ItemName > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <a
-        class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+        class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
         href=""
       >
-        <span
-          class="truncate max-w-[200px]"
+        <p
+          class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
         >
           A Dark Forgotten Past
-        </span>
+        </p>
       </a>
     </div>
   </body>,
   "container": <div>
     <a
-      class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+      class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
       href=""
     >
-      <span
-        class="truncate max-w-[200px]"
+      <p
+        class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
       >
         A Dark Forgotten Past
-      </span>
+      </p>
     </a>
   </div>,
   "debug": [Function],
@@ -89,27 +89,27 @@ exports[`ItemName > should match snapshot with long name 1`] = `
   "baseElement": <body>
     <div>
       <a
-        class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+        class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
         href=""
       >
-        <span
-          class="truncate max-w-[200px]"
+        <p
+          class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
         >
           Dark Medieval Times (Remastered 2021)
-        </span>
+        </p>
       </a>
     </div>
   </body>,
   "container": <div>
     <a
-      class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg justify-start"
+      class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
       href=""
     >
-      <span
-        class="truncate max-w-[200px]"
+      <p
+        class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
       >
         Dark Medieval Times (Remastered 2021)
-      </span>
+      </p>
     </a>
   </div>,
   "debug": [Function],
