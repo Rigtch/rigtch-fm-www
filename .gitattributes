@@ -1,1 +1,1 @@
-tests/snapshots/**/*.snap linguist-vendored=true
+tests/snapshots/**/*.snap linguist-generated
