@@ -38,9 +38,9 @@ function ItemTopCardSkeleton({
         </div>
 
         <div className="flex flex-col items-center gap-1">
-          <Skeleton className="w-[7rem] h-[32px]" />
+          <Skeleton className="w-[12rem] h-[30px]" />
 
-          {withArtists && <Skeleton className="w-[6rem] h-[28px]" />}
+          {withArtists && <Skeleton className="w-[6rem] h-[25px]" />}
         </div>
 
         <div className="flex flex-col justify-center items-center gap-4">
@@ -48,12 +48,9 @@ function ItemTopCardSkeleton({
 
           {withGenres && (
             <div className="flex flex-row gap-2 flex-wrap justify-center h-full">
-              {Array.from({ length: 3 }).map((_, index) => (
-                <Skeleton
-                  key={index}
-                  className="w-[6rem] h-[1rem] rounded-pill"
-                />
-              ))}
+              <Skeleton className="w-[4rem] h-[1rem] rounded-pill" />
+              <Skeleton className="w-[6rem] h-[1rem] rounded-pill" />
+              <Skeleton className="w-[5rem] h-[1rem] rounded-pill" />
             </div>
           )}
 
