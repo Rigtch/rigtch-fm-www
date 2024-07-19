@@ -2,13 +2,25 @@
 
 import { useSearchParams } from 'next/navigation'
 
-import { VIEW } from '@app/profile/constants'
-import { TopTracksSectionSkeleton } from '@app/profile/sections'
-import { validateView } from '@app/profile/utils/validators'
+import { STATS_PROVIDER, VIEW } from '@app/profile/constants'
+import { StatsProvider } from '@app/profile/enums'
+import { ItemsSectionSkeleton } from '@app/profile/sections'
+import {
+  validateStatsProvider,
+  validateView,
+} from '@app/profile/utils/validators'
 export default function ProfileTopTracksSubLoading() {
   const searchParams = useSearchParams()
 
   const view = validateView(searchParams.get(VIEW))
+  const statsProvider = validateStatsProvider(searchParams.get(STATS_PROVIDER))
 
-  return <TopTracksSectionSkeleton view={view} />
+  return (
+    <ItemsSectionSkeleton
+      title={'Top Tracks'}
+      view={view}
+      withGenres
+      withProgress={statsProvider === StatsProvider.RIGTCH}
+    />
+  )
 }

@@ -1,16 +1,5 @@
-import { ItemsListSkeleton } from '@app/components/items/list'
-import { DefaultSection } from '@app/sections'
-import { View } from '@app/profile/enums'
+import { ItemsSectionSkeleton } from '@app/profile/sections'
 
 export default function ProfileHistorySubLoading() {
-  return (
-    <DefaultSection title={'History'}>
-      <ItemsListSkeleton
-        withPlayedAt
-        withoutPosition
-        withArtists
-        view={View.LIST}
-      />
-    </DefaultSection>
-  )
+  return <ItemsSectionSkeleton title={'History'} withPlayedAt />
 }
