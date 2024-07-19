@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ItemsSection } from './items-section'
-import { TopTracksSectionSkeleton } from './top-tracks-section.skeleton'
-import { TopArtistsSectionSkeleton } from './top-artists-section.skeleton'
-import { TopAlbumsSectionSkeleton } from './top-albums-section.skeleton'
+import { ItemsSectionSkeleton } from './items-section.skeleton'
 
 import { View } from '@app/profile/enums'
 import { trackExamples } from '@app/components/items/examples'
@@ -53,26 +51,58 @@ export const NoData: ItemsSectionStory = {
   },
 }
 
-export const TopTracksSkeletonCardView: ItemsSectionStory = {
-  render: () => <TopTracksSectionSkeleton />,
+export const Skeleton: ItemsSectionStory = {
+  render: () => <ItemsSectionSkeleton title="Top Items" />,
 }
 
-export const TopTracksSkeletonListView: ItemsSectionStory = {
-  render: () => <TopTracksSectionSkeleton view={View.LIST} />,
+export const SkeletonWithArtists: ItemsSectionStory = {
+  render: () => <ItemsSectionSkeleton title="Top Items" withArtists />,
 }
 
-export const TopArtistsSkeletonCardView: ItemsSectionStory = {
-  render: () => <TopArtistsSectionSkeleton />,
+export const SkeletonWithPlayedAt: ItemsSectionStory = {
+  render: () => <ItemsSectionSkeleton title="Top Items" withPlayedAt />,
 }
 
-export const TopArtistsSkeletonListView: ItemsSectionStory = {
-  render: () => <TopArtistsSectionSkeleton view={View.LIST} />,
+export const SkeletonWithArtistsAndPlayedAt: ItemsSectionStory = {
+  render: () => (
+    <ItemsSectionSkeleton title="Top Items" withArtists withPlayedAt />
+  ),
 }
 
-export const TopAlbumsSkeletonCardView: ItemsSectionStory = {
-  render: () => <TopAlbumsSectionSkeleton />,
+export const SkeletonWithCardView: ItemsSectionStory = {
+  render: () => <ItemsSectionSkeleton title="Top Items" view={View.CARD} />,
 }
 
-export const TopAlbumsSkeletonListView: ItemsSectionStory = {
-  render: () => <TopAlbumsSectionSkeleton view={View.LIST} />,
+export const SkeletonWithCardViewAndArtists: ItemsSectionStory = {
+  render: () => (
+    <ItemsSectionSkeleton title="Top Items" view={View.CARD} withArtists />
+  ),
+}
+
+export const SkeletonWithCardViewArtistsAndProgress: ItemsSectionStory = {
+  render: () => (
+    <ItemsSectionSkeleton
+      title="Top Items"
+      view={View.CARD}
+      withArtists
+      withProgress
+    />
+  ),
+}
+
+export const SkeletonWithCardViewAndGenres: ItemsSectionStory = {
+  render: () => (
+    <ItemsSectionSkeleton title="Top Items" view={View.CARD} withGenres />
+  ),
+}
+
+export const SkeletonWithCardViewGenresAndProgress: ItemsSectionStory = {
+  render: () => (
+    <ItemsSectionSkeleton
+      title="Top Items"
+      view={View.CARD}
+      withGenres
+      withProgress
+    />
+  ),
 }

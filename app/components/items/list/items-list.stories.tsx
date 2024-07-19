@@ -128,7 +128,7 @@ export const SkeletonWithArtists: ItemsListStory = {
 }
 
 export const SkeletonWithPlayedAtWithoutPosition: ItemsListStory = {
-  render: () => <ItemsListSkeleton withoutPosition withPlayedAt />,
+  render: () => <ItemsListSkeleton withPlayedAt />,
 }
 
 export const SkeletonWithGenres: ItemsListStory = {
