@@ -94,6 +94,7 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -210,6 +211,7 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
                 data-state="closed"
               >
                 <a
+                  class="cursor-pointer"
                   href="https://spotify.com"
                   target="_blank"
                 >
@@ -383,6 +385,7 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -499,6 +502,7 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
                 data-state="closed"
               >
                 <a
+                  class="cursor-pointer"
                   href="https://spotify.com"
                   target="_blank"
                 >
@@ -670,6 +674,7 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -784,6 +789,7 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
                 data-state="closed"
               >
                 <a
+                  class="cursor-pointer"
                   href="https://spotify.com"
                   target="_blank"
                 >
@@ -956,6 +962,7 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -1071,6 +1078,7 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
                 data-state="closed"
               >
                 <a
+                  class="cursor-pointer"
                   href="https://spotify.com"
                   target="_blank"
                 >
@@ -1242,6 +1250,7 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
                   data-state="closed"
                 >
                   <a
+                    class="cursor-pointer"
                     href="https://spotify.com"
                     target="_blank"
                   >
@@ -1356,6 +1365,7 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
                 data-state="closed"
               >
                 <a
+                  class="cursor-pointer"
                   href="https://spotify.com"
                   target="_blank"
                 >
