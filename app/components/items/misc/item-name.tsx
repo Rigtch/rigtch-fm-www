@@ -4,13 +4,12 @@ import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
 import type { AlbumEntity } from '@app/api/types'
 
-export interface ItemNameProps
-  extends Pick<AlbumEntity, 'name'>,
-    Pick<LinkButton.Props, 'className'> {
-  href: string
+namespace ItemName {
+  export type Props = Pick<AlbumEntity, 'name' | 'href'> &
+    Pick<LinkButton.Props, 'className'>
 }
 
-export function ItemName({ name, href, className }: ItemNameProps) {
+function ItemName({ name, href, className }: ItemName.Props) {
   return (
     <LinkButton href={href} className="flex justify-start">
       <p
@@ -24,3 +23,5 @@ export function ItemName({ name, href, className }: ItemNameProps) {
     </LinkButton>
   )
 }
+
+export { ItemName }
