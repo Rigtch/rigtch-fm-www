@@ -11,6 +11,7 @@ namespace ItemsListElementSkeleton {
     position?: number
     positionSize?: ItemPosition.Props['size']
     positionClassName?: string
+    withPlaysOrPlayTime?: boolean
   }
 }
 
@@ -20,12 +21,13 @@ function ItemsListElementSkeleton({
   positionClassName,
   withArtists,
   withPlayedAt,
+  withPlaysOrPlayTime,
 }: ItemsListElementSkeleton.Props) {
   return (
     <div
       className={cn(
         'flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]',
-        withPlayedAt && 'md:px-4'
+        withPlayedAt && 'md:pl-4'
       )}
     >
       <header className="flex flex-row items-center gap-4 w-full">
@@ -40,15 +42,19 @@ function ItemsListElementSkeleton({
         <ItemImageSkeleton className="min-w-[48px] h-[48px]" />
 
         <div className="flex flex-col w-full gap-2 overflow-hidden">
-          <Skeleton className="w-[16rem] h-[1.5rem]" />
+          <Skeleton className="w-[12rem] h-[1.5rem] mt-[5px]" />
 
           <div className="flex justify-between w-full items-center">
             <div>
-              {withArtists && <Skeleton className="w-[6rem] h-[1rem]" />}
+              {withArtists && <Skeleton className="w-[5rem] h-[1rem]" />}
             </div>
 
             <div className="flex flex-row gap-3 items-center">
-              {withPlayedAt && <Skeleton className="w-[4rem] h-[1rem]" />}
+              {withPlaysOrPlayTime && (
+                <Skeleton className="w-[4rem] h-[1rem]" />
+              )}
+
+              {withPlayedAt && <Skeleton className="w-[6rem] h-[1rem]" />}
 
               <SpotifyLink isDisabled />
             </div>
