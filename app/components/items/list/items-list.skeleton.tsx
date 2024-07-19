@@ -76,6 +76,7 @@ function ItemsListSkeleton({
                   position={index + 1}
                   withArtists={withArtists}
                   withPlayedAt={withPlayedAt}
+                  withPlaysOrPlayTime={withProgress}
                 />
 
                 {index !== 10 - 1 && <Separator />}
