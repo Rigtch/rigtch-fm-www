@@ -11,7 +11,6 @@ namespace ItemsListElementSkeleton {
     position?: number
     positionSize?: ItemPosition.Props['size']
     positionClassName?: string
-    withoutPosition?: boolean
   }
 }
 
@@ -19,7 +18,6 @@ function ItemsListElementSkeleton({
   position,
   positionSize,
   positionClassName,
-  withoutPosition,
   withArtists,
   withPlayedAt,
 }: ItemsListElementSkeleton.Props) {
@@ -27,11 +25,11 @@ function ItemsListElementSkeleton({
     <div
       className={cn(
         'flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]',
-        withoutPosition && 'md:px-4'
+        withPlayedAt && 'md:px-4'
       )}
     >
       <header className="flex flex-row items-center gap-4 w-full">
-        {!withoutPosition && position && (
+        {!withPlayedAt && position && (
           <ItemPosition
             position={position}
             size={positionSize}

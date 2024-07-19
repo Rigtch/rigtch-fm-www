@@ -8,21 +8,19 @@ import { Separator } from '@app/components/ui/separator'
 import { View } from '@app/profile/enums'
 
 namespace ItemsListSkeleton {
-  export interface Props {
+  export interface Props
+    extends Omit<ItemTopCardSkeleton.Props, 'position'>,
+      Pick<ItemsListElementSkeleton.Props, 'withPlayedAt'> {
     view?: View
-    withoutPosition?: boolean
-    withArtists?: boolean
-    withPlayedAt?: boolean
-    withGenres?: boolean
   }
 }
 
 function ItemsListSkeleton({
   view = View.LIST,
-  withoutPosition,
   withPlayedAt,
   withArtists,
   withGenres,
+  withProgress,
 }: ItemsListSkeleton.Props) {
   return (
     <div className="flex flex-col gap-8">
@@ -33,18 +31,20 @@ function ItemsListSkeleton({
               {[2, 1].map((position, index) => (
                 <ItemTopCardSkeleton
                   key={index}
-                  withPosition={position}
+                  position={position}
                   withArtists={withArtists}
                   withGenres={withGenres}
+                  withProgress={withProgress}
                 />
               ))}
             </div>
 
             <div className="md:w-1/3 h-full">
               <ItemTopCardSkeleton
-                withPosition={3}
+                position={3}
                 withArtists={withArtists}
                 withGenres={withGenres}
+                withProgress={withProgress}
               />
             </div>
           </div>
@@ -56,7 +56,6 @@ function ItemsListSkeleton({
                   <ItemsListElementSkeleton
                     position={index + 4}
                     withArtists={withArtists}
-                    withoutPosition={withoutPosition}
                     withPlayedAt={withPlayedAt}
                   />
 
@@ -76,7 +75,6 @@ function ItemsListSkeleton({
                 <ItemsListElementSkeleton
                   position={index + 1}
                   withArtists={withArtists}
-                  withoutPosition={withoutPosition}
                   withPlayedAt={withPlayedAt}
                 />
 
