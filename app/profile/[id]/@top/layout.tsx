@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 import type { ReactNode } from 'react'
 
-import { ToggleStatsProvider } from '@app/profile/components/common'
+import { StatsOptions } from '@app/profile/components/common'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
@@ -12,17 +12,11 @@ import {
 } from '@app/profile/constants'
 import type { ProfileLayoutBaseProps } from '@app/profile/types'
 import {
-  SelectStatsMeasurement,
-  SelectTimeRange,
-  SelectView,
-} from '@app/profile/components/common/selects'
-import {
   validateStatsMeasurement,
   validateStatsProvider,
   validateTimeRange,
   validateView,
 } from '@app/profile/utils/validators'
-import { StatsProvider } from '@app/profile/enums'
 
 namespace ProfileTopGenresSubLayout {
   export interface Props extends ProfileLayoutBaseProps {
@@ -52,19 +46,12 @@ function ProfileTopGenresSubLayout({
 
   return (
     <>
-      <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
-        <ToggleStatsProvider initialValue={statsProvider} />
-
-        <div className="flex gap-2">
-          {statsProvider === StatsProvider.RIGTCH && (
-            <SelectStatsMeasurement initialValue={statsMeasurement} />
-          )}
-
-          <SelectTimeRange initialValue={timeRange} />
-
-          <SelectView initialValue={view} />
-        </div>
-      </div>
+      <StatsOptions
+        statsProvider={statsProvider}
+        statsMeasurement={statsMeasurement}
+        view={view}
+        timeRange={timeRange}
+      />
 
       {genres}
       {artists}
