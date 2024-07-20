@@ -14,6 +14,7 @@ import {
 } from '@app/components/ui/select'
 import { View } from '@app/profile/enums'
 import { formatSearchParams } from '@app/utils/formatters'
+import { TooltipInfo } from '@app/components/common'
 
 export function SelectView({ initialValue }: ProfileSelectProps<View>) {
   const viewOptions = [
@@ -43,21 +44,27 @@ export function SelectView({ initialValue }: ProfileSelectProps<View>) {
   }
 
   return (
-    <Select value={initialValue} onValueChange={handleOnValueChange}>
-      <SelectTrigger className="min-w-[120px] text-white">
-        <SelectValue placeholder="Select view" />
-      </SelectTrigger>
+    <div className="flex flex-col gap-2">
+      <TooltipInfo title="View">
+        View indicates how the statistics will be displayed.
+      </TooltipInfo>
 
-      <SelectContent>
-        {viewOptions.map(({ icon, value, label }) => (
-          <SelectItem key={value} value={value} className="flex gap-2">
-            <div className="flex gap-2 items-center">
-              {icon}
-              {label}
-            </div>
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
+      <Select value={initialValue} onValueChange={handleOnValueChange}>
+        <SelectTrigger className="min-w-[120px] text-white">
+          <SelectValue placeholder="Select view" />
+        </SelectTrigger>
+
+        <SelectContent>
+          {viewOptions.map(({ icon, value, label }) => (
+            <SelectItem key={value} value={value} className="flex gap-2">
+              <div className="flex gap-2 items-center">
+                {icon}
+                {label}
+              </div>
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
   )
 }

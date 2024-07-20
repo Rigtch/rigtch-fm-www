@@ -6,7 +6,117 @@ exports[`ToggleStatsProvider > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex items-center justify-center gap-1 text-white"
+        class="flex flex-col gap-2"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          <p>
+            Stats provider
+          </p>
+          <button
+            data-state="closed"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <path
+                d="M12 16v-4"
+              />
+              <path
+                d="M12 8h.01"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex items-center gap-1 text-white justify-start"
+          dir="ltr"
+          role="group"
+          style="outline: none;"
+          tabindex="0"
+        >
+          <a
+            aria-checked="true"
+            class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3"
+            data-radix-collection-item=""
+            data-state="on"
+            href="/profile/id?stats-provider=spotify"
+            role="radio"
+            tabindex="-1"
+            type="button"
+          >
+            Spotify
+          </a>
+          <a
+            aria-checked="false"
+            class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3"
+            data-radix-collection-item=""
+            data-state="off"
+            href="/profile/id?stats-provider=rigtch"
+            role="radio"
+            tabindex="-1"
+            type="button"
+          >
+            rigtch.fm
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex flex-col gap-2"
+    >
+      <div
+        class="flex items-center gap-2"
+      >
+        <p>
+          Stats provider
+        </p>
+        <button
+          data-state="closed"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <path
+              d="M12 16v-4"
+            />
+            <path
+              d="M12 8h.01"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="flex items-center gap-1 text-white justify-start"
         dir="ltr"
         role="group"
         style="outline: none;"
@@ -37,40 +147,6 @@ exports[`ToggleStatsProvider > should match snapshot 1`] = `
           rigtch.fm
         </a>
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="flex items-center justify-center gap-1 text-white"
-      dir="ltr"
-      role="group"
-      style="outline: none;"
-      tabindex="0"
-    >
-      <a
-        aria-checked="true"
-        class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3"
-        data-radix-collection-item=""
-        data-state="on"
-        href="/profile/id?stats-provider=spotify"
-        role="radio"
-        tabindex="-1"
-        type="button"
-      >
-        Spotify
-      </a>
-      <a
-        aria-checked="false"
-        class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3"
-        data-radix-collection-item=""
-        data-state="off"
-        href="/profile/id?stats-provider=rigtch"
-        role="radio"
-        tabindex="-1"
-        type="button"
-      >
-        rigtch.fm
-      </a>
     </div>
   </div>,
   "debug": [Function],
