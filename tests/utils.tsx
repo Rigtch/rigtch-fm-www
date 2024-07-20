@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactElement } from 'react'
+import type { ReactElement } from 'react'
 
 export const queryClientWrapper = ({
   children,

@@ -4,7 +4,7 @@ import { imagesMock } from './images'
 
 import { genresMock, hrefMock, idMock } from '.'
 
-import { Artist, ArtistEntity } from '@app/api/types'
+import type { Artist, ArtistEntity } from '@app/api/types'
 
 export const artistNameMock = 'Darkthrone'
 
