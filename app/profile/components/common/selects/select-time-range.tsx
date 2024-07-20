@@ -19,6 +19,7 @@ import {
 } from '@app/profile/enums'
 import { formatSearchParams } from '@app/utils/formatters'
 import { TIME_RANGE } from '@app/profile/constants'
+import { TooltipInfo } from '@app/components/common'
 
 namespace SelectTimeRange {
   export type Props<TStatsProvider extends StatsProvider> = ProfileSelectProps<
@@ -72,22 +73,28 @@ function SelectTimeRange<TStatsProvider extends StatsProvider>({
   }
 
   return (
-    <Select value={initialValue} onValueChange={handleOnValueChange}>
-      <SelectTrigger className="min-w-[120px] text-white">
-        <SelectValue placeholder="Select time range" />
-      </SelectTrigger>
+    <div className="flex flex-col gap-2">
+      <TooltipInfo title="Time range">
+        The time range in which the statistics will be calculated.
+      </TooltipInfo>
 
-      <SelectContent>
-        {timeRangeOptions.map(({ value, label }) => (
-          <SelectItem key={value} value={value} className="flex gap-2">
-            <div className="flex gap-2 items-center">
-              <LuClock />
-              {label}
-            </div>
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
+      <Select value={initialValue} onValueChange={handleOnValueChange}>
+        <SelectTrigger className="min-w-[120px] text-white">
+          <SelectValue placeholder="Select time range" />
+        </SelectTrigger>
+
+        <SelectContent>
+          {timeRangeOptions.map(({ value, label }) => (
+            <SelectItem key={value} value={value} className="flex gap-2">
+              <div className="flex gap-2 items-center">
+                <LuClock />
+                {label}
+              </div>
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
   )
 }
 
