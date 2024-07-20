@@ -1,6 +1,6 @@
 import { mockDeep } from 'vitest-mock-extended'
 
-import { Image } from '@app/api/types'
+import type { Image } from '@app/api/types'
 
 export const imagesMock = mockDeep<Image[]>([
   {

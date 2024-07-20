@@ -10,6 +10,7 @@ module.exports = {
     project: './tsconfig.json',
     sourceType: 'module',
     ecmaVersion: 'latest',
+    extraFileExtensions: ['.md', '.mdx'],
     ecmaFeatures: {
       jsx: true,
     },
@@ -93,6 +94,12 @@ module.exports = {
         '@typescript-eslint/require-await': 'off',
       },
     },
+    {
+      files: ['app/components/ui/**/*.tsx'],
+      rules: {
+        'react-refresh/only-export-components': 'off',
+      },
+    },
   ],
   ignorePatterns: [
     '**/node_modules/**',
@@ -172,6 +179,7 @@ module.exports = {
       'warn',
       {
         allowConstantExport: true,
+        allowExportNames: ['metadata'],
       },
     ],
   },

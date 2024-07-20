@@ -1,6 +1,6 @@
 import { mockDeep } from 'vitest-mock-extended'
 
-import { Analysis } from '@app/api/types'
+import type { Analysis } from '@app/api/types'
 
 export const analysisMock = mockDeep<Analysis>({
   danceability: 0.210_84,

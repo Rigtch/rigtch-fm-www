@@ -4,7 +4,7 @@ import { imagesMock } from './images'
 
 import { hrefMock } from '.'
 
-import { Profile } from '@app/api/types'
+import type { Profile } from '@app/api/types'
 
 export const displayNameMock = 'John Doe'
 export const followersMock = 100
