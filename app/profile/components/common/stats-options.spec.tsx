@@ -1,12 +1,12 @@
 import { render } from '@testing-library/react'
 import { SessionProvider } from 'next-auth/react'
 import type { Session } from 'next-auth'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import { StatsOptions } from './stats-options'
 
 import { RigtchTimeRange, StatsProvider, View } from '@app/profile/enums'
 import { StatsMeasurement } from '@app/api/enums'
+import { QueryClientWrapper } from '@tests/utils'
 
 vi.mock('next/navigation', () => ({
   useSearchParams: () => new URLSearchParams(),
@@ -23,24 +23,25 @@ vi.mock('next/navigation', () => ({
 describe('StatsOptions', () => {
   test('should match snapshot', () => {
     const view = render(
-      <QueryClientProvider client={new QueryClient()}>
-        <SessionProvider
-          session={
-            {
-              token: {
-                value: 'token',
-              },
-            } as Session
-          }
-        >
-          <StatsOptions
-            statsProvider={StatsProvider.RIGTCH}
-            statsMeasurement={StatsMeasurement.PLAYS}
-            view={View.CARD}
-            timeRange={RigtchTimeRange.WEEK}
-          />
-        </SessionProvider>
-      </QueryClientProvider>
+      <SessionProvider
+        session={
+          {
+            token: {
+              value: 'token',
+            },
+          } as Session
+        }
+      >
+        <StatsOptions
+          statsProvider={StatsProvider.RIGTCH}
+          statsMeasurement={StatsMeasurement.PLAYS}
+          view={View.CARD}
+          timeRange={RigtchTimeRange.WEEK}
+        />
+      </SessionProvider>,
+      {
+        wrapper: QueryClientWrapper,
+      }
     )
 
     expect(view).toMatchSnapshot()

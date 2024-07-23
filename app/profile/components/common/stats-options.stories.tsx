@@ -1,13 +1,13 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { SessionProvider } from 'next-auth/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import type { Session } from 'next-auth'
+import { SessionProvider } from 'next-auth/react'
 
 import { StatsOptions } from './stats-options'
 
 import { StatsMeasurement } from '@app/api/enums'
-import { StatsProvider, View, RigtchTimeRange } from '@app/profile/enums'
 import { ID } from '@app/constants'
+import { RigtchTimeRange, StatsProvider, View } from '@app/profile/enums'
+import { QueryClientWrapper } from '@tests/utils'
 
 type StatsOptionsType = typeof StatsOptions
 type StatsOptionsStory = StoryObj<StatsOptionsType>
@@ -26,9 +26,9 @@ export default {
           } as Session
         }
       >
-        <QueryClientProvider client={new QueryClient()}>
+        <QueryClientWrapper>
           <Story />
-        </QueryClientProvider>
+        </QueryClientWrapper>
       </SessionProvider>
     ),
   ],
