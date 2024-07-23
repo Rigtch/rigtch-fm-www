@@ -23,3 +23,11 @@ export const Rigtch: ToggleStatsProviderStory = {
     initialValue: StatsProvider.RIGTCH,
   },
 }
+
+export const Disabled: ToggleStatsProviderStory = {
+  args: {
+    initialValue: StatsProvider.SPOTIFY,
+    userCreatedAt: new Date(),
+    ignoreBetaUser: true,
+  },
+}

@@ -2,19 +2,19 @@
 
 import { usePathname, useSearchParams } from 'next/navigation'
 
+import { StatsOptions } from '@app/profile/components/common'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
 } from '@app/profile/constants'
-import { StatsOptions } from '@app/profile/components/common'
 import type { ProfileLayoutBaseProps } from '@app/profile/types'
 import {
-  validateStatsProvider,
-  validateView,
-  validateTimeRange,
   validateStatsMeasurement,
+  validateStatsProvider,
+  validateTimeRange,
+  validateView,
 } from '@app/profile/utils/validators'
 
 export default function ProfileTopLayout({ children }: ProfileLayoutBaseProps) {

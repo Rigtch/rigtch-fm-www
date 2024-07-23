@@ -46,38 +46,44 @@ exports[`StatsOptions > should match snapshot 1`] = `
                 </svg>
               </button>
             </div>
-            <div
-              class="flex items-center gap-1 text-white justify-start"
-              dir="ltr"
-              role="group"
-              style="outline: none;"
-              tabindex="0"
+            <button
+              data-state="closed"
             >
-              <a
-                aria-checked="false"
-                class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3"
-                data-radix-collection-item=""
-                data-state="off"
-                href="/profile/id?stats-provider=spotify"
-                role="radio"
-                tabindex="-1"
-                type="button"
+              <div
+                class="flex items-center gap-1 text-white justify-start"
+                dir="ltr"
+                role="group"
+                style="outline: none;"
+                tabindex="0"
               >
-                Spotify
-              </a>
-              <a
-                aria-checked="true"
-                class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3"
-                data-radix-collection-item=""
-                data-state="on"
-                href="/profile/id?stats-provider=rigtch"
-                role="radio"
-                tabindex="-1"
-                type="button"
-              >
-                rigtch.fm
-              </a>
-            </div>
+                <a
+                  aria-checked="false"
+                  aria-disabled="false"
+                  class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
+                  data-radix-collection-item=""
+                  data-state="off"
+                  href="/profile/id?stats-provider=spotify"
+                  role="radio"
+                  tabindex="-1"
+                  type="button"
+                >
+                  Spotify
+                </a>
+                <a
+                  aria-checked="true"
+                  aria-disabled="false"
+                  class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
+                  data-radix-collection-item=""
+                  data-state="on"
+                  href="/profile/id?stats-provider=rigtch"
+                  role="radio"
+                  tabindex="-1"
+                  type="button"
+                >
+                  rigtch.fm
+                </a>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -122,7 +128,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             </div>
             <button
               aria-autocomplete="none"
-              aria-controls="radix-:r4:"
+              aria-controls="radix-:r5:"
               aria-expanded="false"
               class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
               data-state="closed"
@@ -211,7 +217,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             </div>
             <button
               aria-autocomplete="none"
-              aria-controls="radix-:r6:"
+              aria-controls="radix-:r7:"
               aria-expanded="false"
               class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
               data-state="closed"
@@ -305,7 +311,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             </div>
             <button
               aria-autocomplete="none"
-              aria-controls="radix-:r8:"
+              aria-controls="radix-:r9:"
               aria-expanded="false"
               class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
               data-state="closed"
@@ -407,38 +413,44 @@ exports[`StatsOptions > should match snapshot 1`] = `
               </svg>
             </button>
           </div>
-          <div
-            class="flex items-center gap-1 text-white justify-start"
-            dir="ltr"
-            role="group"
-            style="outline: none;"
-            tabindex="0"
+          <button
+            data-state="closed"
           >
-            <a
-              aria-checked="false"
-              class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3"
-              data-radix-collection-item=""
-              data-state="off"
-              href="/profile/id?stats-provider=spotify"
-              role="radio"
-              tabindex="-1"
-              type="button"
+            <div
+              class="flex items-center gap-1 text-white justify-start"
+              dir="ltr"
+              role="group"
+              style="outline: none;"
+              tabindex="0"
             >
-              Spotify
-            </a>
-            <a
-              aria-checked="true"
-              class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3"
-              data-radix-collection-item=""
-              data-state="on"
-              href="/profile/id?stats-provider=rigtch"
-              role="radio"
-              tabindex="-1"
-              type="button"
-            >
-              rigtch.fm
-            </a>
-          </div>
+              <a
+                aria-checked="false"
+                aria-disabled="false"
+                class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
+                data-radix-collection-item=""
+                data-state="off"
+                href="/profile/id?stats-provider=spotify"
+                role="radio"
+                tabindex="-1"
+                type="button"
+              >
+                Spotify
+              </a>
+              <a
+                aria-checked="true"
+                aria-disabled="false"
+                class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
+                data-radix-collection-item=""
+                data-state="on"
+                href="/profile/id?stats-provider=rigtch"
+                role="radio"
+                tabindex="-1"
+                type="button"
+              >
+                rigtch.fm
+              </a>
+            </div>
+          </button>
         </div>
       </div>
       <div
@@ -483,7 +495,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
           </div>
           <button
             aria-autocomplete="none"
-            aria-controls="radix-:r4:"
+            aria-controls="radix-:r5:"
             aria-expanded="false"
             class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
             data-state="closed"
@@ -572,7 +584,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
           </div>
           <button
             aria-autocomplete="none"
-            aria-controls="radix-:r6:"
+            aria-controls="radix-:r7:"
             aria-expanded="false"
             class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
             data-state="closed"
@@ -666,7 +678,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
           </div>
           <button
             aria-autocomplete="none"
-            aria-controls="radix-:r8:"
+            aria-controls="radix-:r9:"
             aria-expanded="false"
             class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
             data-state="closed"

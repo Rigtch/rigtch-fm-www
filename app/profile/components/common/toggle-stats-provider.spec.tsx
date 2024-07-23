@@ -38,6 +38,34 @@ describe('ToggleStatsProvider', () => {
     expect(view).toMatchSnapshot()
   })
 
+  test('should match snapshot as disabled', () => {
+    const view = render(
+      <ToggleStatsProvider
+        initialValue={StatsProvider.SPOTIFY}
+        userCreatedAt={new Date()}
+      />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
+
+  test('should not navigate on click because component is disabled', () => {
+    render(
+      <ToggleStatsProvider
+        initialValue={StatsProvider.SPOTIFY}
+        userCreatedAt={new Date()}
+      />,
+      {
+        wrapper: MemoryRouterProvider,
+      }
+    )
+
+    expect(screen.getByText('rigtch.fm')).toHaveAttribute(
+      'aria-disabled',
+      'true'
+    )
+  })
+
   test('should navigate on click', async () => {
     render(<ToggleStatsProvider initialValue={StatsProvider.SPOTIFY} />, {
       wrapper: MemoryRouterProvider,
