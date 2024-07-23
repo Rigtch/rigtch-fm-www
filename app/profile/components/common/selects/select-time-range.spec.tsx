@@ -45,66 +45,89 @@ describe('SelectTimeRange', () => {
     expect(view).toMatchSnapshot()
   })
 
-  test('should change time range with spotify provider', async () => {
-    const pushSpy = vi.fn()
-    const searchParams = new URLSearchParams()
+  test('should match snapshot as disabled', () => {
+    const view = render(
+      <SelectTimeRange
+        initialValue={RigtchTimeRange.WEEK}
+        userCreatedAt={new Date()}
+      />
+    )
 
-    useSearchParamsSpy.mockReturnValue(searchParams)
-    useRouterSpy.mockReturnValue({
-      push: pushSpy,
-    })
-    usePathnameSpy.mockReturnValue('/profile/id')
-
-    render(<SelectTimeRange initialValue={SpotifyTimeRange.SHORT_TERM} />, {
-      wrapper: MemoryRouterProvider,
-    })
-
-    const selectButton = screen.getByRole('combobox')
-
-    expect(selectButton).toHaveTextContent('4 weeks')
-
-    await user.click(selectButton)
-    await user.click(screen.getByRole('option', { name: '6 months' }))
-
-    expect(pushSpy).toHaveBeenCalled()
-
-    await user.click(selectButton)
-    await user.click(screen.getByRole('option', { name: 'lifetime' }))
-
-    expect(pushSpy).toHaveBeenCalled()
+    expect(view).toMatchSnapshot()
   })
 
-  test('should change time range with rigtch provider', async () => {
+  describe('actions', () => {
     const pushSpy = vi.fn()
     const searchParams = new URLSearchParams()
 
-    useSearchParamsSpy.mockReturnValue(searchParams)
-    useRouterSpy.mockReturnValue({
-      push: pushSpy,
-    })
-    usePathnameSpy.mockReturnValue('/profile/id')
-
-    render(<SelectTimeRange initialValue={RigtchTimeRange.WEEK} />, {
-      wrapper: MemoryRouterProvider,
+    beforeEach(() => {
+      useSearchParamsSpy.mockReturnValue(searchParams)
+      useRouterSpy.mockReturnValue({
+        push: pushSpy,
+      })
+      usePathnameSpy.mockReturnValue('/profile/id')
     })
 
-    const selectButton = screen.getByRole('combobox')
+    test('should not change time range because component is disabled', () => {
+      render(
+        <SelectTimeRange
+          initialValue={RigtchTimeRange.WEEK}
+          userCreatedAt={new Date()}
+        />,
+        {
+          wrapper: MemoryRouterProvider,
+        }
+      )
 
-    expect(selectButton).toHaveTextContent('7 days')
+      const selectButton = screen.getByRole('combobox')
 
-    await user.click(selectButton)
-    await user.click(screen.getByRole('option', { name: '14 days' }))
+      expect(selectButton).toHaveTextContent('7 days')
+      expect(selectButton).toBeDisabled()
+    })
 
-    expect(pushSpy).toHaveBeenCalled()
+    test('should change time range with spotify provider', async () => {
+      render(<SelectTimeRange initialValue={SpotifyTimeRange.SHORT_TERM} />, {
+        wrapper: MemoryRouterProvider,
+      })
 
-    await user.click(selectButton)
-    await user.click(screen.getByRole('option', { name: '30 days' }))
+      const selectButton = screen.getByRole('combobox')
 
-    expect(pushSpy).toHaveBeenCalled()
+      expect(selectButton).toHaveTextContent('4 weeks')
 
-    await user.click(selectButton)
-    await user.click(screen.getByRole('option', { name: '90 days' }))
+      await user.click(selectButton)
+      await user.click(screen.getByRole('option', { name: '6 months' }))
 
-    expect(pushSpy).toHaveBeenCalled()
+      expect(pushSpy).toHaveBeenCalled()
+
+      await user.click(selectButton)
+      await user.click(screen.getByRole('option', { name: 'lifetime' }))
+
+      expect(pushSpy).toHaveBeenCalled()
+    })
+
+    test('should change time range with rigtch provider', async () => {
+      render(<SelectTimeRange initialValue={RigtchTimeRange.WEEK} />, {
+        wrapper: MemoryRouterProvider,
+      })
+
+      const selectButton = screen.getByRole('combobox')
+
+      expect(selectButton).toHaveTextContent('7 days')
+
+      await user.click(selectButton)
+      await user.click(screen.getByRole('option', { name: '14 days' }))
+
+      expect(pushSpy).toHaveBeenCalled()
+
+      await user.click(selectButton)
+      await user.click(screen.getByRole('option', { name: '30 days' }))
+
+      expect(pushSpy).toHaveBeenCalled()
+
+      await user.click(selectButton)
+      await user.click(screen.getByRole('option', { name: '90 days' }))
+
+      expect(pushSpy).toHaveBeenCalled()
+    })
   })
 })

@@ -18,6 +18,9 @@ export default {
       },
     },
   },
+  args: {
+    initialValue: RigtchTimeRange.WEEK,
+  },
 } satisfies Meta<SelectRigtchTimeRangeType>
 
 export const SpotifyProvider: SelectRigtchTimeRangeStory = {
@@ -26,8 +29,32 @@ export const SpotifyProvider: SelectRigtchTimeRangeStory = {
   },
 }
 
-export const RigtchProvider: SelectRigtchTimeRangeStory = {
+export const RigtchProvider: SelectRigtchTimeRangeStory = {}
+
+export const AllValuesDisabled: SelectRigtchTimeRangeStory = {
   args: {
-    initialValue: RigtchTimeRange.WEEK,
+    userCreatedAt: new Date(),
+    ignoreBetaUser: true,
+  },
+}
+
+export const ThreeMonthsValueDisabled: SelectRigtchTimeRangeStory = {
+  args: {
+    userCreatedAt: new Date(Date.now() - 89 * 24 * 60 * 60 * 1000),
+    ignoreBetaUser: true,
+  },
+}
+
+export const OneMonthValueDisabled: SelectRigtchTimeRangeStory = {
+  args: {
+    userCreatedAt: new Date(Date.now() - 29 * 24 * 60 * 60 * 1000),
+    ignoreBetaUser: true,
+  },
+}
+
+export const TwoWeeksValueDisabled: SelectRigtchTimeRangeStory = {
+  args: {
+    userCreatedAt: new Date(Date.now() - 13 * 24 * 60 * 60 * 1000),
+    ignoreBetaUser: true,
   },
 }
