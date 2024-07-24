@@ -96,12 +96,8 @@ export default async function ProfileAnalysisSubPage({
             <h2 className="text-xl font-bold">{title}</h2>
 
             <Progress
-              value={value}
-              className="h-4 "
-              style={{
-                backgroundImage:
-                  'linear-gradient(to top right, #9400d5, #1e89ee)',
-              }}
+              value={title === 'Tempo' ? (value / 240) * 100 : value}
+              className="w-full h-5 bg-primary *:bg-[linear-gradient(to_top_left,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12"
             />
 
             {title === 'Tempo' && (

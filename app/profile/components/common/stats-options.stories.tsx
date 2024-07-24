@@ -4,9 +4,9 @@ import { SessionProvider } from 'next-auth/react'
 
 import { StatsOptions } from './stats-options'
 
-import { StatsMeasurement } from '@app/api/enums'
 import { ID } from '@app/constants'
-import { RigtchTimeRange, StatsProvider, View } from '@app/profile/enums'
+import { STATS_PROVIDER } from '@app/profile/constants'
+import { StatsProvider } from '@app/profile/enums'
 import { QueryClientWrapper } from '@tests/utils'
 
 type StatsOptionsType = typeof StatsOptions
@@ -42,18 +42,25 @@ export default {
 } satisfies Meta<StatsOptionsType>
 
 export const Rigtch: StatsOptionsStory = {
-  args: {
-    statsProvider: StatsProvider.RIGTCH,
-    statsMeasurement: StatsMeasurement.PLAYS,
-    view: View.CARD,
-    timeRange: RigtchTimeRange.WEEK,
+  parameters: {
+    nextjs: {
+      navigation: {
+        query: {
+          [STATS_PROVIDER]: StatsProvider.RIGTCH,
+        },
+      },
+    },
   },
 }
 
 export const Spotify: StatsOptionsStory = {
-  args: {
-    statsProvider: StatsProvider.SPOTIFY,
-    view: View.CARD,
-    timeRange: RigtchTimeRange.WEEK,
+  parameters: {
+    nextjs: {
+      navigation: {
+        query: {
+          [STATS_PROVIDER]: StatsProvider.SPOTIFY,
+        },
+      },
+    },
   },
 }
