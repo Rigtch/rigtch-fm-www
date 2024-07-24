@@ -8,6 +8,8 @@ import { SeeMoreButton } from '@app/components/common/buttons'
 import { getServerToken } from '@app/auth/utils'
 import { View } from '@app/profile/enums'
 
+export const runtime = 'edge'
+
 export default async function ProfileHistorySubPage({
   params,
 }: ProfilePageProps) {

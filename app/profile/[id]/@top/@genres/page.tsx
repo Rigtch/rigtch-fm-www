@@ -1,5 +1,3 @@
-'use server'
-
 import { redirect } from 'next/navigation'
 
 import { getUser } from '@app/api/fetchers'
@@ -27,6 +25,8 @@ import {
   validateTimeRange,
 } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
+
+export const runtime = 'edge'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,

@@ -6,6 +6,8 @@ import { getHistory } from '@app/api/fetchers'
 import { HistorySection } from '@app/profile/sections'
 import { getServerToken } from '@app/auth/utils'
 
+export const runtime = 'edge'
+
 export default async function ProfileHistoryPage({ params }: ProfilePageProps) {
   const userId = validateId(params.id)
   const limit = 20

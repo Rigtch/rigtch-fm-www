@@ -1,5 +1,3 @@
-'use server'
-
 import { redirect } from 'next/navigation'
 
 import { validateId } from '@app/utils/validators'
@@ -8,6 +6,8 @@ import { Progress } from '@app/components/ui/progress'
 import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { getSpotifyAnalysis } from '@app/api/fetchers/stats/spotify'
+
+export const runtime = 'edge'
 
 interface AnalysisItem {
   title: string

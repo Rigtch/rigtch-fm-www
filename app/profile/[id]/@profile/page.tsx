@@ -7,6 +7,8 @@ import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { Playback } from '@app/profile/components/playback'
 
+export const runtime = 'edge'
+
 export default async function ProfileSubPage({ params }: ProfilePageProps) {
   const userId = validateId(params.id)
 

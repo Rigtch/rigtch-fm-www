@@ -22,6 +22,8 @@ import {
 } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
 
+export const runtime = 'edge'
+
 export default async function ProfileTopAlbumsSubPage({
   searchParams,
   params,
