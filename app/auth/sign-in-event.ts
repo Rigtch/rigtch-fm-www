@@ -1,7 +1,7 @@
 'use server'
 
-import { cookies } from 'next/headers'
 import type { Account, Profile, User } from 'next-auth'
+import { cookies } from 'next/headers'
 
 import { postMeUser } from '@app/api/fetchers'
 import { USER_ID } from '@app/constants'
@@ -14,6 +14,7 @@ export async function signInEvent(message: {
 }) {
   if (message.account?.refresh_token) {
     const user = await postMeUser(message.account.refresh_token)
+
     cookies().set(USER_ID, user.id)
   }
 }

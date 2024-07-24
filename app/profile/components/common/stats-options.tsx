@@ -25,7 +25,10 @@ export function StatsOptions() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  const statsProvider = validateStatsProvider(searchParams.get(STATS_PROVIDER))
+  const statsProvider = validateStatsProvider(
+    searchParams.get(STATS_PROVIDER),
+    user?.createdAt
+  )
   const statsMeasurement = validateStatsMeasurement(
     searchParams.get(STATS_MEASUREMENT)
   )

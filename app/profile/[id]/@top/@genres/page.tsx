@@ -2,45 +2,53 @@
 
 import { redirect } from 'next/navigation'
 
-import { validateId } from '@app/utils/validators'
-import type { ProfilePageProps } from '@app/profile/types'
+import { getUser } from '@app/api/fetchers'
+import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
+import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
+import type { RigtchStatsResponse } from '@app/api/types'
+import { getServerToken } from '@app/auth/utils'
+import { SeeMoreButton } from '@app/components/common/buttons'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
 } from '@app/profile/constants'
-import { SeeMoreButton } from '@app/components/common/buttons'
-import { getServerToken } from '@app/auth/utils'
-import { TopGenresSection } from '@app/profile/sections'
-import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
-import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
-import type { RigtchStatsResponse } from '@app/api/types'
-import {
-  validateStatsProvider,
-  validateStatsMeasurement,
-  validateTimeRange,
-} from '@app/profile/utils/validators'
-import { afterParamFactory } from '@app/profile/utils/factories'
 import {
   StatsProvider,
   type RigtchTimeRange,
   type SpotifyTimeRange,
 } from '@app/profile/enums'
+import { TopGenresSection } from '@app/profile/sections'
+import type { ProfilePageProps } from '@app/profile/types'
+import { afterParamFactory } from '@app/profile/utils/factories'
+import {
+  validateStatsMeasurement,
+  validateStatsProvider,
+  validateTimeRange,
+} from '@app/profile/utils/validators'
+import { validateId } from '@app/utils/validators'
 
 export default async function ProfileTopGenresSubPage({
   searchParams,
   params,
 }: ProfilePageProps) {
+  const token = await getServerToken()
   const userId = validateId(params.id)
-  const statsProvider = validateStatsProvider(searchParams[STATS_PROVIDER])
+
+  if (!token) redirect('/')
+
+  const { createdAt } = await getUser(token, {
+    userId,
+  })
+
+  const statsProvider = validateStatsProvider(
+    searchParams[STATS_PROVIDER],
+    createdAt
+  )
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )
   const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
-
-  const token = await getServerToken()
-
-  if (!token) redirect('/')
 
   let items: string[] | RigtchStatsResponse<string>
 

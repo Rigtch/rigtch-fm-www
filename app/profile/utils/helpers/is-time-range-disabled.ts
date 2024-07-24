@@ -8,7 +8,6 @@ export function isTimeRangeDisabled(
   ignoreBetaUser?: boolean
 ) {
   if (Object.values(SpotifyTimeRange).includes(value)) return false
-
   if (!userCreatedAt) return false
 
   const isBetaUser =

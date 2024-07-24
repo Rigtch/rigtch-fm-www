@@ -9,6 +9,7 @@ import {
   validateStatsProvider,
   validateView,
 } from '@app/profile/utils/validators'
+
 export default function ProfileTopTracksSubLoading() {
   const searchParams = useSearchParams()
 
