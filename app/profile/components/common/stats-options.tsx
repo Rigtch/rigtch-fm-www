@@ -1,35 +1,41 @@
 'use client'
 
+import { usePathname, useSearchParams } from 'next/navigation'
+
 import { SelectStatsMeasurement, SelectTimeRange, SelectView } from './selects'
 import { ToggleStatsProvider } from './toggle-stats-provider'
 
-import type { StatsMeasurement } from '@app/api/enums'
-import { StatsProvider } from '@app/profile/enums'
-import type {
-  RigtchTimeRange,
-  SpotifyTimeRange,
-  View,
-} from '@app/profile/enums'
 import { useUserQuery } from '@app/api/hooks'
+import {
+  STATS_MEASUREMENT,
+  STATS_PROVIDER,
+  TIME_RANGE,
+  VIEW,
+} from '@app/profile/constants'
+import { StatsProvider } from '@app/profile/enums'
+import {
+  validateStatsMeasurement,
+  validateStatsProvider,
+  validateTimeRange,
+  validateView,
+} from '@app/profile/utils/validators'
 
-namespace StatsOptions {
-  export interface Props {
-    statsProvider: StatsProvider
-    statsMeasurement: StatsMeasurement
-    view: View
-    timeRange: RigtchTimeRange | SpotifyTimeRange
-    route?: string
-  }
-}
-
-function StatsOptions({
-  statsProvider,
-  statsMeasurement,
-  view,
-  timeRange,
-  route,
-}: StatsOptions.Props) {
+export function StatsOptions() {
   const { data: user } = useUserQuery()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  const statsProvider = validateStatsProvider(searchParams.get(STATS_PROVIDER))
+  const statsMeasurement = validateStatsMeasurement(
+    searchParams.get(STATS_MEASUREMENT)
+  )
+  const view = validateView(searchParams.get(VIEW))
+  const timeRange = validateTimeRange(
+    searchParams.get(TIME_RANGE),
+    statsProvider
+  )
+
+  const route = pathname.split('/').at(-1)
 
   return (
     <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
@@ -57,5 +63,3 @@ function StatsOptions({
     </div>
   )
 }
-
-export { StatsOptions }
