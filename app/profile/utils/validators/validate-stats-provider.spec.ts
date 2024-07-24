@@ -10,7 +10,16 @@ describe('validateStatsProvider', () => {
     expect(validateStatsProvider(statsProvider)).toEqual(statsProvider)
   })
 
-  test('should return StatsProvider.SPOTIFY when statsProvider is not a StatsProvider', () => {
+  test('should return StatsProvider.SPOTIFY when statsProvider is not a StatsProvider and user created at is before BETA_USER_CREATED_AT', () => {
     expect(validateStatsProvider(invalid)).toEqual(StatsProvider.SPOTIFY)
+  })
+
+  test('should return StatsProvider.SPOTIFY when statsProvider is not a StatsProvider and user created at is after BETA_USER_CREATED_AT', () => {
+    expect(
+      validateStatsProvider(
+        invalid,
+        new Date(Date.now() + 1000 * 60 * 60 * 24 * 7)
+      )
+    ).toEqual(StatsProvider.SPOTIFY)
   })
 })

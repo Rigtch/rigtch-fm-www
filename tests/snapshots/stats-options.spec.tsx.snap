@@ -57,11 +57,11 @@ exports[`StatsOptions > should match snapshot 1`] = `
                 tabindex="0"
               >
                 <a
-                  aria-checked="false"
+                  aria-checked="true"
                   aria-disabled="false"
                   class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
                   data-radix-collection-item=""
-                  data-state="off"
+                  data-state="on"
                   href="/profile/id?stats-provider=spotify"
                   role="radio"
                   tabindex="-1"
@@ -70,11 +70,11 @@ exports[`StatsOptions > should match snapshot 1`] = `
                   Spotify
                 </a>
                 <a
-                  aria-checked="true"
+                  aria-checked="false"
                   aria-disabled="false"
                   class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
                   data-radix-collection-item=""
-                  data-state="on"
+                  data-state="off"
                   href="/profile/id?stats-provider=rigtch"
                   role="radio"
                   tabindex="-1"
@@ -96,7 +96,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
               class="flex items-center gap-2"
             >
               <p>
-                Measurement
+                Time range
               </p>
               <button
                 data-state="closed"
@@ -153,95 +153,6 @@ exports[`StatsOptions > should match snapshot 1`] = `
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <polygon
-                      points="5 3 19 12 5 21 5 3"
-                    />
-                  </svg>
-                  Plays
-                </div>
-              </span>
-              <svg
-                aria-hidden="true"
-                class="h-4 w-4 opacity-50"
-                fill="none"
-                height="15"
-                viewBox="0 0 15 15"
-                width="15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="flex flex-col gap-2"
-          >
-            <div
-              class="flex items-center gap-2"
-            >
-              <p>
-                Time range
-              </p>
-              <button
-                data-state="closed"
-              >
-                <svg
-                  fill="none"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                  />
-                  <path
-                    d="M12 16v-4"
-                  />
-                  <path
-                    d="M12 8h.01"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button
-              aria-autocomplete="none"
-              aria-controls="radix-:r7:"
-              aria-expanded="false"
-              class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
-              data-state="closed"
-              dir="ltr"
-              role="combobox"
-              type="button"
-            >
-              <span
-                style="pointer-events: none;"
-              >
-                <div
-                  class="flex gap-2 items-center"
-                >
-                  <svg
-                    fill="none"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
                     <circle
                       cx="12"
                       cy="12"
@@ -251,7 +162,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
                       points="12 6 12 12 16 14"
                     />
                   </svg>
-                  7 days
+                  4 weeks
                 </div>
               </span>
               <svg
@@ -311,7 +222,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             </div>
             <button
               aria-autocomplete="none"
-              aria-controls="radix-:r9:"
+              aria-controls="radix-:r7:"
               aria-expanded="false"
               class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
               data-state="closed"
@@ -424,11 +335,11 @@ exports[`StatsOptions > should match snapshot 1`] = `
               tabindex="0"
             >
               <a
-                aria-checked="false"
+                aria-checked="true"
                 aria-disabled="false"
                 class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
                 data-radix-collection-item=""
-                data-state="off"
+                data-state="on"
                 href="/profile/id?stats-provider=spotify"
                 role="radio"
                 tabindex="-1"
@@ -437,11 +348,11 @@ exports[`StatsOptions > should match snapshot 1`] = `
                 Spotify
               </a>
               <a
-                aria-checked="true"
+                aria-checked="false"
                 aria-disabled="false"
                 class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
                 data-radix-collection-item=""
-                data-state="on"
+                data-state="off"
                 href="/profile/id?stats-provider=rigtch"
                 role="radio"
                 tabindex="-1"
@@ -463,7 +374,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             class="flex items-center gap-2"
           >
             <p>
-              Measurement
+              Time range
             </p>
             <button
               data-state="closed"
@@ -520,95 +431,6 @@ exports[`StatsOptions > should match snapshot 1`] = `
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="5 3 19 12 5 21 5 3"
-                  />
-                </svg>
-                Plays
-              </div>
-            </span>
-            <svg
-              aria-hidden="true"
-              class="h-4 w-4 opacity-50"
-              fill="none"
-              height="15"
-              viewBox="0 0 15 15"
-              width="15"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="flex flex-col gap-2"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <p>
-              Time range
-            </p>
-            <button
-              data-state="closed"
-            >
-              <svg
-                fill="none"
-                height="1em"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                />
-                <path
-                  d="M12 16v-4"
-                />
-                <path
-                  d="M12 8h.01"
-                />
-              </svg>
-            </button>
-          </div>
-          <button
-            aria-autocomplete="none"
-            aria-controls="radix-:r7:"
-            aria-expanded="false"
-            class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
-            data-state="closed"
-            dir="ltr"
-            role="combobox"
-            type="button"
-          >
-            <span
-              style="pointer-events: none;"
-            >
-              <div
-                class="flex gap-2 items-center"
-              >
-                <svg
-                  fill="none"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
                   <circle
                     cx="12"
                     cy="12"
@@ -618,7 +440,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
                     points="12 6 12 12 16 14"
                   />
                 </svg>
-                7 days
+                4 weeks
               </div>
             </span>
             <svg
@@ -678,7 +500,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
           </div>
           <button
             aria-autocomplete="none"
-            aria-controls="radix-:r9:"
+            aria-controls="radix-:r7:"
             aria-expanded="false"
             class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
             data-state="closed"
