@@ -1,15 +1,17 @@
 import { useQuery } from '@tanstack/react-query'
-import { useParams } from 'next/navigation'
+import { redirect, useParams } from 'next/navigation'
 
 import { RECENTLY_PLAYED } from '../constants'
 import { getRecentlyPlayed } from '../fetchers'
 
-import { useToken } from '@app/hooks/use-token'
+import { useToken } from '@app/auth/hooks'
 import type { ParamsWithId } from '@app/types'
 
 export const useRecentlyPlayedQuery = () => {
-  const token = useToken()
   const { id: userId } = useParams<ParamsWithId>()
+  const token = useToken()
+
+  if (!token) redirect('/')
 
   return useQuery({
     queryKey: [RECENTLY_PLAYED],

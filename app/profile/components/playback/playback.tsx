@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { PlaybackCardSkeleton } from './playback-card.skeleton'
 import { PlaybackCard } from './playback-card'
 
-import { useAuthCookies } from '@app/hooks/use-auth-cookies'
+import { useAuthCookies } from '@app/auth/hooks'
 import { usePlaybackStateContext } from '@app/profile/context/playback-state'
 import type { ParamsWithId } from '@app/types'
 

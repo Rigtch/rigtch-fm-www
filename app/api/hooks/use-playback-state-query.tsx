@@ -1,17 +1,19 @@
 import { useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
-import { useParams } from 'next/navigation'
+import { redirect, useParams } from 'next/navigation'
 
 import { PLAYBACK_STATE } from '../constants'
 import { getPlaybackState } from '../fetchers'
 
-import { useToken } from '@app/hooks/use-token'
+import { useToken } from '@app/auth/hooks'
 import type { ParamsWithId } from '@app/types'
 
 export const usePlaybackStateQuery = () => {
   const [refetchInterval, setRefetchInterval] = useState(1000)
-  const token = useToken()
   const { id: userId } = useParams<ParamsWithId>()
+  const token = useToken()
+
+  if (!token) redirect('/')
 
   const query = useQuery({
     queryKey: [PLAYBACK_STATE],
