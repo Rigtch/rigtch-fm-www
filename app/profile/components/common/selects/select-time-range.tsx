@@ -3,10 +3,9 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { LuClock } from 'react-icons/lu'
 
-import { isTimeRangeDisabled } from '../utils'
-
 import type { ProfileSelectProps } from './props'
 
+import { isTimeRangeDisabled } from '@app/profile/utils/helpers'
 import {
   Select,
   SelectContent,
