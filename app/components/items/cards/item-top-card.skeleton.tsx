@@ -47,16 +47,16 @@ function ItemTopCardSkeleton({
           <span className="text-center text-5xl">{position}</span>
 
           {withGenres && (
-            <div className="flex flex-row gap-2 flex-wrap justify-center h-full">
+            <div className="flex flex-row gap-2 flex-wrap justify-center h-full max-w-full">
               <Skeleton className="w-[4rem] h-[1rem] rounded-pill" />
               <Skeleton className="w-[6rem] h-[1rem] rounded-pill" />
               <Skeleton className="w-[5rem] h-[1rem] rounded-pill" />
             </div>
           )}
 
-          <div className="flex flex-row gap-1 mt-4">
+          <div className="flex flex-row gap-1 mt-4 w-full">
             {withProgress ? (
-              <Skeleton className="w-[20rem] h-7 rounded-full" />
+              <Skeleton className="w-full h-7 rounded-full" />
             ) : (
               stars.map((size, index) => (
                 <FaStar
