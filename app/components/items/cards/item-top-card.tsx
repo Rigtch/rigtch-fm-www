@@ -1,11 +1,12 @@
 'use client'
 
 import prettyMilliseconds from 'pretty-ms'
-import { FaStar } from 'react-icons/fa6'
 
 import { GenreBadge } from '../genre'
 import { ItemArtists, ItemImage, ItemName, ItemPosition } from '../misc'
 import type { PlayTimeOrPlays } from '../types'
+
+import { ItemTopCardStars } from './top-item-card-stars'
 
 import type { AlbumEntity, ArtistEntity } from '@app/api/types'
 import { ProgressWithValueLabel } from '@app/components/common'
@@ -51,8 +52,6 @@ function ItemTopCard({
   plays,
   maxPlays,
 }: ItemTopCard.Props) {
-  const stars = [1, 2, 3, 2, 1]
-
   return (
     <div
       className={cn(
@@ -98,24 +97,9 @@ function ItemTopCard({
           )}
 
           <div className="flex flex-row gap-1 mt-4 w-full justify-center">
-            {!playTime &&
-              !plays &&
-              stars.map((size, index) => (
-                <FaStar
-                  key={index}
-                  className={cn(
-                    position === 1
-                      ? 'text-yellow-600'
-                      : position === 2
-                        ? 'text-slate-400'
-                        : 'text-yellow-900'
-                  )}
-                  style={{
-                    fontSize: `${size * 14}px`,
-                    marginTop: `-${size * 4}px`,
-                  }}
-                />
-              ))}
+            {!playTime && !plays && position && (
+              <ItemTopCardStars position={position} />
+            )}
 
             {plays && (
               <ProgressWithValueLabel
