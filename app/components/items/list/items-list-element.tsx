@@ -93,7 +93,7 @@ function ItemsListElement({
       <div
         className={cn(
           'flex flex-row justify-between p-2 gap-2 md:gap-4',
-          !position && 'md:pl-4'
+          !position && 'md:pl-4 px-4'
         )}
       >
         <header className="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]">

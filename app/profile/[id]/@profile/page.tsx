@@ -19,8 +19,10 @@ export default async function ProfileSubPage({ params }: ProfilePageProps) {
   const { profile } = await getUser(token, { userId })
 
   return (
-    <ProfileCard {...profile}>
-      <Playback />
-    </ProfileCard>
+    <div className="px-4">
+      <ProfileCard {...profile}>
+        <Playback />
+      </ProfileCard>
+    </div>
   )
 }

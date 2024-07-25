@@ -27,7 +27,7 @@ function ItemsListElementSkeleton({
     <div
       className={cn(
         'flex flex-row justify-between p-2 gap-2 md:gap-4 h-[72px]',
-        withPlayedAt && 'md:pl-4'
+        withPlayedAt && 'md:pl-4 px-4'
       )}
     >
       <header className="flex flex-row items-center gap-4 w-full">
