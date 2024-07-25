@@ -87,7 +87,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="flex gap-2"
+          class="flex gap-2 flex-wrap"
         >
           <div
             class="flex flex-col gap-2"
@@ -365,7 +365,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="flex gap-2"
+        class="flex gap-2 flex-wrap"
       >
         <div
           class="flex flex-col gap-2"
