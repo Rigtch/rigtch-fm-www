@@ -4,7 +4,7 @@ runs:
   using: 'composite'
   steps:
     - name: Setup node env 🏗
-      uses: oven-sh/setup-bun@v1
+      uses: oven-sh/setup-bun@v2
 
     - name: 'Cache Dependencies 🕓'
       uses: 'actions/cache@v4'
