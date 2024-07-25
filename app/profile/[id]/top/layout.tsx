@@ -6,7 +6,9 @@ import type { ProfileLayoutBaseProps } from '@app/profile/types'
 export default function ProfileTopLayout({ children }: ProfileLayoutBaseProps) {
   return (
     <>
-      <StatsOptions />
+      <div className="px-4">
+        <StatsOptions />
+      </div>
 
       {children}
     </>

@@ -51,7 +51,7 @@ export function StatsOptions() {
         )}
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         {(statsProvider === StatsProvider.RIGTCH || route === 'albums') && (
           <SelectStatsMeasurement initialValue={statsMeasurement} />
         )}
