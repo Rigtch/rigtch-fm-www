@@ -20,7 +20,6 @@ export default function ProfileTopTracksSubLoading() {
     <ItemsSectionSkeleton
       title={'Top Tracks'}
       view={view}
-      withGenres
       withProgress={statsProvider === StatsProvider.RIGTCH}
     />
   )
