@@ -60,10 +60,10 @@ function NavigationBar({ user, userId }: NavigationBar.Props) {
           alt="Rigtch"
           width={42}
           height={42}
-          className="rounded-lg hidden md:block"
+          className="rounded-lg hidden lg:block"
         />
 
-        <div className="md:hidden">
+        <div className="lg:hidden w-[28px] h-[28px]">
           <Sheet
             open={isSidebarOpen}
             onOpenChange={isOpen => {
