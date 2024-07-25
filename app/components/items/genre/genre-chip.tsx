@@ -50,19 +50,23 @@ function GenreChip({
           <div
             className={cn(
               'relative overflow-hidden rounded-xl w-max -z-10',
-              className ?? 'bg-neutral-700'
+              className ?? 'bg-primary'
             )}
           >
             {(plays ?? playTime) && (
               <div
-                className="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+                className="transition-all duration-700 ease-in-out -z-10 absolute bg-neutral-700 h-full -skew-x-12 -left-[8px]"
                 style={{
                   width: `calc(${progressWidth}% + 10px)`,
                 }}
               />
             )}
 
-            <div className={cn('p-2 whitespace-nowrap text-white block')}>
+            <div
+              className={cn(
+                'p-2 whitespace-nowrap text-primary-foreground/80 block'
+              )}
+            >
               {genre}
             </div>
           </div>
