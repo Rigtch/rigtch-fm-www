@@ -9,7 +9,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between"
+          class="flex justify-between px-4"
         >
           <h2
             class="text-5xl"
@@ -1119,7 +1119,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between"
+        class="flex justify-between px-4"
       >
         <h2
           class="text-5xl"
@@ -2286,7 +2286,7 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between"
+          class="flex justify-between px-4"
         >
           <h2
             class="text-5xl"
@@ -2341,7 +2341,7 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between"
+        class="flex justify-between px-4"
       >
         <h2
           class="text-5xl"
@@ -2453,7 +2453,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between"
+          class="flex justify-between px-4"
         >
           <h2
             class="text-5xl"
@@ -3418,7 +3418,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between"
+        class="flex justify-between px-4"
       >
         <h2
           class="text-5xl"
@@ -4440,7 +4440,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between"
+          class="flex justify-between px-4"
         >
           <h2
             class="text-5xl"
@@ -4742,7 +4742,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between"
+        class="flex justify-between px-4"
       >
         <h2
           class="text-5xl"
@@ -5101,7 +5101,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between"
+          class="flex justify-between px-4"
         >
           <h2
             class="text-5xl"
@@ -5123,7 +5123,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
                   >
                     <header
                       class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5215,7 +5215,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
                   >
                     <header
                       class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5307,7 +5307,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
+                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
                   >
                     <header
                       class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5403,7 +5403,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between"
+        class="flex justify-between px-4"
       >
         <h2
           class="text-5xl"
@@ -5425,7 +5425,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5517,7 +5517,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -5609,7 +5609,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
+                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
                 >
                   <header
                     class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"

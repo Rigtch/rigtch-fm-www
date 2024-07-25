@@ -533,7 +533,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
         class="relative overflow-hidden"
       >
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
+          class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
         >
           <header
             class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
@@ -612,7 +612,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
       class="relative overflow-hidden"
     >
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4"
+        class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
       >
         <header
           class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
