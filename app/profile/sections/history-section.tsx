@@ -28,7 +28,10 @@ function HistorySection({
     useHistoryInfiniteQuery(limit, initialData)
 
   useEffect(() => {
-    if (inView) fetchNextPage().catch(console.error)
+    if (inView)
+      fetchNextPage().catch((error: unknown) => {
+        console.error(error)
+      })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView])
 

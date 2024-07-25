@@ -1,1 +1,1 @@
-export const ID = 'id' as const
+export const ID = 'id'

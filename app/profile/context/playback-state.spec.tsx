@@ -16,8 +16,8 @@ import { QueryClientWrapper } from '@tests/utils'
 vi.mock('@app/api/hooks')
 vi.mock('next/navigation')
 
-const TRACK_NAME = 'track-name' as const
-const IS_PLAYING = 'is-playing' as const
+const TRACK_NAME = 'track-name'
+const IS_PLAYING = 'is-playing'
 
 function TestComponent() {
   const { data, isPlaying, toggleState } = usePlaybackStateContext()

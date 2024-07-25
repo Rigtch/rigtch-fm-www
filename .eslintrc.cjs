@@ -136,6 +136,20 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/consistent-type-imports': 'warn',
     '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      {
+        allowArray: true,
+        allowNumber: true,
+        allowRegExp: true,
+      },
+    ],
+    '@typescript-eslint/restrict-plus-operands': [
+      'error',
+      {
+        allowNumberAndString: true,
+      },
+    ],
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
