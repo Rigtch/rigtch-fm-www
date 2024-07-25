@@ -10,10 +10,10 @@ exports[`GenreChip > should match snapshot 1`] = `
         data-state="closed"
       >
         <div
-          class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+          class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
         >
           <div
-            class="p-2 whitespace-nowrap text-white block"
+            class="p-2 whitespace-nowrap text-primary-foreground/80 block"
           >
             Black Metal
           </div>
@@ -27,10 +27,10 @@ exports[`GenreChip > should match snapshot 1`] = `
       data-state="closed"
     >
       <div
-        class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+        class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
       >
         <div
-          class="p-2 whitespace-nowrap text-white block"
+          class="p-2 whitespace-nowrap text-primary-foreground/80 block"
         >
           Black Metal
         </div>
@@ -104,7 +104,7 @@ exports[`GenreChip > should match snapshot with custom className 1`] = `
           class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-800"
         >
           <div
-            class="p-2 whitespace-nowrap text-white block"
+            class="p-2 whitespace-nowrap text-primary-foreground/80 block"
           >
             Black Metal
           </div>
@@ -121,7 +121,7 @@ exports[`GenreChip > should match snapshot with custom className 1`] = `
         class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-800"
       >
         <div
-          class="p-2 whitespace-nowrap text-white block"
+          class="p-2 whitespace-nowrap text-primary-foreground/80 block"
         >
           Black Metal
         </div>
@@ -192,14 +192,14 @@ exports[`GenreChip > should match snapshot with playTime 1`] = `
         data-state="closed"
       >
         <div
-          class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+          class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
         >
           <div
-            class="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+            class="transition-all duration-700 ease-in-out -z-10 absolute bg-neutral-700 h-full -skew-x-12 -left-[8px]"
             style="width: calc(0% + 10px);"
           />
           <div
-            class="p-2 whitespace-nowrap text-white block"
+            class="p-2 whitespace-nowrap text-primary-foreground/80 block"
           >
             Black Metal
           </div>
@@ -213,14 +213,14 @@ exports[`GenreChip > should match snapshot with playTime 1`] = `
       data-state="closed"
     >
       <div
-        class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+        class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
       >
         <div
-          class="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+          class="transition-all duration-700 ease-in-out -z-10 absolute bg-neutral-700 h-full -skew-x-12 -left-[8px]"
           style="width: calc(0% + 10px);"
         />
         <div
-          class="p-2 whitespace-nowrap text-white block"
+          class="p-2 whitespace-nowrap text-primary-foreground/80 block"
         >
           Black Metal
         </div>
@@ -291,14 +291,14 @@ exports[`GenreChip > should match snapshot with plays 1`] = `
         data-state="closed"
       >
         <div
-          class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+          class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
         >
           <div
-            class="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+            class="transition-all duration-700 ease-in-out -z-10 absolute bg-neutral-700 h-full -skew-x-12 -left-[8px]"
             style="width: calc(0% + 10px);"
           />
           <div
-            class="p-2 whitespace-nowrap text-white block"
+            class="p-2 whitespace-nowrap text-primary-foreground/80 block"
           >
             Black Metal
           </div>
@@ -312,14 +312,14 @@ exports[`GenreChip > should match snapshot with plays 1`] = `
       data-state="closed"
     >
       <div
-        class="relative overflow-hidden rounded-xl w-max -z-10 bg-neutral-700"
+        class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
       >
         <div
-          class="transition-all duration-700 ease-in-out -z-10 absolute bg-primary h-full -skew-x-12 -left-[8px]"
+          class="transition-all duration-700 ease-in-out -z-10 absolute bg-neutral-700 h-full -skew-x-12 -left-[8px]"
           style="width: calc(0% + 10px);"
         />
         <div
-          class="p-2 whitespace-nowrap text-white block"
+          class="p-2 whitespace-nowrap text-primary-foreground/80 block"
         >
           Black Metal
         </div>
