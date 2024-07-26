@@ -28,7 +28,6 @@ const requestFactoryMock = (pathname: string) =>
     nextUrl: {
       pathname,
     },
-    headers: new Headers(),
     url: 'http://localhost:3000',
   } as unknown as NextRequest)
 
@@ -50,7 +49,9 @@ describe('middleware', () => {
 
     await middleware(requestMock, mock<AppRouteHandlerFnContext>())
 
-    expect(redirectSpy).toHaveBeenCalled()
+    expect(redirectSpy).toHaveBeenCalledWith(
+      new URL(`/profile/${userId}`, requestMock.url)
+    )
     expect(cookiesSpy).toHaveBeenCalled()
   })
 
@@ -61,7 +62,7 @@ describe('middleware', () => {
 
     await middleware(request, mock<AppRouteHandlerFnContext>())
 
-    expect(redirectSpy).toHaveBeenCalled()
+    expect(redirectSpy).toHaveBeenCalledWith(new URL('/', request.url))
     expect(cookiesSpy).toHaveBeenCalled()
   })
 })
