@@ -11,7 +11,7 @@
     ".gitignore": ".gitmodules, .gitattributes",
     ".prettierrc": ".prettierignore",
     ".stylelintrc": ".stylelintignore",
-    ".eslintrc": ".eslintcache",
+    ".eslintrc.cjs": ".eslintcache",
     ".env": ".env.*",
     "package.json": ".npmrc, yarn.lock, .yarnrc, .nvmrc, yarn-error.log, bun.lockb"
   },
