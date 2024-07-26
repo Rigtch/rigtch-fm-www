@@ -1,13 +1,31 @@
-'use client'
-
 import type { ReactNode } from 'react'
-import { usePathname } from 'next/navigation'
+import { redirect } from 'next/navigation'
+import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 
 import { ProfileProviders } from '../providers'
-import type { ProfileLayoutBaseProps } from '../types'
-import { validateId } from '../../utils/validators'
+import type { ProfileLayoutBaseProps, ProfilePageProps } from '../types'
 
+import { validateId } from '@app/utils/validators'
 import { Sidebar } from '@app/components/sidebar'
+import { getUser } from '@app/api/fetchers'
+import { getServerToken } from '@app/auth'
+
+export async function generateMetadata({
+  params: { id },
+}: ProfilePageProps): Promise<Metadata> {
+  const token = await getServerToken()
+
+  if (!token) redirect('/')
+
+  const {
+    profile: { displayName },
+  } = await getUser(token, { userId: id })
+
+  return {
+    title: `${displayName}'s profile`,
+  }
+}
 
 namespace ProfileLayout {
   export interface Props extends ProfileLayoutBaseProps {
@@ -26,7 +44,7 @@ function ProfileLayout({
   history,
   params,
 }: ProfileLayout.Props) {
-  const pathname = usePathname()
+  const pathname = headers().get('x-pathname') ?? '/'
   const userId = validateId(params.id)
 
   const isProfileHomePage = pathname === `/profile/${userId}`

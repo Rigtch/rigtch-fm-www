@@ -1,6 +1,7 @@
-import { cookies } from 'next/headers'
-
 import './styles/globals.css'
+
+import type { Metadata, Viewport } from 'next'
+import { cookies } from 'next/headers'
 
 import { USER_ACCEPT_COOKIES, USER_ID } from './constants'
 import { auth } from './auth'
@@ -11,10 +12,65 @@ import { Toaster } from './components/ui/toaster'
 import { RootProviders } from './providers'
 import type { LayoutProps } from './types'
 
-export const metadata = {
-  title: 'rigtch.fm',
+export const viewport: Viewport = {
+  themeColor: '#0e1315',
+}
+
+export const metadata: Metadata = {
+  title: {
+    default: 'rigtch.fm',
+    template: '%s | rigtch.fm',
+  },
   description:
-    'rigtch.fm is focused on displaying your all-time statistics such as favorite artists, most listened songs etc.',
+    'Real time spotify statistics calculation based on your listening history.',
+  applicationName: 'rigtch.fm',
+  authors: [
+    {
+      name: 'Rigtch',
+      url: 'https://github.com/Rigtch',
+    },
+  ],
+  creator: 'Rigtch',
+  keywords: ['spotify', 'stats', 'statistics', 'analytics', 'music'],
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon-32x32.png',
+      sizes: '32x32',
+      type: 'image/png',
+    },
+    {
+      rel: 'icon',
+      url: '/favicon-16x16.png',
+      sizes: '16x16',
+      type: 'image/png',
+    },
+    {
+      rel: 'apple-touch-icon',
+      url: '/apple-touch-icon.png',
+    },
+    {
+      rel: 'mask-icon',
+      url: '/safari-pinned-tab.svg',
+      color: '#9400d5',
+    },
+  ],
+  manifest: '/site.webmanifest',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://rigtch-fm.vercel.app',
+    siteName: 'rigtch.fm',
+    title: 'rigtch.fm',
+    images: [
+      {
+        url: '/rigtch-icon.png',
+        width: 1523,
+        height: 1576,
+        alt: 'rigtch.fm',
+      },
+    ],
+  },
 }
 
 export default async function RootLayout({ children }: LayoutProps) {
@@ -25,25 +81,6 @@ export default async function RootLayout({ children }: LayoutProps) {
 
   return (
     <html lang="en">
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="theme-color" content="#0e1315" />
-
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9400d5" />
-
       <body className="bg-background text-white">
         <RootProviders session={session!}>
           <div className="flex flex-col justify-between min-h-screen">
