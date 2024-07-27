@@ -50,20 +50,20 @@ function ItemCard({
         <ItemName
           name={name}
           href={`/${artists ? (album ? 'track' : 'album') : 'artist'}/${id}`}
+          className="!max-w-[200px]"
         />
 
         <div className="flex flex-row justify-between">
-          {albumType && (
-            <div>
-              {new Date(releaseDate).getFullYear()} &bull;&nbsp;
-              <span className="capitalize">{albumType}</span>
-            </div>
-          )}
+          <div>
+            {albumType && (
+              <>
+                {new Date(releaseDate).getFullYear()} &bull;&nbsp;
+                <span className="capitalize">{albumType}</span>
+              </>
+            )}
+          </div>
 
           {album && <ItemArtists artists={artists} />}
-
-          {/* Fix `SpotifyLink` flex position */}
-          {!album && !albumType && <div />}
 
           <SpotifyLink href={href} />
         </div>
