@@ -1,5 +1,5 @@
 'use client'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+
 import { SessionProvider } from 'next-auth/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
@@ -22,7 +22,6 @@ function RootProviders({ children, session }: RootProviders.Props) {
       <QueryClientProvider client={queryClient}>
         {children}
 
-        <SpeedInsights />
         <ReactQueryDevtools />
       </QueryClientProvider>
     </SessionProvider>

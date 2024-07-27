@@ -2,6 +2,8 @@ import './styles/globals.css'
 
 import type { Metadata, Viewport } from 'next'
 import { cookies } from 'next/headers'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { USER_ACCEPT_COOKIES, USER_ID } from './constants'
 import { auth } from './auth'
@@ -95,6 +97,9 @@ export default async function RootLayout({ children }: LayoutProps) {
             <Footer />
 
             <Toaster />
+
+            <Analytics />
+            <SpeedInsights />
           </div>
         </RootProviders>
       </body>
