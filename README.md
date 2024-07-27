@@ -11,7 +11,9 @@
 
 ## Description
 
-Rigtch is website focused on displaying your all-time statistics such as favorite artists, most listened songs etc.
+Real time spotify statistics calculation based on your listening history.
+
+![Screenshot](/public/statistics-example.png)
 
 ## Deployment
 
@@ -42,7 +44,6 @@ Rigtch is website focused on displaying your all-time statistics such as favorit
 ![EditorConfig](https://img.shields.io/badge/Editor%20Config-E0EFEF?style=for-the-badge&logo=editorconfig&logoColor=000)
 ![Commitlint](https://img.shields.io/badge/commitlint-000000.svg?style=for-the-badge&logo=commitlint&logoColor=white)
 ![ConventionalCommits](https://img.shields.io/badge/Conventional%20Commits-FE5196.svg?style=for-the-badge&logo=Conventional-Commits&logoColor=white)
-![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
 ![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white)
 
 ## Stay in touch
