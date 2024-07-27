@@ -27,7 +27,7 @@ export default async function ArtistPage({ params }: PageWithIdParamProps) {
 
   return (
     <div className="flex flex-col p-12 gap-8">
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="flex flex-col gap-4">
           <ItemHeaderSection
             name={name}
@@ -43,7 +43,7 @@ export default async function ArtistPage({ params }: PageWithIdParamProps) {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col gap-4">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <div className="text-4xl">Top Tracks</div>
 
           <ItemsList items={tracks.slice(0, 5)} positionClassName="text-2xl" />
@@ -53,7 +53,7 @@ export default async function ArtistPage({ params }: PageWithIdParamProps) {
       <div className="flex flex-col gap-6">
         <div className="text-4xl">Albums</div>
 
-        <div className="flex flex-wrap justify-start gap-y-4 md:gap-x-6 w-full">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-4 w-full">
           {sortedAlbums.map(album => (
             <ItemCard key={album.id} {...album} />
           ))}
