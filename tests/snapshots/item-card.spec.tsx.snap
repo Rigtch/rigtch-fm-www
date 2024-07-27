@@ -26,7 +26,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
             href="/artist/undefined"
           >
             <p
-              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
             >
               Album 1
             </p>
@@ -86,7 +86,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
           href="/artist/undefined"
         >
           <p
-            class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
+            class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
           >
             Album 1
           </p>
@@ -203,7 +203,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
             href="/artist/123"
           >
             <p
-              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
             >
               Darkthrone
             </p>
@@ -263,7 +263,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
           href="/artist/123"
         >
           <p
-            class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
+            class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
           >
             Darkthrone
           </p>
@@ -380,7 +380,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
             href="/track/123"
           >
             <p
-              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
+              class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
             >
               Track 1
             </p>
@@ -388,6 +388,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
           <div
             class="flex flex-row justify-between"
           >
+            <div />
             <span>
               <a
                 class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
@@ -447,7 +448,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
           href="/track/123"
         >
           <p
-            class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]"
+            class="truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
           >
             Track 1
           </p>
@@ -455,6 +456,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
         <div
           class="flex flex-row justify-between"
         >
+          <div />
           <span>
             <a
               class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
