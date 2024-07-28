@@ -1,6 +1,10 @@
 import { validateTimeRange } from './validate-time-range'
 
 import {
+  DEFAULT_RIGTCH_TIME_RANCE,
+  DEFAULT_SPOTIFY_TIME_RANCE,
+} from '@app/profile/constants'
+import {
   StatsProvider,
   RigtchTimeRange,
   SpotifyTimeRange,
@@ -20,7 +24,7 @@ describe('validateTimeRange', () => {
 
     test('should return SpotifyTimeRange.SHORT_TERM when timeRange is not a SpotifyTimeRange', () => {
       expect(validateTimeRange(invalid, StatsProvider.SPOTIFY)).toEqual(
-        SpotifyTimeRange.SHORT_TERM
+        DEFAULT_SPOTIFY_TIME_RANCE
       )
     })
   })
@@ -34,7 +38,7 @@ describe('validateTimeRange', () => {
 
     test('should return RigtchTimeRange.WEEK when timeRange is not a RigtchTimeRange', () => {
       expect(validateTimeRange(invalid, StatsProvider.RIGTCH)).toEqual(
-        RigtchTimeRange.WEEK
+        DEFAULT_RIGTCH_TIME_RANCE
       )
     })
   })

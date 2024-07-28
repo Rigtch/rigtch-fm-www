@@ -1,4 +1,8 @@
 import {
+  DEFAULT_RIGTCH_TIME_RANCE,
+  DEFAULT_SPOTIFY_TIME_RANCE,
+} from '@app/profile/constants'
+import {
   RigtchTimeRange,
   SpotifyTimeRange,
   StatsProvider,
@@ -25,6 +29,6 @@ export function validateTimeRange(
   }
 
   return provider === StatsProvider.SPOTIFY
-    ? SpotifyTimeRange.SHORT_TERM
-    : RigtchTimeRange.WEEK
+    ? DEFAULT_SPOTIFY_TIME_RANCE
+    : DEFAULT_RIGTCH_TIME_RANCE
 }
