@@ -60,9 +60,7 @@ export function Sidebar() {
 
             <SidebarSectionItem
               href={`/profile/${userId}/top/albums?${formatSearchParams(
-                view
-                  ? new URLSearchParams({ [VIEW]: view })
-                  : new URLSearchParams(),
+                view ? new URLSearchParams({ [VIEW]: view }) : searchParams,
                 STATS_PROVIDER,
                 StatsProvider.RIGTCH
               )}`}
