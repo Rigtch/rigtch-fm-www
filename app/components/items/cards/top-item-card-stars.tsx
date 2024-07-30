@@ -17,8 +17,8 @@ export function ItemTopCardStars({
 
   return (
     <>
-      {stars.map(size => (
-        <>
+      {stars.map((size, index) => (
+        <div key={index}>
           {[2, 3].includes(position) && size === 1 && (
             <IoStarOutline
               className={cn(position === 3 ? Color.BRONZE : Color.SILVER)}
@@ -74,7 +74,7 @@ export function ItemTopCardStars({
               }}
             />
           )}
-        </>
+        </div>
       ))}
     </>
   )
