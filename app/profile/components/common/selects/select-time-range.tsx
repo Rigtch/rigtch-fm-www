@@ -43,7 +43,10 @@ function SelectTimeRange<TStatsProvider extends StatsProvider>({
   userCreatedAt,
   ignoreBetaUser,
 }: SelectTimeRange.Props<TStatsProvider>) {
-  const timeRangeOptions = Object.values(RigtchTimeRange).includes(initialValue)
+  const isRigtchTimeRange =
+    Object.values(RigtchTimeRange).includes(initialValue)
+
+  const timeRangeOptions = isRigtchTimeRange
     ? [
         {
           value: RigtchTimeRange.WEEK,
@@ -94,7 +97,7 @@ function SelectTimeRange<TStatsProvider extends StatsProvider>({
       <Select
         value={initialValue}
         onValueChange={handleOnValueChange}
-        disabled={isValueDisabled(RigtchTimeRange.WEEK)}
+        disabled={isRigtchTimeRange && isValueDisabled(RigtchTimeRange.WEEK)}
       >
         <SelectTrigger className="min-w-[120px] text-white">
           <SelectValue placeholder="Select time range" />
