@@ -7,7 +7,7 @@ export function formatSearchParams(
     ...Object.fromEntries(Array.from(searchParams.entries())),
   })
 
-  key && value && urlSearchParams.set(key, value)
+  if (key && value) urlSearchParams.set(key, value)
 
   return urlSearchParams.toString()
 }
