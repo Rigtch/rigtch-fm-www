@@ -404,87 +404,97 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
             <div
               class="flex flex-row gap-1 mt-4 w-full justify-center"
             >
-              <svg
-                class="text-slate-400"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 14px; margin-top: -4px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                  fill="none"
-                  stroke-linejoin="round"
-                  stroke-width="32"
-                />
-              </svg>
-              <svg
-                class="text-slate-400"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 28px; margin-top: -8px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
-                />
-              </svg>
-              <svg
-                class="text-slate-400"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 42px; margin-top: -12px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
-                />
-              </svg>
-              <svg
-                class="text-slate-400"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 28px; margin-top: -8px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
-                />
-              </svg>
-              <svg
-                class="text-slate-400"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 14px; margin-top: -4px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                  fill="none"
-                  stroke-linejoin="round"
-                  stroke-width="32"
-                />
-              </svg>
+              <div>
+                <svg
+                  class="text-slate-400"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 14px; margin-top: -4px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                    fill="none"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  class="text-slate-400"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 28px; margin-top: -8px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  class="text-slate-400"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 42px; margin-top: -12px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  class="text-slate-400"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 28px; margin-top: -8px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  class="text-slate-400"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 14px; margin-top: -4px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                    fill="none"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </header>
@@ -547,87 +557,97 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
           <div
             class="flex flex-row gap-1 mt-4 w-full justify-center"
           >
-            <svg
-              class="text-slate-400"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 14px; margin-top: -4px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                fill="none"
-                stroke-linejoin="round"
-                stroke-width="32"
-              />
-            </svg>
-            <svg
-              class="text-slate-400"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 28px; margin-top: -8px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
-              />
-            </svg>
-            <svg
-              class="text-slate-400"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 42px; margin-top: -12px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
-              />
-            </svg>
-            <svg
-              class="text-slate-400"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 28px; margin-top: -8px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
-              />
-            </svg>
-            <svg
-              class="text-slate-400"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 14px; margin-top: -4px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                fill="none"
-                stroke-linejoin="round"
-                stroke-width="32"
-              />
-            </svg>
+            <div>
+              <svg
+                class="text-slate-400"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 14px; margin-top: -4px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                  fill="none"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                class="text-slate-400"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 28px; margin-top: -8px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                class="text-slate-400"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 42px; margin-top: -12px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                class="text-slate-400"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 28px; margin-top: -8px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                class="text-slate-400"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 14px; margin-top: -4px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                  fill="none"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </header>
@@ -747,93 +767,103 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
             <div
               class="flex flex-row gap-1 mt-4 w-full justify-center"
             >
-              <svg
-                class="text-yellow-900"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 14px; margin-top: -4px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                  fill="none"
-                  stroke-linejoin="round"
-                  stroke-width="32"
-                />
-              </svg>
-              <svg
-                class="text-yellow-900"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 28px; margin-top: -8px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                  fill="none"
-                  stroke-linejoin="round"
-                  stroke-width="32"
-                />
-              </svg>
-              <svg
-                class="text-yellow-900"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 42px; margin-top: -12px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
-                />
-              </svg>
-              <svg
-                class="text-yellow-900"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 28px; margin-top: -8px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                  fill="none"
-                  stroke-linejoin="round"
-                  stroke-width="32"
-                />
-              </svg>
-              <svg
-                class="text-yellow-900"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                style="font-size: 14px; margin-top: -4px;"
-                viewBox="0 0 512 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                  fill="none"
-                  stroke-linejoin="round"
-                  stroke-width="32"
-                />
-              </svg>
+              <div>
+                <svg
+                  class="text-yellow-900"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 14px; margin-top: -4px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                    fill="none"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  class="text-yellow-900"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 28px; margin-top: -8px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                    fill="none"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  class="text-yellow-900"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 42px; margin-top: -12px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  class="text-yellow-900"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 28px; margin-top: -8px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                    fill="none"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  class="text-yellow-900"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="font-size: 14px; margin-top: -4px;"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                    fill="none"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </header>
@@ -896,93 +926,103 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
           <div
             class="flex flex-row gap-1 mt-4 w-full justify-center"
           >
-            <svg
-              class="text-yellow-900"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 14px; margin-top: -4px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                fill="none"
-                stroke-linejoin="round"
-                stroke-width="32"
-              />
-            </svg>
-            <svg
-              class="text-yellow-900"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 28px; margin-top: -8px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                fill="none"
-                stroke-linejoin="round"
-                stroke-width="32"
-              />
-            </svg>
-            <svg
-              class="text-yellow-900"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 42px; margin-top: -12px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
-              />
-            </svg>
-            <svg
-              class="text-yellow-900"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 28px; margin-top: -8px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                fill="none"
-                stroke-linejoin="round"
-                stroke-width="32"
-              />
-            </svg>
-            <svg
-              class="text-yellow-900"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              style="font-size: 14px; margin-top: -4px;"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-                fill="none"
-                stroke-linejoin="round"
-                stroke-width="32"
-              />
-            </svg>
+            <div>
+              <svg
+                class="text-yellow-900"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 14px; margin-top: -4px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                  fill="none"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                class="text-yellow-900"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 28px; margin-top: -8px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                  fill="none"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                class="text-yellow-900"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 42px; margin-top: -12px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M394 480a16 16 0 0 1-9.39-3L256 383.76 127.39 477a16 16 0 0 1-24.55-18.08L153 310.35 23 221.2a16 16 0 0 1 9-29.2h160.38l48.4-148.95a16 16 0 0 1 30.44 0l48.4 149H480a16 16 0 0 1 9.05 29.2L359 310.35l50.13 148.53A16 16 0 0 1 394 480z"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                class="text-yellow-900"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 28px; margin-top: -8px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                  fill="none"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                class="text-yellow-900"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                style="font-size: 14px; margin-top: -4px;"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+                  fill="none"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </header>
