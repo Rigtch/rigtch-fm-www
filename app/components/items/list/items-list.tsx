@@ -78,7 +78,7 @@ function ItemsList({
 
   const carouselItems = sortedItems.slice(0, 3)
 
-  isTop && sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])
+  if (isTop) sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])
 
   return (
     <div className="flex flex-col gap-8">
