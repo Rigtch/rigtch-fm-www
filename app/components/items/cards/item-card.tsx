@@ -1,10 +1,11 @@
 'use client'
 
-import { ItemImage, ItemName, ItemArtists } from '../misc'
+import { ItemArtists, ItemImage, ItemName } from '../misc'
 
-import { Card } from '@app/components/ui/card'
-import { SpotifyLink } from '@app/components/common'
 import type { AlbumEntity, ArtistEntity, TrackEntity } from '@app/api/types'
+import { SpotifyLink } from '@app/components/common'
+import { Card } from '@app/components/ui/card'
+import { cn } from '@app/utils/cn'
 
 interface ItemCardAlbum
   extends Pick<AlbumEntity, 'images' | 'albumType' | 'releaseDate'> {
@@ -46,27 +47,35 @@ function ItemCard({
     <Card className="p-4 bg-neutral-800 rounded-lg flex flex-col gap-3">
       <ItemImage images={images ?? album} alt={name} size={200} />
 
-      <div>
+      <div
+        className={cn(!album && !artists && 'flex flex-row justify-between')}
+      >
         <ItemName
           name={name}
           href={`/${artists ? (album ? 'track' : 'album') : 'artist'}/${id}`}
           className="!max-w-[200px]"
         />
 
-        <div className="flex flex-row justify-between">
-          <div>
+        {album ?? albumType ? (
+          <div className="flex flex-row justify-between">
             {albumType && (
-              <>
+              <div>
                 {new Date(releaseDate).getFullYear()} &bull;&nbsp;
                 <span className="capitalize">{albumType}</span>
-              </>
+              </div>
             )}
+
+            {album && (
+              <div className="max-w-[150px] flex justify-start">
+                <ItemArtists artists={artists} />
+              </div>
+            )}
+
+            {(album ?? artists) && <SpotifyLink href={href} />}
           </div>
-
-          {album && <ItemArtists artists={artists} />}
-
+        ) : (
           <SpotifyLink href={href} />
-        </div>
+        )}
       </div>
     </Card>
   )
