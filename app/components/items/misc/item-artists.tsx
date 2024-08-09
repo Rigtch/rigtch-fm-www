@@ -1,8 +1,8 @@
 'use client'
 
+import type { ArtistEntity } from '@app/api/types'
 import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
-import type { ArtistEntity } from '@app/api/types'
 
 namespace ItemArtists {
   export type Props = Readonly<
@@ -14,7 +14,7 @@ namespace ItemArtists {
 
 function ItemArtists({ artists, className }: ItemArtists.Props) {
   return (
-    <>
+    <span className="truncate">
       {artists.map(({ name, id }, index) => (
         <span key={name}>
           <LinkButton
@@ -30,7 +30,7 @@ function ItemArtists({ artists, className }: ItemArtists.Props) {
           {index !== artists.length - 1 && <span>, </span>}
         </span>
       ))}
-    </>
+    </span>
   )
 }
 
