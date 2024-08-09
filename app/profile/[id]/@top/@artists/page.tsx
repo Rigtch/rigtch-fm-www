@@ -50,7 +50,11 @@ export default async function ProfileTopArtistsSubPage({
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )
-  const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
+  const timeRange = validateTimeRange(
+    searchParams[TIME_RANGE],
+    statsProvider,
+    createdAt
+  )
   const view = validateView(searchParams[VIEW])
 
   let items: ArtistEntity[] | RigtchStatsResponse<ArtistEntity>

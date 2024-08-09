@@ -13,6 +13,7 @@ import {
 } from '@app/profile/utils/validators'
 import { afterParamFactory } from '@app/profile/utils/factories'
 import { StatsProvider, type RigtchTimeRange } from '@app/profile/enums'
+import { getUser } from '@app/api/fetchers'
 
 export const runtime = 'edge'
 
@@ -21,18 +22,23 @@ export default async function ProfileTopAlbumsPage({
   params,
 }: ProfilePageProps) {
   const userId = validateId(params.id)
+  const token = await getServerToken()
+
+  if (!token) redirect('/')
+
+  const { createdAt } = await getUser(token, {
+    userId,
+  })
+
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )
   const timeRange = validateTimeRange(
     searchParams[TIME_RANGE],
-    StatsProvider.RIGTCH
+    StatsProvider.RIGTCH,
+    createdAt
   )
   const view = validateView(searchParams[VIEW])
-
-  const token = await getServerToken()
-
-  if (!token) redirect('/')
 
   const items = await getRigtchTopAlbums(token, {
     after: afterParamFactory(timeRange as RigtchTimeRange),

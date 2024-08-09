@@ -47,7 +47,11 @@ export default async function ProfileTopTracksSubPage({
     searchParams[STATS_PROVIDER],
     createdAt
   )
-  const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
+  const timeRange = validateTimeRange(
+    searchParams[TIME_RANGE],
+    statsProvider,
+    createdAt
+  )
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )

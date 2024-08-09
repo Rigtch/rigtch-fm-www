@@ -44,7 +44,11 @@ export default async function ProfileTopAlbumsSubPage({
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )
-  const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
+  const timeRange = validateTimeRange(
+    searchParams[TIME_RANGE],
+    statsProvider,
+    createdAt
+  )
   const view = validateView(searchParams[VIEW])
 
   if (statsProvider === StatsProvider.SPOTIFY) return null

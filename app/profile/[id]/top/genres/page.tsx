@@ -47,7 +47,11 @@ export default async function ProfileTopGenresPage({
   const statsMeasurement = validateStatsMeasurement(
     searchParams[STATS_MEASUREMENT]
   )
-  const timeRange = validateTimeRange(searchParams[TIME_RANGE], statsProvider)
+  const timeRange = validateTimeRange(
+    searchParams[TIME_RANGE],
+    statsProvider,
+    createdAt
+  )
 
   let items: string[] | RigtchStatsResponse<string>
 

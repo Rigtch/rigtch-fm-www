@@ -1,3 +1,5 @@
+import { isTimeRangeDisabled } from '../helpers'
+
 import {
   DEFAULT_RIGTCH_TIME_RANCE,
   DEFAULT_SPOTIFY_TIME_RANCE,
@@ -18,7 +20,8 @@ function isRigtchTimeRange(value: string): value is RigtchTimeRange {
 
 export function validateTimeRange(
   timeRange: string | string[] | null | undefined,
-  provider: StatsProvider
+  provider: StatsProvider,
+  userCreatedAt?: Date
 ) {
   if (typeof timeRange === 'string') {
     if (provider === StatsProvider.SPOTIFY && isSpotifyTimeRange(timeRange))
@@ -30,5 +33,7 @@ export function validateTimeRange(
 
   return provider === StatsProvider.SPOTIFY
     ? DEFAULT_SPOTIFY_TIME_RANCE
-    : DEFAULT_RIGTCH_TIME_RANCE
+    : isTimeRangeDisabled(DEFAULT_RIGTCH_TIME_RANCE, userCreatedAt)
+      ? RigtchTimeRange.WEEK
+      : DEFAULT_RIGTCH_TIME_RANCE
 }

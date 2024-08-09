@@ -35,7 +35,8 @@ export function StatsOptions() {
   const view = validateView(searchParams.get(VIEW))
   const timeRange = validateTimeRange(
     searchParams.get(TIME_RANGE),
-    statsProvider
+    statsProvider,
+    user?.createdAt
   )
 
   const route = pathname.split('/').at(-1)
