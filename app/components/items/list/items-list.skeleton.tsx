@@ -24,7 +24,7 @@ function ItemsListSkeleton({
 }: ItemsListSkeleton.Props) {
   return (
     <div className="flex flex-col gap-8">
-      {view === View.CARD && (
+      {view === View.TOP && (
         <>
           <div className="flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full">
             <div className="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full">
@@ -81,6 +81,21 @@ function ItemsListSkeleton({
 
                 {index !== 10 - 1 && <Separator />}
               </div>
+            ))}
+        </div>
+      )}
+
+      {view === View.CARD && (
+        <div className="flex flex-col md:flex-row gap-4">
+          {Array.from({ length: 10 })
+            .fill(0)
+            .map((_, index) => (
+              <ItemsListElementSkeleton
+                key={index}
+                withArtists={withArtists}
+                withPlayedAt={withPlayedAt}
+                withPlaysOrPlayTime={withProgress}
+              />
             ))}
         </div>
       )}

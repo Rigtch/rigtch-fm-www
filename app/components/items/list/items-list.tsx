@@ -1,6 +1,6 @@
 'use client'
 
-import { ItemTopCard } from '../cards'
+import { ItemCard, ItemTopCard } from '../cards'
 import type { ItemPosition } from '../misc'
 
 import { ItemsListElement } from './items-list-element'
@@ -20,6 +20,7 @@ import {
   CarouselPrevious,
 } from '@app/components/ui/carousel'
 import { Separator } from '@app/components/ui/separator'
+import { cn } from '@app/utils/cn'
 
 namespace ItemsList {
   export interface Props {
@@ -28,6 +29,7 @@ namespace ItemsList {
       | TrackEntity[]
       | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
     isTop?: boolean
+    isCard?: boolean
     positionSize?: ItemPosition.Props['size']
     positionClassName?: string
     lastItemSeparator?: boolean
@@ -37,6 +39,7 @@ namespace ItemsList {
 function ItemsList({
   items,
   isTop,
+  isCard,
   positionSize,
   positionClassName,
   lastItemSeparator = false,
@@ -112,17 +115,27 @@ function ItemsList({
         </>
       )}
 
-      <div className="flex flex-col">
+      <div
+        className={cn(
+          isCard
+            ? 'flex flex-wrap justify-center gap-4 w-full'
+            : 'flex flex-col'
+        )}
+      >
         {sortedItems.slice(isTop ? 3 : 0).map((item, index, items) => (
           <div key={index}>
-            {/* @ts-expect-error: conditional types are already handled */}
-            <ItemsListElement
-              {...item}
-              positionSize={positionSize}
-              positionClassName={positionClassName}
-            />
+            {isCard ? (
+              <ItemCard {...item} />
+            ) : (
+              /* @ts-expect-error: conditional types are already handled */
+              <ItemsListElement
+                {...item}
+                positionSize={positionSize}
+                positionClassName={positionClassName}
+              />
+            )}
 
-            {items.length === index + 1 ? (
+            {isCard ? null : items.length === index + 1 ? (
               lastItemSeparator ? (
                 <Separator />
               ) : null

@@ -59,13 +59,17 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       2h
@@ -156,13 +160,17 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       2h
@@ -253,13 +261,17 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       2h
@@ -356,13 +368,17 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     2h
@@ -453,13 +469,17 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     2h
@@ -550,13 +570,17 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     2h
@@ -700,13 +724,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       Track 1
                     </p>
                   </a>
-                  <span>
-                    <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                      href="/artist/123"
-                    >
-                      Darkthrone
-                    </a>
+                  <span
+                    class="truncate"
+                  >
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -783,13 +811,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       Track 1
                     </p>
                   </a>
-                  <span>
-                    <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                      href="/artist/123"
-                    >
-                      Darkthrone
-                    </a>
+                  <span
+                    class="truncate"
+                  >
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -870,13 +902,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       Track 1
                     </p>
                   </a>
-                  <span>
-                    <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                      href="/artist/123"
-                    >
-                      Darkthrone
-                    </a>
+                  <span
+                    class="truncate"
+                  >
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -972,13 +1008,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           Track 1
                         </p>
                       </a>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -1061,13 +1101,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           Track 1
                         </p>
                       </a>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -1150,13 +1194,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           Track 1
                         </p>
                       </a>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -1303,13 +1351,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     Track 1
                   </p>
                 </a>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                    href="/artist/123"
-                  >
-                    Darkthrone
-                  </a>
+                <span
+                  class="truncate"
+                >
+                  <span>
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                      href="/artist/123"
+                    >
+                      Darkthrone
+                    </a>
+                  </span>
                 </span>
               </div>
               <div
@@ -1386,13 +1438,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     Track 1
                   </p>
                 </a>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                    href="/artist/123"
-                  >
-                    Darkthrone
-                  </a>
+                <span
+                  class="truncate"
+                >
+                  <span>
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                      href="/artist/123"
+                    >
+                      Darkthrone
+                    </a>
+                  </span>
                 </span>
               </div>
               <div
@@ -1473,13 +1529,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     Track 1
                   </p>
                 </a>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                    href="/artist/123"
-                  >
-                    Darkthrone
-                  </a>
+                <span
+                  class="truncate"
+                >
+                  <span>
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                      href="/artist/123"
+                    >
+                      Darkthrone
+                    </a>
+                  </span>
                 </span>
               </div>
               <div
@@ -1575,13 +1635,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         Track 1
                       </p>
                     </a>
-                    <span>
-                      <a
-                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                        href="/artist/123"
-                      >
-                        Darkthrone
-                      </a>
+                    <span
+                      class="truncate"
+                    >
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </span>
                   </div>
                   <div
@@ -1664,13 +1728,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         Track 1
                       </p>
                     </a>
-                    <span>
-                      <a
-                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                        href="/artist/123"
-                      >
-                        Darkthrone
-                      </a>
+                    <span
+                      class="truncate"
+                    >
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </span>
                   </div>
                   <div
@@ -1753,13 +1821,17 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         Track 1
                       </p>
                     </a>
-                    <span>
-                      <a
-                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                        href="/artist/123"
-                      >
-                        Darkthrone
-                      </a>
+                    <span
+                      class="truncate"
+                    >
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </span>
                   </div>
                   <div
@@ -1973,13 +2045,17 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       100 plays
@@ -2070,13 +2146,17 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       100 plays
@@ -2167,13 +2247,17 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       100 plays
@@ -2270,13 +2354,17 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     100 plays
@@ -2367,13 +2455,17 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     100 plays
@@ -2464,13 +2556,17 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     100 plays
@@ -2614,13 +2710,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       Track 1
                     </p>
                   </a>
-                  <span>
-                    <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                      href="/artist/123"
-                    >
-                      Darkthrone
-                    </a>
+                  <span
+                    class="truncate"
+                  >
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -2697,13 +2797,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       Track 1
                     </p>
                   </a>
-                  <span>
-                    <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                      href="/artist/123"
-                    >
-                      Darkthrone
-                    </a>
+                  <span
+                    class="truncate"
+                  >
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -2784,13 +2888,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       Track 1
                     </p>
                   </a>
-                  <span>
-                    <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                      href="/artist/123"
-                    >
-                      Darkthrone
-                    </a>
+                  <span
+                    class="truncate"
+                  >
+                    <span>
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                        href="/artist/123"
+                      >
+                        Darkthrone
+                      </a>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -2886,13 +2994,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           Track 1
                         </p>
                       </a>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -2975,13 +3087,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           Track 1
                         </p>
                       </a>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -3064,13 +3180,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           Track 1
                         </p>
                       </a>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -3217,13 +3337,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     Track 1
                   </p>
                 </a>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                    href="/artist/123"
-                  >
-                    Darkthrone
-                  </a>
+                <span
+                  class="truncate"
+                >
+                  <span>
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                      href="/artist/123"
+                    >
+                      Darkthrone
+                    </a>
+                  </span>
                 </span>
               </div>
               <div
@@ -3300,13 +3424,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     Track 1
                   </p>
                 </a>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                    href="/artist/123"
-                  >
-                    Darkthrone
-                  </a>
+                <span
+                  class="truncate"
+                >
+                  <span>
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                      href="/artist/123"
+                    >
+                      Darkthrone
+                    </a>
+                  </span>
                 </span>
               </div>
               <div
@@ -3387,13 +3515,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     Track 1
                   </p>
                 </a>
-                <span>
-                  <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                    href="/artist/123"
-                  >
-                    Darkthrone
-                  </a>
+                <span
+                  class="truncate"
+                >
+                  <span>
+                    <a
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                      href="/artist/123"
+                    >
+                      Darkthrone
+                    </a>
+                  </span>
                 </span>
               </div>
               <div
@@ -3489,13 +3621,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         Track 1
                       </p>
                     </a>
-                    <span>
-                      <a
-                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                        href="/artist/123"
-                      >
-                        Darkthrone
-                      </a>
+                    <span
+                      class="truncate"
+                    >
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </span>
                   </div>
                   <div
@@ -3578,13 +3714,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         Track 1
                       </p>
                     </a>
-                    <span>
-                      <a
-                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                        href="/artist/123"
-                      >
-                        Darkthrone
-                      </a>
+                    <span
+                      class="truncate"
+                    >
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </span>
                   </div>
                   <div
@@ -3667,13 +3807,17 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         Track 1
                       </p>
                     </a>
-                    <span>
-                      <a
-                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
-                        href="/artist/123"
-                      >
-                        Darkthrone
-                      </a>
+                    <span
+                      class="truncate"
+                    >
+                      <span>
+                        <a
+                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-xl"
+                          href="/artist/123"
+                        >
+                          Darkthrone
+                        </a>
+                      </span>
                     </span>
                   </div>
                   <div
@@ -7701,19 +7845,23 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
-                        2 years ago
+                        2 lata temu
                       </p>
                     </div>
                   </div>
@@ -7793,19 +7941,23 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
-                        2 years ago
+                        2 lata temu
                       </p>
                     </div>
                   </div>
@@ -7885,19 +8037,23 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                       class="flex justify-between w-full items-center"
                     >
                       <div>
-                        <span>
-                          <a
-                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                            href="/artist/123"
-                          >
-                            Darkthrone
-                          </a>
+                        <span
+                          class="truncate"
+                        >
+                          <span>
+                            <a
+                              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                              href="/artist/123"
+                            >
+                              Darkthrone
+                            </a>
+                          </span>
                         </span>
                       </div>
                       <p
                         class="text-primary-foreground/80 whitespace-nowrap"
                       >
-                        2 years ago
+                        2 lata temu
                       </p>
                     </div>
                   </div>
@@ -7983,19 +8139,23 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <p
                       class="text-primary-foreground/80 whitespace-nowrap"
                     >
-                      2 years ago
+                      2 lata temu
                     </p>
                   </div>
                 </div>
@@ -8075,19 +8235,23 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <p
                       class="text-primary-foreground/80 whitespace-nowrap"
                     >
-                      2 years ago
+                      2 lata temu
                     </p>
                   </div>
                 </div>
@@ -8167,19 +8331,23 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                     class="flex justify-between w-full items-center"
                   >
                     <div>
-                      <span>
-                        <a
-                          class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
-                          href="/artist/123"
-                        >
-                          Darkthrone
-                        </a>
+                      <span
+                        class="truncate"
+                      >
+                        <span>
+                          <a
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                            href="/artist/123"
+                          >
+                            Darkthrone
+                          </a>
+                        </span>
                       </span>
                     </div>
                     <p
                       class="text-primary-foreground/80 whitespace-nowrap"
                     >
-                      2 years ago
+                      2 lata temu
                     </p>
                   </div>
                 </div>

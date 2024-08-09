@@ -1,32 +1,37 @@
 'use client'
 
-import { LuLayers, LuList } from 'react-icons/lu'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { LuLayers, LuList, LuStar } from 'react-icons/lu'
 
 import type { ProfileSelectProps } from './props'
 
+import { TooltipInfo } from '@app/components/common'
 import {
   Select,
+  SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectContent,
   SelectValue,
 } from '@app/components/ui/select'
 import { View } from '@app/profile/enums'
 import { formatSearchParams } from '@app/utils/formatters'
-import { TooltipInfo } from '@app/components/common'
 
 export function SelectView({ initialValue }: ProfileSelectProps<View>) {
   const viewOptions = [
     {
-      icon: <LuLayers />,
-      value: View.CARD,
-      label: 'Card',
+      icon: <LuStar />,
+      value: View.TOP,
+      label: 'Top',
     },
     {
       icon: <LuList />,
       value: View.LIST,
       label: 'List',
+    },
+    {
+      icon: <LuLayers />,
+      value: View.CARD,
+      label: 'Card',
     },
   ]
 
