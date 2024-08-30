@@ -13,6 +13,7 @@ export * from './success'
 export * from './track'
 export * from './user'
 export * from './rigtch-stats-response'
+export * from './total-items'
 
 export * from './http-method'
 
