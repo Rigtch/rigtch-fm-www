@@ -2,6 +2,7 @@
 
 import { useParams, usePathname, useSearchParams } from 'next/navigation'
 import {
+  LuBarChartBig,
   LuClock,
   LuDisc3,
   LuListMusic,
@@ -77,6 +78,13 @@ export function Sidebar() {
             />
           </main>
         </section>
+
+        <SidebarSectionItem
+          href={`/profile/${userId}/reports`}
+          label="Reports"
+          pathname={pathname}
+          icon={LuBarChartBig}
+        />
 
         <SidebarSectionItem
           href={`/profile/${userId}/history`}
