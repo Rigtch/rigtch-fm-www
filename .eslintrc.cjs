@@ -110,6 +110,7 @@ module.exports = {
     'tailwind.config.ts',
     'postcss.config.cjs',
     '.eslintrc.cjs',
+    'app/components/ui/chart.tsx',
   ],
   rules: {
     'no-undef': 'off',
