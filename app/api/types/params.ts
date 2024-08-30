@@ -29,3 +29,9 @@ export interface RigtchStatsParams extends UsersParams {
   limit?: number
   measurement?: StatsMeasurement
 }
+
+export type ReportsListeningParams = Omit<RigtchStatsParams, 'limit'>
+export type ReportsTotalItemsParams = Omit<
+  ReportsListeningParams,
+  'measurement'
+>
