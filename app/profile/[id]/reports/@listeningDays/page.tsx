@@ -3,6 +3,7 @@ import { LuMoveDown, LuMoveUp } from 'react-icons/lu'
 
 import { ListeningDaysChart } from '../components/charts'
 import { valueMeasurementFormatter, weekDays } from '../helpers'
+import { ReportSection } from '../sections'
 
 import { getReportsListeningDays } from '@app/api/fetchers/reports'
 import { getServerToken } from '@app/auth'
@@ -71,58 +72,56 @@ export default async function ProfileReportsListeningDaysPage({
   const averageDayValue = Math.floor(thisWeekTotal / weekDays.length)
 
   return (
-    <section className="flex flex-col gap-8 px-4">
-      <main className="flex justify-between gap-4">
-        <div className="w-1/2 flex flex-col gap-2 items-stretch">
-          <Card className="p-2">
-            <CardDescription>Total</CardDescription>
-            <CardContent>
-              <p className="text-3xl">
-                {valueMeasurementFormatter(thisWeekTotal, measurement)}
-              </p>
-              <p className="text-muted-foreground flex items-center gap-1">
-                {vsLastWeekTotalPercent > 0 ? <LuMoveUp /> : <LuMoveDown />}
-                {vsLastWeekTotalPercent}% vs last week
-              </p>
-            </CardContent>
-          </Card>
+    <ReportSection>
+      <div className="lg:w-1/2 flex flex-col gap-2 items-stretch">
+        <Card className="p-2">
+          <CardDescription>Total</CardDescription>
+          <CardContent>
+            <p className="text-3xl">
+              {valueMeasurementFormatter(thisWeekTotal, measurement)}
+            </p>
+            <p className="text-muted-foreground flex items-center gap-1">
+              {vsLastWeekTotalPercent > 0 ? <LuMoveUp /> : <LuMoveDown />}
+              {vsLastWeekTotalPercent}% vs last week
+            </p>
+          </CardContent>
+        </Card>
 
-          <Card className="p-2">
-            <CardDescription>Most listened day</CardDescription>
-            <CardContent className="text-2xl">
-              <span className="font-semibold">{mostListenedDay}:</span>&nbsp;
-              {valueMeasurementFormatter(mostListenedDayValue, measurement)}
-            </CardContent>
-          </Card>
+        <Card className="p-2">
+          <CardDescription>Most listened day</CardDescription>
+          <CardContent className="text-2xl">
+            <span className="font-semibold">{mostListenedDay}:</span>&nbsp;
+            {valueMeasurementFormatter(mostListenedDayValue, measurement)}
+          </CardContent>
+        </Card>
 
-          <Card className="p-2">
-            <CardDescription>Least listened day</CardDescription>
-            <CardContent className="text-2xl">
-              <span className="font-semibold">{leastListenedDay}:</span>&nbsp;
-              {valueMeasurementFormatter(leastListenedDayValue, measurement)}
-            </CardContent>
-          </Card>
+        <Card className="p-2">
+          <CardDescription>Least listened day</CardDescription>
+          <CardContent className="text-2xl">
+            <span className="font-semibold">{leastListenedDay}:</span>&nbsp;
+            {valueMeasurementFormatter(leastListenedDayValue, measurement)}
+          </CardContent>
+        </Card>
 
-          <Card className="p-2">
-            <CardDescription>
-              Average&nbsp;
-              {measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}
-              &nbsp;per day
-            </CardDescription>
-            <CardContent className="text-2xl">
-              <span className="font-semibold">
-                {valueMeasurementFormatter(averageDayValue, measurement)}
-              </span>
-            </CardContent>
-          </Card>
-        </div>
+        <Card className="p-2">
+          <CardDescription>
+            Average&nbsp;
+            {measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}
+            &nbsp;per day
+          </CardDescription>
+          <CardContent className="text-2xl">
+            <span className="font-semibold">
+              {valueMeasurementFormatter(averageDayValue, measurement)}
+            </span>
+          </CardContent>
+        </Card>
+      </div>
 
-        <ListeningDaysChart
-          thisWeekResponse={thisWeekResponse}
-          lastWeekResponse={lastWeekResponse}
-          measurement={measurement}
-        />
-      </main>
-    </section>
+      <ListeningDaysChart
+        thisWeekResponse={thisWeekResponse}
+        lastWeekResponse={lastWeekResponse}
+        measurement={measurement}
+      />
+    </ReportSection>
   )
 }

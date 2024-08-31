@@ -52,7 +52,10 @@ function ListeningDaysChart({
       : prettyMilliseconds(value, { unitCount: 2 })
 
   return (
-    <ChartContainer config={chartConfig} className="min-h-[200px] w-full dark">
+    <ChartContainer
+      config={chartConfig}
+      className="min-h-[300px] lg:min-h-[200px] w-full dark"
+    >
       <BarChart accessibilityLayer data={listeningDays}>
         <XAxis
           dataKey="day"
