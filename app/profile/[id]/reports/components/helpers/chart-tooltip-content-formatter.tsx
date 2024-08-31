@@ -1,7 +1,6 @@
 import type { ComponentProps, CSSProperties } from 'react'
 
-import { valueMeasurementFormatter } from '../../helpers/value-measurement-formatter'
-
+import { valueMeasurementFormatter } from '@app/profile/[id]/reports/helpers'
 import type { ChartTooltipContent } from '@app/components/ui/chart'
 import type { StatsMeasurement } from '@app/api/enums'
 
