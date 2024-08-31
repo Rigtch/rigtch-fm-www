@@ -3,6 +3,8 @@
 import prettyMilliseconds from 'pretty-ms'
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from 'recharts'
 
+import { weekDays } from '../helpers'
+
 import { chartTooltipContentFormatter } from './helpers'
 
 import { StatsMeasurement } from '@app/api/enums'
@@ -28,43 +30,11 @@ function ListeningDaysChart({
   lastWeekResponse,
   measurement,
 }: ListeningDaysChart.Props) {
-  const listeningDays = [
-    {
-      day: 'Monday',
-      thisWeek: thisWeekResponse[1],
-      lastWeek: lastWeekResponse[1],
-    },
-    {
-      day: 'Tuesday',
-      thisWeek: thisWeekResponse[2],
-      lastWeek: lastWeekResponse[2],
-    },
-    {
-      day: 'Wednesday',
-      thisWeek: thisWeekResponse[3],
-      lastWeek: lastWeekResponse[3],
-    },
-    {
-      day: 'Thursday',
-      thisWeek: thisWeekResponse[4],
-      lastWeek: lastWeekResponse[4],
-    },
-    {
-      day: 'Friday',
-      thisWeek: thisWeekResponse[5],
-      lastWeek: lastWeekResponse[5],
-    },
-    {
-      day: 'Saturday',
-      thisWeek: thisWeekResponse[6],
-      lastWeek: lastWeekResponse[6],
-    },
-    {
-      day: 'Sunday',
-      thisWeek: thisWeekResponse[7],
-      lastWeek: lastWeekResponse[7],
-    },
-  ]
+  const listeningDays = weekDays.map((day, index) => ({
+    day,
+    thisWeek: thisWeekResponse[index + 1],
+    lastWeek: lastWeekResponse[index + 1],
+  }))
 
   const chartConfig = {
     thisWeek: {
