@@ -11,6 +11,7 @@ import { STATS_MEASUREMENT } from '@app/profile/constants'
 import type { ProfilePageProps } from '@app/profile/types'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
+import { StatsMeasurement } from '@app/api/enums'
 
 export default async function ProfileReportsListeningDaysPage({
   params,
@@ -67,6 +68,8 @@ export default async function ProfileReportsListeningDaysPage({
   const leastListenedDay =
     weekDays[thisWeekResponseValues.indexOf(leastListenedDayValue)]
 
+  const averageDayValue = Math.floor(thisWeekTotal / weekDays.length)
+
   return (
     <section className="flex flex-col gap-8 px-4">
       <main className="flex justify-between gap-4">
@@ -97,6 +100,19 @@ export default async function ProfileReportsListeningDaysPage({
             <CardContent className="text-2xl">
               <span className="font-semibold">{leastListenedDay}:</span>&nbsp;
               {valueMeasurementFormatter(leastListenedDayValue, measurement)}
+            </CardContent>
+          </Card>
+
+          <Card className="p-2">
+            <CardDescription>
+              Average&nbsp;
+              {measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}
+              &nbsp;per day
+            </CardDescription>
+            <CardContent className="text-2xl">
+              <span className="font-semibold">
+                {valueMeasurementFormatter(averageDayValue, measurement)}
+              </span>
             </CardContent>
           </Card>
         </div>
