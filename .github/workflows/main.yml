@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, feat-reports-page]
   pull_request:
-    branches: '**'
+    branches: [main]
 
 jobs:
   build:
