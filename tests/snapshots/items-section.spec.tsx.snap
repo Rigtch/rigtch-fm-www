@@ -9,7 +9,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between px-4"
+          class="flex justify-between items-center px-4"
         >
           <h2
             class="text-5xl"
@@ -1179,7 +1179,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between px-4"
+        class="flex justify-between items-center px-4"
       >
         <h2
           class="text-5xl"
@@ -2406,7 +2406,7 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between px-4"
+          class="flex justify-between items-center px-4"
         >
           <h2
             class="text-5xl"
@@ -2461,7 +2461,7 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between px-4"
+        class="flex justify-between items-center px-4"
       >
         <h2
           class="text-5xl"
@@ -2573,7 +2573,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between px-4"
+          class="flex justify-between items-center px-4"
         >
           <h2
             class="text-5xl"
@@ -3598,7 +3598,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between px-4"
+        class="flex justify-between items-center px-4"
       >
         <h2
           class="text-5xl"
@@ -4680,7 +4680,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between px-4"
+          class="flex justify-between items-center px-4"
         >
           <h2
             class="text-5xl"
@@ -4982,7 +4982,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between px-4"
+        class="flex justify-between items-center px-4"
       >
         <h2
           class="text-5xl"
@@ -5341,7 +5341,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
         class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between px-4"
+          class="flex justify-between items-center px-4"
         >
           <h2
             class="text-5xl"
@@ -5643,7 +5643,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
       class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between px-4"
+        class="flex justify-between items-center px-4"
       >
         <h2
           class="text-5xl"
