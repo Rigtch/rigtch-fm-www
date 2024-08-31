@@ -9,14 +9,14 @@ export const env = createEnv({
     AUTH_SPOTIFY_ID: z.string(),
     AUTH_SPOTIFY_SECRET: z.string(),
     NEXTAUTH_URL: z.string().url(),
-    NEXTAUTH_SECRET: z.string(),
+    AUTH_SECRET: z.string(),
   },
   runtimeEnv: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
     AUTH_SPOTIFY_ID: process.env.AUTH_SPOTIFY_ID,
     AUTH_SPOTIFY_SECRET: process.env.AUTH_SPOTIFY_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+    AUTH_SECRET: process.env.AUTH_SECRET,
   },
   skipValidation: process.env.NODE_ENV === 'test',
 })
