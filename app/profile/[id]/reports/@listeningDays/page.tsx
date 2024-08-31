@@ -4,17 +4,21 @@ import { ListeningDaysChart } from '../components'
 
 import { getReportsListeningDays } from '@app/api/fetchers/reports'
 import { getServerToken } from '@app/auth'
+import { validateId } from '@app/utils/validators'
+import type { ProfilePageProps } from '@app/profile/types'
+import { STATS_MEASUREMENT } from '@app/profile/constants'
+import { validateStatsMeasurement } from '@app/profile/utils/validators'
 
-namespace ListeningDaysSection {
-  export interface Props {
-    userId: string
-  }
-}
-
-async function ListeningDaysSection({ userId }: ListeningDaysSection.Props) {
+export default async function ProfileReportsListeningDaysPage({
+  params,
+  searchParams,
+}: ProfilePageProps) {
   const token = await getServerToken()
 
   if (!token) redirect('/')
+
+  const userId = validateId(params.id)
+  const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
     getReportsListeningDays(token, {
@@ -22,6 +26,7 @@ async function ListeningDaysSection({ userId }: ListeningDaysSection.Props) {
       after: new Date(
         Date.now() - 1000 * 60 * 60 * 24 * (7 + new Date().getDay() - 1)
       ),
+      measurement,
     }),
     getReportsListeningDays(token, {
       userId,
@@ -31,6 +36,7 @@ async function ListeningDaysSection({ userId }: ListeningDaysSection.Props) {
       after: new Date(
         Date.now() - 1000 * 60 * 60 * 24 * (14 + new Date().getDay() - 1)
       ),
+      measurement,
     }),
   ])
 
@@ -44,10 +50,9 @@ async function ListeningDaysSection({ userId }: ListeningDaysSection.Props) {
         <ListeningDaysChart
           thisWeekResponse={thisWeekResponse}
           lastWeekResponse={lastWeekResponse}
+          measurement={measurement}
         />
       </main>
     </section>
   )
 }
-
-export { ListeningDaysSection }
