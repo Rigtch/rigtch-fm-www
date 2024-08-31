@@ -5,6 +5,7 @@ import type { HtmlHTMLAttributes } from 'react'
 import { useEffect, useState } from 'react'
 import type { Simplify } from 'type-fest'
 
+import { GenreBadge } from '../genre'
 import { ItemArtists, ItemImage, ItemPosition, RelativeTime } from '../misc'
 import type { PlayTimeOrPlays } from '../types'
 
@@ -53,7 +54,7 @@ namespace ItemsListElement {
           | ItemsListElementTrack
           | ItemsListElementArtist
         ) &
-        Pick<AlbumEntity, 'name' | 'href' | 'id'> &
+        Pick<AlbumEntity, 'name' | 'href' | 'id' | 'genres'> &
         Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
   >
@@ -71,6 +72,7 @@ function ItemsListElement({
   playedAt,
   album,
   playTime,
+  genres,
   maxPlayTime,
   plays,
   maxPlays,
@@ -87,6 +89,8 @@ function ItemsListElement({
       }, 200)
     }
   }, [plays, playTime, maxPlays, maxPlayTime])
+
+  console.log(genres)
 
   return (
     <div className={cn('relative overflow-hidden', className)}>
@@ -128,7 +132,17 @@ function ItemsListElement({
             </LinkButton>
 
             <div className="flex w-full items-center justify-between">
-              <div>{artists && <ItemArtists artists={artists} />}</div>
+              <div>
+                {artists ? (
+                  <ItemArtists artists={artists} />
+                ) : (
+                  genres
+                    .slice(0, 3)
+                    .map((genre, index) => (
+                      <GenreBadge key={index} genre={genre} />
+                    ))
+                )}
+              </div>
 
               {playedAt && <RelativeTime value={playedAt} />}
 
