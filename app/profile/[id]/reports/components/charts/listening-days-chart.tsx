@@ -3,10 +3,9 @@
 import prettyMilliseconds from 'pretty-ms'
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from 'recharts'
 
-import { weekDays } from '../helpers'
+import { chartTooltipContentFormatter } from '../helpers'
 
-import { chartTooltipContentFormatter } from './helpers'
-
+import { weekDays } from '@app/profile/[id]/reports/helpers'
 import { StatsMeasurement } from '@app/api/enums'
 import type { ChartConfig } from '@app/components/ui/chart'
 import {
