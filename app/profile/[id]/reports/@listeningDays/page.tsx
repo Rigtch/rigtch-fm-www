@@ -20,21 +20,27 @@ export default async function ProfileReportsListeningDaysPage({
   const userId = validateId(params.id)
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
+  const requestedWeekBeforeParam = new Date(
+    `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate() - new Date().getDay()}`
+  )
+  const requestedWeekAfterParam = new Date(
+    `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate() - new Date().getDay() - 7}`
+  )
+
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
     getReportsListeningDays(token, {
       userId,
-      after: new Date(
-        Date.now() - 1000 * 60 * 60 * 24 * (7 + new Date().getDay() - 1)
-      ),
+      before: requestedWeekBeforeParam,
+      after: requestedWeekAfterParam,
       measurement,
     }),
     getReportsListeningDays(token, {
       userId,
       before: new Date(
-        Date.now() - 1000 * 60 * 60 * 24 * (7 + new Date().getDay() - 1)
+        requestedWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7
       ),
       after: new Date(
-        Date.now() - 1000 * 60 * 60 * 24 * (14 + new Date().getDay() - 1)
+        requestedWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7
       ),
       measurement,
     }),
