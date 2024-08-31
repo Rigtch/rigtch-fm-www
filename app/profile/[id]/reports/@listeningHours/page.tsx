@@ -3,6 +3,7 @@ import { LuMoveDown, LuMoveUp } from 'react-icons/lu'
 
 import { ListeningHoursChart } from '../components/charts'
 import { valueMeasurementFormatter } from '../helpers'
+import { ReportSection } from '../sections'
 
 import { StatsMeasurement } from '@app/api/enums'
 import { getReportsListeningHours } from '@app/api/fetchers/reports'
@@ -62,51 +63,49 @@ export default async function ProfileReportsListeningHoursPage({
   )
 
   return (
-    <section className="flex flex-col gap-8 px-4">
-      <main className="flex gap-4 justify-between items-center">
-        <div className="w-1/2">
-          <ListeningHoursChart
-            thisWeekResponse={thisWeekResponse}
-            lastWeekResponse={lastWeekResponse}
-            measurement={measurement}
-          />
-        </div>
+    <ReportSection className="flex-col-reverse">
+      <div className="lg:w-1/2">
+        <ListeningHoursChart
+          thisWeekResponse={thisWeekResponse}
+          lastWeekResponse={lastWeekResponse}
+          measurement={measurement}
+        />
+      </div>
 
-        <div className="flex flex-col gap-4 justify-center items-center w-1/2">
-          <Card className="p-4 w-[400px] flex flex-col items-center justify-center gap-2">
-            <CardDescription className="p-0 font-semibold text-lg text-nowrap">
-              Most listened hour
-            </CardDescription>
-            <CardContent className="text-6xl ml-6">
-              {thisWeekMostListenedHour}:00
-            </CardContent>
-          </Card>
+      <div className="flex flex-col gap-4 justify-center items-center lg:w-1/2">
+        <Card className="p-4 w-[400px] flex flex-col items-center justify-center gap-2">
+          <CardDescription className="p-0 font-semibold text-lg text-nowrap">
+            Most listened hour
+          </CardDescription>
+          <CardContent className="text-6xl ml-6">
+            {thisWeekMostListenedHour}:00
+          </CardContent>
+        </Card>
 
-          <Card className="p-4 w-[400px] flex flex-col items-center justify-center gap-2">
-            <CardDescription className="p-0 font-semibold text-lg text-nowrap">
-              {measurement === StatsMeasurement.PLAYS ? 'Plays' : 'Playtime'} in
-              most listened hour
-            </CardDescription>
-            <CardContent>
-              <p className="text-6xl ml-6">
-                {valueMeasurementFormatter(
-                  thisWeekMostListenedHourValue,
-                  measurement
-                )}
-              </p>
-              <p className="text-muted-foreground flex items-center gap-1">
-                {vsLastWeekMostListenedHourPercent > 0 ? (
-                  <LuMoveUp />
-                ) : (
-                  <LuMoveDown />
-                )}
-                {vsLastWeekMostListenedHourPercent}% vs last&apos;s week most
-                listened hour
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
-    </section>
+        <Card className="p-4 w-[400px] flex flex-col items-center justify-center gap-2">
+          <CardDescription className="p-0 font-semibold text-lg text-nowrap">
+            {measurement === StatsMeasurement.PLAYS ? 'Plays' : 'Playtime'} in
+            most listened hour
+          </CardDescription>
+          <CardContent>
+            <p className="text-6xl ml-6">
+              {valueMeasurementFormatter(
+                thisWeekMostListenedHourValue,
+                measurement
+              )}
+            </p>
+            <p className="text-muted-foreground flex items-center gap-1">
+              {vsLastWeekMostListenedHourPercent > 0 ? (
+                <LuMoveUp />
+              ) : (
+                <LuMoveDown />
+              )}
+              {vsLastWeekMostListenedHourPercent}% vs last&apos;s week most
+              listened hour
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </ReportSection>
   )
 }
