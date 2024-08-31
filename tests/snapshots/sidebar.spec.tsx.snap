@@ -188,6 +188,41 @@ exports[`Sidebar > should match snapshot 1`] = `
           </section>
           <a
             class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+            href="/profile/1/reports"
+          >
+            <svg
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 3v18h18"
+              />
+              <rect
+                height="7"
+                rx="1"
+                width="4"
+                x="7"
+                y="10"
+              />
+              <rect
+                height="12"
+                rx="1"
+                width="4"
+                x="15"
+                y="5"
+              />
+            </svg>
+            Reports
+          </a>
+          <a
+            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
             href="/profile/1/history"
           >
             <svg
@@ -398,6 +433,41 @@ exports[`Sidebar > should match snapshot 1`] = `
             </a>
           </main>
         </section>
+        <a
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+          href="/profile/1/reports"
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 3v18h18"
+            />
+            <rect
+              height="7"
+              rx="1"
+              width="4"
+              x="7"
+              y="10"
+            />
+            <rect
+              height="12"
+              rx="1"
+              width="4"
+              x="15"
+              y="5"
+            />
+          </svg>
+          Reports
+        </a>
         <a
           class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
           href="/profile/1/history"
