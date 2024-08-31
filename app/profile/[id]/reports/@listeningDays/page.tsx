@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { LuMoveDown, LuMoveUp } from 'react-icons/lu'
 
-import { ListeningDaysChart } from '../components'
+import { ListeningDaysChart } from '../components/charts'
 import { valueMeasurementFormatter, weekDays } from '../helpers'
 
 import { getReportsListeningDays } from '@app/api/fetchers/reports'

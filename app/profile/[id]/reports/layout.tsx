@@ -12,10 +12,14 @@ import { validateStatsMeasurement } from '@app/profile/utils/validators'
 namespace ProfileReportsLayout {
   export interface Props extends ProfileLayoutBaseProps {
     listeningDays: ReactNode
+    listeningHours: ReactNode
   }
 }
 
-function ProfileReportsLayout({ listeningDays }: ProfileReportsLayout.Props) {
+function ProfileReportsLayout({
+  listeningDays,
+  listeningHours,
+}: ProfileReportsLayout.Props) {
   const searchParams = useSearchParams()
 
   const statsMeasurement = validateStatsMeasurement(
@@ -28,6 +32,7 @@ function ProfileReportsLayout({ listeningDays }: ProfileReportsLayout.Props) {
       headerAction={<SelectStatsMeasurement initialValue={statsMeasurement} />}
     >
       {listeningDays}
+      {listeningHours}
     </DefaultSection>
   )
 }
