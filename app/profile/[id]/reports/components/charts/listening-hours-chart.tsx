@@ -29,11 +29,15 @@ function ListeningHoursChart({
 }: ListeningHoursChart.Props) {
   const listeningHours = Array.from({
     length: Object.values(thisWeekResponse).length,
-  }).map((_, index) => ({
-    hour: index,
-    thisWeek: thisWeekResponse[index - 1],
-    lastWeek: lastWeekResponse[index - 1],
-  }))
+  }).map((_, index) => {
+    const responseIndex = index === 0 ? 24 : index
+
+    return {
+      hour: index,
+      thisWeek: thisWeekResponse[responseIndex],
+      lastWeek: lastWeekResponse[responseIndex],
+    }
+  })
 
   const chartConfig = {
     thisWeek: {
@@ -47,7 +51,7 @@ function ListeningHoursChart({
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="min-h-[350px] w-full dark">
+    <ChartContainer config={chartConfig} className="dark min-h-[350px] w-full">
       <RadarChart
         data={listeningHours}
         margin={{
