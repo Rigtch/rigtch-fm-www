@@ -38,12 +38,12 @@ function ProgressWithValueLabel({
       <Progress
         value={progressValue}
         className={cn(
-          'w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12',
+          'h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)]',
           animate && '*:transition-all *:duration-700 *:ease-in-out'
         )}
       />
 
-      <div className="absolute top-[2px] left-[15px]">{label}</div>
+      <div className="absolute left-[15px] top-[2px]">{label}</div>
     </div>
   )
 }
