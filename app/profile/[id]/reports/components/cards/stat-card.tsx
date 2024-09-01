@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import { LuMoveUp, LuMoveDown } from 'react-icons/lu'
+import { LuMoveUp, LuMoveDown, LuEqual } from 'react-icons/lu'
 
 import { Card, CardContent, CardDescription } from '@app/components/ui/card'
 import { cn } from '@app/utils/cn'
@@ -33,7 +33,7 @@ function StatCard({
     <Card
       className={cn(
         valueSize === 'xl'
-          ? 'flex w-full flex-col items-center justify-center gap-2 p-4 sm:w-[400px]'
+          ? 'flex w-full flex-col items-center justify-center gap-2 p-4 sm:w-[400px] 2xl:w-full'
           : 'p-2',
         className
       )}
@@ -58,9 +58,15 @@ function StatCard({
           {children}
         </p>
 
-        {vsLastWeekPercent && (
+        {vsLastWeekPercent !== undefined && (
           <p className="flex items-center gap-1 text-muted-foreground">
-            {vsLastWeekPercent > 0 ? <LuMoveUp /> : <LuMoveDown />}
+            {vsLastWeekPercent > 0 ? (
+              <LuMoveUp />
+            ) : vsLastWeekPercent < 0 ? (
+              <LuMoveDown />
+            ) : (
+              <LuEqual />
+            )}
             {vsLastWeekPercent}% vs last week
           </p>
         )}
