@@ -115,6 +115,16 @@ export const WithPlayTimeAndTop: ItemsListStory = {
   },
 }
 
+export const WithGengresDisplayLength: ItemsListStory = {
+  args: {
+    items: trackExamples.map(item => ({
+      ...item,
+      genres: ['Black Metal', 'Death Metal', 'Thrash Metal'],
+      genresDisplayLength: 2,
+    })),
+  },
+}
+
 export const Skeleton: ItemsListStory = {
   render: () => <ItemsListSkeleton />,
 }
