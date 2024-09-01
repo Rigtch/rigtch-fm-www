@@ -1,6 +1,7 @@
 'use client'
 
 import prettyMilliseconds from 'pretty-ms'
+import type { HtmlHTMLAttributes } from 'react'
 
 import { GenreBadge } from '../genre'
 import { ItemArtists, ItemImage, ItemName, ItemPosition } from '../misc'
@@ -35,7 +36,7 @@ namespace ItemTopCard {
     (ItemTopCardAlbum | ItemTopCardTrack | ItemTopCardArtist) & {
       position?: number
       isCarousel?: boolean
-    }
+    } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
 }
 
 function ItemTopCard({
@@ -51,21 +52,23 @@ function ItemTopCard({
   maxPlayTime,
   plays,
   maxPlays,
+  className,
 }: ItemTopCard.Props) {
   return (
     <div
       className={cn(
-        'w-full flex flex-col justify-start gap-2 h-full relative',
+        'relative flex h-full w-full flex-col justify-start gap-2',
         !isCarousel && position === 1 && '-top-16 lg:-top-24',
-        !isCarousel && position === 2 && '-top-8 lg:-top-12'
+        !isCarousel && position === 2 && '-top-8 lg:-top-12',
+        className
       )}
     >
-      <header className="w-full flex flex-col gap-2 items-center p-0 m-0">
+      <header className="m-0 flex w-full flex-col items-center gap-2 p-0">
         <div
           style={{
             backgroundImage: 'linear-gradient(to top right, #9400d5, #1e89ee)',
           }}
-          className="p-1 rounded-xl"
+          className="rounded-xl p-1"
         >
           <ItemImage images={images ?? album} alt={name} size={164} />
         </div>
@@ -80,13 +83,13 @@ function ItemTopCard({
           {artists && <ItemArtists artists={artists} className="text-xl" />}
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-4 w-full">
+        <div className="flex w-full flex-col items-center justify-center gap-4">
           {position && <ItemPosition position={position} size="xl" />}
 
-          {genres && (
+          {genres && genres.length > 0 && (
             <div
               className={cn(
-                'flex gap-2 flex-wrap justify-center h-full',
+                'flex h-full flex-wrap justify-center gap-2',
                 isCarousel ? 'flex-col' : 'flex-row'
               )}
             >
@@ -96,7 +99,7 @@ function ItemTopCard({
             </div>
           )}
 
-          <div className="flex flex-row gap-1 mt-4 w-full justify-center">
+          <div className="mt-4 flex w-full flex-row justify-center gap-1">
             {!playTime && !plays && position && (
               <ItemTopCardStars position={position} />
             )}
