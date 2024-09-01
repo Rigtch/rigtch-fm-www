@@ -9,10 +9,10 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
         class="relative overflow-hidden"
       >
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-xl"
@@ -32,20 +32,20 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/track/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div>
                   <span>
@@ -94,7 +94,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -130,10 +130,10 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
       class="relative overflow-hidden"
     >
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-xl"
@@ -153,20 +153,20 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/track/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div>
                 <span>
@@ -215,7 +215,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
@@ -308,14 +308,14 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
         class="relative overflow-hidden"
       >
         <div
-          class="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          class="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-primary transition-all duration-700 ease-in-out"
           style="width: calc(0% + 16px);"
         />
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-xl"
@@ -335,20 +335,20 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div />
                 4h 10m
@@ -356,7 +356,7 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -392,14 +392,14 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
       class="relative overflow-hidden"
     >
       <div
-        class="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+        class="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-primary transition-all duration-700 ease-in-out"
         style="width: calc(0% + 16px);"
       />
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-xl"
@@ -419,20 +419,20 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div />
               4h 10m
@@ -440,7 +440,7 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
@@ -533,10 +533,10 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
         class="relative overflow-hidden"
       >
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4 px-4 md:pl-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <img
               alt="Track 1"
@@ -551,20 +551,20 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div />
                 <p
@@ -576,7 +576,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -612,10 +612,10 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
       class="relative overflow-hidden"
     >
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4 px-4 md:pl-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <img
             alt="Track 1"
@@ -630,20 +630,20 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div />
               <p
@@ -655,7 +655,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
@@ -748,14 +748,14 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
         class="relative overflow-hidden"
       >
         <div
-          class="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          class="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-primary transition-all duration-700 ease-in-out"
           style="width: calc(0% + 16px);"
         />
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-xl"
@@ -775,20 +775,20 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div />
                 115 plays
@@ -796,7 +796,7 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -832,14 +832,14 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
       class="relative overflow-hidden"
     >
       <div
-        class="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+        class="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-primary transition-all duration-700 ease-in-out"
         style="width: calc(0% + 16px);"
       />
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-xl"
@@ -859,20 +859,20 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div />
               115 plays
@@ -880,7 +880,7 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
@@ -973,10 +973,10 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
         class="relative overflow-hidden"
       >
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-xl"
@@ -996,27 +996,27 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div />
               </div>
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -1052,10 +1052,10 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
       class="relative overflow-hidden"
     >
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-xl"
@@ -1075,27 +1075,27 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div />
             </div>
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
