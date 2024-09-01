@@ -1,18 +1,17 @@
 import { redirect } from 'next/navigation'
-import { LuMoveDown, LuMoveUp } from 'react-icons/lu'
 
+import { StatCard } from '../components/cards'
 import { ListeningDaysChart } from '../components/charts'
-import { valueMeasurementFormatter, weekDays } from '../helpers'
+import { getCursors, valueMeasurementFormatter, weekDays } from '../helpers'
 import { ReportSection } from '../sections'
 
+import { StatsMeasurement } from '@app/api/enums'
 import { getReportsListeningDays } from '@app/api/fetchers/reports'
 import { getServerToken } from '@app/auth'
-import { Card, CardContent, CardDescription } from '@app/components/ui/card'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
 import type { ProfilePageProps } from '@app/profile/types'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
-import { StatsMeasurement } from '@app/api/enums'
 
 export default async function ProfileReportsListeningDaysPage({
   params,
@@ -25,12 +24,8 @@ export default async function ProfileReportsListeningDaysPage({
   const userId = validateId(params.id)
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
-  const thisWeekBeforeParam = new Date(
-    `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate() - new Date().getDay()}`
-  )
-  const thisWeekAfterParam = new Date(
-    `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate() - new Date().getDay() - 7}`
-  )
+  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
+    getCursors()
 
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
     getReportsListeningDays(token, {
@@ -47,74 +42,66 @@ export default async function ProfileReportsListeningDaysPage({
     }),
   ])
 
-  const thisWeekResponseValues = Object.values(thisWeekResponse)
-  const lastWeekResponseValues = Object.values(lastWeekResponse)
+  const thisWeekValues = Object.values(thisWeekResponse)
+  const lastWeekValues = Object.values(lastWeekResponse)
 
-  const thisWeekTotal = thisWeekResponseValues.reduce(
+  const thisWeekTotal = thisWeekValues.reduce(
     (accumulator, value) => accumulator + value,
     0
   )
-  const previousWeekTotal = lastWeekResponseValues.reduce(
+  const lastWeekTotal = lastWeekValues.reduce(
     (accumulator, value) => accumulator + value,
     0
   )
-  const vsLastWeekTotalPercent = Math.floor(
-    ((thisWeekTotal - previousWeekTotal) / previousWeekTotal) * 100
-  )
 
-  const mostListenedDayValue = Math.max(...thisWeekResponseValues)
-  const mostListenedDay =
-    weekDays[thisWeekResponseValues.indexOf(mostListenedDayValue)]
-  const leastListenedDayValue = Math.min(...thisWeekResponseValues)
+  const thisWeekMostListenedDayValue = Math.max(...thisWeekValues)
+  const thisWeekMostListenedDay =
+    weekDays[thisWeekValues.indexOf(thisWeekMostListenedDayValue)]
+  const lastWeekMostListenedDayValue = Math.max(...lastWeekValues)
+
+  const leastListenedDayValue = Math.min(...thisWeekValues)
   const leastListenedDay =
-    weekDays[thisWeekResponseValues.indexOf(leastListenedDayValue)]
+    weekDays[thisWeekValues.indexOf(leastListenedDayValue)]
 
-  const averageDayValue = Math.floor(thisWeekTotal / weekDays.length)
+  const thisWeekAverageDayValue = Math.floor(thisWeekTotal / weekDays.length)
+  const lastWeekAverageDayValue = Math.floor(lastWeekTotal / weekDays.length)
 
   return (
     <ReportSection>
-      <div className="lg:w-1/2 flex flex-col gap-2 items-stretch">
-        <Card className="p-2">
-          <CardDescription>Total</CardDescription>
-          <CardContent>
-            <p className="text-3xl">
-              {valueMeasurementFormatter(thisWeekTotal, measurement)}
-            </p>
-            <p className="text-muted-foreground flex items-center gap-1">
-              {vsLastWeekTotalPercent > 0 ? <LuMoveUp /> : <LuMoveDown />}
-              {vsLastWeekTotalPercent}% vs last week
-            </p>
-          </CardContent>
-        </Card>
+      <div className="flex flex-col items-stretch gap-2 lg:w-1/2">
+        <StatCard
+          label="Total"
+          value={thisWeekTotal}
+          lastWeekValue={lastWeekTotal}
+          valueSize="lg"
+        >
+          {valueMeasurementFormatter(thisWeekTotal, measurement)}
+        </StatCard>
 
-        <Card className="p-2">
-          <CardDescription>Most listened day</CardDescription>
-          <CardContent className="text-2xl">
-            <span className="font-semibold">{mostListenedDay}:</span>&nbsp;
-            {valueMeasurementFormatter(mostListenedDayValue, measurement)}
-          </CardContent>
-        </Card>
+        <StatCard
+          label="Most listened day"
+          value={thisWeekMostListenedDayValue}
+          lastWeekValue={lastWeekMostListenedDayValue}
+        >
+          <span className="font-semibold">{thisWeekMostListenedDay}:</span>
+          &nbsp;
+          {valueMeasurementFormatter(thisWeekMostListenedDayValue, measurement)}
+        </StatCard>
 
-        <Card className="p-2">
-          <CardDescription>Least listened day</CardDescription>
-          <CardContent className="text-2xl">
-            <span className="font-semibold">{leastListenedDay}:</span>&nbsp;
-            {valueMeasurementFormatter(leastListenedDayValue, measurement)}
-          </CardContent>
-        </Card>
+        <StatCard label="Least listened day" value={leastListenedDayValue}>
+          <span className="font-semibold">{leastListenedDay}:</span>
+          &nbsp;
+          {valueMeasurementFormatter(leastListenedDayValue, measurement)}
+        </StatCard>
 
-        <Card className="p-2">
-          <CardDescription>
-            Average&nbsp;
-            {measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}
-            &nbsp;per day
-          </CardDescription>
-          <CardContent className="text-2xl">
-            <span className="font-semibold">
-              {valueMeasurementFormatter(averageDayValue, measurement)}
-            </span>
-          </CardContent>
-        </Card>
+        <StatCard
+          label={`Average ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'} per day`}
+          value={thisWeekAverageDayValue}
+          lastWeekValue={lastWeekAverageDayValue}
+          valueSize="lg"
+        >
+          {valueMeasurementFormatter(thisWeekAverageDayValue, measurement)}
+        </StatCard>
       </div>
 
       <ListeningDaysChart
