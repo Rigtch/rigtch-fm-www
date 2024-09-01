@@ -24,19 +24,19 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
             class="flex flex-col gap-8"
           >
             <div
-              class="hidden md:flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full"
+              class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
             >
               <div
-                class="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full"
+                class="flex h-full flex-col-reverse justify-center gap-4 md:w-2/3 md:flex-row"
               >
                 <div
-                  class="w-full flex flex-col justify-start gap-2 h-full relative -top-8 lg:-top-12"
+                  class="relative flex h-full w-full flex-col justify-start gap-2 -top-8 lg:-top-12"
                 >
                   <header
-                    class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                    class="m-0 flex w-full flex-col items-center gap-2 p-0"
                   >
                     <div
-                      class="p-1 rounded-xl"
+                      class="rounded-xl p-1"
                     >
                       <img
                         alt="Darkthrone"
@@ -66,7 +66,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </a>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4 w-full"
+                      class="flex w-full flex-col items-center justify-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -74,7 +74,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         2
                       </span>
                       <div
-                        class="flex gap-2 flex-wrap justify-center h-full flex-row"
+                        class="flex h-full flex-wrap justify-center gap-2 flex-row"
                       >
                         <div
                           class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -93,7 +93,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-row gap-1 mt-4 w-full justify-center"
+                        class="mt-4 flex w-full flex-row justify-center gap-1"
                       >
                         <div>
                           <svg
@@ -191,13 +191,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                   </header>
                 </div>
                 <div
-                  class="w-full flex flex-col justify-start gap-2 h-full relative -top-16 lg:-top-24"
+                  class="relative flex h-full w-full flex-col justify-start gap-2 -top-16 lg:-top-24"
                 >
                   <header
-                    class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                    class="m-0 flex w-full flex-col items-center gap-2 p-0"
                   >
                     <div
-                      class="p-1 rounded-xl"
+                      class="rounded-xl p-1"
                     >
                       <img
                         alt="Darkthrone"
@@ -227,7 +227,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </a>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4 w-full"
+                      class="flex w-full flex-col items-center justify-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -235,7 +235,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         1
                       </span>
                       <div
-                        class="flex gap-2 flex-wrap justify-center h-full flex-row"
+                        class="flex h-full flex-wrap justify-center gap-2 flex-row"
                       >
                         <div
                           class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -254,7 +254,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-row gap-1 mt-4 w-full justify-center"
+                        class="mt-4 flex w-full flex-row justify-center gap-1"
                       >
                         <div>
                           <svg
@@ -347,16 +347,16 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                 </div>
               </div>
               <div
-                class="md:w-1/3 h-full"
+                class="h-full md:w-1/3"
               >
                 <div
-                  class="w-full flex flex-col justify-start gap-2 h-full relative"
+                  class="relative flex h-full w-full flex-col justify-start gap-2"
                 >
                   <header
-                    class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                    class="m-0 flex w-full flex-col items-center gap-2 p-0"
                   >
                     <div
-                      class="p-1 rounded-xl"
+                      class="rounded-xl p-1"
                     >
                       <img
                         alt="Darkthrone"
@@ -386,7 +386,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </a>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4 w-full"
+                      class="flex w-full flex-col items-center justify-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -394,7 +394,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         3
                       </span>
                       <div
-                        class="flex gap-2 flex-wrap justify-center h-full flex-row"
+                        class="flex h-full flex-wrap justify-center gap-2 flex-row"
                       >
                         <div
                           class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -413,7 +413,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-row gap-1 mt-4 w-full justify-center"
+                        class="mt-4 flex w-full flex-row justify-center gap-1"
                       >
                         <div>
                           <svg
@@ -520,7 +520,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
             </div>
             <div
               aria-roledescription="carousel"
-              class="relative md:hidden self-center max-w-[60vw] sm:max-w-[300px]"
+              class="relative max-w-[60vw] self-center sm:max-w-[300px] md:hidden"
               role="region"
             >
               <div
@@ -536,13 +536,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     role="group"
                   >
                     <div
-                      class="w-full flex flex-col justify-start gap-2 h-full relative"
+                      class="relative flex h-full w-full flex-col justify-start gap-2"
                     >
                       <header
-                        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                        class="m-0 flex w-full flex-col items-center gap-2 p-0"
                       >
                         <div
-                          class="p-1 rounded-xl"
+                          class="rounded-xl p-1"
                         >
                           <img
                             alt="Darkthrone"
@@ -572,7 +572,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </a>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4 w-full"
+                          class="flex w-full flex-col items-center justify-center gap-4"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -580,7 +580,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             1
                           </span>
                           <div
-                            class="flex gap-2 flex-wrap justify-center h-full flex-col"
+                            class="flex h-full flex-wrap justify-center gap-2 flex-col"
                           >
                             <div
                               class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -599,7 +599,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex flex-row gap-1 mt-4 w-full justify-center"
+                            class="mt-4 flex w-full flex-row justify-center gap-1"
                           >
                             <div>
                               <svg
@@ -697,13 +697,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     role="group"
                   >
                     <div
-                      class="w-full flex flex-col justify-start gap-2 h-full relative"
+                      class="relative flex h-full w-full flex-col justify-start gap-2"
                     >
                       <header
-                        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                        class="m-0 flex w-full flex-col items-center gap-2 p-0"
                       >
                         <div
-                          class="p-1 rounded-xl"
+                          class="rounded-xl p-1"
                         >
                           <img
                             alt="Darkthrone"
@@ -733,7 +733,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </a>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4 w-full"
+                          class="flex w-full flex-col items-center justify-center gap-4"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -741,7 +741,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             2
                           </span>
                           <div
-                            class="flex gap-2 flex-wrap justify-center h-full flex-col"
+                            class="flex h-full flex-wrap justify-center gap-2 flex-col"
                           >
                             <div
                               class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -760,7 +760,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex flex-row gap-1 mt-4 w-full justify-center"
+                            class="mt-4 flex w-full flex-row justify-center gap-1"
                           >
                             <div>
                               <svg
@@ -864,13 +864,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     role="group"
                   >
                     <div
-                      class="w-full flex flex-col justify-start gap-2 h-full relative"
+                      class="relative flex h-full w-full flex-col justify-start gap-2"
                     >
                       <header
-                        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                        class="m-0 flex w-full flex-col items-center gap-2 p-0"
                       >
                         <div
-                          class="p-1 rounded-xl"
+                          class="rounded-xl p-1"
                         >
                           <img
                             alt="Darkthrone"
@@ -900,7 +900,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </a>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4 w-full"
+                          class="flex w-full flex-col items-center justify-center gap-4"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -908,7 +908,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             3
                           </span>
                           <div
-                            class="flex gap-2 flex-wrap justify-center h-full flex-col"
+                            class="flex h-full flex-wrap justify-center gap-2 flex-col"
                           >
                             <div
                               class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -927,7 +927,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex flex-row gap-1 mt-4 w-full justify-center"
+                            class="mt-4 flex w-full flex-row justify-center gap-1"
                           >
                             <div>
                               <svg
@@ -1092,10 +1092,10 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                    class="flex flex-row justify-between gap-2 p-2 md:gap-4"
                   >
                     <header
-                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                      class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-xl"
@@ -1115,27 +1115,27 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         width="48"
                       />
                       <div
-                        class="flex flex-col items-start w-full overflow-hidden"
+                        class="flex w-full flex-col items-start overflow-hidden"
                       >
                         <a
-                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                           href="/artist/4"
                         >
                           <h3
-                            class="text-xl md:text-2xl truncate"
+                            class="truncate text-xl md:text-2xl"
                           >
                             Darkthrone
                           </h3>
                         </a>
                         <div
-                          class="flex justify-between w-full items-center"
+                          class="flex w-full items-center justify-between"
                         >
                           <div />
                         </div>
                       </div>
                     </header>
                     <div
-                      class="self-end min-w-[22px]"
+                      class="min-w-[22px] self-end"
                     >
                       <button
                         data-state="closed"
@@ -1194,19 +1194,19 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
           class="flex flex-col gap-8"
         >
           <div
-            class="hidden md:flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full"
+            class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
           >
             <div
-              class="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full"
+              class="flex h-full flex-col-reverse justify-center gap-4 md:w-2/3 md:flex-row"
             >
               <div
-                class="w-full flex flex-col justify-start gap-2 h-full relative -top-8 lg:-top-12"
+                class="relative flex h-full w-full flex-col justify-start gap-2 -top-8 lg:-top-12"
               >
                 <header
-                  class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                  class="m-0 flex w-full flex-col items-center gap-2 p-0"
                 >
                   <div
-                    class="p-1 rounded-xl"
+                    class="rounded-xl p-1"
                   >
                     <img
                       alt="Darkthrone"
@@ -1236,7 +1236,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     </a>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4 w-full"
+                    class="flex w-full flex-col items-center justify-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -1244,7 +1244,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       2
                     </span>
                     <div
-                      class="flex gap-2 flex-wrap justify-center h-full flex-row"
+                      class="flex h-full flex-wrap justify-center gap-2 flex-row"
                     >
                       <div
                         class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1263,7 +1263,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-1 mt-4 w-full justify-center"
+                      class="mt-4 flex w-full flex-row justify-center gap-1"
                     >
                       <div>
                         <svg
@@ -1361,13 +1361,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                 </header>
               </div>
               <div
-                class="w-full flex flex-col justify-start gap-2 h-full relative -top-16 lg:-top-24"
+                class="relative flex h-full w-full flex-col justify-start gap-2 -top-16 lg:-top-24"
               >
                 <header
-                  class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                  class="m-0 flex w-full flex-col items-center gap-2 p-0"
                 >
                   <div
-                    class="p-1 rounded-xl"
+                    class="rounded-xl p-1"
                   >
                     <img
                       alt="Darkthrone"
@@ -1397,7 +1397,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     </a>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4 w-full"
+                    class="flex w-full flex-col items-center justify-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -1405,7 +1405,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       1
                     </span>
                     <div
-                      class="flex gap-2 flex-wrap justify-center h-full flex-row"
+                      class="flex h-full flex-wrap justify-center gap-2 flex-row"
                     >
                       <div
                         class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1424,7 +1424,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-1 mt-4 w-full justify-center"
+                      class="mt-4 flex w-full flex-row justify-center gap-1"
                     >
                       <div>
                         <svg
@@ -1517,16 +1517,16 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
               </div>
             </div>
             <div
-              class="md:w-1/3 h-full"
+              class="h-full md:w-1/3"
             >
               <div
-                class="w-full flex flex-col justify-start gap-2 h-full relative"
+                class="relative flex h-full w-full flex-col justify-start gap-2"
               >
                 <header
-                  class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                  class="m-0 flex w-full flex-col items-center gap-2 p-0"
                 >
                   <div
-                    class="p-1 rounded-xl"
+                    class="rounded-xl p-1"
                   >
                     <img
                       alt="Darkthrone"
@@ -1556,7 +1556,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                     </a>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4 w-full"
+                    class="flex w-full flex-col items-center justify-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -1564,7 +1564,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       3
                     </span>
                     <div
-                      class="flex gap-2 flex-wrap justify-center h-full flex-row"
+                      class="flex h-full flex-wrap justify-center gap-2 flex-row"
                     >
                       <div
                         class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1583,7 +1583,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-1 mt-4 w-full justify-center"
+                      class="mt-4 flex w-full flex-row justify-center gap-1"
                     >
                       <div>
                         <svg
@@ -1690,7 +1690,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
           </div>
           <div
             aria-roledescription="carousel"
-            class="relative md:hidden self-center max-w-[60vw] sm:max-w-[300px]"
+            class="relative max-w-[60vw] self-center sm:max-w-[300px] md:hidden"
             role="region"
           >
             <div
@@ -1706,13 +1706,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                   role="group"
                 >
                   <div
-                    class="w-full flex flex-col justify-start gap-2 h-full relative"
+                    class="relative flex h-full w-full flex-col justify-start gap-2"
                   >
                     <header
-                      class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                      class="m-0 flex w-full flex-col items-center gap-2 p-0"
                     >
                       <div
-                        class="p-1 rounded-xl"
+                        class="rounded-xl p-1"
                       >
                         <img
                           alt="Darkthrone"
@@ -1742,7 +1742,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </a>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4 w-full"
+                        class="flex w-full flex-col items-center justify-center gap-4"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -1750,7 +1750,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           1
                         </span>
                         <div
-                          class="flex gap-2 flex-wrap justify-center h-full flex-col"
+                          class="flex h-full flex-wrap justify-center gap-2 flex-col"
                         >
                           <div
                             class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1769,7 +1769,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-row gap-1 mt-4 w-full justify-center"
+                          class="mt-4 flex w-full flex-row justify-center gap-1"
                         >
                           <div>
                             <svg
@@ -1867,13 +1867,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                   role="group"
                 >
                   <div
-                    class="w-full flex flex-col justify-start gap-2 h-full relative"
+                    class="relative flex h-full w-full flex-col justify-start gap-2"
                   >
                     <header
-                      class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                      class="m-0 flex w-full flex-col items-center gap-2 p-0"
                     >
                       <div
-                        class="p-1 rounded-xl"
+                        class="rounded-xl p-1"
                       >
                         <img
                           alt="Darkthrone"
@@ -1903,7 +1903,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </a>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4 w-full"
+                        class="flex w-full flex-col items-center justify-center gap-4"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -1911,7 +1911,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           2
                         </span>
                         <div
-                          class="flex gap-2 flex-wrap justify-center h-full flex-col"
+                          class="flex h-full flex-wrap justify-center gap-2 flex-col"
                         >
                           <div
                             class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1930,7 +1930,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-row gap-1 mt-4 w-full justify-center"
+                          class="mt-4 flex w-full flex-row justify-center gap-1"
                         >
                           <div>
                             <svg
@@ -2034,13 +2034,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                   role="group"
                 >
                   <div
-                    class="w-full flex flex-col justify-start gap-2 h-full relative"
+                    class="relative flex h-full w-full flex-col justify-start gap-2"
                   >
                     <header
-                      class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                      class="m-0 flex w-full flex-col items-center gap-2 p-0"
                     >
                       <div
-                        class="p-1 rounded-xl"
+                        class="rounded-xl p-1"
                       >
                         <img
                           alt="Darkthrone"
@@ -2070,7 +2070,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         </a>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4 w-full"
+                        class="flex w-full flex-col items-center justify-center gap-4"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -2078,7 +2078,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           3
                         </span>
                         <div
-                          class="flex gap-2 flex-wrap justify-center h-full flex-col"
+                          class="flex h-full flex-wrap justify-center gap-2 flex-col"
                         >
                           <div
                             class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -2097,7 +2097,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-row gap-1 mt-4 w-full justify-center"
+                          class="mt-4 flex w-full flex-row justify-center gap-1"
                         >
                           <div>
                             <svg
@@ -2262,10 +2262,10 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                  class="flex flex-row justify-between gap-2 p-2 md:gap-4"
                 >
                   <header
-                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-xl"
@@ -2285,27 +2285,27 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       width="48"
                     />
                     <div
-                      class="flex flex-col items-start w-full overflow-hidden"
+                      class="flex w-full flex-col items-start overflow-hidden"
                     >
                       <a
-                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                         href="/artist/4"
                       >
                         <h3
-                          class="text-xl md:text-2xl truncate"
+                          class="truncate text-xl md:text-2xl"
                         >
                           Darkthrone
                         </h3>
                       </a>
                       <div
-                        class="flex justify-between w-full items-center"
+                        class="flex w-full items-center justify-between"
                       >
                         <div />
                       </div>
                     </div>
                   </header>
                   <div
-                    class="self-end min-w-[22px]"
+                    class="min-w-[22px] self-end"
                   >
                     <button
                       data-state="closed"
@@ -2588,19 +2588,19 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
             class="flex flex-col gap-8"
           >
             <div
-              class="hidden md:flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full"
+              class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
             >
               <div
-                class="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full"
+                class="flex h-full flex-col-reverse justify-center gap-4 md:w-2/3 md:flex-row"
               >
                 <div
-                  class="w-full flex flex-col justify-start gap-2 h-full relative -top-8 lg:-top-12"
+                  class="relative flex h-full w-full flex-col justify-start gap-2 -top-8 lg:-top-12"
                 >
                   <header
-                    class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                    class="m-0 flex w-full flex-col items-center gap-2 p-0"
                   >
                     <div
-                      class="p-1 rounded-xl"
+                      class="rounded-xl p-1"
                     >
                       <img
                         alt="Track 1"
@@ -2638,7 +2638,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       </span>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4 w-full"
+                      class="flex w-full flex-col items-center justify-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -2646,7 +2646,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         2
                       </span>
                       <div
-                        class="flex flex-row gap-1 mt-4 w-full justify-center"
+                        class="mt-4 flex w-full flex-row justify-center gap-1"
                       >
                         <div>
                           <svg
@@ -2744,13 +2744,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                   </header>
                 </div>
                 <div
-                  class="w-full flex flex-col justify-start gap-2 h-full relative -top-16 lg:-top-24"
+                  class="relative flex h-full w-full flex-col justify-start gap-2 -top-16 lg:-top-24"
                 >
                   <header
-                    class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                    class="m-0 flex w-full flex-col items-center gap-2 p-0"
                   >
                     <div
-                      class="p-1 rounded-xl"
+                      class="rounded-xl p-1"
                     >
                       <img
                         alt="Track 1"
@@ -2788,7 +2788,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       </span>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4 w-full"
+                      class="flex w-full flex-col items-center justify-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -2796,7 +2796,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         1
                       </span>
                       <div
-                        class="flex flex-row gap-1 mt-4 w-full justify-center"
+                        class="mt-4 flex w-full flex-row justify-center gap-1"
                       >
                         <div>
                           <svg
@@ -2889,16 +2889,16 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                 </div>
               </div>
               <div
-                class="md:w-1/3 h-full"
+                class="h-full md:w-1/3"
               >
                 <div
-                  class="w-full flex flex-col justify-start gap-2 h-full relative"
+                  class="relative flex h-full w-full flex-col justify-start gap-2"
                 >
                   <header
-                    class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                    class="m-0 flex w-full flex-col items-center gap-2 p-0"
                   >
                     <div
-                      class="p-1 rounded-xl"
+                      class="rounded-xl p-1"
                     >
                       <img
                         alt="Track 1"
@@ -2936,7 +2936,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       </span>
                     </div>
                     <div
-                      class="flex flex-col justify-center items-center gap-4 w-full"
+                      class="flex w-full flex-col items-center justify-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-5xl"
@@ -2944,7 +2944,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         3
                       </span>
                       <div
-                        class="flex flex-row gap-1 mt-4 w-full justify-center"
+                        class="mt-4 flex w-full flex-row justify-center gap-1"
                       >
                         <div>
                           <svg
@@ -3051,7 +3051,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
             </div>
             <div
               aria-roledescription="carousel"
-              class="relative md:hidden self-center max-w-[60vw] sm:max-w-[300px]"
+              class="relative max-w-[60vw] self-center sm:max-w-[300px] md:hidden"
               role="region"
             >
               <div
@@ -3067,13 +3067,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     role="group"
                   >
                     <div
-                      class="w-full flex flex-col justify-start gap-2 h-full relative"
+                      class="relative flex h-full w-full flex-col justify-start gap-2"
                     >
                       <header
-                        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                        class="m-0 flex w-full flex-col items-center gap-2 p-0"
                       >
                         <div
-                          class="p-1 rounded-xl"
+                          class="rounded-xl p-1"
                         >
                           <img
                             alt="Track 1"
@@ -3111,7 +3111,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4 w-full"
+                          class="flex w-full flex-col items-center justify-center gap-4"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -3119,7 +3119,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             1
                           </span>
                           <div
-                            class="flex flex-row gap-1 mt-4 w-full justify-center"
+                            class="mt-4 flex w-full flex-row justify-center gap-1"
                           >
                             <div>
                               <svg
@@ -3217,13 +3217,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     role="group"
                   >
                     <div
-                      class="w-full flex flex-col justify-start gap-2 h-full relative"
+                      class="relative flex h-full w-full flex-col justify-start gap-2"
                     >
                       <header
-                        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                        class="m-0 flex w-full flex-col items-center gap-2 p-0"
                       >
                         <div
-                          class="p-1 rounded-xl"
+                          class="rounded-xl p-1"
                         >
                           <img
                             alt="Track 1"
@@ -3261,7 +3261,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4 w-full"
+                          class="flex w-full flex-col items-center justify-center gap-4"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -3269,7 +3269,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             2
                           </span>
                           <div
-                            class="flex flex-row gap-1 mt-4 w-full justify-center"
+                            class="mt-4 flex w-full flex-row justify-center gap-1"
                           >
                             <div>
                               <svg
@@ -3373,13 +3373,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     role="group"
                   >
                     <div
-                      class="w-full flex flex-col justify-start gap-2 h-full relative"
+                      class="relative flex h-full w-full flex-col justify-start gap-2"
                     >
                       <header
-                        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                        class="m-0 flex w-full flex-col items-center gap-2 p-0"
                       >
                         <div
-                          class="p-1 rounded-xl"
+                          class="rounded-xl p-1"
                         >
                           <img
                             alt="Track 1"
@@ -3417,7 +3417,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex flex-col justify-center items-center gap-4 w-full"
+                          class="flex w-full flex-col items-center justify-center gap-4"
                         >
                           <span
                             class="text-center w-[2rem] text-5xl"
@@ -3425,7 +3425,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             3
                           </span>
                           <div
-                            class="flex flex-row gap-1 mt-4 w-full justify-center"
+                            class="mt-4 flex w-full flex-row justify-center gap-1"
                           >
                             <div>
                               <svg
@@ -3613,19 +3613,19 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
           class="flex flex-col gap-8"
         >
           <div
-            class="hidden md:flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full"
+            class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
           >
             <div
-              class="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full"
+              class="flex h-full flex-col-reverse justify-center gap-4 md:w-2/3 md:flex-row"
             >
               <div
-                class="w-full flex flex-col justify-start gap-2 h-full relative -top-8 lg:-top-12"
+                class="relative flex h-full w-full flex-col justify-start gap-2 -top-8 lg:-top-12"
               >
                 <header
-                  class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                  class="m-0 flex w-full flex-col items-center gap-2 p-0"
                 >
                   <div
-                    class="p-1 rounded-xl"
+                    class="rounded-xl p-1"
                   >
                     <img
                       alt="Track 1"
@@ -3663,7 +3663,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     </span>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4 w-full"
+                    class="flex w-full flex-col items-center justify-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -3671,7 +3671,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       2
                     </span>
                     <div
-                      class="flex flex-row gap-1 mt-4 w-full justify-center"
+                      class="mt-4 flex w-full flex-row justify-center gap-1"
                     >
                       <div>
                         <svg
@@ -3769,13 +3769,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                 </header>
               </div>
               <div
-                class="w-full flex flex-col justify-start gap-2 h-full relative -top-16 lg:-top-24"
+                class="relative flex h-full w-full flex-col justify-start gap-2 -top-16 lg:-top-24"
               >
                 <header
-                  class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                  class="m-0 flex w-full flex-col items-center gap-2 p-0"
                 >
                   <div
-                    class="p-1 rounded-xl"
+                    class="rounded-xl p-1"
                   >
                     <img
                       alt="Track 1"
@@ -3813,7 +3813,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     </span>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4 w-full"
+                    class="flex w-full flex-col items-center justify-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -3821,7 +3821,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       1
                     </span>
                     <div
-                      class="flex flex-row gap-1 mt-4 w-full justify-center"
+                      class="mt-4 flex w-full flex-row justify-center gap-1"
                     >
                       <div>
                         <svg
@@ -3914,16 +3914,16 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
               </div>
             </div>
             <div
-              class="md:w-1/3 h-full"
+              class="h-full md:w-1/3"
             >
               <div
-                class="w-full flex flex-col justify-start gap-2 h-full relative"
+                class="relative flex h-full w-full flex-col justify-start gap-2"
               >
                 <header
-                  class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                  class="m-0 flex w-full flex-col items-center gap-2 p-0"
                 >
                   <div
-                    class="p-1 rounded-xl"
+                    class="rounded-xl p-1"
                   >
                     <img
                       alt="Track 1"
@@ -3961,7 +3961,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                     </span>
                   </div>
                   <div
-                    class="flex flex-col justify-center items-center gap-4 w-full"
+                    class="flex w-full flex-col items-center justify-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-5xl"
@@ -3969,7 +3969,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       3
                     </span>
                     <div
-                      class="flex flex-row gap-1 mt-4 w-full justify-center"
+                      class="mt-4 flex w-full flex-row justify-center gap-1"
                     >
                       <div>
                         <svg
@@ -4076,7 +4076,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
           </div>
           <div
             aria-roledescription="carousel"
-            class="relative md:hidden self-center max-w-[60vw] sm:max-w-[300px]"
+            class="relative max-w-[60vw] self-center sm:max-w-[300px] md:hidden"
             role="region"
           >
             <div
@@ -4092,13 +4092,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                   role="group"
                 >
                   <div
-                    class="w-full flex flex-col justify-start gap-2 h-full relative"
+                    class="relative flex h-full w-full flex-col justify-start gap-2"
                   >
                     <header
-                      class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                      class="m-0 flex w-full flex-col items-center gap-2 p-0"
                     >
                       <div
-                        class="p-1 rounded-xl"
+                        class="rounded-xl p-1"
                       >
                         <img
                           alt="Track 1"
@@ -4136,7 +4136,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         </span>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4 w-full"
+                        class="flex w-full flex-col items-center justify-center gap-4"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -4144,7 +4144,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           1
                         </span>
                         <div
-                          class="flex flex-row gap-1 mt-4 w-full justify-center"
+                          class="mt-4 flex w-full flex-row justify-center gap-1"
                         >
                           <div>
                             <svg
@@ -4242,13 +4242,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                   role="group"
                 >
                   <div
-                    class="w-full flex flex-col justify-start gap-2 h-full relative"
+                    class="relative flex h-full w-full flex-col justify-start gap-2"
                   >
                     <header
-                      class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                      class="m-0 flex w-full flex-col items-center gap-2 p-0"
                     >
                       <div
-                        class="p-1 rounded-xl"
+                        class="rounded-xl p-1"
                       >
                         <img
                           alt="Track 1"
@@ -4286,7 +4286,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         </span>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4 w-full"
+                        class="flex w-full flex-col items-center justify-center gap-4"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -4294,7 +4294,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           2
                         </span>
                         <div
-                          class="flex flex-row gap-1 mt-4 w-full justify-center"
+                          class="mt-4 flex w-full flex-row justify-center gap-1"
                         >
                           <div>
                             <svg
@@ -4398,13 +4398,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                   role="group"
                 >
                   <div
-                    class="w-full flex flex-col justify-start gap-2 h-full relative"
+                    class="relative flex h-full w-full flex-col justify-start gap-2"
                   >
                     <header
-                      class="w-full flex flex-col gap-2 items-center p-0 m-0"
+                      class="m-0 flex w-full flex-col items-center gap-2 p-0"
                     >
                       <div
-                        class="p-1 rounded-xl"
+                        class="rounded-xl p-1"
                       >
                         <img
                           alt="Track 1"
@@ -4442,7 +4442,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         </span>
                       </div>
                       <div
-                        class="flex flex-col justify-center items-center gap-4 w-full"
+                        class="flex w-full flex-col items-center justify-center gap-4"
                       >
                         <span
                           class="text-center w-[2rem] text-5xl"
@@ -4450,7 +4450,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           3
                         </span>
                         <div
-                          class="flex flex-row gap-1 mt-4 w-full justify-center"
+                          class="mt-4 flex w-full flex-row justify-center gap-1"
                         >
                           <div>
                             <svg
@@ -4702,10 +4702,10 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                    class="flex flex-row justify-between gap-2 p-2 md:gap-4"
                   >
                     <header
-                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                      class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-xl"
@@ -4725,20 +4725,20 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                         width="48"
                       />
                       <div
-                        class="flex flex-col items-start w-full overflow-hidden"
+                        class="flex w-full flex-col items-start overflow-hidden"
                       >
                         <a
-                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                           href="/track/123"
                         >
                           <h3
-                            class="text-xl md:text-2xl truncate"
+                            class="truncate text-xl md:text-2xl"
                           >
                             Track 1
                           </h3>
                         </a>
                         <div
-                          class="flex justify-between w-full items-center"
+                          class="flex w-full items-center justify-between"
                         >
                           <div>
                             <span>
@@ -4754,7 +4754,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       </div>
                     </header>
                     <div
-                      class="self-end min-w-[22px]"
+                      class="min-w-[22px] self-end"
                     >
                       <button
                         data-state="closed"
@@ -4794,10 +4794,10 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                    class="flex flex-row justify-between gap-2 p-2 md:gap-4"
                   >
                     <header
-                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                      class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-xl"
@@ -4817,20 +4817,20 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                         width="48"
                       />
                       <div
-                        class="flex flex-col items-start w-full overflow-hidden"
+                        class="flex w-full flex-col items-start overflow-hidden"
                       >
                         <a
-                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                           href="/track/2"
                         >
                           <h3
-                            class="text-xl md:text-2xl truncate"
+                            class="truncate text-xl md:text-2xl"
                           >
                             Track 1
                           </h3>
                         </a>
                         <div
-                          class="flex justify-between w-full items-center"
+                          class="flex w-full items-center justify-between"
                         >
                           <div>
                             <span>
@@ -4846,7 +4846,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       </div>
                     </header>
                     <div
-                      class="self-end min-w-[22px]"
+                      class="min-w-[22px] self-end"
                     >
                       <button
                         data-state="closed"
@@ -4886,10 +4886,10 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                    class="flex flex-row justify-between gap-2 p-2 md:gap-4"
                   >
                     <header
-                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                      class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                     >
                       <span
                         class="text-center w-[2rem] text-xl"
@@ -4909,20 +4909,20 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                         width="48"
                       />
                       <div
-                        class="flex flex-col items-start w-full overflow-hidden"
+                        class="flex w-full flex-col items-start overflow-hidden"
                       >
                         <a
-                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                           href="/track/3"
                         >
                           <h3
-                            class="text-xl md:text-2xl truncate"
+                            class="truncate text-xl md:text-2xl"
                           >
                             Track 1
                           </h3>
                         </a>
                         <div
-                          class="flex justify-between w-full items-center"
+                          class="flex w-full items-center justify-between"
                         >
                           <div>
                             <span>
@@ -4938,7 +4938,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       </div>
                     </header>
                     <div
-                      class="self-end min-w-[22px]"
+                      class="min-w-[22px] self-end"
                     >
                       <button
                         data-state="closed"
@@ -5004,10 +5004,10 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                  class="flex flex-row justify-between gap-2 p-2 md:gap-4"
                 >
                   <header
-                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-xl"
@@ -5027,20 +5027,20 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       width="48"
                     />
                     <div
-                      class="flex flex-col items-start w-full overflow-hidden"
+                      class="flex w-full flex-col items-start overflow-hidden"
                     >
                       <a
-                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                         href="/track/123"
                       >
                         <h3
-                          class="text-xl md:text-2xl truncate"
+                          class="truncate text-xl md:text-2xl"
                         >
                           Track 1
                         </h3>
                       </a>
                       <div
-                        class="flex justify-between w-full items-center"
+                        class="flex w-full items-center justify-between"
                       >
                         <div>
                           <span>
@@ -5056,7 +5056,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                     </div>
                   </header>
                   <div
-                    class="self-end min-w-[22px]"
+                    class="min-w-[22px] self-end"
                   >
                     <button
                       data-state="closed"
@@ -5096,10 +5096,10 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                  class="flex flex-row justify-between gap-2 p-2 md:gap-4"
                 >
                   <header
-                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-xl"
@@ -5119,20 +5119,20 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       width="48"
                     />
                     <div
-                      class="flex flex-col items-start w-full overflow-hidden"
+                      class="flex w-full flex-col items-start overflow-hidden"
                     >
                       <a
-                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                         href="/track/2"
                       >
                         <h3
-                          class="text-xl md:text-2xl truncate"
+                          class="truncate text-xl md:text-2xl"
                         >
                           Track 1
                         </h3>
                       </a>
                       <div
-                        class="flex justify-between w-full items-center"
+                        class="flex w-full items-center justify-between"
                       >
                         <div>
                           <span>
@@ -5148,7 +5148,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                     </div>
                   </header>
                   <div
-                    class="self-end min-w-[22px]"
+                    class="min-w-[22px] self-end"
                   >
                     <button
                       data-state="closed"
@@ -5188,10 +5188,10 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+                  class="flex flex-row justify-between gap-2 p-2 md:gap-4"
                 >
                   <header
-                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                   >
                     <span
                       class="text-center w-[2rem] text-xl"
@@ -5211,20 +5211,20 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                       width="48"
                     />
                     <div
-                      class="flex flex-col items-start w-full overflow-hidden"
+                      class="flex w-full flex-col items-start overflow-hidden"
                     >
                       <a
-                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                         href="/track/3"
                       >
                         <h3
-                          class="text-xl md:text-2xl truncate"
+                          class="truncate text-xl md:text-2xl"
                         >
                           Track 1
                         </h3>
                       </a>
                       <div
-                        class="flex justify-between w-full items-center"
+                        class="flex w-full items-center justify-between"
                       >
                         <div>
                           <span>
@@ -5240,7 +5240,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                     </div>
                   </header>
                   <div
-                    class="self-end min-w-[22px]"
+                    class="min-w-[22px] self-end"
                   >
                     <button
                       data-state="closed"
@@ -5363,10 +5363,10 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
+                    class="flex flex-row justify-between gap-2 p-2 md:gap-4 px-4 md:pl-4"
                   >
                     <header
-                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                      class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                     >
                       <img
                         alt="Track 1"
@@ -5381,20 +5381,20 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         width="48"
                       />
                       <div
-                        class="flex flex-col items-start w-full overflow-hidden"
+                        class="flex w-full flex-col items-start overflow-hidden"
                       >
                         <a
-                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                           href="/track/123"
                         >
                           <h3
-                            class="text-xl md:text-2xl truncate"
+                            class="truncate text-xl md:text-2xl"
                           >
                             Track 1
                           </h3>
                         </a>
                         <div
-                          class="flex justify-between w-full items-center"
+                          class="flex w-full items-center justify-between"
                         >
                           <div>
                             <span>
@@ -5415,7 +5415,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       </div>
                     </header>
                     <div
-                      class="self-end min-w-[22px]"
+                      class="min-w-[22px] self-end"
                     >
                       <button
                         data-state="closed"
@@ -5455,10 +5455,10 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
+                    class="flex flex-row justify-between gap-2 p-2 md:gap-4 px-4 md:pl-4"
                   >
                     <header
-                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                      class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                     >
                       <img
                         alt="Track 1"
@@ -5473,20 +5473,20 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         width="48"
                       />
                       <div
-                        class="flex flex-col items-start w-full overflow-hidden"
+                        class="flex w-full flex-col items-start overflow-hidden"
                       >
                         <a
-                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                           href="/track/2"
                         >
                           <h3
-                            class="text-xl md:text-2xl truncate"
+                            class="truncate text-xl md:text-2xl"
                           >
                             Track 1
                           </h3>
                         </a>
                         <div
-                          class="flex justify-between w-full items-center"
+                          class="flex w-full items-center justify-between"
                         >
                           <div>
                             <span>
@@ -5507,7 +5507,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       </div>
                     </header>
                     <div
-                      class="self-end min-w-[22px]"
+                      class="min-w-[22px] self-end"
                     >
                       <button
                         data-state="closed"
@@ -5547,10 +5547,10 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                   class="relative overflow-hidden"
                 >
                   <div
-                    class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
+                    class="flex flex-row justify-between gap-2 p-2 md:gap-4 px-4 md:pl-4"
                   >
                     <header
-                      class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                      class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                     >
                       <img
                         alt="Track 1"
@@ -5565,20 +5565,20 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         width="48"
                       />
                       <div
-                        class="flex flex-col items-start w-full overflow-hidden"
+                        class="flex w-full flex-col items-start overflow-hidden"
                       >
                         <a
-                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                          class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                           href="/track/3"
                         >
                           <h3
-                            class="text-xl md:text-2xl truncate"
+                            class="truncate text-xl md:text-2xl"
                           >
                             Track 1
                           </h3>
                         </a>
                         <div
-                          class="flex justify-between w-full items-center"
+                          class="flex w-full items-center justify-between"
                         >
                           <div>
                             <span>
@@ -5599,7 +5599,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       </div>
                     </header>
                     <div
-                      class="self-end min-w-[22px]"
+                      class="min-w-[22px] self-end"
                     >
                       <button
                         data-state="closed"
@@ -5665,10 +5665,10 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
+                  class="flex flex-row justify-between gap-2 p-2 md:gap-4 px-4 md:pl-4"
                 >
                   <header
-                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                   >
                     <img
                       alt="Track 1"
@@ -5683,20 +5683,20 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       width="48"
                     />
                     <div
-                      class="flex flex-col items-start w-full overflow-hidden"
+                      class="flex w-full flex-col items-start overflow-hidden"
                     >
                       <a
-                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                         href="/track/123"
                       >
                         <h3
-                          class="text-xl md:text-2xl truncate"
+                          class="truncate text-xl md:text-2xl"
                         >
                           Track 1
                         </h3>
                       </a>
                       <div
-                        class="flex justify-between w-full items-center"
+                        class="flex w-full items-center justify-between"
                       >
                         <div>
                           <span>
@@ -5717,7 +5717,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                     </div>
                   </header>
                   <div
-                    class="self-end min-w-[22px]"
+                    class="min-w-[22px] self-end"
                   >
                     <button
                       data-state="closed"
@@ -5757,10 +5757,10 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
+                  class="flex flex-row justify-between gap-2 p-2 md:gap-4 px-4 md:pl-4"
                 >
                   <header
-                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                   >
                     <img
                       alt="Track 1"
@@ -5775,20 +5775,20 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       width="48"
                     />
                     <div
-                      class="flex flex-col items-start w-full overflow-hidden"
+                      class="flex w-full flex-col items-start overflow-hidden"
                     >
                       <a
-                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                         href="/track/2"
                       >
                         <h3
-                          class="text-xl md:text-2xl truncate"
+                          class="truncate text-xl md:text-2xl"
                         >
                           Track 1
                         </h3>
                       </a>
                       <div
-                        class="flex justify-between w-full items-center"
+                        class="flex w-full items-center justify-between"
                       >
                         <div>
                           <span>
@@ -5809,7 +5809,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                     </div>
                   </header>
                   <div
-                    class="self-end min-w-[22px]"
+                    class="min-w-[22px] self-end"
                   >
                     <button
                       data-state="closed"
@@ -5849,10 +5849,10 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                 class="relative overflow-hidden"
               >
                 <div
-                  class="flex flex-row justify-between p-2 gap-2 md:gap-4 md:pl-4 px-4"
+                  class="flex flex-row justify-between gap-2 p-2 md:gap-4 px-4 md:pl-4"
                 >
                   <header
-                    class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+                    class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
                   >
                     <img
                       alt="Track 1"
@@ -5867,20 +5867,20 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                       width="48"
                     />
                     <div
-                      class="flex flex-col items-start w-full overflow-hidden"
+                      class="flex w-full flex-col items-start overflow-hidden"
                     >
                       <a
-                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                        class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                         href="/track/3"
                       >
                         <h3
-                          class="text-xl md:text-2xl truncate"
+                          class="truncate text-xl md:text-2xl"
                         >
                           Track 1
                         </h3>
                       </a>
                       <div
-                        class="flex justify-between w-full items-center"
+                        class="flex w-full items-center justify-between"
                       >
                         <div>
                           <span>
@@ -5901,7 +5901,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                     </div>
                   </header>
                   <div
-                    class="self-end min-w-[22px]"
+                    class="min-w-[22px] self-end"
                   >
                     <button
                       data-state="closed"
