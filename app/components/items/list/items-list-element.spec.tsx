@@ -10,6 +10,7 @@ import {
 import { ItemsListElement } from './items-list-element'
 
 import { genresMock, hrefMock, idMock } from '@tests/mocks'
+import { albumMock } from '@tests/mocks/album'
 import { artistsMock } from '@tests/mocks/artist'
 import { imagesMock } from '@tests/mocks/images'
 import { trackNameMock } from '@tests/mocks/track'
@@ -103,6 +104,21 @@ describe('ItemsListElement', () => {
         href={hrefMock}
         images={imagesMock}
         genres={genresMock}
+        position={1}
+      />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
+
+  test('should match snapshot with artists and albums', () => {
+    const view = render(
+      <ItemsListElement
+        id={idMock}
+        name={trackNameMock}
+        href={hrefMock}
+        artists={artistsMock}
+        album={albumMock}
         position={1}
       />
     )
