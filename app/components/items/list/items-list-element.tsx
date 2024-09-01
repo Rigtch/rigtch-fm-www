@@ -90,6 +90,8 @@ function ItemsListElement({
     }
   }, [plays, playTime, maxPlays, maxPlayTime])
 
+  console.log(genres)
+
   return (
     <div className={cn('relative overflow-hidden', className)}>
       {(plays ?? playTime) && (
