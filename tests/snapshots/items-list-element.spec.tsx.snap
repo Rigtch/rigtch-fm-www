@@ -35,7 +35,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
               class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/track/123"
               >
                 <h3
@@ -50,7 +50,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                 <div>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                       href="/artist/123"
                     >
                       Darkthrone
@@ -61,7 +61,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                       href="/artist/2"
                     >
                       Mayhem
@@ -72,7 +72,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                       href="/artist/3"
                     >
                       Darkthrone
@@ -83,7 +83,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                       href="/artist/4"
                     >
                       Darkthrone
@@ -156,7 +156,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
             class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/track/123"
             >
               <h3
@@ -171,7 +171,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
               <div>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                     href="/artist/123"
                   >
                     Darkthrone
@@ -182,7 +182,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                     href="/artist/2"
                   >
                     Mayhem
@@ -193,7 +193,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                     href="/artist/3"
                   >
                     Darkthrone
@@ -204,7 +204,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                     href="/artist/4"
                   >
                     Darkthrone
@@ -338,7 +338,7 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
               class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
@@ -422,7 +422,7 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
             class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
@@ -554,7 +554,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
               class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
@@ -633,7 +633,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
             class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
@@ -778,7 +778,7 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
               class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
@@ -862,7 +862,7 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
             class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
@@ -999,7 +999,7 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
               class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
@@ -1078,7 +1078,7 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
             class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
