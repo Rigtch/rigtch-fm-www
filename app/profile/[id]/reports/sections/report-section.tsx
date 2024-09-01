@@ -13,7 +13,7 @@ function ReportSection({ children, className }: ReportSection.Props) {
   return (
     <section
       className={cn(
-        'flex flex-col lg:flex-row justify-between gap-4 px-4',
+        'flex flex-col justify-between gap-4 px-4 xl:flex-row',
         className
       )}
     >

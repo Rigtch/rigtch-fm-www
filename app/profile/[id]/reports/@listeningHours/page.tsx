@@ -54,7 +54,7 @@ export default async function ProfileReportsListeningHoursPage({
 
   return (
     <ReportSection className="flex-col-reverse">
-      <div className="lg:w-1/2">
+      <div className="xl:w-1/2">
         <ListeningHoursChart
           thisWeekResponse={thisWeekResponse}
           lastWeekResponse={lastWeekResponse}
@@ -62,7 +62,7 @@ export default async function ProfileReportsListeningHoursPage({
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 lg:w-1/2">
+      <div className="flex flex-col items-center justify-center gap-4 xl:w-1/2">
         <StatCard
           label="Most listened hour"
           value={thisWeekMostListenedHour}
