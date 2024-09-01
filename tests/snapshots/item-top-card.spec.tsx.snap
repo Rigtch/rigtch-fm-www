@@ -6,13 +6,13 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col justify-start gap-2 h-full relative"
+        class="relative flex h-full w-full flex-col justify-start gap-2"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0 m-0"
+          class="m-0 flex w-full flex-col items-center gap-2 p-0"
         >
           <div
-            class="p-1 rounded-xl"
+            class="rounded-xl p-1"
           >
             <img
               alt="Album 1"
@@ -42,10 +42,10 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
             </a>
           </div>
           <div
-            class="flex flex-col justify-center items-center gap-4 w-full"
+            class="flex w-full flex-col items-center justify-center gap-4"
           >
             <div
-              class="flex flex-row gap-1 mt-4 w-full justify-center"
+              class="mt-4 flex w-full flex-row justify-center gap-1"
             />
           </div>
         </header>
@@ -54,13 +54,13 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col justify-start gap-2 h-full relative"
+      class="relative flex h-full w-full flex-col justify-start gap-2"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+        class="m-0 flex w-full flex-col items-center gap-2 p-0"
       >
         <div
-          class="p-1 rounded-xl"
+          class="rounded-xl p-1"
         >
           <img
             alt="Album 1"
@@ -90,10 +90,10 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
           </a>
         </div>
         <div
-          class="flex flex-col justify-center items-center gap-4 w-full"
+          class="flex w-full flex-col items-center justify-center gap-4"
         >
           <div
-            class="flex flex-row gap-1 mt-4 w-full justify-center"
+            class="mt-4 flex w-full flex-row justify-center gap-1"
           />
         </div>
       </header>
@@ -159,13 +159,13 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col justify-start gap-2 h-full relative"
+        class="relative flex h-full w-full flex-col justify-start gap-2"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0 m-0"
+          class="m-0 flex w-full flex-col items-center gap-2 p-0"
         >
           <div
-            class="p-1 rounded-xl"
+            class="rounded-xl p-1"
           >
             <img
               alt="Darkthrone"
@@ -195,10 +195,10 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
             </a>
           </div>
           <div
-            class="flex flex-col justify-center items-center gap-4 w-full"
+            class="flex w-full flex-col items-center justify-center gap-4"
           >
             <div
-              class="flex gap-2 flex-wrap justify-center h-full flex-row"
+              class="flex h-full flex-wrap justify-center gap-2 flex-row"
             >
               <div
                 class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -217,7 +217,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-row gap-1 mt-4 w-full justify-center"
+              class="mt-4 flex w-full flex-row justify-center gap-1"
             />
           </div>
         </header>
@@ -226,13 +226,13 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col justify-start gap-2 h-full relative"
+      class="relative flex h-full w-full flex-col justify-start gap-2"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+        class="m-0 flex w-full flex-col items-center gap-2 p-0"
       >
         <div
-          class="p-1 rounded-xl"
+          class="rounded-xl p-1"
         >
           <img
             alt="Darkthrone"
@@ -262,10 +262,10 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
           </a>
         </div>
         <div
-          class="flex flex-col justify-center items-center gap-4 w-full"
+          class="flex w-full flex-col items-center justify-center gap-4"
         >
           <div
-            class="flex gap-2 flex-wrap justify-center h-full flex-row"
+            class="flex h-full flex-wrap justify-center gap-2 flex-row"
           >
             <div
               class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -284,7 +284,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row gap-1 mt-4 w-full justify-center"
+            class="mt-4 flex w-full flex-row justify-center gap-1"
           />
         </div>
       </header>
@@ -350,13 +350,13 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col justify-start gap-2 h-full relative -top-8 lg:-top-12"
+        class="relative flex h-full w-full flex-col justify-start gap-2 -top-8 lg:-top-12"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0 m-0"
+          class="m-0 flex w-full flex-col items-center gap-2 p-0"
         >
           <div
-            class="p-1 rounded-xl"
+            class="rounded-xl p-1"
           >
             <img
               alt="Track 1"
@@ -394,7 +394,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
             </span>
           </div>
           <div
-            class="flex flex-col justify-center items-center gap-4 w-full"
+            class="flex w-full flex-col items-center justify-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-5xl"
@@ -402,7 +402,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
               2
             </span>
             <div
-              class="flex flex-row gap-1 mt-4 w-full justify-center"
+              class="mt-4 flex w-full flex-row justify-center gap-1"
             >
               <div>
                 <svg
@@ -503,13 +503,13 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col justify-start gap-2 h-full relative -top-8 lg:-top-12"
+      class="relative flex h-full w-full flex-col justify-start gap-2 -top-8 lg:-top-12"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+        class="m-0 flex w-full flex-col items-center gap-2 p-0"
       >
         <div
-          class="p-1 rounded-xl"
+          class="rounded-xl p-1"
         >
           <img
             alt="Track 1"
@@ -547,7 +547,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
           </span>
         </div>
         <div
-          class="flex flex-col justify-center items-center gap-4 w-full"
+          class="flex w-full flex-col items-center justify-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-5xl"
@@ -555,7 +555,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
             2
           </span>
           <div
-            class="flex flex-row gap-1 mt-4 w-full justify-center"
+            class="mt-4 flex w-full flex-row justify-center gap-1"
           >
             <div>
               <svg
@@ -713,13 +713,13 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col justify-start gap-2 h-full relative"
+        class="relative flex h-full w-full flex-col justify-start gap-2"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0 m-0"
+          class="m-0 flex w-full flex-col items-center gap-2 p-0"
         >
           <div
-            class="p-1 rounded-xl"
+            class="rounded-xl p-1"
           >
             <img
               alt="Track 1"
@@ -757,7 +757,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
             </span>
           </div>
           <div
-            class="flex flex-col justify-center items-center gap-4 w-full"
+            class="flex w-full flex-col items-center justify-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-5xl"
@@ -765,7 +765,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
               3
             </span>
             <div
-              class="flex flex-row gap-1 mt-4 w-full justify-center"
+              class="mt-4 flex w-full flex-row justify-center gap-1"
             >
               <div>
                 <svg
@@ -872,13 +872,13 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col justify-start gap-2 h-full relative"
+      class="relative flex h-full w-full flex-col justify-start gap-2"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+        class="m-0 flex w-full flex-col items-center gap-2 p-0"
       >
         <div
-          class="p-1 rounded-xl"
+          class="rounded-xl p-1"
         >
           <img
             alt="Track 1"
@@ -916,7 +916,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
           </span>
         </div>
         <div
-          class="flex flex-col justify-center items-center gap-4 w-full"
+          class="flex w-full flex-col items-center justify-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-5xl"
@@ -924,7 +924,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
             3
           </span>
           <div
-            class="flex flex-row gap-1 mt-4 w-full justify-center"
+            class="mt-4 flex w-full flex-row justify-center gap-1"
           >
             <div>
               <svg
@@ -1088,13 +1088,13 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col justify-start gap-2 h-full relative"
+        class="relative flex h-full w-full flex-col justify-start gap-2"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0 m-0"
+          class="m-0 flex w-full flex-col items-center gap-2 p-0"
         >
           <div
-            class="p-1 rounded-xl"
+            class="rounded-xl p-1"
           >
             <img
               alt="Track 1"
@@ -1132,10 +1132,10 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
             </span>
           </div>
           <div
-            class="flex flex-col justify-center items-center gap-4 w-full"
+            class="flex w-full flex-col items-center justify-center gap-4"
           >
             <div
-              class="flex flex-row gap-1 mt-4 w-full justify-center"
+              class="mt-4 flex w-full flex-row justify-center gap-1"
             />
           </div>
         </header>
@@ -1144,13 +1144,13 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col justify-start gap-2 h-full relative"
+      class="relative flex h-full w-full flex-col justify-start gap-2"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+        class="m-0 flex w-full flex-col items-center gap-2 p-0"
       >
         <div
-          class="p-1 rounded-xl"
+          class="rounded-xl p-1"
         >
           <img
             alt="Track 1"
@@ -1188,10 +1188,10 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
           </span>
         </div>
         <div
-          class="flex flex-col justify-center items-center gap-4 w-full"
+          class="flex w-full flex-col items-center justify-center gap-4"
         >
           <div
-            class="flex flex-row gap-1 mt-4 w-full justify-center"
+            class="mt-4 flex w-full flex-row justify-center gap-1"
           />
         </div>
       </header>
@@ -1257,13 +1257,13 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col justify-start gap-2 h-full relative"
+        class="relative flex h-full w-full flex-col justify-start gap-2"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0 m-0"
+          class="m-0 flex w-full flex-col items-center gap-2 p-0"
         >
           <div
-            class="p-1 rounded-xl"
+            class="rounded-xl p-1"
           >
             <img
               alt="Track 1"
@@ -1301,10 +1301,10 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
             </span>
           </div>
           <div
-            class="flex flex-col justify-center items-center gap-4 w-full"
+            class="flex w-full flex-col items-center justify-center gap-4"
           >
             <div
-              class="flex flex-row gap-1 mt-4 w-full justify-center"
+              class="mt-4 flex w-full flex-row justify-center gap-1"
             >
               <div
                 class="relative w-full"
@@ -1338,13 +1338,13 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col justify-start gap-2 h-full relative"
+      class="relative flex h-full w-full flex-col justify-start gap-2"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+        class="m-0 flex w-full flex-col items-center gap-2 p-0"
       >
         <div
-          class="p-1 rounded-xl"
+          class="rounded-xl p-1"
         >
           <img
             alt="Track 1"
@@ -1382,10 +1382,10 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
           </span>
         </div>
         <div
-          class="flex flex-col justify-center items-center gap-4 w-full"
+          class="flex w-full flex-col items-center justify-center gap-4"
         >
           <div
-            class="flex flex-row gap-1 mt-4 w-full justify-center"
+            class="mt-4 flex w-full flex-row justify-center gap-1"
           >
             <div
               class="relative w-full"
@@ -1476,13 +1476,13 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col justify-start gap-2 h-full relative"
+        class="relative flex h-full w-full flex-col justify-start gap-2"
       >
         <header
-          class="w-full flex flex-col gap-2 items-center p-0 m-0"
+          class="m-0 flex w-full flex-col items-center gap-2 p-0"
         >
           <div
-            class="p-1 rounded-xl"
+            class="rounded-xl p-1"
           >
             <img
               alt="Track 1"
@@ -1520,10 +1520,10 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
             </span>
           </div>
           <div
-            class="flex flex-col justify-center items-center gap-4 w-full"
+            class="flex w-full flex-col items-center justify-center gap-4"
           >
             <div
-              class="flex flex-row gap-1 mt-4 w-full justify-center"
+              class="mt-4 flex w-full flex-row justify-center gap-1"
             >
               <div
                 class="relative w-full"
@@ -1557,13 +1557,13 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col justify-start gap-2 h-full relative"
+      class="relative flex h-full w-full flex-col justify-start gap-2"
     >
       <header
-        class="w-full flex flex-col gap-2 items-center p-0 m-0"
+        class="m-0 flex w-full flex-col items-center gap-2 p-0"
       >
         <div
-          class="p-1 rounded-xl"
+          class="rounded-xl p-1"
         >
           <img
             alt="Track 1"
@@ -1601,10 +1601,10 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
           </span>
         </div>
         <div
-          class="flex flex-col justify-center items-center gap-4 w-full"
+          class="flex w-full flex-col items-center justify-center gap-4"
         >
           <div
-            class="flex flex-row gap-1 mt-4 w-full justify-center"
+            class="mt-4 flex w-full flex-row justify-center gap-1"
           >
             <div
               class="relative w-full"
