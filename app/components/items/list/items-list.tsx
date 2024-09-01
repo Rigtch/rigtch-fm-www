@@ -3,8 +3,8 @@
 import type { HtmlHTMLAttributes } from 'react'
 
 import { ItemTopCard } from '../cards'
-import type { ItemPosition } from '../misc'
 import { formatItems } from '../helpers'
+import type { ItemPosition } from '../misc'
 
 import { ItemsListElement } from './items-list-element'
 
@@ -36,6 +36,7 @@ namespace ItemsList {
       positionClassName?: string
       lastItemSeparator?: boolean
       isRounded?: boolean
+      genresDisplayLength?: number
     }
   >
 }
@@ -48,6 +49,7 @@ function ItemsList({
   positionClassName,
   lastItemSeparator = false,
   isRounded = false,
+  genresDisplayLength = 3,
 }: ItemsList.Props) {
   const sortedItems: (ArtistEntity | TrackEntity | AlbumEntity)[] =
     formatItems(items)
@@ -93,6 +95,7 @@ function ItemsList({
           <div key={index}>
             {/* @ts-expect-error: conditional types are already handled */}
             <ItemsListElement
+              genresDisplayLength={genresDisplayLength}
               {...item}
               positionSize={positionSize}
               positionClassName={positionClassName}

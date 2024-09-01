@@ -54,8 +54,9 @@ namespace ItemsListElement {
           | ItemsListElementTrack
           | ItemsListElementArtist
         ) &
-        Pick<AlbumEntity, 'name' | 'href' | 'id' | 'genres'> &
-        Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
+        Pick<AlbumEntity, 'name' | 'href' | 'id' | 'genres'> & {
+          genresDisplayLength?: number
+        } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
   >
 }
@@ -77,6 +78,7 @@ function ItemsListElement({
   plays,
   maxPlays,
   className,
+  genresDisplayLength,
 }: ItemsListElement.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
@@ -137,7 +139,7 @@ function ItemsListElement({
                   <ItemArtists artists={artists} />
                 ) : (
                   genres
-                    .slice(0, 3)
+                    .slice(0, genresDisplayLength)
                     .map((genre, index) => (
                       <GenreBadge key={index} genre={genre} />
                     ))
