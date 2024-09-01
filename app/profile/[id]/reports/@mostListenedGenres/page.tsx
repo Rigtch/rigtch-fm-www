@@ -19,8 +19,6 @@ export default async function ProfileReportsMostListenedGenresPage({
 }: ProfileReportsPageProps) {
   const token = await getServerToken()
 
-  console.log('e')
-
   if (!token) redirect('/')
 
   const userId = validateId(params.id)
@@ -74,10 +72,11 @@ export default async function ProfileReportsMostListenedGenresPage({
         </StatCard>
 
         <StatCard
-          valueSize="lg"
+          valueSize="xl"
           label={`Most listened genre's ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}`}
           value={thisWeekMostListenedGenreValue}
           lastWeekValue={lastWeekMostListenedGenreValue}
+          className="!w-full"
         >
           {valueMeasurementFormatter(
             thisWeekMostListenedGenreValue,
