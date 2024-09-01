@@ -64,7 +64,8 @@ function MostListenedGenresChart({
             dataKey="name"
             formatter={(name: string) =>
               topGenres.find(genre => genre.name === name)!.value >
-              topGenres[1].value / 2
+                topGenres[1].value / 2 &&
+              topGenres.findIndex(genre => genre.name === name) < 5
                 ? name
                 : ''
             }
