@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import { StatCard } from '../components/cards'
 import { getCursors } from '../helpers'
 import { ReportSection } from '../sections'
+import type { ProfileReportsPageProps } from '../types/props'
 
 import { StatsMeasurement } from '@app/api/enums'
 import {
@@ -17,20 +18,22 @@ import {
 } from '@app/api/fetchers/stats/rigtch'
 import { getServerToken } from '@app/auth'
 import { ItemsList } from '@app/components/items/list'
-import type { ProfilePageProps } from '@app/profile/types'
 import { validateId } from '@app/utils/validators'
 
 export default async function ProfileReportsMostListenedItemsPage({
   params,
-}: ProfilePageProps) {
+  searchParams,
+}: ProfileReportsPageProps) {
   const token = await getServerToken()
 
   if (!token) redirect('/')
 
   const userId = validateId(params.id)
 
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
-    getCursors()
+  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } = getCursors(
+    searchParams.before,
+    searchParams.after
+  )
 
   const [
     mostListenedArtists,

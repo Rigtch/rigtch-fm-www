@@ -4,19 +4,19 @@ import { StatCard } from '../components/cards'
 import { ListeningHoursChart } from '../components/charts'
 import { getCursors, valueMeasurementFormatter } from '../helpers'
 import { ReportSection } from '../sections'
+import type { ProfileReportsPageProps } from '../types/props'
 
 import { StatsMeasurement } from '@app/api/enums'
 import { getReportsListeningHours } from '@app/api/fetchers/reports'
 import { getServerToken } from '@app/auth'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
-import type { ProfilePageProps } from '@app/profile/types'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
 
 export default async function ProfileReportsListeningHoursPage({
   params,
   searchParams,
-}: ProfilePageProps) {
+}: ProfileReportsPageProps) {
   const token = await getServerToken()
 
   if (!token) redirect('/')
@@ -24,8 +24,10 @@ export default async function ProfileReportsListeningHoursPage({
   const userId = validateId(params.id)
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
-    getCursors()
+  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } = getCursors(
+    searchParams.before,
+    searchParams.after
+  )
 
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
     getReportsListeningHours(token, {
@@ -53,7 +55,7 @@ export default async function ProfileReportsListeningHoursPage({
   const lastWeekMostListenedHourValue = Math.max(...lastWeekValues)
 
   return (
-    <ReportSection className="flex-col-reverse">
+    <ReportSection className="mb-4 flex-col-reverse">
       <div className="xl:w-1/2">
         <ListeningHoursChart
           thisWeekResponse={thisWeekResponse}
