@@ -17,6 +17,7 @@ namespace ProfileReportsLayout {
     listeningDays: ReactNode
     listeningHours: ReactNode
     mostListenedItems: ReactNode
+    mostListenedGenres: ReactNode
   }
 }
 
@@ -24,6 +25,7 @@ function ProfileReportsLayout({
   listeningDays,
   listeningHours,
   mostListenedItems,
+  mostListenedGenres,
 }: ProfileReportsLayout.Props) {
   const searchParams = useSearchParams()
 
@@ -61,6 +63,7 @@ function ProfileReportsLayout({
       <main className="flex flex-col gap-6 xl:gap-8">
         {listeningDays}
         {listeningHours}
+        {mostListenedGenres}
         {mostListenedItems}
       </main>
     </section>
