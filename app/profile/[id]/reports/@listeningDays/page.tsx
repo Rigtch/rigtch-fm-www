@@ -68,7 +68,7 @@ export default async function ProfileReportsListeningDaysPage({
 
   return (
     <ReportSection>
-      <div className="flex flex-col items-stretch gap-2 lg:w-1/2">
+      <div className="flex flex-col items-stretch gap-2 xl:w-1/2">
         <StatCard
           label="Total"
           value={thisWeekTotal}
