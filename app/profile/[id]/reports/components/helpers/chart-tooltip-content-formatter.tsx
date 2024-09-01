@@ -15,16 +15,16 @@ export const chartTooltipContentFormatter = (
   return (value, name, item) => (
     <>
       <div
-        className="shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg] h-2.5 w-2.5"
+        className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
         style={
           {
-            '--color-bg': item.color,
-            '--color-border': item.color,
+            '--color-bg': item.color ?? item.payload.fill,
+            '--color-border': item.color ?? item.payload.fill,
           } as CSSProperties
         }
       />
 
-      <div className="flex flex-1 gap-1 justify-between leading-none items-end">
+      <div className="flex flex-1 items-end justify-between gap-1 leading-none">
         <div className="grid gap-1.5">
           <span className="text-muted-foreground">{item.name}</span>
         </div>
