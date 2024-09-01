@@ -8,7 +8,7 @@ exports[`RelativeTime > should match snapshot 1`] = `
       <p
         class="whitespace-nowrap text-primary-foreground/80"
       >
-        2 years ago
+        2 lata temu
       </p>
     </div>
   </body>,
@@ -16,7 +16,7 @@ exports[`RelativeTime > should match snapshot 1`] = `
     <p
       class="whitespace-nowrap text-primary-foreground/80"
     >
-      2 years ago
+      2 lata temu
     </p>
   </div>,
   "debug": [Function],

@@ -1130,7 +1130,23 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         <div
                           class="flex w-full items-center justify-between"
                         >
-                          <div />
+                          <div>
+                            <div
+                              class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                            >
+                              pop
+                            </div>
+                            <div
+                              class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                            >
+                              rock
+                            </div>
+                            <div
+                              class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                            >
+                              rap
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </header>
@@ -2300,7 +2316,23 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       <div
                         class="flex w-full items-center justify-between"
                       >
-                        <div />
+                        <div>
+                          <div
+                            class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                          >
+                            pop
+                          </div>
+                          <div
+                            class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                          >
+                            rock
+                          </div>
+                          <div
+                            class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                          >
+                            rap
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </header>
@@ -5409,7 +5441,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                           <p
                             class="whitespace-nowrap text-primary-foreground/80"
                           >
-                            0 seconds ago
+                            0 sekund temu
                           </p>
                         </div>
                       </div>
@@ -5501,7 +5533,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                           <p
                             class="whitespace-nowrap text-primary-foreground/80"
                           >
-                            1 second ago
+                            1 sekundę temu
                           </p>
                         </div>
                       </div>
@@ -5593,7 +5625,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                           <p
                             class="whitespace-nowrap text-primary-foreground/80"
                           >
-                            2 seconds ago
+                            2 sekundy temu
                           </p>
                         </div>
                       </div>
@@ -5711,7 +5743,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         <p
                           class="whitespace-nowrap text-primary-foreground/80"
                         >
-                          0 seconds ago
+                          0 sekund temu
                         </p>
                       </div>
                     </div>
@@ -5803,7 +5835,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         <p
                           class="whitespace-nowrap text-primary-foreground/80"
                         >
-                          1 second ago
+                          1 sekundę temu
                         </p>
                       </div>
                     </div>
@@ -5895,7 +5927,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                         <p
                           class="whitespace-nowrap text-primary-foreground/80"
                         >
-                          2 seconds ago
+                          2 sekundy temu
                         </p>
                       </div>
                     </div>
