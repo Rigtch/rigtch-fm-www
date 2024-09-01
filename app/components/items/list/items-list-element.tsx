@@ -1,6 +1,7 @@
 'use client'
 
 import prettyMilliseconds from 'pretty-ms'
+import type { HtmlHTMLAttributes } from 'react'
 import { useEffect, useState } from 'react'
 import type { Simplify } from 'type-fest'
 
@@ -47,7 +48,8 @@ namespace ItemsListElement {
     PlayedAtOrPosition &
       PlayTimeOrPlays &
       (ItemsListElementAlbum | ItemsListElementTrack | ItemsListElementArtist) &
-      Pick<AlbumEntity, 'name' | 'href' | 'id'>
+      Pick<AlbumEntity, 'name' | 'href' | 'id'> &
+      Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
   >
 }
 
@@ -66,6 +68,7 @@ function ItemsListElement({
   maxPlayTime,
   plays,
   maxPlays,
+  className,
 }: ItemsListElement.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
@@ -80,10 +83,13 @@ function ItemsListElement({
   }, [plays, playTime, maxPlays, maxPlayTime])
 
   return (
-    <div className="relative overflow-hidden">
+    <div className={cn('relative overflow-hidden', className)}>
       {(plays ?? playTime) && (
         <div
-          className="transition-all duration-700 ease-in-out absolute bg-primary h-full -z-10 -skew-x-12 -left-[8px]"
+          className={cn(
+            'absolute -left-[8px] -z-10 h-full -skew-x-12 bg-primary transition-all duration-700 ease-in-out',
+            className
+          )}
           style={{
             width: `calc(${progressWidth}% + 16px)`,
           }}
@@ -92,11 +98,11 @@ function ItemsListElement({
 
       <div
         className={cn(
-          'flex flex-row justify-between p-2 gap-2 md:gap-4',
-          !position && 'md:pl-4 px-4'
+          'flex flex-row justify-between gap-2 p-2 md:gap-4',
+          !position && 'px-4 md:pl-4'
         )}
       >
-        <header className="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]">
+        <header className="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4">
           {position && (
             <ItemPosition
               position={position}
@@ -107,15 +113,15 @@ function ItemsListElement({
 
           <ItemImage images={images ?? album} alt={name} size={48} />
 
-          <div className="flex flex-col items-start w-full overflow-hidden">
+          <div className="flex w-full flex-col items-start overflow-hidden">
             <LinkButton
               href={`/${artists ? 'track' : 'artist'}/${id}`}
-              className="p-0 leading-5 inline-grid"
+              className="inline-grid p-0 leading-5"
             >
-              <h3 className="text-xl md:text-2xl truncate">{name}</h3>
+              <h3 className="truncate text-xl md:text-2xl">{name}</h3>
             </LinkButton>
 
-            <div className="flex justify-between w-full items-center">
+            <div className="flex w-full items-center justify-between">
               <div>{artists && <ItemArtists artists={artists} />}</div>
 
               {playedAt && <RelativeTime value={playedAt} />}
@@ -127,7 +133,7 @@ function ItemsListElement({
           </div>
         </header>
 
-        <div className="self-end min-w-[22px]">
+        <div className="min-w-[22px] self-end">
           <SpotifyLink href={href} />
         </div>
       </div>
