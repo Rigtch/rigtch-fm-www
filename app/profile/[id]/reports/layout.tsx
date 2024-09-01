@@ -13,12 +13,14 @@ namespace ProfileReportsLayout {
   export interface Props extends ProfileLayoutBaseProps {
     listeningDays: ReactNode
     listeningHours: ReactNode
+    mostListenedItems: ReactNode
   }
 }
 
 function ProfileReportsLayout({
   listeningDays,
   listeningHours,
+  mostListenedItems,
 }: ProfileReportsLayout.Props) {
   const searchParams = useSearchParams()
 
@@ -30,9 +32,11 @@ function ProfileReportsLayout({
     <DefaultSection
       title="Reports"
       headerAction={<SelectStatsMeasurement initialValue={statsMeasurement} />}
+      className="gap-16"
     >
       {listeningDays}
       {listeningHours}
+      {mostListenedItems}
     </DefaultSection>
   )
 }
