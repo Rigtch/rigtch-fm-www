@@ -9,7 +9,7 @@ import {
 
 import { ItemsListElement } from './items-list-element'
 
-import { hrefMock, idMock } from '@tests/mocks'
+import { genresMock, hrefMock, idMock } from '@tests/mocks'
 import { artistsMock } from '@tests/mocks/artist'
 import { imagesMock } from '@tests/mocks/images'
 import { trackNameMock } from '@tests/mocks/track'
@@ -21,6 +21,7 @@ describe('ItemsListElement', () => {
         id={idMock}
         name={trackNameMock}
         images={imagesMock}
+        genres={genresMock}
         href={hrefMock}
         position={1}
       />
@@ -36,6 +37,7 @@ describe('ItemsListElement', () => {
         name={trackNameMock}
         images={imagesMock}
         artists={artistsMock}
+        genres={genresMock}
         href={hrefMock}
         position={1}
       />
@@ -50,6 +52,7 @@ describe('ItemsListElement', () => {
         id={idMock}
         name={trackNameMock}
         href={hrefMock}
+        genres={genresMock}
         images={imagesMock}
         playedAt="2022-01-01"
       />
@@ -66,6 +69,7 @@ describe('ItemsListElement', () => {
         href={hrefMock}
         images={imagesMock}
         plays={playsExample}
+        genres={genresMock}
         position={1}
         maxPlays={maxPlaysExample}
       />
@@ -82,6 +86,7 @@ describe('ItemsListElement', () => {
         href={hrefMock}
         images={imagesMock}
         playTime={playtimeExample}
+        genres={genresMock}
         position={1}
         maxPlayTime={maxPlayTimeExample}
       />
