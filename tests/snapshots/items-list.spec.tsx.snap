@@ -726,7 +726,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       <div
                         aria-valuemax="100"
                         aria-valuemin="0"
-                        class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                        class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                         data-max="100"
                         data-state="indeterminate"
                         role="progressbar"
@@ -739,7 +739,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         />
                       </div>
                       <div
-                        class="absolute top-[2px] left-[15px]"
+                        class="absolute left-[15px] top-[2px]"
                       >
                         2h
                       </div>
@@ -809,7 +809,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       <div
                         aria-valuemax="100"
                         aria-valuemin="0"
-                        class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                        class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                         data-max="100"
                         data-state="indeterminate"
                         role="progressbar"
@@ -822,7 +822,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         />
                       </div>
                       <div
-                        class="absolute top-[2px] left-[15px]"
+                        class="absolute left-[15px] top-[2px]"
                       >
                         2h
                       </div>
@@ -896,7 +896,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       <div
                         aria-valuemax="100"
                         aria-valuemin="0"
-                        class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                        class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                         data-max="100"
                         data-state="indeterminate"
                         role="progressbar"
@@ -909,7 +909,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         />
                       </div>
                       <div
-                        class="absolute top-[2px] left-[15px]"
+                        class="absolute left-[15px] top-[2px]"
                       >
                         2h
                       </div>
@@ -998,7 +998,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           <div
                             aria-valuemax="100"
                             aria-valuemin="0"
-                            class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                            class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                             data-max="100"
                             data-state="indeterminate"
                             role="progressbar"
@@ -1011,7 +1011,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                             />
                           </div>
                           <div
-                            class="absolute top-[2px] left-[15px]"
+                            class="absolute left-[15px] top-[2px]"
                           >
                             2h
                           </div>
@@ -1087,7 +1087,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           <div
                             aria-valuemax="100"
                             aria-valuemin="0"
-                            class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                            class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                             data-max="100"
                             data-state="indeterminate"
                             role="progressbar"
@@ -1100,7 +1100,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                             />
                           </div>
                           <div
-                            class="absolute top-[2px] left-[15px]"
+                            class="absolute left-[15px] top-[2px]"
                           >
                             2h
                           </div>
@@ -1176,7 +1176,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           <div
                             aria-valuemax="100"
                             aria-valuemin="0"
-                            class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                            class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                             data-max="100"
                             data-state="indeterminate"
                             role="progressbar"
@@ -1189,7 +1189,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                             />
                           </div>
                           <div
-                            class="absolute top-[2px] left-[15px]"
+                            class="absolute left-[15px] top-[2px]"
                           >
                             2h
                           </div>
@@ -1329,7 +1329,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
-                      class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                      class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                       data-max="100"
                       data-state="indeterminate"
                       role="progressbar"
@@ -1342,7 +1342,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       />
                     </div>
                     <div
-                      class="absolute top-[2px] left-[15px]"
+                      class="absolute left-[15px] top-[2px]"
                     >
                       2h
                     </div>
@@ -1412,7 +1412,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
-                      class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                      class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                       data-max="100"
                       data-state="indeterminate"
                       role="progressbar"
@@ -1425,7 +1425,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       />
                     </div>
                     <div
-                      class="absolute top-[2px] left-[15px]"
+                      class="absolute left-[15px] top-[2px]"
                     >
                       2h
                     </div>
@@ -1499,7 +1499,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
-                      class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                      class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                       data-max="100"
                       data-state="indeterminate"
                       role="progressbar"
@@ -1512,7 +1512,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                       />
                     </div>
                     <div
-                      class="absolute top-[2px] left-[15px]"
+                      class="absolute left-[15px] top-[2px]"
                     >
                       2h
                     </div>
@@ -1601,7 +1601,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         <div
                           aria-valuemax="100"
                           aria-valuemin="0"
-                          class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                          class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                           data-max="100"
                           data-state="indeterminate"
                           role="progressbar"
@@ -1614,7 +1614,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           />
                         </div>
                         <div
-                          class="absolute top-[2px] left-[15px]"
+                          class="absolute left-[15px] top-[2px]"
                         >
                           2h
                         </div>
@@ -1690,7 +1690,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         <div
                           aria-valuemax="100"
                           aria-valuemin="0"
-                          class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                          class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                           data-max="100"
                           data-state="indeterminate"
                           role="progressbar"
@@ -1703,7 +1703,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           />
                         </div>
                         <div
-                          class="absolute top-[2px] left-[15px]"
+                          class="absolute left-[15px] top-[2px]"
                         >
                           2h
                         </div>
@@ -1779,7 +1779,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                         <div
                           aria-valuemax="100"
                           aria-valuemin="0"
-                          class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                          class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                           data-max="100"
                           data-state="indeterminate"
                           role="progressbar"
@@ -1792,7 +1792,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                           />
                         </div>
                         <div
-                          class="absolute top-[2px] left-[15px]"
+                          class="absolute left-[15px] top-[2px]"
                         >
                           2h
                         </div>
@@ -2640,7 +2640,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       <div
                         aria-valuemax="100"
                         aria-valuemin="0"
-                        class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                        class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                         data-max="100"
                         data-state="indeterminate"
                         role="progressbar"
@@ -2653,7 +2653,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         />
                       </div>
                       <div
-                        class="absolute top-[2px] left-[15px]"
+                        class="absolute left-[15px] top-[2px]"
                       >
                         100 plays
                       </div>
@@ -2723,7 +2723,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       <div
                         aria-valuemax="100"
                         aria-valuemin="0"
-                        class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                        class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                         data-max="100"
                         data-state="indeterminate"
                         role="progressbar"
@@ -2736,7 +2736,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         />
                       </div>
                       <div
-                        class="absolute top-[2px] left-[15px]"
+                        class="absolute left-[15px] top-[2px]"
                       >
                         100 plays
                       </div>
@@ -2810,7 +2810,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       <div
                         aria-valuemax="100"
                         aria-valuemin="0"
-                        class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                        class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                         data-max="100"
                         data-state="indeterminate"
                         role="progressbar"
@@ -2823,7 +2823,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         />
                       </div>
                       <div
-                        class="absolute top-[2px] left-[15px]"
+                        class="absolute left-[15px] top-[2px]"
                       >
                         100 plays
                       </div>
@@ -2912,7 +2912,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           <div
                             aria-valuemax="100"
                             aria-valuemin="0"
-                            class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                            class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                             data-max="100"
                             data-state="indeterminate"
                             role="progressbar"
@@ -2925,7 +2925,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                             />
                           </div>
                           <div
-                            class="absolute top-[2px] left-[15px]"
+                            class="absolute left-[15px] top-[2px]"
                           >
                             100 plays
                           </div>
@@ -3001,7 +3001,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           <div
                             aria-valuemax="100"
                             aria-valuemin="0"
-                            class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                            class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                             data-max="100"
                             data-state="indeterminate"
                             role="progressbar"
@@ -3014,7 +3014,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                             />
                           </div>
                           <div
-                            class="absolute top-[2px] left-[15px]"
+                            class="absolute left-[15px] top-[2px]"
                           >
                             100 plays
                           </div>
@@ -3090,7 +3090,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           <div
                             aria-valuemax="100"
                             aria-valuemin="0"
-                            class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                            class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                             data-max="100"
                             data-state="indeterminate"
                             role="progressbar"
@@ -3103,7 +3103,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                             />
                           </div>
                           <div
-                            class="absolute top-[2px] left-[15px]"
+                            class="absolute left-[15px] top-[2px]"
                           >
                             100 plays
                           </div>
@@ -3243,7 +3243,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
-                      class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                      class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                       data-max="100"
                       data-state="indeterminate"
                       role="progressbar"
@@ -3256,7 +3256,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       />
                     </div>
                     <div
-                      class="absolute top-[2px] left-[15px]"
+                      class="absolute left-[15px] top-[2px]"
                     >
                       100 plays
                     </div>
@@ -3326,7 +3326,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
-                      class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                      class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                       data-max="100"
                       data-state="indeterminate"
                       role="progressbar"
@@ -3339,7 +3339,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       />
                     </div>
                     <div
-                      class="absolute top-[2px] left-[15px]"
+                      class="absolute left-[15px] top-[2px]"
                     >
                       100 plays
                     </div>
@@ -3413,7 +3413,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
-                      class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                      class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                       data-max="100"
                       data-state="indeterminate"
                       role="progressbar"
@@ -3426,7 +3426,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                       />
                     </div>
                     <div
-                      class="absolute top-[2px] left-[15px]"
+                      class="absolute left-[15px] top-[2px]"
                     >
                       100 plays
                     </div>
@@ -3515,7 +3515,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         <div
                           aria-valuemax="100"
                           aria-valuemin="0"
-                          class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                          class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                           data-max="100"
                           data-state="indeterminate"
                           role="progressbar"
@@ -3528,7 +3528,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           />
                         </div>
                         <div
-                          class="absolute top-[2px] left-[15px]"
+                          class="absolute left-[15px] top-[2px]"
                         >
                           100 plays
                         </div>
@@ -3604,7 +3604,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         <div
                           aria-valuemax="100"
                           aria-valuemin="0"
-                          class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                          class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                           data-max="100"
                           data-state="indeterminate"
                           role="progressbar"
@@ -3617,7 +3617,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           />
                         </div>
                         <div
-                          class="absolute top-[2px] left-[15px]"
+                          class="absolute left-[15px] top-[2px]"
                         >
                           100 plays
                         </div>
@@ -3693,7 +3693,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                         <div
                           aria-valuemax="100"
                           aria-valuemin="0"
-                          class="relative rounded-full w-full h-7 bg-primary *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12 *:transition-all *:duration-700 *:ease-in-out"
+                          class="relative rounded-full h-7 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_right,#9400d5,#1e89ee)] *:transition-all *:duration-700 *:ease-in-out"
                           data-max="100"
                           data-state="indeterminate"
                           role="progressbar"
@@ -3706,7 +3706,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                           />
                         </div>
                         <div
-                          class="absolute top-[2px] left-[15px]"
+                          class="absolute left-[15px] top-[2px]"
                         >
                           100 plays
                         </div>
