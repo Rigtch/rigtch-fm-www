@@ -10,7 +10,7 @@ exports[`Sidebar > should match snapshot 1`] = `
       >
         <header>
           <h3
-            class="text-xl font-semibold px-2"
+            class="px-2 text-xl font-semibold"
           >
             Profile
           </h3>
@@ -19,8 +19,8 @@ exports[`Sidebar > should match snapshot 1`] = `
           class="flex flex-col gap-2"
         >
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-            href="/profile/1?undefined"
+            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+            href="/profile/1?view=list&stats-provider=list&time-range=list&stats-measurement=list"
           >
             <svg
               fill="none"
@@ -50,19 +50,19 @@ exports[`Sidebar > should match snapshot 1`] = `
             Overview
           </a>
           <section
-            class="pl-4 flex flex-col gap-2"
+            class="flex flex-col gap-2 pl-4"
           >
             <header>
               <h4
-                class="text-lg font-semibold px-2"
+                class="px-2 text-lg font-semibold"
               >
                 Top
               </h4>
             </header>
             <main>
               <a
-                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-                href="/profile/1/top/genres?undefined"
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/genres?stats-provider=list&time-range=list&stats-measurement=list"
               >
                 <svg
                   fill="none"
@@ -94,8 +94,8 @@ exports[`Sidebar > should match snapshot 1`] = `
                 Top Genres
               </a>
               <a
-                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-                href="/profile/1/top/artists?undefined"
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/artists?view=list&stats-provider=list&time-range=list&stats-measurement=list"
               >
                 <svg
                   fill="none"
@@ -120,8 +120,8 @@ exports[`Sidebar > should match snapshot 1`] = `
                 Top Artists
               </a>
               <a
-                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-                href="/profile/1/top/albums?view=list&stats-provider=rigtch"
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/albums?view=list&stats-measurement=list"
               >
                 <svg
                   fill="none"
@@ -154,8 +154,8 @@ exports[`Sidebar > should match snapshot 1`] = `
                 Top Albums
               </a>
               <a
-                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-                href="/profile/1/top/tracks?undefined"
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+                href="/profile/1/top/tracks?view=list&stats-provider=list&time-range=list&stats-measurement=list"
               >
                 <svg
                   fill="none"
@@ -187,8 +187,8 @@ exports[`Sidebar > should match snapshot 1`] = `
             </main>
           </section>
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-            href="/profile/1/reports"
+            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+            href="/profile/1/reports?stats-measurement=list"
           >
             <svg
               fill="none"
@@ -222,7 +222,7 @@ exports[`Sidebar > should match snapshot 1`] = `
             Reports
           </a>
           <a
-            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+            class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
             href="/profile/1/history"
           >
             <svg
@@ -257,7 +257,7 @@ exports[`Sidebar > should match snapshot 1`] = `
     >
       <header>
         <h3
-          class="text-xl font-semibold px-2"
+          class="px-2 text-xl font-semibold"
         >
           Profile
         </h3>
@@ -266,8 +266,8 @@ exports[`Sidebar > should match snapshot 1`] = `
         class="flex flex-col gap-2"
       >
         <a
-          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-          href="/profile/1?undefined"
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+          href="/profile/1?view=list&stats-provider=list&time-range=list&stats-measurement=list"
         >
           <svg
             fill="none"
@@ -297,19 +297,19 @@ exports[`Sidebar > should match snapshot 1`] = `
           Overview
         </a>
         <section
-          class="pl-4 flex flex-col gap-2"
+          class="flex flex-col gap-2 pl-4"
         >
           <header>
             <h4
-              class="text-lg font-semibold px-2"
+              class="px-2 text-lg font-semibold"
             >
               Top
             </h4>
           </header>
           <main>
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-              href="/profile/1/top/genres?undefined"
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/genres?stats-provider=list&time-range=list&stats-measurement=list"
             >
               <svg
                 fill="none"
@@ -341,8 +341,8 @@ exports[`Sidebar > should match snapshot 1`] = `
               Top Genres
             </a>
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-              href="/profile/1/top/artists?undefined"
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/artists?view=list&stats-provider=list&time-range=list&stats-measurement=list"
             >
               <svg
                 fill="none"
@@ -367,8 +367,8 @@ exports[`Sidebar > should match snapshot 1`] = `
               Top Artists
             </a>
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-              href="/profile/1/top/albums?view=list&stats-provider=rigtch"
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/albums?view=list&stats-measurement=list"
             >
               <svg
                 fill="none"
@@ -401,8 +401,8 @@ exports[`Sidebar > should match snapshot 1`] = `
               Top Albums
             </a>
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-              href="/profile/1/top/tracks?undefined"
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+              href="/profile/1/top/tracks?view=list&stats-provider=list&time-range=list&stats-measurement=list"
             >
               <svg
                 fill="none"
@@ -434,8 +434,8 @@ exports[`Sidebar > should match snapshot 1`] = `
           </main>
         </section>
         <a
-          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
-          href="/profile/1/reports"
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+          href="/profile/1/reports?stats-measurement=list"
         >
           <svg
             fill="none"
@@ -469,7 +469,7 @@ exports[`Sidebar > should match snapshot 1`] = `
           Reports
         </a>
         <a
-          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+          class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
           href="/profile/1/history"
         >
           <svg

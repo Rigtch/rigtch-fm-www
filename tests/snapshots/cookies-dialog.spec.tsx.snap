@@ -119,7 +119,7 @@ exports[`CookiesDialog > should match snapshot when not accepted 1`] = `
       >
         <form>
           <button
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary-lighter text-primary-foreground shadow-sm hover:bg-primary-lighter/80 h-9 px-4 py-2"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-primary-lighter text-primary-foreground shadow-sm hover:bg-primary-lighter/80 h-9 px-4 py-2"
             type="submit"
           >
             Decline
@@ -127,7 +127,7 @@ exports[`CookiesDialog > should match snapshot when not accepted 1`] = `
         </form>
         <form>
           <button
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground shadow h-9 px-4 py-2 bg-purple-800 hover:bg-purple-900"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground shadow h-9 px-4 py-2 bg-purple-800 hover:bg-purple-900"
             type="submit"
           >
             Accept

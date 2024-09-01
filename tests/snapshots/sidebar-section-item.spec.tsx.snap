@@ -6,7 +6,7 @@ exports[`SidebarSectionItem > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <a
-        class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+        class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
         href="/"
       >
         Label
@@ -15,7 +15,7 @@ exports[`SidebarSectionItem > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <a
-      class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+      class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
       href="/"
     >
       Label
@@ -81,7 +81,7 @@ exports[`SidebarSectionItem > should match snapshot as active 1`] = `
   "baseElement": <body>
     <div>
       <a
-        class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary-lighter text-primary-foreground shadow-sm hover:bg-primary-lighter/80 h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+        class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-primary-lighter text-primary-foreground shadow-sm hover:bg-primary-lighter/80 h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
         href="/"
       >
         Label
@@ -90,7 +90,7 @@ exports[`SidebarSectionItem > should match snapshot as active 1`] = `
   </body>,
   "container": <div>
     <a
-      class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary-lighter text-primary-foreground shadow-sm hover:bg-primary-lighter/80 h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+      class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-primary-lighter text-primary-foreground shadow-sm hover:bg-primary-lighter/80 h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
       href="/"
     >
       Label
@@ -156,7 +156,7 @@ exports[`SidebarSectionItem > should match snapshot with icon 1`] = `
   "baseElement": <body>
     <div>
       <a
-        class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+        class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
         href="/"
       >
         <svg
@@ -185,7 +185,7 @@ exports[`SidebarSectionItem > should match snapshot with icon 1`] = `
   </body>,
   "container": <div>
     <a
-      class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
+      class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 w-full text-md justify-start flex gap-2"
       href="/"
     >
       <svg

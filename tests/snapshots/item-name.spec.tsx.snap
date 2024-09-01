@@ -6,7 +6,7 @@ exports[`ItemName > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <a
-        class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+        class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
         href=""
       >
         <p
@@ -19,7 +19,7 @@ exports[`ItemName > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <a
-      class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+      class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
       href=""
     >
       <p
@@ -89,7 +89,7 @@ exports[`ItemName > should match snapshot with long name 1`] = `
   "baseElement": <body>
     <div>
       <a
-        class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+        class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
         href=""
       >
         <p
@@ -102,7 +102,7 @@ exports[`ItemName > should match snapshot with long name 1`] = `
   </body>,
   "container": <div>
     <a
-      class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+      class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
       href=""
     >
       <p
