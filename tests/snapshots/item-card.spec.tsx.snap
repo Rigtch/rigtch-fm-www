@@ -22,7 +22,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
         />
         <div>
           <a
-            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/artist/undefined"
           >
             <p
@@ -82,7 +82,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
       />
       <div>
         <a
-          class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+          class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
           href="/artist/undefined"
         >
           <p
@@ -199,7 +199,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
         />
         <div>
           <a
-            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/artist/123"
           >
             <p
@@ -259,7 +259,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
       />
       <div>
         <a
-          class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+          class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
           href="/artist/123"
         >
           <p
@@ -376,7 +376,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
         />
         <div>
           <a
-            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+            class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
             href="/track/123"
           >
             <p
@@ -391,7 +391,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
             <div />
             <span>
               <a
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                 href="/artist/123"
               >
                 Darkthrone
@@ -444,7 +444,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
       />
       <div>
         <a
-          class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
+          class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg flex justify-start"
           href="/track/123"
         >
           <p
@@ -459,7 +459,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
           <div />
           <span>
             <a
-              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
               href="/artist/123"
             >
               Darkthrone
