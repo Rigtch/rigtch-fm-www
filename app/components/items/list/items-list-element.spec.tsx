@@ -125,4 +125,20 @@ describe('ItemsListElement', () => {
 
     expect(view).toMatchSnapshot()
   })
+
+  test('should match snapshot with genres display length', () => {
+    const view = render(
+      <ItemsListElement
+        id={idMock}
+        name={trackNameMock}
+        href={hrefMock}
+        images={imagesMock}
+        genres={genresMock}
+        genresDisplayLength={4}
+        position={1}
+      />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
 })
