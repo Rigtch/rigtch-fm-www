@@ -68,7 +68,7 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
                   />
                 </div>
                 <button
-                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
                   disabled=""
                 >
                   <svg
@@ -185,7 +185,7 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
                 />
               </div>
               <button
-                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
                 disabled=""
               >
                 <svg
@@ -359,7 +359,7 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
                   />
                 </div>
                 <button
-                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
                   disabled=""
                 >
                   <svg
@@ -476,7 +476,7 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
                 />
               </div>
               <button
-                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
                 disabled=""
               >
                 <svg
@@ -650,7 +650,7 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
                   />
                 </div>
                 <button
-                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
                 >
                   <svg
                     fill="currentColor"
@@ -765,7 +765,7 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
                 />
               </div>
               <button
-                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
               >
                 <svg
                   fill="currentColor"
@@ -937,7 +937,7 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
                   />
                 </div>
                 <button
-                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
                 >
                   <svg
                     class="ml-[1px]"
@@ -1053,7 +1053,7 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
                 />
               </div>
               <button
-                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
               >
                 <svg
                   class="ml-[1px]"
@@ -1226,7 +1226,7 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
                   />
                 </div>
                 <button
-                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
                 >
                   <svg
                     fill="currentColor"
@@ -1341,7 +1341,7 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
                 />
               </div>
               <button
-                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 w-9 rounded-full"
               >
                 <svg
                   fill="currentColor"
