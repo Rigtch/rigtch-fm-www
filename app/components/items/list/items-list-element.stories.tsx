@@ -67,6 +67,13 @@ export const WithPlayTime: ItemsListElementStory = {
   },
 }
 
+export const WithGengresDisplayLength: ItemsListElementStory = {
+  args: {
+    genres: ['Black Metal', 'Death Metal', 'Thrash Metal'],
+    genresDisplayLength: 2,
+  },
+}
+
 export const Skeleton: ItemsListElementStory = {
   render: () => <ItemsListElementSkeleton />,
 }
