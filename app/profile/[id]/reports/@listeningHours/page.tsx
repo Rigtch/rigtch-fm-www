@@ -1,14 +1,13 @@
 import { redirect } from 'next/navigation'
-import { LuMoveDown, LuMoveUp } from 'react-icons/lu'
 
+import { StatCard } from '../components/cards'
 import { ListeningHoursChart } from '../components/charts'
-import { valueMeasurementFormatter } from '../helpers'
+import { getCursors, valueMeasurementFormatter } from '../helpers'
 import { ReportSection } from '../sections'
 
 import { StatsMeasurement } from '@app/api/enums'
 import { getReportsListeningHours } from '@app/api/fetchers/reports'
 import { getServerToken } from '@app/auth'
-import { Card, CardContent, CardDescription } from '@app/components/ui/card'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
 import type { ProfilePageProps } from '@app/profile/types'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
@@ -25,12 +24,8 @@ export default async function ProfileReportsListeningHoursPage({
   const userId = validateId(params.id)
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
-  const thisWeekBeforeParam = new Date(
-    `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate() - new Date().getDay()}`
-  )
-  const thisWeekAfterParam = new Date(
-    `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate() - new Date().getDay() - 7}`
-  )
+  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
+    getCursors()
 
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
     getReportsListeningHours(token, {
@@ -47,20 +42,15 @@ export default async function ProfileReportsListeningHoursPage({
     }),
   ])
 
-  const thisWeekResponseValues = Object.values(thisWeekResponse)
-  const lastWeekResponseValues = Object.values(lastWeekResponse)
+  const thisWeekValues = Object.values(thisWeekResponse)
+  const lastWeekValues = Object.values(lastWeekResponse)
 
-  const thisWeekMostListenedHourValue = Math.max(...thisWeekResponseValues)
+  const thisWeekMostListenedHourValue = Math.max(...thisWeekValues)
   const thisWeekMostListenedHour = Array.from(
     { length: 24 },
     (_, index) => index + 1
-  )[thisWeekResponseValues.indexOf(thisWeekMostListenedHourValue)]
-  const lastWeekMostListenedHourValue = Math.max(...lastWeekResponseValues)
-  const vsLastWeekMostListenedHourPercent = Math.floor(
-    ((thisWeekMostListenedHourValue - lastWeekMostListenedHourValue) /
-      lastWeekMostListenedHourValue) *
-      100
-  )
+  )[thisWeekValues.indexOf(thisWeekMostListenedHourValue)]
+  const lastWeekMostListenedHourValue = Math.max(...lastWeekValues)
 
   return (
     <ReportSection className="flex-col-reverse">
@@ -72,39 +62,26 @@ export default async function ProfileReportsListeningHoursPage({
         />
       </div>
 
-      <div className="flex flex-col gap-4 justify-center items-center lg:w-1/2">
-        <Card className="p-4 w-[400px] flex flex-col items-center justify-center gap-2">
-          <CardDescription className="p-0 font-semibold text-lg text-nowrap">
-            Most listened hour
-          </CardDescription>
-          <CardContent className="text-6xl ml-6">
-            {thisWeekMostListenedHour}:00
-          </CardContent>
-        </Card>
+      <div className="flex flex-col items-center justify-center gap-4 lg:w-1/2">
+        <StatCard
+          label="Most listened hour"
+          value={thisWeekMostListenedHour}
+          valueSize="xl"
+        >
+          {thisWeekMostListenedHour}:00
+        </StatCard>
 
-        <Card className="p-4 w-[400px] flex flex-col items-center justify-center gap-2">
-          <CardDescription className="p-0 font-semibold text-lg text-nowrap">
-            {measurement === StatsMeasurement.PLAYS ? 'Plays' : 'Playtime'} in
-            most listened hour
-          </CardDescription>
-          <CardContent>
-            <p className="text-6xl ml-6">
-              {valueMeasurementFormatter(
-                thisWeekMostListenedHourValue,
-                measurement
-              )}
-            </p>
-            <p className="text-muted-foreground flex items-center gap-1">
-              {vsLastWeekMostListenedHourPercent > 0 ? (
-                <LuMoveUp />
-              ) : (
-                <LuMoveDown />
-              )}
-              {vsLastWeekMostListenedHourPercent}% vs last&apos;s week most
-              listened hour
-            </p>
-          </CardContent>
-        </Card>
+        <StatCard
+          label={`${measurement === StatsMeasurement.PLAYS ? 'Plays' : 'Playtime'} in most listened hour`}
+          value={thisWeekMostListenedHourValue}
+          lastWeekValue={lastWeekMostListenedHourValue}
+          valueSize="xl"
+        >
+          {valueMeasurementFormatter(
+            thisWeekMostListenedHourValue,
+            measurement
+          )}
+        </StatCard>
       </div>
     </ReportSection>
   )
