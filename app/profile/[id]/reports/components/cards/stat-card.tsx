@@ -10,7 +10,7 @@ namespace StatCard {
   export interface Props extends ComponentProps<typeof Card> {
     label: string
     valueSize?: StatCardValueSize
-    value: number
+    value?: number
     lastWeekValue?: number
   }
 }
@@ -24,9 +24,10 @@ function StatCard({
   className,
   ...props
 }: StatCard.Props) {
-  const vsLastWeekPercent = lastWeekValue
-    ? Math.floor(((value - lastWeekValue) / lastWeekValue) * 100)
-    : undefined
+  const vsLastWeekPercent =
+    lastWeekValue && value
+      ? Math.floor(((value - lastWeekValue) / lastWeekValue) * 100)
+      : undefined
 
   return (
     <Card
