@@ -29,15 +29,11 @@ function ListeningHoursChart({
 }: ListeningHoursChart.Props) {
   const listeningHours = Array.from({
     length: Object.values(thisWeekResponse).length,
-  }).map((_, index) => {
-    const responseIndex = index === 0 ? 24 : index
-
-    return {
-      hour: index,
-      thisWeek: thisWeekResponse[responseIndex],
-      lastWeek: lastWeekResponse[responseIndex],
-    }
-  })
+  }).map((_, index) => ({
+    hour: index,
+    thisWeek: thisWeekResponse[index],
+    lastWeek: lastWeekResponse[index],
+  }))
 
   const chartConfig = {
     thisWeek: {
