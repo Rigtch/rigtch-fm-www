@@ -32,20 +32,14 @@ function MostListenedGenresChart({
     '#1e89ee',
     '#0f6cc5',
     '#0b5090',
-    '#00d594',
-    '#388e3c',
-    '#4aef00',
-    '#fff223',
-    '#ef2e00',
   ]
 
   const topGenres = topGenresResponse
-    .slice(0, 10)
+    .slice(0, 5)
     .map(({ item, playTime, plays }, index) => ({
       name: item,
       value: measurement === StatsMeasurement.PLAYS ? plays! : playTime!,
       fill: colors[index],
-      color: colors[index],
     }))
 
   const chartConfig: ChartConfig = {}
