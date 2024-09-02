@@ -48,10 +48,9 @@ export default async function ProfileReportsListeningHoursPage({
   const lastWeekValues = Object.values(lastWeekResponse)
 
   const thisWeekMostListenedHourValue = Math.max(...thisWeekValues)
-  const thisWeekMostListenedHour = Array.from(
-    { length: 24 },
-    (_, index) => index + 1
-  )[thisWeekValues.indexOf(thisWeekMostListenedHourValue)]
+  const thisWeekMostListenedHour = thisWeekValues.indexOf(
+    thisWeekMostListenedHourValue
+  )
   const lastWeekMostListenedHourValue = Math.max(...lastWeekValues)
 
   return (
