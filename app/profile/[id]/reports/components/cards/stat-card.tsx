@@ -32,9 +32,9 @@ function StatCard({
   return (
     <Card
       className={cn(
-        valueSize === 'xl'
-          ? 'flex w-full flex-col items-center justify-center gap-2 p-4 sm:w-[400px] 2xl:w-full'
-          : 'p-2',
+        valueSize === 'xl' &&
+          'flex w-full flex-col items-center justify-center sm:w-[400px] 2xl:w-full',
+        'p-4',
         className
       )}
       {...props}
@@ -52,7 +52,7 @@ function StatCard({
           className={cn(
             valueSize === 'md' && 'text-2xl',
             valueSize === 'lg' && 'text-3xl',
-            valueSize === 'xl' && 'ml-6 text-6xl'
+            valueSize === 'xl' && 'text-6xl'
           )}
         >
           {children}
