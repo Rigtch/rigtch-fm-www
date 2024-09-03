@@ -49,6 +49,8 @@ export default async function ProfileReportsMostListenedGenresPage({
     }),
   ])
 
+  if (thisWeekMostListenedGenresResponse.length === 0) return null
+
   const thisWeekMostListenedGenre = thisWeekMostListenedGenresResponse[0].item
   const thisWeekMostListenedGenreValue =
     measurement === StatsMeasurement.PLAYS

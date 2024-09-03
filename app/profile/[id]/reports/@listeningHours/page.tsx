@@ -53,6 +53,8 @@ export default async function ProfileReportsListeningHoursPage({
   )
   const lastWeekMostListenedHourValue = Math.max(...lastWeekValues)
 
+  if (thisWeekMostListenedHourValue === 0) return null
+
   return (
     <ReportSection className="mb-4 flex-col-reverse">
       <div className="xl:w-1/2">

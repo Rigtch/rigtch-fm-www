@@ -94,6 +94,8 @@ export default async function ProfileReportsMostListenedItemsPage({
     }),
   ])
 
+  if (thisWeekTotalArtists === 0) return null
+
   return (
     <ReportSection className="grid grid-cols-1 gap-8 2xl:grid-cols-3 2xl:gap-4">
       <section className="flex flex-col gap-4">
