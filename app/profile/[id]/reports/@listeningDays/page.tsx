@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { HiOutlineEmojiSad } from 'react-icons/hi'
 
 import { StatCard } from '../components/cards'
 import { ListeningDaysChart } from '../components/charts'
@@ -12,6 +13,7 @@ import { getServerToken } from '@app/auth'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
+import { Alert, AlertDescription, AlertTitle } from '@app/components/ui/alert'
 
 export default async function ProfileReportsListeningDaysPage({
   params,
@@ -67,6 +69,21 @@ export default async function ProfileReportsListeningDaysPage({
 
   const thisWeekAverageDayValue = Math.floor(thisWeekTotal / weekDays.length)
   const lastWeekAverageDayValue = Math.floor(lastWeekTotal / weekDays.length)
+
+  if (thisWeekMostListenedDayValue === 0)
+    return (
+      <div className="p-4">
+        <Alert variant="destructive">
+          <HiOutlineEmojiSad className="h-5 w-5" />
+
+          <AlertTitle>No Data for this week</AlertTitle>
+
+          <AlertDescription>
+            Oops... Looks like nothing&apos;s here, try to select other week.
+          </AlertDescription>
+        </Alert>
+      </div>
+    )
 
   return (
     <ReportSection>
