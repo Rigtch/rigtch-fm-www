@@ -81,7 +81,7 @@ export default async function ProfileReportsListeningDaysPage({
           <AlertTitle>No Data for this week</AlertTitle>
 
           <AlertDescription>
-            Oops... Looks like nothing&apos;s here, try to select other week.
+            Oops... Looks like nothing&apos;s here, try to select another week.
           </AlertDescription>
         </Alert>
       </div>
