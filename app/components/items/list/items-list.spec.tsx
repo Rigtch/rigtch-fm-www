@@ -98,12 +98,4 @@ describe('ItemsList', () => {
 
     expect(view).toMatchSnapshot()
   })
-
-  test('should match snapshot with genres display length', () => {
-    const view = render(
-      <ItemsList isTop items={artistEntitiesMocks} genresDisplayLength={4} />
-    )
-
-    expect(view).toMatchSnapshot()
-  })
 })

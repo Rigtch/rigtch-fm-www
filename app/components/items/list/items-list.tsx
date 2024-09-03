@@ -95,8 +95,8 @@ function ItemsList({
           <div key={index}>
             {/* @ts-expect-error: conditional types are already handled */}
             <ItemsListElement
-              genresDisplayLength={genresDisplayLength}
               {...item}
+              genresDisplayLength={genresDisplayLength}
               positionSize={positionSize}
               positionClassName={positionClassName}
               className={cn(

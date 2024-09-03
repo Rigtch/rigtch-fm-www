@@ -37,6 +37,9 @@ export default {
     positionClassName: {
       control: 'text',
     },
+    genresDisplayLength: {
+      control: 'number',
+    },
   },
   args: artistExample,
 } satisfies Meta<ItemsListElementType>
