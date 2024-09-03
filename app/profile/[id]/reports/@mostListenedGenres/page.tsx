@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 
-import { getCursors, valueMeasurementFormatter } from '../helpers'
+import { validateCursors, valueMeasurementFormatter } from '../helpers'
 import type { ProfileReportsPageProps } from '../types/props'
 import { ReportSection } from '../sections'
 import { MostListenedGenresChart } from '../components/charts'
@@ -24,10 +24,8 @@ export default async function ProfileReportsMostListenedGenresPage({
   const userId = validateId(params.id)
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } = getCursors(
-    searchParams.before,
-    searchParams.after
-  )
+  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
+    validateCursors(searchParams.before, searchParams.after)
 
   const [
     thisWeekMostListenedGenresResponse,

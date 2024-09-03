@@ -1,4 +1,4 @@
-export function getCursors(
+export function validateCursors(
   beforeParam?: string | null,
   afterParam?: string | null
 ) {
