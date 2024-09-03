@@ -115,7 +115,7 @@ export const WithPlayTimeAndTop: ItemsListStory = {
   },
 }
 
-export const WithGengresDisplayLength: ItemsListStory = {
+export const WithGengres: ItemsListStory = {
   args: {
     items: trackExamples.map(item => ({
       ...item,
