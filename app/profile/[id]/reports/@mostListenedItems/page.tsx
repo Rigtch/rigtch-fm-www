@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 
 import { StatCard } from '../components/cards'
-import { getCursors } from '../helpers'
+import { validateCursors } from '../helpers'
 import { ReportSection } from '../sections'
 import type { ProfileReportsPageProps } from '../types/props'
 
@@ -30,10 +30,8 @@ export default async function ProfileReportsMostListenedItemsPage({
 
   const userId = validateId(params.id)
 
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } = getCursors(
-    searchParams.before,
-    searchParams.after
-  )
+  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
+    validateCursors(searchParams.before, searchParams.after)
 
   const [
     mostListenedArtists,
