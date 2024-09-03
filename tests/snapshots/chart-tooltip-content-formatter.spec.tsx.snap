@@ -1,0 +1,129 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`chartTooltipContentFormatter > should return formatted tooltip content with color 1`] = `
+<React.Fragment>
+  <div
+    className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+    style={
+      {
+        "--color-bg": "#000000",
+        "--color-border": "#000000",
+      }
+    }
+  />
+  <div
+    className="flex flex-1 items-end justify-between gap-1 leading-none"
+  >
+    <div
+      className="grid gap-1.5"
+    >
+      <span
+        className="text-muted-foreground"
+      >
+        item-name
+      </span>
+    </div>
+    <span
+      className="font-mono font-medium tabular-nums text-foreground"
+    >
+      100 plays
+    </span>
+  </div>
+</React.Fragment>
+`;
+
+exports[`chartTooltipContentFormatter > should return formatted tooltip content with fill 1`] = `
+<React.Fragment>
+  <div
+    className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+    style={
+      {
+        "--color-bg": [MockFunction spy],
+        "--color-border": [MockFunction spy],
+      }
+    }
+  />
+  <div
+    className="flex flex-1 items-end justify-between gap-1 leading-none"
+  >
+    <div
+      className="grid gap-1.5"
+    >
+      <span
+        className="text-muted-foreground"
+      >
+        item-name
+      </span>
+    </div>
+    <span
+      className="font-mono font-medium tabular-nums text-foreground"
+    >
+      100 plays
+    </span>
+  </div>
+</React.Fragment>
+`;
+
+exports[`chartTooltipContentFormatter > should return formatted tooltip content with measurement playTime 1`] = `
+<React.Fragment>
+  <div
+    className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+    style={
+      {
+        "--color-bg": [MockFunction spy],
+        "--color-border": [MockFunction spy],
+      }
+    }
+  />
+  <div
+    className="flex flex-1 items-end justify-between gap-1 leading-none"
+  >
+    <div
+      className="grid gap-1.5"
+    >
+      <span
+        className="text-muted-foreground"
+      >
+        item-name
+      </span>
+    </div>
+    <span
+      className="font-mono font-medium tabular-nums text-foreground"
+    >
+      4h
+    </span>
+  </div>
+</React.Fragment>
+`;
+
+exports[`chartTooltipContentFormatter > should return formatted tooltip content with measurement plays 1`] = `
+<React.Fragment>
+  <div
+    className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+    style={
+      {
+        "--color-bg": [MockFunction spy],
+        "--color-border": [MockFunction spy],
+      }
+    }
+  />
+  <div
+    className="flex flex-1 items-end justify-between gap-1 leading-none"
+  >
+    <div
+      className="grid gap-1.5"
+    >
+      <span
+        className="text-muted-foreground"
+      >
+        item-name
+      </span>
+    </div>
+    <span
+      className="font-mono font-medium tabular-nums text-foreground"
+    >
+      100 plays
+    </span>
+  </div>
+</React.Fragment>
+`;

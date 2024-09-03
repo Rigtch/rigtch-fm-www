@@ -4,9 +4,9 @@ import { valueMeasurementFormatter } from '@app/profile/[id]/reports/helpers'
 import type { ChartTooltipContent } from '@app/components/ui/chart'
 import type { StatsMeasurement } from '@app/api/enums'
 
-type ChartTooltipContentFormatter = ComponentProps<
-  typeof ChartTooltipContent
->['formatter']
+type ChartTooltipContentFormatter = NonNullable<
+  ComponentProps<typeof ChartTooltipContent>['formatter']
+>
 
 export const chartTooltipContentFormatter = (
   measurement: StatsMeasurement
@@ -28,6 +28,7 @@ export const chartTooltipContentFormatter = (
         <div className="grid gap-1.5">
           <span className="text-muted-foreground">{item.name}</span>
         </div>
+
         {item.value && (
           <span className="font-mono font-medium tabular-nums text-foreground">
             {valueMeasurementFormatter(+value, measurement, false)}
