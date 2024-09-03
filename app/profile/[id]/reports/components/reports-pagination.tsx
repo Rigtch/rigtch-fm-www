@@ -4,7 +4,7 @@ import { DateTime } from 'luxon'
 import type { HTMLAttributes } from 'react'
 import { useSearchParams } from 'next/navigation'
 
-import type { getCursors } from '../helpers'
+import type { validateCursors } from '../helpers'
 
 import {
   Pagination,
@@ -17,7 +17,7 @@ import { cn } from '@app/utils/cn'
 import { BETA_USER_CREATED_AT, STATS_MEASUREMENT } from '@app/profile/constants'
 
 namespace ReportsPagination {
-  export type Props = ReturnType<typeof getCursors> &
+  export type Props = ReturnType<typeof validateCursors> &
     Pick<HTMLAttributes<HTMLDivElement>, 'className'>
 }
 

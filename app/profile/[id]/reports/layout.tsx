@@ -5,7 +5,7 @@ import type { ReactNode } from 'react'
 
 import { ReportsPagination } from './components/reports-pagination'
 import { AFTER, BEFORE } from './constants/search-params'
-import { getCursors } from './helpers'
+import { validateCursors } from './helpers'
 
 import { SelectStatsMeasurement } from '@app/profile/components/common/selects'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
@@ -33,7 +33,7 @@ function ProfileReportsLayout({
     searchParams.get(STATS_MEASUREMENT)
   )
 
-  const { before, after } = getCursors(
+  const { before, after } = validateCursors(
     searchParams.get(BEFORE),
     searchParams.get(AFTER)
   )

@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation'
 
 import { StatCard } from '../components/cards'
 import { ListeningHoursChart } from '../components/charts'
-import { getCursors, valueMeasurementFormatter } from '../helpers'
+import { validateCursors, valueMeasurementFormatter } from '../helpers'
 import { ReportSection } from '../sections'
 import type { ProfileReportsPageProps } from '../types/props'
 
@@ -24,10 +24,8 @@ export default async function ProfileReportsListeningHoursPage({
   const userId = validateId(params.id)
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } = getCursors(
-    searchParams.before,
-    searchParams.after
-  )
+  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
+    validateCursors(searchParams.before, searchParams.after)
 
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
     getReportsListeningHours(token, {
