@@ -70,10 +70,9 @@ export const WithPlayTime: ItemsListElementStory = {
   },
 }
 
-export const WithGengresDisplayLength: ItemsListElementStory = {
+export const WithGenres: ItemsListElementStory = {
   args: {
     genres: ['Black Metal', 'Death Metal', 'Thrash Metal'],
-    genresDisplayLength: 2,
   },
 }
 
