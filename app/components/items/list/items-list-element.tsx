@@ -14,7 +14,8 @@ import { SpotifyLink } from '@app/components/common'
 import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
 
-interface ItemsListElementAlbum extends Pick<ArtistEntity, 'images'> {
+interface ItemsListElementArtist extends Pick<ArtistEntity, 'images'> {
+  genres?: string[]
   artists?: never
   album?: never
 }
@@ -22,10 +23,11 @@ interface ItemsListElementAlbum extends Pick<ArtistEntity, 'images'> {
 interface ItemsListElementTrack {
   artists: Pick<ArtistEntity, 'id' | 'name'>[]
   album: Pick<AlbumEntity, 'images'>
+  genres?: never
   images?: never
 }
 
-interface ItemsListElementArtist extends Pick<AlbumEntity, 'images'> {
+interface ItemsListElementAlbum extends Pick<AlbumEntity, 'images' | 'genres'> {
   artists: Pick<ArtistEntity, 'id' | 'name'>[]
   album?: never
 }
@@ -54,7 +56,7 @@ namespace ItemsListElement {
           | ItemsListElementTrack
           | ItemsListElementArtist
         ) &
-        Pick<AlbumEntity, 'name' | 'href' | 'id' | 'genres'> & {
+        Pick<AlbumEntity, 'name' | 'href' | 'id'> & {
           genresDisplayLength?: number
         } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
@@ -91,8 +93,6 @@ function ItemsListElement({
       }, 200)
     }
   }, [plays, playTime, maxPlays, maxPlayTime])
-
-  console.log(genres)
 
   return (
     <div className={cn('relative overflow-hidden', className)}>
@@ -140,7 +140,7 @@ function ItemsListElement({
                 <div className="flex flex-row gap-1">
                   {!artists &&
                     genres
-                      .slice(0, genresDisplayLength)
+                      ?.slice(0, genresDisplayLength)
                       .map((genre, index) => (
                         <GenreBadge key={index} genre={genre} />
                       ))}

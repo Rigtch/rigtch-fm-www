@@ -90,20 +90,8 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                     </a>
                   </span>
                   <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    pop
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rock
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rap
-                  </div>
+                    class="flex flex-row gap-1"
+                  />
                 </div>
               </div>
             </div>
@@ -226,26 +214,14 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                   </a>
                 </span>
                 <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  pop
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rock
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rap
-                </div>
+                  class="flex flex-row gap-1"
+                />
               </div>
             </div>
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
@@ -338,10 +314,10 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
         class="relative overflow-hidden"
       >
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-xl"
@@ -361,25 +337,25 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/track/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                       href="/artist/123"
                     >
                       Darkthrone
@@ -390,7 +366,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                       href="/artist/2"
                     >
                       Mayhem
@@ -401,7 +377,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                       href="/artist/3"
                     >
                       Darkthrone
@@ -412,18 +388,21 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                       href="/artist/4"
                     >
                       Darkthrone
                     </a>
                   </span>
+                  <div
+                    class="flex flex-row gap-1"
+                  />
                 </div>
               </div>
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -459,10 +438,10 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
       class="relative overflow-hidden"
     >
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-xl"
@@ -482,25 +461,25 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/track/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                     href="/artist/123"
                   >
                     Darkthrone
@@ -511,7 +490,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                     href="/artist/2"
                   >
                     Mayhem
@@ -522,7 +501,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                     href="/artist/3"
                   >
                     Darkthrone
@@ -533,18 +512,21 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
                     href="/artist/4"
                   >
                     Darkthrone
                   </a>
                 </span>
+                <div
+                  class="flex flex-row gap-1"
+                />
               </div>
             </div>
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
@@ -637,10 +619,10 @@ exports[`ItemsListElement > should match snapshot with different genres display 
         class="relative overflow-hidden"
       >
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-xl"
@@ -660,33 +642,37 @@ exports[`ItemsListElement > should match snapshot with different genres display 
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div>
                   <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    class="flex flex-row gap-1"
                   >
-                    pop
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      pop
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -722,10 +708,10 @@ exports[`ItemsListElement > should match snapshot with different genres display 
       class="relative overflow-hidden"
     >
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-xl"
@@ -745,33 +731,37 @@ exports[`ItemsListElement > should match snapshot with different genres display 
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div>
                 <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  class="flex flex-row gap-1"
                 >
-                  pop
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    pop
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
@@ -864,10 +854,10 @@ exports[`ItemsListElement > should match snapshot with genres 1`] = `
         class="relative overflow-hidden"
       >
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-xl"
@@ -887,43 +877,47 @@ exports[`ItemsListElement > should match snapshot with genres 1`] = `
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div>
                   <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    class="flex flex-row gap-1"
                   >
-                    pop
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rock
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rap
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      pop
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rock
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rap
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -959,10 +953,10 @@ exports[`ItemsListElement > should match snapshot with genres 1`] = `
       class="relative overflow-hidden"
     >
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-xl"
@@ -982,36 +976,40 @@ exports[`ItemsListElement > should match snapshot with genres 1`] = `
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div>
                 <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  class="flex flex-row gap-1"
                 >
-                  pop
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rock
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rap
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    pop
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rock
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rap
+                  </div>
                 </div>
               </div>
             </div>
@@ -1111,10 +1109,10 @@ exports[`ItemsListElement > should match snapshot with genres display length 1`]
         class="relative overflow-hidden"
       >
         <div
-          class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+          class="flex flex-row justify-between gap-2 p-2 md:gap-4"
         >
           <header
-            class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+            class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
               class="text-center w-[2rem] text-xl"
@@ -1134,43 +1132,47 @@ exports[`ItemsListElement > should match snapshot with genres display length 1`]
               width="48"
             />
             <div
-              class="flex flex-col items-start w-full overflow-hidden"
+              class="flex w-full flex-col items-start overflow-hidden"
             >
               <a
-                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+                class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
                 href="/artist/123"
               >
                 <h3
-                  class="text-xl md:text-2xl truncate"
+                  class="truncate text-xl md:text-2xl"
                 >
                   Track 1
                 </h3>
               </a>
               <div
-                class="flex justify-between w-full items-center"
+                class="flex w-full items-center justify-between"
               >
                 <div>
                   <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    class="flex flex-row gap-1"
                   >
-                    pop
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rock
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rap
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      pop
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rock
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rap
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </header>
           <div
-            class="self-end min-w-[22px]"
+            class="min-w-[22px] self-end"
           >
             <button
               data-state="closed"
@@ -1206,10 +1208,10 @@ exports[`ItemsListElement > should match snapshot with genres display length 1`]
       class="relative overflow-hidden"
     >
       <div
-        class="flex flex-row justify-between p-2 gap-2 md:gap-4"
+        class="flex flex-row justify-between gap-2 p-2 md:gap-4"
       >
         <header
-          class="flex flex-row items-center gap-4 w-full max-w-[calc(100%-30px)]"
+          class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
             class="text-center w-[2rem] text-xl"
@@ -1229,43 +1231,47 @@ exports[`ItemsListElement > should match snapshot with genres display length 1`]
             width="48"
           />
           <div
-            class="flex flex-col items-start w-full overflow-hidden"
+            class="flex w-full flex-col items-start overflow-hidden"
           >
             <a
-              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary-foreground underline-offset-4 hover:underline h-9 text-lg p-0 leading-5 inline-grid"
+              class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
               href="/artist/123"
             >
               <h3
-                class="text-xl md:text-2xl truncate"
+                class="truncate text-xl md:text-2xl"
               >
                 Track 1
               </h3>
             </a>
             <div
-              class="flex justify-between w-full items-center"
+              class="flex w-full items-center justify-between"
             >
               <div>
                 <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  class="flex flex-row gap-1"
                 >
-                  pop
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rock
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rap
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    pop
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rock
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rap
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </header>
         <div
-          class="self-end min-w-[22px]"
+          class="min-w-[22px] self-end"
         >
           <button
             data-state="closed"
@@ -1402,19 +1408,23 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
               >
                 <div>
                   <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    class="flex flex-row gap-1"
                   >
-                    pop
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rock
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rap
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      pop
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rock
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rap
+                    </div>
                   </div>
                 </div>
                 4h 10m
@@ -1502,19 +1512,23 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
             >
               <div>
                 <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  class="flex flex-row gap-1"
                 >
-                  pop
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rock
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rap
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    pop
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rock
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rap
+                  </div>
                 </div>
               </div>
               4h 10m
@@ -1650,25 +1664,29 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
               >
                 <div>
                   <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    class="flex flex-row gap-1"
                   >
-                    pop
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rock
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rap
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      pop
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rock
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rap
+                    </div>
                   </div>
                 </div>
                 <p
                   class="whitespace-nowrap text-primary-foreground/80"
                 >
-                  2 lata temu
+                  2 years ago
                 </p>
               </div>
             </div>
@@ -1745,25 +1763,29 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
             >
               <div>
                 <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  class="flex flex-row gap-1"
                 >
-                  pop
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rock
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rap
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    pop
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rock
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rap
+                  </div>
                 </div>
               </div>
               <p
                 class="whitespace-nowrap text-primary-foreground/80"
               >
-                2 lata temu
+                2 years ago
               </p>
             </div>
           </div>
@@ -1906,19 +1928,23 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
               >
                 <div>
                   <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    class="flex flex-row gap-1"
                   >
-                    pop
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rock
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rap
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      pop
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rock
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rap
+                    </div>
                   </div>
                 </div>
                 115 plays
@@ -2006,19 +2032,23 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
             >
               <div>
                 <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  class="flex flex-row gap-1"
                 >
-                  pop
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rock
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rap
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    pop
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rock
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rap
+                  </div>
                 </div>
               </div>
               115 plays
@@ -2159,19 +2189,23 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
               >
                 <div>
                   <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    class="flex flex-row gap-1"
                   >
-                    pop
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rock
-                  </div>
-                  <div
-                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                  >
-                    rap
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      pop
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rock
+                    </div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                    >
+                      rap
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2254,19 +2288,23 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
             >
               <div>
                 <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  class="flex flex-row gap-1"
                 >
-                  pop
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rock
-                </div>
-                <div
-                  class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
-                >
-                  rap
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    pop
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rock
+                  </div>
+                  <div
+                    class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
+                  >
+                    rap
+                  </div>
                 </div>
               </div>
             </div>
