@@ -78,7 +78,7 @@ function ItemsListElement({
   plays,
   maxPlays,
   className,
-  genresDisplayLength,
+  genresDisplayLength = 3,
 }: ItemsListElement.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
@@ -135,15 +135,16 @@ function ItemsListElement({
 
             <div className="flex w-full items-center justify-between">
               <div>
-                {artists ? (
-                  <ItemArtists artists={artists} />
-                ) : (
-                  genres
-                    .slice(0, genresDisplayLength)
-                    .map((genre, index) => (
-                      <GenreBadge key={index} genre={genre} />
-                    ))
-                )}
+                {artists && <ItemArtists artists={artists} />}
+
+                <div className="flex flex-row gap-1">
+                  {!artists &&
+                    genres
+                      .slice(0, genresDisplayLength)
+                      .map((genre, index) => (
+                        <GenreBadge key={index} genre={genre} />
+                      ))}
+                </div>
               </div>
 
               {playedAt && <RelativeTime value={playedAt} />}
