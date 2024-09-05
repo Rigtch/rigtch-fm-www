@@ -1,6 +1,9 @@
-import type { TrackEntity } from '@app/api/types'
+import type { ArtistEntity, TrackEntity } from '@app/api/types'
 
 export const idExample = '4530c625-2385-45d6-8db1-8b867f125e30'
+
+const imageUrlExample =
+  'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
 
 export const genresExample = ['Atmospheric Black Metal', 'Black Metal', 'Metal']
 
@@ -55,7 +58,7 @@ export const artistExample = {
       url: 'https://i.scdn.co/image/ab67616d0000b2735fdcfafcc8e7831c5fe2c618',
     },
   ],
-  genres: undefined,
+  genres: genresExample,
 }
 
 export const trackExampleFactory = (
@@ -84,32 +87,32 @@ export const trackExampleFactory = (
     },
   }) as TrackEntity
 
+export const artistExampleFactory = (name: string, imageUrl: string) =>
+  ({
+    id: '1',
+    name,
+    href: 'https://open.spotify.com/artist/1',
+    images: [
+      {
+        url: imageUrl,
+        width: 200,
+        height: 200,
+      },
+    ],
+  }) as ArtistEntity
+
 export const trackExamples = [
-  trackExampleFactory(
-    'Djavulens tid ar kommen',
-    'Dimhymn',
-    'https://i.scdn.co/image/ab67616d0000b27359ca7635bbb1f478c24860e6'
-  ),
-  trackExampleFactory(
-    'Lost in Liminal',
-    'Kriegsmaschine',
-    'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
-  ),
-  trackExampleFactory(
-    'The Pallid Scourge',
-    'Kriegsmaschine',
-    'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
-  ),
-  trackExampleFactory(
-    'Night Crawler',
-    'Judas Priest',
-    'https://i.scdn.co/image/ab67616d00001e0260db4ca924d17bc6754e89aa'
-  ),
-  trackExampleFactory(
-    'Painkiller',
-    'Judas Priest',
-    'https://i.scdn.co/image/ab67616d00001e0260db4ca924d17bc6754e89aa'
-  ),
+  trackExampleFactory('Djavulens tid ar kommen', 'Dimhymn', imageUrlExample),
+  trackExampleFactory('Lost in Liminal', 'Kriegsmaschine', imageUrlExample),
+  trackExampleFactory('The Pallid Scourge', 'Kriegsmaschine', imageUrlExample),
+  trackExampleFactory('Night Crawler', 'Judas Priest', imageUrlExample),
+  trackExampleFactory('Painkiller', 'Judas Priest', imageUrlExample),
+]
+
+export const artistExamples = [
+  artistExampleFactory('Dimhymn', imageUrlExample),
+  artistExampleFactory('Kriegsmaschine', imageUrlExample),
+  artistExampleFactory('Summoning', imageUrlExample),
 ]
 
 export const playsExample = 115
