@@ -27,6 +27,7 @@ import {
   validateView,
 } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
+import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const runtime = 'edge'
 
@@ -37,9 +38,9 @@ export default async function ProfileTopArtistsSubPage({
   const token = await getServerToken()
   const userId = validateId(params.id)
 
-  if (!token) redirect('/')
+  if (!token && !isPublicUser(userId)) redirect('/')
 
-  const { createdAt } = await getUser(token, {
+  const { createdAt } = await getUser(token ?? '', {
     userId,
   })
 
@@ -60,14 +61,14 @@ export default async function ProfileTopArtistsSubPage({
   let items: ArtistEntity[] | RigtchStatsResponse<ArtistEntity>
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopArtists(token, {
+    items = await getRigtchTopArtists(token ?? '', {
       after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       limit: 10,
       measurement: statsMeasurement,
     })
   } else {
-    const response = await getSpotifyTopArtists(token, {
+    const response = await getSpotifyTopArtists(token ?? '', {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 10,

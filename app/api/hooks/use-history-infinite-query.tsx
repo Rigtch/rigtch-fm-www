@@ -7,6 +7,7 @@ import type { HistoryTrack, Pagination } from '../types'
 
 import { useToken } from '@app/auth/hooks'
 import type { ParamsWithId } from '@app/types'
+import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const useHistoryInfiniteQuery = (
   limit = 20,
@@ -16,12 +17,12 @@ export const useHistoryInfiniteQuery = (
 
   const token = useToken()
 
-  if (!token) redirect('/')
+  if (!token && !isPublicUser(userId)) redirect('/')
 
   return useInfiniteQuery({
     queryKey: [HISTORY],
     queryFn: ({ pageParam = 1 }) =>
-      getHistory(token, {
+      getHistory(token ?? '', {
         userId,
         limit,
         page: pageParam,

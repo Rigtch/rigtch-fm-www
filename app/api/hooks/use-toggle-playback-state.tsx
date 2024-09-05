@@ -1,4 +1,4 @@
-import { redirect, useParams } from 'next/navigation'
+import { useParams } from 'next/navigation'
 
 import { putPlayerPause, putPlayerResume } from '../fetchers'
 
@@ -9,15 +9,17 @@ export const useTogglePlaybackStateQuery = () => {
   const { id: userId } = useParams<ParamsWithId>()
   const token = useToken()
 
-  if (!token) redirect('/')
-
   function toggle(isPlaying = false) {
     return isPlaying
-      ? putPlayerPause(token!, { userId })
-      : putPlayerResume(token!, { userId })
+      ? putPlayerPause(token ?? '', { userId })
+      : putPlayerResume(token ?? '', { userId })
   }
 
   return {
-    toggle,
+    toggle: token
+      ? toggle
+      : () => ({
+          success: false,
+        }),
   }
 }

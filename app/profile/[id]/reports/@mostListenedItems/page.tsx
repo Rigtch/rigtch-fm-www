@@ -19,16 +19,16 @@ import {
 import { getServerToken } from '@app/auth'
 import { ItemsList } from '@app/components/items/list'
 import { validateId } from '@app/utils/validators'
+import { isPublicUser } from '@app/profile/utils/helpers'
 
 export default async function ProfileReportsMostListenedItemsPage({
   params,
   searchParams,
 }: ProfileReportsPageProps) {
   const token = await getServerToken()
-
-  if (!token) redirect('/')
-
   const userId = validateId(params.id)
+
+  if (!token && !isPublicUser(userId)) redirect('/')
 
   const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
     validateCursors(searchParams.before, searchParams.after)
@@ -44,48 +44,48 @@ export default async function ProfileReportsMostListenedItemsPage({
     { total: thisWeekTotalTracks },
     { total: lastWeekTotalTracks },
   ] = await Promise.all([
-    getRigtchTopArtists(token, {
+    getRigtchTopArtists(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
       measurement: StatsMeasurement.PLAYS,
     }),
-    getRigtchTopAlbums(token, {
+    getRigtchTopAlbums(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
     }),
-    getRigtchTopTracks(token, {
+    getRigtchTopTracks(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
     }),
-    getReportsTotalArtists(token, {
+    getReportsTotalArtists(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
     }),
-    getReportsTotalArtists(token, {
+    getReportsTotalArtists(token ?? '', {
       userId,
       before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
       after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
     }),
-    getReportsTotalAlbums(token, {
+    getReportsTotalAlbums(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
     }),
-    getReportsTotalAlbums(token, {
+    getReportsTotalAlbums(token ?? '', {
       userId,
       before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
       after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
     }),
-    getReportsTotalTracks(token, {
+    getReportsTotalTracks(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
     }),
-    getReportsTotalTracks(token, {
+    getReportsTotalTracks(token ?? '', {
       userId,
       before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
       after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
