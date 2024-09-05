@@ -5,11 +5,6 @@ import './app/config/env.js'
 /** @type {import('next').NextConfig} */
 export default {
   reactStrictMode: true,
-  webpack: config => {
-    config.plugins.push(new StylelintPlugin())
-
-    return config
-  },
   images: {
     unoptimized: true,
     remotePatterns: [

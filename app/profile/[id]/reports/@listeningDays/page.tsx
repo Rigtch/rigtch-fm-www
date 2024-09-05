@@ -18,29 +18,30 @@ import { STATS_MEASUREMENT } from '@app/profile/constants'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
 import { Alert, AlertDescription, AlertTitle } from '@app/components/ui/alert'
+import { isPublicUser } from '@app/profile/utils/helpers'
 
 export default async function ProfileReportsListeningDaysPage({
   params,
   searchParams,
 }: ProfileReportsPageProps) {
   const token = await getServerToken()
-
-  if (!token) redirect('/')
-
   const userId = validateId(params.id)
+
+  if (!token && !isPublicUser(userId)) redirect('/')
+
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
   const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
     validateCursors(searchParams.before, searchParams.after)
 
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
-    getReportsListeningDays(token, {
+    getReportsListeningDays(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
       measurement,
     }),
-    getReportsListeningDays(token, {
+    getReportsListeningDays(token ?? '', {
       userId,
       before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
       after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),

@@ -25,6 +25,7 @@ import {
   validateTimeRange,
 } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
+import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const runtime = 'edge'
 
@@ -35,9 +36,9 @@ export default async function ProfileTopGenresSubPage({
   const token = await getServerToken()
   const userId = validateId(params.id)
 
-  if (!token) redirect('/')
+  if (!token && !isPublicUser(userId)) redirect('/')
 
-  const { createdAt } = await getUser(token, {
+  const { createdAt } = await getUser(token ?? '', {
     userId,
   })
 
@@ -57,14 +58,14 @@ export default async function ProfileTopGenresSubPage({
   let items: string[] | RigtchStatsResponse<string>
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopGenres(token, {
+    items = await getRigtchTopGenres(token ?? '', {
       after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       limit: 10,
       measurement: statsMeasurement,
     })
   } else {
-    const { genres } = await getSpotifyTopGenres(token, {
+    const { genres } = await getSpotifyTopGenres(token ?? '', {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
       limit: 10,

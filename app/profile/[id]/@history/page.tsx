@@ -7,6 +7,7 @@ import { getHistory } from '@app/api/fetchers'
 import { SeeMoreButton } from '@app/components/common/buttons'
 import { getServerToken } from '@app/auth/utils'
 import { View } from '@app/profile/enums'
+import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const runtime = 'edge'
 
@@ -16,9 +17,9 @@ export default async function ProfileHistorySubPage({
   const userId = validateId(params.id)
   const token = await getServerToken()
 
-  if (!token) redirect('/')
+  if (!token && !isPublicUser(userId)) redirect('/')
 
-  const recentlyPlayedTracks = await getHistory(token, {
+  const recentlyPlayedTracks = await getHistory(token ?? '', {
     limit: 10,
     userId,
     page: 1,

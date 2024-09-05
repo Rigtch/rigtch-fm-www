@@ -7,6 +7,7 @@ import { ProfileCard } from '@app/profile/components/profile'
 import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { Playback } from '@app/profile/components/playback'
+import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const runtime = 'edge'
 
@@ -15,11 +16,11 @@ export async function generateMetadata({
 }: ProfilePageProps): Promise<Metadata> {
   const token = await getServerToken()
 
-  if (!token) redirect('/')
+  if (!token && !isPublicUser(id)) redirect('/')
 
   const {
     profile: { displayName },
-  } = await getUser(token, { userId: id })
+  } = await getUser(token ?? '', { userId: id })
 
   return {
     title: displayName,
@@ -31,9 +32,9 @@ export default async function ProfileSubPage({ params }: ProfilePageProps) {
 
   const token = await getServerToken()
 
-  if (!token) redirect('/')
+  if (!token && !isPublicUser(userId)) redirect('/')
 
-  const { profile } = await getUser(token, { userId })
+  const { profile } = await getUser(token ?? '', { userId })
 
   return (
     <div className="px-4">

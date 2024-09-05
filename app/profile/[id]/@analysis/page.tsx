@@ -6,6 +6,7 @@ import { Progress } from '@app/components/ui/progress'
 import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { getSpotifyAnalysis } from '@app/api/fetchers/stats/spotify'
+import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const runtime = 'edge'
 
@@ -23,7 +24,7 @@ export default async function ProfileAnalysisSubPage({
   const userId = validateId(params.id)
   const token = await getServerToken()
 
-  if (!token) redirect('/')
+  if (!token && !isPublicUser(userId)) redirect('/')
 
   const {
     danceability,
@@ -35,7 +36,7 @@ export default async function ProfileAnalysisSubPage({
     valence,
     loudness,
     tempo,
-  } = await getSpotifyAnalysis(token, {
+  } = await getSpotifyAnalysis(token ?? '', {
     userId,
   })
 
@@ -90,14 +91,14 @@ export default async function ProfileAnalysisSubPage({
 
   return (
     <DefaultSection title="Analysis">
-      <div className="flex flex-col md:flex-row md:justify-around flex-wrap gap-8 px-4 py-6">
+      <div className="flex flex-col flex-wrap gap-8 px-4 py-6 md:flex-row md:justify-around">
         {items.map(({ title, description, value, subTitle }, index) => (
           <div key={index} className="flex flex-col gap-2 md:w-1/4">
             <h2 className="text-xl font-bold">{title}</h2>
 
             <Progress
               value={title === 'Tempo' ? (value / 240) * 100 : value}
-              className="w-full h-5 bg-primary *:bg-[linear-gradient(to_top_left,#9400d5,#1e89ee)] overflow-hidden *:skew-x-12"
+              className="h-5 w-full overflow-hidden bg-primary *:skew-x-12 *:bg-[linear-gradient(to_top_left,#9400d5,#1e89ee)]"
             />
 
             {title === 'Tempo' && (

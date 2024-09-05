@@ -18,10 +18,10 @@ export default async function ProfileReportsMostListenedGenresPage({
   searchParams,
 }: ProfileReportsPageProps) {
   const token = await getServerToken()
+  const userId = validateId(params.id)
 
   if (!token) redirect('/')
 
-  const userId = validateId(params.id)
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
   const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
