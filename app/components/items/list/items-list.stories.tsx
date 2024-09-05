@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { trackExamples } from '../examples'
+import { artistExamples } from '../examples'
 
 import { ItemsList } from './items-list'
 import { ItemsListSkeleton } from './items-list.skeleton'
@@ -22,7 +22,7 @@ export default {
     },
   },
   args: {
-    items: trackExamples,
+    items: artistExamples,
   },
   decorators: [
     Story => (
@@ -49,7 +49,7 @@ export const LastItemSeparator: ItemsListStory = {
 
 export const WithRelativeTime: ItemsListStory = {
   args: {
-    items: trackExamples.map((item, index) => ({
+    items: artistExamples.map((item, index) => ({
       ...item,
       playedAt: new Date(Date.now() - index * 1000).toISOString(),
     })),
@@ -71,7 +71,7 @@ const calculatePlays = (index: number) => 100 - index * 10
 
 export const WithPlays: ItemsListStory = {
   args: {
-    items: trackExamples.map((item, index) => ({
+    items: artistExamples.map((item, index) => ({
       ...item,
       plays: calculatePlays(index),
       maxPlays: 100,
@@ -82,7 +82,7 @@ export const WithPlays: ItemsListStory = {
 export const WithPlaysAndTop: ItemsListStory = {
   args: {
     isTop: true,
-    items: trackExamples.map((item, index) => ({
+    items: artistExamples.map((item, index) => ({
       ...item,
       plays: calculatePlays(index),
       maxPlays: 100,
@@ -90,13 +90,13 @@ export const WithPlaysAndTop: ItemsListStory = {
   },
 }
 
-const maxPlayTime = 1000 * 60 * 60 * trackExamples.length
+const maxPlayTime = 1000 * 60 * 60 * artistExamples.length
 const calculatePlayTime = (index: number) =>
-  1000 * 60 * 60 * (trackExamples.length - index) + 1000 * 60 * index + 2
+  1000 * 60 * 60 * (artistExamples.length - index) + 1000 * 60 * index + 2
 
 export const WithPlayTime: ItemsListStory = {
   args: {
-    items: trackExamples.map((item, index) => ({
+    items: artistExamples.map((item, index) => ({
       ...item,
       playTime: calculatePlayTime(index),
       maxPlayTime,
@@ -107,7 +107,7 @@ export const WithPlayTime: ItemsListStory = {
 export const WithPlayTimeAndTop: ItemsListStory = {
   args: {
     isTop: true,
-    items: trackExamples.map((item, index) => ({
+    items: artistExamples.map((item, index) => ({
       ...item,
       playTime: calculatePlayTime(index),
       maxPlayTime,
@@ -115,9 +115,9 @@ export const WithPlayTimeAndTop: ItemsListStory = {
   },
 }
 
-export const WithGengres: ItemsListStory = {
+export const WithGenres: ItemsListStory = {
   args: {
-    items: trackExamples.map(item => ({
+    items: artistExamples.map(item => ({
       ...item,
       genres: ['Black Metal', 'Death Metal', 'Thrash Metal'],
       genresDisplayLength: 2,
