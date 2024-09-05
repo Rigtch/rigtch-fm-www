@@ -54,7 +54,7 @@ function ListeningDaysChart({
   return (
     <ChartContainer
       config={chartConfig}
-      className="dark -ml-[2rem] min-h-[300px] w-[calc(100%+2rem)] lg:min-h-[200px] 2xl:ml-0 2xl:w-full"
+      className="dark -ml-[1rem] min-h-[300px] w-[calc(100%+2rem)] lg:min-h-[200px] xl:ml-0 xl:w-full"
     >
       <BarChart accessibilityLayer data={listeningDays}>
         <XAxis
