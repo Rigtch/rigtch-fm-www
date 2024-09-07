@@ -6,10 +6,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
+        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between items-center px-4"
+          class="flex items-center justify-between"
         >
           <h2
             class="text-5xl"
@@ -18,7 +18,7 @@ exports[`TopGenresSection > should match snapshot 1`] = `
           </h2>
         </header>
         <main
-          class="flex flex-col gap-12 px-4"
+          class="flex flex-col gap-12"
         >
           <div
             class="flex flex-row flex-wrap gap-2"
@@ -81,10 +81,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
+      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between items-center px-4"
+        class="flex items-center justify-between"
       >
         <h2
           class="text-5xl"
@@ -93,7 +93,7 @@ exports[`TopGenresSection > should match snapshot 1`] = `
         </h2>
       </header>
       <main
-        class="flex flex-col gap-12 px-4"
+        class="flex flex-col gap-12"
       >
         <div
           class="flex flex-row flex-wrap gap-2"
@@ -213,10 +213,10 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
+        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
       >
         <header
-          class="flex justify-between items-center px-4"
+          class="flex items-center justify-between"
         >
           <h2
             class="text-5xl"
@@ -225,7 +225,7 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
           </h2>
         </header>
         <main
-          class="flex flex-col gap-12 px-4"
+          class="flex flex-col gap-12"
         >
           <div
             class="relative w-full rounded-lg border px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7 border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive"
@@ -268,10 +268,10 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-8 mb-6 md:mb-12 lg:mb-24"
+      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
     >
       <header
-        class="flex justify-between items-center px-4"
+        class="flex items-center justify-between"
       >
         <h2
           class="text-5xl"
@@ -280,7 +280,7 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
         </h2>
       </header>
       <main
-        class="flex flex-col gap-12 px-4"
+        class="flex flex-col gap-12"
       >
         <div
           class="relative w-full rounded-lg border px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7 border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive"
