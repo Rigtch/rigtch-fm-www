@@ -33,7 +33,7 @@ function StatCard({
     <Card
       className={cn(
         valueSize === 'xl' &&
-          'flex w-full flex-col items-center justify-center sm:w-[400px] 2xl:w-full',
+          'flex w-full flex-col items-center justify-center text-center sm:w-[400px] 2xl:w-full',
         'p-4',
         className
       )}

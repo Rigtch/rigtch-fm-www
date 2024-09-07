@@ -204,7 +204,7 @@ exports[`StatCard > should match snapshot with valueSize xl 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="rounded-xl border border-card bg-background text-card-foreground shadow flex w-full flex-col items-center justify-center sm:w-[400px] 2xl:w-full p-4"
+        class="rounded-xl border border-card bg-background text-card-foreground shadow flex w-full flex-col items-center justify-center text-center sm:w-[400px] 2xl:w-full p-4"
       >
         <p
           class="text-muted-foreground text-nowrap p-0 text-lg font-semibold"
@@ -225,7 +225,7 @@ exports[`StatCard > should match snapshot with valueSize xl 1`] = `
   </body>,
   "container": <div>
     <div
-      class="rounded-xl border border-card bg-background text-card-foreground shadow flex w-full flex-col items-center justify-center sm:w-[400px] 2xl:w-full p-4"
+      class="rounded-xl border border-card bg-background text-card-foreground shadow flex w-full flex-col items-center justify-center text-center sm:w-[400px] 2xl:w-full p-4"
     >
       <p
         class="text-muted-foreground text-nowrap p-0 text-lg font-semibold"
@@ -303,7 +303,7 @@ exports[`StatCard > should match snapshot with vs last week percent 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="rounded-xl border border-card bg-background text-card-foreground shadow flex w-full flex-col items-center justify-center sm:w-[400px] 2xl:w-full p-4"
+        class="rounded-xl border border-card bg-background text-card-foreground shadow flex w-full flex-col items-center justify-center text-center sm:w-[400px] 2xl:w-full p-4"
       >
         <p
           class="text-muted-foreground text-nowrap p-0 text-lg font-semibold"
@@ -348,7 +348,7 @@ exports[`StatCard > should match snapshot with vs last week percent 1`] = `
   </body>,
   "container": <div>
     <div
-      class="rounded-xl border border-card bg-background text-card-foreground shadow flex w-full flex-col items-center justify-center sm:w-[400px] 2xl:w-full p-4"
+      class="rounded-xl border border-card bg-background text-card-foreground shadow flex w-full flex-col items-center justify-center text-center sm:w-[400px] 2xl:w-full p-4"
     >
       <p
         class="text-muted-foreground text-nowrap p-0 text-lg font-semibold"
