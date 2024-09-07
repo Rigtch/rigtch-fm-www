@@ -22,7 +22,7 @@ export default {
     },
   },
   args: {
-    items: artistExamples,
+    items: trackExamples,
   },
   decorators: [
     Story => (
