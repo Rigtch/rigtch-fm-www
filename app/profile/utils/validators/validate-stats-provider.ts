@@ -12,9 +12,9 @@ export function validateStatsProvider(
   if (typeof statsProvider === 'string' && isStatsProvider(statsProvider))
     return statsProvider
 
-  return (userCreatedAt &&
+  return ((userCreatedAt &&
     isTimeRangeDisabled(RigtchTimeRange.WEEK, userCreatedAt)) ??
-    !userCreatedAt
+    !userCreatedAt)
     ? StatsProvider.SPOTIFY
     : StatsProvider.RIGTCH
 }

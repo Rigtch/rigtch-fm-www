@@ -26,8 +26,8 @@ function ItemsListSkeleton({
     <div className="flex flex-col gap-8">
       {view === View.CARD && (
         <>
-          <div className="flex flex-col md:flex-row self-center items-center md:items-start justify-center gap-4 pt-4 mt-16 lg:mt-24 w-full">
-            <div className="flex flex-col-reverse md:flex-row justify-center gap-4 md:w-2/3 h-full">
+          <div className="mt-16 flex w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex-row md:items-start lg:mt-24">
+            <div className="flex h-full flex-col-reverse justify-center gap-4 md:w-2/3 md:flex-row">
               {[2, 1].map((position, index) => (
                 <ItemTopCardSkeleton
                   key={index}
@@ -39,7 +39,7 @@ function ItemsListSkeleton({
               ))}
             </div>
 
-            <div className="md:w-1/3 h-full">
+            <div className="h-full md:w-1/3">
               <ItemTopCardSkeleton
                 position={3}
                 withArtists={withArtists}

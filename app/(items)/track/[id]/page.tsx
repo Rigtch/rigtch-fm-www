@@ -17,7 +17,7 @@ export default async function TrackPage({ params }: PageWithIdParamProps) {
   })
 
   return (
-    <div className="w-full flex md:flex-row flex-col p-12 gap-8">
+    <div className="flex w-full flex-col gap-8 p-12 md:flex-row">
       <ItemHeaderSection
         name={name}
         images={images}

@@ -7,10 +7,10 @@ exports[`ProfileAvatar > should match snapshot with fallback 1`] = `
     <div>
       <span>
         <span
-          class="flex bg-primary rounded-full w-[48px] h-[48px]"
+          class="flex rounded-full bg-primary h-[48px] w-[48px]"
         >
           <span
-            class="w-full h-full flex items-center justify-center text-primary-foreground text-xl"
+            class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
           >
             M
           </span>
@@ -21,10 +21,10 @@ exports[`ProfileAvatar > should match snapshot with fallback 1`] = `
   "container": <div>
     <span>
       <span
-        class="flex bg-primary rounded-full w-[48px] h-[48px]"
+        class="flex rounded-full bg-primary h-[48px] w-[48px]"
       >
         <span
-          class="w-full h-full flex items-center justify-center text-primary-foreground text-xl"
+          class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
         >
           M
         </span>
@@ -92,10 +92,10 @@ exports[`ProfileAvatar > should match snapshot with image 1`] = `
     <div>
       <span>
         <span
-          class="flex bg-primary rounded-full w-[48px] h-[48px]"
+          class="flex rounded-full bg-primary h-[48px] w-[48px]"
         >
           <span
-            class="w-full h-full flex items-center justify-center text-primary-foreground text-xl"
+            class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
           />
         </span>
       </span>
@@ -104,10 +104,10 @@ exports[`ProfileAvatar > should match snapshot with image 1`] = `
   "container": <div>
     <span>
       <span
-        class="flex bg-primary rounded-full w-[48px] h-[48px]"
+        class="flex rounded-full bg-primary h-[48px] w-[48px]"
       >
         <span
-          class="w-full h-full flex items-center justify-center text-primary-foreground text-xl"
+          class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
         />
       </span>
     </span>
@@ -173,10 +173,10 @@ exports[`ProfileAvatar > should match snapshot with size lg 1`] = `
     <div>
       <span>
         <span
-          class="flex bg-primary rounded-full w-[128px] h-[128px]"
+          class="flex rounded-full bg-primary h-[128px] w-[128px]"
         >
           <span
-            class="w-full h-full flex items-center justify-center text-primary-foreground text-5xl"
+            class="flex h-full w-full items-center justify-center text-primary-foreground text-5xl"
           >
             M
           </span>
@@ -187,10 +187,10 @@ exports[`ProfileAvatar > should match snapshot with size lg 1`] = `
   "container": <div>
     <span>
       <span
-        class="flex bg-primary rounded-full w-[128px] h-[128px]"
+        class="flex rounded-full bg-primary h-[128px] w-[128px]"
       >
         <span
-          class="w-full h-full flex items-center justify-center text-primary-foreground text-5xl"
+          class="flex h-full w-full items-center justify-center text-primary-foreground text-5xl"
         >
           M
         </span>
@@ -258,10 +258,10 @@ exports[`ProfileAvatar > should match snapshot with size sm 1`] = `
     <div>
       <span>
         <span
-          class="flex bg-primary rounded-full w-[48px] h-[48px]"
+          class="flex rounded-full bg-primary h-[48px] w-[48px]"
         >
           <span
-            class="w-full h-full flex items-center justify-center text-primary-foreground text-xl"
+            class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
           >
             M
           </span>
@@ -272,10 +272,10 @@ exports[`ProfileAvatar > should match snapshot with size sm 1`] = `
   "container": <div>
     <span>
       <span
-        class="flex bg-primary rounded-full w-[48px] h-[48px]"
+        class="flex rounded-full bg-primary h-[48px] w-[48px]"
       >
         <span
-          class="w-full h-full flex items-center justify-center text-primary-foreground text-xl"
+          class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
         >
           M
         </span>

@@ -33,17 +33,17 @@ function ItemHeaderSection({
   href,
 }: ItemHeaderSection.Props) {
   return (
-    <div className="w-full flex flex-col md:flex-row md:p-8 gap-8">
+    <div className="flex w-full flex-col gap-8 md:flex-row md:p-8">
       <ItemImage images={images} size={200} alt={name} />
 
-      <div className="flex flex-col gap-2 justify-around">
+      <div className="flex flex-col justify-around gap-2">
         <div className="flex flex-col gap-2">
           <span className="text-3xl md:text-4xl lg:text-5xl">{name}</span>
 
           {artists && (
-            <div className="flex items-center mr-4 gap-2">
+            <div className="mr-4 flex items-center gap-2">
               <SpotifyLink href={href} />
-              <span className="text-xl w-full">
+              <span className="w-full text-xl">
                 by&nbsp;
                 <ItemArtists artists={artists} />
               </span>
@@ -51,7 +51,7 @@ function ItemHeaderSection({
           )}
 
           {followers && (
-            <div className="flex flex-row items-center gap-2 mr-4">
+            <div className="mr-4 flex flex-row items-center gap-2">
               <SpotifyLink href={href} />
 
               <FollowersCount value={followers} />

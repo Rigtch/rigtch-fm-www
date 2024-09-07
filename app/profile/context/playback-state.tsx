@@ -68,7 +68,7 @@ export function PlaybackStateProvider({
     <PlaybackStateContext.Provider
       value={{
         data:
-          data ?? lastTrack
+          (data ?? lastTrack)
             ? ({
                 device: data?.device,
                 track: data?.track ?? lastTrack,

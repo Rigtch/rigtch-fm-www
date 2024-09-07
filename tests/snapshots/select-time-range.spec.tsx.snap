@@ -58,7 +58,7 @@ exports[`SelectTimeRange > should match snapshot as disabled 1`] = `
             style="pointer-events: none;"
           >
             <div
-              class="flex gap-2 items-center"
+              class="flex items-center gap-2"
             >
               <svg
                 fill="none"
@@ -157,7 +157,7 @@ exports[`SelectTimeRange > should match snapshot as disabled 1`] = `
           style="pointer-events: none;"
         >
           <div
-            class="flex gap-2 items-center"
+            class="flex items-center gap-2"
           >
             <svg
               fill="none"
@@ -311,7 +311,7 @@ exports[`SelectTimeRange > should match snapshot with rigtch provider 1`] = `
             style="pointer-events: none;"
           >
             <div
-              class="flex gap-2 items-center"
+              class="flex items-center gap-2"
             >
               <svg
                 fill="none"
@@ -408,7 +408,7 @@ exports[`SelectTimeRange > should match snapshot with rigtch provider 1`] = `
           style="pointer-events: none;"
         >
           <div
-            class="flex gap-2 items-center"
+            class="flex items-center gap-2"
           >
             <svg
               fill="none"
@@ -562,7 +562,7 @@ exports[`SelectTimeRange > should match snapshot with spotify provider 1`] = `
             style="pointer-events: none;"
           >
             <div
-              class="flex gap-2 items-center"
+              class="flex items-center gap-2"
             >
               <svg
                 fill="none"
@@ -659,7 +659,7 @@ exports[`SelectTimeRange > should match snapshot with spotify provider 1`] = `
           style="pointer-events: none;"
         >
           <div
-            class="flex gap-2 items-center"
+            class="flex items-center gap-2"
           >
             <svg
               fill="none"

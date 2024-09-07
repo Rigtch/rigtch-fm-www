@@ -115,7 +115,7 @@ exports[`CookiesDialog > should match snapshot when not accepted 1`] = `
         </p>
       </div>
       <div
-        class="sm:flex-row sm:space-x-2 flex flex-row justify-between w-full"
+        class="sm:flex-row sm:space-x-2 flex w-full flex-row justify-between"
       >
         <form>
           <button

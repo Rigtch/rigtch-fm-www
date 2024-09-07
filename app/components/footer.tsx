@@ -8,7 +8,7 @@ export function Footer() {
     <footer>
       <Separator />
 
-      <div className="p-4 flex justify-center">
+      <div className="flex justify-center p-4">
         rigtch.fm &copy; {new Date().getFullYear()} |
         <Link
           href="https://discord.gg/ed2J535wzc"

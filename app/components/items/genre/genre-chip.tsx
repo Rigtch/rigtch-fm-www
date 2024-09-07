@@ -44,18 +44,18 @@ function GenreChip({
       <Tooltip>
         <TooltipTrigger
           className={cn(
-            plays ?? playTime ? 'cursor-pointer' : 'cursor-default'
+            (plays ?? playTime) ? 'cursor-pointer' : 'cursor-default'
           )}
         >
           <div
             className={cn(
-              'relative overflow-hidden rounded-xl w-max -z-10',
+              'relative -z-10 w-max overflow-hidden rounded-xl',
               className ?? 'bg-primary'
             )}
           >
             {(plays ?? playTime) && (
               <div
-                className="transition-all duration-700 ease-in-out -z-10 absolute bg-neutral-700 h-full -skew-x-12 -left-[8px]"
+                className="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-neutral-700 transition-all duration-700 ease-in-out"
                 style={{
                   width: `calc(${progressWidth}% + 10px)`,
                 }}
@@ -64,7 +64,7 @@ function GenreChip({
 
             <div
               className={cn(
-                'p-2 whitespace-nowrap text-primary-foreground/80 block'
+                'block whitespace-nowrap p-2 text-primary-foreground/80'
               )}
             >
               {genre}

@@ -46,7 +46,7 @@ exports[`ToggleStatsProvider > should match snapshot 1`] = `
           data-state="closed"
         >
           <div
-            class="flex items-center gap-1 text-white justify-start"
+            class="flex items-center gap-1 justify-start text-white"
             dir="ltr"
             role="group"
             style="outline: none;"
@@ -125,7 +125,7 @@ exports[`ToggleStatsProvider > should match snapshot 1`] = `
         data-state="closed"
       >
         <div
-          class="flex items-center gap-1 text-white justify-start"
+          class="flex items-center gap-1 justify-start text-white"
           dir="ltr"
           role="group"
           style="outline: none;"
@@ -261,7 +261,7 @@ exports[`ToggleStatsProvider > should match snapshot as disabled 1`] = `
           data-state="closed"
         >
           <div
-            class="flex items-center gap-1 opacity-50 text-white justify-start"
+            class="flex items-center gap-1 opacity-50 justify-start text-white"
             dir="ltr"
             role="group"
             style="outline: none;"
@@ -344,7 +344,7 @@ exports[`ToggleStatsProvider > should match snapshot as disabled 1`] = `
         data-state="closed"
       >
         <div
-          class="flex items-center gap-1 opacity-50 text-white justify-start"
+          class="flex items-center gap-1 opacity-50 justify-start text-white"
           dir="ltr"
           role="group"
           style="outline: none;"

@@ -53,17 +53,17 @@ function NavigationBar({ user, userId }: NavigationBar.Props) {
   }
 
   return (
-    <header className="flex justify-between px-4 py-2 bg-primary border-b border-primary-lighter top-0 sticky z-10">
+    <header className="sticky top-0 z-10 flex justify-between border-b border-primary-lighter bg-primary px-4 py-2">
       <div className="flex items-center gap-4">
         <Image
           src="/rigtch-icon.png"
           alt="Rigtch"
           width={42}
           height={42}
-          className="rounded-lg hidden lg:block"
+          className="hidden rounded-lg lg:block"
         />
 
-        <div className="lg:hidden w-[28px] h-[28px]">
+        <div className="h-[28px] w-[28px] lg:hidden">
           <Sheet
             open={isSidebarOpen}
             onOpenChange={isOpen => {
@@ -91,7 +91,7 @@ function NavigationBar({ user, userId }: NavigationBar.Props) {
           </Sheet>
         </div>
 
-        <h1 className="text-2xl md:text-3xl md:block hidden font-semibold">
+        <h1 className="hidden text-2xl font-semibold md:block md:text-3xl">
           rigtch.fm
         </h1>
       </div>
@@ -101,8 +101,8 @@ function NavigationBar({ user, userId }: NavigationBar.Props) {
           {user?.name ? (
             <>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="flex gap-2 p-2 min-w-[100px]">
-                  <p className="text-lg truncate max-w-[150px]">{user.name}</p>
+                <NavigationMenuTrigger className="flex min-w-[100px] gap-2 p-2">
+                  <p className="max-w-[150px] truncate text-lg">{user.name}</p>
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>

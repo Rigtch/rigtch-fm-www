@@ -19,8 +19,8 @@ function ItemPosition({
   return (
     <span
       className={cn(
-        'text-center w-[2rem]',
-        size === 'sm' && 'text-sm md:text-md',
+        'w-[2rem] text-center',
+        size === 'sm' && 'md:text-md text-sm',
         size === 'md' && 'text-xl',
         size === 'lg' && 'text-3xl',
         size === 'xl' && 'text-5xl',

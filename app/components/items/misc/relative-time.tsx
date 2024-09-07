@@ -15,7 +15,7 @@ namespace RelativeTime {
 function RelativeTime({ value, options, className }: RelativeTime.Props) {
   return (
     <p
-      className={cn('text-primary-foreground/80 whitespace-nowrap', className)}
+      className={cn('whitespace-nowrap text-primary-foreground/80', className)}
       suppressHydrationWarning
     >
       {DateTime.fromISO(value, options).toRelative()}

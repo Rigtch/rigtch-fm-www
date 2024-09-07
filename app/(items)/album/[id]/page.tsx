@@ -49,7 +49,7 @@ export default async function AlbumPage({ params }: PageWithIdParamProps) {
   }
 
   return (
-    <div className="w-full flex flex-col p-12 gap-8">
+    <div className="flex w-full flex-col gap-8 p-12">
       <ItemHeaderSection
         name={name}
         images={images}
@@ -69,33 +69,33 @@ export default async function AlbumPage({ params }: PageWithIdParamProps) {
         </>
       </ItemHeaderSection>
 
-      <div className="w-full flex flex-col gap-4">
+      <div className="flex w-full flex-col gap-4">
         <div className="text-4xl">Tracks</div>
 
         {discTracks.map((disc, index) => (
           <div key={index} className="flex flex-col gap-4">
             {numberOfDiscs > 1 && (
-              <div className="flex gap-2 text-xl items-center">
+              <div className="flex items-center gap-2 text-xl">
                 <FaCompactDisc />
                 Disc {index + 1}
               </div>
             )}
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 p-4">
+            <div className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-2 xl:grid-cols-4">
               {disc.map((track, index) => (
                 <div
                   key={index}
-                  className="flex flex-row w-full items-center justify-between gap-4 p-2 px-4 bg-neutral-800 rounded-xl"
+                  className="flex w-full flex-row items-center justify-between gap-4 rounded-xl bg-neutral-800 p-2 px-4"
                 >
                   <div className="flex flex-row items-center gap-3 pt-0">
-                    <span className="text-xl w-[25px] text-center">
+                    <span className="w-[25px] text-center text-xl">
                       {track.trackNumber}
                     </span>
 
                     <div className="grid justify-center">
                       <Link
                         href={`/track/${track.id}`}
-                        className="hover:underline truncate text-xl"
+                        className="truncate text-xl hover:underline"
                       >
                         {track.name}
                       </Link>
