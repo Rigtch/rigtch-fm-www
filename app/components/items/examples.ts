@@ -107,45 +107,45 @@ export const trackExamples = [
   trackExampleFactory(
     'Lost in Liminal',
     'Kriegsmaschine',
-    'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
+    'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
   ),
   trackExampleFactory(
     'The Pallid Scourge',
     'Kriegsmaschine',
-    'https://i.scdn.co/image/11dab774bcf6b336054dd80928314efede79e956'
+    'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
   ),
   trackExampleFactory(
     'Night Crawler',
     'Judas Priest',
-    'https://i.scdn.co/image/fed487b19b8cd3b1404c65635a7a86f27cb2ff7f'
+    'https://i.scdn.co/image/ab67616d00001e0260db4ca924d17bc6754e89aa'
   ),
   trackExampleFactory(
     'Painkiller',
     'Judas Priest',
-    'https://i.scdn.co/image/aed76c13983a7f90004b91cbf3e26fc41ea8f1e1'
+    'https://i.scdn.co/image/ab67616d00001e0260db4ca924d17bc6754e89aa'
   ),
 ]
 
 export const artistExamples = [
   artistExampleFactory(
-    'Dimhymn',
-    'https://i.scdn.co/image/e6f6457e20ed8a799d8f8f147e0e60ec5ef2282b'
+    'Carpathian Forest',
+    'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
   ),
   artistExampleFactory(
-    'Kriegsmaschine',
-    'https://i.scdn.co/image/482e622d1265be41dff0ce265a20458289595de3'
+    'Mushroomhead',
+    'https://i.scdn.co/image/aed76c13983a7f90004b91cbf3e26fc41ea8f1e1'
   ),
   artistExampleFactory(
-    'Summoning',
-    'https://i.scdn.co/image/ab67616d0000b2735fdcfafcc8e7831c5fe2c618'
+    'Godspeed You! Black Emperor',
+    'https://i.scdn.co/image/11dab774bcf6b336054dd80928314efede79e956'
   ),
   artistExampleFactory(
     'Architects',
-    'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
+    'https://i.scdn.co/image/ab6761610000f178c849b02f9ed4ad1d458f1c81'
   ),
   artistExampleFactory(
-    'PVRIS',
-    'https://i.scdn.co/image/ab67616d000048515fedd6e1f672e39e758c24d1'
+    'Summoning',
+    'https://i.scdn.co/image/e01b5fe641a470d650373e01cdd7dacffded018b'
   ),
 ]
 

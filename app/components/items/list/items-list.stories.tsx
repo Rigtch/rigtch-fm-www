@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { artistExamples } from '../examples'
+import { artistExamples, trackExamples } from '../examples'
 
 import { ItemsList } from './items-list'
 import { ItemsListSkeleton } from './items-list.skeleton'
@@ -49,7 +49,7 @@ export const LastItemSeparator: ItemsListStory = {
 
 export const WithRelativeTime: ItemsListStory = {
   args: {
-    items: artistExamples.map((item, index) => ({
+    items: trackExamples.map((item, index) => ({
       ...item,
       playedAt: new Date(Date.now() - index * 1000).toISOString(),
     })),
@@ -71,7 +71,7 @@ const calculatePlays = (index: number) => 100 - index * 10
 
 export const WithPlays: ItemsListStory = {
   args: {
-    items: artistExamples.map((item, index) => ({
+    items: trackExamples.map((item, index) => ({
       ...item,
       plays: calculatePlays(index),
       maxPlays: 100,
@@ -82,7 +82,7 @@ export const WithPlays: ItemsListStory = {
 export const WithPlaysAndTop: ItemsListStory = {
   args: {
     isTop: true,
-    items: artistExamples.map((item, index) => ({
+    items: trackExamples.map((item, index) => ({
       ...item,
       plays: calculatePlays(index),
       maxPlays: 100,
@@ -96,7 +96,7 @@ const calculatePlayTime = (index: number) =>
 
 export const WithPlayTime: ItemsListStory = {
   args: {
-    items: artistExamples.map((item, index) => ({
+    items: trackExamples.map((item, index) => ({
       ...item,
       playTime: calculatePlayTime(index),
       maxPlayTime,
@@ -107,7 +107,7 @@ export const WithPlayTime: ItemsListStory = {
 export const WithPlayTimeAndTop: ItemsListStory = {
   args: {
     isTop: true,
-    items: artistExamples.map((item, index) => ({
+    items: trackExamples.map((item, index) => ({
       ...item,
       playTime: calculatePlayTime(index),
       maxPlayTime,
