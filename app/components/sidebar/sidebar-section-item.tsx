@@ -18,13 +18,15 @@ function SidebarSectionItem({
   icon: Icon,
   pathname,
 }: SidebarSectionItem.Props) {
-  const isActive = pathname === href
+  console.log(pathname, href.split('?')[0])
+
+  const isActive = pathname === href.split('?')[0]
 
   return (
     <Button
       variant={isActive ? 'secondary' : 'ghost'}
       asChild
-      className="w-full text-md justify-start"
+      className="text-md w-full justify-start"
     >
       <Link href={href} className="flex gap-2">
         {Icon && <Icon />}
