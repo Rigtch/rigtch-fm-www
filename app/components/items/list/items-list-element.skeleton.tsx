@@ -52,13 +52,13 @@ function ItemsListElementSkeleton({
 
               {withGenres &&
                 Array.from({ length: 3 }).map((_, index) => (
-                  <Skeleton key={index} className="h-[23px] w-[4rem]" />
+                  <Skeleton key={index} className="h-[21.6px] w-[4rem]" />
                 ))}
             </div>
 
             <div className="flex flex-row items-center gap-3">
               {withPlaysOrPlayTime && (
-                <Skeleton className="h-[1rem] w-[4rem]" />
+                <Skeleton className="h-[24px] w-[4rem]" />
               )}
 
               {withPlayedAt && <Skeleton className="h-[1rem] w-[6rem]" />}
