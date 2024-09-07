@@ -55,7 +55,7 @@ export const artistExample = {
       url: 'https://i.scdn.co/image/ab67616d0000b2735fdcfafcc8e7831c5fe2c618',
     },
   ],
-  genres: genresExample,
+  genres: undefined,
 }
 
 export const trackExampleFactory = (
