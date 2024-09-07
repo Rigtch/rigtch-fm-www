@@ -53,7 +53,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.1.6",
-    "lucide-react": "^0.436.0",
+    "lucide-react": "^0.439.0",
     "luxon": "^3.4.4",
     "next": "14.2.8",
     "next-auth": "5.0.0-beta.20",
