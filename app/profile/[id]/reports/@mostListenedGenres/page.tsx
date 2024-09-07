@@ -13,6 +13,8 @@ import { validateId } from '@app/utils/validators'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { StatsMeasurement } from '@app/api/enums'
 
+export const runtime = 'edge'
+
 export default async function ProfileReportsMostListenedGenresPage({
   params,
   searchParams,

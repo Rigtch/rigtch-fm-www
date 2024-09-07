@@ -14,6 +14,8 @@ import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
 import { isPublicUser } from '@app/profile/utils/helpers'
 
+export const runtime = 'edge'
+
 export default async function ProfileReportsListeningHoursPage({
   params,
   searchParams,
