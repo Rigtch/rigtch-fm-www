@@ -52,7 +52,10 @@ function ItemsListElementSkeleton({
 
               {withGenres &&
                 Array.from({ length: 3 }).map((_, index) => (
-                  <Skeleton key={index} className="h-[21.6px] w-[4rem]" />
+                  <Skeleton
+                    key={index}
+                    className="rounded-pill h-[1rem] w-[4rem]"
+                  />
                 ))}
             </div>
 

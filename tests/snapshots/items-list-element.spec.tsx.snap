@@ -320,7 +320,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
             class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
-              class="text-center w-[2rem] text-xl"
+              class="w-[2rem] text-center text-xl"
             >
               1
             </span>
@@ -355,7 +355,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                 <div>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                       href="/artist/123"
                     >
                       Darkthrone
@@ -366,7 +366,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                       href="/artist/2"
                     >
                       Mayhem
@@ -377,7 +377,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                       href="/artist/3"
                     >
                       Darkthrone
@@ -388,7 +388,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                   </span>
                   <span>
                     <a
-                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                       href="/artist/4"
                     >
                       Darkthrone
@@ -444,7 +444,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
           class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
-            class="text-center w-[2rem] text-xl"
+            class="w-[2rem] text-center text-xl"
           >
             1
           </span>
@@ -479,7 +479,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
               <div>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                     href="/artist/123"
                   >
                     Darkthrone
@@ -490,7 +490,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                     href="/artist/2"
                   >
                     Mayhem
@@ -501,7 +501,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                     href="/artist/3"
                   >
                     Darkthrone
@@ -512,7 +512,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                     href="/artist/4"
                   >
                     Darkthrone
@@ -625,7 +625,7 @@ exports[`ItemsListElement > should match snapshot with different genres display 
             class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
-              class="text-center w-[2rem] text-xl"
+              class="w-[2rem] text-center text-xl"
             >
               1
             </span>
@@ -714,7 +714,7 @@ exports[`ItemsListElement > should match snapshot with different genres display 
           class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
-            class="text-center w-[2rem] text-xl"
+            class="w-[2rem] text-center text-xl"
           >
             1
           </span>
@@ -860,7 +860,7 @@ exports[`ItemsListElement > should match snapshot with genres 1`] = `
             class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
-              class="text-center w-[2rem] text-xl"
+              class="w-[2rem] text-center text-xl"
             >
               1
             </span>
@@ -959,7 +959,7 @@ exports[`ItemsListElement > should match snapshot with genres 1`] = `
           class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
-            class="text-center w-[2rem] text-xl"
+            class="w-[2rem] text-center text-xl"
           >
             1
           </span>
@@ -1115,7 +1115,7 @@ exports[`ItemsListElement > should match snapshot with genres display length 1`]
             class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
           >
             <span
-              class="text-center w-[2rem] text-xl"
+              class="w-[2rem] text-center text-xl"
             >
               1
             </span>
@@ -1214,7 +1214,7 @@ exports[`ItemsListElement > should match snapshot with genres display length 1`]
           class="flex w-full max-w-[calc(100%-30px)] flex-row items-center gap-4"
         >
           <span
-            class="text-center w-[2rem] text-xl"
+            class="w-[2rem] text-center text-xl"
           >
             1
           </span>
