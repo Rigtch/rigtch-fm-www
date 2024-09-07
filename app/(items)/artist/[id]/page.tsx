@@ -13,11 +13,14 @@ import type { PageWithIdParamProps } from '@app/types'
 export default async function ArtistPage({ params }: PageWithIdParamProps) {
   const id = validateId(params.id)
 
-  const { followers, images, name, href, genres } = await getArtist({
-    id,
-  })
-  const { tracks } = await getArtistTopTracks({ id })
-  const { albums } = await getArtistAlbums({ id })
+  const [{ followers, images, name, href, genres }, { tracks }, { albums }] =
+    await Promise.all([
+      getArtist({
+        id,
+      }),
+      getArtistTopTracks({ id }),
+      getArtistAlbums({ id }),
+    ])
 
   const sortedAlbums = albums.sort(
     (firstAlbum, secondAlbum) =>
