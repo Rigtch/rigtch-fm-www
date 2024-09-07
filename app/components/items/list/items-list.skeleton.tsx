@@ -56,6 +56,7 @@ function ItemsListSkeleton({
                 <div key={index}>
                   <ItemsListElementSkeleton
                     position={index + 4}
+                    withGenres={withGenres}
                     withArtists={withArtists}
                     withPlayedAt={withPlayedAt}
                   />
@@ -76,6 +77,7 @@ function ItemsListSkeleton({
                 <ItemsListElementSkeleton
                   position={index + 1}
                   withArtists={withArtists}
+                  withGenres={withGenres}
                   withPlayedAt={withPlayedAt}
                   withPlaysOrPlayTime={withProgress}
                 />

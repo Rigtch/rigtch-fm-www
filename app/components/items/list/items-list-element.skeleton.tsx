@@ -7,6 +7,7 @@ import { cn } from '@app/utils/cn'
 namespace ItemsListElementSkeleton {
   export type Props = Readonly<{
     withArtists?: boolean
+    withGenres?: boolean
     withPlayedAt?: boolean
     position?: number
     positionSize?: ItemPosition.Props['size']
@@ -20,6 +21,7 @@ function ItemsListElementSkeleton({
   positionSize,
   positionClassName,
   withArtists,
+  withGenres,
   withPlayedAt,
   withPlaysOrPlayTime,
 }: ItemsListElementSkeleton.Props) {
@@ -45,8 +47,13 @@ function ItemsListElementSkeleton({
           <Skeleton className="mt-[5px] h-[1.5rem] w-[12rem]" />
 
           <div className="flex w-full items-center justify-between">
-            <div>
+            <div className="flex flex-row gap-1">
               {withArtists && <Skeleton className="h-[1rem] w-[5rem]" />}
+
+              {withGenres &&
+                Array.from({ length: 3 }).map((_, index) => (
+                  <Skeleton key={index} className="h-[23px] w-[4rem]" />
+                ))}
             </div>
 
             <div className="flex flex-row items-center gap-3">
