@@ -20,6 +20,8 @@ import { validateId } from '@app/utils/validators'
 import { Alert, AlertDescription, AlertTitle } from '@app/components/ui/alert'
 import { isPublicUser } from '@app/profile/utils/helpers'
 
+export const runtime = 'edge'
+
 export default async function ProfileReportsListeningDaysPage({
   params,
   searchParams,

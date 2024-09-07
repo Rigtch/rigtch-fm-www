@@ -21,6 +21,8 @@ import { ItemsList } from '@app/components/items/list'
 import { validateId } from '@app/utils/validators'
 import { isPublicUser } from '@app/profile/utils/helpers'
 
+export const runtime = 'edge'
+
 export default async function ProfileReportsMostListenedItemsPage({
   params,
   searchParams,
