@@ -2,9 +2,6 @@ import type { ArtistEntity, TrackEntity } from '@app/api/types'
 
 export const idExample = '4530c625-2385-45d6-8db1-8b867f125e30'
 
-const imageUrlExample =
-  'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
-
 export const genresExample = ['Atmospheric Black Metal', 'Black Metal', 'Metal']
 
 export const trackExample = {
@@ -102,17 +99,54 @@ export const artistExampleFactory = (name: string, imageUrl: string) =>
   }) as ArtistEntity
 
 export const trackExamples = [
-  trackExampleFactory('Djavulens tid ar kommen', 'Dimhymn', imageUrlExample),
-  trackExampleFactory('Lost in Liminal', 'Kriegsmaschine', imageUrlExample),
-  trackExampleFactory('The Pallid Scourge', 'Kriegsmaschine', imageUrlExample),
-  trackExampleFactory('Night Crawler', 'Judas Priest', imageUrlExample),
-  trackExampleFactory('Painkiller', 'Judas Priest', imageUrlExample),
+  trackExampleFactory(
+    'Djavulens tid ar kommen',
+    'Dimhymn',
+    'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
+  ),
+  trackExampleFactory(
+    'Lost in Liminal',
+    'Kriegsmaschine',
+    'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
+  ),
+  trackExampleFactory(
+    'The Pallid Scourge',
+    'Kriegsmaschine',
+    'https://i.scdn.co/image/11dab774bcf6b336054dd80928314efede79e956'
+  ),
+  trackExampleFactory(
+    'Night Crawler',
+    'Judas Priest',
+    'https://i.scdn.co/image/fed487b19b8cd3b1404c65635a7a86f27cb2ff7f'
+  ),
+  trackExampleFactory(
+    'Painkiller',
+    'Judas Priest',
+    'https://i.scdn.co/image/aed76c13983a7f90004b91cbf3e26fc41ea8f1e1'
+  ),
 ]
 
 export const artistExamples = [
-  artistExampleFactory('Dimhymn', imageUrlExample),
-  artistExampleFactory('Kriegsmaschine', imageUrlExample),
-  artistExampleFactory('Summoning', imageUrlExample),
+  artistExampleFactory(
+    'Dimhymn',
+    'https://i.scdn.co/image/e6f6457e20ed8a799d8f8f147e0e60ec5ef2282b'
+  ),
+  artistExampleFactory(
+    'Kriegsmaschine',
+    'https://i.scdn.co/image/482e622d1265be41dff0ce265a20458289595de3'
+  ),
+  artistExampleFactory(
+    'Summoning',
+    'https://i.scdn.co/image/ab67616d0000b2735fdcfafcc8e7831c5fe2c618'
+  ),
+  artistExampleFactory(
+    'Architects',
+    'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
+  ),
+  artistExampleFactory(
+    'PVRIS',
+    'https://i.scdn.co/image/ab67616d000048515fedd6e1f672e39e758c24d1'
+  ),
 ]
 
 export const playsExample = 115
