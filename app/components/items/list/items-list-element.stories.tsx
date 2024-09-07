@@ -95,3 +95,7 @@ export const SkeletonWithRelativeTime: ItemsListElementStory = {
 export const SkeletonWithRelativeTimeAndArtists: ItemsListElementStory = {
   render: () => <ItemsListElementSkeleton withPlayedAt withArtists />,
 }
+
+export const SkeletonWithGenres: ItemsListElementStory = {
+  render: () => <ItemsListElementSkeleton withGenres />,
+}
