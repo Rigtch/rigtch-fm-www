@@ -18,8 +18,6 @@ function SidebarSectionItem({
   icon: Icon,
   pathname,
 }: SidebarSectionItem.Props) {
-  console.log(pathname, href.split('?')[0])
-
   const isActive = pathname === href.split('?')[0]
 
   return (
