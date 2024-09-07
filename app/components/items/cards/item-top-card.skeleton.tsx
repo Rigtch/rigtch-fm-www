@@ -1,11 +1,11 @@
 'use client'
 
-import { FaStar } from 'react-icons/fa6'
-
 import { ItemImageSkeleton } from '../misc'
 
-import { cn } from '@app/utils/cn'
+import { ItemTopCardStars } from './top-item-card-stars'
+
 import { Skeleton } from '@app/components/ui/skeleton'
+import { cn } from '@app/utils/cn'
 
 namespace ItemTopCardSkeleton {
   export interface Props {
@@ -22,8 +22,6 @@ function ItemTopCardSkeleton({
   withArtists,
   withProgress,
 }: ItemTopCardSkeleton.Props) {
-  const stars = [1, 2, 3, 2, 1]
-
   return (
     <div
       className={cn(
@@ -58,22 +56,7 @@ function ItemTopCardSkeleton({
             {withProgress ? (
               <Skeleton className="h-7 w-full rounded-full" />
             ) : (
-              stars.map((size, index) => (
-                <FaStar
-                  key={index}
-                  className={cn(
-                    position === 1
-                      ? 'text-yellow-600'
-                      : position === 2
-                        ? 'text-slate-400'
-                        : 'text-yellow-900'
-                  )}
-                  style={{
-                    fontSize: `${size * 14}px`,
-                    marginTop: `-${size * 4}px`,
-                  }}
-                />
-              ))
+              <ItemTopCardStars position={position ?? 1} />
             )}
           </div>
         </div>
