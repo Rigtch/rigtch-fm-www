@@ -90,7 +90,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                     </a>
                   </span>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   />
                 </div>
               </div>
@@ -214,7 +214,7 @@ exports[`ItemsListElement > should match snapshot with artists 1`] = `
                   </a>
                 </span>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 />
               </div>
             </div>
@@ -395,7 +395,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                     </a>
                   </span>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   />
                 </div>
               </div>
@@ -519,7 +519,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
                   </a>
                 </span>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 />
               </div>
             </div>
@@ -659,7 +659,7 @@ exports[`ItemsListElement > should match snapshot with different genres display 
               >
                 <div>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -748,7 +748,7 @@ exports[`ItemsListElement > should match snapshot with different genres display 
             >
               <div>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -894,7 +894,7 @@ exports[`ItemsListElement > should match snapshot with genres 1`] = `
               >
                 <div>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -993,7 +993,7 @@ exports[`ItemsListElement > should match snapshot with genres 1`] = `
             >
               <div>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1149,7 +1149,7 @@ exports[`ItemsListElement > should match snapshot with genres display length 1`]
               >
                 <div>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1248,7 +1248,7 @@ exports[`ItemsListElement > should match snapshot with genres display length 1`]
             >
               <div>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1408,7 +1408,7 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
               >
                 <div>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1512,7 +1512,7 @@ exports[`ItemsListElement > should match snapshot with playTime 1`] = `
             >
               <div>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1664,7 +1664,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
               >
                 <div>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1763,7 +1763,7 @@ exports[`ItemsListElement > should match snapshot with playedAt 1`] = `
             >
               <div>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -1928,7 +1928,7 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
               >
                 <div>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -2032,7 +2032,7 @@ exports[`ItemsListElement > should match snapshot with plays 1`] = `
             >
               <div>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -2189,7 +2189,7 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
               >
                 <div>
                   <div
-                    class="flex flex-row gap-1"
+                    class="hidden flex-row gap-1 md:flex"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -2288,7 +2288,7 @@ exports[`ItemsListElement > should match snapshot with position 1`] = `
             >
               <div>
                 <div
-                  class="flex flex-row gap-1"
+                  class="hidden flex-row gap-1 md:flex"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
