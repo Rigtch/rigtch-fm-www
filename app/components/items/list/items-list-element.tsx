@@ -137,7 +137,7 @@ function ItemsListElement({
               <div>
                 {artists && <ItemArtists artists={artists} />}
 
-                <div className="flex flex-row gap-1">
+                <div className="hidden flex-row gap-1 md:flex">
                   {!artists &&
                     genres
                       ?.slice(0, genresDisplayLength)

@@ -1132,7 +1132,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         >
                           <div>
                             <div
-                              class="flex flex-row gap-1"
+                              class="hidden flex-row gap-1 md:flex"
                             >
                               <div
                                 class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -2322,7 +2322,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       >
                         <div>
                           <div
-                            class="flex flex-row gap-1"
+                            class="hidden flex-row gap-1 md:flex"
                           >
                             <div
                               class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -4790,7 +4790,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                               </a>
                             </span>
                             <div
-                              class="flex flex-row gap-1"
+                              class="hidden flex-row gap-1 md:flex"
                             />
                           </div>
                         </div>
@@ -4885,7 +4885,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                               </a>
                             </span>
                             <div
-                              class="flex flex-row gap-1"
+                              class="hidden flex-row gap-1 md:flex"
                             />
                           </div>
                         </div>
@@ -4980,7 +4980,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                               </a>
                             </span>
                             <div
-                              class="flex flex-row gap-1"
+                              class="hidden flex-row gap-1 md:flex"
                             />
                           </div>
                         </div>
@@ -5101,7 +5101,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                             </a>
                           </span>
                           <div
-                            class="flex flex-row gap-1"
+                            class="hidden flex-row gap-1 md:flex"
                           />
                         </div>
                       </div>
@@ -5196,7 +5196,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                             </a>
                           </span>
                           <div
-                            class="flex flex-row gap-1"
+                            class="hidden flex-row gap-1 md:flex"
                           />
                         </div>
                       </div>
@@ -5291,7 +5291,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
                             </a>
                           </span>
                           <div
-                            class="flex flex-row gap-1"
+                            class="hidden flex-row gap-1 md:flex"
                           />
                         </div>
                       </div>
@@ -5464,7 +5464,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                               </a>
                             </span>
                             <div
-                              class="flex flex-row gap-1"
+                              class="hidden flex-row gap-1 md:flex"
                             />
                           </div>
                           <p
@@ -5559,7 +5559,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                               </a>
                             </span>
                             <div
-                              class="flex flex-row gap-1"
+                              class="hidden flex-row gap-1 md:flex"
                             />
                           </div>
                           <p
@@ -5654,13 +5654,13 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                               </a>
                             </span>
                             <div
-                              class="flex flex-row gap-1"
+                              class="hidden flex-row gap-1 md:flex"
                             />
                           </div>
                           <p
                             class="whitespace-nowrap text-primary-foreground/80"
                           >
-                            2 seconds ago temu
+                            2 seconds ago
                           </p>
                         </div>
                       </div>
@@ -5775,7 +5775,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                             </a>
                           </span>
                           <div
-                            class="flex flex-row gap-1"
+                            class="hidden flex-row gap-1 md:flex"
                           />
                         </div>
                         <p
@@ -5870,7 +5870,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                             </a>
                           </span>
                           <div
-                            class="flex flex-row gap-1"
+                            class="hidden flex-row gap-1 md:flex"
                           />
                         </div>
                         <p
@@ -5965,13 +5965,13 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
                             </a>
                           </span>
                           <div
-                            class="flex flex-row gap-1"
+                            class="hidden flex-row gap-1 md:flex"
                           />
                         </div>
                         <p
                           class="whitespace-nowrap text-primary-foreground/80"
                         >
-                          2 seconds ago temu
+                          2 seconds ago
                         </p>
                       </div>
                     </div>

@@ -50,13 +50,15 @@ function ItemsListElementSkeleton({
             <div className="flex flex-row gap-1">
               {withArtists && <Skeleton className="h-[1rem] w-[5rem]" />}
 
-              {withGenres &&
-                Array.from({ length: 3 }).map((_, index) => (
-                  <Skeleton
-                    key={index}
-                    className="rounded-pill h-[1rem] w-[4rem]"
-                  />
-                ))}
+              <div className="hidden flex-row gap-1 md:flex">
+                {withGenres &&
+                  Array.from({ length: 3 }).map((_, index) => (
+                    <Skeleton
+                      key={index}
+                      className="rounded-pill h-[1rem] w-[4rem]"
+                    />
+                  ))}
+              </div>
             </div>
 
             <div className="flex flex-row items-center gap-3">
