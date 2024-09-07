@@ -18,8 +18,8 @@ import {
 } from '@app/api/fetchers/stats/rigtch'
 import { getServerToken } from '@app/auth'
 import { ItemsList } from '@app/components/items/list'
-import { validateId } from '@app/utils/validators'
 import { isPublicUser } from '@app/profile/utils/helpers'
+import { validateId } from '@app/utils/validators'
 
 export const runtime = 'edge'
 
@@ -109,7 +109,11 @@ export default async function ProfileReportsMostListenedItemsPage({
           {thisWeekTotalArtists}
         </StatCard>
 
-        <ItemsList items={mostListenedArtists.slice(0, 5)} isRounded />
+        <ItemsList
+          items={mostListenedArtists.slice(0, 5)}
+          isRounded
+          genresDisplayLength={1}
+        />
       </section>
 
       <section className="flex flex-col gap-4">
