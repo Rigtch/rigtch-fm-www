@@ -12,7 +12,7 @@ namespace TopGenresSection {
 
 function TopGenresSection({ items, children }: TopGenresSection.Props) {
   return (
-    <DefaultSection title="Top Genres" className="gap-12 px-4">
+    <DefaultSection title="Top Genres" className="gap-12">
       {items.length > 0 && (
         <div className="flex flex-row flex-wrap gap-2">
           {items.map(genre => (
