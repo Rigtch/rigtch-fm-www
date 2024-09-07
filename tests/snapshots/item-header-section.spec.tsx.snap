@@ -6,7 +6,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+        class="flex w-full flex-col gap-8 md:flex-row md:p-8"
       >
         <img
           alt="Track 1"
@@ -21,7 +21,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
           width="200"
         />
         <div
-          class="flex flex-col gap-2 justify-around"
+          class="flex flex-col justify-around gap-2"
         >
           <div
             class="flex flex-col gap-2"
@@ -32,7 +32,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
               Track 1
             </span>
             <div
-              class="flex items-center mr-4 gap-2"
+              class="mr-4 flex items-center gap-2"
             >
               <button
                 data-state="closed"
@@ -59,12 +59,12 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
                 </a>
               </button>
               <span
-                class="text-xl w-full"
+                class="w-full text-xl"
               >
                 by 
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                     href="/artist/123"
                   >
                     Darkthrone
@@ -75,7 +75,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                     href="/artist/2"
                   >
                     Darkthrone
@@ -86,7 +86,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                     href="/artist/3"
                   >
                     Darkthrone
@@ -97,7 +97,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
                 </span>
                 <span>
                   <a
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                     href="/artist/4"
                   >
                     Darkthrone
@@ -112,7 +112,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+      class="flex w-full flex-col gap-8 md:flex-row md:p-8"
     >
       <img
         alt="Track 1"
@@ -127,7 +127,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
         width="200"
       />
       <div
-        class="flex flex-col gap-2 justify-around"
+        class="flex flex-col justify-around gap-2"
       >
         <div
           class="flex flex-col gap-2"
@@ -138,7 +138,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
             Track 1
           </span>
           <div
-            class="flex items-center mr-4 gap-2"
+            class="mr-4 flex items-center gap-2"
           >
             <button
               data-state="closed"
@@ -165,12 +165,12 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
               </a>
             </button>
             <span
-              class="text-xl w-full"
+              class="w-full text-xl"
             >
               by 
               <span>
                 <a
-                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                   href="/artist/123"
                 >
                   Darkthrone
@@ -181,7 +181,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
               </span>
               <span>
                 <a
-                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                   href="/artist/2"
                 >
                   Darkthrone
@@ -192,7 +192,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
               </span>
               <span>
                 <a
-                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                   href="/artist/3"
                 >
                   Darkthrone
@@ -203,7 +203,7 @@ exports[`ItemHeaderSection > should match snapshot with artists 1`] = `
               </span>
               <span>
                 <a
-                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 text-primary-foreground/80 h-auto text-md"
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer underline-offset-4 hover:underline p-0 h-auto text-primary-foreground/80 text-md"
                   href="/artist/4"
                 >
                   Darkthrone
@@ -275,7 +275,7 @@ exports[`ItemHeaderSection > should match snapshot with children 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+        class="flex w-full flex-col gap-8 md:flex-row md:p-8"
       >
         <img
           alt="Track 1"
@@ -290,7 +290,7 @@ exports[`ItemHeaderSection > should match snapshot with children 1`] = `
           width="200"
         />
         <div
-          class="flex flex-col gap-2 justify-around"
+          class="flex flex-col justify-around gap-2"
         >
           <div
             class="flex flex-col gap-2"
@@ -301,7 +301,7 @@ exports[`ItemHeaderSection > should match snapshot with children 1`] = `
               Track 1
             </span>
             <div
-              class="flex flex-row items-center gap-2 mr-4"
+              class="mr-4 flex flex-row items-center gap-2"
             >
               <button
                 data-state="closed"
@@ -344,7 +344,7 @@ exports[`ItemHeaderSection > should match snapshot with children 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+      class="flex w-full flex-col gap-8 md:flex-row md:p-8"
     >
       <img
         alt="Track 1"
@@ -359,7 +359,7 @@ exports[`ItemHeaderSection > should match snapshot with children 1`] = `
         width="200"
       />
       <div
-        class="flex flex-col gap-2 justify-around"
+        class="flex flex-col justify-around gap-2"
       >
         <div
           class="flex flex-col gap-2"
@@ -370,7 +370,7 @@ exports[`ItemHeaderSection > should match snapshot with children 1`] = `
             Track 1
           </span>
           <div
-            class="flex flex-row items-center gap-2 mr-4"
+            class="mr-4 flex flex-row items-center gap-2"
           >
             <button
               data-state="closed"
@@ -470,7 +470,7 @@ exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+        class="flex w-full flex-col gap-8 md:flex-row md:p-8"
       >
         <img
           alt="Track 1"
@@ -485,7 +485,7 @@ exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
           width="200"
         />
         <div
-          class="flex flex-col gap-2 justify-around"
+          class="flex flex-col justify-around gap-2"
         >
           <div
             class="flex flex-col gap-2"
@@ -496,7 +496,7 @@ exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
               Track 1
             </span>
             <div
-              class="flex flex-row items-center gap-2 mr-4"
+              class="mr-4 flex flex-row items-center gap-2"
             >
               <button
                 data-state="closed"
@@ -536,7 +536,7 @@ exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
   </body>,
   "container": <div>
     <div
-      class="w-full flex flex-col md:flex-row md:p-8 gap-8"
+      class="flex w-full flex-col gap-8 md:flex-row md:p-8"
     >
       <img
         alt="Track 1"
@@ -551,7 +551,7 @@ exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
         width="200"
       />
       <div
-        class="flex flex-col gap-2 justify-around"
+        class="flex flex-col justify-around gap-2"
       >
         <div
           class="flex flex-col gap-2"
@@ -562,7 +562,7 @@ exports[`ItemHeaderSection > should match snapshot with followers 1`] = `
             Track 1
           </span>
           <div
-            class="flex flex-row items-center gap-2 mr-4"
+            class="mr-4 flex flex-row items-center gap-2"
           >
             <button
               data-state="closed"

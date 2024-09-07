@@ -6,7 +6,7 @@ exports[`RelativeTime > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <p
-        class="text-primary-foreground/80 whitespace-nowrap"
+        class="whitespace-nowrap text-primary-foreground/80"
       >
         2 years ago
       </p>
@@ -14,7 +14,7 @@ exports[`RelativeTime > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <p
-      class="text-primary-foreground/80 whitespace-nowrap"
+      class="whitespace-nowrap text-primary-foreground/80"
     >
       2 years ago
     </p>

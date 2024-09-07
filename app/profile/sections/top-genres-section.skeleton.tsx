@@ -12,7 +12,7 @@ function TopGenresSectionSkeleton({
 }: TopGenresSectionSkeleton.Props) {
   return (
     <DefaultSection title="Top Genres" className="gap-12">
-      <div className="flex flex-row flex-wrap justify-left gap-2">
+      <div className="justify-left flex flex-row flex-wrap gap-2">
         {Array.from({ length: length }).map((_, index) => (
           <div key={index}>
             <Skeleton

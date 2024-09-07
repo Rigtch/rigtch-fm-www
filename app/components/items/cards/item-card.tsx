@@ -43,7 +43,7 @@ function ItemCard({
   album,
 }: ItemCard.Props) {
   return (
-    <Card className="p-4 bg-neutral-800 rounded-lg flex flex-col gap-3">
+    <Card className="flex flex-col gap-3 rounded-lg bg-neutral-800 p-4">
       <ItemImage images={images ?? album} alt={name} size={200} />
 
       <div>

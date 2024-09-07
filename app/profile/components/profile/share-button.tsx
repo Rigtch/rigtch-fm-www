@@ -17,7 +17,7 @@ export function ShareButton() {
   return (
     <Button
       variant="outline"
-      className="flex hover:bg-white flex-row gap-2"
+      className="flex flex-row gap-2 hover:bg-white"
       onClick={saveProfileURL}
     >
       Share <Share1Icon />

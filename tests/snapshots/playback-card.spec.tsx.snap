@@ -6,10 +6,10 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+        class="rounded-xl border border-card text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] bg-neutral-800/50"
       >
         <div
-          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+          class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
         >
           <div>
             <img
@@ -29,42 +29,42 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
             />
           </div>
           <div
-            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+            class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
           >
             <h3
-              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+              class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
             >
               <p
-                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+                class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
               >
                 Track 1
               </p>
               <p
-                class="text-neutral-300 truncate max-w-[380px]"
+                class="max-w-[380px] truncate text-neutral-300"
               >
                 Darkthrone
               </p>
             </h3>
             <div
-              class="flex justify-between items-center w-full"
+              class="flex w-full items-center justify-between"
             >
               <div
-                class="flex gap-2 items-center"
+                class="flex items-center gap-2"
               >
                 <div
-                  class="w-[28px] h-[28px] relative overflow-hidden"
+                  class="relative h-[28px] w-[28px] overflow-hidden"
                 >
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0 animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
                   />
                 </div>
                 <button
@@ -88,7 +88,7 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
                 </button>
               </div>
               <div
-                class="flex flex-row gap-2 min-w-max"
+                class="flex min-w-max flex-row gap-2"
               >
                 <button
                   data-state="closed"
@@ -123,10 +123,10 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
   </body>,
   "container": <div>
     <div
-      class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+      class="rounded-xl border border-card text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] bg-neutral-800/50"
     >
       <div
-        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
       >
         <div>
           <img
@@ -146,42 +146,42 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
           />
         </div>
         <div
-          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
         >
           <h3
-            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
           >
             <p
-              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
             >
               Track 1
             </p>
             <p
-              class="text-neutral-300 truncate max-w-[380px]"
+              class="max-w-[380px] truncate text-neutral-300"
             >
               Darkthrone
             </p>
           </h3>
           <div
-            class="flex justify-between items-center w-full"
+            class="flex w-full items-center justify-between"
           >
             <div
-              class="flex gap-2 items-center"
+              class="flex items-center gap-2"
             >
               <div
-                class="w-[28px] h-[28px] relative overflow-hidden"
+                class="relative h-[28px] w-[28px] overflow-hidden"
               >
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0 animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
                 />
               </div>
               <button
@@ -205,7 +205,7 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
               </button>
             </div>
             <div
-              class="flex flex-row gap-2 min-w-max"
+              class="flex min-w-max flex-row gap-2"
             >
               <button
                 data-state="closed"
@@ -297,10 +297,10 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+        class="rounded-xl border border-card text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] bg-neutral-800/50"
       >
         <div
-          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+          class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
         >
           <div>
             <img
@@ -320,42 +320,42 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
             />
           </div>
           <div
-            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+            class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
           >
             <h3
-              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+              class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
             >
               <p
-                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+                class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
               >
                 Track 1
               </p>
               <p
-                class="text-neutral-300 truncate max-w-[380px]"
+                class="max-w-[380px] truncate text-neutral-300"
               >
                 Darkthrone
               </p>
             </h3>
             <div
-              class="flex justify-between items-center w-full"
+              class="flex w-full items-center justify-between"
             >
               <div
-                class="flex gap-2 items-center"
+                class="flex items-center gap-2"
               >
                 <div
-                  class="w-[28px] h-[28px] relative overflow-hidden"
+                  class="relative h-[28px] w-[28px] overflow-hidden"
                 >
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0 animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
                   />
                 </div>
                 <button
@@ -379,7 +379,7 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
                 </button>
               </div>
               <div
-                class="flex flex-row gap-2 min-w-max"
+                class="flex min-w-max flex-row gap-2"
               >
                 <button
                   data-state="closed"
@@ -414,10 +414,10 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
   </body>,
   "container": <div>
     <div
-      class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+      class="rounded-xl border border-card text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] bg-neutral-800/50"
     >
       <div
-        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
       >
         <div>
           <img
@@ -437,42 +437,42 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
           />
         </div>
         <div
-          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
         >
           <h3
-            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
           >
             <p
-              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
             >
               Track 1
             </p>
             <p
-              class="text-neutral-300 truncate max-w-[380px]"
+              class="max-w-[380px] truncate text-neutral-300"
             >
               Darkthrone
             </p>
           </h3>
           <div
-            class="flex justify-between items-center w-full"
+            class="flex w-full items-center justify-between"
           >
             <div
-              class="flex gap-2 items-center"
+              class="flex items-center gap-2"
             >
               <div
-                class="w-[28px] h-[28px] relative overflow-hidden"
+                class="relative h-[28px] w-[28px] overflow-hidden"
               >
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0 animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
                 />
               </div>
               <button
@@ -496,7 +496,7 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
               </button>
             </div>
             <div
-              class="flex flex-row gap-2 min-w-max"
+              class="flex min-w-max flex-row gap-2"
             >
               <button
                 data-state="closed"
@@ -588,10 +588,10 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="rounded-xl border text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-success border-success"
+        class="rounded-xl border text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] border-success bg-success"
       >
         <div
-          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+          class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
         >
           <div>
             <img
@@ -611,42 +611,42 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
             />
           </div>
           <div
-            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+            class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
           >
             <h3
-              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+              class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
             >
               <p
-                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+                class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
               >
                 Track 1
               </p>
               <p
-                class="text-neutral-300 truncate max-w-[380px]"
+                class="max-w-[380px] truncate text-neutral-300"
               >
                 Darkthrone
               </p>
             </h3>
             <div
-              class="flex justify-between items-center w-full"
+              class="flex w-full items-center justify-between"
             >
               <div
-                class="flex gap-2 items-center"
+                class="flex items-center gap-2"
               >
                 <div
-                  class="w-[28px] h-[28px] relative overflow-hidden"
+                  class="relative h-[28px] w-[28px] overflow-hidden"
                 >
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px]"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px]"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px]"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px]"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px]"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px]"
                   />
                 </div>
                 <button
@@ -668,7 +668,7 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
                 </button>
               </div>
               <div
-                class="flex flex-row gap-2 min-w-max"
+                class="flex min-w-max flex-row gap-2"
               >
                 <button
                   data-state="closed"
@@ -703,10 +703,10 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
   </body>,
   "container": <div>
     <div
-      class="rounded-xl border text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-success border-success"
+      class="rounded-xl border text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] border-success bg-success"
     >
       <div
-        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
       >
         <div>
           <img
@@ -726,42 +726,42 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
           />
         </div>
         <div
-          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
         >
           <h3
-            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
           >
             <p
-              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
             >
               Track 1
             </p>
             <p
-              class="text-neutral-300 truncate max-w-[380px]"
+              class="max-w-[380px] truncate text-neutral-300"
             >
               Darkthrone
             </p>
           </h3>
           <div
-            class="flex justify-between items-center w-full"
+            class="flex w-full items-center justify-between"
           >
             <div
-              class="flex gap-2 items-center"
+              class="flex items-center gap-2"
             >
               <div
-                class="w-[28px] h-[28px] relative overflow-hidden"
+                class="relative h-[28px] w-[28px] overflow-hidden"
               >
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px]"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px]"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px]"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px]"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px]"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px]"
                 />
               </div>
               <button
@@ -783,7 +783,7 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
               </button>
             </div>
             <div
-              class="flex flex-row gap-2 min-w-max"
+              class="flex min-w-max flex-row gap-2"
             >
               <button
                 data-state="closed"
@@ -875,10 +875,10 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+        class="rounded-xl border border-card text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] bg-neutral-800/50"
       >
         <div
-          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+          class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
         >
           <div>
             <img
@@ -898,42 +898,42 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
             />
           </div>
           <div
-            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+            class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
           >
             <h3
-              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+              class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
             >
               <p
-                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+                class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
               >
                 Track 1
               </p>
               <p
-                class="text-neutral-300 truncate max-w-[380px]"
+                class="max-w-[380px] truncate text-neutral-300"
               >
                 Darkthrone
               </p>
             </h3>
             <div
-              class="flex justify-between items-center w-full"
+              class="flex w-full items-center justify-between"
             >
               <div
-                class="flex gap-2 items-center"
+                class="flex items-center gap-2"
               >
                 <div
-                  class="w-[28px] h-[28px] relative overflow-hidden"
+                  class="relative h-[28px] w-[28px] overflow-hidden"
                 >
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px]"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px]"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px]"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px]"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px]"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px]"
                   />
                 </div>
                 <button
@@ -956,7 +956,7 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
                 </button>
               </div>
               <div
-                class="flex flex-row gap-2 min-w-max"
+                class="flex min-w-max flex-row gap-2"
               >
                 <button
                   data-state="closed"
@@ -991,10 +991,10 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
   </body>,
   "container": <div>
     <div
-      class="rounded-xl border border-card text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-neutral-800/50"
+      class="rounded-xl border border-card text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] bg-neutral-800/50"
     >
       <div
-        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
       >
         <div>
           <img
@@ -1014,42 +1014,42 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
           />
         </div>
         <div
-          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
         >
           <h3
-            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
           >
             <p
-              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
             >
               Track 1
             </p>
             <p
-              class="text-neutral-300 truncate max-w-[380px]"
+              class="max-w-[380px] truncate text-neutral-300"
             >
               Darkthrone
             </p>
           </h3>
           <div
-            class="flex justify-between items-center w-full"
+            class="flex w-full items-center justify-between"
           >
             <div
-              class="flex gap-2 items-center"
+              class="flex items-center gap-2"
             >
               <div
-                class="w-[28px] h-[28px] relative overflow-hidden"
+                class="relative h-[28px] w-[28px] overflow-hidden"
               >
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px]"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px]"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px]"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px]"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px]"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px]"
                 />
               </div>
               <button
@@ -1072,7 +1072,7 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
               </button>
             </div>
             <div
-              class="flex flex-row gap-2 min-w-max"
+              class="flex min-w-max flex-row gap-2"
             >
               <button
                 data-state="closed"
@@ -1164,10 +1164,10 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="rounded-xl border text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-success border-success"
+        class="rounded-xl border text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] border-success bg-success"
       >
         <div
-          class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+          class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
         >
           <div>
             <img
@@ -1187,42 +1187,42 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
             />
           </div>
           <div
-            class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+            class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
           >
             <h3
-              class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+              class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
             >
               <p
-                class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+                class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
               >
                 Track 1
               </p>
               <p
-                class="text-neutral-300 truncate max-w-[380px]"
+                class="max-w-[380px] truncate text-neutral-300"
               >
                 Darkthrone
               </p>
             </h3>
             <div
-              class="flex justify-between items-center w-full"
+              class="flex w-full items-center justify-between"
             >
               <div
-                class="flex gap-2 items-center"
+                class="flex items-center gap-2"
               >
                 <div
-                  class="w-[28px] h-[28px] relative overflow-hidden"
+                  class="relative h-[28px] w-[28px] overflow-hidden"
                 >
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0 animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
                   />
                   <span
-                    class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                    class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
                   />
                 </div>
                 <button
@@ -1244,7 +1244,7 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
                 </button>
               </div>
               <div
-                class="flex flex-row gap-2 min-w-max"
+                class="flex min-w-max flex-row gap-2"
               >
                 <button
                   data-state="closed"
@@ -1279,10 +1279,10 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
   </body>,
   "container": <div>
     <div
-      class="rounded-xl border text-card-foreground shadow p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5 bg-success border-success"
+      class="rounded-xl border text-card-foreground shadow !m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px] border-success bg-success"
     >
       <div
-        class="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0"
+        class="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row"
       >
         <div>
           <img
@@ -1302,42 +1302,42 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
           />
         </div>
         <div
-          class="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0"
+          class="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0"
         >
           <h3
-            class="leading-none tracking-tight whitespace-nowrap font-normal flex flex-col gap-1"
+            class="leading-none tracking-tight flex flex-col gap-1 whitespace-nowrap font-normal"
           >
             <p
-              class="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap"
+              class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl"
             >
               Track 1
             </p>
             <p
-              class="text-neutral-300 truncate max-w-[380px]"
+              class="max-w-[380px] truncate text-neutral-300"
             >
               Darkthrone
             </p>
           </h3>
           <div
-            class="flex justify-between items-center w-full"
+            class="flex w-full items-center justify-between"
           >
             <div
-              class="flex gap-2 items-center"
+              class="flex items-center gap-2"
             >
               <div
-                class="w-[28px] h-[28px] relative overflow-hidden"
+                class="relative h-[28px] w-[28px] overflow-hidden"
               >
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-0 animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-0 animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[8px] animation-delay-[0.6s] animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[16px] animation-delay-[0.3s] animate-up-down"
                 />
                 <span
-                  class="w-[4px] h-[28px] absolute bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
+                  class="absolute h-[28px] w-[4px] bg-white transition-all ease-linear left-[24px] animation-delay-[0.9s] animate-up-down"
                 />
               </div>
               <button
@@ -1359,7 +1359,7 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
               </button>
             </div>
             <div
-              class="flex flex-row gap-2 min-w-max"
+              class="flex min-w-max flex-row gap-2"
             >
               <button
                 data-state="closed"

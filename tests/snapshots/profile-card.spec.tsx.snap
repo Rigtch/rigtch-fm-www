@@ -9,24 +9,24 @@ exports[`ProfileCard > should match snapshot 1`] = `
         class="rounded-xl border border-card bg-background text-card-foreground shadow min-w-[75%]"
       >
         <div
-          class="flex flex-col space-y-1.5 lg:flex-row justify-between lg:items-center gap-8 p-4"
+          class="flex flex-col space-y-1.5 justify-between gap-8 p-4 lg:flex-row lg:items-center"
         >
           <div
-            class="flex flex-wrap items-center sm:justify-start justify-center gap-4 p-4 "
+            class="flex flex-wrap items-center justify-center gap-4 p-4 sm:justify-start"
           >
             <span>
               <span
-                class="flex bg-primary rounded-full w-[128px] h-[128px]"
+                class="flex rounded-full bg-primary h-[128px] w-[128px]"
               >
                 <span
-                  class="w-full h-full flex items-center justify-center text-primary-foreground text-5xl"
+                  class="flex h-full w-full items-center justify-center text-primary-foreground text-5xl"
                 >
                   M
                 </span>
               </span>
             </span>
             <div
-              class="flex flex-col gap-4 justify-between h-full"
+              class="flex h-full flex-col justify-between gap-4"
             >
               <div>
                 <h3
@@ -35,7 +35,7 @@ exports[`ProfileCard > should match snapshot 1`] = `
                   Mnigos
                 </h3>
                 <p
-                  class="text-lg text-foreground whitespace-nowrap leading-5 flex items-center gap-2"
+                  class="flex items-center gap-2 whitespace-nowrap text-lg leading-5 text-foreground"
                 >
                   <button
                     data-state="closed"
@@ -70,10 +70,10 @@ exports[`ProfileCard > should match snapshot 1`] = `
                 </p>
               </div>
               <div
-                class="flex flex-row gap-2 items-left"
+                class="items-left flex flex-row gap-2"
               >
                 <button
-                  class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground h-9 px-4 py-2 flex hover:bg-white flex-row gap-2"
+                  class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground h-9 px-4 py-2 flex flex-row gap-2 hover:bg-white"
                 >
                   Share 
                   <svg
@@ -103,24 +103,24 @@ exports[`ProfileCard > should match snapshot 1`] = `
       class="rounded-xl border border-card bg-background text-card-foreground shadow min-w-[75%]"
     >
       <div
-        class="flex flex-col space-y-1.5 lg:flex-row justify-between lg:items-center gap-8 p-4"
+        class="flex flex-col space-y-1.5 justify-between gap-8 p-4 lg:flex-row lg:items-center"
       >
         <div
-          class="flex flex-wrap items-center sm:justify-start justify-center gap-4 p-4 "
+          class="flex flex-wrap items-center justify-center gap-4 p-4 sm:justify-start"
         >
           <span>
             <span
-              class="flex bg-primary rounded-full w-[128px] h-[128px]"
+              class="flex rounded-full bg-primary h-[128px] w-[128px]"
             >
               <span
-                class="w-full h-full flex items-center justify-center text-primary-foreground text-5xl"
+                class="flex h-full w-full items-center justify-center text-primary-foreground text-5xl"
               >
                 M
               </span>
             </span>
           </span>
           <div
-            class="flex flex-col gap-4 justify-between h-full"
+            class="flex h-full flex-col justify-between gap-4"
           >
             <div>
               <h3
@@ -129,7 +129,7 @@ exports[`ProfileCard > should match snapshot 1`] = `
                 Mnigos
               </h3>
               <p
-                class="text-lg text-foreground whitespace-nowrap leading-5 flex items-center gap-2"
+                class="flex items-center gap-2 whitespace-nowrap text-lg leading-5 text-foreground"
               >
                 <button
                   data-state="closed"
@@ -164,10 +164,10 @@ exports[`ProfileCard > should match snapshot 1`] = `
               </p>
             </div>
             <div
-              class="flex flex-row gap-2 items-left"
+              class="items-left flex flex-row gap-2"
             >
               <button
-                class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground h-9 px-4 py-2 flex hover:bg-white flex-row gap-2"
+                class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground h-9 px-4 py-2 flex flex-row gap-2 hover:bg-white"
               >
                 Share 
                 <svg

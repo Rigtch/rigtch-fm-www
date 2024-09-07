@@ -14,7 +14,7 @@ function ItemName({ name, href, className }: ItemName.Props) {
     <LinkButton href={href} className="flex justify-start">
       <p
         className={cn(
-          'truncate max-w-[220px] sm:max-w-[240px] xl:max-w-[340px]',
+          'max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px]',
           className
         )}
       >

@@ -12,8 +12,8 @@ function ProfileAvatarSkeleton({ size = 'sm' }: ProfileAvatarSkeleton.Props) {
     <Skeleton
       className={cn(
         'rounded-full',
-        size === 'sm' && 'w-[48px] h-[48px]',
-        size === 'lg' && 'w-[128px] h-[128px]'
+        size === 'sm' && 'h-[48px] w-[48px]',
+        size === 'lg' && 'h-[128px] w-[128px]'
       )}
     />
   )

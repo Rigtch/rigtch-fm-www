@@ -69,7 +69,7 @@ function ToggleStatsProvider({
             <ToggleGroup
               value={initialValue}
               type="single"
-              className="text-white justify-start"
+              className="justify-start text-white"
               disabled={isDisabled}
             >
               {statsProviderOptions.map(({ value, label }) => (

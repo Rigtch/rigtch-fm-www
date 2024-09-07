@@ -17,7 +17,7 @@ function LinkButton({ children, className, ...props }: LinkButton.Props) {
     <Button
       variant="link"
       asChild
-      className={cn('leading-none p-0 text-lg', className)}
+      className={cn('p-0 text-lg leading-none', className)}
     >
       <Link {...props}>{children}</Link>
     </Button>

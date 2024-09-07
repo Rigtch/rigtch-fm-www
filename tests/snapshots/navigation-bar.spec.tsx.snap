@@ -6,14 +6,14 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
   "baseElement": <body>
     <div>
       <header
-        class="flex justify-between px-4 py-2 bg-primary border-b border-primary-lighter top-0 sticky z-10"
+        class="sticky top-0 z-10 flex justify-between border-b border-primary-lighter bg-primary px-4 py-2"
       >
         <div
           class="flex items-center gap-4"
         >
           <img
             alt="Rigtch"
-            class="rounded-lg hidden lg:block"
+            class="hidden rounded-lg lg:block"
             data-nimg="1"
             decoding="async"
             height="42"
@@ -24,7 +24,7 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
             width="42"
           />
           <div
-            class="lg:hidden w-[28px] h-[28px]"
+            class="h-[28px] w-[28px] lg:hidden"
           >
             <button
               aria-controls="radix-:r4:"
@@ -53,7 +53,7 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
             </button>
           </div>
           <h1
-            class="text-2xl md:text-3xl md:block hidden font-semibold"
+            class="hidden text-2xl font-semibold md:block md:text-3xl"
           >
             rigtch.fm
           </h1>
@@ -76,13 +76,13 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
                 <button
                   aria-controls="radix-:r7:-content-radix-:r8:"
                   aria-expanded="false"
-                  class="group h-9 w-max items-center justify-center rounded-md bg-primary text-sm font-medium transition-colors hover:bg-primary-lighter hover:text-primary-foreground focus:bg-primary-lighter focus:text-primary-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-backgrprimaryound-lighter/50 data-[state=open]:bg-primary-lighter/50 group flex gap-2 p-2 min-w-[100px]"
+                  class="group h-9 w-max items-center justify-center rounded-md bg-primary text-sm font-medium transition-colors hover:bg-primary-lighter hover:text-primary-foreground focus:bg-primary-lighter focus:text-primary-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-backgrprimaryound-lighter/50 data-[state=open]:bg-primary-lighter/50 group flex min-w-[100px] gap-2 p-2"
                   data-radix-collection-item=""
                   data-state="closed"
                   id="radix-:r7:-trigger-radix-:r8:"
                 >
                   <p
-                    class="text-lg truncate max-w-[150px]"
+                    class="max-w-[150px] truncate text-lg"
                   >
                     John Doe
                   </p>
@@ -110,10 +110,10 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
               >
                 <span>
                   <span
-                    class="flex bg-primary rounded-full w-[48px] h-[48px]"
+                    class="flex rounded-full bg-primary h-[48px] w-[48px]"
                   >
                     <span
-                      class="w-full h-full flex items-center justify-center text-primary-foreground text-xl"
+                      class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
                     >
                       J
                     </span>
@@ -131,14 +131,14 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
   </body>,
   "container": <div>
     <header
-      class="flex justify-between px-4 py-2 bg-primary border-b border-primary-lighter top-0 sticky z-10"
+      class="sticky top-0 z-10 flex justify-between border-b border-primary-lighter bg-primary px-4 py-2"
     >
       <div
         class="flex items-center gap-4"
       >
         <img
           alt="Rigtch"
-          class="rounded-lg hidden lg:block"
+          class="hidden rounded-lg lg:block"
           data-nimg="1"
           decoding="async"
           height="42"
@@ -149,7 +149,7 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
           width="42"
         />
         <div
-          class="lg:hidden w-[28px] h-[28px]"
+          class="h-[28px] w-[28px] lg:hidden"
         >
           <button
             aria-controls="radix-:r4:"
@@ -178,7 +178,7 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
           </button>
         </div>
         <h1
-          class="text-2xl md:text-3xl md:block hidden font-semibold"
+          class="hidden text-2xl font-semibold md:block md:text-3xl"
         >
           rigtch.fm
         </h1>
@@ -201,13 +201,13 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
               <button
                 aria-controls="radix-:r7:-content-radix-:r8:"
                 aria-expanded="false"
-                class="group h-9 w-max items-center justify-center rounded-md bg-primary text-sm font-medium transition-colors hover:bg-primary-lighter hover:text-primary-foreground focus:bg-primary-lighter focus:text-primary-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-backgrprimaryound-lighter/50 data-[state=open]:bg-primary-lighter/50 group flex gap-2 p-2 min-w-[100px]"
+                class="group h-9 w-max items-center justify-center rounded-md bg-primary text-sm font-medium transition-colors hover:bg-primary-lighter hover:text-primary-foreground focus:bg-primary-lighter focus:text-primary-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-backgrprimaryound-lighter/50 data-[state=open]:bg-primary-lighter/50 group flex min-w-[100px] gap-2 p-2"
                 data-radix-collection-item=""
                 data-state="closed"
                 id="radix-:r7:-trigger-radix-:r8:"
               >
                 <p
-                  class="text-lg truncate max-w-[150px]"
+                  class="max-w-[150px] truncate text-lg"
                 >
                   John Doe
                 </p>
@@ -235,10 +235,10 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
             >
               <span>
                 <span
-                  class="flex bg-primary rounded-full w-[48px] h-[48px]"
+                  class="flex rounded-full bg-primary h-[48px] w-[48px]"
                 >
                   <span
-                    class="w-full h-full flex items-center justify-center text-primary-foreground text-xl"
+                    class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
                   >
                     J
                   </span>
@@ -313,14 +313,14 @@ exports[`NavigationBar > should match snapshot as unauthenticated 1`] = `
   "baseElement": <body>
     <div>
       <header
-        class="flex justify-between px-4 py-2 bg-primary border-b border-primary-lighter top-0 sticky z-10"
+        class="sticky top-0 z-10 flex justify-between border-b border-primary-lighter bg-primary px-4 py-2"
       >
         <div
           class="flex items-center gap-4"
         >
           <img
             alt="Rigtch"
-            class="rounded-lg hidden lg:block"
+            class="hidden rounded-lg lg:block"
             data-nimg="1"
             decoding="async"
             height="42"
@@ -331,7 +331,7 @@ exports[`NavigationBar > should match snapshot as unauthenticated 1`] = `
             width="42"
           />
           <div
-            class="lg:hidden w-[28px] h-[28px]"
+            class="h-[28px] w-[28px] lg:hidden"
           >
             <button
               aria-controls="radix-:r0:"
@@ -360,7 +360,7 @@ exports[`NavigationBar > should match snapshot as unauthenticated 1`] = `
             </button>
           </div>
           <h1
-            class="text-2xl md:text-3xl md:block hidden font-semibold"
+            class="hidden text-2xl font-semibold md:block md:text-3xl"
           >
             rigtch.fm
           </h1>
@@ -398,14 +398,14 @@ exports[`NavigationBar > should match snapshot as unauthenticated 1`] = `
   </body>,
   "container": <div>
     <header
-      class="flex justify-between px-4 py-2 bg-primary border-b border-primary-lighter top-0 sticky z-10"
+      class="sticky top-0 z-10 flex justify-between border-b border-primary-lighter bg-primary px-4 py-2"
     >
       <div
         class="flex items-center gap-4"
       >
         <img
           alt="Rigtch"
-          class="rounded-lg hidden lg:block"
+          class="hidden rounded-lg lg:block"
           data-nimg="1"
           decoding="async"
           height="42"
@@ -416,7 +416,7 @@ exports[`NavigationBar > should match snapshot as unauthenticated 1`] = `
           width="42"
         />
         <div
-          class="lg:hidden w-[28px] h-[28px]"
+          class="h-[28px] w-[28px] lg:hidden"
         >
           <button
             aria-controls="radix-:r0:"
@@ -445,7 +445,7 @@ exports[`NavigationBar > should match snapshot as unauthenticated 1`] = `
           </button>
         </div>
         <h1
-          class="text-2xl md:text-3xl md:block hidden font-semibold"
+          class="hidden text-2xl font-semibold md:block md:text-3xl"
         >
           rigtch.fm
         </h1>

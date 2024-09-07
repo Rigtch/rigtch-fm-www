@@ -17,7 +17,7 @@ function ItemArtists({ artists, className }: ItemArtists.Props) {
         <span key={name}>
           <LinkButton
             className={cn(
-              'text-primary-foreground/80 h-auto',
+              'h-auto text-primary-foreground/80',
               className ?? 'text-md'
             )}
             href={`/artist/${id}`}

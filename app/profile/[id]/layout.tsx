@@ -33,13 +33,13 @@ function ProfileLayout({
 
   return (
     <div className="flex">
-      <aside className="bg-primary border-r h-[calc(100vh-60px)] border-primary-lighter p-4 max-w-[300px] hidden lg:block top-[65px] sticky">
+      <aside className="sticky top-[65px] hidden h-[calc(100vh-60px)] max-w-[300px] border-r border-primary-lighter bg-primary p-4 lg:block">
         <div className="sticky top-[calc(65px+16px)]">
           <Sidebar />
         </div>
       </aside>
 
-      <main className="my-8 md:my-16 w-full min-h-[200vh] flex flex-col items-stretch justify-start md:px-8 xl:px-12 gap-8">
+      <main className="my-8 flex min-h-[200vh] w-full flex-col items-stretch justify-start gap-8 md:my-16 md:px-8 xl:px-12">
         <ProfileProviders>
           {profile}
           {isProfileHomePage ? (

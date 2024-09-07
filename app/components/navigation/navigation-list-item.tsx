@@ -23,7 +23,7 @@ function NavigationListItem({
       className={cn(
         navigationMenuTriggerStyle(),
         className,
-        'cursor-pointer rounded-none w-full m-0 whitespace-nowrap justify-start'
+        'm-0 w-full cursor-pointer justify-start whitespace-nowrap rounded-none'
       )}
       {...props}
     >

@@ -42,7 +42,7 @@ export function StatsOptions() {
   const route = pathname.split('/').at(-1)
 
   return (
-    <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch md:items-center">
+    <div className="flex flex-col items-stretch justify-between gap-4 md:flex-row md:items-center">
       <div>
         {(!route || route !== 'albums') && (
           <ToggleStatsProvider
@@ -52,7 +52,7 @@ export function StatsOptions() {
         )}
       </div>
 
-      <div className="flex gap-2 flex-wrap">
+      <div className="flex flex-wrap gap-2">
         {(statsProvider === StatsProvider.RIGTCH || route === 'albums') && (
           <SelectStatsMeasurement initialValue={statsMeasurement} />
         )}

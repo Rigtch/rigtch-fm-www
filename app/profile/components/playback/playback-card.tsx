@@ -44,17 +44,17 @@ function PlaybackCard({
   return (
     <Card
       className={cn(
-        'p-4 w-full h-full !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5',
-        isPlayingOptimistic ? 'bg-success border-success' : 'bg-neutral-800/50 '
+        '!m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px]',
+        isPlayingOptimistic ? 'border-success bg-success' : 'bg-neutral-800/50'
       )}
     >
-      <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full space-y-0">
+      <CardHeader className="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row">
         {isImageLoaded ? (
           <ItemImage
             images={album}
             size={128}
             alt={album.name}
-            className={'rounded-md w-full sm:w-auto'}
+            className={'w-full rounded-md sm:w-auto'}
           />
         ) : (
           <div>
@@ -71,19 +71,19 @@ function PlaybackCard({
           </div>
         )}
 
-        <div className="flex flex-col justify-between w-full md:max-w-[calc(100%-140px)] gap-4 md:gap-0">
-          <CardTitle className="whitespace-nowrap font-normal flex flex-col gap-1">
-            <p className="text-2xl inline-block text-ellipsis overflow-hidden whitespace-nowrap">
+        <div className="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0">
+          <CardTitle className="flex flex-col gap-1 whitespace-nowrap font-normal">
+            <p className="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl">
               {track.name}
             </p>
 
-            <p className="text-neutral-300 truncate max-w-[380px]">
+            <p className="max-w-[380px] truncate text-neutral-300">
               {formatArtists(artists)}
             </p>
           </CardTitle>
 
-          <CardFooter className="flex justify-between items-center w-full">
-            <div className="flex gap-2 items-center">
+          <CardFooter className="flex w-full items-center justify-between">
+            <div className="flex items-center gap-2">
               <AudioBars isPlaying={isPlaying} />
 
               <ToggleStateButton
@@ -94,7 +94,7 @@ function PlaybackCard({
               />
             </div>
 
-            <div className="flex flex-row gap-2 min-w-max">
+            <div className="flex min-w-max flex-row gap-2">
               {!device && track.playedAt && (
                 <RelativeTime value={track.playedAt} />
               )}

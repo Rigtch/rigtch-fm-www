@@ -29,10 +29,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
                 data-state="closed"
               >
                 <div
-                  class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
+                  class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
                 >
                   <div
-                    class="p-2 whitespace-nowrap text-primary-foreground/80 block"
+                    class="block whitespace-nowrap p-2 text-primary-foreground/80"
                   >
                     Atmospheric Black Metal
                   </div>
@@ -45,10 +45,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
                 data-state="closed"
               >
                 <div
-                  class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
+                  class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
                 >
                   <div
-                    class="p-2 whitespace-nowrap text-primary-foreground/80 block"
+                    class="block whitespace-nowrap p-2 text-primary-foreground/80"
                   >
                     Black Metal
                   </div>
@@ -61,10 +61,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
                 data-state="closed"
               >
                 <div
-                  class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
+                  class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
                 >
                   <div
-                    class="p-2 whitespace-nowrap text-primary-foreground/80 block"
+                    class="block whitespace-nowrap p-2 text-primary-foreground/80"
                   >
                     Metal
                   </div>
@@ -104,10 +104,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
               data-state="closed"
             >
               <div
-                class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
+                class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
               >
                 <div
-                  class="p-2 whitespace-nowrap text-primary-foreground/80 block"
+                  class="block whitespace-nowrap p-2 text-primary-foreground/80"
                 >
                   Atmospheric Black Metal
                 </div>
@@ -120,10 +120,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
               data-state="closed"
             >
               <div
-                class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
+                class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
               >
                 <div
-                  class="p-2 whitespace-nowrap text-primary-foreground/80 block"
+                  class="block whitespace-nowrap p-2 text-primary-foreground/80"
                 >
                   Black Metal
                 </div>
@@ -136,10 +136,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
               data-state="closed"
             >
               <div
-                class="relative overflow-hidden rounded-xl w-max -z-10 bg-primary"
+                class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
               >
                 <div
-                  class="p-2 whitespace-nowrap text-primary-foreground/80 block"
+                  class="block whitespace-nowrap p-2 text-primary-foreground/80"
                 >
                   Metal
                 </div>

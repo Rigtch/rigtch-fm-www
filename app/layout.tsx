@@ -85,7 +85,7 @@ export default async function RootLayout({ children }: LayoutProps) {
     <html lang="en">
       <body className="bg-background text-white">
         <RootProviders session={session!}>
-          <div className="flex flex-col justify-between min-h-screen">
+          <div className="flex min-h-screen flex-col justify-between">
             <div>
               <NavigationBar user={session?.user} userId={userId} />
 

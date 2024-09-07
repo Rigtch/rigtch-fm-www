@@ -49,7 +49,7 @@ function CookiesDialog({ isAccepted }: CookiesDialog.Props) {
           </DialogDescription>
         </DialogHeader>
 
-        <DialogFooter className="flex flex-row justify-between w-full">
+        <DialogFooter className="flex w-full flex-row justify-between">
           <form action={declineUserCookiesAction}>
             <Button type="submit" variant="secondary">
               Decline

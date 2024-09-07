@@ -23,9 +23,9 @@ function ProfileAvatar({
     <span>
       <Avatar
         className={cn(
-          'flex bg-primary rounded-full',
-          size === 'sm' && 'w-[48px] h-[48px]',
-          size === 'lg' && 'w-[128px] h-[128px]',
+          'flex rounded-full bg-primary',
+          size === 'sm' && 'h-[48px] w-[48px]',
+          size === 'lg' && 'h-[128px] w-[128px]',
           className
         )}
       >
@@ -37,7 +37,7 @@ function ProfileAvatar({
 
         <AvatarFallback
           className={cn(
-            'text-black  w-full h-full flex items-center justify-center text-primary-foreground',
+            'flex h-full w-full items-center justify-center text-black text-primary-foreground',
             size === 'sm' && 'text-xl',
             size === 'lg' && 'text-5xl'
           )}

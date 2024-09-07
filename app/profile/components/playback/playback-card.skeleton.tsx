@@ -12,19 +12,19 @@ import { Skeleton } from '@app/components/ui/skeleton'
 
 export function PlaybackCardSkeleton() {
   return (
-    <Card className="bg-neutral-800/50 border-neutral-800/50 p-4 w-full h-full items-center !m-0 lg:w-[380px] xl:min-w-[380px] xl:w-2/5">
-      <CardHeader className="flex flex-col sm:flex-row gap-4 p-0 w-full">
+    <Card className="!m-0 h-full w-full items-center border-neutral-800/50 bg-neutral-800/50 p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px]">
+      <CardHeader className="flex w-full flex-col gap-4 p-0 sm:flex-row">
         <Skeleton className="h-[128px] min-w-[128px]" />
 
-        <div className="flex flex-col justify-between gap-4 md:gap-0 w-full">
-          <CardTitle className="whitespace-nowrap w-full font-normal flex flex-col gap-3">
+        <div className="flex w-full flex-col justify-between gap-4 md:gap-0">
+          <CardTitle className="flex w-full flex-col gap-3 whitespace-nowrap font-normal">
             <Skeleton className="h-7 w-48" />
             <Skeleton className="h-3 w-16" />
           </CardTitle>
 
-          <CardFooter className="flex justify-between items-center w-full">
-            <div className="flex flex-row justify-between w-full">
-              <div className="flex gap-2 items-center">
+          <CardFooter className="flex w-full items-center justify-between">
+            <div className="flex w-full flex-row justify-between">
+              <div className="flex items-center gap-2">
                 <AudioBars isPlaying={false} />
 
                 <ToggleStateButton
