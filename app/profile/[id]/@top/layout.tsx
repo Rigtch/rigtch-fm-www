@@ -6,12 +6,14 @@ import { StatsOptions } from '@app/profile/components/common'
 import type { ProfileLayoutBaseProps } from '@app/profile/types'
 
 namespace ProfileTopGenresSubLayout {
-  export interface Props extends ProfileLayoutBaseProps {
-    genres: ReactNode
-    artists: ReactNode
-    tracks: ReactNode
-    albums: ReactNode
-  }
+  export type Props = Readonly<
+    ProfileLayoutBaseProps & {
+      genres: ReactNode
+      artists: ReactNode
+      tracks: ReactNode
+      albums: ReactNode
+    }
+  >
 }
 
 function ProfileTopGenresSubLayout({

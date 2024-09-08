@@ -14,10 +14,10 @@ import {
 } from '@app/components/ui/chart'
 
 namespace MostListenedGenresChart {
-  export interface Props {
+  export type Props = Readonly<{
     topGenresResponse: RigtchStatsResponse<string>
     measurement: StatsMeasurement
-  }
+  }>
 }
 
 function MostListenedGenresChart({

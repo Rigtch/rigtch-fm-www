@@ -31,10 +31,10 @@ import { handleSignOut } from '@app/auth/actions'
 import { ProfileAvatar } from '@app/profile/components/profile'
 
 namespace NavigationBar {
-  export interface Props {
+  export type Props = Readonly<{
     user?: User
     userId?: string
-  }
+  }>
 }
 
 function NavigationBar({ user, userId }: NavigationBar.Props) {

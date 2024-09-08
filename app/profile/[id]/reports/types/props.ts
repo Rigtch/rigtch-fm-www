@@ -1,9 +1,10 @@
 import type { ProfilePageProps } from '@app/profile/types'
 
-export interface ProfileReportsPageProps
-  extends Omit<ProfilePageProps, 'searchParams'> {
-  searchParams: {
-    before?: string | null
-    after?: string | null
-  } & Pick<ProfilePageProps['searchParams'], 'stats-measurement'>
-}
+export type ProfileReportsPageProps = Readonly<
+  Omit<ProfilePageProps, 'searchParams'> & {
+    searchParams: {
+      before?: string | null
+      after?: string | null
+    } & Pick<ProfilePageProps['searchParams'], 'stats-measurement'>
+  }
+>

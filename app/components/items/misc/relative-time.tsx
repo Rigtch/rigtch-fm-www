@@ -5,11 +5,11 @@ import { DateTime, type DateTimeOptions } from 'luxon'
 import { cn } from '@app/utils/cn'
 
 namespace RelativeTime {
-  export interface Props {
+  export type Props = Readonly<{
     value: string
     className?: string
     options?: DateTimeOptions
-  }
+  }>
 }
 
 function RelativeTime({ value, options, className }: RelativeTime.Props) {

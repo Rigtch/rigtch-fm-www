@@ -13,12 +13,14 @@ import type { ProfileLayoutBaseProps } from '@app/profile/types'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 
 namespace ProfileReportsLayout {
-  export interface Props extends ProfileLayoutBaseProps {
-    listeningDays: ReactNode
-    listeningHours: ReactNode
-    mostListenedItems: ReactNode
-    mostListenedGenres: ReactNode
-  }
+  export type Props = Readonly<
+    ProfileLayoutBaseProps & {
+      listeningDays: ReactNode
+      listeningHours: ReactNode
+      mostListenedItems: ReactNode
+      mostListenedGenres: ReactNode
+    }
+  >
 }
 
 function ProfileReportsLayout({

@@ -6,10 +6,12 @@ import { Button } from '@app/components/ui/button'
 import { cn } from '@app/utils/cn'
 
 namespace LinkButton {
-  export interface Props extends LinkProps {
-    children: ReactNode
-    className?: string
-  }
+  export type Props = Readonly<
+    LinkProps & {
+      children: ReactNode
+      className?: string
+    }
+  >
 }
 
 function LinkButton({ children, className, ...props }: LinkButton.Props) {

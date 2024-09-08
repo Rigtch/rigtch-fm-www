@@ -122,6 +122,7 @@ const Carousel = React.forwardRef<
 
     return (
       <CarouselContext.Provider
+        // eslint-disable-next-line sonarjs/jsx-no-constructed-context-values
         value={{
           carouselRef: carouselReference,
           api: api,

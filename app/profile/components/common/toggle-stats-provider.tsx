@@ -19,14 +19,16 @@ import {
 } from '@app/components/ui/tooltip'
 
 namespace ToggleStatsProvider {
-  export interface Props extends ProfileSelectProps<StatsProvider> {
-    userCreatedAt?: Date
-    /**
-     * If true, the user considered as a beta user will be ignored and the time range will be disabled anyway.
-     * !!! This should be used only for creating stories.
-     */
-    ignoreBetaUser?: boolean
-  }
+  export type Props = Readonly<
+    ProfileSelectProps<StatsProvider> & {
+      userCreatedAt?: Date
+      /**
+       * If true, the user considered as a beta user will be ignored and the time range will be disabled anyway.
+       * !!! This should be used only for creating stories.
+       */
+      ignoreBetaUser?: boolean
+    }
+  >
 }
 
 function ToggleStatsProvider({

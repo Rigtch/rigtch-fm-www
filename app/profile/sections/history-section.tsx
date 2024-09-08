@@ -11,10 +11,12 @@ import { Button } from '@app/components/ui/button'
 import { DefaultSection } from '@app/sections'
 
 namespace HistorySection {
-  export type Props = Omit<DefaultSection.Props, 'title'> & {
-    initialData: Pagination<HistoryTrack>
-    limit: number
-  }
+  export type Props = Readonly<
+    Omit<DefaultSection.Props, 'title'> & {
+      initialData: Pagination<HistoryTrack>
+      limit: number
+    }
+  >
 }
 
 function HistorySection({
@@ -25,7 +27,7 @@ function HistorySection({
   const { ref, inView } = useInView()
 
   const { data, fetchNextPage, isFetchingNextPage, hasNextPage } =
-    useHistoryInfiniteQuery(limit, initialData)
+    useHistoryInfiniteQuery(initialData, limit)
 
   useEffect(() => {
     if (inView)
@@ -55,7 +57,7 @@ function HistorySection({
 
       <div className="flex justify-center">
         <Button
-          onClick={() => fetchNextPage()}
+          onClick={() => void fetchNextPage()}
           disabled={!hasNextPage || isFetchingNextPage}
         >
           {isFetchingNextPage ? (

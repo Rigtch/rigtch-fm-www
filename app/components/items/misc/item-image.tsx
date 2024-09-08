@@ -7,10 +7,12 @@ import { cn } from '@app/utils/cn'
 import { type ItemWithImages, findImage } from '@app/utils/find-image'
 
 namespace ItemImage {
-  export interface Props extends Omit<ComponentProps<typeof Image>, 'src'> {
-    size: number
-    images: ItemWithImages
-  }
+  export type Props = Readonly<
+    Omit<ComponentProps<typeof Image>, 'src'> & {
+      size: number
+      images: ItemWithImages
+    }
+  >
 }
 
 function ItemImage({

@@ -3,6 +3,7 @@ import {
   createContext,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from 'react'
 import { useRouter } from 'next/navigation'
@@ -32,9 +33,9 @@ export const PlaybackStateContext = createContext<PlaybackStateContextType>({
 
 export const usePlaybackStateContext = () => useContext(PlaybackStateContext)
 
-export interface PlaybackStateProviderProps {
+export type PlaybackStateProviderProps = Readonly<{
   children: ReactNode
-}
+}>
 
 export function PlaybackStateProvider({
   children,
@@ -56,28 +57,29 @@ export function PlaybackStateProvider({
 
   const lastTrack = lastTracksQuery.data?.items[0]
 
-  async function toggleState() {
-    const { success } = await toggle(isPlaying)
+  const value = useMemo(
+    () => ({
+      data:
+        (data ?? lastTrack)
+          ? ({
+              device: data?.device,
+              track: data?.track ?? lastTrack,
+            } as PlaybackStateData)
+          : undefined,
+      isPlaying,
+      toggleState: async () => {
+        const { success } = await toggle(isPlaying)
 
-    setIsPlaying(!isPlaying)
+        setIsPlaying(!isPlaying)
 
-    if (success) await refetch()
-  }
+        if (success) await refetch()
+      },
+    }),
+    [data, isPlaying, lastTrack, toggle, refetch]
+  )
 
   return (
-    <PlaybackStateContext.Provider
-      value={{
-        data:
-          (data ?? lastTrack)
-            ? ({
-                device: data?.device,
-                track: data?.track ?? lastTrack,
-              } as PlaybackStateData)
-            : undefined,
-        isPlaying,
-        toggleState,
-      }}
-    >
+    <PlaybackStateContext.Provider value={value}>
       {children}
     </PlaybackStateContext.Provider>
   )

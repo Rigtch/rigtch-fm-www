@@ -5,6 +5,7 @@ import type {
 import type { ValueType } from 'tailwindcss/types/config'
 import type { MockProxy } from 'vitest-mock-extended'
 import { mock } from 'vitest-mock-extended'
+import { render } from '@testing-library/react'
 
 import { chartTooltipContentFormatter } from './chart-tooltip-content-formatter'
 
@@ -38,21 +39,25 @@ describe('chartTooltipContentFormatter', () => {
   })
 
   test('should return formatted tooltip content with measurement plays', () => {
-    const view = TestComponent({
-      measurement: StatsMeasurement.PLAYS,
-      value: 100,
-      item: itemMock,
-    })
+    const view = render(
+      <TestComponent
+        measurement={StatsMeasurement.PLAYS}
+        value={100}
+        item={itemMock}
+      />
+    )
 
     expect(view).toMatchSnapshot()
   })
 
   test('should return formatted tooltip content with measurement playTime', () => {
-    const view = TestComponent({
-      measurement: StatsMeasurement.PLAY_TIME,
-      value: 1000 * 60 * 60 * 4,
-      item: itemMock,
-    })
+    const view = render(
+      <TestComponent
+        measurement={StatsMeasurement.PLAY_TIME}
+        value={1000 * 60 * 60 * 4}
+        item={itemMock}
+      />
+    )
 
     expect(view).toMatchSnapshot()
   })
@@ -60,11 +65,13 @@ describe('chartTooltipContentFormatter', () => {
   test('should return formatted tooltip content with color', () => {
     itemMock.color = '#000000'
 
-    const view = TestComponent({
-      measurement: StatsMeasurement.PLAYS,
-      value: 100,
-      item: itemMock,
-    })
+    const view = render(
+      <TestComponent
+        measurement={StatsMeasurement.PLAYS}
+        value={100}
+        item={itemMock}
+      />
+    )
 
     expect(view).toMatchSnapshot()
   })
@@ -72,11 +79,13 @@ describe('chartTooltipContentFormatter', () => {
   test('should return formatted tooltip content with fill', () => {
     itemMock.payload.fill = '#000000'
 
-    const view = TestComponent({
-      measurement: StatsMeasurement.PLAYS,
-      value: 100,
-      item: itemMock,
-    })
+    const view = render(
+      <TestComponent
+        measurement={StatsMeasurement.PLAYS}
+        value={100}
+        item={itemMock}
+      />
+    )
 
     expect(view).toMatchSnapshot()
   })

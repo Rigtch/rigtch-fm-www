@@ -2,9 +2,9 @@ import { Skeleton } from '@app/components/ui/skeleton'
 import { cn } from '@app/utils/cn'
 
 namespace ProfileAvatarSkeleton {
-  export interface Props {
+  export type Props = Readonly<{
     size?: 'sm' | 'lg'
-  }
+  }>
 }
 
 function ProfileAvatarSkeleton({ size = 'sm' }: ProfileAvatarSkeleton.Props) {

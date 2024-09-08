@@ -1,7 +1,7 @@
 namespace FollowersCount {
-  export interface Props {
+  export type Props = Readonly<{
     value: number
-  }
+  }>
 }
 
 function FollowersCount({ value }: FollowersCount.Props) {

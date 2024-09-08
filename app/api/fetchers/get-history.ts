@@ -6,10 +6,10 @@ export function getHistory(
   token: string,
   { userId, limit, page }: HistoryParams
 ) {
-  const searchParams = new URLSearchParams({
-    limit: limit + '',
-    page: page + '',
-  })
+  const searchParams = new URLSearchParams()
+
+  if (limit) searchParams.append('limit', limit + '')
+  if (page) searchParams.append('page', page + '')
 
   return fetchApi<Pagination<HistoryTrack>>(
     `/users/${userId}/history?${searchParams.toString()}`,

@@ -23,19 +23,20 @@ import { TIME_RANGE } from '@app/profile/constants'
 import { TooltipInfo } from '@app/components/common'
 
 namespace SelectTimeRange {
-  export interface Props<TStatsProvider extends StatsProvider>
-    extends ProfileSelectProps<
+  export type Props<TStatsProvider extends StatsProvider> = Readonly<
+    ProfileSelectProps<
       TStatsProvider extends StatsProvider.RIGTCH
         ? RigtchTimeRange
         : SpotifyTimeRange
-    > {
-    userCreatedAt?: Date
-    /**
-     * If true, the user considered as a beta user will be ignored and the time range will be disabled anyway.
-     * !!! This should be used only for creating stories.
-     */
-    ignoreBetaUser?: boolean
-  }
+    > & {
+      userCreatedAt?: Date
+      /**
+       * If true, the user considered as a beta user will be ignored and the time range will be disabled anyway.
+       * !!! This should be used only for creating stories.
+       */
+      ignoreBetaUser?: boolean
+    }
+  >
 }
 
 function SelectTimeRange<TStatsProvider extends StatsProvider>({

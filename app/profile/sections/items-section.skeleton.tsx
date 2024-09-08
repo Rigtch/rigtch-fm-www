@@ -2,9 +2,11 @@ import { ItemsListSkeleton } from '@app/components/items/list'
 import { DefaultSection } from '@app/sections'
 
 namespace ItemsSectionSkeleton {
-  export interface Props extends ItemsListSkeleton.Props {
-    title: string
-  }
+  export type Props = Readonly<
+    ItemsListSkeleton.Props & {
+      title: string
+    }
+  >
 }
 
 function ItemsSectionSkeleton({ title, ...props }: ItemsSectionSkeleton.Props) {

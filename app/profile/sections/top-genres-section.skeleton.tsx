@@ -2,9 +2,9 @@ import { Skeleton } from '@app/components/ui/skeleton'
 import { DefaultSection } from '@app/sections'
 
 namespace TopGenresSectionSkeleton {
-  export interface Props {
+  export type Props = Readonly<{
     length?: number
-  }
+  }>
 }
 
 function TopGenresSectionSkeleton({

@@ -5,12 +5,12 @@ import { FaPlay, FaPause } from 'react-icons/fa'
 import { Button } from '@app/components/ui/button'
 
 namespace ToggleStateButton {
-  export interface Props {
+  export type Props = Readonly<{
     isPlaying: boolean
     isDeviceAvailable: boolean
     hasAccess: boolean
     toggleState: () => Promise<void>
-  }
+  }>
 }
 
 function ToggleStateButton({
@@ -25,7 +25,7 @@ function ToggleStateButton({
       className="rounded-full"
       size="icon"
       disabled={!isDeviceAvailable || !hasAccess}
-      onClick={() => toggleState()}
+      onClick={toggleState}
     >
       {isPlaying ? <FaPause /> : <FaPlay className="ml-[1px]" />}
     </Button>

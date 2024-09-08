@@ -30,6 +30,7 @@ const ToggleGroup = React.forwardRef<
     disabled={disabled}
     {...props}
   >
+    {/* eslint-disable-next-line sonarjs/jsx-no-constructed-context-values */}
     <ToggleGroupContext.Provider value={{ variant, size }}>
       {children}
     </ToggleGroupContext.Provider>

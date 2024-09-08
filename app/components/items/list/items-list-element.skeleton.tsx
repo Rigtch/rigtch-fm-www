@@ -5,14 +5,14 @@ import { Skeleton } from '@app/components/ui/skeleton'
 import { cn } from '@app/utils/cn'
 
 namespace ItemsListElementSkeleton {
-  export interface Props {
+  export type Props = Readonly<{
     withArtists?: boolean
     withPlayedAt?: boolean
     position?: number
     positionSize?: ItemPosition.Props['size']
     positionClassName?: string
     withPlaysOrPlayTime?: boolean
-  }
+  }>
 }
 
 function ItemsListElementSkeleton({

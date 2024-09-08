@@ -25,18 +25,19 @@ import { Separator } from '@app/components/ui/separator'
 import { cn } from '@app/utils/cn'
 
 namespace ItemsList {
-  export interface Props
-    extends Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'> {
-    items:
-      | ArtistEntity[]
-      | TrackEntity[]
-      | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
-    isTop?: boolean
-    positionSize?: ItemPosition.Props['size']
-    positionClassName?: string
-    lastItemSeparator?: boolean
-    isRounded?: boolean
-  }
+  export type Props = Readonly<
+    Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'> & {
+      items:
+        | ArtistEntity[]
+        | TrackEntity[]
+        | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
+      isTop?: boolean
+      positionSize?: ItemPosition.Props['size']
+      positionClassName?: string
+      lastItemSeparator?: boolean
+      isRounded?: boolean
+    }
+  >
 }
 
 function ItemsList({

@@ -10,8 +10,8 @@ import type { ParamsWithId } from '@app/types'
 import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const useHistoryInfiniteQuery = (
-  limit = 20,
-  initialData: Pagination<HistoryTrack>
+  initialData: Pagination<HistoryTrack>,
+  limit = 20
 ) => {
   const { id: userId } = useParams<ParamsWithId>()
 

@@ -3,9 +3,8 @@ import type { HtmlHTMLAttributes } from 'react'
 import { cn } from '@app/utils/cn'
 
 namespace ReportSection {
-  export type Props = Pick<
-    HtmlHTMLAttributes<HTMLDivElement>,
-    'className' | 'children'
+  export type Props = Readonly<
+    Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className' | 'children'>
   >
 }
 
