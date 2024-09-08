@@ -21,7 +21,9 @@ describe('getImage', () => {
   })
 
   test('should return empty string if item is undefined', () => {
-    expect(findImage(undefined)).toEqual('')
+    const noImage = undefined
+
+    expect(findImage(noImage)).toEqual('')
   })
 
   test('should return image with width greater than or equal to minWidth', () => {

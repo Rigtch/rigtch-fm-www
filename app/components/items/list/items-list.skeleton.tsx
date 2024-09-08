@@ -8,11 +8,12 @@ import { Separator } from '@app/components/ui/separator'
 import { View } from '@app/profile/enums'
 
 namespace ItemsListSkeleton {
-  export interface Props
-    extends Omit<ItemTopCardSkeleton.Props, 'position'>,
-      Pick<ItemsListElementSkeleton.Props, 'withPlayedAt'> {
-    view?: View
-  }
+  export type Props = Readonly<
+    Omit<ItemTopCardSkeleton.Props, 'position'> &
+      Pick<ItemsListElementSkeleton.Props, 'withPlayedAt'> & {
+        view?: View
+      }
+  >
 }
 
 function ItemsListSkeleton({

@@ -9,9 +9,11 @@ import type { Session } from 'next-auth'
 import type { LayoutProps } from './types'
 
 namespace RootProviders {
-  export interface Props extends LayoutProps {
-    session: Session
-  }
+  export type Props = Readonly<
+    LayoutProps & {
+      session: Session
+    }
+  >
 }
 
 function RootProviders({ children, session }: RootProviders.Props) {

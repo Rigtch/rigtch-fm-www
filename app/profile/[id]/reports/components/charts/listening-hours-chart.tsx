@@ -15,11 +15,11 @@ import {
 } from '@app/components/ui/chart'
 
 namespace ListeningHoursChart {
-  export interface Props {
+  export type Props = Readonly<{
     thisWeekResponse: Record<number, number>
     lastWeekResponse: Record<number, number>
     measurement: StatsMeasurement
-  }
+  }>
 }
 
 function ListeningHoursChart({

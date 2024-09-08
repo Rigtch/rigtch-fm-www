@@ -7,12 +7,14 @@ import { cn } from '@app/utils/cn'
 type StatCardValueSize = 'md' | 'lg' | 'xl'
 
 namespace StatCard {
-  export interface Props extends ComponentProps<typeof Card> {
-    label: string
-    valueSize?: StatCardValueSize
-    value?: number
-    lastWeekValue?: number
-  }
+  export type Props = Readonly<
+    ComponentProps<typeof Card> & {
+      label: string
+      valueSize?: StatCardValueSize
+      value?: number
+      lastWeekValue?: number
+    }
+  >
 }
 
 function StatCard({

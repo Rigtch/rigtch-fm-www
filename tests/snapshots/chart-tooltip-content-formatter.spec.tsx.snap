@@ -1,129 +1,705 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`chartTooltipContentFormatter > should return formatted tooltip content with color 1`] = `
-<React.Fragment>
-  <div
-    className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
-    style={
-      {
-        "--color-bg": "#000000",
-        "--color-border": "#000000",
-      }
-    }
-  />
-  <div
-    className="flex flex-1 items-end justify-between gap-1 leading-none"
-  >
-    <div
-      className="grid gap-1.5"
-    >
-      <span
-        className="text-muted-foreground"
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+        style="--color-bg: #000000; --color-border: #000000;"
+      />
+      <div
+        class="flex flex-1 items-end justify-between gap-1 leading-none"
       >
-        item-name
+        <div
+          class="grid gap-1.5"
+        >
+          <span
+            class="text-muted-foreground"
+          >
+            item-name
+          </span>
+        </div>
+        <span
+          class="font-mono font-medium tabular-nums text-foreground"
+        >
+          100 plays
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+      style="--color-bg: #000000; --color-border: #000000;"
+    />
+    <div
+      class="flex flex-1 items-end justify-between gap-1 leading-none"
+    >
+      <div
+        class="grid gap-1.5"
+      >
+        <span
+          class="text-muted-foreground"
+        >
+          item-name
+        </span>
+      </div>
+      <span
+        class="font-mono font-medium tabular-nums text-foreground"
+      >
+        100 plays
       </span>
     </div>
-    <span
-      className="font-mono font-medium tabular-nums text-foreground"
-    >
-      100 plays
-    </span>
-  </div>
-</React.Fragment>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`chartTooltipContentFormatter > should return formatted tooltip content with fill 1`] = `
-<React.Fragment>
-  <div
-    className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
-    style={
-      {
-        "--color-bg": [MockFunction spy],
-        "--color-border": [MockFunction spy],
-      }
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+        style="--color-bg: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
     }
-  />
-  <div
-    className="flex flex-1 items-end justify-between gap-1 leading-none"
-  >
-    <div
-      className="grid gap-1.5"
-    >
-      <span
-        className="text-muted-foreground"
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  }; --color-border: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  };"
+      />
+      <div
+        class="flex flex-1 items-end justify-between gap-1 leading-none"
       >
-        item-name
+        <div
+          class="grid gap-1.5"
+        >
+          <span
+            class="text-muted-foreground"
+          >
+            item-name
+          </span>
+        </div>
+        <span
+          class="font-mono font-medium tabular-nums text-foreground"
+        >
+          100 plays
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+      style="--color-bg: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  }; --color-border: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  };"
+    />
+    <div
+      class="flex flex-1 items-end justify-between gap-1 leading-none"
+    >
+      <div
+        class="grid gap-1.5"
+      >
+        <span
+          class="text-muted-foreground"
+        >
+          item-name
+        </span>
+      </div>
+      <span
+        class="font-mono font-medium tabular-nums text-foreground"
+      >
+        100 plays
       </span>
     </div>
-    <span
-      className="font-mono font-medium tabular-nums text-foreground"
-    >
-      100 plays
-    </span>
-  </div>
-</React.Fragment>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`chartTooltipContentFormatter > should return formatted tooltip content with measurement playTime 1`] = `
-<React.Fragment>
-  <div
-    className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
-    style={
-      {
-        "--color-bg": [MockFunction spy],
-        "--color-border": [MockFunction spy],
-      }
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+        style="--color-bg: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
     }
-  />
-  <div
-    className="flex flex-1 items-end justify-between gap-1 leading-none"
-  >
-    <div
-      className="grid gap-1.5"
-    >
-      <span
-        className="text-muted-foreground"
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  }; --color-border: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  };"
+      />
+      <div
+        class="flex flex-1 items-end justify-between gap-1 leading-none"
       >
-        item-name
+        <div
+          class="grid gap-1.5"
+        >
+          <span
+            class="text-muted-foreground"
+          >
+            item-name
+          </span>
+        </div>
+        <span
+          class="font-mono font-medium tabular-nums text-foreground"
+        >
+          4h
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+      style="--color-bg: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  }; --color-border: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  };"
+    />
+    <div
+      class="flex flex-1 items-end justify-between gap-1 leading-none"
+    >
+      <div
+        class="grid gap-1.5"
+      >
+        <span
+          class="text-muted-foreground"
+        >
+          item-name
+        </span>
+      </div>
+      <span
+        class="font-mono font-medium tabular-nums text-foreground"
+      >
+        4h
       </span>
     </div>
-    <span
-      className="font-mono font-medium tabular-nums text-foreground"
-    >
-      4h
-    </span>
-  </div>
-</React.Fragment>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`chartTooltipContentFormatter > should return formatted tooltip content with measurement plays 1`] = `
-<React.Fragment>
-  <div
-    className="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
-    style={
-      {
-        "--color-bg": [MockFunction spy],
-        "--color-border": [MockFunction spy],
-      }
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+        style="--color-bg: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
     }
-  />
-  <div
-    className="flex flex-1 items-end justify-between gap-1 leading-none"
-  >
-    <div
-      className="grid gap-1.5"
-    >
-      <span
-        className="text-muted-foreground"
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  }; --color-border: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  };"
+      />
+      <div
+        class="flex flex-1 items-end justify-between gap-1 leading-none"
       >
-        item-name
+        <div
+          class="grid gap-1.5"
+        >
+          <span
+            class="text-muted-foreground"
+          >
+            item-name
+          </span>
+        </div>
+        <span
+          class="font-mono font-medium tabular-nums text-foreground"
+        >
+          100 plays
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+      style="--color-bg: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  }; --color-border: function(...s) {
+    let r = I(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
+      if (o === "ok")
+        return l;
+      throw l;
+    }
+    let i, c = "ok", a = r.results.length;
+    if (r.impl)
+      try {
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
+      } catch (o) {
+        throw i = o, c = "error", r.results.push([c, o]), o;
+      }
+    let S = [c, i];
+    return w(i) && i.then(
+      (o) => r.resolves[a] = ["ok", o],
+      (o) => r.resolves[a] = ["error", o]
+    ), r.results.push(S), i;
+  };"
+    />
+    <div
+      class="flex flex-1 items-end justify-between gap-1 leading-none"
+    >
+      <div
+        class="grid gap-1.5"
+      >
+        <span
+          class="text-muted-foreground"
+        >
+          item-name
+        </span>
+      </div>
+      <span
+        class="font-mono font-medium tabular-nums text-foreground"
+      >
+        100 plays
       </span>
     </div>
-    <span
-      className="font-mono font-medium tabular-nums text-foreground"
-    >
-      100 plays
-    </span>
-  </div>
-</React.Fragment>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

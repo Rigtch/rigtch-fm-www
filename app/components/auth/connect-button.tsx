@@ -3,10 +3,10 @@ import { Button, type ButtonProps } from '../ui/button'
 import { handleSignIn } from '@app/auth/actions'
 
 namespace ConnectButton {
-  export interface Props {
+  export type Props = Readonly<{
     className?: string
     variant?: ButtonProps['variant']
-  }
+  }>
 }
 
 function ConnectButton({ className, variant }: ConnectButton.Props) {

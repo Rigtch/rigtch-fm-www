@@ -19,7 +19,7 @@ import { cn } from '@app/utils/cn'
 import { formatArtists } from '@app/utils/formatters'
 
 namespace PlaybackCard {
-  export interface Props {
+  export type Props = Readonly<{
     isPlaying?: boolean
     isPlayingOptimistic?: boolean
     track: Track
@@ -27,7 +27,7 @@ namespace PlaybackCard {
     userId?: string
     routeUserId?: string
     handleToggleState: () => Promise<void>
-  }
+  }>
 }
 
 function PlaybackCard({
@@ -67,7 +67,7 @@ function PlaybackCard({
               images={album}
               alt={''}
             />
-            <Skeleton className="h-[128px] w-[128px]" />
+            <Skeleton className="h-[128px] w-[128px] max-w-[128px]" />
           </div>
         )}
 

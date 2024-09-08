@@ -8,12 +8,12 @@ import { Skeleton } from '@app/components/ui/skeleton'
 import { cn } from '@app/utils/cn'
 
 namespace ItemTopCardSkeleton {
-  export interface Props {
+  export type Props = Readonly<{
     position?: number
     withGenres?: boolean
     withArtists?: boolean
     withProgress?: boolean
-  }
+  }>
 }
 
 function ItemTopCardSkeleton({

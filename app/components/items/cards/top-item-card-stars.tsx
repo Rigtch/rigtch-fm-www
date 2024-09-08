@@ -6,7 +6,7 @@ import { cn } from '@app/utils/cn'
 
 export function ItemTopCardStars({
   position,
-}: Required<Pick<ItemTopCard.Props, 'position'>>) {
+}: Readonly<Required<Pick<ItemTopCard.Props, 'position'>>>) {
   const stars = [1, 2, 3, 2, 1]
 
   enum Color {

@@ -7,7 +7,15 @@ import { useSearchParams } from 'next/navigation'
 import { Button } from '@app/components/ui/button'
 import { formatSearchParams } from '@app/utils/formatters'
 
-export function SeeMoreButton({ href, ...props }: ComponentProps<typeof Link>) {
+namespace SeeMoreButton {
+  export type Props = Readonly<
+    {
+      href: string
+    } & Omit<ComponentProps<typeof Link>, 'href'>
+  >
+}
+
+function SeeMoreButton({ href, ...props }: SeeMoreButton.Props) {
   const searchParams = useSearchParams()
 
   const hrefWithSearchParams = `${href.toString()}?${formatSearchParams(
@@ -22,3 +30,5 @@ export function SeeMoreButton({ href, ...props }: ComponentProps<typeof Link>) {
     </Button>
   )
 }
+
+export { SeeMoreButton }

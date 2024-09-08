@@ -18,11 +18,11 @@ export function getRigtchTopTracks(
 ) {
   const params = new URLSearchParams({
     after: after.toISOString(),
+    limit: limit + '',
     measurement,
   })
 
   if (before) params.append('before', before.toISOString())
-  if (limit) params.append('limit', limit + '')
 
   return fetchApi<RigtchStatsResponse<TrackEntity>>(
     `/users/${userId}/stats/rigtch/top-tracks?${params.toString()}`,

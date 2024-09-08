@@ -44,12 +44,18 @@ type PlayedAtOrPosition =
     }
 
 namespace ItemsListElement {
-  export type Props = Simplify<
-    PlayedAtOrPosition &
-      PlayTimeOrPlays &
-      (ItemsListElementAlbum | ItemsListElementTrack | ItemsListElementArtist) &
-      Pick<AlbumEntity, 'name' | 'href' | 'id'> &
-      Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
+  export type Props = Readonly<
+    Simplify<
+      PlayedAtOrPosition &
+        PlayTimeOrPlays &
+        (
+          | ItemsListElementAlbum
+          | ItemsListElementTrack
+          | ItemsListElementArtist
+        ) &
+        Pick<AlbumEntity, 'name' | 'href' | 'id'> &
+        Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
+    >
   >
 }
 

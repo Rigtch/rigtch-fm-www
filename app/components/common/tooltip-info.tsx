@@ -9,10 +9,11 @@ import {
 } from '@app/components/ui/tooltip'
 
 namespace TooltipInfo {
-  export interface Props
-    extends Pick<HTMLAttributes<HTMLDivElement>, 'children'> {
-    title: string
-  }
+  export type Props = Readonly<
+    Pick<HTMLAttributes<HTMLDivElement>, 'children'> & {
+      title: string
+    }
+  >
 }
 
 function TooltipInfo({ title, children }: TooltipInfo.Props) {

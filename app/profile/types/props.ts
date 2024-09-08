@@ -28,8 +28,12 @@ export type ProfilePageSearchParams =
       [STATS_MEASUREMENT]: StatsMeasurement
     }
 
-export interface ProfilePageProps extends PageWithIdParamProps {
-  searchParams: ProfilePageSearchParams
-}
+export type ProfilePageProps = Readonly<
+  PageWithIdParamProps & {
+    searchParams: ProfilePageSearchParams
+  }
+>
 
-export type ProfileLayoutBaseProps = LayoutProps & PageWithIdParamProps
+export type ProfileLayoutBaseProps = Readonly<
+  LayoutProps & PageWithIdParamProps
+>

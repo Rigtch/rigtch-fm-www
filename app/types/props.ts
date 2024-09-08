@@ -2,15 +2,15 @@ import type { ReactNode } from 'react'
 
 import type { IdParam } from './params'
 
-export interface LayoutProps {
+export type LayoutProps = Readonly<{
   children: ReactNode
-}
+}>
 
-export interface ErrorProps {
+export type ErrorProps = Readonly<{
   error: Error & { digest?: string }
   reset: () => void
-}
+}>
 
-export interface PageWithIdParamProps {
+export type PageWithIdParamProps = Readonly<{
   params: IdParam
-}
+}>

@@ -5,8 +5,9 @@ import { cn } from '@app/utils/cn'
 import type { AlbumEntity } from '@app/api/types'
 
 namespace ItemName {
-  export type Props = Pick<AlbumEntity, 'name' | 'href'> &
-    Pick<LinkButton.Props, 'className'>
+  export type Props = Readonly<
+    Pick<AlbumEntity, 'name' | 'href'> & Pick<LinkButton.Props, 'className'>
+  >
 }
 
 function ItemName({ name, href, className }: ItemName.Props) {

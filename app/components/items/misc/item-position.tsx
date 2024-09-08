@@ -5,10 +5,12 @@ import type { HTMLAttributes } from 'react'
 import { cn } from '@app/utils/cn'
 
 namespace ItemPosition {
-  export interface Props extends HTMLAttributes<HTMLSpanElement> {
-    size?: 'sm' | 'md' | 'lg' | 'xl'
-    position: number
-  }
+  export type Props = Readonly<
+    HTMLAttributes<HTMLSpanElement> & {
+      size?: 'sm' | 'md' | 'lg' | 'xl'
+      position: number
+    }
+  >
 }
 
 function ItemPosition({

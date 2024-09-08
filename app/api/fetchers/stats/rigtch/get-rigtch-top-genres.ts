@@ -17,11 +17,11 @@ export function getRigtchTopGenres(
 ) {
   const params = new URLSearchParams({
     after: after.toISOString(),
+    limit: limit + '',
     measurement,
   })
 
   if (before) params.append('before', before.toISOString())
-  if (limit) params.append('limit', limit + '')
 
   return fetchApi<RigtchStatsResponse<string>>(
     `/users/${userId}/stats/rigtch/top-genres?${params.toString()}`,

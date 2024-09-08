@@ -5,12 +5,12 @@ import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar'
 import { cn } from '@app/utils/cn'
 
 namespace ProfileAvatar {
-  export interface Props {
+  export type Props = Readonly<{
     className?: string
     src?: string | null
     displayName?: string
     size?: 'sm' | 'lg'
-  }
+  }>
 }
 
 function ProfileAvatar({

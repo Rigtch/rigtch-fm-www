@@ -18,11 +18,11 @@ export function getRigtchTopArtists(
 ) {
   const params = new URLSearchParams({
     after: after.toISOString(),
+    limit: limit + '',
     measurement,
   })
 
   if (before) params.append('before', before.toISOString())
-  if (limit) params.append('limit', limit + '')
 
   return fetchApi<RigtchStatsResponse<ArtistEntity>>(
     `/users/${userId}/stats/rigtch/top-artists?${params.toString()}`,

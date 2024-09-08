@@ -6,12 +6,12 @@ import { Progress } from '@app/components/ui/progress'
 import { cn } from '@app/utils/cn'
 
 namespace ProgressWithValueLabel {
-  export interface Props {
+  export type Props = Readonly<{
     value: number
     max: number
     label: string
     animate?: boolean
-  }
+  }>
 }
 
 function ProgressWithValueLabel({

@@ -25,7 +25,7 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
               width="0"
             />
             <div
-              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
             />
           </div>
           <div
@@ -142,7 +142,7 @@ exports[`PlaybackCard > should match snapshot as disabled 1`] = `
             width="0"
           />
           <div
-            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
           />
         </div>
         <div
@@ -316,7 +316,7 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
               width="0"
             />
             <div
-              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
             />
           </div>
           <div
@@ -433,7 +433,7 @@ exports[`PlaybackCard > should match snapshot as optimistically paused 1`] = `
             width="0"
           />
           <div
-            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
           />
         </div>
         <div
@@ -607,7 +607,7 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
               width="0"
             />
             <div
-              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
             />
           </div>
           <div
@@ -722,7 +722,7 @@ exports[`PlaybackCard > should match snapshot as optimistically resumed 1`] = `
             width="0"
           />
           <div
-            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
           />
         </div>
         <div
@@ -894,7 +894,7 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
               width="0"
             />
             <div
-              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
             />
           </div>
           <div
@@ -1010,7 +1010,7 @@ exports[`PlaybackCard > should match snapshot as paused 1`] = `
             width="0"
           />
           <div
-            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
           />
         </div>
         <div
@@ -1183,7 +1183,7 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
               width="0"
             />
             <div
-              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+              class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
             />
           </div>
           <div
@@ -1298,7 +1298,7 @@ exports[`PlaybackCard > should match snapshot as resumed 1`] = `
             width="0"
           />
           <div
-            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px]"
+            class="animate-pulse rounded-md bg-muted/50 h-[128px] w-[128px] max-w-[128px]"
           />
         </div>
         <div

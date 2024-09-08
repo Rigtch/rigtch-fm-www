@@ -5,9 +5,11 @@ import { cn } from '@app/utils/cn'
 import type { ArtistEntity } from '@app/api/types'
 
 namespace ItemArtists {
-  export interface Props extends Pick<LinkButton.Props, 'className'> {
-    artists: Pick<ArtistEntity, 'id' | 'name'>[]
-  }
+  export type Props = Readonly<
+    Pick<LinkButton.Props, 'className'> & {
+      artists: Pick<ArtistEntity, 'id' | 'name'>[]
+    }
+  >
 }
 
 function ItemArtists({ artists, className }: ItemArtists.Props) {

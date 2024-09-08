@@ -18,9 +18,9 @@ import {
 } from '@app/actions/user-cookies'
 
 namespace CookiesDialog {
-  export interface Props {
+  export type Props = Readonly<{
     isAccepted: boolean
-  }
+  }>
 }
 
 function CookiesDialog({ isAccepted }: CookiesDialog.Props) {

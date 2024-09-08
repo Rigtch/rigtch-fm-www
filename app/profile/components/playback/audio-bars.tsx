@@ -1,9 +1,9 @@
 import { cn } from '@app/utils/cn'
 
 namespace AudioBars {
-  export interface Props {
+  export type Props = Readonly<{
     isPlaying: boolean
-  }
+  }>
 }
 
 function AudioBars({ isPlaying = false }: AudioBars.Props) {

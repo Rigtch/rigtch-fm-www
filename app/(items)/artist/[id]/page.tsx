@@ -22,7 +22,7 @@ export default async function ArtistPage({ params }: PageWithIdParamProps) {
       getArtistAlbums({ id }),
     ])
 
-  const sortedAlbums = albums.sort(
+  const sortedAlbums = [...albums].sort(
     (firstAlbum, secondAlbum) =>
       new Date(secondAlbum.releaseDate).getFullYear() -
       new Date(firstAlbum.releaseDate).getFullYear()

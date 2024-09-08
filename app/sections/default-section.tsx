@@ -3,10 +3,12 @@ import type { HTMLAttributes, ReactNode } from 'react'
 import { cn } from '@app/utils/cn'
 
 namespace DefaultSection {
-  export interface Props extends HTMLAttributes<HTMLDivElement> {
-    title: string
-    headerAction?: ReactNode
-  }
+  export type Props = Readonly<
+    HTMLAttributes<HTMLDivElement> & {
+      title: string
+      headerAction?: ReactNode
+    }
+  >
 }
 
 function DefaultSection({

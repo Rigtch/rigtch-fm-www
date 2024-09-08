@@ -1,3 +1,3 @@
-export interface ProfileSelectProps<TValue> {
+export type ProfileSelectProps<TValue> = Readonly<{
   initialValue: TValue
-}
+}>

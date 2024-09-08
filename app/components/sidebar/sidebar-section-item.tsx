@@ -4,12 +4,12 @@ import type { IconType } from 'react-icons'
 import { Button } from '../ui/button'
 
 namespace SidebarSectionItem {
-  export interface Props {
+  export type Props = Readonly<{
     label: string
     href: string
     icon?: IconType
     pathname?: string
-  }
+  }>
 }
 
 function SidebarSectionItem({

@@ -10,12 +10,14 @@ import { validateId } from '@app/utils/validators'
 import { Sidebar } from '@app/components/sidebar'
 
 namespace ProfileLayout {
-  export interface Props extends ProfileLayoutBaseProps {
-    profile: ReactNode
-    analysis: ReactNode
-    top: ReactNode
-    history: ReactNode
-  }
+  export type Props = Readonly<
+    ProfileLayoutBaseProps & {
+      profile: ReactNode
+      analysis: ReactNode
+      top: ReactNode
+      history: ReactNode
+    }
+  >
 }
 
 function ProfileLayout({
@@ -49,7 +51,7 @@ function ProfileLayout({
               {history}
             </>
           ) : (
-            <>{children}</>
+            children
           )}
         </ProfileProviders>
       </main>
