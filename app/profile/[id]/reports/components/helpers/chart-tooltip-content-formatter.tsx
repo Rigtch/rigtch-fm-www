@@ -1,4 +1,5 @@
 import type { ComponentProps, CSSProperties } from 'react'
+import { DateTime } from 'luxon'
 
 import { valueMeasurementFormatter } from '@app/profile/[id]/reports/helpers'
 import type { ChartTooltipContent } from '@app/components/ui/chart'
@@ -26,7 +27,15 @@ export const chartTooltipContentFormatter = (
 
       <div className="flex flex-1 items-end justify-between gap-1 leading-none">
         <div className="grid gap-1.5">
-          <span className="text-muted-foreground">{item.name}</span>
+          <span className="text-muted-foreground">
+            {item.name}&nbsp;
+            {item.name === 'thisWeek' &&
+              item.payload?.thisWeekDate &&
+              `(${DateTime.fromJSDate(item.payload.thisWeekDate).toFormat('LLL dd')})`}
+            {item.name === 'lastWeek' &&
+              item.payload?.lastWeekDate &&
+              `(${DateTime.fromJSDate(item.payload.lastWeekDate).toFormat('LLL dd')})`}
+          </span>
         </div>
 
         {item.value && (
