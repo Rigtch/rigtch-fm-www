@@ -19,6 +19,7 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
             class="text-muted-foreground"
           >
             item-name
+             
           </span>
         </div>
         <span
@@ -44,6 +45,7 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
           class="text-muted-foreground"
         >
           item-name
+           
         </span>
       </div>
       <span
@@ -172,6 +174,7 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
             class="text-muted-foreground"
           >
             item-name
+             
           </span>
         </div>
         <span
@@ -243,6 +246,7 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
           class="text-muted-foreground"
         >
           item-name
+           
         </span>
       </div>
       <span
@@ -371,6 +375,7 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
             class="text-muted-foreground"
           >
             item-name
+             
           </span>
         </div>
         <span
@@ -442,6 +447,7 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
           class="text-muted-foreground"
         >
           item-name
+           
         </span>
       </div>
       <span
@@ -570,6 +576,7 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
             class="text-muted-foreground"
           >
             item-name
+             
           </span>
         </div>
         <span
@@ -641,6 +648,7 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
           class="text-muted-foreground"
         >
           item-name
+           
         </span>
       </div>
       <span
