@@ -40,7 +40,7 @@ export const chartTooltipContentFormatter = (
 
         {item.value && (
           <span className="font-mono font-medium tabular-nums text-foreground">
-            {valueMeasurementFormatter(+value, measurement, false)}
+            {valueMeasurementFormatter(+value, measurement)}
           </span>
         )}
       </div>
