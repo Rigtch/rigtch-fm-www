@@ -12,35 +12,34 @@ export default {
   component: ListeningDaysChart,
 } satisfies Meta<ListeningDaysChartType>
 
-const thisWeekResponseExample = {
-  '1': 2,
-  '2': 94,
-  '3': 27,
-  '4': 54,
-  '5': 23,
-  '6': 34,
-  '7': 85,
-}
-const lastWeekResponseExample = {
-  '1': 68,
-  '2': 25,
-  '3': 12,
-  '4': 87,
-  '5': 26,
-  '6': 39,
-  '7': 52,
-}
-const thisWeekResponseExamplePlaytime: Record<string, number> = {}
-const lastWeekResponseExamplePlaytime: Record<string, number> = {}
+const thisWeekResponseExample = [
+  { dayIndex: 1, value: 2, date: new Date('2022-01-01') },
+  { dayIndex: 2, value: 94, date: new Date('2022-01-02') },
+  { dayIndex: 3, value: 27, date: new Date('2022-01-03') },
+  { dayIndex: 4, value: 54, date: new Date('2022-01-04') },
+  { dayIndex: 5, value: 23, date: new Date('2022-01-05') },
+  { dayIndex: 6, value: 34, date: new Date('2022-01-06') },
+  { dayIndex: 7, value: 85, date: new Date('2022-01-07') },
+]
 
-for (const day in thisWeekResponseExample) {
-  const key = day as keyof typeof thisWeekResponseExample
+const lastWeekResponseExample = [
+  { dayIndex: 1, value: 68, date: new Date('2022-01-01') },
+  { dayIndex: 2, value: 25, date: new Date('2022-01-02') },
+  { dayIndex: 3, value: 12, date: new Date('2022-01-03') },
+  { dayIndex: 4, value: 87, date: new Date('2022-01-04') },
+  { dayIndex: 5, value: 26, date: new Date('2022-01-05') },
+  { dayIndex: 6, value: 39, date: new Date('2022-01-06') },
+  { dayIndex: 7, value: 52, date: new Date('2022-01-07') },
+]
+const thisWeekResponseExamplePlaytime = thisWeekResponseExample.map(day => ({
+  ...day,
+  value: day.value * 1000 * 60,
+}))
 
-  thisWeekResponseExamplePlaytime[key] =
-    thisWeekResponseExample[key] * 1000 * 60
-  lastWeekResponseExamplePlaytime[key] =
-    lastWeekResponseExample[key] * 1000 * 60
-}
+const lastWeekResponseExamplePlaytime = lastWeekResponseExample.map(day => ({
+  ...day,
+  value: day.value * 1000 * 60,
+}))
 
 export const PlaysMeasurement: ListeningDaysChartStory = {
   args: {
