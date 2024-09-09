@@ -66,11 +66,12 @@ export default async function ProfileReportsListeningHoursPage({
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 xl:w-1/2">
+      <div className="flex flex-col items-center justify-center gap-2 xl:w-1/2">
         <StatCard
           label="Most listened hour"
           value={thisWeekMostListenedHour}
           size="xl"
+          className="!w-full"
         >
           {thisWeekMostListenedHour}:00
         </StatCard>
@@ -80,6 +81,7 @@ export default async function ProfileReportsListeningHoursPage({
           value={thisWeekMostListenedHourValue}
           lastWeekValue={lastWeekMostListenedHourValue}
           size="xl"
+          className="!w-full"
         >
           {valueMeasurementFormatter(
             thisWeekMostListenedHourValue,
