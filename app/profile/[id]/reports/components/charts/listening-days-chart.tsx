@@ -15,11 +15,12 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from '@app/components/ui/chart'
+import type { ListeningDays } from '@app/api/types'
 
 namespace ListeningDaysChart {
   export type Props = Readonly<{
-    thisWeekResponse: Record<number, number>
-    lastWeekResponse: Record<number, number>
+    thisWeekResponse: ListeningDays
+    lastWeekResponse: ListeningDays
     measurement: StatsMeasurement
   }>
 }
@@ -31,8 +32,10 @@ function ListeningDaysChart({
 }: ListeningDaysChart.Props) {
   const listeningDays = weekDays.map((day, index) => ({
     day,
-    thisWeek: thisWeekResponse[index + 1],
-    lastWeek: lastWeekResponse[index + 1],
+    thisWeekDate: thisWeekResponse[index].date,
+    lastWeekDate: lastWeekResponse[index].date,
+    thisWeek: thisWeekResponse[index].value,
+    lastWeek: lastWeekResponse[index].value,
   }))
 
   const chartConfig = {
