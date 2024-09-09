@@ -51,8 +51,12 @@ export default async function ProfileReportsListeningDaysPage({
     }),
   ])
 
-  const thisWeekValues = Object.values(thisWeekResponse)
-  const lastWeekValues = Object.values(lastWeekResponse)
+  const thisWeekValues = Object.values(thisWeekResponse).map(
+    ({ value }) => value
+  )
+  const lastWeekValues = Object.values(lastWeekResponse).map(
+    ({ value }) => value
+  )
 
   const thisWeekTotal = thisWeekValues.reduce(
     (accumulator, value) => accumulator + value,
