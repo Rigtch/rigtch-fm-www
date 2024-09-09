@@ -15,6 +15,7 @@ import {
 } from '@app/components/ui/pagination'
 import { cn } from '@app/utils/cn'
 import { BETA_USER_CREATED_AT, STATS_MEASUREMENT } from '@app/profile/constants'
+import { useUserQuery } from '@app/api/hooks'
 
 namespace ReportsPagination {
   export type Props = ReturnType<typeof validateCursors> &
@@ -26,8 +27,11 @@ function ReportsPagination({
   before,
   className,
 }: ReportsPagination.Props) {
+  const { data: user } = useUserQuery()
   const searchParams = useSearchParams()
   const measurement = searchParams.get(STATS_MEASUREMENT)
+
+  const userCreatedAt = user?.createdAt ?? BETA_USER_CREATED_AT
 
   const previousWeekBeforeParam = `${after.getFullYear()}-${after.getMonth() + 1}-${after.getDate()}`
   const previousWeekAfterDate = new Date(
@@ -36,7 +40,7 @@ function ReportsPagination({
   const previousWeekAfterParam = `${previousWeekAfterDate.getFullYear()}-${previousWeekAfterDate.getMonth() + 1}-${previousWeekAfterDate.getDate()}`
 
   const isPreviousWeekDisabled =
-    previousWeekAfterDate.getTime() <= BETA_USER_CREATED_AT.getTime()
+    previousWeekAfterDate.getTime() <= userCreatedAt.getTime()
 
   const nextWeekAfterParam = `${before.getFullYear()}-${before.getMonth() + 1}-${before.getDate()}`
   const nextWeekBeforeDate = new Date(
