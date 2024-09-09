@@ -73,7 +73,7 @@ export default async function ProfileReportsMostListenedGenresPage({
         <StatCard
           label="Most listened genre"
           value={0}
-          valueSize="xl"
+          size="xl"
           contentClassName="text-5xl"
           className="!w-full"
         >
@@ -84,7 +84,7 @@ export default async function ProfileReportsMostListenedGenresPage({
           <StatCard
             label="Last week's Most listened genre"
             value={0}
-            valueSize="xl"
+            size="xl"
             contentClassName="text-5xl"
             className="!w-full"
           >
@@ -93,7 +93,7 @@ export default async function ProfileReportsMostListenedGenresPage({
         )}
 
         <StatCard
-          valueSize="xl"
+          size="xl"
           label={`Most listened genre's ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}`}
           value={thisWeekMostListenedGenreValue}
           lastWeekValue={lastWeekMostListenedGenreValue}

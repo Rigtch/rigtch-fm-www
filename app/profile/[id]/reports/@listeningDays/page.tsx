@@ -101,7 +101,7 @@ export default async function ProfileReportsListeningDaysPage({
           label="Total"
           value={thisWeekTotal}
           lastWeekValue={lastWeekTotal}
-          valueSize="lg"
+          size="lg"
         >
           {valueMeasurementFormatter(thisWeekTotal, measurement)}
         </StatCard>
@@ -126,7 +126,7 @@ export default async function ProfileReportsListeningDaysPage({
           label={`Average ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'} per day`}
           value={thisWeekAverageDayValue}
           lastWeekValue={lastWeekAverageDayValue}
-          valueSize="lg"
+          size="lg"
         >
           {valueMeasurementFormatter(thisWeekAverageDayValue, measurement)}
         </StatCard>
