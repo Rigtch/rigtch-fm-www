@@ -51,16 +51,21 @@ export default async function ProfileReportsMostListenedGenresPage({
 
   if (thisWeekMostListenedGenresResponse.length === 0) return null
 
+  const isLastWeekAvailable = lastWeekMostListenedGenresResponse.length > 0
+
   const thisWeekMostListenedGenre = thisWeekMostListenedGenresResponse[0].item
   const thisWeekMostListenedGenreValue =
     measurement === StatsMeasurement.PLAYS
       ? thisWeekMostListenedGenresResponse[0].plays!
       : thisWeekMostListenedGenresResponse[0].playTime!
-  const lastWeekMostListenedGenre = lastWeekMostListenedGenresResponse[0].item
-  const lastWeekMostListenedGenreValue =
-    measurement === StatsMeasurement.PLAYS
+  const lastWeekMostListenedGenre = isLastWeekAvailable
+    ? lastWeekMostListenedGenresResponse[0].item
+    : undefined
+  const lastWeekMostListenedGenreValue = isLastWeekAvailable
+    ? measurement === StatsMeasurement.PLAYS
       ? lastWeekMostListenedGenresResponse[0].plays!
       : lastWeekMostListenedGenresResponse[0].playTime!
+    : undefined
 
   return (
     <ReportSection>
@@ -69,9 +74,11 @@ export default async function ProfileReportsMostListenedGenresPage({
           <span className="font-semibold">{thisWeekMostListenedGenre}</span>
         </StatCard>
 
-        <StatCard label="Last week's Most listened genre" value={0}>
-          <span className="font-semibold">{lastWeekMostListenedGenre}</span>
-        </StatCard>
+        {isLastWeekAvailable && (
+          <StatCard label="Last week's Most listened genre" value={0}>
+            <span className="font-semibold">{lastWeekMostListenedGenre}</span>
+          </StatCard>
+        )}
 
         <StatCard
           valueSize="xl"
