@@ -13,6 +13,7 @@ namespace StatCard {
       valueSize?: StatCardValueSize
       value?: number
       lastWeekValue?: number
+      contentClassName?: string
     }
   >
 }
@@ -24,6 +25,7 @@ function StatCard({
   lastWeekValue,
   valueSize = 'md',
   className,
+  contentClassName,
   ...props
 }: StatCard.Props) {
   const vsLastWeekPercent =
@@ -54,7 +56,8 @@ function StatCard({
           className={cn(
             valueSize === 'md' && 'text-2xl',
             valueSize === 'lg' && 'text-3xl',
-            valueSize === 'xl' && 'text-6xl'
+            valueSize === 'xl' && 'text-6xl',
+            contentClassName
           )}
         >
           {children}
