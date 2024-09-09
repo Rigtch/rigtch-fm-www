@@ -15,18 +15,7 @@ describe('valueMeasurementFormatter', () => {
   })
 
   test('should return `nothing` when value is 0', () => {
-    expect(valueMeasurementFormatter(0, StatsMeasurement.PLAYS)).toBe('nothing')
-    expect(valueMeasurementFormatter(0, StatsMeasurement.PLAY_TIME)).toBe(
-      'nothing'
-    )
-  })
-
-  test('should not return `nothing` with `showZero` set to true', () => {
-    expect(valueMeasurementFormatter(0, StatsMeasurement.PLAYS, true)).toBe(
-      '0 plays'
-    )
-    expect(valueMeasurementFormatter(0, StatsMeasurement.PLAY_TIME, true)).toBe(
-      '0ms'
-    )
+    expect(valueMeasurementFormatter(0, StatsMeasurement.PLAYS)).toBe('0 plays')
+    expect(valueMeasurementFormatter(0, StatsMeasurement.PLAY_TIME)).toBe('0ms')
   })
 })
