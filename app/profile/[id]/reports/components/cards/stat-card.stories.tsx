@@ -22,6 +22,12 @@ export default {
       control: 'select',
       options: ['md', 'lg', 'xl'],
     },
+    className: {
+      control: 'text',
+    },
+    contentClassName: {
+      control: 'text',
+    },
   },
 } satisfies Meta<StatCardType>
 

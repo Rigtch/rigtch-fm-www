@@ -70,13 +70,25 @@ export default async function ProfileReportsMostListenedGenresPage({
   return (
     <ReportSection>
       <section className="flex flex-col items-stretch justify-center gap-2 2xl:w-1/2">
-        <StatCard label="Most listened genre" value={0}>
-          <span className="font-semibold">{thisWeekMostListenedGenre}</span>
+        <StatCard
+          label="Most listened genre"
+          value={0}
+          valueSize="xl"
+          contentClassName="text-5xl"
+          className="!w-full"
+        >
+          {thisWeekMostListenedGenre}
         </StatCard>
 
         {isLastWeekAvailable && (
-          <StatCard label="Last week's Most listened genre" value={0}>
-            <span className="font-semibold">{lastWeekMostListenedGenre}</span>
+          <StatCard
+            label="Last week's Most listened genre"
+            value={0}
+            valueSize="xl"
+            contentClassName="text-5xl"
+            className="!w-full"
+          >
+            {lastWeekMostListenedGenre}
           </StatCard>
         )}
 
