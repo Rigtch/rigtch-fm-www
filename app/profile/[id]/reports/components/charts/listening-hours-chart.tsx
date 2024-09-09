@@ -1,6 +1,7 @@
 'use client'
 
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts'
+import type { ComponentProps } from 'react'
 
 import { chartTooltipContentFormatter } from '../helpers'
 
@@ -13,6 +14,19 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from '@app/components/ui/chart'
+
+type LabelFormatter = NonNullable<
+  ComponentProps<typeof ChartTooltipContent>['labelFormatter']
+>
+
+const labelFormatter: LabelFormatter = (
+  label,
+  [
+    {
+      payload: { hour },
+    },
+  ]
+) => `${hour}:00 - ${hour + 1}:00`
 
 namespace ListeningHoursChart {
   export type Props = Readonly<{
@@ -67,6 +81,7 @@ function ListeningHoursChart({
             <ChartTooltipContent
               indicator="line"
               formatter={chartTooltipContentFormatter(measurement)}
+              labelFormatter={labelFormatter}
             />
           }
         />
