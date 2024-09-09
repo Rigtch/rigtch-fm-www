@@ -11,7 +11,7 @@ describe('StatCard', () => {
 
   test('should match snapshot with valueSize lg', () => {
     const view = render(
-      <StatCard label="label" valueSize="lg">
+      <StatCard label="label" size="lg">
         100
       </StatCard>
     )
@@ -21,7 +21,7 @@ describe('StatCard', () => {
 
   test('should match snapshot with valueSize xl', () => {
     const view = render(
-      <StatCard label="label" valueSize="xl">
+      <StatCard label="label" size="xl">
         100
       </StatCard>
     )
@@ -31,7 +31,7 @@ describe('StatCard', () => {
 
   test('should match snapshot with vs last week percent', () => {
     const view = render(
-      <StatCard label="label" valueSize="xl" value={100} lastWeekValue={50}>
+      <StatCard label="label" size="xl" value={100} lastWeekValue={50}>
         100
       </StatCard>
     )

@@ -18,7 +18,7 @@ export default {
     lastWeekValue: {
       control: 'number',
     },
-    valueSize: {
+    size: {
       control: 'select',
       options: ['md', 'lg', 'xl'],
     },
@@ -42,7 +42,7 @@ export const WithValueSizeLg: StatCardStory = {
   args: {
     label: 'Label',
     children: 100,
-    valueSize: 'lg',
+    size: 'lg',
   },
 }
 
@@ -50,7 +50,7 @@ export const WithValueSizeXl: StatCardStory = {
   args: {
     label: 'Label',
     children: 100,
-    valueSize: 'xl',
+    size: 'xl',
   },
 }
 
@@ -59,7 +59,7 @@ export const WithVsLastWeekPercent: StatCardStory = {
     label: 'Label',
     value: 100,
     children: 100,
-    valueSize: 'xl',
+    size: 'xl',
     lastWeekValue: 50,
   },
 }
@@ -69,7 +69,7 @@ export const WithValueSizeXlAndVsLastWeekPercent: StatCardStory = {
     label: 'Label',
     value: 100,
     children: 100,
-    valueSize: 'xl',
+    size: 'xl',
     lastWeekValue: 200,
   },
 }

@@ -70,7 +70,7 @@ export default async function ProfileReportsListeningHoursPage({
         <StatCard
           label="Most listened hour"
           value={thisWeekMostListenedHour}
-          valueSize="xl"
+          size="xl"
         >
           {thisWeekMostListenedHour}:00
         </StatCard>
@@ -79,7 +79,7 @@ export default async function ProfileReportsListeningHoursPage({
           label={`${measurement === StatsMeasurement.PLAYS ? 'Plays' : 'Playtime'} in most listened hour`}
           value={thisWeekMostListenedHourValue}
           lastWeekValue={lastWeekMostListenedHourValue}
-          valueSize="xl"
+          size="xl"
         >
           {valueMeasurementFormatter(
             thisWeekMostListenedHourValue,

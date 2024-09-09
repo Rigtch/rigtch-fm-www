@@ -103,7 +103,7 @@ export default async function ProfileReportsMostListenedItemsPage({
           label="Total artists"
           value={thisWeekTotalArtists}
           lastWeekValue={lastWeekTotalArtists}
-          valueSize="xl"
+          size="xl"
           className="!w-full"
         >
           {thisWeekTotalArtists}
@@ -117,7 +117,7 @@ export default async function ProfileReportsMostListenedItemsPage({
           label="Total albums"
           value={thisWeekTotalAlbums}
           lastWeekValue={lastWeekTotalAlbums}
-          valueSize="xl"
+          size="xl"
           className="!w-full"
         >
           {thisWeekTotalAlbums}
@@ -131,7 +131,7 @@ export default async function ProfileReportsMostListenedItemsPage({
           label="Total tracks"
           value={thisWeekTotalTracks}
           lastWeekValue={lastWeekTotalTracks}
-          valueSize="xl"
+          size="xl"
           className="!w-full"
         >
           {thisWeekTotalTracks}

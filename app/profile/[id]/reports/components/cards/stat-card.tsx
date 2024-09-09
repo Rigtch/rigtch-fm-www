@@ -4,13 +4,13 @@ import { LuMoveUp, LuMoveDown, LuEqual } from 'react-icons/lu'
 import { Card, CardContent, CardDescription } from '@app/components/ui/card'
 import { cn } from '@app/utils/cn'
 
-type StatCardValueSize = 'md' | 'lg' | 'xl'
+export type StatCardSize = 'md' | 'lg' | 'xl'
 
 namespace StatCard {
   export type Props = Readonly<
     ComponentProps<typeof Card> & {
       label: string
-      valueSize?: StatCardValueSize
+      size?: StatCardSize
       value?: number
       lastWeekValue?: number
       contentClassName?: string
@@ -23,7 +23,7 @@ function StatCard({
   children,
   value,
   lastWeekValue,
-  valueSize = 'md',
+  size = 'md',
   className,
   contentClassName,
   ...props
@@ -36,7 +36,7 @@ function StatCard({
   return (
     <Card
       className={cn(
-        valueSize === 'xl' &&
+        size === 'xl' &&
           'flex w-full flex-col items-center justify-center text-center sm:w-[400px] 2xl:w-full',
         'p-4',
         className
@@ -46,7 +46,7 @@ function StatCard({
       <CardDescription
         className={cn(
           'text-nowrap p-0',
-          valueSize === 'xl' && 'text-lg font-semibold'
+          size === 'xl' && 'text-lg font-semibold'
         )}
       >
         {label}
@@ -54,9 +54,9 @@ function StatCard({
       <CardContent>
         <p
           className={cn(
-            valueSize === 'md' && 'text-2xl',
-            valueSize === 'lg' && 'text-3xl',
-            valueSize === 'xl' && 'text-6xl',
+            size === 'md' && 'text-2xl',
+            size === 'lg' && 'text-3xl',
+            size === 'xl' && 'text-6xl',
             contentClassName
           )}
         >
