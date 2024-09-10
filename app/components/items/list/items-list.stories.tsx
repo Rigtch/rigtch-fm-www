@@ -125,6 +125,17 @@ export const WithGenres: ItemsListStory = {
   },
 }
 
+export const WithGenresAndTop: ItemsListStory = {
+  args: {
+    isTop: true,
+    items: artistExamples.map(item => ({
+      ...item,
+      genres: ['Black Metal', 'Death Metal', 'Thrash Metal'],
+      genresDisplayLength: 2,
+    })),
+  },
+}
+
 export const Skeleton: ItemsListStory = {
   render: () => <ItemsListSkeleton />,
 }

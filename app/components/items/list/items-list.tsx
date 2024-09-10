@@ -47,9 +47,9 @@ function ItemsList({
   positionSize,
   className,
   positionClassName,
-  genresDisplayLength,
   lastItemSeparator = false,
   isRounded = false,
+  genresDisplayLength = 3,
 }: ItemsList.Props) {
   const sortedItems: (ArtistEntity | TrackEntity | AlbumEntity)[] =
     formatItems(items)
