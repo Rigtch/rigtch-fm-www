@@ -127,7 +127,7 @@ function ItemsListElement({
 
           <div className="flex w-full flex-col items-start overflow-hidden">
             <LinkButton
-              href={`/${artists ? 'track' : 'artist'}/${id}`}
+              href={`/${artists ? (album ? 'track' : 'album') : 'artist'}/${id}`}
               className="inline-grid p-0 leading-5"
             >
               <h3 className="truncate text-xl md:text-2xl">{name}</h3>
