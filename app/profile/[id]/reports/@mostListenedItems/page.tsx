@@ -100,7 +100,7 @@ export default async function ProfileReportsMostListenedItemsPage({
     <ReportSection className="grid grid-cols-1 gap-8 2xl:grid-cols-3 2xl:gap-4">
       <section className="flex flex-col gap-4">
         <StatCard
-          label="Total artists"
+          label="Total listened artists"
           value={thisWeekTotalArtists}
           lastWeekValue={lastWeekTotalArtists}
           size="xl"
@@ -118,7 +118,7 @@ export default async function ProfileReportsMostListenedItemsPage({
 
       <section className="flex flex-col gap-4">
         <StatCard
-          label="Total albums"
+          label="Total listened albums"
           value={thisWeekTotalAlbums}
           lastWeekValue={lastWeekTotalAlbums}
           size="xl"
@@ -132,7 +132,7 @@ export default async function ProfileReportsMostListenedItemsPage({
 
       <section className="flex flex-col gap-4">
         <StatCard
-          label="Total tracks"
+          label="Total listened tracks"
           value={thisWeekTotalTracks}
           lastWeekValue={lastWeekTotalTracks}
           size="xl"
