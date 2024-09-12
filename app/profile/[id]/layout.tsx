@@ -35,7 +35,7 @@ function ProfileLayout({
 
   return (
     <div className="flex">
-      <aside className="sticky top-[65px] hidden h-[calc(100vh-60px)] max-w-[300px] border-r border-primary-lighter bg-primary p-4 lg:block">
+      <aside className="sticky top-[65px] hidden h-[calc(100vh-60px)] max-w-[300px] border-r border-primary-lighter bg-primary p-4 lg:block lg:max-w-[250px]">
         <div className="sticky top-[calc(65px+16px)]">
           <Sidebar />
         </div>
