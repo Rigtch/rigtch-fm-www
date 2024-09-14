@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation'
 import { HiOutlineEmojiSad } from 'react-icons/hi'
+import { lazy, Suspense } from 'react'
 
 import { StatCard } from '../components/cards'
-import { ListeningDaysChart } from '../components/charts'
 import {
   validateCursors,
   valueMeasurementFormatter,
@@ -14,11 +14,19 @@ import type { ProfileReportsPageProps } from '../types/props'
 import { StatsMeasurement } from '@app/api/enums'
 import { getReportsListeningDays } from '@app/api/fetchers/reports'
 import { getServerToken } from '@app/auth'
+import { Alert, AlertDescription, AlertTitle } from '@app/components/ui/alert'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
+import { isPublicUser } from '@app/profile/utils/helpers'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
-import { Alert, AlertDescription, AlertTitle } from '@app/components/ui/alert'
-import { isPublicUser } from '@app/profile/utils/helpers'
+
+const ListeningDaysChart = lazy(() =>
+  import('../components/charts/listening-days-chart').then(
+    ({ ListeningDaysChart }) => ({
+      default: ListeningDaysChart,
+    })
+  )
+)
 
 export const runtime = 'edge'
 
@@ -132,11 +140,13 @@ export default async function ProfileReportsListeningDaysPage({
         </StatCard>
       </div>
 
-      <ListeningDaysChart
-        thisWeekResponse={thisWeekResponse}
-        lastWeekResponse={lastWeekResponse}
-        measurement={measurement}
-      />
+      <Suspense>
+        <ListeningDaysChart
+          thisWeekResponse={thisWeekResponse}
+          lastWeekResponse={lastWeekResponse}
+          measurement={measurement}
+        />
+      </Suspense>
     </ReportSection>
   )
 }

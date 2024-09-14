@@ -1,9 +1,9 @@
 import { redirect } from 'next/navigation'
+import { lazy, Suspense } from 'react'
 
 import { validateCursors, valueMeasurementFormatter } from '../helpers'
 import type { ProfileReportsPageProps } from '../types/props'
 import { ReportSection } from '../sections'
-import { MostListenedGenresChart } from '../components/charts'
 import { StatCard } from '../components/cards'
 
 import { getServerToken } from '@app/auth'
@@ -12,6 +12,15 @@ import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { StatsMeasurement } from '@app/api/enums'
+import { isPublicUser } from '@app/profile/utils/helpers'
+
+const MostListenedGenresChart = lazy(() =>
+  import('../components/charts/most-listened-genres-chart').then(
+    ({ MostListenedGenresChart }) => ({
+      default: MostListenedGenresChart,
+    })
+  )
+)
 
 export const runtime = 'edge'
 
@@ -22,7 +31,7 @@ export default async function ProfileReportsMostListenedGenresPage({
   const token = await getServerToken()
   const userId = validateId(params.id)
 
-  if (!token) redirect('/')
+  if (!token && !isPublicUser(userId)) redirect('/')
 
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
 
@@ -33,14 +42,14 @@ export default async function ProfileReportsMostListenedGenresPage({
     thisWeekMostListenedGenresResponse,
     lastWeekMostListenedGenresResponse,
   ] = await Promise.all([
-    getRigtchTopGenres(token, {
+    getRigtchTopGenres(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
       measurement,
       limit: 100,
     }),
-    getRigtchTopGenres(token, {
+    getRigtchTopGenres(token ?? '', {
       userId,
       before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
       after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
@@ -106,10 +115,12 @@ export default async function ProfileReportsMostListenedGenresPage({
         </StatCard>
       </section>
 
-      <MostListenedGenresChart
-        topGenresResponse={thisWeekMostListenedGenresResponse}
-        measurement={measurement}
-      />
+      <Suspense>
+        <MostListenedGenresChart
+          topGenresResponse={thisWeekMostListenedGenresResponse}
+          measurement={measurement}
+        />
+      </Suspense>
     </ReportSection>
   )
 }
