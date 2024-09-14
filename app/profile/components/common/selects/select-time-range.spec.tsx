@@ -58,12 +58,14 @@ describe('SelectTimeRange', () => {
 
   describe('actions', () => {
     const pushSpy = vi.fn()
+    const prefetchSpy = vi.fn()
     const searchParams = new URLSearchParams()
 
     beforeEach(() => {
       useSearchParamsSpy.mockReturnValue(searchParams)
       useRouterSpy.mockReturnValue({
         push: pushSpy,
+        prefetch: prefetchSpy,
       })
       usePathnameSpy.mockReturnValue('/profile/id')
     })
@@ -95,11 +97,17 @@ describe('SelectTimeRange', () => {
       expect(selectButton).toHaveTextContent('4 weeks')
 
       await user.click(selectButton)
+
+      expect(prefetchSpy).toHaveBeenCalled()
+
       await user.click(screen.getByRole('option', { name: '6 months' }))
 
       expect(pushSpy).toHaveBeenCalled()
 
       await user.click(selectButton)
+
+      expect(prefetchSpy).toHaveBeenCalled()
+
       await user.click(screen.getByRole('option', { name: 'lifetime' }))
 
       expect(pushSpy).toHaveBeenCalled()
@@ -115,16 +123,25 @@ describe('SelectTimeRange', () => {
       expect(selectButton).toHaveTextContent('7 days')
 
       await user.click(selectButton)
+
+      expect(prefetchSpy).toHaveBeenCalled()
+
       await user.click(screen.getByRole('option', { name: '14 days' }))
 
       expect(pushSpy).toHaveBeenCalled()
 
       await user.click(selectButton)
+
+      expect(prefetchSpy).toHaveBeenCalled()
+
       await user.click(screen.getByRole('option', { name: '30 days' }))
 
       expect(pushSpy).toHaveBeenCalled()
 
       await user.click(selectButton)
+
+      expect(prefetchSpy).toHaveBeenCalled()
+
       await user.click(screen.getByRole('option', { name: '90 days' }))
 
       expect(pushSpy).toHaveBeenCalled()

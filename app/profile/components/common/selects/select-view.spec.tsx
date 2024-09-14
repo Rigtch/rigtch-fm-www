@@ -28,9 +28,10 @@ describe('SelectView', () => {
 
   test('should change view', async () => {
     const pushSpy = vi.fn()
+    const prefetchSpy = vi.fn()
     const searchParams = new URLSearchParams()
 
-    useRouterSpy.mockReturnValue({ push: pushSpy })
+    useRouterSpy.mockReturnValue({ push: pushSpy, prefetch: prefetchSpy })
     useSearchParamsSpy.mockReturnValue(searchParams)
 
     render(<SelectView initialValue={View.CARD} />)
@@ -40,6 +41,9 @@ describe('SelectView', () => {
     expect(selectButton).toHaveTextContent('Card')
 
     await user.click(selectButton)
+
+    expect(prefetchSpy).toHaveBeenCalled()
+
     await user.click(screen.getByRole('option', { name: 'List' }))
 
     expect(pushSpy).toHaveBeenCalled()

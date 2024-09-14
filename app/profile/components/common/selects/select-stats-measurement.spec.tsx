@@ -36,11 +36,13 @@ describe('SelectStatsMeasurement', () => {
 
   test('should change stats measurement', async () => {
     const pushSpy = vi.fn()
+    const prefetchSpy = vi.fn()
     const searchParams = new URLSearchParams()
 
     useSearchParamsSpy.mockReturnValue(searchParams)
     useRouterSpy.mockReturnValue({
       push: pushSpy,
+      prefetch: prefetchSpy,
     })
     usePathnameSpy.mockReturnValue('/profile/id')
 
@@ -53,6 +55,9 @@ describe('SelectStatsMeasurement', () => {
     expect(selectButton).toHaveTextContent('Plays')
 
     await user.click(selectButton)
+
+    expect(prefetchSpy).toHaveBeenCalled()
+
     await user.click(screen.getByRole('option', { name: 'PlayTime' }))
 
     expect(pushSpy).toHaveBeenCalled()
