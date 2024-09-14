@@ -26,7 +26,7 @@ function SidebarSectionItem({
       asChild
       className="text-md w-full justify-start"
     >
-      <Link href={href} className="flex gap-2">
+      <Link href={href} className="flex gap-2" prefetch>
         {Icon && <Icon />}
         {label}
       </Link>

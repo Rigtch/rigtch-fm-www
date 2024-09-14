@@ -24,7 +24,7 @@ function SeeMoreButton({ href, ...props }: SeeMoreButton.Props) {
 
   return (
     <Button asChild variant="link">
-      <Link href={hrefWithSearchParams} {...props}>
+      <Link href={hrefWithSearchParams} prefetch {...props}>
         See more
       </Link>
     </Button>

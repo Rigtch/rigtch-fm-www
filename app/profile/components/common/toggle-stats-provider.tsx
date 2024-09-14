@@ -94,6 +94,7 @@ function ToggleStatsProvider({
                       STATS_PROVIDER,
                       value
                     )}`}
+                    prefetch
                   >
                     {label}
                   </Link>
