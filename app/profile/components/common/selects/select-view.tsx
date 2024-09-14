@@ -1,20 +1,20 @@
 'use client'
 
-import { LuLayers, LuList } from 'react-icons/lu'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { LuLayers, LuList } from 'react-icons/lu'
 
 import type { ProfileSelectProps } from './props'
 
+import { TooltipInfo } from '@app/components/common'
 import {
   Select,
+  SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectContent,
   SelectValue,
 } from '@app/components/ui/select'
 import { View } from '@app/profile/enums'
 import { formatSearchParams } from '@app/utils/formatters'
-import { TooltipInfo } from '@app/components/common'
 
 export function SelectView({ initialValue }: ProfileSelectProps<View>) {
   const viewOptions = [
@@ -38,7 +38,7 @@ export function SelectView({ initialValue }: ProfileSelectProps<View>) {
     router.push(
       `${pathname}?${formatSearchParams(searchParams, 'view', value)}`,
       {
-        scroll: true,
+        scroll: false,
       }
     )
   }
@@ -49,7 +49,17 @@ export function SelectView({ initialValue }: ProfileSelectProps<View>) {
         View indicates how the statistics will be displayed.
       </TooltipInfo>
 
-      <Select value={initialValue} onValueChange={handleOnValueChange}>
+      <Select
+        value={initialValue}
+        onValueChange={handleOnValueChange}
+        onOpenChange={() => {
+          for (const { value } of viewOptions) {
+            router.prefetch(
+              `${pathname}?${formatSearchParams(searchParams, 'view', value)}`
+            )
+          }
+        }}
+      >
         <SelectTrigger className="min-w-[120px] text-white">
           <SelectValue placeholder="Select view" />
         </SelectTrigger>

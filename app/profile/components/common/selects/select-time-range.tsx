@@ -5,7 +5,7 @@ import { LuClock } from 'react-icons/lu'
 
 import type { ProfileSelectProps } from './props'
 
-import { isTimeRangeDisabled } from '@app/profile/utils/helpers'
+import { TooltipInfo } from '@app/components/common'
 import {
   Select,
   SelectContent,
@@ -13,14 +13,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@app/components/ui/select'
+import { TIME_RANGE } from '@app/profile/constants'
 import {
-  SpotifyTimeRange,
   RigtchTimeRange,
+  SpotifyTimeRange,
   type StatsProvider,
 } from '@app/profile/enums'
+import { isTimeRangeDisabled } from '@app/profile/utils/helpers'
 import { formatSearchParams } from '@app/utils/formatters'
-import { TIME_RANGE } from '@app/profile/constants'
-import { TooltipInfo } from '@app/components/common'
 
 namespace SelectTimeRange {
   export type Props<TStatsProvider extends StatsProvider> = Readonly<
@@ -80,7 +80,7 @@ function SelectTimeRange<TStatsProvider extends StatsProvider>({
     router.push(
       `${pathname}?${formatSearchParams(searchParams, TIME_RANGE, value)}`,
       {
-        scroll: true,
+        scroll: false,
       }
     )
   }
@@ -98,6 +98,13 @@ function SelectTimeRange<TStatsProvider extends StatsProvider>({
       <Select
         value={initialValue}
         onValueChange={handleOnValueChange}
+        onOpenChange={() => {
+          for (const { value } of timeRangeOptions) {
+            router.prefetch(
+              `${pathname}?${formatSearchParams(searchParams, TIME_RANGE, value)}`
+            )
+          }
+        }}
         disabled={isRigtchTimeRange && isValueDisabled(RigtchTimeRange.WEEK)}
       >
         <SelectTrigger className="min-w-[120px] text-white">
