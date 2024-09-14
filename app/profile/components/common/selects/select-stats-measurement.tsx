@@ -5,6 +5,8 @@ import { LuHourglass, LuPlay } from 'react-icons/lu'
 
 import type { ProfileSelectProps } from './props'
 
+import { StatsMeasurement } from '@app/api/enums'
+import { TooltipInfo } from '@app/components/common'
 import {
   Select,
   SelectContent,
@@ -14,8 +16,6 @@ import {
 } from '@app/components/ui/select'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
 import { formatSearchParams } from '@app/utils/formatters'
-import { StatsMeasurement } from '@app/api/enums'
-import { TooltipInfo } from '@app/components/common'
 
 export function SelectStatsMeasurement({
   initialValue,
@@ -41,7 +41,7 @@ export function SelectStatsMeasurement({
     router.push(
       `${pathname}?${formatSearchParams(searchParams, STATS_MEASUREMENT, value)}`,
       {
-        scroll: true,
+        scroll: false,
       }
     )
   }
@@ -52,7 +52,17 @@ export function SelectStatsMeasurement({
         Stats measurement indicates how the statistics will be calculated.
       </TooltipInfo>
 
-      <Select value={initialValue} onValueChange={handleOnValueChange}>
+      <Select
+        value={initialValue}
+        onValueChange={handleOnValueChange}
+        onOpenChange={() => {
+          for (const { value } of statsMeasurementOptions) {
+            router.prefetch(
+              `${pathname}?${formatSearchParams(searchParams, STATS_MEASUREMENT, value)}`
+            )
+          }
+        }}
+      >
         <SelectTrigger className="min-w-[120px] text-white">
           <SelectValue placeholder="Select stats measurement" />
         </SelectTrigger>
