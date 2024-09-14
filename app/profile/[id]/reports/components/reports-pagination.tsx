@@ -76,9 +76,10 @@ function ReportsPagination({
             )}
             href={
               isPreviousWeekDisabled
-                ? undefined
+                ? ''
                 : `?${previousLinkSearchParams.toString()}`
             }
+            prefetch
           />
         </PaginationItem>
 
@@ -100,10 +101,9 @@ function ReportsPagination({
                 'cursor-default text-muted-foreground hover:bg-background hover:text-muted-foreground'
             )}
             href={
-              isNextWeekDisabled
-                ? undefined
-                : `?${nextLinkSearchParams.toString()}`
+              isNextWeekDisabled ? '' : `?${nextLinkSearchParams.toString()}`
             }
+            prefetch
           />
         </PaginationItem>
       </PaginationContent>
