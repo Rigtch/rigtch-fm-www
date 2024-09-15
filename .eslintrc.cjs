@@ -57,7 +57,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:eslint-comments/recommended',
     'plugin:vitest/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
@@ -66,6 +65,7 @@ module.exports = {
     'plugin:unicorn/recommended',
     'prettier',
     'plugin:storybook/recommended',
+    'plugin:@eslint-community/eslint-comments/recommended',
   ],
   overrides: [
     {
