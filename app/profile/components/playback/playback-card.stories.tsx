@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { PlaybackCard } from './playback-card'
-import { PlaybackCardSkeleton } from './playback-card.skeleton'
 
 import type { Device, Track } from '@app/api/types'
 import { trackExample } from '@app/components/items/examples'
@@ -68,5 +67,10 @@ export const Disabled: PlaybackCardStory = {
 }
 
 export const Skeleton: PlaybackCardStory = {
-  render: () => <PlaybackCardSkeleton />,
+  args: {
+    isPlaying: false,
+    isPlayingOptimistic: false,
+    device: undefined,
+    track: undefined,
+  },
 }

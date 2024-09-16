@@ -3,7 +3,6 @@
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-import { PlaybackCardSkeleton } from './playback-card.skeleton'
 import { PlaybackCard } from './playback-card'
 
 import { useAuthCookies } from '@app/auth/hooks'
@@ -20,10 +19,6 @@ export function Playback() {
     setIsPlayingOptimistic(isPlaying)
   }, [isPlaying])
 
-  if (!data?.track) return <PlaybackCardSkeleton />
-
-  const { device, track } = data
-
   async function handleToggleState() {
     setIsPlayingOptimistic(isPlaying => !isPlaying)
 
@@ -34,8 +29,8 @@ export function Playback() {
     <PlaybackCard
       isPlaying={isPlaying}
       isPlayingOptimistic={isPlayingOptimistic}
-      track={track}
-      device={device}
+      track={data?.track}
+      device={data?.device}
       userId={userId}
       routeUserId={routeUserId}
       handleToggleState={handleToggleState}

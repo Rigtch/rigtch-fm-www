@@ -86,4 +86,18 @@ describe('PlaybackCard', () => {
 
     expect(view).toMatchSnapshot()
   })
+
+  test('should match snapshot as skeleton', () => {
+    const view = render(
+      <PlaybackCard
+        isPlaying={false}
+        isPlayingOptimistic={false}
+        handleToggleState={() => Promise.resolve()}
+        userId="1"
+        routeUserId="2"
+      />
+    )
+
+    expect(view).toMatchSnapshot()
+  })
 })
