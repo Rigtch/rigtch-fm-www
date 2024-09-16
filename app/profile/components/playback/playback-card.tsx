@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
 import { AudioBars } from './audio-bars'
 import { ToggleStateButton } from './toggle-state-button'
 
@@ -22,7 +20,7 @@ namespace PlaybackCard {
   export type Props = Readonly<{
     isPlaying?: boolean
     isPlayingOptimistic?: boolean
-    track: Track
+    track?: Track
     device?: Device
     userId?: string
     routeUserId?: string
@@ -33,73 +31,66 @@ namespace PlaybackCard {
 function PlaybackCard({
   isPlaying = false,
   isPlayingOptimistic = false,
-  track: { album, artists, ...track },
+  track,
   device,
   userId,
   routeUserId,
   handleToggleState,
 }: PlaybackCard.Props) {
-  const [isImageLoaded, setIsImageLoaded] = useState(false)
-
   return (
     <Card
       className={cn(
-        '!m-0 h-full w-full p-4 lg:w-[380px] xl:w-2/5 xl:min-w-[380px]',
+        '!m-0 h-full overflow-hidden p-2 lg:min-w-[400px]',
         isPlayingOptimistic ? 'border-success bg-success' : 'bg-neutral-800/50'
       )}
     >
-      <CardHeader className="flex w-full flex-col gap-4 space-y-0 p-0 sm:flex-row">
-        {isImageLoaded ? (
+      <CardHeader className="flex w-full flex-row gap-2 space-y-0 p-0">
+        {track ? (
           <ItemImage
-            images={album}
-            size={128}
-            alt={album.name}
-            className={'w-full rounded-md sm:w-auto'}
+            images={track}
+            size={96}
+            alt={track.album.name}
+            className={'h-24 w-24 flex-shrink-0 rounded-md'}
           />
         ) : (
-          <div>
-            {/* Dummy Image */}
-            <ItemImage
-              size={0}
-              onLoad={() => {
-                setIsImageLoaded(true)
-              }}
-              images={album}
-              alt={''}
-            />
-            <Skeleton className="h-[128px] w-[128px] max-w-[128px]" />
-          </div>
+          <Skeleton className="h-24 w-24 flex-shrink-0" />
         )}
 
-        <div className="flex w-full flex-col justify-between gap-4 md:max-w-[calc(100%-140px)] md:gap-0">
-          <CardTitle className="flex flex-col gap-1 whitespace-nowrap font-normal">
-            <p className="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-2xl">
-              {track.name}
-            </p>
-
-            <p className="max-w-[380px] truncate text-neutral-300">
-              {formatArtists(artists)}
-            </p>
+        <div className="flex min-w-0 flex-grow flex-col justify-between">
+          <CardTitle className="flex flex-col overflow-hidden font-normal">
+            {track ? (
+              <>
+                <p className="truncate text-xl">{track.name}</p>
+                <p className="truncate text-sm text-neutral-300">
+                  {formatArtists(track.artists)}
+                </p>
+              </>
+            ) : (
+              <div className="flex flex-col gap-2">
+                <Skeleton className="h-7 w-48" />
+                <Skeleton className="h-4 w-24" />
+              </div>
+            )}
           </CardTitle>
 
-          <CardFooter className="flex w-full items-center justify-between">
+          <CardFooter className="flex items-stretch justify-between p-0">
             <div className="flex items-center gap-2">
-              <AudioBars isPlaying={isPlaying} />
-
               <ToggleStateButton
                 isPlaying={isPlayingOptimistic}
                 isDeviceAvailable={!!device}
                 hasAccess={routeUserId === userId}
                 toggleState={handleToggleState}
               />
+
+              {isPlaying && <AudioBars />}
             </div>
 
-            <div className="flex min-w-max flex-row gap-2">
-              {!device && track.playedAt && (
+            <div className="flex min-w-max flex-row items-end gap-2">
+              {!device && track?.playedAt && (
                 <RelativeTime value={track.playedAt} />
               )}
 
-              <SpotifyLink href={track.href} />
+              <SpotifyLink href={track?.href} isDisabled={!track} />
             </div>
           </CardFooter>
         </div>
