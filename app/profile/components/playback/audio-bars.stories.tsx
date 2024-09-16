@@ -6,7 +6,7 @@ type AudioBarsType = typeof AudioBars
 type AudioBarsStory = StoryObj<AudioBarsType>
 
 export default {
-  title: 'Components/Common/AudioBars',
+  title: 'Components/Profile/Playback/AudioBars',
   component: AudioBars,
   argTypes: {
     isPlaying: {
@@ -16,14 +16,4 @@ export default {
   },
 } satisfies Meta<AudioBarsType>
 
-export const Paused: AudioBarsStory = {
-  args: {
-    isPlaying: false,
-  },
-}
-
-export const Resumed: AudioBarsStory = {
-  args: {
-    isPlaying: true,
-  },
-}
+export const Resumed: AudioBarsStory = {}
