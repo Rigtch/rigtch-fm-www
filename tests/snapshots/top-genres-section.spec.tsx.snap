@@ -6,19 +6,19 @@ exports[`TopGenresSection > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+        class="flex flex-col gap-4"
       >
         <header
           class="flex items-center justify-between"
         >
           <h2
-            class="text-5xl"
+            class="text-4xl"
           >
             Top Genres
           </h2>
         </header>
         <main
-          class="flex flex-col gap-12"
+          class="flex flex-col gap-4"
         >
           <div
             class="flex flex-row flex-wrap gap-2"
@@ -81,19 +81,19 @@ exports[`TopGenresSection > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <section
-      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+      class="flex flex-col gap-4"
     >
       <header
         class="flex items-center justify-between"
       >
         <h2
-          class="text-5xl"
+          class="text-4xl"
         >
           Top Genres
         </h2>
       </header>
       <main
-        class="flex flex-col gap-12"
+        class="flex flex-col gap-4"
       >
         <div
           class="flex flex-row flex-wrap gap-2"
@@ -213,19 +213,19 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+        class="flex flex-col gap-4"
       >
         <header
           class="flex items-center justify-between"
         >
           <h2
-            class="text-5xl"
+            class="text-4xl"
           >
             Top Genres
           </h2>
         </header>
         <main
-          class="flex flex-col gap-12"
+          class="flex flex-col gap-4"
         >
           <div
             class="relative w-full rounded-lg border px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7 border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive"
@@ -268,19 +268,19 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
   </body>,
   "container": <div>
     <section
-      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+      class="flex flex-col gap-4"
     >
       <header
         class="flex items-center justify-between"
       >
         <h2
-          class="text-5xl"
+          class="text-4xl"
         >
           Top Genres
         </h2>
       </header>
       <main
-        class="flex flex-col gap-12"
+        class="flex flex-col gap-4"
       >
         <div
           class="relative w-full rounded-lg border px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7 border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive"

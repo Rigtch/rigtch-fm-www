@@ -6,13 +6,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+        class="flex flex-col gap-4"
       >
         <header
           class="flex items-center justify-between"
         >
           <h2
-            class="text-5xl"
+            class="text-4xl"
           >
             Top Items
           </h2>
@@ -1196,13 +1196,13 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
   </body>,
   "container": <div>
     <section
-      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+      class="flex flex-col gap-4"
     >
       <header
         class="flex items-center justify-between"
       >
         <h2
-          class="text-5xl"
+          class="text-4xl"
         >
           Top Items
         </h2>
@@ -2443,13 +2443,13 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+        class="flex flex-col gap-4"
       >
         <header
           class="flex items-center justify-between"
         >
           <h2
-            class="text-5xl"
+            class="text-4xl"
           >
             Top Items
           </h2>
@@ -2498,13 +2498,13 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
   </body>,
   "container": <div>
     <section
-      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+      class="flex flex-col gap-4"
     >
       <header
         class="flex items-center justify-between"
       >
         <h2
-          class="text-5xl"
+          class="text-4xl"
         >
           Top Items
         </h2>
@@ -2610,13 +2610,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+        class="flex flex-col gap-4"
       >
         <header
           class="flex items-center justify-between"
         >
           <h2
-            class="text-5xl"
+            class="text-4xl"
           >
             Top Items
           </h2>
@@ -3635,13 +3635,13 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
   </body>,
   "container": <div>
     <section
-      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+      class="flex flex-col gap-4"
     >
       <header
         class="flex items-center justify-between"
       >
         <h2
-          class="text-5xl"
+          class="text-4xl"
         >
           Top Items
         </h2>
@@ -4717,13 +4717,13 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+        class="flex flex-col gap-4"
       >
         <header
           class="flex items-center justify-between"
         >
           <h2
-            class="text-5xl"
+            class="text-4xl"
           >
             Top Items
           </h2>
@@ -5028,13 +5028,13 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
   </body>,
   "container": <div>
     <section
-      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+      class="flex flex-col gap-4"
     >
       <header
         class="flex items-center justify-between"
       >
         <h2
-          class="text-5xl"
+          class="text-4xl"
         >
           Top Items
         </h2>
@@ -5396,13 +5396,13 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
   "baseElement": <body>
     <div>
       <section
-        class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+        class="flex flex-col gap-4"
       >
         <header
           class="flex items-center justify-between"
         >
           <h2
-            class="text-5xl"
+            class="text-4xl"
           >
             Top Items
           </h2>
@@ -5707,13 +5707,13 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
   </body>,
   "container": <div>
     <section
-      class="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24"
+      class="flex flex-col gap-4"
     >
       <header
         class="flex items-center justify-between"
       >
         <h2
-          class="text-5xl"
+          class="text-4xl"
         >
           Top Items
         </h2>

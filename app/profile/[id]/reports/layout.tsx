@@ -43,8 +43,8 @@ function ProfileReportsLayout({
   return (
     <section className="mb-6 flex flex-col gap-8 md:mb-12 lg:mb-24 xl:gap-16">
       <header className="flex flex-col gap-4">
-        <div className="flex items-center justify-between px-4">
-          <h2 className="text-5xl">Reports</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-4xl">Reports</h2>
 
           <ReportsPagination
             after={after}
