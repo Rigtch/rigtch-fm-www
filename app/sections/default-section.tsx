@@ -19,9 +19,9 @@ function DefaultSection({
   ...props
 }: DefaultSection.Props) {
   return (
-    <section className="mb-6 flex flex-col gap-8 px-4 md:mb-12 lg:mb-24">
+    <section className="flex flex-col gap-4">
       <header className="flex items-center justify-between">
-        <h2 className="text-5xl">{title}</h2>
+        <h2 className="text-4xl">{title}</h2>
 
         {headerAction && <div>{headerAction}</div>}
       </header>

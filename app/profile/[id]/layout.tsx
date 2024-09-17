@@ -41,7 +41,7 @@ function ProfileLayout({
         </div>
       </aside>
 
-      <main className="my-8 flex min-h-[200vh] w-full flex-col items-stretch justify-start gap-8 md:my-16 md:px-8 xl:px-12">
+      <main className="my-4 flex min-h-screen w-full flex-col items-stretch justify-start gap-6 px-2 md:my-6 md:px-4 xl:my-8 xl:px-8">
         <ProfileProviders>
           {profile}
           {isProfileHomePage ? (
