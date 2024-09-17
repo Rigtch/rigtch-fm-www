@@ -41,7 +41,7 @@ function ItemTopCardSkeleton({
           {withArtists && <Skeleton className="h-[25px] w-[6rem]" />}
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex w-full flex-col items-center justify-center gap-4">
           <span className="text-center text-5xl">{position}</span>
 
           {withGenres && (
