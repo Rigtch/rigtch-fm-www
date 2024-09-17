@@ -24,9 +24,7 @@ function ProfileTopGenresSubLayout({
 }: ProfileTopGenresSubLayout.Props) {
   return (
     <>
-      <div className="px-4">
-        <StatsOptions />
-      </div>
+      <StatsOptions />
 
       {genres}
       {artists}
