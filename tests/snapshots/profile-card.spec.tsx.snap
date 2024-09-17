@@ -6,13 +6,13 @@ exports[`ProfileCard > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="rounded-xl border border-card bg-background text-card-foreground shadow min-w-[75%]"
+        class="min-w-[75%]"
       >
         <div
-          class="flex flex-col space-y-1.5 justify-between gap-8 p-4 lg:flex-row lg:items-center"
+          class="flex flex-col justify-between gap-6 md:flex-row md:items-center"
         >
           <div
-            class="flex flex-wrap items-center justify-center gap-4 p-4 sm:justify-start"
+            class="flex flex-wrap items-center justify-start gap-4 px-2"
           >
             <span>
               <span
@@ -100,13 +100,13 @@ exports[`ProfileCard > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="rounded-xl border border-card bg-background text-card-foreground shadow min-w-[75%]"
+      class="min-w-[75%]"
     >
       <div
-        class="flex flex-col space-y-1.5 justify-between gap-8 p-4 lg:flex-row lg:items-center"
+        class="flex flex-col justify-between gap-6 md:flex-row md:items-center"
       >
         <div
-          class="flex flex-wrap items-center justify-center gap-4 p-4 sm:justify-start"
+          class="flex flex-wrap items-center justify-start gap-4 px-2"
         >
           <span>
             <span
