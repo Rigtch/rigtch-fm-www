@@ -24,7 +24,9 @@ function ProfileTopGenresSubLayout({
 }: ProfileTopGenresSubLayout.Props) {
   return (
     <>
-      <StatsOptions />
+      <div className="xl:my-4">
+        <StatsOptions />
+      </div>
 
       {genres}
       {artists}

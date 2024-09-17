@@ -5,12 +5,7 @@ import { ShareButton } from './share-button'
 
 import type { Profile } from '@app/api/types'
 import { FollowersCount, SpotifyLink } from '@app/components/common'
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@app/components/ui/card'
+import { CardDescription, CardTitle } from '@app/components/ui/card'
 import { findImage } from '@app/utils/find-image'
 
 namespace ProfileCard {
@@ -29,9 +24,9 @@ function ProfileCard({
   children,
 }: ProfileCard.Props) {
   return (
-    <Card className="min-w-[75%]">
-      <CardHeader className="justify-between gap-8 p-4 lg:flex-row lg:items-center">
-        <div className="flex flex-wrap items-center justify-center gap-4 p-4 sm:justify-start">
+    <div className="min-w-[75%]">
+      <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+        <div className="flex flex-wrap items-center justify-start gap-4 px-2">
           <ProfileAvatar
             src={images.length > 0 ? findImage(images, 128) : undefined}
             displayName={displayName}
@@ -58,8 +53,8 @@ function ProfileCard({
         </div>
 
         {children}
-      </CardHeader>
-    </Card>
+      </div>
+    </div>
   )
 }
 
