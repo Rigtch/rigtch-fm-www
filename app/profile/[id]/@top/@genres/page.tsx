@@ -33,6 +33,8 @@ export default async function ProfileTopGenresSubPage({
   searchParams,
   params,
 }: ProfilePageProps) {
+  const limit = 20
+
   const token = await getServerToken()
   const userId = validateId(params.id)
 
@@ -61,14 +63,14 @@ export default async function ProfileTopGenresSubPage({
     items = await getRigtchTopGenres(token ?? '', {
       after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
-      limit: 10,
+      limit,
       measurement: statsMeasurement,
     })
   } else {
     const { genres } = await getSpotifyTopGenres(token ?? '', {
       timeRange: timeRange as SpotifyTimeRange,
       userId,
-      limit: 10,
+      limit,
     })
 
     items = genres
