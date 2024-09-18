@@ -40,7 +40,7 @@ function PlaybackCard({
   return (
     <Card
       className={cn(
-        '!m-0 h-full min-w-[300px] overflow-hidden p-2 lg:min-w-[400px]',
+        '!m-0 h-full min-w-[300px] max-w-[600px] overflow-hidden p-2 lg:min-w-[400px]',
         isPlayingOptimistic ? 'border-success bg-success' : 'bg-neutral-800/50'
       )}
     >
