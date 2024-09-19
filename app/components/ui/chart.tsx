@@ -311,7 +311,8 @@ const ChartLegendContent = React.forwardRef<
                   }}
                 />
               )}
-              {itemConfig?.label}
+
+              <p className="text-nowrap">{itemConfig?.label}</p>
             </div>
           )
         })}
