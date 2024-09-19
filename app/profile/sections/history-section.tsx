@@ -50,7 +50,7 @@ function HistorySection({
               lastItemSeparator
             />
 
-            <div ref={ref} className="absolute bottom-1/4" />
+            <div ref={ref} className="absolute bottom-1/2" />
           </div>
         ))}
       </div>
