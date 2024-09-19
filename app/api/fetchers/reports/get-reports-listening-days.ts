@@ -1,11 +1,7 @@
 import { fetchApi } from '../fetch-api'
 
 import { StatsMeasurement } from '@app/api/enums'
-import type {
-  ListeningDay,
-  ListeningDays,
-  ReportsListeningParams,
-} from '@app/api/types'
+import type { ListeningDays, ReportsListeningParams } from '@app/api/types'
 
 export function getReportsListeningDays(
   token: string,
@@ -29,6 +25,6 @@ export function getReportsListeningDays(
       token,
     }
   ).then(response =>
-    response.map<ListeningDay>(day => ({ ...day, date: new Date(day.date) }))
+    response.map(day => ({ ...day, date: new Date(day.date) }))
   )
 }
