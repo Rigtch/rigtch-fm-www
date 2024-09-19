@@ -11,7 +11,7 @@ export const runtime = 'edge'
 
 export default async function ProfileHistoryPage({ params }: ProfilePageProps) {
   const userId = validateId(params.id)
-  const limit = 20
+  const limit = 50
 
   const token = await getServerToken()
 
