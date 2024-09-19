@@ -54,16 +54,16 @@ function ItemCard({
         />
 
         <div className="flex flex-row justify-between">
-          <div>
-            {albumType && (
-              <>
-                {new Date(releaseDate).getFullYear()} &bull;&nbsp;
-                <span className="capitalize">{albumType}</span>
-              </>
-            )}
-          </div>
-
-          {album && <ItemArtists artists={artists} />}
+          {albumType ? (
+            <div>
+              {new Date(releaseDate).getFullYear()} &bull;&nbsp;
+              <span className="capitalize">{albumType}</span>
+            </div>
+          ) : album ? (
+            <ItemArtists artists={artists} />
+          ) : (
+            <div />
+          )}
 
           <SpotifyLink href={href} />
         </div>
