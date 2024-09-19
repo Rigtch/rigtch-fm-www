@@ -12,6 +12,7 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from '@app/components/ui/chart'
+import { chartColors } from '@app/profile/[id]/reports/helpers'
 
 namespace MostListenedGenresChart {
   export type Props = Readonly<{
@@ -24,22 +25,12 @@ function MostListenedGenresChart({
   topGenresResponse,
   measurement,
 }: MostListenedGenresChart.Props) {
-  const colors = [
-    '#9400d5',
-    '#590080',
-    '#d500ac',
-    '#2e00ef',
-    '#1e89ee',
-    '#0f6cc5',
-    '#0b5090',
-  ]
-
   const topGenres = topGenresResponse
     .slice(0, 5)
     .map(({ item, playTime, plays }, index) => ({
       name: item,
       value: measurement === StatsMeasurement.PLAYS ? plays! : playTime!,
-      fill: colors[index],
+      fill: chartColors[index],
     }))
 
   const chartConfig: ChartConfig = {}
