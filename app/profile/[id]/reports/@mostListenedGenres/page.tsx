@@ -13,11 +13,20 @@ import { validateId } from '@app/utils/validators'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { StatsMeasurement } from '@app/api/enums'
 import { isPublicUser } from '@app/profile/utils/helpers'
+import { getReportsGenresListeningDays } from '@app/api/fetchers/reports'
 
 const MostListenedGenresChart = lazy(() =>
   import('../components/charts/most-listened-genres-chart').then(
     ({ MostListenedGenresChart }) => ({
       default: MostListenedGenresChart,
+    })
+  )
+)
+
+const GenresListeningDaysChart = lazy(() =>
+  import('../components/charts/genres-listening-days-chart').then(
+    ({ GenresListeningDaysChart }) => ({
+      default: GenresListeningDaysChart,
     })
   )
 )
@@ -41,24 +50,32 @@ export default async function ProfileReportsMostListenedGenresPage({
   const [
     thisWeekMostListenedGenresResponse,
     lastWeekMostListenedGenresResponse,
+    genresListeningDaysResponse,
   ] = await Promise.all([
     getRigtchTopGenres(token ?? '', {
       userId,
       before: thisWeekBeforeParam,
       after: thisWeekAfterParam,
       measurement,
-      limit: 100,
+      limit: 5,
     }),
     getRigtchTopGenres(token ?? '', {
       userId,
       before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
       after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
       measurement,
-      limit: 100,
+      limit: 5,
+    }),
+    getReportsGenresListeningDays(token ?? '', {
+      userId,
+      before: thisWeekBeforeParam,
+      after: thisWeekAfterParam,
+      measurement,
     }),
   ])
 
   if (thisWeekMostListenedGenresResponse.length === 0) return null
+  if (genresListeningDaysResponse.length === 0) return null
 
   const isLastWeekAvailable = lastWeekMostListenedGenresResponse.length > 0
 
@@ -77,50 +94,65 @@ export default async function ProfileReportsMostListenedGenresPage({
     : undefined
 
   return (
-    <ReportSection>
-      <section className="flex flex-col items-stretch justify-center gap-2 2xl:w-1/2">
-        <StatCard
-          label="Most listened genre"
-          value={0}
-          size="xl"
-          contentClassName="text-5xl"
-          className="!w-full"
-        >
-          {thisWeekMostListenedGenre}
-        </StatCard>
-
-        {isLastWeekAvailable && (
+    <>
+      <ReportSection>
+        <section className="flex flex-col items-stretch justify-center gap-2 xl:max-w-[500px] 2xl:w-1/2">
           <StatCard
-            label="Last week's Most listened genre"
+            label="Most listened genre"
             value={0}
             size="xl"
             contentClassName="text-5xl"
             className="!w-full"
           >
-            {lastWeekMostListenedGenre}
+            {thisWeekMostListenedGenre}
           </StatCard>
-        )}
 
-        <StatCard
-          size="xl"
-          label={`Most listened genre's ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}`}
-          value={thisWeekMostListenedGenreValue}
-          lastWeekValue={lastWeekMostListenedGenreValue}
-          className="!w-full"
-        >
-          {valueMeasurementFormatter(
-            thisWeekMostListenedGenreValue,
-            measurement
+          {isLastWeekAvailable && (
+            <StatCard
+              label="Last week's Most listened genre"
+              value={0}
+              size="xl"
+              contentClassName="text-5xl"
+              className="!w-full"
+            >
+              {lastWeekMostListenedGenre}
+            </StatCard>
           )}
-        </StatCard>
-      </section>
+        </section>
 
-      <Suspense>
-        <MostListenedGenresChart
-          topGenresResponse={thisWeekMostListenedGenresResponse}
-          measurement={measurement}
-        />
-      </Suspense>
-    </ReportSection>
+        <section className="xl:w-1/2">
+          <Suspense>
+            <MostListenedGenresChart
+              topGenresResponse={thisWeekMostListenedGenresResponse}
+              measurement={measurement}
+            />
+          </Suspense>
+        </section>
+      </ReportSection>
+
+      <ReportSection className="flex-col-reverse lg:items-stretch">
+        <Suspense>
+          <GenresListeningDaysChart
+            response={genresListeningDaysResponse}
+            measurement={measurement}
+          />
+        </Suspense>
+
+        <section className="flex w-full flex-col items-stretch xl:max-w-[500px]">
+          <StatCard
+            size="xl"
+            label={`Most listened genre's ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}`}
+            value={thisWeekMostListenedGenreValue}
+            lastWeekValue={lastWeekMostListenedGenreValue}
+            className="!w-full"
+          >
+            {valueMeasurementFormatter(
+              thisWeekMostListenedGenreValue,
+              measurement
+            )}
+          </StatCard>
+        </section>
+      </ReportSection>
+    </>
   )
 }
