@@ -1,7 +1,9 @@
 'use client'
 
-import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar'
+import Image from 'next/image'
+import { Suspense } from 'react'
 
+import { Avatar, AvatarFallback } from '@app/components/ui/avatar'
 import { cn } from '@app/utils/cn'
 
 namespace ProfileAvatar {
@@ -19,6 +21,8 @@ function ProfileAvatar({
   className,
   size = 'sm',
 }: ProfileAvatar.Props) {
+  const sizeInPx = size === 'sm' ? 48 : 128
+
   return (
     <span>
       <Avatar
@@ -29,21 +33,39 @@ function ProfileAvatar({
           className
         )}
       >
-        <AvatarImage
-          className="rounded-full"
-          src={src ?? undefined}
-          alt={displayName}
-        />
-
-        <AvatarFallback
-          className={cn(
-            'flex h-full w-full items-center justify-center text-black text-primary-foreground',
-            size === 'sm' && 'text-xl',
-            size === 'lg' && 'text-5xl'
-          )}
-        >
-          {displayName?.slice(0, 1)}
-        </AvatarFallback>
+        {src ? (
+          <Suspense
+            fallback={
+              <AvatarFallback
+                className={cn(
+                  'flex h-full w-full items-center justify-center bg-primary text-primary-foreground',
+                  size === 'sm' && 'text-xl',
+                  size === 'lg' && 'text-5xl'
+                )}
+              >
+                {displayName?.slice(0, 1)}
+              </AvatarFallback>
+            }
+          >
+            <Image
+              src={src}
+              alt={displayName ?? ''}
+              width={sizeInPx}
+              height={sizeInPx}
+              priority
+            />
+          </Suspense>
+        ) : (
+          <AvatarFallback
+            className={cn(
+              'flex h-full w-full items-center justify-center bg-primary text-primary-foreground',
+              size === 'sm' && 'text-xl',
+              size === 'lg' && 'text-5xl'
+            )}
+          >
+            {displayName?.slice(0, 1)}
+          </AvatarFallback>
+        )}
       </Avatar>
     </span>
   )
