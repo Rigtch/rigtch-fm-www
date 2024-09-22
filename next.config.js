@@ -6,7 +6,6 @@ import './app/config/env.js'
 export default {
   reactStrictMode: true,
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
