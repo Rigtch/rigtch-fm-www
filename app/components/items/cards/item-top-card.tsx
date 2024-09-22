@@ -70,7 +70,7 @@ function ItemTopCard({
           }}
           className="rounded-xl p-1"
         >
-          <ItemImage images={images ?? album} alt={name} size={164} />
+          <ItemImage images={images ?? album} alt={name} size={164} priority />
         </div>
 
         <div className="flex flex-col items-center">
