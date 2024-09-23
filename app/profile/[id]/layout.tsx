@@ -13,8 +13,6 @@ namespace ProfileLayout {
   export type Props = Readonly<
     ProfileLayoutBaseProps & {
       profile: ReactNode
-      analysis: ReactNode
-      top: ReactNode
       history: ReactNode
     }
   >
@@ -23,8 +21,6 @@ namespace ProfileLayout {
 function ProfileLayout({
   children,
   profile,
-  analysis,
-  top,
   history,
   params,
 }: ProfileLayout.Props) {
@@ -47,8 +43,6 @@ function ProfileLayout({
           {isProfileHomePage ? (
             <>
               {children}
-              {top}
-              {analysis}
               {history}
             </>
           ) : (

@@ -1,7 +1,11 @@
 import { Suspense } from 'react'
 import { redirect } from 'next/navigation'
 
-import { ItemsSectionSkeleton, TopGenresSectionSkeleton } from '../sections'
+import {
+  AnalysisSectionSkeleton,
+  ItemsSectionSkeleton,
+  TopGenresSectionSkeleton,
+} from '../sections'
 import type { ProfilePageProps } from '../types'
 import {
   STATS_PROVIDER,
@@ -21,6 +25,7 @@ import { StatsOptions } from '../components/common'
 import { StatsProvider } from '../enums'
 
 import {
+  AnalysisView,
   TopAlbumsView,
   TopArtistsView,
   TopGenresView,
@@ -116,6 +121,10 @@ export default async function ProfilePage({
         }
       >
         <TopTracksView {...viewProps} />
+      </Suspense>
+
+      <Suspense fallback={<AnalysisSectionSkeleton />}>
+        <AnalysisView {...viewProps} />
       </Suspense>
     </>
   )
