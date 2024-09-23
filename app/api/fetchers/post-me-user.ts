@@ -8,8 +8,8 @@ export function postMeUser(refreshToken: string) {
       refreshToken,
     },
     method: 'POST',
-  }).then(user => ({
+  }).then(({ createdAt, ...user }) => ({
     ...user,
-    createdAt: new Date(user.createdAt),
+    ...(createdAt && { createdAt: new Date(createdAt) }),
   }))
 }
