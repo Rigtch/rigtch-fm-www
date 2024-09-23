@@ -1,8 +1,8 @@
-import { redirect } from 'next/navigation'
 import { Suspense } from 'react'
 
-import type { ProfileReportsPageProps } from './types/props'
+import { ReportsPagination } from './components/reports-pagination'
 import { validateCursors } from './helpers'
+import type { ProfileReportsPageProps } from './types/props'
 import {
   ListeningDaysView,
   ListeningHoursView,
@@ -10,15 +10,13 @@ import {
   MostListenedItemsView,
 } from './views'
 import type { ReportsViewProps } from './views/types/props'
-import { ReportsPagination } from './components/reports-pagination'
 
-import { validateStatsMeasurement } from '@app/profile/utils/validators'
-import { BETA_USER_CREATED_AT, STATS_MEASUREMENT } from '@app/profile/constants'
-import { getServerToken } from '@app/auth'
-import { isPublicUser } from '@app/profile/utils/helpers'
-import { validateId } from '@app/utils/validators'
-import { SelectStatsMeasurement } from '@app/profile/components/common/selects'
 import { getUser } from '@app/api/fetchers'
+import { getServerToken } from '@app/auth'
+import { SelectStatsMeasurement } from '@app/profile/components/common/selects'
+import { BETA_USER_CREATED_AT, STATS_MEASUREMENT } from '@app/profile/constants'
+import { validateStatsMeasurement } from '@app/profile/utils/validators'
+import { validateId } from '@app/utils/validators'
 
 export const runtime = 'edge'
 
@@ -26,22 +24,19 @@ export default async function ProfileReportsPage({
   params,
   searchParams,
 }: ProfileReportsPageProps) {
-  const token = await getServerToken()
   const userId = validateId(params.id)
+  const token = await getServerToken(userId)
 
-  if (!token && !isPublicUser(userId)) redirect('/')
+  const { createdAt } = await getUser(token, {
+    userId,
+  })
+  const userCreatedAt = createdAt ?? BETA_USER_CREATED_AT
 
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
   const cursors = validateCursors(searchParams.before, searchParams.after)
 
-  const { createdAt } = await getUser(token ?? '', {
-    userId,
-  })
-
-  const userCreatedAt = createdAt ?? BETA_USER_CREATED_AT
-
   const viewProps: ReportsViewProps = {
-    token: token ?? '',
+    token,
     userId,
     measurement,
     cursors,

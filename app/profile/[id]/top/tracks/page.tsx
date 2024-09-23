@@ -1,5 +1,3 @@
-import { redirect } from 'next/navigation'
-
 import { getUser } from '@app/api/fetchers'
 import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopTracks } from '@app/api/fetchers/stats/spotify'
@@ -26,7 +24,6 @@ import {
   validateView,
 } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
-import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const runtime = 'edge'
 
@@ -34,12 +31,10 @@ export default async function ProfileTopTracksPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const token = await getServerToken()
   const userId = validateId(params.id)
+  const token = await getServerToken(userId)
 
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const { createdAt } = await getUser(token ?? '', {
+  const { createdAt } = await getUser(token, {
     userId,
   })
 
@@ -60,31 +55,25 @@ export default async function ProfileTopTracksPage({
   let items: TrackEntity[] | RigtchStatsResponse<TrackEntity>
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopTracks(token ?? '', {
+    items = await getRigtchTopTracks(token, {
       after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       limit: 100,
       measurement: statsMeasurement,
     })
   } else {
-    const { items: responseFirstPart } = await getSpotifyTopTracks(
-      token ?? '',
-      {
-        timeRange: timeRange as SpotifyTimeRange,
-        userId,
-        limit: 50,
-        offset: 0,
-      }
-    )
-    const { items: responseSecondPart } = await getSpotifyTopTracks(
-      token ?? '',
-      {
-        timeRange: timeRange as SpotifyTimeRange,
-        userId,
-        limit: 50,
-        offset: 49,
-      }
-    )
+    const { items: responseFirstPart } = await getSpotifyTopTracks(token, {
+      timeRange: timeRange as SpotifyTimeRange,
+      userId,
+      limit: 50,
+      offset: 0,
+    })
+    const { items: responseSecondPart } = await getSpotifyTopTracks(token, {
+      timeRange: timeRange as SpotifyTimeRange,
+      userId,
+      limit: 50,
+      offset: 49,
+    })
 
     // Remove the first item of the second part to avoid duplicates
     responseFirstPart.shift()

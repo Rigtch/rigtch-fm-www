@@ -1,5 +1,3 @@
-import { redirect } from 'next/navigation'
-
 import { getUser } from '@app/api/fetchers'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
@@ -24,7 +22,6 @@ import {
   validateTimeRange,
 } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
-import { isPublicUser } from '@app/profile/utils/helpers'
 
 export const runtime = 'edge'
 
@@ -32,12 +29,10 @@ export default async function ProfileTopGenresPage({
   searchParams,
   params,
 }: ProfilePageProps) {
-  const token = await getServerToken()
   const userId = validateId(params.id)
+  const token = await getServerToken(userId)
 
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const { createdAt } = await getUser(token ?? '', {
+  const { createdAt } = await getUser(token, {
     userId,
   })
 
@@ -57,14 +52,14 @@ export default async function ProfileTopGenresPage({
   let items: string[] | RigtchStatsResponse<string>
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopGenres(token ?? '', {
+    items = await getRigtchTopGenres(token, {
       limit: 100,
       after: afterParamFactory(timeRange as RigtchTimeRange),
       userId,
       measurement: statsMeasurement,
     })
   } else {
-    const { genres } = await getSpotifyTopGenres(token ?? '', {
+    const { genres } = await getSpotifyTopGenres(token, {
       limit: 50,
       timeRange: timeRange as SpotifyTimeRange,
       userId,
