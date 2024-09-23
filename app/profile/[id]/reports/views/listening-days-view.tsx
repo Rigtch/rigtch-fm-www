@@ -1,31 +1,30 @@
-import { Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import { HiOutlineEmojiSad } from 'react-icons/hi'
 
-import type { ReportsCursors } from '../types/reports-cursors'
 import { StatCard } from '../components/cards'
-import { ListeningDaysChart } from '../components/charts'
-import { weekDays, valueMeasurementFormatter } from '../helpers'
+import { valueMeasurementFormatter, weekDays } from '../helpers'
 import { ReportSection } from '../sections'
 
-import { Alert, AlertTitle, AlertDescription } from '@app/components/ui/alert'
-import { getReportsListeningDays } from '@app/api/fetchers/reports'
+import type { ReportsViewProps } from './types/props'
+
 import { StatsMeasurement } from '@app/api/enums'
+import { getReportsListeningDays } from '@app/api/fetchers/reports'
+import { Alert, AlertDescription, AlertTitle } from '@app/components/ui/alert'
 
-namespace ListeningDaysView {
-  export type Props = Readonly<{
-    token: string
-    userId: string
-    measurement: StatsMeasurement
-    cursors: ReportsCursors
-  }>
-}
+const ListeningDaysChart = lazy(() =>
+  import('../components/charts/listening-days-chart').then(
+    ({ ListeningDaysChart }) => ({
+      default: ListeningDaysChart,
+    })
+  )
+)
 
-async function ListeningDaysView({
+export async function ListeningDaysView({
   token,
   userId,
   measurement,
   cursors: { before, after },
-}: ListeningDaysView.Props) {
+}: ReportsViewProps) {
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
     getReportsListeningDays(token, {
       userId,
@@ -132,5 +131,3 @@ async function ListeningDaysView({
     </ReportSection>
   )
 }
-
-export { ListeningDaysView }
