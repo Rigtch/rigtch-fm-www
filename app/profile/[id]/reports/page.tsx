@@ -13,11 +13,12 @@ import type { ReportsViewProps } from './views/types/props'
 import { ReportsPagination } from './components/reports-pagination'
 
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
-import { STATS_MEASUREMENT } from '@app/profile/constants'
+import { BETA_USER_CREATED_AT, STATS_MEASUREMENT } from '@app/profile/constants'
 import { getServerToken } from '@app/auth'
 import { isPublicUser } from '@app/profile/utils/helpers'
 import { validateId } from '@app/utils/validators'
 import { SelectStatsMeasurement } from '@app/profile/components/common/selects'
+import { getUser } from '@app/api/fetchers'
 
 export const runtime = 'edge'
 
@@ -33,6 +34,12 @@ export default async function ProfileReportsPage({
   const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
   const cursors = validateCursors(searchParams.before, searchParams.after)
 
+  const { createdAt } = await getUser(token ?? '', {
+    userId,
+  })
+
+  const userCreatedAt = createdAt ?? BETA_USER_CREATED_AT
+
   const viewProps: ReportsViewProps = {
     token: token ?? '',
     userId,
@@ -46,12 +53,20 @@ export default async function ProfileReportsPage({
         <div className="flex items-center justify-between">
           <h2 className="text-4xl">Reports</h2>
 
-          <ReportsPagination {...cursors} className="hidden md:block" />
+          <ReportsPagination
+            {...cursors}
+            userCreatedAt={userCreatedAt}
+            className="hidden md:block"
+          />
 
           <SelectStatsMeasurement initialValue={measurement} />
         </div>
 
-        <ReportsPagination {...cursors} className="md:hidden" />
+        <ReportsPagination
+          {...cursors}
+          userCreatedAt={userCreatedAt}
+          className="md:hidden"
+        />
       </header>
 
       <main className="flex flex-col gap-6 xl:gap-8">

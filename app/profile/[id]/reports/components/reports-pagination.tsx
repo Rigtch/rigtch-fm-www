@@ -1,8 +1,8 @@
 'use client'
 
 import { DateTime } from 'luxon'
-import type { HTMLAttributes } from 'react'
 import { useSearchParams } from 'next/navigation'
+import type { HTMLAttributes } from 'react'
 
 import type { validateCursors } from '../helpers'
 
@@ -10,28 +10,29 @@ import {
   Pagination,
   PaginationContent,
   PaginationItem,
-  PaginationPrevious,
   PaginationNext,
+  PaginationPrevious,
 } from '@app/components/ui/pagination'
+import { STATS_MEASUREMENT } from '@app/profile/constants'
 import { cn } from '@app/utils/cn'
-import { BETA_USER_CREATED_AT, STATS_MEASUREMENT } from '@app/profile/constants'
-import { useUserQuery } from '@app/api/hooks'
 
 namespace ReportsPagination {
-  export type Props = ReturnType<typeof validateCursors> &
-    Pick<HTMLAttributes<HTMLDivElement>, 'className'>
+  export type Props = Readonly<
+    ReturnType<typeof validateCursors> &
+      Pick<HTMLAttributes<HTMLDivElement>, 'className'> & {
+        userCreatedAt: Date
+      }
+  >
 }
 
 function ReportsPagination({
   after,
   before,
   className,
+  userCreatedAt,
 }: ReportsPagination.Props) {
-  const { data: user } = useUserQuery()
   const searchParams = useSearchParams()
   const measurement = searchParams.get(STATS_MEASUREMENT)
-
-  const userCreatedAt = user?.createdAt ?? BETA_USER_CREATED_AT
 
   const previousWeekBeforeParam = `${after.getFullYear()}-${after.getMonth() + 1}-${after.getDate()}`
   const previousWeekAfterDate = new Date(
