@@ -8,21 +8,14 @@ namespace ProfileTopGenresSubLayout {
   export type Props = Readonly<
     ProfileLayoutBaseProps & {
       tracks: ReactNode
-      albums: ReactNode
     }
   >
 }
 
 function ProfileTopGenresSubLayout({
   tracks,
-  albums,
 }: ProfileTopGenresSubLayout.Props) {
-  return (
-    <>
-      {albums}
-      {tracks}
-    </>
-  )
+  return tracks
 }
 
 export default ProfileTopGenresSubLayout
