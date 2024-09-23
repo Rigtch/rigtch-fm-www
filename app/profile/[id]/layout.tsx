@@ -46,6 +46,7 @@ function ProfileLayout({
           {profile}
           {isProfileHomePage ? (
             <>
+              {children}
               {top}
               {analysis}
               {history}
