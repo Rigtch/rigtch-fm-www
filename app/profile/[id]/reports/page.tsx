@@ -10,12 +10,14 @@ import {
   MostListenedItemsView,
 } from './views'
 import type { ReportsViewProps } from './views/types/props'
+import { ReportsPagination } from './components/reports-pagination'
 
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
 import { getServerToken } from '@app/auth'
 import { isPublicUser } from '@app/profile/utils/helpers'
 import { validateId } from '@app/utils/validators'
+import { SelectStatsMeasurement } from '@app/profile/components/common/selects'
 
 export const runtime = 'edge'
 
@@ -39,22 +41,36 @@ export default async function ProfileReportsPage({
   }
 
   return (
-    <>
-      <Suspense>
-        <ListeningDaysView {...viewProps} />
-      </Suspense>
+    <section className="mb-6 flex flex-col gap-8 md:mb-12 lg:mb-24 xl:gap-16">
+      <header className="flex flex-col gap-4">
+        <div className="flex items-center justify-between">
+          <h2 className="text-4xl">Reports</h2>
 
-      <Suspense>
-        <ListeningHoursView {...viewProps} />
-      </Suspense>
+          <ReportsPagination {...cursors} className="hidden md:block" />
 
-      <Suspense>
-        <MostListenedGenresView {...viewProps} />
-      </Suspense>
+          <SelectStatsMeasurement initialValue={measurement} />
+        </div>
 
-      <Suspense>
-        <MostListenedItemsView {...viewProps} />
-      </Suspense>
-    </>
+        <ReportsPagination {...cursors} className="md:hidden" />
+      </header>
+
+      <main className="flex flex-col gap-6 xl:gap-8">
+        <Suspense>
+          <ListeningDaysView {...viewProps} />
+        </Suspense>
+
+        <Suspense>
+          <ListeningHoursView {...viewProps} />
+        </Suspense>
+
+        <Suspense>
+          <MostListenedGenresView {...viewProps} />
+        </Suspense>
+
+        <Suspense>
+          <MostListenedItemsView {...viewProps} />
+        </Suspense>
+      </main>
+    </section>
   )
 }
