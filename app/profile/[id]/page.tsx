@@ -26,6 +26,7 @@ import { StatsProvider } from '../enums'
 
 import {
   AnalysisView,
+  HistoryView,
   TopAlbumsView,
   TopArtistsView,
   TopGenresView,
@@ -125,6 +126,12 @@ export default async function ProfilePage({
 
       <Suspense fallback={<AnalysisSectionSkeleton />}>
         <AnalysisView {...viewProps} />
+      </Suspense>
+
+      <Suspense
+        fallback={<ItemsSectionSkeleton title={'History'} withPlayedAt />}
+      >
+        <HistoryView {...viewProps} />
       </Suspense>
     </>
   )
