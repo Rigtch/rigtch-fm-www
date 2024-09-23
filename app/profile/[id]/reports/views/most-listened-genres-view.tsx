@@ -1,19 +1,14 @@
-import { redirect } from 'next/navigation'
 import { lazy, Suspense } from 'react'
 
-import { validateCursors, valueMeasurementFormatter } from '../helpers'
-import type { ProfileReportsPageProps } from '../types/props'
-import { ReportSection } from '../sections'
 import { StatCard } from '../components/cards'
+import { valueMeasurementFormatter } from '../helpers'
+import { ReportSection } from '../sections'
 
-import { getServerToken } from '@app/auth'
-import { STATS_MEASUREMENT } from '@app/profile/constants'
-import { validateStatsMeasurement } from '@app/profile/utils/validators'
-import { validateId } from '@app/utils/validators'
+import type { ReportsViewProps } from './types/props'
+
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
-import { StatsMeasurement } from '@app/api/enums'
-import { isPublicUser } from '@app/profile/utils/helpers'
 import { getReportsGenresListeningDays } from '@app/api/fetchers/reports'
+import { StatsMeasurement } from '@app/api/enums'
 
 const MostListenedGenresChart = lazy(() =>
   import('../components/charts/most-listened-genres-chart').then(
@@ -31,45 +26,35 @@ const GenresListeningDaysChart = lazy(() =>
   )
 )
 
-export const runtime = 'edge'
-
-export default async function ProfileReportsMostListenedGenresPage({
-  params,
-  searchParams,
-}: ProfileReportsPageProps) {
-  const token = await getServerToken()
-  const userId = validateId(params.id)
-
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
-
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
-    validateCursors(searchParams.before, searchParams.after)
-
+export async function MostListenedGenresView({
+  token,
+  userId,
+  measurement,
+  cursors: { before, after },
+}: ReportsViewProps) {
   const [
     thisWeekMostListenedGenresResponse,
     lastWeekMostListenedGenresResponse,
     genresListeningDaysResponse,
   ] = await Promise.all([
-    getRigtchTopGenres(token ?? '', {
+    getRigtchTopGenres(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
       measurement,
       limit: 5,
     }),
-    getRigtchTopGenres(token ?? '', {
+    getRigtchTopGenres(token, {
       userId,
-      before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
-      after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
+      before: new Date(before.getTime() - 1000 * 60 * 60 * 24 * 7),
+      after: new Date(after.getTime() - 1000 * 60 * 60 * 24 * 7),
       measurement,
       limit: 5,
     }),
-    getReportsGenresListeningDays(token ?? '', {
+    getReportsGenresListeningDays(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
       measurement,
     }),
   ])

@@ -16,14 +16,12 @@ namespace ProfileReportsLayout {
   export type Props = Readonly<
     ProfileLayoutBaseProps & {
       mostListenedItems: ReactNode
-      mostListenedGenres: ReactNode
     }
   >
 }
 
 function ProfileReportsLayout({
   mostListenedItems,
-  mostListenedGenres,
   children,
 }: ProfileReportsLayout.Props) {
   const searchParams = useSearchParams()
@@ -61,7 +59,6 @@ function ProfileReportsLayout({
 
       <main className="flex flex-col gap-6 xl:gap-8">
         {children}
-        {mostListenedGenres}
         {mostListenedItems}
       </main>
     </section>
