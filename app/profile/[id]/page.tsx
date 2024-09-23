@@ -20,7 +20,12 @@ import {
 import { StatsOptions } from '../components/common'
 import { StatsProvider } from '../enums'
 
-import { TopAlbumsView, TopArtistsView, TopGenresView } from './views'
+import {
+  TopAlbumsView,
+  TopArtistsView,
+  TopGenresView,
+  TopTracksView,
+} from './views'
 import type { ProfileOverviewViewProps } from './views/types/props'
 
 import { getUser } from '@app/api/fetchers'
@@ -99,6 +104,18 @@ export default async function ProfilePage({
         }
       >
         <TopAlbumsView {...viewProps} />
+      </Suspense>
+
+      <Suspense
+        fallback={
+          <ItemsSectionSkeleton
+            title={'Top Tracks'}
+            view={view}
+            withProgress={statsProvider === StatsProvider.RIGTCH}
+          />
+        }
+      >
+        <TopTracksView {...viewProps} />
       </Suspense>
     </>
   )
