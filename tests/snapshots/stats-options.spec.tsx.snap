@@ -57,11 +57,11 @@ exports[`StatsOptions > should match snapshot 1`] = `
                 tabindex="0"
               >
                 <a
-                  aria-checked="true"
+                  aria-checked="false"
                   aria-disabled="false"
                   class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
                   data-radix-collection-item=""
-                  data-state="on"
+                  data-state="off"
                   href="/profile/id?stats-provider=spotify"
                   role="radio"
                   tabindex="-1"
@@ -131,6 +131,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
               aria-controls="radix-:r5:"
               aria-expanded="false"
               class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
+              data-placeholder=""
               data-state="closed"
               dir="ltr"
               role="combobox"
@@ -139,31 +140,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
               <span
                 style="pointer-events: none;"
               >
-                <div
-                  class="flex items-center gap-2"
-                >
-                  <svg
-                    fill="none"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                    />
-                    <polyline
-                      points="12 6 12 12 16 14"
-                    />
-                  </svg>
-                  4 weeks
-                </div>
+                Select time range
               </span>
               <svg
                 aria-hidden="true"
@@ -225,6 +202,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
               aria-controls="radix-:r7:"
               aria-expanded="false"
               class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
+              data-placeholder=""
               data-state="closed"
               dir="ltr"
               role="combobox"
@@ -233,32 +211,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
               <span
                 style="pointer-events: none;"
               >
-                <div
-                  class="flex items-center gap-2"
-                >
-                  <svg
-                    fill="none"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon
-                      points="12 2 2 7 12 12 22 7 12 2"
-                    />
-                    <polyline
-                      points="2 17 12 22 22 17"
-                    />
-                    <polyline
-                      points="2 12 12 17 22 12"
-                    />
-                  </svg>
-                  Card
-                </div>
+                Select view
               </span>
               <svg
                 aria-hidden="true"
@@ -335,11 +288,11 @@ exports[`StatsOptions > should match snapshot 1`] = `
               tabindex="0"
             >
               <a
-                aria-checked="true"
+                aria-checked="false"
                 aria-disabled="false"
                 class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent/60 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-3 cursor-pointer"
                 data-radix-collection-item=""
-                data-state="on"
+                data-state="off"
                 href="/profile/id?stats-provider=spotify"
                 role="radio"
                 tabindex="-1"
@@ -409,6 +362,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             aria-controls="radix-:r5:"
             aria-expanded="false"
             class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
+            data-placeholder=""
             data-state="closed"
             dir="ltr"
             role="combobox"
@@ -417,31 +371,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             <span
               style="pointer-events: none;"
             >
-              <div
-                class="flex items-center gap-2"
-              >
-                <svg
-                  fill="none"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                  />
-                  <polyline
-                    points="12 6 12 12 16 14"
-                  />
-                </svg>
-                4 weeks
-              </div>
+              Select time range
             </span>
             <svg
               aria-hidden="true"
@@ -503,6 +433,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             aria-controls="radix-:r7:"
             aria-expanded="false"
             class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-[120px] text-white"
+            data-placeholder=""
             data-state="closed"
             dir="ltr"
             role="combobox"
@@ -511,32 +442,7 @@ exports[`StatsOptions > should match snapshot 1`] = `
             <span
               style="pointer-events: none;"
             >
-              <div
-                class="flex items-center gap-2"
-              >
-                <svg
-                  fill="none"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polygon
-                    points="12 2 2 7 12 12 22 7 12 2"
-                  />
-                  <polyline
-                    points="2 17 12 22 22 17"
-                  />
-                  <polyline
-                    points="2 12 12 17 22 12"
-                  />
-                </svg>
-                Card
-              </div>
+              Select view
             </span>
             <svg
               aria-hidden="true"
