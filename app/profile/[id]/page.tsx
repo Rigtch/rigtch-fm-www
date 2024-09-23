@@ -8,6 +8,7 @@ import {
   STATS_MEASUREMENT,
   TIME_RANGE,
   VIEW,
+  BETA_USER_CREATED_AT,
 } from '../constants'
 import { isPublicUser } from '../utils/helpers'
 import {
@@ -16,6 +17,7 @@ import {
   validateTimeRange,
   validateView,
 } from '../utils/validators'
+import { StatsOptions } from '../components/common'
 
 import { TopGenresView } from './views'
 import type { ProfileOverviewViewProps } from './views/types/props'
@@ -51,6 +53,8 @@ export default async function ProfilePage({
   )
   const view = validateView(searchParams[VIEW])
 
+  const userCreatedAt = createdAt ?? BETA_USER_CREATED_AT
+
   const viewProps: ProfileOverviewViewProps = {
     token: token ?? '',
     userId,
@@ -61,8 +65,14 @@ export default async function ProfilePage({
   }
 
   return (
-    <Suspense fallback={<TopGenresSectionSkeleton length={10} />}>
-      <TopGenresView {...viewProps} />
-    </Suspense>
+    <>
+      <div className="xl:my-4">
+        <StatsOptions {...viewProps} userCreatedAt={userCreatedAt} />
+      </div>
+
+      <Suspense fallback={<TopGenresSectionSkeleton length={10} />}>
+        <TopGenresView {...viewProps} />
+      </Suspense>
+    </>
   )
 }

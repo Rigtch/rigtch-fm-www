@@ -2,7 +2,6 @@
 
 import type { ReactNode } from 'react'
 
-import { StatsOptions } from '@app/profile/components/common'
 import type { ProfileLayoutBaseProps } from '@app/profile/types'
 
 namespace ProfileTopGenresSubLayout {
@@ -22,10 +21,6 @@ function ProfileTopGenresSubLayout({
 }: ProfileTopGenresSubLayout.Props) {
   return (
     <>
-      <div className="xl:my-4">
-        <StatsOptions />
-      </div>
-
       {artists}
       {albums}
       {tracks}
