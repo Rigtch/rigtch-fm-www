@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 
 import type { ProfileReportsPageProps } from './types/props'
 import { validateCursors } from './helpers'
-import { ListeningDaysView } from './views'
+import { ListeningDaysView, ListeningHoursView } from './views'
 
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { STATS_MEASUREMENT } from '@app/profile/constants'
@@ -26,13 +26,24 @@ export default async function ProfileReportsPage({
   const cursors = validateCursors(searchParams.before, searchParams.after)
 
   return (
-    <Suspense>
-      <ListeningDaysView
-        token={token ?? ''}
-        userId={userId}
-        measurement={measurement}
-        cursors={cursors}
-      />
-    </Suspense>
+    <>
+      <Suspense>
+        <ListeningDaysView
+          token={token ?? ''}
+          userId={userId}
+          measurement={measurement}
+          cursors={cursors}
+        />
+      </Suspense>
+
+      <Suspense>
+        <ListeningHoursView
+          token={token ?? ''}
+          userId={userId}
+          measurement={measurement}
+          cursors={cursors}
+        />
+      </Suspense>
+    </>
   )
 }
