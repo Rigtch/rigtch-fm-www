@@ -1,14 +1,8 @@
-import { redirect } from 'next/navigation'
+import type { ProfileOverviewViewProps } from './types/props'
 
-import { validateId } from '@app/utils/validators'
-import { DefaultSection } from '@app/sections'
 import { Progress } from '@app/components/ui/progress'
-import type { ProfilePageProps } from '@app/profile/types'
-import { getServerToken } from '@app/auth/utils'
+import { DefaultSection } from '@app/sections'
 import { getSpotifyAnalysis } from '@app/api/fetchers/stats/spotify'
-import { isPublicUser } from '@app/profile/utils/helpers'
-
-export const runtime = 'edge'
 
 interface AnalysisItem {
   title: string
@@ -18,14 +12,10 @@ interface AnalysisItem {
   subTitle?: string
 }
 
-export default async function ProfileAnalysisSubPage({
-  params,
-}: ProfilePageProps) {
-  const userId = validateId(params.id)
-  const token = await getServerToken()
-
-  if (!token && !isPublicUser(userId)) redirect('/')
-
+export async function AnalysisView({
+  token,
+  userId,
+}: Readonly<Pick<ProfileOverviewViewProps, 'token' | 'userId'>>) {
   const {
     danceability,
     acousticness,
@@ -36,7 +26,7 @@ export default async function ProfileAnalysisSubPage({
     valence,
     loudness,
     tempo,
-  } = await getSpotifyAnalysis(token ?? '', {
+  } = await getSpotifyAnalysis(token, {
     userId,
   })
 
