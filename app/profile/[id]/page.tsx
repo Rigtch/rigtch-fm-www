@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { redirect } from 'next/navigation'
 
-import { TopGenresSectionSkeleton } from '../sections'
+import { ItemsSectionSkeleton, TopGenresSectionSkeleton } from '../sections'
 import type { ProfilePageProps } from '../types'
 import {
   STATS_PROVIDER,
@@ -18,8 +18,9 @@ import {
   validateView,
 } from '../utils/validators'
 import { StatsOptions } from '../components/common'
+import { StatsProvider } from '../enums'
 
-import { TopGenresView } from './views'
+import { TopArtistsView, TopGenresView } from './views'
 import type { ProfileOverviewViewProps } from './views/types/props'
 
 import { getUser } from '@app/api/fetchers'
@@ -72,6 +73,19 @@ export default async function ProfilePage({
 
       <Suspense fallback={<TopGenresSectionSkeleton length={10} />}>
         <TopGenresView {...viewProps} />
+      </Suspense>
+
+      <Suspense
+        fallback={
+          <ItemsSectionSkeleton
+            title={'Top Artists'}
+            view={view}
+            withGenres
+            withProgress={statsProvider === StatsProvider.RIGTCH}
+          />
+        }
+      >
+        <TopArtistsView {...viewProps} />
       </Suspense>
     </>
   )
