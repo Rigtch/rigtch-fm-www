@@ -1,40 +1,26 @@
-import { redirect } from 'next/navigation'
-
 import { StatCard } from '../components/cards'
-import { validateCursors } from '../helpers'
 import { ReportSection } from '../sections'
-import type { ProfileReportsPageProps } from '../types/props'
+
+import type { ReportsViewProps } from './types/props'
 
 import { StatsMeasurement } from '@app/api/enums'
 import {
-  getReportsTotalAlbums,
   getReportsTotalArtists,
+  getReportsTotalAlbums,
   getReportsTotalTracks,
 } from '@app/api/fetchers/reports'
 import {
-  getRigtchTopAlbums,
   getRigtchTopArtists,
+  getRigtchTopAlbums,
   getRigtchTopTracks,
 } from '@app/api/fetchers/stats/rigtch'
-import { getServerToken } from '@app/auth'
 import { ItemsList } from '@app/components/items/list'
-import { isPublicUser } from '@app/profile/utils/helpers'
-import { validateId } from '@app/utils/validators'
 
-export const runtime = 'edge'
-
-export default async function ProfileReportsMostListenedItemsPage({
-  params,
-  searchParams,
-}: ProfileReportsPageProps) {
-  const token = await getServerToken()
-  const userId = validateId(params.id)
-
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
-    validateCursors(searchParams.before, searchParams.after)
-
+export async function MostListenedItemsView({
+  token,
+  userId,
+  cursors: { before, after },
+}: Readonly<Omit<ReportsViewProps, 'measurement'>>) {
   const [
     mostListenedArtists,
     mostListenedAlbums,
@@ -46,51 +32,51 @@ export default async function ProfileReportsMostListenedItemsPage({
     { total: thisWeekTotalTracks },
     { total: lastWeekTotalTracks },
   ] = await Promise.all([
-    getRigtchTopArtists(token ?? '', {
+    getRigtchTopArtists(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
       measurement: StatsMeasurement.PLAYS,
     }),
-    getRigtchTopAlbums(token ?? '', {
+    getRigtchTopAlbums(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
     }),
-    getRigtchTopTracks(token ?? '', {
+    getRigtchTopTracks(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
     }),
-    getReportsTotalArtists(token ?? '', {
+    getReportsTotalArtists(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
     }),
-    getReportsTotalArtists(token ?? '', {
+    getReportsTotalArtists(token, {
       userId,
-      before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
-      after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
+      before: new Date(before.getTime() - 1000 * 60 * 60 * 24 * 7),
+      after: new Date(after.getTime() - 1000 * 60 * 60 * 24 * 7),
     }),
-    getReportsTotalAlbums(token ?? '', {
+    getReportsTotalAlbums(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
     }),
-    getReportsTotalAlbums(token ?? '', {
+    getReportsTotalAlbums(token, {
       userId,
-      before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
-      after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
+      before: new Date(before.getTime() - 1000 * 60 * 60 * 24 * 7),
+      after: new Date(after.getTime() - 1000 * 60 * 60 * 24 * 7),
     }),
-    getReportsTotalTracks(token ?? '', {
+    getReportsTotalTracks(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
     }),
-    getReportsTotalTracks(token ?? '', {
+    getReportsTotalTracks(token, {
       userId,
-      before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
-      after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
+      before: new Date(before.getTime() - 1000 * 60 * 60 * 24 * 7),
+      after: new Date(after.getTime() - 1000 * 60 * 60 * 24 * 7),
     }),
   ])
 
