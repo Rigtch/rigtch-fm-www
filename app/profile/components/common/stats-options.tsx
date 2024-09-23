@@ -1,43 +1,29 @@
 'use client'
 
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 import { SelectStatsMeasurement, SelectTimeRange, SelectView } from './selects'
 import { ToggleStatsProvider } from './toggle-stats-provider'
 
-import { useUserQuery } from '@app/api/hooks'
-import {
-  STATS_MEASUREMENT,
-  STATS_PROVIDER,
-  TIME_RANGE,
-  VIEW,
-} from '@app/profile/constants'
+import type { ProfileOverviewViewProps } from '@app/profile/[id]/views/types/props'
 import { StatsProvider } from '@app/profile/enums'
-import {
-  validateStatsMeasurement,
-  validateStatsProvider,
-  validateTimeRange,
-  validateView,
-} from '@app/profile/utils/validators'
 
-export function StatsOptions() {
-  const { data: user } = useUserQuery()
+namespace StatsOptions {
+  export type Props = Readonly<
+    Omit<ProfileOverviewViewProps, 'token' | 'userId'> & {
+      userCreatedAt: Date
+    }
+  >
+}
+
+function StatsOptions({
+  statsProvider,
+  measurement,
+  timeRange,
+  view,
+  userCreatedAt,
+}: StatsOptions.Props) {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  const statsProvider = validateStatsProvider(
-    searchParams.get(STATS_PROVIDER),
-    user?.createdAt
-  )
-  const statsMeasurement = validateStatsMeasurement(
-    searchParams.get(STATS_MEASUREMENT)
-  )
-  const view = validateView(searchParams.get(VIEW))
-  const timeRange = validateTimeRange(
-    searchParams.get(TIME_RANGE),
-    statsProvider,
-    user?.createdAt
-  )
 
   const route = pathname.split('/').at(-1)
 
@@ -47,19 +33,19 @@ export function StatsOptions() {
         {(!route || route !== 'albums') && (
           <ToggleStatsProvider
             initialValue={statsProvider}
-            userCreatedAt={user?.createdAt}
+            userCreatedAt={userCreatedAt}
           />
         )}
       </div>
 
       <div className="flex flex-wrap gap-2">
         {(statsProvider === StatsProvider.RIGTCH || route === 'albums') && (
-          <SelectStatsMeasurement initialValue={statsMeasurement} />
+          <SelectStatsMeasurement initialValue={measurement} />
         )}
 
         <SelectTimeRange
           initialValue={timeRange}
-          userCreatedAt={user?.createdAt}
+          userCreatedAt={userCreatedAt}
         />
 
         {(!route || route !== 'genres') && <SelectView initialValue={view} />}
@@ -67,3 +53,5 @@ export function StatsOptions() {
     </div>
   )
 }
+
+export { StatsOptions }
