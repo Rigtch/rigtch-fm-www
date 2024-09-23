@@ -5,6 +5,8 @@ import type { Session } from 'next-auth'
 import { StatsOptions } from './stats-options'
 
 import { QueryClientWrapper } from '@tests/utils'
+import { RigtchTimeRange, StatsProvider, View } from '@app/profile/enums'
+import { StatsMeasurement } from '@app/api/enums'
 
 vi.mock('next/navigation', () => ({
   useSearchParams: () => new URLSearchParams(),
@@ -30,7 +32,13 @@ describe('StatsOptions', () => {
           } as Session
         }
       >
-        <StatsOptions />
+        <StatsOptions
+          statsProvider={StatsProvider.RIGTCH}
+          measurement={StatsMeasurement.PLAYS}
+          timeRange={RigtchTimeRange.WEEK}
+          view={View.CARD}
+          userCreatedAt={new Date()}
+        />
       </SessionProvider>,
       {
         wrapper: QueryClientWrapper,
