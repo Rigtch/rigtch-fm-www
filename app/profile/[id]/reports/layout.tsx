@@ -1,7 +1,6 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import type { ReactNode } from 'react'
 
 import { ReportsPagination } from './components/reports-pagination'
 import { AFTER, BEFORE } from './constants/search-params'
@@ -12,18 +11,7 @@ import { STATS_MEASUREMENT } from '@app/profile/constants'
 import type { ProfileLayoutBaseProps } from '@app/profile/types'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 
-namespace ProfileReportsLayout {
-  export type Props = Readonly<
-    ProfileLayoutBaseProps & {
-      mostListenedItems: ReactNode
-    }
-  >
-}
-
-function ProfileReportsLayout({
-  mostListenedItems,
-  children,
-}: ProfileReportsLayout.Props) {
+function ProfileReportsLayout({ children }: ProfileLayoutBaseProps) {
   const searchParams = useSearchParams()
 
   const statsMeasurement = validateStatsMeasurement(
@@ -57,10 +45,7 @@ function ProfileReportsLayout({
         />
       </header>
 
-      <main className="flex flex-col gap-6 xl:gap-8">
-        {children}
-        {mostListenedItems}
-      </main>
+      <main className="flex flex-col gap-6 xl:gap-8">{children}</main>
     </section>
   )
 }

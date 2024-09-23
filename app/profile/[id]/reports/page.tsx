@@ -7,6 +7,7 @@ import {
   ListeningDaysView,
   ListeningHoursView,
   MostListenedGenresView,
+  MostListenedItemsView,
 } from './views'
 import type { ReportsViewProps } from './views/types/props'
 
@@ -49,6 +50,10 @@ export default async function ProfileReportsPage({
 
       <Suspense>
         <MostListenedGenresView {...viewProps} />
+      </Suspense>
+
+      <Suspense>
+        <MostListenedItemsView {...viewProps} />
       </Suspense>
     </>
   )
