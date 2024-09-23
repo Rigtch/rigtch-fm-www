@@ -8,7 +8,6 @@ import type { ProfileLayoutBaseProps } from '@app/profile/types'
 namespace ProfileTopGenresSubLayout {
   export type Props = Readonly<
     ProfileLayoutBaseProps & {
-      genres: ReactNode
       artists: ReactNode
       tracks: ReactNode
       albums: ReactNode
@@ -17,7 +16,6 @@ namespace ProfileTopGenresSubLayout {
 }
 
 function ProfileTopGenresSubLayout({
-  genres,
   artists,
   tracks,
   albums,
@@ -28,7 +26,6 @@ function ProfileTopGenresSubLayout({
         <StatsOptions />
       </div>
 
-      {genres}
       {artists}
       {albums}
       {tracks}
