@@ -3,7 +3,11 @@ import { Suspense } from 'react'
 
 import type { ProfileReportsPageProps } from './types/props'
 import { validateCursors } from './helpers'
-import { ListeningDaysView, ListeningHoursView } from './views'
+import {
+  ListeningDaysView,
+  ListeningHoursView,
+  MostListenedGenresView,
+} from './views'
 import type { ReportsViewProps } from './views/types/props'
 
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
@@ -41,6 +45,10 @@ export default async function ProfileReportsPage({
 
       <Suspense>
         <ListeningHoursView {...viewProps} />
+      </Suspense>
+
+      <Suspense>
+        <MostListenedGenresView {...viewProps} />
       </Suspense>
     </>
   )
