@@ -1,20 +1,17 @@
-import { redirect } from 'next/navigation'
-
+import { getUser } from '@app/api/fetchers'
 import { getRigtchTopAlbums } from '@app/api/fetchers/stats/rigtch'
 import { getServerToken } from '@app/auth'
 import { STATS_MEASUREMENT, TIME_RANGE, VIEW } from '@app/profile/constants'
+import { StatsProvider, type RigtchTimeRange } from '@app/profile/enums'
 import { ItemsSection } from '@app/profile/sections'
 import type { ProfilePageProps } from '@app/profile/types'
-import { validateId } from '@app/utils/validators'
+import { afterParamFactory } from '@app/profile/utils/factories'
 import {
   validateStatsMeasurement,
   validateTimeRange,
   validateView,
 } from '@app/profile/utils/validators'
-import { afterParamFactory } from '@app/profile/utils/factories'
-import { StatsProvider, type RigtchTimeRange } from '@app/profile/enums'
-import { getUser } from '@app/api/fetchers'
-import { isPublicUser } from '@app/profile/utils/helpers'
+import { validateId } from '@app/utils/validators'
 
 export const runtime = 'edge'
 
@@ -23,11 +20,9 @@ export default async function ProfileTopAlbumsPage({
   params,
 }: ProfilePageProps) {
   const userId = validateId(params.id)
-  const token = await getServerToken()
+  const token = await getServerToken(userId)
 
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const { createdAt } = await getUser(token ?? '', {
+  const { createdAt } = await getUser(token, {
     userId,
   })
 
@@ -41,7 +36,7 @@ export default async function ProfileTopAlbumsPage({
   )
   const view = validateView(searchParams[VIEW])
 
-  const items = await getRigtchTopAlbums(token ?? '', {
+  const items = await getRigtchTopAlbums(token, {
     after: afterParamFactory(timeRange as RigtchTimeRange),
     userId,
     limit: 100,

@@ -1,26 +1,23 @@
-import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
 
-import { validateId } from '@app/utils/validators'
 import { getUser } from '@app/api/fetchers'
-import { ProfileCard } from '@app/profile/components/profile'
-import type { ProfilePageProps } from '@app/profile/types'
 import { getServerToken } from '@app/auth/utils'
 import { Playback } from '@app/profile/components/playback'
-import { isPublicUser } from '@app/profile/utils/helpers'
+import { ProfileCard } from '@app/profile/components/profile'
+import type { ProfilePageProps } from '@app/profile/types'
+import { validateId } from '@app/utils/validators'
 
 export const runtime = 'edge'
 
 export async function generateMetadata({
-  params: { id },
+  params,
 }: ProfilePageProps): Promise<Metadata> {
-  const token = await getServerToken()
-
-  if (!token && !isPublicUser(id)) redirect('/')
+  const userId = validateId(params.id)
+  const token = await getServerToken(userId)
 
   const {
     profile: { displayName },
-  } = await getUser(token ?? '', { userId: id })
+  } = await getUser(token, { userId })
 
   return {
     title: displayName,
@@ -29,12 +26,8 @@ export async function generateMetadata({
 
 export default async function ProfileSubPage({ params }: ProfilePageProps) {
   const userId = validateId(params.id)
-
-  const token = await getServerToken()
-
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const { profile } = await getUser(token ?? '', { userId })
+  const token = await getServerToken(userId)
+  const { profile } = await getUser(token, { userId })
 
   return (
     <ProfileCard {...profile}>

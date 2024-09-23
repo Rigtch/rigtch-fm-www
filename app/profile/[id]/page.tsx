@@ -1,6 +1,14 @@
 import { Suspense } from 'react'
-import { redirect } from 'next/navigation'
 
+import { StatsOptions } from '../components/common'
+import {
+  BETA_USER_CREATED_AT,
+  STATS_MEASUREMENT,
+  STATS_PROVIDER,
+  TIME_RANGE,
+  VIEW,
+} from '../constants'
+import { StatsProvider } from '../enums'
 import {
   AnalysisSectionSkeleton,
   ItemsSectionSkeleton,
@@ -8,21 +16,11 @@ import {
 } from '../sections'
 import type { ProfilePageProps } from '../types'
 import {
-  STATS_PROVIDER,
-  STATS_MEASUREMENT,
-  TIME_RANGE,
-  VIEW,
-  BETA_USER_CREATED_AT,
-} from '../constants'
-import { isPublicUser } from '../utils/helpers'
-import {
-  validateStatsProvider,
   validateStatsMeasurement,
+  validateStatsProvider,
   validateTimeRange,
   validateView,
 } from '../utils/validators'
-import { StatsOptions } from '../components/common'
-import { StatsProvider } from '../enums'
 
 import {
   AnalysisView,
@@ -44,12 +42,10 @@ export default async function ProfilePage({
   params,
   searchParams,
 }: ProfilePageProps) {
-  const token = await getServerToken()
   const userId = validateId(params.id)
+  const token = await getServerToken(userId)
 
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const { createdAt } = await getUser(token ?? '', {
+  const { createdAt } = await getUser(token, {
     userId,
   })
 
@@ -68,7 +64,7 @@ export default async function ProfilePage({
   const userCreatedAt = createdAt ?? BETA_USER_CREATED_AT
 
   const viewProps: ProfileOverviewViewProps = {
-    token: token ?? '',
+    token,
     userId,
     measurement,
     statsProvider,
