@@ -3,15 +3,14 @@ import { ReportSection } from '../sections'
 
 import type { ReportsViewProps } from './types/props'
 
-import { StatsMeasurement } from '@app/api/enums'
 import {
-  getReportsTotalArtists,
   getReportsTotalAlbums,
+  getReportsTotalArtists,
   getReportsTotalTracks,
 } from '@app/api/fetchers/reports'
 import {
-  getRigtchTopArtists,
   getRigtchTopAlbums,
+  getRigtchTopArtists,
   getRigtchTopTracks,
 } from '@app/api/fetchers/stats/rigtch'
 import { ItemsList } from '@app/components/items/list'
@@ -19,8 +18,9 @@ import { ItemsList } from '@app/components/items/list'
 export async function MostListenedItemsView({
   token,
   userId,
+  measurement,
   cursors: { before, after },
-}: Readonly<Omit<ReportsViewProps, 'measurement'>>) {
+}: ReportsViewProps) {
   const [
     mostListenedArtists,
     mostListenedAlbums,
@@ -36,17 +36,19 @@ export async function MostListenedItemsView({
       userId,
       before,
       after,
-      measurement: StatsMeasurement.PLAYS,
+      measurement,
     }),
     getRigtchTopAlbums(token, {
       userId,
       before,
       after,
+      measurement,
     }),
     getRigtchTopTracks(token, {
       userId,
       before,
       after,
+      measurement,
     }),
     getReportsTotalArtists(token, {
       userId,
