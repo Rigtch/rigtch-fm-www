@@ -7,10 +7,10 @@ exports[`ProfileAvatar > should match snapshot with fallback 1`] = `
     <div>
       <span>
         <span
-          class="flex rounded-full bg-primary h-[48px] w-[48px]"
+          class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
         >
           <span
-            class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
+            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-xl"
           >
             M
           </span>
@@ -21,10 +21,10 @@ exports[`ProfileAvatar > should match snapshot with fallback 1`] = `
   "container": <div>
     <span>
       <span
-        class="flex rounded-full bg-primary h-[48px] w-[48px]"
+        class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
       >
         <span
-          class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
+          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-xl"
         >
           M
         </span>
@@ -92,10 +92,18 @@ exports[`ProfileAvatar > should match snapshot with image 1`] = `
     <div>
       <span>
         <span
-          class="flex rounded-full bg-primary h-[48px] w-[48px]"
+          class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
         >
-          <span
-            class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="48"
+            src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=96&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=96&q=75 2x"
+            style="color: transparent;"
+            width="48"
           />
         </span>
       </span>
@@ -104,10 +112,18 @@ exports[`ProfileAvatar > should match snapshot with image 1`] = `
   "container": <div>
     <span>
       <span
-        class="flex rounded-full bg-primary h-[48px] w-[48px]"
+        class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
       >
-        <span
-          class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="48"
+          src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=96&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=96&q=75 2x"
+          style="color: transparent;"
+          width="48"
         />
       </span>
     </span>
@@ -173,10 +189,10 @@ exports[`ProfileAvatar > should match snapshot with size lg 1`] = `
     <div>
       <span>
         <span
-          class="flex rounded-full bg-primary h-[128px] w-[128px]"
+          class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[128px] w-[128px]"
         >
           <span
-            class="flex h-full w-full items-center justify-center text-primary-foreground text-5xl"
+            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-5xl"
           >
             M
           </span>
@@ -187,10 +203,10 @@ exports[`ProfileAvatar > should match snapshot with size lg 1`] = `
   "container": <div>
     <span>
       <span
-        class="flex rounded-full bg-primary h-[128px] w-[128px]"
+        class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[128px] w-[128px]"
       >
         <span
-          class="flex h-full w-full items-center justify-center text-primary-foreground text-5xl"
+          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-5xl"
         >
           M
         </span>
@@ -258,10 +274,10 @@ exports[`ProfileAvatar > should match snapshot with size sm 1`] = `
     <div>
       <span>
         <span
-          class="flex rounded-full bg-primary h-[48px] w-[48px]"
+          class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
         >
           <span
-            class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
+            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-xl"
           >
             M
           </span>
@@ -272,10 +288,10 @@ exports[`ProfileAvatar > should match snapshot with size sm 1`] = `
   "container": <div>
     <span>
       <span
-        class="flex rounded-full bg-primary h-[48px] w-[48px]"
+        class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
       >
         <span
-          class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
+          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-xl"
         >
           M
         </span>

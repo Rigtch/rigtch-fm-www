@@ -16,13 +16,19 @@ exports[`ProfileCard > should match snapshot 1`] = `
           >
             <span>
               <span
-                class="flex rounded-full bg-primary h-[128px] w-[128px]"
+                class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[128px] w-[128px]"
               >
-                <span
-                  class="flex h-full w-full items-center justify-center text-primary-foreground text-5xl"
-                >
-                  M
-                </span>
+                <img
+                  alt="Mnigos"
+                  data-nimg="1"
+                  decoding="async"
+                  fetchpriority="high"
+                  height="128"
+                  src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=256&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=256&q=75 2x"
+                  style="color: transparent;"
+                  width="128"
+                />
               </span>
             </span>
             <div
@@ -110,13 +116,19 @@ exports[`ProfileCard > should match snapshot 1`] = `
         >
           <span>
             <span
-              class="flex rounded-full bg-primary h-[128px] w-[128px]"
+              class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[128px] w-[128px]"
             >
-              <span
-                class="flex h-full w-full items-center justify-center text-primary-foreground text-5xl"
-              >
-                M
-              </span>
+              <img
+                alt="Mnigos"
+                data-nimg="1"
+                decoding="async"
+                fetchpriority="high"
+                height="128"
+                src="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6775700000ee8503aef823b019723735326905&w=256&q=75 2x"
+                style="color: transparent;"
+                width="128"
+              />
             </span>
           </span>
           <div

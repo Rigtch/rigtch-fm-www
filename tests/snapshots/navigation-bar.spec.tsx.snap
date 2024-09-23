@@ -110,13 +110,19 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
               >
                 <span>
                   <span
-                    class="flex rounded-full bg-primary h-[48px] w-[48px]"
+                    class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
                   >
-                    <span
-                      class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
-                    >
-                      J
-                    </span>
+                    <img
+                      alt="John Doe"
+                      data-nimg="1"
+                      decoding="async"
+                      fetchpriority="high"
+                      height="48"
+                      src="/_next/image?url=https%3A%2F%2Fplacekitten.com%2F200%2F300&w=96&q=75"
+                      srcset="/_next/image?url=https%3A%2F%2Fplacekitten.com%2F200%2F300&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fplacekitten.com%2F200%2F300&w=96&q=75 2x"
+                      style="color: transparent;"
+                      width="48"
+                    />
                   </span>
                 </span>
               </a>
@@ -235,13 +241,19 @@ exports[`NavigationBar > should match snapshot as authenticated 1`] = `
             >
               <span>
                 <span
-                  class="flex rounded-full bg-primary h-[48px] w-[48px]"
+                  class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
                 >
-                  <span
-                    class="flex h-full w-full items-center justify-center text-primary-foreground text-xl"
-                  >
-                    J
-                  </span>
+                  <img
+                    alt="John Doe"
+                    data-nimg="1"
+                    decoding="async"
+                    fetchpriority="high"
+                    height="48"
+                    src="/_next/image?url=https%3A%2F%2Fplacekitten.com%2F200%2F300&w=96&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fplacekitten.com%2F200%2F300&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fplacekitten.com%2F200%2F300&w=96&q=75 2x"
+                    style="color: transparent;"
+                    width="48"
+                  />
                 </span>
               </span>
             </a>
