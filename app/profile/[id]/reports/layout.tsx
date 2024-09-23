@@ -15,7 +15,6 @@ import { validateStatsMeasurement } from '@app/profile/utils/validators'
 namespace ProfileReportsLayout {
   export type Props = Readonly<
     ProfileLayoutBaseProps & {
-      listeningDays: ReactNode
       listeningHours: ReactNode
       mostListenedItems: ReactNode
       mostListenedGenres: ReactNode
@@ -24,10 +23,10 @@ namespace ProfileReportsLayout {
 }
 
 function ProfileReportsLayout({
-  listeningDays,
   listeningHours,
   mostListenedItems,
   mostListenedGenres,
+  children,
 }: ProfileReportsLayout.Props) {
   const searchParams = useSearchParams()
 
@@ -63,7 +62,7 @@ function ProfileReportsLayout({
       </header>
 
       <main className="flex flex-col gap-6 xl:gap-8">
-        {listeningDays}
+        {children}
         {listeningHours}
         {mostListenedGenres}
         {mostListenedItems}

@@ -1,60 +1,42 @@
-import { redirect } from 'next/navigation'
+import { Suspense } from 'react'
 import { HiOutlineEmojiSad } from 'react-icons/hi'
-import { lazy, Suspense } from 'react'
 
+import type { ReportsCursors } from '../types/reports-cursors'
 import { StatCard } from '../components/cards'
-import {
-  validateCursors,
-  valueMeasurementFormatter,
-  weekDays,
-} from '../helpers'
+import { ListeningDaysChart } from '../components/charts'
+import { weekDays, valueMeasurementFormatter } from '../helpers'
 import { ReportSection } from '../sections'
-import type { ProfileReportsPageProps } from '../types/props'
 
-import { StatsMeasurement } from '@app/api/enums'
+import { Alert, AlertTitle, AlertDescription } from '@app/components/ui/alert'
 import { getReportsListeningDays } from '@app/api/fetchers/reports'
-import { getServerToken } from '@app/auth'
-import { Alert, AlertDescription, AlertTitle } from '@app/components/ui/alert'
-import { STATS_MEASUREMENT } from '@app/profile/constants'
-import { isPublicUser } from '@app/profile/utils/helpers'
-import { validateStatsMeasurement } from '@app/profile/utils/validators'
-import { validateId } from '@app/utils/validators'
+import { StatsMeasurement } from '@app/api/enums'
 
-const ListeningDaysChart = lazy(() =>
-  import('../components/charts/listening-days-chart').then(
-    ({ ListeningDaysChart }) => ({
-      default: ListeningDaysChart,
-    })
-  )
-)
+namespace ListeningDaysView {
+  export type Props = Readonly<{
+    token: string
+    userId: string
+    measurement: StatsMeasurement
+    cursors: ReportsCursors
+  }>
+}
 
-export const runtime = 'edge'
-
-export default async function ProfileReportsListeningDaysPage({
-  params,
-  searchParams,
-}: ProfileReportsPageProps) {
-  const token = await getServerToken()
-  const userId = validateId(params.id)
-
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
-
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
-    validateCursors(searchParams.before, searchParams.after)
-
+async function ListeningDaysView({
+  token,
+  userId,
+  measurement,
+  cursors: { before, after },
+}: ListeningDaysView.Props) {
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
-    getReportsListeningDays(token ?? '', {
+    getReportsListeningDays(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
       measurement,
     }),
-    getReportsListeningDays(token ?? '', {
+    getReportsListeningDays(token, {
       userId,
-      before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
-      after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
+      before: new Date(before.getTime() - 1000 * 60 * 60 * 24 * 7),
+      after: new Date(after.getTime() - 1000 * 60 * 60 * 24 * 7),
       measurement,
     }),
   ])
@@ -150,3 +132,5 @@ export default async function ProfileReportsListeningDaysPage({
     </ReportSection>
   )
 }
+
+export { ListeningDaysView }
