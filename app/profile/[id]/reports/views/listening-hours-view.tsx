@@ -1,18 +1,13 @@
-import { redirect } from 'next/navigation'
 import { lazy, Suspense } from 'react'
 
 import { StatCard } from '../components/cards'
-import { validateCursors, valueMeasurementFormatter } from '../helpers'
+import { valueMeasurementFormatter } from '../helpers'
 import { ReportSection } from '../sections'
-import type { ProfileReportsPageProps } from '../types/props'
 
-import { StatsMeasurement } from '@app/api/enums'
+import type { ReportsViewProps } from './types/props'
+
 import { getReportsListeningHours } from '@app/api/fetchers/reports'
-import { getServerToken } from '@app/auth'
-import { STATS_MEASUREMENT } from '@app/profile/constants'
-import { isPublicUser } from '@app/profile/utils/helpers'
-import { validateStatsMeasurement } from '@app/profile/utils/validators'
-import { validateId } from '@app/utils/validators'
+import { StatsMeasurement } from '@app/api/enums'
 
 const ListeningHoursChart = lazy(() =>
   import('../components/charts/listening-hours-chart').then(
@@ -22,33 +17,23 @@ const ListeningHoursChart = lazy(() =>
   )
 )
 
-export const runtime = 'edge'
-
-export default async function ProfileReportsListeningHoursPage({
-  params,
-  searchParams,
-}: ProfileReportsPageProps) {
-  const token = await getServerToken()
-  const userId = validateId(params.id)
-
-  if (!token && !isPublicUser(userId)) redirect('/')
-
-  const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
-
-  const { before: thisWeekBeforeParam, after: thisWeekAfterParam } =
-    validateCursors(searchParams.before, searchParams.after)
-
+export async function ListeningHoursView({
+  token,
+  userId,
+  measurement,
+  cursors: { before, after },
+}: ReportsViewProps) {
   const [thisWeekResponse, lastWeekResponse] = await Promise.all([
-    getReportsListeningHours(token ?? '', {
+    getReportsListeningHours(token, {
       userId,
-      before: thisWeekBeforeParam,
-      after: thisWeekAfterParam,
+      before,
+      after,
       measurement,
     }),
-    getReportsListeningHours(token ?? '', {
+    getReportsListeningHours(token, {
       userId,
-      before: new Date(thisWeekBeforeParam.getTime() - 1000 * 60 * 60 * 24 * 7),
-      after: new Date(thisWeekAfterParam.getTime() - 1000 * 60 * 60 * 24 * 7),
+      before: new Date(before.getTime() - 1000 * 60 * 60 * 24 * 7),
+      after: new Date(after.getTime() - 1000 * 60 * 60 * 24 * 7),
       measurement,
     }),
   ])
