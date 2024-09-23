@@ -1,34 +1,21 @@
 'use client'
 
 import type { ReactNode } from 'react'
-import { usePathname } from 'next/navigation'
 
 import { ProfileProviders } from '../providers'
 import type { ProfileLayoutBaseProps } from '../types'
 
-import { validateId } from '@app/utils/validators'
 import { Sidebar } from '@app/components/sidebar'
 
 namespace ProfileLayout {
   export type Props = Readonly<
     ProfileLayoutBaseProps & {
       profile: ReactNode
-      history: ReactNode
     }
   >
 }
 
-function ProfileLayout({
-  children,
-  profile,
-  history,
-  params,
-}: ProfileLayout.Props) {
-  const pathname = usePathname()
-  const userId = validateId(params.id)
-
-  const isProfileHomePage = pathname === `/profile/${userId}`
-
+function ProfileLayout({ children, profile }: ProfileLayout.Props) {
   return (
     <div className="flex">
       <aside className="sticky top-[65px] hidden h-[calc(100vh-60px)] max-w-[300px] border-r border-primary-lighter bg-primary p-4 lg:block lg:max-w-[250px]">
@@ -40,14 +27,7 @@ function ProfileLayout({
       <main className="my-4 flex min-h-screen w-full flex-col items-stretch justify-start gap-6 px-2 md:my-6 md:px-4 xl:my-8 xl:px-8">
         <ProfileProviders>
           {profile}
-          {isProfileHomePage ? (
-            <>
-              {children}
-              {history}
-            </>
-          ) : (
-            children
-          )}
+          {children}
         </ProfileProviders>
       </main>
     </div>
