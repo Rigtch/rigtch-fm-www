@@ -18,7 +18,7 @@ function TopGenresSectionSkeleton({
             <Skeleton
               className="h-[40px] rounded-lg"
               style={{
-                width: `${Math.floor(Math.random() * (10 - 6) + 6)}rem`,
+                width: `${Math.floor(Math.random() * (10 - 6) + 7)}rem`,
               }}
             />
           </div>
