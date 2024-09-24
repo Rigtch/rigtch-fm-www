@@ -7,14 +7,16 @@ import type { ReadonlyRequestCookies } from 'next/dist/server/web/spec-extension
 
 import middleware from './middleware'
 
+import { getServerUser } from '@app/auth'
+
 vi.mock('next-auth', () => ({
   default: vi.fn().mockReturnValue({
     auth: vi.fn().mockImplementation((function_: never) => function_),
   }),
 }))
-
 vi.mock('next/server')
 vi.mock('next/headers')
+vi.mock('@app/auth')
 
 const cookiesFactoryMock = (value?: string) =>
   ({
@@ -64,5 +66,22 @@ describe('middleware', () => {
 
     expect(redirectSpy).toHaveBeenCalledWith(new URL('/', request.url))
     expect(cookiesSpy).toHaveBeenCalled()
+  })
+
+  test('should redirect to disconnect route if user is logged in but no userId is found', async () => {
+    const request = requestFactoryMock('/')
+
+    const getServerUserSpy = vi
+      .mocked(getServerUser)
+      .mockResolvedValue({ name: 'John Doe' })
+    cookiesSpy.mockImplementation(cookiesFactoryMock)
+
+    await middleware(request, mock<AppRouteHandlerFnContext>())
+
+    expect(redirectSpy).toHaveBeenCalledWith(
+      new URL('/api/auth/disconnect', request.url)
+    )
+    expect(cookiesSpy).toHaveBeenCalled()
+    expect(getServerUserSpy).toHaveBeenCalled()
   })
 })
