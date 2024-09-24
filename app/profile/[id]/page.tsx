@@ -78,7 +78,7 @@ export default async function ProfilePage({
         <StatsOptions {...viewProps} userCreatedAt={userCreatedAt} />
       </div>
 
-      <Suspense fallback={<TopGenresSectionSkeleton length={10} />}>
+      <Suspense fallback={<TopGenresSectionSkeleton length={20} />}>
         <TopGenresView {...viewProps} />
       </Suspense>
 
