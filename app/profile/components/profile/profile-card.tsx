@@ -66,28 +66,29 @@ function ProfileCard({
             </div>
 
             <div className="items-left flex flex-row gap-2">
-              <Button
-                variant="outline"
-                className={cn(
-                  'group hover:bg-white',
-                  isFollowingUserOptimistic &&
-                    "hover:before:content-['Unfollow']"
-                )}
-                disabled={
-                  id === currentUserId ||
-                  !isAuthenticated ||
-                  isFollowingUser !== isFollowingUserOptimistic
-                }
-                onClick={handleToggleFollowing}
-              >
-                <span
+              {id !== currentUserId && (
+                <Button
+                  variant="outline"
                   className={cn(
-                    isFollowingUserOptimistic && 'group-hover:hidden'
+                    'group hover:bg-white',
+                    isFollowingUserOptimistic &&
+                      "hover:before:content-['Unfollow']"
                   )}
+                  disabled={
+                    !isAuthenticated ||
+                    isFollowingUser !== isFollowingUserOptimistic
+                  }
+                  onClick={handleToggleFollowing}
                 >
-                  {isFollowingUserOptimistic ? 'Following' : 'Follow'}
-                </span>
-              </Button>
+                  <span
+                    className={cn(
+                      isFollowingUserOptimistic && 'group-hover:hidden'
+                    )}
+                  >
+                    {isFollowingUserOptimistic ? 'Following' : 'Follow'}
+                  </span>
+                </Button>
+              )}
 
               <ShareButton />
             </div>
