@@ -7,6 +7,7 @@ export interface FetchApiOptions<TBody = unknown> {
   token?: string
   body?: TBody
   cache?: RequestCache
+  next?: RequestInit['next']
 }
 
 export async function fetchApi<TData, TBody = unknown>(
