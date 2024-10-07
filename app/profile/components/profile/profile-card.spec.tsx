@@ -2,10 +2,20 @@ import { render } from '@testing-library/react'
 
 import { ProfileCard } from './profile-card'
 
+vi.mock('@app/api/hooks', () => ({
+  useToggleFollowing: () => ({
+    toggle: vi.fn(),
+  }),
+}))
+
 describe('ProfileCard', () => {
   const props = {
     displayName: 'Mnigos',
-    followers: 420,
+    followersCount: 420,
+    followingCount: 69,
+    id: '1',
+    currentUserId: '1',
+    isFollowingUser: true,
     href: 'https://open.spotify.com/user/moneyigos',
     images: [
       {
