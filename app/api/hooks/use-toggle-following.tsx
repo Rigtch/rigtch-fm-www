@@ -13,9 +13,9 @@ export const useToggleFollowing = () => {
   const router = useRouter()
 
   async function toggle(isFollowing = false) {
-    const response = isFollowing
+    const response = await (isFollowing
       ? putUnFollowUser(token ?? '', { userId, followerId })
-      : putFollowUser(token ?? '', { userId, followerId })
+      : putFollowUser(token ?? '', { userId, followerId }))
 
     await revalidateUser()
     router.refresh()

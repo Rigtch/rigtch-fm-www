@@ -17,6 +17,7 @@ export async function fetchApi<TData, TBody = unknown>(
     token,
     body,
     cache = 'force-cache',
+    next,
   }: FetchApiOptions<TBody> = {}
 ): Promise<TData> {
   const response = await fetch(env.NEXT_PUBLIC_API_URL + path, {
@@ -31,6 +32,7 @@ export async function fetchApi<TData, TBody = unknown>(
     },
     body: JSON.stringify(body),
     cache,
+    next,
   })
 
   const parsedResponse = (await response.json()) as TData & { message: string }
