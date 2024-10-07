@@ -67,12 +67,13 @@ exports[`ProfileCard > should match snapshot 1`] = `
                       </svg>
                     </a>
                   </button>
-                  <span
-                    class="text-md md:text-xl"
-                  >
-                    Followers: 
-                    420
-                  </span>
+                  <p>
+                     Followers
+                  </p>
+                  •
+                  <p>
+                     Following
+                  </p>
                 </p>
               </div>
               <div
@@ -167,12 +168,13 @@ exports[`ProfileCard > should match snapshot 1`] = `
                     </svg>
                   </a>
                 </button>
-                <span
-                  class="text-md md:text-xl"
-                >
-                  Followers: 
-                  420
-                </span>
+                <p>
+                   Followers
+                </p>
+                •
+                <p>
+                   Following
+                </p>
               </p>
             </div>
             <div

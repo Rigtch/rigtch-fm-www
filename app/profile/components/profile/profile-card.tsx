@@ -3,23 +3,22 @@ import type { HTMLAttributes } from 'react'
 import { ProfileAvatar } from './profile-avatar'
 import { ShareButton } from './share-button'
 
-import type { Profile } from '@app/api/types'
-import { FollowersCount, SpotifyLink } from '@app/components/common'
+import type { Profile, User } from '@app/api/types'
+import { SpotifyLink } from '@app/components/common'
 import { CardDescription, CardTitle } from '@app/components/ui/card'
 import { findImage } from '@app/utils/find-image'
 
 namespace ProfileCard {
-  export type Props = Pick<
-    Profile,
-    'displayName' | 'images' | 'followers' | 'href'
-  > &
+  export type Props = Pick<Profile, 'displayName' | 'images' | 'href'> &
+    Pick<User, 'followersCount' | 'followingCount'> &
     Pick<HTMLAttributes<HTMLDivElement>, 'children'>
 }
 
 function ProfileCard({
   displayName,
   images,
-  followers,
+  followersCount,
+  followingCount,
   href,
   children,
 }: ProfileCard.Props) {
@@ -41,8 +40,8 @@ function ProfileCard({
 
               <CardDescription className="flex items-center gap-2 whitespace-nowrap text-lg leading-5 text-foreground">
                 <SpotifyLink href={href} />
-
-                <FollowersCount value={followers} />
+                <p>{followersCount} Followers</p>&bull;
+                <p>{followingCount} Following</p>
               </CardDescription>
             </div>
 

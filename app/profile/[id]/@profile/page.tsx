@@ -27,10 +27,16 @@ export async function generateMetadata({
 export default async function ProfileSubPage({ params }: ProfilePageProps) {
   const userId = validateId(params.id)
   const token = await getServerToken(userId)
-  const { profile } = await getUser(token, { userId })
+  const { profile, followersCount, followingCount } = await getUser(token, {
+    userId,
+  })
 
   return (
-    <ProfileCard {...profile}>
+    <ProfileCard
+      {...profile}
+      followersCount={followersCount}
+      followingCount={followingCount}
+    >
       <Playback />
     </ProfileCard>
   )
