@@ -15,6 +15,8 @@ export * from './user'
 export * from './rigtch-stats-response'
 export * from './total-items'
 export * from './listening-days'
+export * from './user-followers'
+export * from './user-following'
 
 export * from './http-method'
 
