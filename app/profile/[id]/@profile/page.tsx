@@ -45,6 +45,7 @@ export default async function ProfileSubPage({ params }: ProfilePageProps) {
       {...profile}
       id={id}
       isFollowingUser={isFollowingUser}
+      isAuthenticated={!!token}
       currentUserId={currentUserId}
       followersCount={followersCount}
       followingCount={followingCount}

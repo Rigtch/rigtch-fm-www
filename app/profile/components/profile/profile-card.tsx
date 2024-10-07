@@ -18,6 +18,7 @@ namespace ProfileCard {
     Pick<HTMLAttributes<HTMLDivElement>, 'children'> & {
       currentUserId: string
       isFollowingUser: boolean
+      isAuthenticated: boolean
     }
 }
 
@@ -29,6 +30,7 @@ function ProfileCard({
   id,
   currentUserId,
   isFollowingUser,
+  isAuthenticated,
   href,
   children,
 }: ProfileCard.Props) {
@@ -71,7 +73,11 @@ function ProfileCard({
                   isFollowingUserOptimistic &&
                     "hover:before:content-['Unfollow']"
                 )}
-                disabled={id === currentUserId}
+                disabled={
+                  id === currentUserId ||
+                  !isAuthenticated ||
+                  isFollowingUser !== isFollowingUserOptimistic
+                }
                 onClick={handleToggleFollowing}
               >
                 <span
