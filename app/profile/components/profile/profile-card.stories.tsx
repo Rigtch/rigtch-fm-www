@@ -21,13 +21,17 @@ export default {
     href: {
       control: 'text',
     },
-    followers: {
+    followersCount: {
+      control: 'number',
+    },
+    followingCount: {
       control: 'number',
     },
   },
   args: {
     displayName: 'Mnigos',
-    followers: 420,
+    followersCount: 10,
+    followingCount: 7,
     href: 'https://open.spotify.com/user/moneyigos',
     images: [
       {
