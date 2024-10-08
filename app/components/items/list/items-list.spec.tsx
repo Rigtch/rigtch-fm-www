@@ -73,6 +73,7 @@ describe('ItemsList', () => {
   test('should match snapshot with playTime', () => {
     const view = render(
       <ItemsList
+        isRounded
         items={tracksMock.map(track => ({
           ...track,
           playTime: 1000 * 60 * 60 * 2,
@@ -88,6 +89,7 @@ describe('ItemsList', () => {
     const view = render(
       <ItemsList
         isTop
+        isRounded
         items={tracksMock.map(track => ({
           ...track,
           playTime: 1000 * 60 * 60 * 2,

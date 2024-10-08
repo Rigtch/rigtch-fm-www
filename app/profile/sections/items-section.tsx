@@ -1,6 +1,5 @@
 import { NoDataAlert } from '../components/common'
 
-import { DefaultSection } from '@app/sections'
 import type {
   AlbumEntity,
   ArtistEntity,
@@ -9,6 +8,7 @@ import type {
 } from '@app/api/types'
 import { ItemsList } from '@app/components/items/list'
 import { View } from '@app/profile/enums'
+import { DefaultSection } from '@app/sections'
 
 namespace ItemsSection {
   export type Props = Readonly<
@@ -31,7 +31,11 @@ function ItemsSection({
   return (
     <DefaultSection {...props}>
       {items.length > 0 && (
-        <ItemsList items={items} isTop={view === View.CARD} />
+        <ItemsList
+          items={items}
+          isTop={view === View.TOP}
+          isCard={view === View.CARD}
+        />
       )}
 
       {items.length === 0 && <NoDataAlert />}

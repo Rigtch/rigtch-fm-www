@@ -18,7 +18,7 @@ function RelativeTime({ value, options, className }: RelativeTime.Props) {
       className={cn('whitespace-nowrap text-primary-foreground/80', className)}
       suppressHydrationWarning
     >
-      {DateTime.fromISO(value, options).toRelative()}
+      {DateTime.fromISO(value, options).setLocale('en').toRelative()}
     </p>
   )
 }

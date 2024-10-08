@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { LuLayers, LuList } from 'react-icons/lu'
+import { LuLayers, LuList, LuStar } from 'react-icons/lu'
 
 import type { ProfileSelectProps } from './props'
 
@@ -19,14 +19,19 @@ import { formatSearchParams } from '@app/utils/formatters'
 export function SelectView({ initialValue }: ProfileSelectProps<View>) {
   const viewOptions = [
     {
-      icon: <LuLayers />,
-      value: View.CARD,
-      label: 'Card',
+      icon: <LuStar />,
+      value: View.TOP,
+      label: 'Top',
     },
     {
       icon: <LuList />,
       value: View.LIST,
       label: 'List',
+    },
+    {
+      icon: <LuLayers />,
+      value: View.CARD,
+      label: 'Card',
     },
   ]
 

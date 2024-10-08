@@ -6,7 +6,7 @@ exports[`TopGenresSection > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-4"
+        class="flex flex-col gap-6"
       >
         <header
           class="flex items-center justify-between"
@@ -81,7 +81,7 @@ exports[`TopGenresSection > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-6"
     >
       <header
         class="flex items-center justify-between"
@@ -213,7 +213,7 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-4"
+        class="flex flex-col gap-6"
       >
         <header
           class="flex items-center justify-between"
@@ -268,7 +268,7 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-6"
     >
       <header
         class="flex items-center justify-between"

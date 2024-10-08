@@ -2,7 +2,7 @@
 
 import type { HtmlHTMLAttributes } from 'react'
 
-import { ItemTopCard } from '../cards'
+import { ItemCard, ItemTopCard } from '../cards'
 import { formatItems } from '../helpers'
 import type { ItemPosition } from '../misc'
 
@@ -32,6 +32,7 @@ namespace ItemsList {
         | TrackEntity[]
         | RigtchStatsResponse<ArtistEntity | TrackEntity | AlbumEntity>
       isTop?: boolean
+      isCard?: boolean
       positionSize?: ItemPosition.Props['size']
       positionClassName?: string
       lastItemSeparator?: boolean
@@ -44,6 +45,7 @@ namespace ItemsList {
 function ItemsList({
   items,
   isTop,
+  isCard,
   positionSize,
   className,
   positionClassName,
@@ -59,7 +61,7 @@ function ItemsList({
   if (isTop) sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])
 
   return (
-    <div className={cn('flex flex-col gap-8', className)}>
+    <div className={cn('align-center flex flex-col gap-8', className)}>
       {isTop && (
         <>
           <div className="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24">
@@ -90,22 +92,32 @@ function ItemsList({
         </>
       )}
 
-      <div className="flex flex-col">
+      <div
+        className={cn(
+          isCard
+            ? 'grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4'
+            : 'flex flex-col'
+        )}
+      >
         {sortedItems.slice(isTop ? 3 : 0).map((item, index, items) => (
           <div key={index}>
-            {/* @ts-expect-error: conditional types are already handled */}
-            <ItemsListElement
-              {...item}
-              genresDisplayLength={genresDisplayLength}
-              positionSize={positionSize}
-              positionClassName={positionClassName}
-              className={cn(
-                isRounded && index === 0 && 'rounded-t-lg',
-                isRounded && index === items.length - 1 && 'rounded-bl-lg'
-              )}
-            />
+            {isCard ? (
+              <ItemCard {...item} />
+            ) : (
+              /* @ts-expect-error: conditional types are already handled */
+              <ItemsListElement
+                {...item}
+                genresDisplayLength={genresDisplayLength}
+                positionSize={positionSize}
+                positionClassName={positionClassName}
+                className={cn(
+                  isRounded && index === 0 && 'rounded-t-lg',
+                  isRounded && index === items.length - 1 && 'rounded-bl-lg'
+                )}
+              />
+            )}
 
-            {items.length === index + 1 ? (
+            {isCard ? null : items.length === index + 1 ? (
               lastItemSeparator ? (
                 <Separator />
               ) : null

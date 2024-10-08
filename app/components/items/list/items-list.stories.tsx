@@ -141,7 +141,7 @@ export const Skeleton: ItemsListStory = {
 }
 
 export const SkeletonWithTop: ItemsListStory = {
-  render: () => <ItemsListSkeleton view={View.CARD} />,
+  render: () => <ItemsListSkeleton view={View.TOP} />,
 }
 
 export const SkeletonWithArtists: ItemsListStory = {
