@@ -76,6 +76,12 @@ exports[`ProfileCard > should match snapshot 1`] = `
                     69
                      Following
                   </p>
+                  •
+                  <p
+                    class="text-primary-foreground/80"
+                  >
+                    (Follows you)
+                  </p>
                 </div>
               </div>
               <div
@@ -178,6 +184,12 @@ exports[`ProfileCard > should match snapshot 1`] = `
                 <p>
                   69
                    Following
+                </p>
+                •
+                <p
+                  class="text-primary-foreground/80"
+                >
+                  (Follows you)
                 </p>
               </div>
             </div>

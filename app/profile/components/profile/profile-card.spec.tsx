@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react'
+import type { ComponentProps } from 'react'
 
 import { ProfileCard } from './profile-card'
 
@@ -9,13 +10,15 @@ vi.mock('@app/api/hooks', () => ({
 }))
 
 describe('ProfileCard', () => {
-  const props = {
+  const props: ComponentProps<typeof ProfileCard> = {
     displayName: 'Mnigos',
     followersCount: 420,
     followingCount: 69,
     id: '1',
     currentUserId: '1',
     isFollowingUser: true,
+    isFollowingYou: true,
+    isAuthenticated: true,
     href: 'https://open.spotify.com/user/moneyigos',
     images: [
       {
