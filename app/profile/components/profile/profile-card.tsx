@@ -18,6 +18,7 @@ namespace ProfileCard {
     Pick<HTMLAttributes<HTMLDivElement>, 'children'> & {
       currentUserId: string
       isFollowingUser: boolean
+      isFollowingYou: boolean
       isAuthenticated: boolean
     }
 }
@@ -30,6 +31,7 @@ function ProfileCard({
   id,
   currentUserId,
   isFollowingUser,
+  isFollowingYou,
   isAuthenticated,
   href,
   children,
@@ -56,12 +58,20 @@ function ProfileCard({
 
           <div className="flex h-full flex-col justify-between gap-4">
             <div>
-              <div className="text-2xl md:text-3xl">{displayName}</div>
+              <div className="flex items-center gap-2 text-2xl md:text-3xl">
+                {displayName}
+                <SpotifyLink href={href} />
+              </div>
 
               <div className="flex items-center gap-2 whitespace-nowrap text-lg leading-5 text-foreground">
-                <SpotifyLink href={href} />
                 <p>{followersCount} Followers</p>&bull;
                 <p>{followingCount} Following</p>
+                {isFollowingYou && (
+                  <>
+                    &bull;
+                    <p className="text-primary-foreground/80">(Follows you)</p>
+                  </>
+                )}
               </div>
             </div>
 
