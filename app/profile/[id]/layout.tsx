@@ -11,11 +11,12 @@ namespace ProfileLayout {
   export type Props = Readonly<
     ProfileLayoutBaseProps & {
       profile: ReactNode
+      modal: ReactNode
     }
   >
 }
 
-function ProfileLayout({ children, profile }: ProfileLayout.Props) {
+function ProfileLayout({ children, profile, modal }: ProfileLayout.Props) {
   return (
     <div className="flex">
       <aside className="sticky top-[65px] hidden h-[calc(100vh-60px)] max-w-[300px] border-r border-primary-lighter bg-primary p-4 lg:block lg:max-w-[250px]">
@@ -30,6 +31,8 @@ function ProfileLayout({ children, profile }: ProfileLayout.Props) {
           {children}
         </ProfileProviders>
       </main>
+
+      {modal}
     </div>
   )
 }
