@@ -10,7 +10,7 @@ exports[`ProfileAvatar > should match snapshot with fallback 1`] = `
           class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
         >
           <span
-            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-xl"
+            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-white text-xl"
           >
             M
           </span>
@@ -24,7 +24,7 @@ exports[`ProfileAvatar > should match snapshot with fallback 1`] = `
         class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
       >
         <span
-          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-xl"
+          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-white text-xl"
         >
           M
         </span>
@@ -192,7 +192,7 @@ exports[`ProfileAvatar > should match snapshot with size lg 1`] = `
           class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[128px] w-[128px]"
         >
           <span
-            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-5xl"
+            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-white text-5xl"
           >
             M
           </span>
@@ -206,7 +206,7 @@ exports[`ProfileAvatar > should match snapshot with size lg 1`] = `
         class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[128px] w-[128px]"
       >
         <span
-          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-5xl"
+          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-white text-5xl"
         >
           M
         </span>
@@ -277,7 +277,7 @@ exports[`ProfileAvatar > should match snapshot with size sm 1`] = `
           class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
         >
           <span
-            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-xl"
+            class="rounded-full flex h-full w-full items-center justify-center bg-primary text-white text-xl"
           >
             M
           </span>
@@ -291,7 +291,7 @@ exports[`ProfileAvatar > should match snapshot with size sm 1`] = `
         class="relative shrink-0 overflow-hidden flex rounded-full bg-primary h-[48px] w-[48px]"
       >
         <span
-          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-primary-foreground text-xl"
+          class="rounded-full flex h-full w-full items-center justify-center bg-primary text-white text-xl"
         >
           M
         </span>

@@ -67,15 +67,21 @@ exports[`ProfileCard > should match snapshot 1`] = `
                 <div
                   class="flex items-center gap-2 whitespace-nowrap text-lg leading-5 text-foreground"
                 >
-                  <p>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none font-normal"
+                    href="/profile/1/followers"
+                  >
                     420
                      Followers
-                  </p>
+                  </a>
                   •
-                  <p>
+                  <a
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none font-normal"
+                    href="/profile/1/following"
+                  >
                     69
                      Following
-                  </p>
+                  </a>
                   •
                   <p
                     class="text-primary-foreground/80"
@@ -176,15 +182,21 @@ exports[`ProfileCard > should match snapshot 1`] = `
               <div
                 class="flex items-center gap-2 whitespace-nowrap text-lg leading-5 text-foreground"
               >
-                <p>
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none font-normal"
+                  href="/profile/1/followers"
+                >
                   420
                    Followers
-                </p>
+                </a>
                 •
-                <p>
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none font-normal"
+                  href="/profile/1/following"
+                >
                   69
                    Following
-                </p>
+                </a>
                 •
                 <p
                   class="text-primary-foreground/80"
