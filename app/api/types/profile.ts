@@ -9,3 +9,5 @@ export interface Profile {
   href: string
   followers: number
 }
+
+export type SimplifiedProfile = Pick<Profile, 'displayName' | 'href' | 'images'>
