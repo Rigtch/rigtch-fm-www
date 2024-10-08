@@ -5,6 +5,7 @@ export * from './get-playback-state'
 export * from './get-recently-played'
 export * from './get-user'
 export * from './get-user-followers'
+export * from './get-user-following'
 
 export * from './post-me-user'
 
