@@ -1,4 +1,4 @@
-import type { Profile } from './profile'
+import type { Profile, SimplifiedProfile } from './profile'
 
 export interface User {
   id: string
@@ -6,4 +6,8 @@ export interface User {
   followersCount: number
   followingCount: number
   createdAt?: Date
+}
+
+export type SimplifiedUser = Pick<User, 'id'> & {
+  profile: SimplifiedProfile
 }
