@@ -54,6 +54,7 @@ module.exports = {
     'plugin:@next/next/recommended',
     'plugin:@typescript-eslint/strict-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
+    require.resolve('@vercel/style-guide/eslint/next'),
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
