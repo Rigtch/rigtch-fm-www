@@ -38,7 +38,7 @@ function ProfileAvatar({
             fallback={
               <AvatarFallback
                 className={cn(
-                  'flex h-full w-full items-center justify-center bg-primary text-primary-foreground',
+                  'flex h-full w-full items-center justify-center bg-primary text-white',
                   size === 'sm' && 'text-xl',
                   size === 'lg' && 'text-5xl'
                 )}
@@ -58,7 +58,7 @@ function ProfileAvatar({
         ) : (
           <AvatarFallback
             className={cn(
-              'flex h-full w-full items-center justify-center bg-primary text-primary-foreground',
+              'flex h-full w-full items-center justify-center bg-primary text-white',
               size === 'sm' && 'text-xl',
               size === 'lg' && 'text-5xl'
             )}
