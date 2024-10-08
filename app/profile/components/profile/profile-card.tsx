@@ -5,12 +5,13 @@ import { useState, type HTMLAttributes } from 'react'
 import { ProfileAvatar } from './profile-avatar'
 import { ShareButton } from './share-button'
 
+import { useToggleFollowing } from '@app/api/hooks'
 import type { Profile, User } from '@app/api/types'
 import { SpotifyLink } from '@app/components/common'
+import { LinkButton } from '@app/components/common/buttons'
 import { Button } from '@app/components/ui/button'
-import { findImage } from '@app/utils/find-image'
-import { useToggleFollowing } from '@app/api/hooks'
 import { cn } from '@app/utils/cn'
+import { findImage } from '@app/utils/find-image'
 
 namespace ProfileCard {
   export type Props = Pick<Profile, 'displayName' | 'images' | 'href'> &
@@ -64,8 +65,19 @@ function ProfileCard({
               </div>
 
               <div className="flex items-center gap-2 whitespace-nowrap text-lg leading-5 text-foreground">
-                <p>{followersCount} Followers</p>&bull;
-                <p>{followingCount} Following</p>
+                <LinkButton
+                  href={`/profile/${id}/followers`}
+                  className="font-normal"
+                >
+                  {followersCount} Followers
+                </LinkButton>
+                &bull;
+                <LinkButton
+                  href={`/profile/${id}/following`}
+                  className="font-normal"
+                >
+                  {followingCount} Following
+                </LinkButton>
                 {isFollowingYou && (
                   <>
                     &bull;
