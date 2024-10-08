@@ -6,7 +6,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-4"
+        class="flex flex-col gap-6"
       >
         <header
           class="flex items-center justify-between"
@@ -21,14 +21,14 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
           class="flex flex-col gap-4"
         >
           <div
-            class="flex flex-col gap-8"
+            class="align-center flex flex-col gap-8"
           >
             <div
-              class="flex w-full flex-wrap justify-center gap-4"
+              class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4"
             >
               <div>
                 <div
-                  class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                  class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
                 >
                   <img
                     alt="Darkthrone"
@@ -84,7 +84,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
               </div>
               <div>
                 <div
-                  class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                  class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
                 >
                   <img
                     alt="Darkthrone"
@@ -140,7 +140,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
               </div>
               <div>
                 <div
-                  class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                  class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
                 >
                   <img
                     alt="Darkthrone"
@@ -196,7 +196,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
               </div>
               <div>
                 <div
-                  class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                  class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
                 >
                   <img
                     alt="Darkthrone"
@@ -261,7 +261,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-6"
     >
       <header
         class="flex items-center justify-between"
@@ -276,14 +276,14 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
         class="flex flex-col gap-4"
       >
         <div
-          class="flex flex-col gap-8"
+          class="align-center flex flex-col gap-8"
         >
           <div
-            class="flex w-full flex-wrap justify-center gap-4"
+            class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4"
           >
             <div>
               <div
-                class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
               >
                 <img
                   alt="Darkthrone"
@@ -339,7 +339,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
             </div>
             <div>
               <div
-                class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
               >
                 <img
                   alt="Darkthrone"
@@ -395,7 +395,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
             </div>
             <div>
               <div
-                class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
               >
                 <img
                   alt="Darkthrone"
@@ -451,7 +451,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
             </div>
             <div>
               <div
-                class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
               >
                 <img
                   alt="Darkthrone"
@@ -573,7 +573,7 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-4"
+        class="flex flex-col gap-6"
       >
         <header
           class="flex items-center justify-between"
@@ -628,7 +628,7 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-6"
     >
       <header
         class="flex items-center justify-between"
@@ -740,7 +740,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-4"
+        class="flex flex-col gap-6"
       >
         <header
           class="flex items-center justify-between"
@@ -755,14 +755,14 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
           class="flex flex-col gap-4"
         >
           <div
-            class="flex flex-col gap-8"
+            class="align-center flex flex-col gap-8"
           >
             <div
-              class="flex w-full flex-wrap justify-center gap-4"
+              class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4"
             >
               <div>
                 <div
-                  class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                  class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
                 >
                   <img
                     alt="Track 1"
@@ -838,7 +838,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
               </div>
               <div>
                 <div
-                  class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                  class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
                 >
                   <img
                     alt="Track 1"
@@ -914,7 +914,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
               </div>
               <div>
                 <div
-                  class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                  class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
                 >
                   <img
                     alt="Track 1"
@@ -999,7 +999,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-6"
     >
       <header
         class="flex items-center justify-between"
@@ -1014,14 +1014,14 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
         class="flex flex-col gap-4"
       >
         <div
-          class="flex flex-col gap-8"
+          class="align-center flex flex-col gap-8"
         >
           <div
-            class="flex w-full flex-wrap justify-center gap-4"
+            class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4"
           >
             <div>
               <div
-                class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
               >
                 <img
                   alt="Track 1"
@@ -1097,7 +1097,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
             </div>
             <div>
               <div
-                class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
               >
                 <img
                   alt="Track 1"
@@ -1173,7 +1173,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
             </div>
             <div>
               <div
-                class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+                class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
               >
                 <img
                   alt="Track 1"
@@ -1315,7 +1315,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-4"
+        class="flex flex-col gap-6"
       >
         <header
           class="flex items-center justify-between"
@@ -1330,7 +1330,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
           class="flex flex-col gap-4"
         >
           <div
-            class="flex flex-col gap-8"
+            class="align-center flex flex-col gap-8"
           >
             <div
               class="flex flex-col"
@@ -1638,7 +1638,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-6"
     >
       <header
         class="flex items-center justify-between"
@@ -1653,7 +1653,7 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
         class="flex flex-col gap-4"
       >
         <div
-          class="flex flex-col gap-8"
+          class="align-center flex flex-col gap-8"
         >
           <div
             class="flex flex-col"
@@ -2018,7 +2018,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
   "baseElement": <body>
     <div>
       <section
-        class="flex flex-col gap-4"
+        class="flex flex-col gap-6"
       >
         <header
           class="flex items-center justify-between"
@@ -2033,7 +2033,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
           class="flex flex-col gap-4"
         >
           <div
-            class="flex flex-col gap-8"
+            class="align-center flex flex-col gap-8"
           >
             <div
               class="flex flex-col"
@@ -2341,7 +2341,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
   </body>,
   "container": <div>
     <section
-      class="flex flex-col gap-4"
+      class="flex flex-col gap-6"
     >
       <header
         class="flex items-center justify-between"
@@ -2356,7 +2356,7 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
         class="flex flex-col gap-4"
       >
         <div
-          class="flex flex-col gap-8"
+          class="align-center flex flex-col gap-8"
         >
           <div
             class="flex flex-col"

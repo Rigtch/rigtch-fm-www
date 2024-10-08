@@ -61,7 +61,7 @@ function ItemsList({
   if (isTop) sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])
 
   return (
-    <div className={cn('flex flex-col gap-8', className)}>
+    <div className={cn('align-center flex flex-col gap-8', className)}>
       {isTop && (
         <>
           <div className="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24">
@@ -95,7 +95,7 @@ function ItemsList({
       <div
         className={cn(
           isCard
-            ? 'flex w-full flex-wrap justify-center gap-4'
+            ? 'grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4'
             : 'flex flex-col'
         )}
       >

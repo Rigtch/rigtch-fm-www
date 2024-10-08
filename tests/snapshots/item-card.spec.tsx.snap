@@ -6,7 +6,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+        class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
       >
         <img
           alt="Album 1"
@@ -63,7 +63,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
   </body>,
   "container": <div>
     <div
-      class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+      class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
     >
       <img
         alt="Album 1"
@@ -177,7 +177,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+        class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
       >
         <img
           alt="Darkthrone"
@@ -234,7 +234,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
   </body>,
   "container": <div>
     <div
-      class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+      class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
     >
       <img
         alt="Darkthrone"
@@ -348,7 +348,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+        class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
       >
         <img
           alt="Track 1"
@@ -425,7 +425,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
   </body>,
   "container": <div>
     <div
-      class="border border-card text-card-foreground shadow flex flex-col gap-3 rounded-lg bg-neutral-800 p-4"
+      class="border border-card text-card-foreground shadow flex w-full flex-col gap-3 rounded-lg bg-neutral-800 p-4"
     >
       <img
         alt="Track 1"

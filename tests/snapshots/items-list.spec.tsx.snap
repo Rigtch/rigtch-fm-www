@@ -6,7 +6,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col gap-8"
+        class="align-center flex flex-col gap-8"
       >
         <div
           class="flex flex-col"
@@ -324,7 +324,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col gap-8"
+      class="align-center flex flex-col gap-8"
     >
       <div
         class="flex flex-col"
@@ -699,7 +699,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col gap-8"
+        class="align-center flex flex-col gap-8"
       >
         <div
           class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
@@ -1326,7 +1326,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col gap-8"
+      class="align-center flex flex-col gap-8"
     >
       <div
         class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
@@ -2010,7 +2010,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col gap-8"
+        class="align-center flex flex-col gap-8"
       >
         <div
           class="flex flex-col"
@@ -2328,7 +2328,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col gap-8"
+      class="align-center flex flex-col gap-8"
     >
       <div
         class="flex flex-col"
@@ -2703,7 +2703,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col gap-8"
+        class="align-center flex flex-col gap-8"
       >
         <div
           class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
@@ -3330,7 +3330,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col gap-8"
+      class="align-center flex flex-col gap-8"
     >
       <div
         class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
@@ -4014,7 +4014,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col gap-8"
+        class="align-center flex flex-col gap-8"
       >
         <div
           class="flex flex-col"
@@ -4432,7 +4432,7 @@ exports[`ItemsList > should match snapshot with position 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col gap-8"
+      class="align-center flex flex-col gap-8"
     >
       <div
         class="flex flex-col"
@@ -4907,7 +4907,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col gap-8"
+        class="align-center flex flex-col gap-8"
       >
         <div
           class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
@@ -6077,7 +6077,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col gap-8"
+      class="align-center flex flex-col gap-8"
     >
       <div
         class="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24"
@@ -7304,7 +7304,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col gap-8"
+        class="align-center flex flex-col gap-8"
       >
         <div
           class="flex flex-col"
@@ -7722,7 +7722,7 @@ exports[`ItemsList > should match snapshot with position size 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col gap-8"
+      class="align-center flex flex-col gap-8"
     >
       <div
         class="flex flex-col"
@@ -8197,7 +8197,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col gap-8"
+        class="align-center flex flex-col gap-8"
       >
         <div
           class="flex flex-col"
@@ -8500,7 +8500,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col gap-8"
+      class="align-center flex flex-col gap-8"
     >
       <div
         class="flex flex-col"
