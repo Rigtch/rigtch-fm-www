@@ -20,7 +20,7 @@
     "test:ui": "vitest --ui",
     "test:update": "vitest -u",
     "test:coverage": "vitest run --coverage",
-    "shadcn-ui": "npx shadcn-ui@latest",
+    "ui": "npx shadcn@latest",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
