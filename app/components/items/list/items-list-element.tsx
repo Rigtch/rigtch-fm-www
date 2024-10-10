@@ -123,7 +123,10 @@ function ItemsListElement({
             />
           )}
 
-          <ItemImage images={images ?? album} alt={name} size={48} />
+          {images && (
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+            <ItemImage images={images ?? album} alt={name} size={48} />
+          )}
 
           <div className="flex w-full flex-col items-start overflow-hidden">
             <LinkButton
