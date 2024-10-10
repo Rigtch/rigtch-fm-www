@@ -67,6 +67,7 @@ function ProfileCard({
               <div className="flex items-center gap-2 whitespace-nowrap text-lg leading-5 text-foreground">
                 <LinkButton
                   href={`/profile/${id}/followers`}
+                  replace
                   className="font-normal"
                 >
                   {followersCount} Followers
@@ -74,6 +75,7 @@ function ProfileCard({
                 &bull;
                 <LinkButton
                   href={`/profile/${id}/following`}
+                  replace
                   className="font-normal"
                 >
                   {followingCount} Following
