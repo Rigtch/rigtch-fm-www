@@ -58,6 +58,7 @@ function FollowersFollowingDialog({
                 <Link
                   href={`/profile/${id}/${tab.toLowerCase()}`}
                   as={`/profile/${id}/${tab.toLowerCase()}`}
+                  replace
                   prefetch
                 >
                   {tab}
