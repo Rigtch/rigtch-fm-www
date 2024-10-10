@@ -7,6 +7,7 @@ export function getUser(token: string, { userId }: UsersParams) {
     token,
     next: {
       tags: ['user'],
+      revalidate: 3600,
     },
   }).then(({ createdAt, ...user }) => ({
     ...user,
