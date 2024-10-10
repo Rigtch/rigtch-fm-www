@@ -29,7 +29,7 @@ export default {
 
 export const Default: PlaybackToggleStateButtonStory = {
   render: args => {
-    // eslint-disable-next-line sonarjs/pluginRules-of-hooks
+    // eslint-disable-next-line sonarjs/rules-of-hooks
     const [isPlaying, setIsPlaying] = useState(args.isPlaying)
 
     return (

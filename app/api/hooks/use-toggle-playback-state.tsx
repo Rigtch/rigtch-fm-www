@@ -10,9 +10,11 @@ export const useTogglePlaybackStateQuery = () => {
   const token = useToken()
 
   function toggle(isPlaying = false) {
-    return isPlaying
-      ? putPlayerPause(token ?? '', { userId })
-      : putPlayerResume(token ?? '', { userId })
+    if (isPlaying) {
+      return putPlayerPause(token ?? '', { userId })
+    }
+
+    return putPlayerResume(token ?? '', { userId })
   }
 
   return {
