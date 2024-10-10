@@ -37,7 +37,7 @@ function FollowersFollowingDialog({
       defaultOpen={true}
       open={true}
       onOpenChange={isOpen => {
-        if (!isOpen) router.push(`/profile/${id}`)
+        if (!isOpen) router.back()
       }}
     >
       <DialogContent className="dark" animate={false}>
