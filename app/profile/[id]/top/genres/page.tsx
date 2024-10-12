@@ -1,4 +1,5 @@
 import { getUser } from '@app/api/fetchers'
+import { getReportsTotalGenres } from '@app/api/fetchers/reports'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
 import type { RigtchStatsResponse } from '@app/api/types'
@@ -29,6 +30,8 @@ export default async function ProfileTopGenresPage({
   searchParams,
   params,
 }: ProfilePageProps) {
+  const limit = 50
+
   const userId = validateId(params.id)
   const token = await getServerToken(userId)
 
@@ -40,9 +43,7 @@ export default async function ProfileTopGenresPage({
     searchParams[STATS_PROVIDER],
     createdAt
   )
-  const statsMeasurement = validateStatsMeasurement(
-    searchParams[STATS_MEASUREMENT]
-  )
+  const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
   const timeRange = validateTimeRange(
     searchParams[TIME_RANGE],
     statsProvider,
@@ -50,17 +51,29 @@ export default async function ProfileTopGenresPage({
   )
 
   let items: string[] | RigtchStatsResponse<string>
+  let total: number | undefined = undefined
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopGenres(token, {
-      limit: 100,
-      after: afterParamFactory(timeRange as RigtchTimeRange),
-      userId,
-      measurement: statsMeasurement,
-    })
+    const after = afterParamFactory(timeRange as RigtchTimeRange)
+
+    const [response, totalResponse] = await Promise.all([
+      getRigtchTopGenres(token, {
+        after,
+        userId,
+        limit,
+        measurement,
+      }),
+      getReportsTotalGenres(token, {
+        userId,
+        after,
+      }),
+    ])
+
+    items = response
+    total = totalResponse.total
   } else {
     const { genres } = await getSpotifyTopGenres(token, {
-      limit: 50,
+      limit,
       timeRange: timeRange as SpotifyTimeRange,
       userId,
     })
@@ -68,5 +81,5 @@ export default async function ProfileTopGenresPage({
     items = genres
   }
 
-  return <TopGenresSection items={items} />
+  return <TopGenresSection items={items} total={total} />
 }

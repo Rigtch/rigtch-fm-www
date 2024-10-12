@@ -1,4 +1,5 @@
 import { getUser } from '@app/api/fetchers'
+import { getReportsTotalArtists } from '@app/api/fetchers/reports'
 import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopArtists } from '@app/api/fetchers/stats/spotify'
 import type { ArtistEntity, RigtchStatsResponse } from '@app/api/types'
@@ -42,9 +43,7 @@ export default async function ProfileTopArtistsPage({
     searchParams[STATS_PROVIDER],
     createdAt
   )
-  const statsMeasurement = validateStatsMeasurement(
-    searchParams[STATS_MEASUREMENT]
-  )
+  const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
   const timeRange = validateTimeRange(
     searchParams[TIME_RANGE],
     statsProvider,
@@ -53,14 +52,26 @@ export default async function ProfileTopArtistsPage({
   const view = validateView(searchParams[VIEW])
 
   let items: ArtistEntity[] | RigtchStatsResponse<ArtistEntity>
+  let total: number | undefined = undefined
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopArtists(token, {
-      after: afterParamFactory(timeRange as RigtchTimeRange),
-      userId,
-      limit: 100,
-      measurement: statsMeasurement,
-    })
+    const after = afterParamFactory(timeRange as RigtchTimeRange)
+
+    const [response, totalResponse] = await Promise.all([
+      getRigtchTopArtists(token, {
+        after,
+        userId,
+        limit: 10,
+        measurement,
+      }),
+      getReportsTotalArtists(token, {
+        userId,
+        after,
+      }),
+    ])
+
+    items = response
+    total = totalResponse.total
   } else {
     const { items: responseFirstPart } = await getSpotifyTopArtists(token, {
       timeRange: timeRange as SpotifyTimeRange,
@@ -80,5 +91,7 @@ export default async function ProfileTopArtistsPage({
     items = responseFirstPart.concat(responseSecondPart)
   }
 
-  return <ItemsSection items={items} title="Top Artists" view={view} />
+  return (
+    <ItemsSection items={items} title="Top Artists" view={view} total={total} />
+  )
 }
