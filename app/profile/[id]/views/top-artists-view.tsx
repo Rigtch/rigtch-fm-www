@@ -1,5 +1,6 @@
 import type { ProfileOverviewViewProps } from './types/props'
 
+import { getReportsTotalArtists } from '@app/api/fetchers/reports'
 import { getRigtchTopArtists } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopArtists } from '@app/api/fetchers/stats/spotify'
 import type { ArtistEntity, RigtchStatsResponse } from '@app/api/types'
@@ -21,14 +22,26 @@ export async function TopArtistsView({
   view,
 }: ProfileOverviewViewProps) {
   let items: ArtistEntity[] | RigtchStatsResponse<ArtistEntity>
+  let total: number | undefined = undefined
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopArtists(token, {
-      after: afterParamFactory(timeRange as RigtchTimeRange),
-      userId,
-      limit: 10,
-      measurement,
-    })
+    const after = afterParamFactory(timeRange as RigtchTimeRange)
+
+    const [response, totalResponse] = await Promise.all([
+      getRigtchTopArtists(token, {
+        after,
+        userId,
+        limit: 10,
+        measurement,
+      }),
+      getReportsTotalArtists(token, {
+        userId,
+        after,
+      }),
+    ])
+
+    items = response
+    total = totalResponse.total
   } else {
     const response = await getSpotifyTopArtists(token, {
       timeRange: timeRange as SpotifyTimeRange,
@@ -40,7 +53,7 @@ export async function TopArtistsView({
   }
 
   return (
-    <ItemsSection items={items} title="Top Artists" view={view}>
+    <ItemsSection items={items} title="Top Artists" view={view} total={total}>
       <SeeMoreButton href={`/profile/${userId}/top/artists`} />
     </ItemsSection>
   )

@@ -1,4 +1,5 @@
 import { getUser } from '@app/api/fetchers'
+import { getReportsTotalAlbums } from '@app/api/fetchers/reports'
 import { getRigtchTopAlbums } from '@app/api/fetchers/stats/rigtch'
 import { getServerToken } from '@app/auth'
 import { STATS_MEASUREMENT, TIME_RANGE, VIEW } from '@app/profile/constants'
@@ -35,13 +36,22 @@ export default async function ProfileTopAlbumsPage({
     createdAt
   )
   const view = validateView(searchParams[VIEW])
+  const after = afterParamFactory(timeRange as RigtchTimeRange)
 
-  const items = await getRigtchTopAlbums(token, {
-    after: afterParamFactory(timeRange as RigtchTimeRange),
-    userId,
-    limit: 100,
-    measurement: statsMeasurement,
-  })
+  const [items, { total }] = await Promise.all([
+    getRigtchTopAlbums(token, {
+      after: afterParamFactory(timeRange as RigtchTimeRange),
+      userId,
+      limit: 100,
+      measurement: statsMeasurement,
+    }),
+    getReportsTotalAlbums(token, {
+      userId,
+      after,
+    }),
+  ])
 
-  return <ItemsSection items={items} title="Top Albums" view={view} />
+  return (
+    <ItemsSection items={items} title="Top Albums" view={view} total={total} />
+  )
 }

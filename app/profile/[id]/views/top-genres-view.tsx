@@ -1,13 +1,13 @@
+import type { ProfileOverviewViewProps } from './types/props'
+
 import {
   StatsProvider,
   type RigtchTimeRange,
   type SpotifyTimeRange,
-} from '../../enums'
-import { TopGenresSection } from '../../sections'
-import { afterParamFactory } from '../../utils/factories'
-
-import type { ProfileOverviewViewProps } from './types/props'
-
+} from '@app/profile/enums'
+import { TopGenresSection } from '@app/profile/sections'
+import { afterParamFactory } from '@app/profile/utils/factories'
+import { getReportsTotalGenres } from '@app/api/fetchers/reports'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopGenres } from '@app/api/fetchers/stats/spotify'
 import type { RigtchStatsResponse } from '@app/api/types'
@@ -23,14 +23,26 @@ export async function TopGenresView({
   const limit = 20
 
   let items: string[] | RigtchStatsResponse<string>
+  let total: number | undefined = undefined
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopGenres(token, {
-      after: afterParamFactory(timeRange as RigtchTimeRange),
-      userId,
-      limit,
-      measurement,
-    })
+    const after = afterParamFactory(timeRange as RigtchTimeRange)
+
+    const [response, totalResponse] = await Promise.all([
+      getRigtchTopGenres(token, {
+        after,
+        userId,
+        limit,
+        measurement,
+      }),
+      getReportsTotalGenres(token, {
+        userId,
+        after,
+      }),
+    ])
+
+    items = response
+    total = totalResponse.total
   } else {
     const { genres } = await getSpotifyTopGenres(token, {
       timeRange: timeRange as SpotifyTimeRange,
@@ -42,7 +54,7 @@ export async function TopGenresView({
   }
 
   return (
-    <TopGenresSection items={items}>
+    <TopGenresSection items={items} total={total}>
       <SeeMoreButton href={`/profile/${userId}/top/genres`} />
     </TopGenresSection>
   )

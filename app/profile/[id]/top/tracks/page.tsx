@@ -1,4 +1,5 @@
 import { getUser } from '@app/api/fetchers'
+import { getReportsTotalTracks } from '@app/api/fetchers/reports'
 import { getRigtchTopTracks } from '@app/api/fetchers/stats/rigtch'
 import { getSpotifyTopTracks } from '@app/api/fetchers/stats/spotify'
 import type { RigtchStatsResponse, TrackEntity } from '@app/api/types'
@@ -42,9 +43,7 @@ export default async function ProfileTopTracksPage({
     searchParams[STATS_PROVIDER],
     createdAt
   )
-  const statsMeasurement = validateStatsMeasurement(
-    searchParams[STATS_MEASUREMENT]
-  )
+  const measurement = validateStatsMeasurement(searchParams[STATS_MEASUREMENT])
   const timeRange = validateTimeRange(
     searchParams[TIME_RANGE],
     statsProvider,
@@ -53,14 +52,26 @@ export default async function ProfileTopTracksPage({
   const view = validateView(searchParams[VIEW])
 
   let items: TrackEntity[] | RigtchStatsResponse<TrackEntity>
+  let total: number | undefined = undefined
 
   if (statsProvider === StatsProvider.RIGTCH) {
-    items = await getRigtchTopTracks(token, {
-      after: afterParamFactory(timeRange as RigtchTimeRange),
-      userId,
-      limit: 100,
-      measurement: statsMeasurement,
-    })
+    const after = afterParamFactory(timeRange as RigtchTimeRange)
+
+    const [response, totalResponse] = await Promise.all([
+      getRigtchTopTracks(token, {
+        after,
+        userId,
+        limit: 10,
+        measurement,
+      }),
+      getReportsTotalTracks(token, {
+        userId,
+        after,
+      }),
+    ])
+
+    items = response
+    total = totalResponse.total
   } else {
     const { items: responseFirstPart } = await getSpotifyTopTracks(token, {
       timeRange: timeRange as SpotifyTimeRange,
@@ -81,5 +92,7 @@ export default async function ProfileTopTracksPage({
     items = responseFirstPart.concat(responseSecondPart)
   }
 
-  return <ItemsSection items={items} title="Top Tracks" view={view} />
+  return (
+    <ItemsSection items={items} title="Top Tracks" view={view} total={total} />
+  )
 }
