@@ -37,6 +37,7 @@ namespace ItemsList {
       lastItemSeparator?: boolean
       isRounded?: boolean
       genresDisplayLength?: number
+      showImage?: boolean
     }
   >
 }
@@ -46,6 +47,7 @@ function ItemsList({
   isTop,
   positionSize,
   className,
+  showImage = false,
   positionClassName,
   lastItemSeparator = false,
   isRounded = false,
@@ -96,6 +98,7 @@ function ItemsList({
             {/* @ts-expect-error: conditional types are already handled */}
             <ItemsListElement
               {...item}
+              showImage={showImage}
               genresDisplayLength={genresDisplayLength}
               positionSize={positionSize}
               positionClassName={positionClassName}
