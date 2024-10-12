@@ -117,51 +117,51 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
       <div
         class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
         style="--color-bg: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   }; --color-border: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   };"
       />
       <div
@@ -189,51 +189,51 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
     <div
       class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
       style="--color-bg: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   }; --color-border: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   };"
     />
     <div
@@ -318,51 +318,51 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
       <div
         class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
         style="--color-bg: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   }; --color-border: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   };"
       />
       <div
@@ -390,51 +390,51 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
     <div
       class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
       style="--color-bg: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   }; --color-border: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   };"
     />
     <div
@@ -519,51 +519,51 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
       <div
         class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
         style="--color-bg: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   }; --color-border: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   };"
       />
       <div
@@ -591,51 +591,51 @@ exports[`chartTooltipContentFormatter > should return formatted tooltip content 
     <div
       class="h-2.5 w-2.5 shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
       style="--color-bg: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   }; --color-border: function(...s) {
-    let r = T(t);
+    let r = I(t);
     r.called = !0, r.callCount++, r.calls.push(s);
-    let S = r.next.shift();
-    if (S) {
-      r.results.push(S);
-      let [o, g] = S;
+    let R = r.next.shift();
+    if (R) {
+      r.results.push(R);
+      let [o, l] = R;
       if (o === "ok")
-        return g;
-      throw g;
+        return l;
+      throw l;
     }
-    let p, c = "ok", a = r.results.length;
+    let i, c = "ok", a = r.results.length;
     if (r.impl)
       try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), c = "ok";
+        new.target ? i = Reflect.construct(r.impl, s, new.target) : i = r.impl.apply(this, s), c = "ok";
       } catch (o) {
-        throw p = o, c = "error", r.results.push([c, o]), o;
+        throw i = o, c = "error", r.results.push([c, o]), o;
       }
-    let R = [c, p];
-    return w(p) && p.then(
+    let S = [c, i];
+    return w(i) && i.then(
       (o) => r.resolves[a] = ["ok", o],
       (o) => r.resolves[a] = ["error", o]
-    ), r.results.push(R), p;
+    ), r.results.push(S), i;
   };"
     />
     <div

@@ -9,10 +9,10 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
         class="flex flex-col gap-4"
       >
         <header
-          class="flex items-center justify-between"
+          class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
         >
           <h2
-            class="text-4xl"
+            class="text-nowrap text-4xl"
           >
             Top Items
           </h2>
@@ -1199,10 +1199,10 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
       class="flex flex-col gap-4"
     >
       <header
-        class="flex items-center justify-between"
+        class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
       >
         <h2
-          class="text-4xl"
+          class="text-nowrap text-4xl"
         >
           Top Items
         </h2>
@@ -2446,10 +2446,10 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
         class="flex flex-col gap-4"
       >
         <header
-          class="flex items-center justify-between"
+          class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
         >
           <h2
-            class="text-4xl"
+            class="text-nowrap text-4xl"
           >
             Top Items
           </h2>
@@ -2501,10 +2501,10 @@ exports[`ItemsSection > should match snapshot with no data 1`] = `
       class="flex flex-col gap-4"
     >
       <header
-        class="flex items-center justify-between"
+        class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
       >
         <h2
-          class="text-4xl"
+          class="text-nowrap text-4xl"
         >
           Top Items
         </h2>
@@ -2613,10 +2613,10 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
         class="flex flex-col gap-4"
       >
         <header
-          class="flex items-center justify-between"
+          class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
         >
           <h2
-            class="text-4xl"
+            class="text-nowrap text-4xl"
           >
             Top Items
           </h2>
@@ -3638,10 +3638,10 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
       class="flex flex-col gap-4"
     >
       <header
-        class="flex items-center justify-between"
+        class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
       >
         <h2
-          class="text-4xl"
+          class="text-nowrap text-4xl"
         >
           Top Items
         </h2>
@@ -4720,10 +4720,10 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
         class="flex flex-col gap-4"
       >
         <header
-          class="flex items-center justify-between"
+          class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
         >
           <h2
-            class="text-4xl"
+            class="text-nowrap text-4xl"
           >
             Top Items
           </h2>
@@ -5031,10 +5031,10 @@ exports[`ItemsSection > should match snapshot with view list 1`] = `
       class="flex flex-col gap-4"
     >
       <header
-        class="flex items-center justify-between"
+        class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
       >
         <h2
-          class="text-4xl"
+          class="text-nowrap text-4xl"
         >
           Top Items
         </h2>
@@ -5399,10 +5399,10 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
         class="flex flex-col gap-4"
       >
         <header
-          class="flex items-center justify-between"
+          class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
         >
           <h2
-            class="text-4xl"
+            class="text-nowrap text-4xl"
           >
             Top Items
           </h2>
@@ -5710,10 +5710,10 @@ exports[`ItemsSection > should match snapshot with view list and relative time 1
       class="flex flex-col gap-4"
     >
       <header
-        class="flex items-center justify-between"
+        class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
       >
         <h2
-          class="text-4xl"
+          class="text-nowrap text-4xl"
         >
           Top Items
         </h2>

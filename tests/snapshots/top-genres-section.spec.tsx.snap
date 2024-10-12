@@ -9,10 +9,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
         class="flex flex-col gap-4"
       >
         <header
-          class="flex items-center justify-between"
+          class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
         >
           <h2
-            class="text-4xl"
+            class="text-nowrap text-4xl"
           >
             Top Genres
           </h2>
@@ -84,10 +84,10 @@ exports[`TopGenresSection > should match snapshot 1`] = `
       class="flex flex-col gap-4"
     >
       <header
-        class="flex items-center justify-between"
+        class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
       >
         <h2
-          class="text-4xl"
+          class="text-nowrap text-4xl"
         >
           Top Genres
         </h2>
@@ -216,10 +216,10 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
         class="flex flex-col gap-4"
       >
         <header
-          class="flex items-center justify-between"
+          class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
         >
           <h2
-            class="text-4xl"
+            class="text-nowrap text-4xl"
           >
             Top Genres
           </h2>
@@ -271,10 +271,10 @@ exports[`TopGenresSection > should match snapshot with no data 1`] = `
       class="flex flex-col gap-4"
     >
       <header
-        class="flex items-center justify-between"
+        class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between"
       >
         <h2
-          class="text-4xl"
+          class="text-nowrap text-4xl"
         >
           Top Genres
         </h2>
