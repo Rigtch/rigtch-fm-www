@@ -324,6 +324,18 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
             >
               1
             </span>
+            <img
+              alt="Track 1"
+              class="rounded-md"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+              style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+              width="48"
+            />
             <div
               class="flex w-full flex-col items-start overflow-hidden"
             >
@@ -436,6 +448,18 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
           >
             1
           </span>
+          <img
+            alt="Track 1"
+            class="rounded-md"
+            data-nimg="1"
+            decoding="async"
+            height="48"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fspotify.com%2Fimage.png&w=96&q=75 2x"
+            style="color: transparent; min-height: 48px; max-height: 48px; min-width: 48px; max-width: 48px; object-fit: cover;"
+            width="48"
+          />
           <div
             class="flex w-full flex-col items-start overflow-hidden"
           >

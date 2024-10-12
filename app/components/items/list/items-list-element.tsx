@@ -58,6 +58,7 @@ namespace ItemsListElement {
         ) &
         Pick<AlbumEntity, 'name' | 'href' | 'id'> & {
           genresDisplayLength?: number
+          showImage?: boolean
         } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
   >
@@ -68,6 +69,7 @@ function ItemsListElement({
   name,
   images,
   href,
+  showImage,
   position,
   positionSize,
   positionClassName,
@@ -123,14 +125,13 @@ function ItemsListElement({
             />
           )}
 
-          {images && (
-            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+          {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
+          {(images ?? album ?? showImage) && (
             <ItemImage images={images ?? album} alt={name} size={48} />
           )}
-
           <div className="flex w-full flex-col items-start overflow-hidden">
             <LinkButton
-              href={`/${artists ? (album ? 'track' : 'album') : 'artist'}/${id}`}
+              href={`/${artists ? (album || href.includes('track') ? 'track' : 'album') : 'artist'}/${id}`}
               className="inline-grid p-0 leading-5"
             >
               <h3 className="truncate text-xl md:text-2xl">{name}</h3>
