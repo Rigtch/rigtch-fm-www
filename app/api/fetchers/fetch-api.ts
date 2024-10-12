@@ -31,7 +31,7 @@ export async function fetchApi<TData, TBody = unknown>(
       }),
     },
     body: JSON.stringify(body),
-    cache,
+    ...(!next?.revalidate && { cache }),
     next,
   })
 
