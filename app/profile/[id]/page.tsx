@@ -29,6 +29,7 @@ import {
   TopArtistsView,
   TopGenresView,
   TopTracksView,
+  TotalReportView,
 } from './views'
 import type { ProfileOverviewViewProps } from './views/types/props'
 
@@ -74,6 +75,10 @@ export default async function ProfilePage({
 
   return (
     <>
+      <Suspense>
+        <TotalReportView token={token} userId={userId} createdAt={createdAt} />
+      </Suspense>
+
       <div className="xl:my-4">
         <StatsOptions {...viewProps} userCreatedAt={userCreatedAt} />
       </div>

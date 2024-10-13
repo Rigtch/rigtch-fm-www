@@ -1,3 +1,4 @@
+export * from './total-report-view'
 export * from './top-genres-view'
 export * from './top-artists-view'
 export * from './top-albums-view'
