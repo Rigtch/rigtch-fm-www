@@ -38,6 +38,7 @@ namespace ItemsList {
       isRounded?: boolean
       genresDisplayLength?: number
       showImage?: boolean
+      highlight?: string
     }
   >
 }
@@ -52,6 +53,7 @@ function ItemsList({
   lastItemSeparator = false,
   isRounded = false,
   genresDisplayLength = 3,
+  highlight,
 }: ItemsList.Props) {
   const sortedItems: (ArtistEntity | TrackEntity | AlbumEntity)[] =
     formatItems(items)
@@ -98,6 +100,7 @@ function ItemsList({
             {/* @ts-expect-error: conditional types are already handled */}
             <ItemsListElement
               {...item}
+              highlight={item.id === highlight}
               showImage={showImage}
               genresDisplayLength={genresDisplayLength}
               positionSize={positionSize}

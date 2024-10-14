@@ -376,7 +376,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
           >
             <a
               class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-              href="/track/123"
+              href="/album/123"
             >
               <p
                 class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -529,7 +529,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
         >
           <a
             class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-            href="/track/123"
+            href="/album/123"
           >
             <p
               class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -739,7 +739,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
           >
             <a
               class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-              href="/track/123"
+              href="/album/123"
             >
               <p
                 class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -898,7 +898,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
         >
           <a
             class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-            href="/track/123"
+            href="/album/123"
           >
             <p
               class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1114,7 +1114,7 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
           >
             <a
               class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-              href="/track/123"
+              href="/album/123"
             >
               <p
                 class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1170,7 +1170,7 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
         >
           <a
             class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-            href="/track/123"
+            href="/album/123"
           >
             <p
               class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1283,7 +1283,7 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
           >
             <a
               class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-              href="/track/123"
+              href="/album/123"
             >
               <p
                 class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1364,7 +1364,7 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
         >
           <a
             class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-            href="/track/123"
+            href="/album/123"
           >
             <p
               class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1502,7 +1502,7 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
           >
             <a
               class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-              href="/track/123"
+              href="/album/123"
             >
               <p
                 class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1583,7 +1583,7 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
         >
           <a
             class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-            href="/track/123"
+            href="/album/123"
           >
             <p
               class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
