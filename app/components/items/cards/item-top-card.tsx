@@ -76,7 +76,7 @@ function ItemTopCard({
         <div className="flex flex-col items-center">
           <ItemName
             name={name}
-            href={`/${artists ? (album ? 'track' : 'album') : 'artist'}/${id}`}
+            href={`/${artists ? 'album' : 'artist'}/${id}`}
             className="text-2xl"
           />
 

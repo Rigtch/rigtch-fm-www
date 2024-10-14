@@ -59,6 +59,7 @@ namespace ItemsListElement {
         Pick<AlbumEntity, 'name' | 'href' | 'id'> & {
           genresDisplayLength?: number
           showImage?: boolean
+          highlight?: boolean
         } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
   >
@@ -83,6 +84,7 @@ function ItemsListElement({
   maxPlays,
   className,
   genresDisplayLength = 3,
+  highlight,
 }: ItemsListElement.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
@@ -97,7 +99,13 @@ function ItemsListElement({
   }, [plays, playTime, maxPlays, maxPlayTime])
 
   return (
-    <div className={cn('relative overflow-hidden', className)}>
+    <div
+      className={cn(
+        'relative overflow-hidden',
+        className,
+        highlight && 'bg-black'
+      )}
+    >
       {(plays ?? playTime) && (
         <div
           className={cn(
@@ -131,7 +139,7 @@ function ItemsListElement({
           )}
           <div className="flex w-full flex-col items-start overflow-hidden">
             <LinkButton
-              href={`/${artists ? (album || href.includes('track') ? 'track' : 'album') : 'artist'}/${id}`}
+              href={`/${artists ? 'album' : 'artist'}/${id}`}
               className="inline-grid p-0 leading-5"
             >
               <h3 className="truncate text-xl md:text-2xl">{name}</h3>
