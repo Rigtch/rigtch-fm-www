@@ -103,7 +103,7 @@ function ItemsListElement({
       className={cn(
         'relative overflow-hidden',
         className,
-        highlight && 'bg-black'
+        highlight && 'bg-primary-lighter'
       )}
     >
       {(plays ?? playTime) && (
@@ -134,7 +134,7 @@ function ItemsListElement({
           )}
 
           {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
-          {(images ?? album ?? showImage) && (
+          {(images ?? album.images ?? showImage) && (
             <ItemImage images={images ?? album} alt={name} size={48} />
           )}
           <div className="flex w-full flex-col items-start overflow-hidden">
