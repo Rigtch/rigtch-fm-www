@@ -341,7 +341,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
             >
               <a
                 class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                href="/album/123"
+                href="/album/undefined?highlighted-track-id=123"
               >
                 <h3
                   class="truncate text-xl md:text-2xl"
@@ -465,7 +465,7 @@ exports[`ItemsListElement > should match snapshot with artists and albums 1`] = 
           >
             <a
               class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-              href="/album/123"
+              href="/album/undefined?highlighted-track-id=123"
             >
               <h3
                 class="truncate text-xl md:text-2xl"

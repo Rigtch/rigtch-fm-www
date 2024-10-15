@@ -1,6 +1,5 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
 import type { HtmlHTMLAttributes } from 'react'
 
 import { ItemTopCard } from '../cards'
@@ -38,7 +37,8 @@ namespace ItemsList {
       lastItemSeparator?: boolean
       isRounded?: boolean
       genresDisplayLength?: number
-      showImage?: boolean
+      hideImage?: boolean
+      highlightedTrackId?: string
     }
   >
 }
@@ -48,21 +48,19 @@ function ItemsList({
   isTop,
   positionSize,
   className,
-  showImage = false,
+  hideImage = false,
   positionClassName,
   lastItemSeparator = false,
   isRounded = false,
   genresDisplayLength = 3,
+  highlightedTrackId,
 }: ItemsList.Props) {
-  const searchParams = useSearchParams()
   const sortedItems: (ArtistEntity | TrackEntity | AlbumEntity)[] =
     formatItems(items)
 
   const carouselItems = sortedItems.slice(0, 3)
 
   if (isTop) sortedItems.splice(0, 2, sortedItems[1], sortedItems[0])
-
-  const highlightedTrackId = searchParams.get('highlighted-track-id')
 
   return (
     <div className={cn('flex flex-col gap-8', className)}>
@@ -103,7 +101,7 @@ function ItemsList({
             <ItemsListElement
               {...item}
               highlighted={item.id == highlightedTrackId}
-              showImage={showImage}
+              hideImage={hideImage}
               genresDisplayLength={genresDisplayLength}
               positionSize={positionSize}
               positionClassName={positionClassName}
