@@ -1,15 +1,13 @@
 import { FaCompactDisc } from 'react-icons/fa'
 
 import { ItemHeaderSection } from '@app/(items)/sections'
-import { getAlbum, getTrack } from '@app/api/fetchers/items'
+import { getAlbum } from '@app/api/fetchers/items'
 import { ItemsList } from '@app/components/items/list'
 import type { PageWithIdParamProps } from '@app/types'
 import { validateId } from '@app/utils/validators'
 
 export default async function AlbumPage({ params }: PageWithIdParamProps) {
   const id = validateId(params.id)
-
-  const { album } = await getTrack({ id })
 
   const {
     name,
@@ -21,7 +19,7 @@ export default async function AlbumPage({ params }: PageWithIdParamProps) {
     tracks,
     copyrights,
     label,
-  } = await getAlbum({ id: album.id })
+  } = await getAlbum({ id })
 
   const options: Intl.DateTimeFormatOptions = {
     month: releaseDatePrecision === 'year' ? undefined : 'long',
@@ -79,7 +77,7 @@ export default async function AlbumPage({ params }: PageWithIdParamProps) {
               </div>
             )}
 
-            <ItemsList items={disc} highlight={id} />
+            <ItemsList items={disc} />
           </div>
         ))}
       </div>

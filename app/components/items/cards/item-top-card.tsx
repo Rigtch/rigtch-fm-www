@@ -20,7 +20,7 @@ interface ItemTopCardAlbum extends Pick<AlbumEntity, 'images' | 'genres'> {
 
 interface ItemTopCardTrack {
   artists: Pick<ArtistEntity, 'id' | 'name'>[]
-  album: Pick<AlbumEntity, 'images'>
+  album: Pick<AlbumEntity, 'images' | 'id'>
   images?: never
   genres?: never
 }
@@ -76,7 +76,11 @@ function ItemTopCard({
         <div className="flex flex-col items-center">
           <ItemName
             name={name}
-            href={`/${artists ? 'album' : 'artist'}/${id}`}
+            href={
+              album?.id
+                ? `/album/${album.id}?highlighted-track-id=${id}`
+                : `/${artists ? 'album' : 'artist'}/${id}`
+            }
             className="text-2xl"
           />
 
