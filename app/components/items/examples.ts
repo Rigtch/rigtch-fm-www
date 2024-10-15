@@ -8,6 +8,7 @@ export const trackExample = {
   name: 'In Search for New Wisdom',
   href: 'https://open.spotify.com/track/0QBcteLxmPLG4gAXc1pEqW',
   album: {
+    id: '1',
     images: [
       {
         height: 300,
