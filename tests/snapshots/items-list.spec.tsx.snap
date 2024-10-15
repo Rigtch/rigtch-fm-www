@@ -47,7 +47,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/123"
+                      href="/album/undefined?highlighted-track-id=123"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -147,7 +147,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/2"
+                      href="/album/undefined?highlighted-track-id=2"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -247,7 +247,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/3"
+                      href="/album/undefined?highlighted-track-id=3"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -353,7 +353,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/123"
+                    href="/album/undefined?highlighted-track-id=123"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"
@@ -453,7 +453,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/2"
+                    href="/album/undefined?highlighted-track-id=2"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"
@@ -553,7 +553,7 @@ exports[`ItemsList > should match snapshot with playTime 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/3"
+                    href="/album/undefined?highlighted-track-id=3"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"
@@ -710,7 +710,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                 >
                   <a
                     class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                    href="/album/2"
+                    href="/album/undefined?highlighted-track-id=2"
                   >
                     <p
                       class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -793,7 +793,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                 >
                   <a
                     class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                    href="/album/123"
+                    href="/album/undefined?highlighted-track-id=123"
                   >
                     <p
                       class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -880,7 +880,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                 >
                   <a
                     class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                    href="/album/3"
+                    href="/album/undefined?highlighted-track-id=3"
                   >
                     <p
                       class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -982,7 +982,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     >
                       <a
                         class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                        href="/album/123"
+                        href="/album/undefined?highlighted-track-id=123"
                       >
                         <p
                           class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1071,7 +1071,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     >
                       <a
                         class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                        href="/album/2"
+                        href="/album/undefined?highlighted-track-id=2"
                       >
                         <p
                           class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1160,7 +1160,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                     >
                       <a
                         class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                        href="/album/3"
+                        href="/album/undefined?highlighted-track-id=3"
                       >
                         <p
                           class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1313,7 +1313,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
               >
                 <a
                   class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                  href="/album/2"
+                  href="/album/undefined?highlighted-track-id=2"
                 >
                   <p
                     class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1396,7 +1396,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
               >
                 <a
                   class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                  href="/album/123"
+                  href="/album/undefined?highlighted-track-id=123"
                 >
                   <p
                     class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1483,7 +1483,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
               >
                 <a
                   class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                  href="/album/3"
+                  href="/album/undefined?highlighted-track-id=3"
                 >
                   <p
                     class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1585,7 +1585,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                   >
                     <a
                       class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                      href="/album/123"
+                      href="/album/undefined?highlighted-track-id=123"
                     >
                       <p
                         class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1674,7 +1674,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                   >
                     <a
                       class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                      href="/album/2"
+                      href="/album/undefined?highlighted-track-id=2"
                     >
                       <p
                         class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1763,7 +1763,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
                   >
                     <a
                       class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                      href="/album/3"
+                      href="/album/undefined?highlighted-track-id=3"
                     >
                       <p
                         class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -1979,7 +1979,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/123"
+                      href="/album/undefined?highlighted-track-id=123"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -2079,7 +2079,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/2"
+                      href="/album/undefined?highlighted-track-id=2"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -2179,7 +2179,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/3"
+                      href="/album/undefined?highlighted-track-id=3"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -2285,7 +2285,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/123"
+                    href="/album/undefined?highlighted-track-id=123"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"
@@ -2385,7 +2385,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/2"
+                    href="/album/undefined?highlighted-track-id=2"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"
@@ -2485,7 +2485,7 @@ exports[`ItemsList > should match snapshot with plays 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/3"
+                    href="/album/undefined?highlighted-track-id=3"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"
@@ -2642,7 +2642,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                 >
                   <a
                     class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                    href="/album/2"
+                    href="/album/undefined?highlighted-track-id=2"
                   >
                     <p
                       class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -2725,7 +2725,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                 >
                   <a
                     class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                    href="/album/123"
+                    href="/album/undefined?highlighted-track-id=123"
                   >
                     <p
                       class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -2812,7 +2812,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                 >
                   <a
                     class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                    href="/album/3"
+                    href="/album/undefined?highlighted-track-id=3"
                   >
                     <p
                       class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -2914,7 +2914,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     >
                       <a
                         class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                        href="/album/123"
+                        href="/album/undefined?highlighted-track-id=123"
                       >
                         <p
                           class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -3003,7 +3003,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     >
                       <a
                         class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                        href="/album/2"
+                        href="/album/undefined?highlighted-track-id=2"
                       >
                         <p
                           class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -3092,7 +3092,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                     >
                       <a
                         class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                        href="/album/3"
+                        href="/album/undefined?highlighted-track-id=3"
                       >
                         <p
                           class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -3245,7 +3245,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
               >
                 <a
                   class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                  href="/album/2"
+                  href="/album/undefined?highlighted-track-id=2"
                 >
                   <p
                     class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -3328,7 +3328,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
               >
                 <a
                   class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                  href="/album/123"
+                  href="/album/undefined?highlighted-track-id=123"
                 >
                   <p
                     class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -3415,7 +3415,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
               >
                 <a
                   class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                  href="/album/3"
+                  href="/album/undefined?highlighted-track-id=3"
                 >
                   <p
                     class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -3517,7 +3517,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                   >
                     <a
                       class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                      href="/album/123"
+                      href="/album/undefined?highlighted-track-id=123"
                     >
                       <p
                         class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -3606,7 +3606,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                   >
                     <a
                       class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                      href="/album/2"
+                      href="/album/undefined?highlighted-track-id=2"
                     >
                       <p
                         class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -3695,7 +3695,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
                   >
                     <a
                       class="items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 p-0 text-lg leading-none flex justify-start"
-                      href="/album/3"
+                      href="/album/undefined?highlighted-track-id=3"
                     >
                       <p
                         class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
@@ -8085,7 +8085,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/123"
+                      href="/album/undefined?highlighted-track-id=123"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -8180,7 +8180,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/2"
+                      href="/album/undefined?highlighted-track-id=2"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -8275,7 +8275,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                   >
                     <a
                       class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                      href="/album/3"
+                      href="/album/undefined?highlighted-track-id=3"
                     >
                       <h3
                         class="truncate text-xl md:text-2xl"
@@ -8376,7 +8376,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/123"
+                    href="/album/undefined?highlighted-track-id=123"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"
@@ -8471,7 +8471,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/2"
+                    href="/album/undefined?highlighted-track-id=2"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"
@@ -8566,7 +8566,7 @@ exports[`ItemsList > should match snapshot with relative time 1`] = `
                 >
                   <a
                     class="items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-primary-foreground underline-offset-4 hover:underline h-9 text-lg inline-grid p-0 leading-5"
-                    href="/album/3"
+                    href="/album/undefined?highlighted-track-id=3"
                   >
                     <h3
                       class="truncate text-xl md:text-2xl"

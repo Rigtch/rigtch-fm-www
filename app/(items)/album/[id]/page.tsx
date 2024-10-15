@@ -6,7 +6,10 @@ import { ItemsList } from '@app/components/items/list'
 import type { PageWithIdParamProps } from '@app/types'
 import { validateId } from '@app/utils/validators'
 
-export default async function AlbumPage({ params }: PageWithIdParamProps) {
+export default async function AlbumPage({
+  params,
+  searchParams,
+}: PageWithIdParamProps) {
   const id = validateId(params.id)
 
   const {
@@ -20,6 +23,8 @@ export default async function AlbumPage({ params }: PageWithIdParamProps) {
     copyrights,
     label,
   } = await getAlbum({ id })
+
+  const highlightedTrackId = searchParams['highlighted-track-id'] as string
 
   const options: Intl.DateTimeFormatOptions = {
     month: releaseDatePrecision === 'year' ? undefined : 'long',
@@ -77,7 +82,11 @@ export default async function AlbumPage({ params }: PageWithIdParamProps) {
               </div>
             )}
 
-            <ItemsList items={disc} />
+            <ItemsList
+              items={disc}
+              highlightedTrackId={highlightedTrackId}
+              hideImage
+            />
           </div>
         ))}
       </div>

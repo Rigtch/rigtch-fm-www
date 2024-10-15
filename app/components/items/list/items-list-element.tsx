@@ -58,7 +58,7 @@ namespace ItemsListElement {
         ) &
         Pick<AlbumEntity, 'name' | 'href' | 'id'> & {
           genresDisplayLength?: number
-          showImage?: boolean
+          hideImage?: boolean
           highlighted?: boolean
         } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
@@ -70,7 +70,7 @@ function ItemsListElement({
   name,
   images,
   href,
-  showImage,
+  hideImage,
   position,
   positionSize,
   positionClassName,
@@ -134,7 +134,7 @@ function ItemsListElement({
           )}
 
           {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
-          {(images ?? showImage) && (
+          {(images ?? !hideImage) && (
             <ItemImage images={images ?? album} alt={name} size={48} />
           )}
 
