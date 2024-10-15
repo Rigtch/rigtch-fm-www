@@ -22,7 +22,7 @@ interface ItemsListElementArtist extends Pick<ArtistEntity, 'images'> {
 
 interface ItemsListElementTrack {
   artists: Pick<ArtistEntity, 'id' | 'name'>[]
-  album: Pick<AlbumEntity, 'images'>
+  album: Pick<AlbumEntity, 'images' | 'id'>
   genres?: never
   images?: never
 }
@@ -59,7 +59,7 @@ namespace ItemsListElement {
         Pick<AlbumEntity, 'name' | 'href' | 'id'> & {
           genresDisplayLength?: number
           showImage?: boolean
-          highlight?: boolean
+          highlighted?: boolean
         } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
   >
@@ -84,7 +84,7 @@ function ItemsListElement({
   maxPlays,
   className,
   genresDisplayLength = 3,
-  highlight,
+  highlighted,
 }: ItemsListElement.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
@@ -103,7 +103,7 @@ function ItemsListElement({
       className={cn(
         'relative overflow-hidden',
         className,
-        highlight && 'bg-primary-lighter'
+        highlighted && 'bg-primary-lighter'
       )}
     >
       {(plays ?? playTime) && (
@@ -134,12 +134,17 @@ function ItemsListElement({
           )}
 
           {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
-          {(images ?? album.images ?? showImage) && (
+          {(images ?? showImage) && (
             <ItemImage images={images ?? album} alt={name} size={48} />
           )}
+
           <div className="flex w-full flex-col items-start overflow-hidden">
             <LinkButton
-              href={`/${artists ? 'album' : 'artist'}/${id}`}
+              href={
+                album?.id
+                  ? `/album/${album.id}?highlighted-track-id=${id}`
+                  : `/${artists ? 'album' : 'artist'}/${id}`
+              }
               className="inline-grid p-0 leading-5"
             >
               <h3 className="truncate text-xl md:text-2xl">{name}</h3>
