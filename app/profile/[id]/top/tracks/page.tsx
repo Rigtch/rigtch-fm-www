@@ -61,7 +61,7 @@ export default async function ProfileTopTracksPage({
       getRigtchTopTracks(token, {
         after,
         userId,
-        limit: 10,
+        limit: 100,
         measurement,
       }),
       getReportsTotalTracks(token, {

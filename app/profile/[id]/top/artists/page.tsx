@@ -61,7 +61,7 @@ export default async function ProfileTopArtistsPage({
       getRigtchTopArtists(token, {
         after,
         userId,
-        limit: 10,
+        limit: 100,
         measurement,
       }),
       getReportsTotalArtists(token, {
