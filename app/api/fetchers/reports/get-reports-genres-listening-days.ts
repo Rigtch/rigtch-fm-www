@@ -1,6 +1,7 @@
 import { fetchApi } from '../fetch-api'
 
 import { StatsMeasurement } from '@app/api/enums'
+import { baseBeforeParamFactory } from '@app/api/helpers'
 import type {
   GenresListeningDays,
   ReportsListeningParams,
@@ -17,10 +18,9 @@ export function getReportsGenresListeningDays(
 ) {
   const params = new URLSearchParams({
     after: after.toISOString(),
+    before: before?.toISOString() ?? baseBeforeParamFactory(new Date()),
     measurement,
   })
-
-  if (before) params.append('before', before.toISOString())
 
   return fetchApi<GenresListeningDays>(
     `/users/${userId}/reports/genres-listening-days?${params.toString()}`,

@@ -1,5 +1,6 @@
 import { StatsMeasurement } from '@app/api/enums'
 import { fetchApi } from '@app/api/fetchers'
+import { baseBeforeParamFactory } from '@app/api/helpers'
 import {
   type ArtistEntity,
   type RigtchStatsParams,
@@ -19,10 +20,9 @@ export function getRigtchTopArtists(
   const params = new URLSearchParams({
     after: after.toISOString(),
     limit: limit + '',
+    before: before?.toISOString() ?? baseBeforeParamFactory(new Date()),
     measurement,
   })
-
-  if (before) params.append('before', before.toISOString())
 
   return fetchApi<RigtchStatsResponse<ArtistEntity>>(
     `/users/${userId}/stats/rigtch/top-artists?${params.toString()}`,

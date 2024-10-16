@@ -5,6 +5,7 @@ import {
   type RigtchStatsParams,
   type RigtchStatsResponse,
 } from '@app/api/types'
+import { baseBeforeParamFactory } from '@app/api/helpers'
 
 export function getRigtchTopAlbums(
   token: string,
@@ -19,10 +20,9 @@ export function getRigtchTopAlbums(
   const params = new URLSearchParams({
     after: after.toISOString(),
     limit: limit + '',
+    before: before?.toISOString() ?? baseBeforeParamFactory(new Date()),
     measurement,
   })
-
-  if (before) params.append('before', before.toISOString())
 
   return fetchApi<RigtchStatsResponse<AlbumEntity>>(
     `/users/${userId}/stats/rigtch/top-albums?${params.toString()}`,

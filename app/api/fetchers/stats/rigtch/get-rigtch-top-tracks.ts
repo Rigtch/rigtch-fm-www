@@ -5,6 +5,7 @@ import {
   type RigtchStatsResponse,
   type TrackEntity,
 } from '@app/api/types'
+import { baseBeforeParamFactory } from '@app/api/helpers'
 
 export function getRigtchTopTracks(
   token: string,
@@ -19,10 +20,9 @@ export function getRigtchTopTracks(
   const params = new URLSearchParams({
     after: after.toISOString(),
     limit: limit + '',
+    before: before?.toISOString() ?? baseBeforeParamFactory(new Date()),
     measurement,
   })
-
-  if (before) params.append('before', before.toISOString())
 
   return fetchApi<RigtchStatsResponse<TrackEntity>>(
     `/users/${userId}/stats/rigtch/top-tracks?${params.toString()}`,
