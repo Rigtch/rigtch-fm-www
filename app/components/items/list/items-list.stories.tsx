@@ -136,6 +136,22 @@ export const WithGenresAndTop: ItemsListStory = {
   },
 }
 
+export const WithHiddenImages: ItemsListStory = {
+  args: {
+    hideImage: true,
+    items: trackExamples.map(item => ({
+      ...item,
+      images: undefined,
+    })),
+  },
+}
+
+export const WithOneHighlighted: ItemsListStory = {
+  args: {
+    highlightedTrackId: trackExamples[0].id,
+  },
+}
+
 export const Skeleton: ItemsListStory = {
   render: () => <ItemsListSkeleton />,
 }

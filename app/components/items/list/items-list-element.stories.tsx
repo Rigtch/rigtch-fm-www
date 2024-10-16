@@ -70,6 +70,19 @@ export const WithPlayTime: ItemsListElementStory = {
   },
 }
 
+export const WithHighlighted: ItemsListElementStory = {
+  args: {
+    highlighted: true,
+  },
+}
+
+export const WithHiddenImage: ItemsListElementStory = {
+  args: {
+    hideImage: true,
+    images: undefined,
+  },
+}
+
 export const WithGenres: ItemsListElementStory = {
   args: {
     genres: ['Black Metal', 'Death Metal', 'Thrash Metal'],
