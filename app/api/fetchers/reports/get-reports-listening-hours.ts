@@ -19,8 +19,6 @@ export function getReportsListeningHours(
     measurement,
   })
 
-  if (before) params.append('before', before.toISOString())
-
   return fetchApi<Record<number, number>>(
     `/users/${userId}/reports/listening-hours?${params.toString()}`,
     {

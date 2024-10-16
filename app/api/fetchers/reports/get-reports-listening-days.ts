@@ -19,8 +19,6 @@ export function getReportsListeningDays(
     measurement,
   })
 
-  if (before) params.append('before', before.toISOString())
-
   return fetchApi<ListeningDays>(
     `/users/${userId}/reports/listening-days?${params.toString()}`,
     {
