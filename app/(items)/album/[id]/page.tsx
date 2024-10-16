@@ -16,10 +16,7 @@ namespace AlbumPage {
   }
 }
 
-export default async function AlbumPage({
-  params,
-  searchParams,
-}: AlbumPage.Props) {
+async function AlbumPage({ params, searchParams }: AlbumPage.Props) {
   const id = validateId(params.id)
 
   const {
@@ -104,6 +101,7 @@ export default async function AlbumPage({
               items={disc}
               highlightedTrackId={highlightedTrackId}
               hideImage
+              prefetchItemsPages
             />
           </div>
         ))}
@@ -111,3 +109,5 @@ export default async function AlbumPage({
     </div>
   )
 }
+
+export default AlbumPage

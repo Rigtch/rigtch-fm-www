@@ -39,6 +39,7 @@ namespace ItemsList {
       genresDisplayLength?: number
       hideImage?: boolean
       highlightedTrackId?: string
+      prefetchItemsPages?: boolean
     }
   >
 }
@@ -54,6 +55,7 @@ function ItemsList({
   isRounded = false,
   genresDisplayLength = 3,
   highlightedTrackId,
+  prefetchItemsPages,
 }: ItemsList.Props) {
   const sortedItems: (ArtistEntity | TrackEntity | AlbumEntity)[] =
     formatItems(items)
@@ -105,6 +107,7 @@ function ItemsList({
               genresDisplayLength={genresDisplayLength}
               positionSize={positionSize}
               positionClassName={positionClassName}
+              prefetchItemsPage={prefetchItemsPages}
               className={cn(
                 isRounded && index === 0 && 'rounded-t-lg',
                 isRounded && index === items.length - 1 && 'rounded-bl-lg'
