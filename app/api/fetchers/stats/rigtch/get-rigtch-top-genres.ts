@@ -4,6 +4,7 @@ import {
   type RigtchStatsParams,
   type RigtchStatsResponse,
 } from '@app/api/types'
+import { baseBeforeParamFactory } from '@app/api/helpers'
 
 export function getRigtchTopGenres(
   token: string,
@@ -18,10 +19,9 @@ export function getRigtchTopGenres(
   const params = new URLSearchParams({
     after: after.toISOString(),
     limit: limit + '',
+    before: before?.toISOString() ?? baseBeforeParamFactory(new Date()),
     measurement,
   })
-
-  if (before) params.append('before', before.toISOString())
 
   return fetchApi<RigtchStatsResponse<string>>(
     `/users/${userId}/stats/rigtch/top-genres?${params.toString()}`,
