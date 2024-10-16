@@ -13,6 +13,4 @@ export type ErrorProps = Readonly<{
 
 export type PageWithIdParamProps = Readonly<{
   params: IdParam
-  // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-  searchParams: { [key: string]: string | string[] | undefined }
 }>

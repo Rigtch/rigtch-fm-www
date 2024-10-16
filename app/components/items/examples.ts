@@ -60,12 +60,13 @@ export const artistExample = {
 }
 
 export const trackExampleFactory = (
+  id: string,
   name: string,
   artistName: string,
   imageUrl: string
 ) =>
   ({
-    id: '1',
+    id,
     name,
     artists: [
       {
@@ -101,26 +102,31 @@ export const artistExampleFactory = (name: string, imageUrl: string) =>
 
 export const trackExamples = [
   trackExampleFactory(
+    '1',
     'Djavulens tid ar kommen',
     'Dimhymn',
     'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
   ),
   trackExampleFactory(
+    '2',
     'Lost in Liminal',
     'Kriegsmaschine',
     'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
   ),
   trackExampleFactory(
+    '3',
     'The Pallid Scourge',
     'Kriegsmaschine',
     'https://i.scdn.co/image/ab67616d0000b2730909018befabc2acd69be483'
   ),
   trackExampleFactory(
+    '4',
     'Night Crawler',
     'Judas Priest',
     'https://i.scdn.co/image/ab67616d00001e0260db4ca924d17bc6754e89aa'
   ),
   trackExampleFactory(
+    '5',
     'Painkiller',
     'Judas Priest',
     'https://i.scdn.co/image/ab67616d00001e0260db4ca924d17bc6754e89aa'

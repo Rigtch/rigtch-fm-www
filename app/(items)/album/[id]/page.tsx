@@ -3,13 +3,20 @@ import { FaCompactDisc } from 'react-icons/fa'
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { getAlbum } from '@app/api/fetchers/items'
 import { ItemsList } from '@app/components/items/list'
+import { HIGHLIGHTED_TRACK_ID } from '@app/profile/constants'
 import type { PageWithIdParamProps } from '@app/types'
 import { validateId } from '@app/utils/validators'
+
+export type AlbumPageProps = Readonly<PageWithIdParamProps> & {
+  searchParams: {
+    [HIGHLIGHTED_TRACK_ID]?: string
+  }
+}
 
 export default async function AlbumPage({
   params,
   searchParams,
-}: PageWithIdParamProps) {
+}: AlbumPageProps) {
   const id = validateId(params.id)
 
   const {
@@ -24,7 +31,7 @@ export default async function AlbumPage({
     label,
   } = await getAlbum({ id })
 
-  const highlightedTrackId = searchParams['highlighted-track-id'] as string
+  const highlightedTrackId = validateId(searchParams[HIGHLIGHTED_TRACK_ID])
 
   const options: Intl.DateTimeFormatOptions = {
     month: releaseDatePrecision === 'year' ? undefined : 'long',
