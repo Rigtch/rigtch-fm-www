@@ -2,21 +2,24 @@ import { FaCompactDisc } from 'react-icons/fa'
 
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { getAlbum } from '@app/api/fetchers/items'
+import type { TrackEntity } from '@app/api/types'
 import { ItemsList } from '@app/components/items/list'
 import { HIGHLIGHTED_TRACK_ID } from '@app/profile/constants'
 import type { PageWithIdParamProps } from '@app/types'
 import { validateId } from '@app/utils/validators'
 
-export type AlbumPageProps = Readonly<PageWithIdParamProps> & {
-  searchParams: {
-    [HIGHLIGHTED_TRACK_ID]?: string
+namespace AlbumPage {
+  export type Props = Readonly<PageWithIdParamProps> & {
+    searchParams: {
+      [HIGHLIGHTED_TRACK_ID]?: string
+    }
   }
 }
 
 export default async function AlbumPage({
   params,
   searchParams,
-}: AlbumPageProps) {
+}: AlbumPage.Props) {
   const id = validateId(params.id)
 
   const {
@@ -31,7 +34,9 @@ export default async function AlbumPage({
     label,
   } = await getAlbum({ id })
 
-  const highlightedTrackId = validateId(searchParams[HIGHLIGHTED_TRACK_ID])
+  const highlightedTrackId = searchParams[HIGHLIGHTED_TRACK_ID]
+    ? validateId(searchParams[HIGHLIGHTED_TRACK_ID])
+    : undefined
 
   const options: Intl.DateTimeFormatOptions = {
     month: releaseDatePrecision === 'year' ? undefined : 'long',
@@ -53,6 +58,12 @@ export default async function AlbumPage({
           (firstTrack, secondTrack) =>
             firstTrack.trackNumber - secondTrack.trackNumber
         )
+        .map(track => ({
+          ...track,
+          album: {
+            id,
+          },
+        })) as TrackEntity[]
     )
   }
 
