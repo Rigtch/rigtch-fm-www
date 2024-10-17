@@ -32,6 +32,7 @@ import {
   TotalReportView,
 } from './views'
 import type { ProfileOverviewViewProps } from './views/types/props'
+import { TotalReportViewSkeleton } from './views/total-report-view.skeleton'
 
 import { getUser } from '@app/api/fetchers'
 import { getServerToken } from '@app/auth'
@@ -73,7 +74,7 @@ export default async function ProfilePage({
 
   return (
     <>
-      <Suspense>
+      <Suspense fallback={<TotalReportViewSkeleton />}>
         <TotalReportView token={token} userId={userId} createdAt={createdAt} />
       </Suspense>
 
