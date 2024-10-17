@@ -18,8 +18,6 @@ import { BETA_USER_CREATED_AT, STATS_MEASUREMENT } from '@app/profile/constants'
 import { validateStatsMeasurement } from '@app/profile/utils/validators'
 import { validateId } from '@app/utils/validators'
 
-export const runtime = 'edge'
-
 export default async function ProfileReportsPage({
   params,
   searchParams,

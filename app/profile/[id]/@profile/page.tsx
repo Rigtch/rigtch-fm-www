@@ -9,8 +9,6 @@ import type { ProfilePageProps } from '@app/profile/types'
 import { validateId } from '@app/utils/validators'
 import { USER_ID } from '@app/constants'
 
-export const runtime = 'edge'
-
 export async function generateMetadata({
   params,
 }: ProfilePageProps): Promise<Metadata> {
