@@ -26,7 +26,7 @@ function LinkButton({
       asChild
       className={cn('p-0 text-lg leading-none', className)}
     >
-      <Link {...props} scroll={scroll ?? false}>
+      <Link {...props} scroll={scroll ?? true}>
         {children}
       </Link>
     </Button>
