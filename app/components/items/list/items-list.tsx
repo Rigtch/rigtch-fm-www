@@ -102,7 +102,7 @@ function ItemsList({
             {/* @ts-expect-error: conditional types are already handled */}
             <ItemsListElement
               {...item}
-              highlighted={item.id == highlightedTrackId}
+              isHighlighted={item.id == highlightedTrackId}
               hideImage={hideImage}
               genresDisplayLength={genresDisplayLength}
               positionSize={positionSize}
