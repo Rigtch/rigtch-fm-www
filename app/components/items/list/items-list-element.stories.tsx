@@ -72,7 +72,7 @@ export const WithPlayTime: ItemsListElementStory = {
 
 export const WithHighlighted: ItemsListElementStory = {
   args: {
-    highlighted: true,
+    isHighlighted: true,
   },
 }
 

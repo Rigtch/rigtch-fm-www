@@ -59,7 +59,7 @@ namespace ItemsListElement {
         Pick<AlbumEntity, 'name' | 'href' | 'id'> & {
           genresDisplayLength?: number
           hideImage?: boolean
-          highlighted?: boolean
+          isHighlighted?: boolean
           prefetchItemsPage?: boolean
         } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
@@ -85,7 +85,7 @@ function ItemsListElement({
   maxPlays,
   className,
   genresDisplayLength = 3,
-  highlighted,
+  isHighlighted,
   prefetchItemsPage,
 }: ItemsListElement.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
@@ -105,7 +105,7 @@ function ItemsListElement({
       className={cn(
         'relative overflow-hidden',
         className,
-        highlighted && 'bg-primary-lighter'
+        isHighlighted && 'bg-primary-lighter'
       )}
     >
       {(plays ?? playTime) && (
