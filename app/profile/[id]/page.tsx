@@ -37,8 +37,6 @@ import { getUser } from '@app/api/fetchers'
 import { getServerToken } from '@app/auth'
 import { validateId } from '@app/utils/validators'
 
-export const runtime = 'edge'
-
 export default async function ProfilePage({
   params,
   searchParams,

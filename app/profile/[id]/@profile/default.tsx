@@ -1,1 +1,1 @@
-export { default, generateMetadata, runtime } from './page'
+export { default, generateMetadata } from './page'

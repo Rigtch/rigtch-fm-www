@@ -4,8 +4,6 @@ import { HistorySection } from '@app/profile/sections'
 import type { ProfilePageProps } from '@app/profile/types'
 import { validateId } from '@app/utils/validators'
 
-export const runtime = 'edge'
-
 export default async function ProfileHistoryPage({ params }: ProfilePageProps) {
   const limit = 50
 
