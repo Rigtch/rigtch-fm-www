@@ -1,4 +1,6 @@
+import { redirect } from 'next/navigation'
 import { FaCompactDisc } from 'react-icons/fa'
+import { z } from 'zod'
 
 import { ItemHeaderSection } from '@app/(items)/sections'
 import { getAlbum } from '@app/api/fetchers/items'
@@ -32,8 +34,12 @@ async function AlbumPage({ params, searchParams }: AlbumPage.Props) {
   } = await getAlbum({ id })
 
   const highlightedTrackId = searchParams[HIGHLIGHTED_TRACK_ID]
-    ? validateId(searchParams[HIGHLIGHTED_TRACK_ID])
-    : undefined
+
+  if (
+    highlightedTrackId &&
+    !z.string().uuid().safeParse(highlightedTrackId).success
+  )
+    redirect(`/album/${id}`)
 
   const options: Intl.DateTimeFormatOptions = {
     month: releaseDatePrecision === 'year' ? undefined : 'long',
@@ -102,6 +108,7 @@ async function AlbumPage({ params, searchParams }: AlbumPage.Props) {
               highlightedTrackId={highlightedTrackId}
               hideImage
               prefetchItemsPages
+              linkScroll={false}
             />
           </div>
         ))}

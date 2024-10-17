@@ -61,6 +61,7 @@ namespace ItemsListElement {
           hideImage?: boolean
           isHighlighted?: boolean
           prefetchItemsPage?: boolean
+          linkScroll?: boolean
         } & Pick<HtmlHTMLAttributes<HTMLDivElement>, 'className'>
     >
   >
@@ -87,6 +88,7 @@ function ItemsListElement({
   genresDisplayLength = 3,
   isHighlighted,
   prefetchItemsPage,
+  linkScroll,
 }: ItemsListElement.Props) {
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
@@ -149,6 +151,7 @@ function ItemsListElement({
               }
               className="inline-grid p-0 leading-5"
               prefetch={prefetchItemsPage}
+              scroll={linkScroll}
             >
               <h3 className="truncate text-xl md:text-2xl">{name}</h3>
             </LinkButton>
