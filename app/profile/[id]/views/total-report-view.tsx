@@ -4,11 +4,11 @@ import { StatCard } from '../reports/components/cards'
 
 import type { ProfileOverviewViewProps } from './types/props'
 
-import { BETA_USER_CREATED_AT } from '@app/profile/constants'
 import {
+  getReportsTotalPlays,
   getReportsTotalPlaytime,
-  getReportsTotalTracks,
 } from '@app/api/fetchers/reports'
+import { BETA_USER_CREATED_AT } from '@app/profile/constants'
 
 namespace TotalReportView {
   export type Props = Readonly<
@@ -28,7 +28,7 @@ async function TotalReportView({
       userId,
       after: createdAt ?? BETA_USER_CREATED_AT,
     }),
-    getReportsTotalTracks(token, {
+    getReportsTotalPlays(token, {
       userId,
       after: createdAt ?? BETA_USER_CREATED_AT,
     }),
