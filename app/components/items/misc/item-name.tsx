@@ -1,8 +1,8 @@
 'use client'
 
+import type { AlbumEntity } from '@app/api/types'
 import { LinkButton } from '@app/components/common/buttons'
 import { cn } from '@app/utils/cn'
-import type { AlbumEntity } from '@app/api/types'
 
 namespace ItemName {
   export type Props = Readonly<
@@ -15,7 +15,7 @@ function ItemName({ name, href, className }: ItemName.Props) {
     <LinkButton href={href} className="flex justify-start">
       <p
         className={cn(
-          'max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px]',
+          'max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px]',
           className
         )}
       >
