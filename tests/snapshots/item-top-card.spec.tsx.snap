@@ -35,7 +35,7 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
               href="/artist/undefined"
             >
               <p
-                class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Album 1
               </p>
@@ -83,7 +83,7 @@ exports[`ItemTopCard > should match snapshot as album 1`] = `
             href="/artist/undefined"
           >
             <p
-              class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Album 1
             </p>
@@ -188,7 +188,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
               href="/artist/123"
             >
               <p
-                class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Darkthrone
               </p>
@@ -255,7 +255,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
             href="/artist/123"
           >
             <p
-              class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Darkthrone
             </p>
@@ -379,7 +379,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
               href="/album/undefined?highlighted-track-id=123"
             >
               <p
-                class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
               </p>
@@ -532,7 +532,7 @@ exports[`ItemTopCard > should match snapshot as top 2 1`] = `
             href="/album/undefined?highlighted-track-id=123"
           >
             <p
-              class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
             </p>
@@ -742,7 +742,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
               href="/album/undefined?highlighted-track-id=123"
             >
               <p
-                class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
               </p>
@@ -901,7 +901,7 @@ exports[`ItemTopCard > should match snapshot as top 3 1`] = `
             href="/album/undefined?highlighted-track-id=123"
           >
             <p
-              class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
             </p>
@@ -1117,7 +1117,7 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
               href="/album/undefined?highlighted-track-id=123"
             >
               <p
-                class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
               </p>
@@ -1173,7 +1173,7 @@ exports[`ItemTopCard > should match snapshot as track 1`] = `
             href="/album/undefined?highlighted-track-id=123"
           >
             <p
-              class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
             </p>
@@ -1286,7 +1286,7 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
               href="/album/undefined?highlighted-track-id=123"
             >
               <p
-                class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
               </p>
@@ -1367,7 +1367,7 @@ exports[`ItemTopCard > should match snapshot as track with play time 1`] = `
             href="/album/undefined?highlighted-track-id=123"
           >
             <p
-              class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
             </p>
@@ -1505,7 +1505,7 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
               href="/album/undefined?highlighted-track-id=123"
             >
               <p
-                class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
               >
                 Track 1
               </p>
@@ -1586,7 +1586,7 @@ exports[`ItemTopCard > should match snapshot as track with play time and plays 1
             href="/album/undefined?highlighted-track-id=123"
           >
             <p
-              class="max-w-[220px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
             >
               Track 1
             </p>
