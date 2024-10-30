@@ -83,17 +83,21 @@ function ToggleStatsProvider({
                 >
                   <Link
                     aria-disabled={isDisabled}
-                    href={`${pathname}?${formatSearchParams(
-                      new URLSearchParams(
-                        view
-                          ? {
-                              [VIEW]: view,
-                            }
-                          : undefined
-                      ),
-                      STATS_PROVIDER,
-                      value
-                    )}`}
+                    href={
+                      isDisabled
+                        ? ''
+                        : `${pathname}?${formatSearchParams(
+                            new URLSearchParams(
+                              view
+                                ? {
+                                    [VIEW]: view,
+                                  }
+                                : undefined
+                            ),
+                            STATS_PROVIDER,
+                            value
+                          )}`
+                    }
                     prefetch
                   >
                     {label}
