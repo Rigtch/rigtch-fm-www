@@ -5,6 +5,11 @@ import type { Mock } from 'vitest'
 import { Sidebar } from './sidebar'
 
 vi.mock('next/navigation')
+vi.mock('@app/api/hooks', () => ({
+  useUserQuery: vi.fn().mockReturnValue({
+    data: { createdAt: new Date() },
+  }),
+}))
 
 describe('Sidebar', () => {
   beforeEach(() => {

@@ -120,8 +120,10 @@ exports[`Sidebar > should match snapshot 1`] = `
                 Top Artists
               </a>
               <a
-                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 text-md w-full justify-start flex gap-2"
-                href="/profile/1/top/albums?view=list&stats-measurement=list"
+                aria-disabled="true"
+                class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 text-md w-full justify-start cursor-default opacity-50 flex gap-2"
+                disabled=""
+                href=""
               >
                 <svg
                   fill="none"
@@ -367,8 +369,10 @@ exports[`Sidebar > should match snapshot 1`] = `
               Top Artists
             </a>
             <a
-              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 text-md w-full justify-start flex gap-2"
-              href="/profile/1/top/albums?view=list&stats-measurement=list"
+              aria-disabled="true"
+              class="inline-flex items-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-light hover:text-primary-foreground h-9 px-4 py-2 text-md w-full justify-start cursor-default opacity-50 flex gap-2"
+              disabled=""
+              href=""
             >
               <svg
                 fill="none"

@@ -13,13 +13,15 @@ import {
 
 import { SidebarSectionItem } from './sidebar-section-item'
 
+import { useUserQuery } from '@app/api/hooks'
 import {
   STATS_MEASUREMENT,
   STATS_PROVIDER,
   TIME_RANGE,
   VIEW,
 } from '@app/profile/constants'
-import { StatsProvider } from '@app/profile/enums'
+import { RigtchTimeRange, StatsProvider } from '@app/profile/enums'
+import { isTimeRangeDisabled } from '@app/profile/utils/helpers'
 import { validateStatsProvider } from '@app/profile/utils/validators'
 import type { ParamsWithId } from '@app/types'
 
@@ -27,6 +29,7 @@ export function Sidebar() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const { id: userId } = useParams<ParamsWithId>()
+  const { data: user } = useUserQuery()
 
   const view = searchParams.get(VIEW)
   const statsProvider = searchParams.get(STATS_PROVIDER)
@@ -108,6 +111,10 @@ export function Sidebar() {
               label="Top Albums"
               pathname={pathname}
               icon={LuDisc3}
+              isDisabled={
+                user?.createdAt &&
+                isTimeRangeDisabled(RigtchTimeRange.WEEK, user.createdAt)
+              }
             />
 
             <SidebarSectionItem
