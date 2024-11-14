@@ -4,8 +4,9 @@ import { StatsMeasurement } from '@app/api/enums'
 
 export const valueMeasurementFormatter = (
   value: number,
-  measurement: StatsMeasurement
+  measurement: StatsMeasurement,
+  verbose = false
 ) =>
   measurement === StatsMeasurement.PLAYS
     ? `${value} plays`
-    : prettyMilliseconds(value, { unitCount: 2 })
+    : prettyMilliseconds(value, { unitCount: 2, verbose })
