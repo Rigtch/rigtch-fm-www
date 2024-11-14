@@ -49,7 +49,7 @@ function ProfileCard({
 
   return (
     <div className="min-w-[75%]">
-      <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+      <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
         <div className="flex flex-wrap items-center justify-start gap-4 px-2">
           <ProfileAvatar
             src={images.length > 0 ? findImage(images, 128) : undefined}
