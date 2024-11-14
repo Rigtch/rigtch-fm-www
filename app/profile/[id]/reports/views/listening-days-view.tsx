@@ -93,7 +93,7 @@ export async function ListeningDaysView({
             lastWeekValue={lastWeekTotal}
             size="lg"
           >
-            {valueMeasurementFormatter(thisWeekTotal, measurement)}
+            {valueMeasurementFormatter(thisWeekTotal, measurement, true)}
           </StatCard>
 
           <StatCard
@@ -105,14 +105,19 @@ export async function ListeningDaysView({
             &nbsp;
             {valueMeasurementFormatter(
               thisWeekMostListenedDayValue,
-              measurement
+              measurement,
+              true
             )}
           </StatCard>
 
           <StatCard label="Least listened day" value={leastListenedDayValue}>
             <span className="font-semibold">{leastListenedDay}:</span>
             &nbsp;
-            {valueMeasurementFormatter(leastListenedDayValue, measurement)}
+            {valueMeasurementFormatter(
+              leastListenedDayValue,
+              measurement,
+              true
+            )}
           </StatCard>
 
           <StatCard
