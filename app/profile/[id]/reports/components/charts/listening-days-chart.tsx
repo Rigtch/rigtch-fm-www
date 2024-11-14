@@ -16,6 +16,7 @@ import {
   ChartTooltipContent,
 } from '@app/components/ui/chart'
 import type { ListeningDays } from '@app/api/types'
+import { cn } from '@app/utils/cn'
 
 namespace ListeningDaysChart {
   export type Props = Readonly<{
@@ -57,7 +58,12 @@ function ListeningDaysChart({
   return (
     <ChartContainer
       config={chartConfig}
-      className="dark -ml-5 mb-3 mt-6 min-h-[200px] max-w-full"
+      className={cn(
+        'dark mb-3 mt-6 min-h-[200px]',
+        measurement === StatsMeasurement.PLAYS
+          ? '-ml-5 max-w-full'
+          : 'ml-4 max-w-[90%] md:max-w-[95%]'
+      )}
     >
       <BarChart accessibilityLayer data={listeningDays}>
         <XAxis
