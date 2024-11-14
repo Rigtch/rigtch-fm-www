@@ -41,7 +41,7 @@ export default async function ProfileReportsPage({
   }
 
   return (
-    <section className="mb-6 flex flex-col gap-8 md:mb-12 lg:mb-24 xl:gap-16">
+    <section className="mb-6 flex flex-col gap-8 md:mb-12 lg:mb-24 xl:gap-8">
       <header className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <h2 className="text-4xl">Reports</h2>
@@ -49,7 +49,7 @@ export default async function ProfileReportsPage({
           <ReportsPagination
             {...cursors}
             userCreatedAt={userCreatedAt}
-            className="hidden md:block"
+            className="hidden lg:block"
           />
 
           <SelectStatsMeasurement initialValue={measurement} />
@@ -58,7 +58,7 @@ export default async function ProfileReportsPage({
         <ReportsPagination
           {...cursors}
           userCreatedAt={userCreatedAt}
-          className="md:hidden"
+          className="lg:hidden"
         />
       </header>
 
