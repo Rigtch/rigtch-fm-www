@@ -52,7 +52,7 @@ function StatCard({
         {label}
       </CardDescription>
       <CardContent>
-        <p
+        <span
           className={cn(
             size === 'md' && 'text-2xl',
             size === 'lg' && 'text-3xl',
@@ -61,10 +61,10 @@ function StatCard({
           )}
         >
           {children}
-        </p>
+        </span>
 
         {vsLastWeekPercent !== undefined && (
-          <p className="flex items-center gap-1 text-muted-foreground">
+          <span className="flex items-center gap-1 text-muted-foreground">
             {vsLastWeekPercent > 0 ? (
               <LuMoveUp />
             ) : vsLastWeekPercent < 0 ? (
@@ -73,7 +73,7 @@ function StatCard({
               <LuEqual />
             )}
             {vsLastWeekPercent}% vs last week
-          </p>
+          </span>
         )}
       </CardContent>
     </Card>
