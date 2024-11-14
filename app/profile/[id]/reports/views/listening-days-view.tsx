@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { HiOutlineEmojiSad } from 'react-icons/hi'
 
-import { StatCard } from '../components/cards'
+import { ChartCard, StatCard } from '../components/cards'
 import { valueMeasurementFormatter, weekDays } from '../helpers'
 import { ReportSection } from '../sections'
 
@@ -85,7 +85,7 @@ export async function ListeningDaysView({
 
   return (
     <ReportSection>
-      <div className="flex flex-col items-stretch gap-2 xl:w-1/2">
+      <div className="flex max-w-[448px] flex-col items-stretch gap-2 xl:w-1/2">
         <StatCard
           label="Total"
           value={thisWeekTotal}
@@ -121,13 +121,18 @@ export async function ListeningDaysView({
         </StatCard>
       </div>
 
-      <Suspense>
-        <ListeningDaysChart
-          thisWeekResponse={thisWeekResponse}
-          lastWeekResponse={lastWeekResponse}
-          measurement={measurement}
-        />
-      </Suspense>
+      <ChartCard
+        className="max-h-[448px] w-full max-w-[640px]"
+        title="Listening days this week"
+      >
+        <Suspense>
+          <ListeningDaysChart
+            thisWeekResponse={thisWeekResponse}
+            lastWeekResponse={lastWeekResponse}
+            measurement={measurement}
+          />
+        </Suspense>
+      </ChartCard>
     </ReportSection>
   )
 }
