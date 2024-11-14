@@ -25,7 +25,7 @@ function ProfileLayout({ children, profile, modal }: ProfileLayout.Props) {
         </div>
       </aside>
 
-      <main className="my-4 flex min-h-screen w-full flex-col items-stretch justify-start gap-6 px-2 md:my-6 md:px-4 xl:my-8 xl:px-8">
+      <main className="my-4 flex min-h-screen w-full flex-col items-stretch justify-start gap-6 px-2 md:my-6 md:px-4 lg:px-4 xl:my-8 xl:px-8">
         <ProfileProviders>
           {profile}
           {children}

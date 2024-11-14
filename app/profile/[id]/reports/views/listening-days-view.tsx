@@ -3,7 +3,6 @@ import { HiOutlineEmojiSad } from 'react-icons/hi'
 
 import { ChartCard, StatCard } from '../components/cards'
 import { valueMeasurementFormatter, weekDays } from '../helpers'
-import { ReportSection } from '../sections'
 
 import type { ReportsViewProps } from './types/props'
 
@@ -84,55 +83,61 @@ export async function ListeningDaysView({
     )
 
   return (
-    <ReportSection>
-      <div className="flex max-w-[448px] flex-col items-stretch gap-2 xl:w-1/2">
-        <StatCard
-          label="Total"
-          value={thisWeekTotal}
-          lastWeekValue={lastWeekTotal}
-          size="lg"
-        >
-          {valueMeasurementFormatter(thisWeekTotal, measurement)}
-        </StatCard>
+    <>
+      <h3 className="text-2xl">Week Summary</h3>
+      <div className="flex flex-col justify-around gap-8 xl:flex-row">
+        <div className="grid w-full grid-cols-1 items-stretch gap-2 lg:grid-cols-2 xl:w-1/2 xl:max-w-[448px] xl:grid-cols-1">
+          <StatCard
+            label="Total"
+            value={thisWeekTotal}
+            lastWeekValue={lastWeekTotal}
+            size="lg"
+          >
+            {valueMeasurementFormatter(thisWeekTotal, measurement)}
+          </StatCard>
 
-        <StatCard
-          label="Most listened day"
-          value={thisWeekMostListenedDayValue}
-          lastWeekValue={lastWeekMostListenedDayValue}
-        >
-          <span className="font-semibold">{thisWeekMostListenedDay}:</span>
-          &nbsp;
-          {valueMeasurementFormatter(thisWeekMostListenedDayValue, measurement)}
-        </StatCard>
+          <StatCard
+            label="Most listened day"
+            value={thisWeekMostListenedDayValue}
+            lastWeekValue={lastWeekMostListenedDayValue}
+          >
+            <span className="font-semibold">{thisWeekMostListenedDay}:</span>
+            &nbsp;
+            {valueMeasurementFormatter(
+              thisWeekMostListenedDayValue,
+              measurement
+            )}
+          </StatCard>
 
-        <StatCard label="Least listened day" value={leastListenedDayValue}>
-          <span className="font-semibold">{leastListenedDay}:</span>
-          &nbsp;
-          {valueMeasurementFormatter(leastListenedDayValue, measurement)}
-        </StatCard>
+          <StatCard label="Least listened day" value={leastListenedDayValue}>
+            <span className="font-semibold">{leastListenedDay}:</span>
+            &nbsp;
+            {valueMeasurementFormatter(leastListenedDayValue, measurement)}
+          </StatCard>
 
-        <StatCard
-          label={`Average ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'} per day`}
-          value={thisWeekAverageDayValue}
-          lastWeekValue={lastWeekAverageDayValue}
-          size="lg"
+          <StatCard
+            label={`Average ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'} per day`}
+            value={thisWeekAverageDayValue}
+            lastWeekValue={lastWeekAverageDayValue}
+            size="lg"
+          >
+            {valueMeasurementFormatter(thisWeekAverageDayValue, measurement)}
+          </StatCard>
+        </div>
+
+        <ChartCard
+          className="w-full xl:max-h-[448px] xl:max-w-[640px]"
+          title="Listening days this week"
         >
-          {valueMeasurementFormatter(thisWeekAverageDayValue, measurement)}
-        </StatCard>
+          <Suspense>
+            <ListeningDaysChart
+              thisWeekResponse={thisWeekResponse}
+              lastWeekResponse={lastWeekResponse}
+              measurement={measurement}
+            />
+          </Suspense>
+        </ChartCard>
       </div>
-
-      <ChartCard
-        className="max-h-[448px] w-full max-w-[640px]"
-        title="Listening days this week"
-      >
-        <Suspense>
-          <ListeningDaysChart
-            thisWeekResponse={thisWeekResponse}
-            lastWeekResponse={lastWeekResponse}
-            measurement={measurement}
-          />
-        </Suspense>
-      </ChartCard>
-    </ReportSection>
+    </>
   )
 }
