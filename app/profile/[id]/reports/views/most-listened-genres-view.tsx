@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react'
 
-import { StatCard } from '../components/cards'
+import { ChartCard, StatCard } from '../components/cards'
 import { valueMeasurementFormatter } from '../helpers'
 import { ReportSection } from '../sections'
 
@@ -9,6 +9,7 @@ import type { ReportsViewProps } from './types/props'
 import { getRigtchTopGenres } from '@app/api/fetchers/stats/rigtch'
 import { getReportsGenresListeningDays } from '@app/api/fetchers/reports'
 import { StatsMeasurement } from '@app/api/enums'
+import { GenresList } from '@app/components/items/genre'
 
 const MostListenedGenresChart = lazy(() =>
   import('../components/charts/most-listened-genres-chart').then(
@@ -42,7 +43,7 @@ export async function MostListenedGenresView({
       before,
       after,
       measurement,
-      limit: 5,
+      limit: 10,
     }),
     getRigtchTopGenres(token, {
       userId,
@@ -80,12 +81,42 @@ export async function MostListenedGenresView({
 
   return (
     <>
+      <h3 className="text-2xl">Genres</h3>
       <ReportSection>
-        <section className="flex flex-col items-stretch justify-center gap-2 xl:max-w-[500px] 2xl:w-1/2">
+        <section className="flex w-full flex-col items-stretch justify-center gap-2 xl:max-w-[400px]">
+          <GenresList
+            items={thisWeekMostListenedGenresResponse}
+            className="items-stretch xl:flex-col"
+          />
+        </section>
+
+        <section className="w-full xl:max-h-[532px] xl:max-w-[770px]">
+          <ChartCard title="Genres listening days">
+            <Suspense>
+              <GenresListeningDaysChart
+                response={genresListeningDaysResponse}
+                measurement={measurement}
+              />
+            </Suspense>
+          </ChartCard>
+        </section>
+      </ReportSection>
+
+      <ReportSection className="flex-col-reverse lg:items-stretch">
+        <ChartCard title="Most listened genres">
+          <Suspense>
+            <MostListenedGenresChart
+              topGenresResponse={thisWeekMostListenedGenresResponse}
+              measurement={measurement}
+            />
+          </Suspense>
+        </ChartCard>
+
+        <section className="flex w-full flex-col items-stretch justify-between gap-4 xl:max-w-[500px]">
           <StatCard
             label="Most listened genre"
             value={0}
-            size="xl"
+            size="lg"
             contentClassName="text-5xl"
             className="!w-full"
           >
@@ -96,34 +127,14 @@ export async function MostListenedGenresView({
             <StatCard
               label="Last week's Most listened genre"
               value={0}
-              size="xl"
-              contentClassName="text-5xl"
+              size="lg"
+              contentClassName="text-4xl"
               className="!w-full"
             >
               {lastWeekMostListenedGenre}
             </StatCard>
           )}
-        </section>
 
-        <section className="xl:w-1/2">
-          <Suspense>
-            <MostListenedGenresChart
-              topGenresResponse={thisWeekMostListenedGenresResponse}
-              measurement={measurement}
-            />
-          </Suspense>
-        </section>
-      </ReportSection>
-
-      <ReportSection className="flex-col-reverse lg:items-stretch">
-        <Suspense>
-          <GenresListeningDaysChart
-            response={genresListeningDaysResponse}
-            measurement={measurement}
-          />
-        </Suspense>
-
-        <section className="flex w-full flex-col items-stretch xl:max-w-[500px]">
           <StatCard
             size="xl"
             label={`Most listened genre's ${measurement === StatsMeasurement.PLAYS ? 'plays' : 'playtime'}`}

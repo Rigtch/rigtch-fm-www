@@ -6,11 +6,11 @@ exports[`GenreChip > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor-default"
+        class="w-full cursor-default"
         data-state="closed"
       >
         <div
-          class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
+          class="relative -z-10 w-full overflow-hidden rounded-xl bg-primary"
         >
           <div
             class="block whitespace-nowrap p-2 text-primary-foreground/80"
@@ -23,11 +23,11 @@ exports[`GenreChip > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor-default"
+      class="w-full cursor-default"
       data-state="closed"
     >
       <div
-        class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
+        class="relative -z-10 w-full overflow-hidden rounded-xl bg-primary"
       >
         <div
           class="block whitespace-nowrap p-2 text-primary-foreground/80"
@@ -97,11 +97,11 @@ exports[`GenreChip > should match snapshot with custom className 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor-default"
+        class="w-full cursor-default"
         data-state="closed"
       >
         <div
-          class="relative -z-10 w-max overflow-hidden rounded-xl bg-neutral-800"
+          class="relative -z-10 w-full overflow-hidden rounded-xl bg-neutral-800"
         >
           <div
             class="block whitespace-nowrap p-2 text-primary-foreground/80"
@@ -114,11 +114,11 @@ exports[`GenreChip > should match snapshot with custom className 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor-default"
+      class="w-full cursor-default"
       data-state="closed"
     >
       <div
-        class="relative -z-10 w-max overflow-hidden rounded-xl bg-neutral-800"
+        class="relative -z-10 w-full overflow-hidden rounded-xl bg-neutral-800"
       >
         <div
           class="block whitespace-nowrap p-2 text-primary-foreground/80"
@@ -188,11 +188,11 @@ exports[`GenreChip > should match snapshot with playTime 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor-pointer"
+        class="w-full cursor-pointer"
         data-state="closed"
       >
         <div
-          class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
+          class="relative -z-10 w-full overflow-hidden rounded-xl bg-primary"
         >
           <div
             class="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-neutral-700 transition-all duration-700 ease-in-out"
@@ -209,11 +209,11 @@ exports[`GenreChip > should match snapshot with playTime 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor-pointer"
+      class="w-full cursor-pointer"
       data-state="closed"
     >
       <div
-        class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
+        class="relative -z-10 w-full overflow-hidden rounded-xl bg-primary"
       >
         <div
           class="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-neutral-700 transition-all duration-700 ease-in-out"
@@ -287,11 +287,11 @@ exports[`GenreChip > should match snapshot with plays 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor-pointer"
+        class="w-full cursor-pointer"
         data-state="closed"
       >
         <div
-          class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
+          class="relative -z-10 w-full overflow-hidden rounded-xl bg-primary"
         >
           <div
             class="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-neutral-700 transition-all duration-700 ease-in-out"
@@ -308,11 +308,11 @@ exports[`GenreChip > should match snapshot with plays 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor-pointer"
+      class="w-full cursor-pointer"
       data-state="closed"
     >
       <div
-        class="relative -z-10 w-max overflow-hidden rounded-xl bg-primary"
+        class="relative -z-10 w-full overflow-hidden rounded-xl bg-primary"
       >
         <div
           class="absolute -left-[8px] -z-10 h-full -skew-x-12 bg-neutral-700 transition-all duration-700 ease-in-out"

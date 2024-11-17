@@ -85,52 +85,55 @@ export async function MostListenedItemsView({
   if (thisWeekTotalArtists === 0) return null
 
   return (
-    <ReportSection className="grid grid-cols-1 gap-8 2xl:grid-cols-3 2xl:gap-4">
-      <section className="flex flex-col gap-4">
-        <StatCard
-          label="Total listened artists"
-          value={thisWeekTotalArtists}
-          lastWeekValue={lastWeekTotalArtists}
-          size="xl"
-          className="!w-full"
-        >
-          {thisWeekTotalArtists}
-        </StatCard>
+    <>
+      <h3 className="text-2xl">Listening hours</h3>
+      <ReportSection className="grid grid-cols-1 gap-8 2xl:grid-cols-3 2xl:gap-4">
+        <section className="flex flex-col gap-4">
+          <StatCard
+            label="Total listened artists"
+            value={thisWeekTotalArtists}
+            lastWeekValue={lastWeekTotalArtists}
+            size="xl"
+            className="!w-full"
+          >
+            {thisWeekTotalArtists}
+          </StatCard>
 
-        <ItemsList
-          items={mostListenedArtists.slice(0, 5)}
-          isRounded
-          genresDisplayLength={1}
-        />
-      </section>
+          <ItemsList
+            items={mostListenedArtists.slice(0, 5)}
+            isRounded
+            genresDisplayLength={1}
+          />
+        </section>
 
-      <section className="flex flex-col gap-4">
-        <StatCard
-          label="Total listened albums"
-          value={thisWeekTotalAlbums}
-          lastWeekValue={lastWeekTotalAlbums}
-          size="xl"
-          className="!w-full"
-        >
-          {thisWeekTotalAlbums}
-        </StatCard>
+        <section className="flex flex-col gap-4">
+          <StatCard
+            label="Total listened albums"
+            value={thisWeekTotalAlbums}
+            lastWeekValue={lastWeekTotalAlbums}
+            size="xl"
+            className="!w-full"
+          >
+            {thisWeekTotalAlbums}
+          </StatCard>
 
-        <ItemsList items={mostListenedAlbums.slice(0, 5)} isRounded />
-      </section>
+          <ItemsList items={mostListenedAlbums.slice(0, 5)} isRounded />
+        </section>
 
-      <section className="flex flex-col gap-4">
-        <StatCard
-          label="Total listened tracks"
-          value={thisWeekTotalTracks}
-          lastWeekValue={lastWeekTotalTracks}
-          size="xl"
-          className="!w-full"
-        >
-          {thisWeekTotalTracks}
-        </StatCard>
+        <section className="flex flex-col gap-4">
+          <StatCard
+            label="Total listened tracks"
+            value={thisWeekTotalTracks}
+            lastWeekValue={lastWeekTotalTracks}
+            size="xl"
+            className="!w-full"
+          >
+            {thisWeekTotalTracks}
+          </StatCard>
 
-        <ItemsList items={mostListenedTracks.slice(0, 5)} isRounded />
-      </section>
-    </ReportSection>
+          <ItemsList items={mostListenedTracks.slice(0, 5)} isRounded />
+        </section>
+      </ReportSection>
+    </>
   )
 }

@@ -31,13 +31,18 @@ function ListeningDaysChart({
   lastWeekResponse,
   measurement,
 }: ListeningDaysChart.Props) {
-  const listeningDays = weekDays.map((day, index) => ({
-    day,
-    thisWeekDate: thisWeekResponse[index].date,
-    lastWeekDate: lastWeekResponse[index].date,
-    thisWeek: thisWeekResponse[index].value,
-    lastWeek: lastWeekResponse[index].value,
-  }))
+  const listeningDays = weekDays.map((day, index) => {
+    console.log(thisWeekResponse[index])
+    console.log(lastWeekResponse[index])
+
+    return {
+      day,
+      thisWeekDate: thisWeekResponse[index]?.date,
+      lastWeekDate: lastWeekResponse[index]?.date,
+      thisWeek: thisWeekResponse[index]?.value,
+      lastWeek: lastWeekResponse[index]?.value,
+    }
+  })
 
   const chartConfig = {
     thisWeek: {
@@ -59,7 +64,7 @@ function ListeningDaysChart({
     <ChartContainer
       config={chartConfig}
       className={cn(
-        'dark mb-3 mt-6 min-h-[200px]',
+        'dark mb-3 mt-6 min-h-[250px]',
         measurement === StatsMeasurement.PLAYS
           ? '-ml-5 max-w-full'
           : 'ml-4 max-w-[90%] md:max-w-[95%]'

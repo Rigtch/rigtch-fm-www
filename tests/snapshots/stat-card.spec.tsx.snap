@@ -16,11 +16,11 @@ exports[`StatCard > should match snapshot 1`] = `
         <div
           class=""
         >
-          <p
+          <span
             class="text-2xl"
           >
             100
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -37,11 +37,11 @@ exports[`StatCard > should match snapshot 1`] = `
       <div
         class=""
       >
-        <p
+        <span
           class="text-2xl"
         >
           100
-        </p>
+        </span>
       </div>
     </div>
   </div>,
@@ -115,11 +115,11 @@ exports[`StatCard > should match snapshot with valueSize lg 1`] = `
         <div
           class=""
         >
-          <p
+          <span
             class="text-3xl"
           >
             100
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -136,11 +136,11 @@ exports[`StatCard > should match snapshot with valueSize lg 1`] = `
       <div
         class=""
       >
-        <p
+        <span
           class="text-3xl"
         >
           100
-        </p>
+        </span>
       </div>
     </div>
   </div>,
@@ -214,11 +214,11 @@ exports[`StatCard > should match snapshot with valueSize xl 1`] = `
         <div
           class=""
         >
-          <p
+          <span
             class="text-6xl"
           >
             100
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -235,11 +235,11 @@ exports[`StatCard > should match snapshot with valueSize xl 1`] = `
       <div
         class=""
       >
-        <p
+        <span
           class="text-6xl"
         >
           100
-        </p>
+        </span>
       </div>
     </div>
   </div>,
@@ -313,12 +313,12 @@ exports[`StatCard > should match snapshot with vs last week percent 1`] = `
         <div
           class=""
         >
-          <p
+          <span
             class="text-6xl"
           >
             100
-          </p>
-          <p
+          </span>
+          <span
             class="flex items-center gap-1 text-muted-foreground"
           >
             <svg
@@ -341,7 +341,7 @@ exports[`StatCard > should match snapshot with vs last week percent 1`] = `
             </svg>
             100
             % vs last week
-          </p>
+          </span>
         </div>
       </div>
     </div>
@@ -358,12 +358,12 @@ exports[`StatCard > should match snapshot with vs last week percent 1`] = `
       <div
         class=""
       >
-        <p
+        <span
           class="text-6xl"
         >
           100
-        </p>
-        <p
+        </span>
+        <span
           class="flex items-center gap-1 text-muted-foreground"
         >
           <svg
@@ -386,7 +386,7 @@ exports[`StatCard > should match snapshot with vs last week percent 1`] = `
           </svg>
           100
           % vs last week
-        </p>
+        </span>
       </div>
     </div>
   </div>,

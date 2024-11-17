@@ -61,7 +61,10 @@ function ListeningHoursChart({
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="dark min-h-[350px] w-full">
+    <ChartContainer
+      config={chartConfig}
+      className="dark mb-6 min-h-[300px] w-full"
+    >
       <RadarChart
         data={listeningHours}
         margin={{
