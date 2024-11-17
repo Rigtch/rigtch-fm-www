@@ -44,12 +44,13 @@ function GenreChip({
       <Tooltip>
         <TooltipTrigger
           className={cn(
+            'w-full',
             (plays ?? playTime) ? 'cursor-pointer' : 'cursor-default'
           )}
         >
           <div
             className={cn(
-              'relative -z-10 w-max overflow-hidden rounded-xl',
+              'relative -z-10 w-full overflow-hidden rounded-xl',
               className ?? 'bg-primary'
             )}
           >
