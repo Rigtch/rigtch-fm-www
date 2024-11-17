@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react'
 
-import { StatCard } from '../components/cards'
+import { ChartCard, StatCard } from '../components/cards'
 import { valueMeasurementFormatter } from '../helpers'
 import { ReportSection } from '../sections'
 
@@ -50,40 +50,46 @@ export async function ListeningHoursView({
   if (thisWeekMostListenedHourValue === 0) return null
 
   return (
-    <ReportSection className="mb-4 flex-col-reverse">
-      <div className="xl:w-1/2">
-        <Suspense>
-          <ListeningHoursChart
-            thisWeekResponse={thisWeekResponse}
-            lastWeekResponse={lastWeekResponse}
-            measurement={measurement}
-          />
-        </Suspense>
-      </div>
+    <>
+      <h3 className="text-2xl">Listening hours</h3>
 
-      <div className="flex flex-col items-center justify-center gap-2 xl:w-1/2">
-        <StatCard
-          label="Most listened hour"
-          value={thisWeekMostListenedHour}
-          size="xl"
-          className="!w-full"
-        >
-          {thisWeekMostListenedHour}:00
-        </StatCard>
+      <ReportSection className="mb-4 flex-col-reverse">
+        <div className="w-full xl:max-w-[622px]">
+          <ChartCard title="Listening hours">
+            <Suspense>
+              <ListeningHoursChart
+                thisWeekResponse={thisWeekResponse}
+                lastWeekResponse={lastWeekResponse}
+                measurement={measurement}
+              />
+            </Suspense>
+          </ChartCard>
+        </div>
 
-        <StatCard
-          label={`${measurement === StatsMeasurement.PLAYS ? 'Plays' : 'Playtime'} in most listened hour`}
-          value={thisWeekMostListenedHourValue}
-          lastWeekValue={lastWeekMostListenedHourValue}
-          size="xl"
-          className="!w-full"
-        >
-          {valueMeasurementFormatter(
-            thisWeekMostListenedHourValue,
-            measurement
-          )}
-        </StatCard>
-      </div>
-    </ReportSection>
+        <div className="flex w-full flex-col items-center justify-start gap-4 xl:max-w-[500px]">
+          <StatCard
+            label="Most listened hour"
+            value={thisWeekMostListenedHour}
+            size="xl"
+            className="!w-full"
+          >
+            {thisWeekMostListenedHour}:00
+          </StatCard>
+
+          <StatCard
+            label={`${measurement === StatsMeasurement.PLAYS ? 'Plays' : 'Playtime'} in most listened hour`}
+            value={thisWeekMostListenedHourValue}
+            lastWeekValue={lastWeekMostListenedHourValue}
+            size="xl"
+            className="!w-full"
+          >
+            {valueMeasurementFormatter(
+              thisWeekMostListenedHourValue,
+              measurement
+            )}
+          </StatCard>
+        </div>
+      </ReportSection>
+    </>
   )
 }

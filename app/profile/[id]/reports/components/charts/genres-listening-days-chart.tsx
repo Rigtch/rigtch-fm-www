@@ -16,6 +16,7 @@ import {
   type ChartConfig,
 } from '@app/components/ui/chart'
 import { chartColors, weekDays } from '@app/profile/[id]/reports/helpers'
+import { cn } from '@app/utils/cn'
 
 type FormattedGenresListeningDays = Record<string, number> & {
   day: string
@@ -54,7 +55,15 @@ function GenresListeningDaysChart({
       : prettyMilliseconds(value, { unitCount: 2 })
 
   return (
-    <ChartContainer config={chartConfig} className="dark min-h-[350px]">
+    <ChartContainer
+      config={chartConfig}
+      className={cn(
+        'dark mb-3 mt-6 min-h-[300px]',
+        measurement === StatsMeasurement.PLAYS
+          ? '-ml-5 max-w-full'
+          : 'ml-4 max-w-[90%] md:max-w-[95%]'
+      )}
+    >
       <AreaChart
         accessibilityLayer
         data={genresListeningDays}
@@ -78,7 +87,7 @@ function GenresListeningDaysChart({
           content={<ChartTooltipContent />}
           formatter={chartTooltipContentFormatter(measurement)}
         />
-        <ChartLegend content={<ChartLegendContent />} />
+        <ChartLegend content={<ChartLegendContent className="flex-wrap" />} />
 
         {Object.keys(response[0].data).map(key => (
           <Area

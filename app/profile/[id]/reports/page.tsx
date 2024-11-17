@@ -68,11 +68,11 @@ export default async function ProfileReportsPage({
         </Suspense>
 
         <Suspense>
-          <ListeningHoursView {...viewProps} />
+          <MostListenedGenresView {...viewProps} />
         </Suspense>
 
         <Suspense>
-          <MostListenedGenresView {...viewProps} />
+          <ListeningHoursView {...viewProps} />
         </Suspense>
 
         <Suspense>
