@@ -63,33 +63,35 @@ function NavigationBar({ user, userId }: NavigationBar.Props) {
           className="hidden rounded-lg lg:block"
         />
 
-        <div className="h-[28px] w-[28px] lg:hidden">
-          <Sheet
-            open={isSidebarOpen}
-            onOpenChange={isOpen => {
-              setIsSidebarOpen(isOpen)
-            }}
-          >
-            <SheetTrigger
-              onClick={() => {
-                setIsSidebarOpen(true)
+        {pathname.includes('profile') && (
+          <div className="h-[28px] w-[28px] lg:hidden">
+            <Sheet
+              open={isSidebarOpen}
+              onOpenChange={isOpen => {
+                setIsSidebarOpen(isOpen)
               }}
-              className="cursor-pointer"
             >
-              {isSidebarOpen ? (
-                <IoClose size={28} />
-              ) : (
-                <RxHamburgerMenu size={28} />
-              )}
-            </SheetTrigger>
+              <SheetTrigger
+                onClick={() => {
+                  setIsSidebarOpen(true)
+                }}
+                className="cursor-pointer"
+              >
+                {isSidebarOpen ? (
+                  <IoClose size={28} />
+                ) : (
+                  <RxHamburgerMenu size={28} />
+                )}
+              </SheetTrigger>
 
-            <SheetContent side="bottom">
-              <div className="min-h-[50vh]">
-                <Sidebar />
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+              <SheetContent side="bottom">
+                <div className="min-h-[50vh]">
+                  <Sidebar />
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        )}
 
         <h1 className="hidden text-2xl font-semibold md:block md:text-3xl">
           rigtch.fm
