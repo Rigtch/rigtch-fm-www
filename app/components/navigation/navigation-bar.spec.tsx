@@ -4,6 +4,10 @@ import { NavigationBar } from './navigation-bar'
 
 import { QueryClientWrapper } from '@tests/utils'
 
+vi.mock('next/navigation', () => ({
+  usePathname: vi.fn().mockReturnValue('/profile'),
+}))
+
 describe('NavigationBar', () => {
   test('should match snapshot as unauthenticated', () => {
     const view = render(<NavigationBar />, {
