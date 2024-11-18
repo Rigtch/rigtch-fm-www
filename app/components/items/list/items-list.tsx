@@ -84,7 +84,7 @@ function ItemsList({
             </div>
           </div>
 
-          <Carousel className="max-w-[70vw] self-center sm:max-w-[300px] md:hidden">
+          <Carousel className="max-w-full self-center sm:max-w-[500px] md:hidden md:max-w-[300px]">
             <CarouselContent>
               {carouselItems.slice(0, 3).map(item => (
                 <CarouselItem key={item.id}>
