@@ -91,12 +91,7 @@ function ItemTopCard({
           {position && <ItemPosition position={position} size="xl" />}
 
           {genres && genres.length > 0 && (
-            <div
-              className={cn(
-                'flex h-full flex-wrap justify-center gap-2',
-                isCarousel ? 'flex-col' : 'flex-row'
-              )}
-            >
+            <div className="flex h-full flex-row flex-wrap justify-center gap-2">
               {genres.slice(0, 3).map((genre, index) => (
                 <GenreBadge key={index} genre={genre} />
               ))}
