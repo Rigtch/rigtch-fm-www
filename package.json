@@ -54,6 +54,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.1.6",
+    "framer-motion": "^11.11.17",
     "luxon": "^3.4.4",
     "next": "14.2.15",
     "next-auth": "5.0.0-beta.20",

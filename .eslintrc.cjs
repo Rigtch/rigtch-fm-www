@@ -159,6 +159,7 @@ module.exports = {
     'sonarjs/function-return-type': 'off',
     'sonarjs/use-type-alias': 'off',
     'sonarjs/no-misused-promises': 'off',
+    'unicorn/no-array-reduce': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
