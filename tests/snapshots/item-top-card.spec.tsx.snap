@@ -198,7 +198,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
             class="flex w-full flex-col items-center justify-center gap-4"
           >
             <div
-              class="flex h-full flex-wrap justify-center gap-2 flex-row"
+              class="flex h-full flex-row flex-wrap justify-center gap-2"
             >
               <div
                 class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -265,7 +265,7 @@ exports[`ItemTopCard > should match snapshot as artist 1`] = `
           class="flex w-full flex-col items-center justify-center gap-4"
         >
           <div
-            class="flex h-full flex-wrap justify-center gap-2 flex-row"
+            class="flex h-full flex-row flex-wrap justify-center gap-2"
           >
             <div
               class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
