@@ -940,7 +940,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
         </div>
         <div
           aria-roledescription="carousel"
-          class="relative max-w-[70vw] self-center sm:max-w-[300px] md:hidden"
+          class="relative max-w-full self-center sm:max-w-[400px] md:hidden md:max-w-[300px]"
           role="region"
         >
           <div
@@ -1220,7 +1220,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
             </div>
           </div>
           <button
-            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -left-12 top-1/3 -translate-y-1/2"
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white left-0 top-1/3 -translate-y-1/2"
             disabled=""
           >
             <svg
@@ -1245,7 +1245,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
             </span>
           </button>
           <button
-            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -right-12 top-1/3 -translate-y-1/2"
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white right-0 top-1/3 -translate-y-1/2"
             disabled=""
           >
             <svg
@@ -1543,7 +1543,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
       </div>
       <div
         aria-roledescription="carousel"
-        class="relative max-w-[70vw] self-center sm:max-w-[300px] md:hidden"
+        class="relative max-w-full self-center sm:max-w-[400px] md:hidden md:max-w-[300px]"
         role="region"
       >
         <div
@@ -1823,7 +1823,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
           </div>
         </div>
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -left-12 top-1/3 -translate-y-1/2"
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white left-0 top-1/3 -translate-y-1/2"
           disabled=""
         >
           <svg
@@ -1848,7 +1848,7 @@ exports[`ItemsList > should match snapshot with playTime and top 1`] = `
           </span>
         </button>
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -right-12 top-1/3 -translate-y-1/2"
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white right-0 top-1/3 -translate-y-1/2"
           disabled=""
         >
           <svg
@@ -2872,7 +2872,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
         </div>
         <div
           aria-roledescription="carousel"
-          class="relative max-w-[70vw] self-center sm:max-w-[300px] md:hidden"
+          class="relative max-w-full self-center sm:max-w-[400px] md:hidden md:max-w-[300px]"
           role="region"
         >
           <div
@@ -3152,7 +3152,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
             </div>
           </div>
           <button
-            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -left-12 top-1/3 -translate-y-1/2"
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white left-0 top-1/3 -translate-y-1/2"
             disabled=""
           >
             <svg
@@ -3177,7 +3177,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
             </span>
           </button>
           <button
-            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -right-12 top-1/3 -translate-y-1/2"
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white right-0 top-1/3 -translate-y-1/2"
             disabled=""
           >
             <svg
@@ -3475,7 +3475,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
       </div>
       <div
         aria-roledescription="carousel"
-        class="relative max-w-[70vw] self-center sm:max-w-[300px] md:hidden"
+        class="relative max-w-full self-center sm:max-w-[400px] md:hidden md:max-w-[300px]"
         role="region"
       >
         <div
@@ -3755,7 +3755,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
           </div>
         </div>
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -left-12 top-1/3 -translate-y-1/2"
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white left-0 top-1/3 -translate-y-1/2"
           disabled=""
         >
           <svg
@@ -3780,7 +3780,7 @@ exports[`ItemsList > should match snapshot with plays and top 1`] = `
           </span>
         </button>
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -right-12 top-1/3 -translate-y-1/2"
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white right-0 top-1/3 -translate-y-1/2"
           disabled=""
         >
           <svg
@@ -4816,7 +4816,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                     2
                   </span>
                   <div
-                    class="flex h-full flex-wrap justify-center gap-2 flex-row"
+                    class="flex h-full flex-row flex-wrap justify-center gap-2"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -4977,7 +4977,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                     1
                   </span>
                   <div
-                    class="flex h-full flex-wrap justify-center gap-2 flex-row"
+                    class="flex h-full flex-row flex-wrap justify-center gap-2"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -5136,7 +5136,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                     3
                   </span>
                   <div
-                    class="flex h-full flex-wrap justify-center gap-2 flex-row"
+                    class="flex h-full flex-row flex-wrap justify-center gap-2"
                   >
                     <div
                       class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -5262,7 +5262,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
         </div>
         <div
           aria-roledescription="carousel"
-          class="relative max-w-[70vw] self-center sm:max-w-[300px] md:hidden"
+          class="relative max-w-full self-center sm:max-w-[400px] md:hidden md:max-w-[300px]"
           role="region"
         >
           <div
@@ -5322,7 +5322,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                         1
                       </span>
                       <div
-                        class="flex h-full flex-wrap justify-center gap-2 flex-col"
+                        class="flex h-full flex-row flex-wrap justify-center gap-2"
                       >
                         <div
                           class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -5483,7 +5483,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                         2
                       </span>
                       <div
-                        class="flex h-full flex-wrap justify-center gap-2 flex-col"
+                        class="flex h-full flex-row flex-wrap justify-center gap-2"
                       >
                         <div
                           class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -5650,7 +5650,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                         3
                       </span>
                       <div
-                        class="flex h-full flex-wrap justify-center gap-2 flex-col"
+                        class="flex h-full flex-row flex-wrap justify-center gap-2"
                       >
                         <div
                           class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -5776,7 +5776,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
             </div>
           </div>
           <button
-            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -left-12 top-1/3 -translate-y-1/2"
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white left-0 top-1/3 -translate-y-1/2"
             disabled=""
           >
             <svg
@@ -5801,7 +5801,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
             </span>
           </button>
           <button
-            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -right-12 top-1/3 -translate-y-1/2"
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white right-0 top-1/3 -translate-y-1/2"
             disabled=""
           >
             <svg
@@ -5986,7 +5986,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                   2
                 </span>
                 <div
-                  class="flex h-full flex-wrap justify-center gap-2 flex-row"
+                  class="flex h-full flex-row flex-wrap justify-center gap-2"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -6147,7 +6147,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                   1
                 </span>
                 <div
-                  class="flex h-full flex-wrap justify-center gap-2 flex-row"
+                  class="flex h-full flex-row flex-wrap justify-center gap-2"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -6306,7 +6306,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                   3
                 </span>
                 <div
-                  class="flex h-full flex-wrap justify-center gap-2 flex-row"
+                  class="flex h-full flex-row flex-wrap justify-center gap-2"
                 >
                   <div
                     class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -6432,7 +6432,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
       </div>
       <div
         aria-roledescription="carousel"
-        class="relative max-w-[70vw] self-center sm:max-w-[300px] md:hidden"
+        class="relative max-w-full self-center sm:max-w-[400px] md:hidden md:max-w-[300px]"
         role="region"
       >
         <div
@@ -6492,7 +6492,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                       1
                     </span>
                     <div
-                      class="flex h-full flex-wrap justify-center gap-2 flex-col"
+                      class="flex h-full flex-row flex-wrap justify-center gap-2"
                     >
                       <div
                         class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -6653,7 +6653,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                       2
                     </span>
                     <div
-                      class="flex h-full flex-wrap justify-center gap-2 flex-col"
+                      class="flex h-full flex-row flex-wrap justify-center gap-2"
                     >
                       <div
                         class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -6820,7 +6820,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
                       3
                     </span>
                     <div
-                      class="flex h-full flex-wrap justify-center gap-2 flex-col"
+                      class="flex h-full flex-row flex-wrap justify-center gap-2"
                     >
                       <div
                         class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary shadow hover:bg-primary/80 text-primary-foreground/80"
@@ -6946,7 +6946,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
           </div>
         </div>
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -left-12 top-1/3 -translate-y-1/2"
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white left-0 top-1/3 -translate-y-1/2"
           disabled=""
         >
           <svg
@@ -6971,7 +6971,7 @@ exports[`ItemsList > should match snapshot with position and top 1`] = `
           </span>
         </button>
         <button
-          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white -right-12 top-1/3 -translate-y-1/2"
+          class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-input bg-transparent shadow-sm hover:text-accent-foreground absolute h-8 w-8 rounded-full hover:bg-white right-0 top-1/3 -translate-y-1/2"
           disabled=""
         >
           <svg
