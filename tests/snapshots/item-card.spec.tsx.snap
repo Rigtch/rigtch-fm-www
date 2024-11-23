@@ -26,7 +26,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
             href="/artist/undefined"
           >
             <p
-              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
+              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
             >
               Album 1
             </p>
@@ -86,7 +86,7 @@ exports[`ItemCard > should match snapshot as album 1`] = `
           href="/artist/undefined"
         >
           <p
-            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
+            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
           >
             Album 1
           </p>
@@ -203,7 +203,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
             href="/artist/123"
           >
             <p
-              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
+              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
             >
               Darkthrone
             </p>
@@ -263,7 +263,7 @@ exports[`ItemCard > should match snapshot as artist 1`] = `
           href="/artist/123"
         >
           <p
-            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
+            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
           >
             Darkthrone
           </p>
@@ -380,7 +380,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
             href="/track/123"
           >
             <p
-              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
+              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
             >
               Track 1
             </p>
@@ -447,7 +447,7 @@ exports[`ItemCard > should match snapshot as track 1`] = `
           href="/track/123"
         >
           <p
-            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
+            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] !max-w-[200px]"
           >
             Track 1
           </p>
