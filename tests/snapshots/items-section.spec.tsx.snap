@@ -59,7 +59,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         href="/artist/2"
                       >
                         <p
-                          class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                          class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                         >
                           Darkthrone
                         </p>
@@ -220,7 +220,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         href="/artist/123"
                       >
                         <p
-                          class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                          class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                         >
                           Darkthrone
                         </p>
@@ -379,7 +379,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                         href="/artist/3"
                       >
                         <p
-                          class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                          class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                         >
                           Darkthrone
                         </p>
@@ -565,7 +565,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             href="/artist/123"
                           >
                             <p
-                              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                             >
                               Darkthrone
                             </p>
@@ -726,7 +726,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             href="/artist/2"
                           >
                             <p
-                              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                             >
                               Darkthrone
                             </p>
@@ -893,7 +893,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                             href="/artist/3"
                           >
                             <p
-                              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                             >
                               Darkthrone
                             </p>
@@ -1249,7 +1249,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       href="/artist/2"
                     >
                       <p
-                        class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                        class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                       >
                         Darkthrone
                       </p>
@@ -1410,7 +1410,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       href="/artist/123"
                     >
                       <p
-                        class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                        class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                       >
                         Darkthrone
                       </p>
@@ -1569,7 +1569,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                       href="/artist/3"
                     >
                       <p
-                        class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                        class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                       >
                         Darkthrone
                       </p>
@@ -1755,7 +1755,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           href="/artist/123"
                         >
                           <p
-                            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                           >
                             Darkthrone
                           </p>
@@ -1916,7 +1916,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           href="/artist/2"
                         >
                           <p
-                            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                           >
                             Darkthrone
                           </p>
@@ -2083,7 +2083,7 @@ exports[`ItemsSection > should match snapshot as artists with view card 1`] = `
                           href="/artist/3"
                         >
                           <p
-                            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                           >
                             Darkthrone
                           </p>
@@ -2663,7 +2663,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         href="/album/undefined?highlighted-track-id=2"
                       >
                         <p
-                          class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                          class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                         >
                           Track 1
                         </p>
@@ -2813,7 +2813,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         href="/album/undefined?highlighted-track-id=123"
                       >
                         <p
-                          class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                          class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                         >
                           Track 1
                         </p>
@@ -2961,7 +2961,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                         href="/album/undefined?highlighted-track-id=3"
                       >
                         <p
-                          class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                          class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                         >
                           Track 1
                         </p>
@@ -3136,7 +3136,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             href="/album/undefined?highlighted-track-id=123"
                           >
                             <p
-                              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                             >
                               Track 1
                             </p>
@@ -3286,7 +3286,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             href="/album/undefined?highlighted-track-id=2"
                           >
                             <p
-                              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                             >
                               Track 1
                             </p>
@@ -3442,7 +3442,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                             href="/album/undefined?highlighted-track-id=3"
                           >
                             <p
-                              class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                              class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                             >
                               Track 1
                             </p>
@@ -3688,7 +3688,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       href="/album/undefined?highlighted-track-id=2"
                     >
                       <p
-                        class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                        class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                       >
                         Track 1
                       </p>
@@ -3838,7 +3838,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       href="/album/undefined?highlighted-track-id=123"
                     >
                       <p
-                        class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                        class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                       >
                         Track 1
                       </p>
@@ -3986,7 +3986,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                       href="/album/undefined?highlighted-track-id=3"
                     >
                       <p
-                        class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                        class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                       >
                         Track 1
                       </p>
@@ -4161,7 +4161,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           href="/album/undefined?highlighted-track-id=123"
                         >
                           <p
-                            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                           >
                             Track 1
                           </p>
@@ -4311,7 +4311,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           href="/album/undefined?highlighted-track-id=2"
                         >
                           <p
-                            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                           >
                             Track 1
                           </p>
@@ -4467,7 +4467,7 @@ exports[`ItemsSection > should match snapshot with view card 1`] = `
                           href="/album/undefined?highlighted-track-id=3"
                         >
                           <p
-                            class="max-w-[270px] truncate sm:max-w-[240px] xl:max-w-[340px] text-2xl"
+                            class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px] text-2xl"
                           >
                             Track 1
                           </p>
