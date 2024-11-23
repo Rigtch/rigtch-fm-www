@@ -8,21 +8,21 @@ Make sure that you have the right version of Node.js installed in nvm.
 nvm use
 ```
 
-Make sure you have bun installed globally.
+Make sure you have pnpm installed globally.
 
 ```bash
 #Linux & macOS
-curl -fsSL https://bun.sh/install | bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 #Windows
-powershell -c "irm bun.sh/install.ps1 | iex"
+npm install -g pnpm
 ```
 
 I'm suggesting to install
 [@antfu/ni](https://www.npmjs.com/package/@antfu/ni/v/0.13.1) globally:
 
 ```bash
-bun add  -g @antfu/ni
+pnpm add  -g @antfu/ni
 ```
 
 Don't forget to install the dependencies:
