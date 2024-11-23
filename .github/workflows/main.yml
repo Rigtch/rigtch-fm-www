@@ -19,7 +19,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Build Application 🧱
-        run: bun run build
+        run: pnpm run build
         env:
           NEXT_PUBLIC_API_URL: https://api.example.com
           AUTH_SPOTIFY_ID: secret
@@ -41,10 +41,10 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Lint JS files 🐱
-        run: bun run lint:js
+        run: pnpm run lint:js
 
       - name: Lint CSS files 🐱
-        run: bun run lint:css
+        run: pnpm run lint:css
 
   test:
     name: 'Test 🧪'
@@ -59,7 +59,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Run unit tests 🧪
-        run: bun run test:coverage
+        run: pnpm run test:coverage
 
       - name: Collect coverage
         uses: codecov/codecov-action@v4
