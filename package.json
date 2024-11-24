@@ -139,5 +139,13 @@
     "type-fest": "^4.21.0",
     "vitest": "^2.0.4",
     "vitest-mock-extended": "^2.0.0"
-  }
+  },
+  "engines": {
+    "node": "20.16.0",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "bun": "please-use-pnpm",
+    "pnpm": "9.14.2"
+  },
+  "packageManager": "pnpm@9.14.2"
 }
