@@ -73,7 +73,7 @@ function ItemsList({
           <div className="mt-16 hidden w-full flex-col items-center justify-center gap-4 self-center pt-4 md:flex md:flex-row md:items-start lg:mt-24">
             <div className="flex h-full flex-col-reverse justify-center gap-4 md:w-2/3 md:flex-row">
               {sortedItems.slice(0, 2).map(item => (
-                <ItemTopCard {...item} key={item.id} />
+                <ItemTopCard {...item} className="w-1/2" key={item.id} />
               ))}
             </div>
 
