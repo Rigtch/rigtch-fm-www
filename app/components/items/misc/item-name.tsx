@@ -13,7 +13,14 @@ namespace ItemName {
 function ItemName({ name, href, className }: ItemName.Props) {
   return (
     <LinkButton href={href} className="flex justify-start">
-      <p className={cn('max-w-[400px] truncate', className)}>{name}</p>
+      <p
+        className={cn(
+          'max-w-[400px] truncate md:max-w-[250px] xl:max-w-[350px]',
+          className
+        )}
+      >
+        {name}
+      </p>
     </LinkButton>
   )
 }
