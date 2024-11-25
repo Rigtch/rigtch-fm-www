@@ -57,7 +57,7 @@ function ItemTopCard({
   return (
     <div
       className={cn(
-        'min-w-1/2 relative flex h-full w-full flex-col justify-start gap-2',
+        'relative flex h-full w-full flex-col justify-start gap-2',
         !isCarousel && position === 1 && '-top-16 lg:-top-24',
         !isCarousel && position === 2 && '-top-8 lg:-top-12',
         className
@@ -91,7 +91,7 @@ function ItemTopCard({
           {position && <ItemPosition position={position} size="xl" />}
 
           {genres && genres.length > 0 && (
-            <div className="flex h-full flex-row flex-wrap justify-center gap-2">
+            <div className="flex h-full flex-col flex-wrap justify-center gap-2 md:flex-row">
               {genres.slice(0, 3).map((genre, index) => (
                 <GenreBadge key={index} genre={genre} />
               ))}
