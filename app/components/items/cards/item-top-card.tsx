@@ -57,7 +57,7 @@ function ItemTopCard({
   return (
     <div
       className={cn(
-        'relative flex h-full w-full flex-col justify-start gap-2',
+        'min-w-1/2 relative flex h-full w-full flex-col justify-start gap-2',
         !isCarousel && position === 1 && '-top-16 lg:-top-24',
         !isCarousel && position === 2 && '-top-8 lg:-top-12',
         className
