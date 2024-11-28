@@ -31,18 +31,13 @@ function ListeningDaysChart({
   lastWeekResponse,
   measurement,
 }: ListeningDaysChart.Props) {
-  const listeningDays = weekDays.map((day, index) => {
-    console.log(thisWeekResponse[index])
-    console.log(lastWeekResponse[index])
-
-    return {
-      day,
-      thisWeekDate: thisWeekResponse[index]?.date,
-      lastWeekDate: lastWeekResponse[index]?.date,
-      thisWeek: thisWeekResponse[index]?.value,
-      lastWeek: lastWeekResponse[index]?.value,
-    }
-  })
+  const listeningDays = weekDays.map((day, index) => ({
+    day,
+    thisWeekDate: thisWeekResponse[index]?.date,
+    lastWeekDate: lastWeekResponse[index]?.date,
+    thisWeek: thisWeekResponse[index]?.value,
+    lastWeek: lastWeekResponse[index]?.value,
+  }))
 
   const chartConfig = {
     thisWeek: {

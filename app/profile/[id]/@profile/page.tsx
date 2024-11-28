@@ -39,7 +39,9 @@ export default async function ProfileSubPage({ params }: ProfilePageProps) {
     getUserFollowers(token, { userId }),
     getUserFollowing(token, { userId }),
   ])
-  const currentUserId = validateId(cookies().get(USER_ID)?.value)
+
+  const userIdCookie = cookies().get(USER_ID)?.value
+  const currentUserId = userIdCookie ? validateId(userIdCookie) : ''
   const isFollowingUser = followers.some(({ id }) => id === currentUserId)
   const isFollowingYou = following.some(({ id }) => id === currentUserId)
 
