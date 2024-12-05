@@ -145,7 +145,7 @@
     "npm": "please-use-pnpm",
     "yarn": "please-use-pnpm",
     "bun": "please-use-pnpm",
-    "pnpm": "9.14.2"
+    "pnpm": ">=9"
   },
   "packageManager": "pnpm@9.14.2"
 }
