@@ -22,7 +22,7 @@ export default async function HomePage() {
 
   return (
     <div className="max-w-screen overflow-x-hidden bg-[linear-gradient(to_bottom_right,#0a0a0a,#171717)]">
-      <div className="relative flex w-screen flex-col items-center gap-12 p-4 lg:gap-16">
+      <div className="relative mb-16 flex w-screen flex-col items-center gap-12 p-4 lg:gap-16">
         <Particles
           className="absolute inset-0 overflow-hidden"
           quantity={100}
@@ -31,9 +31,9 @@ export default async function HomePage() {
           refresh
         />
 
-        <main className="flex flex-col gap-12 p-4 md:pt-16 xl:pt-0">
+        <main className="flex flex-col items-center gap-12 p-4 md:pt-16 xl:pt-0">
           <section className="flex max-w-[450px] flex-col items-center justify-around gap-8 md:max-w-none md:flex-row xl:min-h-[90vh] xl:gap-32">
-            <header className="flex flex-col gap-4">
+            <header className="flex flex-col items-center gap-4 md:items-start">
               <div className="flex h-min items-center gap-4 rounded-lg p-2">
                 <Image
                   src="/rigtch-icon.png"
@@ -49,12 +49,12 @@ export default async function HomePage() {
               </div>
 
               <div className="flex flex-col gap-6">
-                <h2 className="max-w-[600px] text-3xl font-semibold">
+                <h2 className="max-w-[600px] text-center text-3xl font-semibold md:text-left">
                   Dive into real time spotify statistics calculation based on
                   your listening history
                 </h2>
 
-                <div className="flex gap-4">
+                <div className="flex justify-center gap-4 md:justify-start">
                   <ConnectButton className="rounded-lg border-2 border-accent bg-[linear-gradient(to_right,#9400d5_50%,transparent_50%)] bg-[length:200%_100%] bg-right-bottom px-10 py-5 transition-all duration-500 ease-out hover:bg-left-bottom" />
 
                   <Button
@@ -86,10 +86,10 @@ export default async function HomePage() {
             </BlurFade>
           </section>
 
-          <section>
+          <section className="my-32 md:mt-0">
             <ContainerScroll
               titleComponent={
-                <>
+                <div className="flex flex-col gap-4">
                   <h3 className="text-6xl font-semibold">
                     Discover your weekly reports
                   </h3>
@@ -97,7 +97,7 @@ export default async function HomePage() {
                     Back to the day you connected your spotify account to
                     rigtch.fm
                   </p>
-                </>
+                </div>
               }
             >
               <div>
@@ -141,7 +141,7 @@ export default async function HomePage() {
             <Image
               src="/statistics-history-example.png"
               alt="statistics example"
-              className="rounded-lg shadow-2xl"
+              className="z-[1] rounded-lg shadow-2xl"
               width={450}
               height={1000}
             />
