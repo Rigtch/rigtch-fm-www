@@ -11,6 +11,7 @@ namespace ProgressWithValueLabel {
     max: number
     label: string
     animate?: boolean
+    className?: string
   }>
 }
 
@@ -19,6 +20,7 @@ function ProgressWithValueLabel({
   max,
   label,
   animate = false,
+  className,
 }: ProgressWithValueLabel.Props) {
   const defaultProgressValue = (value / max) * 100
 
@@ -34,7 +36,7 @@ function ProgressWithValueLabel({
   }, [value, max, animate, defaultProgressValue])
 
   return (
-    <div className="relative w-full">
+    <div className={cn('relative w-full', className)}>
       <Progress
         value={progressValue}
         className={cn(
