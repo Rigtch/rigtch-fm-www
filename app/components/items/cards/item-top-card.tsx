@@ -81,17 +81,17 @@ function ItemTopCard({
                 ? `/album/${album.id}?highlighted-track-id=${id}`
                 : `/${artists ? 'album' : 'artist'}/${id}`
             }
-            className="text-2xl"
+            className="max-w-[90vw] text-2xl"
           />
 
           {artists && <ItemArtists artists={artists} className="text-xl" />}
         </div>
 
-        <div className="flex w-full flex-col items-center justify-center gap-4">
+        <div className="flex w-full max-w-[90vw] flex-col items-center justify-center gap-4">
           {position && <ItemPosition position={position} size="xl" />}
 
           {genres && genres.length > 0 && (
-            <div className="flex h-full flex-col flex-wrap justify-center gap-2 md:flex-row">
+            <div className="flex h-full flex-row flex-wrap justify-center gap-2">
               {genres.slice(0, 3).map((genre, index) => (
                 <GenreBadge key={index} genre={genre} />
               ))}
@@ -108,6 +108,7 @@ function ItemTopCard({
                 value={plays}
                 max={maxPlays}
                 label={`${plays} ${plays > 1 ? 'plays' : 'play'}`}
+                className="max-w-[350px]"
                 animate
               />
             )}
