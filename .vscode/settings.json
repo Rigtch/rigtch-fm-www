@@ -13,7 +13,7 @@
     ".stylelintrc": ".stylelintignore",
     ".eslintrc.cjs": ".eslintcache",
     ".env": ".env.*",
-    "package.json": ".npmrc, yarn.lock, .yarnrc, .nvmrc, yarn-error.log, bun.lockb"
+    "package.json": ".npmrc, yarn.lock, .yarnrc, .nvmrc, yarn-error.log, pnpm-lock.yaml"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
