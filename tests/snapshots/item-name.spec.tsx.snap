@@ -10,7 +10,7 @@ exports[`ItemName > should match snapshot 1`] = `
         href=""
       >
         <p
-          class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px]"
+          class="max-w-[400px] truncate md:max-w-[250px] xl:max-w-[350px]"
         >
           A Dark Forgotten Past
         </p>
@@ -23,7 +23,7 @@ exports[`ItemName > should match snapshot 1`] = `
       href=""
     >
       <p
-        class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px]"
+        class="max-w-[400px] truncate md:max-w-[250px] xl:max-w-[350px]"
       >
         A Dark Forgotten Past
       </p>
@@ -93,7 +93,7 @@ exports[`ItemName > should match snapshot with long name 1`] = `
         href=""
       >
         <p
-          class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px]"
+          class="max-w-[400px] truncate md:max-w-[250px] xl:max-w-[350px]"
         >
           Dark Medieval Times (Remastered 2021)
         </p>
@@ -106,7 +106,7 @@ exports[`ItemName > should match snapshot with long name 1`] = `
       href=""
     >
       <p
-        class="max-w-[350px] truncate sm:max-w-[400px] md:max-w-[240px] xl:max-w-[340px]"
+        class="max-w-[400px] truncate md:max-w-[250px] xl:max-w-[350px]"
       >
         Dark Medieval Times (Remastered 2021)
       </p>
